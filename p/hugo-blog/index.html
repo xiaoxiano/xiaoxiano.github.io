@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好'><title>hugo使用stack主题搭建博客及部署</title>
+
+<link rel='canonical' href='https://www.jiangdaoli.cf/p/hugo-blog/'>
+
+<link rel="stylesheet" href="/scss/style.min.css"><meta property='og:title' content='hugo使用stack主题搭建博客及部署'>
+<meta property='og:description' content='搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好'>
+<meta property='og:url' content='https://www.jiangdaoli.cf/p/hugo-blog/'>
+<meta property='og:site_name' content='银之介'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2021-07-03T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2021-07-03T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="hugo使用stack主题搭建博客及部署">
+<meta name="twitter:description" content="搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好">
+    </head>
+    <body class="
+    article-page has-toc
+">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex 
+    
+        extended
+    
+">
+    
+        <div id="article-toolbar">
+            <a href="https://www.jiangdaoli.cf" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+    
+<main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/blog/" style="background-color: #2a9d8f; color: #fff;">
+                博客
+            </a>
+        
+    </header>
+    
+
+    <h2 class="article-title">
+        <a href="/p/hugo-blog/">hugo使用stack主题搭建博客及部署</a>
+    </h2>
+
+    
+    <h3 class="article-subtitle">
+        搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好
+    </h3>
+    <footer class="article-time">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <time class="article-time--published">Jul 03, 2021</time>
+    </footer></div>
+</header>
+
+    <section class="article-content">
+    <h1 id="准备-本文仍在测试修改中">准备 本文仍在测试修改中</h1>
+<p>1.Ubuntu</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">sudo apt update    #更新
+</code></pre></div><p>2.github账号</p>
+<p>3.git配置</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git config --global user.name &#34;John Doe&#34;             #配置github账号用户名和邮箱
+git config --global user.email johndoe@example.com   
+</code></pre></div><p>4.连接github</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;          #生成SSH Keys  此为新版
+ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                    #此为常用版   
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">cat ~/.ssh/id_ed25519.pub                          #复制
+</code></pre></div><p>点击github右上角头像-&gt; Settings -&gt; SSH and GPG Keys -&gt; New SSH key添加</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">ssh -T git@github.com   #验证连接，输入yes
+</code></pre></div><p><a class="link" href="https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent"  target="_blank" rel="noopener"
+    >官方文档</a></p>
+<h1 id="安装">安装</h1>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">snap install hugo --channel=extended  #安装hugo
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo version     #验证
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo new site myblog   #创建博客
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git init    #初始化
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">rm config.toml <span class="err">&amp;&amp;</span> cp themes/hugo-theme-stack/exampleSite/config.yaml .     #使用主题的配置文件
+</code></pre></div><p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章</p>
+<p>本地预览：
+myblog下执行</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo server -D
+</code></pre></div><p>浏览器打开：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">http://localhost:1313/      #目前本地运行文章不显示目录，估计是操作系统原因
+</code></pre></div><h1 id="部署">部署</h1>
+<p>1.虽然博客内容全都能看到，但我们不太希望公开个人配置，不开放源码使用github pages需要创建2个仓库:
+创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库</p>
+<p>点击github右上角头像-&gt; Settings -&gt; Developer Settings-&gt; Personal access tokens -&gt; Generate new token    #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便</p>
+<p>找到源码仓库Settings-&gt; Secrets -&gt; New repository secret #Name写PERSONAL_TOKEN，Value粘贴token</p>
+<p>2.创建github actions的workflows自动部署文件：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">mkdir -p .github/workflows <span class="err">&amp;&amp;</span> touch ~/myblog/.github/workflows/main.yml
+</code></pre></div><p>粘贴脚本：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">name: github pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest        #可使用指定版本，例：runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest     #可使用指定版本，例：hugo-version: &#39;0.83.1&#39;
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }} # PERSONAL_TOKEN是源码仓库secrets的name
+          external_repository: username/username.github.io # Pages 远程仓库 
+          publish_branch: master  # 部署的分支
+          publish_dir: ./public
+          commit_message: ${{ github.event.head_commit.message }}
+          #cname: www.example.com # 使用自定义域名
+</code></pre></div><p>只需更改external_repository: username/username.github.io 为你的github账户名，<a class="link" href="https://github.com/marketplace/actions/github-pages-action"  target="_blank" rel="noopener"
+    >脚本详情</a></p>
+<p>3.在myblog文件夹下创建deploy.sh</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">touch deploy.sh
+</code></pre></div><p>粘贴脚本：</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">#!/bin/bash  
+
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; 
+
+ 
+# Add changes to git.  
+git add . 
+
+# Commit changes.  
+msg=&#34;rebuilding site `date`&#34; 
+if [ $# -eq 1 ] 
+  then msg=&#34;$1&#34; 
+fi 
+git commit -m &#34;$msg&#34; 
+
+# Push source and build repos.  
+git push origin master 
+</code></pre></div><p>在myblog下运行 sh deploy.sh命令</p>
+<p>到此已完成部署，之后任何更新如上运行deploy脚本即可</p>
+<h1 id="修改主题">修改主题</h1>
+<p>此处仅列举常见需修改内容，更多内容请看<a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration"  target="_blank" rel="noopener"
+    >stack主题文档</a>，搜到大神深度<a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html"  target="_blank" rel="noopener"
+    >定制好文请点这里</a></p>
+<h2 id="主题配置">主题配置</h2>
+<p>1.修改~/myblog/config.yaml</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">1   baseurl: https://username.github.io     #改为自己的
+5   title: Example Site                     #博客名
+15  DefaultContentLanguage: zh-cn           #中文
+29  since: 2021 
+37  emoji: 🍥                               #头像角标
+41  src: img/avatar.png                     #头像，myblog/themes/hugo-theme-stack/assets/img
+132 name: &#39;首页&#39;                            #改中文左侧菜单home
+152 startLevel: 1                           #从文章1级标题使用文章目录
+</code></pre></div><p>2.左侧菜单栏
+~/myblog/content/page用于左侧菜单，请自定义</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">2  title: &#39;关于&#39;     #中文左侧菜单about，后同
+</code></pre></div><p>3.~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss
+section-separation: 卡之间的分离
+link-background-color: 0, 255, 255 链接颜色</p>
+<h2 id="创建文章">创建文章</h2>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo new post/文件夹名/index.md      #创建文章
+</code></pre></div><p>写文章：</p>
+<p>1.front matter:</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">---
+title: hugo使用stack主题搭建博客及部署        #标题
+description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁       #副标题
+date: 2021-07-04           #日期
+slug: hugo-blog            #URL的尾部，用于文章地址
+categories:                #文章分类
+    - blog
+---
+</code></pre></div><p>front matter仅列举本文使用，<a class="link" href="https://gohugo.io/content-management/front-matter#readout"  target="_blank" rel="noopener"
+    >hugo front matter官方文档</a></p>
+<p>2.常见文章语法见<a class="link" href="https://theme-stack.jimmycai.com/p/markdown-syntax-guide/"  target="_blank" rel="noopener"
+    >stack主题markdown示例</a>,此处列举最常用的：</p>
+<ul>
+<li>
+<p><code># 一级标题    ## 二级标题    ······    ######六级标题</code></p>
+</li>
+<li>
+<p><code>```html</code></p>
+</li>
+</ul>
+<p>　　<code>code</code></p>
+<p>　　<code>```</code></p>
+<ul>
+<li><code>[链接](https://)</code></li>
+</ul>
+<h2 id="评论系统">评论系统</h2>
+<p><a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database"  target="_blank" rel="noopener"
+    >waline官方文档</a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL</p>
+<p>然后修改~/myblog/config.yaml</p>
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">52  provider: waline                        #评论系统，本文示例使用waline
+73  serverURL: https://                     #评论系统URL用你自己的
+</code></pre></div><p>执行sh deploy.sh即可</p>
+<h2 id="自定义域名">自定义域名</h2>
+<p>在~/myblog/config.yaml修改baseurl: <a href="https://username.github.io">https://username.github.io</a>
+在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: <a href="http://www.example.com">www.example.com</a>
+执行sh deploy.sh即可</p>
+<p>启用https：待续..</p>
+<p>没有域名？</p>
+<p>为贯彻白嫖精神，可在freenom和cloudflare申请域名和解析，并使用freenom脚本自动续期，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。</p>
+<p>本文暂未重测，我也正在使用调试中，如有错漏请见谅</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+    
+</article>
+
+    <aside class="related-contents--wrapper">
+    
+    
+</aside>
+
+     
+     
+        
+    <script src='//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js'></script>
+<div id="waline" class="waline-container"></div>
+<style>
+    .waline-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+    .waline-container .vcount {
+        color: var(--card-text-color-main);
+    }
+</style><script>
+    
+    new Waline({"dark":"html[data-scheme=\"dark\"]","el":"#waline","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"locale":{"admin":"Admin"},"requiredMeta":["name","email","url"],"serverURL":"https://myblog-rho-ebon.vercel.app/"});
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2021 银之介
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="2.5.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer="true"
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css"integrity="sha256-c0uckgykQ9v5k&#43;IqViZOZKc47Jn7KQil4/MP3ySA3F8="crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css"integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE="crossorigin="anonymous"
+            >
+
+            </main>
+    
+        <aside class="sidebar right-sidebar sticky">
+            <section class="widget archives">
+                <div class="widget-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+                </div>
+                <h2 class="widget-title section-title">目录</h2>
+                
+                <div class="widget--toc">
+                    <nav id="TableOfContents">
+  <ol>
+    <li><a href="#准备-本文仍在测试修改中">准备 本文仍在测试修改中</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#部署">部署</a></li>
+    <li><a href="#修改主题">修改主题</a>
+      <ol>
+        <li><a href="#主题配置">主题配置</a></li>
+        <li><a href="#创建文章">创建文章</a></li>
+        <li><a href="#评论系统">评论系统</a></li>
+        <li><a href="#自定义域名">自定义域名</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+                </div>
+            </section>
+        </aside>
+    
+
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js"integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g="crossorigin="anonymous"
+                defer="false"
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
