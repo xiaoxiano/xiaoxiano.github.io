@@ -125,9 +125,11 @@ git push origin master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;2  title: &amp;#39;关于&amp;#39;     #中文左侧菜单about，后同
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;3.~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss
-section-separation: 卡之间的分离
-link-background-color: 0, 255, 255 链接颜色&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;3.~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss&lt;/p&gt;
+&lt;p&gt;section-separation: 20px 卡之间的分离&lt;/p&gt;
+&lt;p&gt;link-background-color: 0, 255, 255 链接颜色&lt;/p&gt;
+&lt;p&gt;~/scss/grid.scss&lt;/p&gt;
+&lt;p&gt;margin-left: 24px; 左侧空白&lt;/p&gt;
 &lt;h2 id=&#34;创建文章&#34;&gt;创建文章&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;hugo new post/文件夹名/index.md      #创建文章
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;写文章：&lt;/p&gt;
