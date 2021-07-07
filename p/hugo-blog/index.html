@@ -99,8 +99,8 @@
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">sudo apt update    #更新
 </code></pre></div><p>2.github账号</p>
 <p>3.git配置</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git config --global user.name &#34;John Doe&#34;             #配置github账号用户名和邮箱
-git config --global user.email johndoe@example.com   
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git config --global user.name &#34;John Doe&#34;             #配置github账号用户名
+git config --global user.email johndoe@example.com   #配置邮箱
 </code></pre></div><p>4.连接github</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;          #生成SSH Keys  此为新版
 ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                    #此为常用版   
@@ -114,6 +114,7 @@ ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                   
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo version     #验证
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo new site myblog   #创建博客
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git init    #初始化
+</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git remote add origin git@github.com:****       #连接远程仓库
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
 </code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">rm config.toml <span class="err">&amp;&amp;</span> cp themes/hugo-theme-stack/exampleSite/config.yaml .     #使用主题的配置文件
 </code></pre></div><p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章</p>
@@ -121,9 +122,10 @@ ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                   
 myblog下执行</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">hugo server -D
 </code></pre></div><p>浏览器打开：</p>
-<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">http://localhost:1313/      #目前本地运行文章不显示目录，估计是操作系统原因
+<div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">http://localhost:1313/      #目前本地运行不显示文章目录，估计是操作系统原因
 </code></pre></div><h1 id="部署">部署</h1>
-<p>1.虽然博客内容全都能看到，但我们不太希望公开个人配置，不开放源码使用github pages需要创建2个仓库:
+<p>注：我将介绍使用github存放源码，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。</p>
+<p>1.虽然博客内容全都能看到，但我们可能不太希望公开个人配置，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库</p>
 <p>点击github右上角头像-&gt; Settings -&gt; Developer Settings-&gt; Personal access tokens -&gt; Generate new token    #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便</p>
 <p>找到源码仓库Settings-&gt; Secrets -&gt; New repository secret #Name写PERSONAL_TOKEN，Value粘贴token</p>
@@ -190,8 +192,8 @@ git push origin master
 <p>到此已完成部署，之后任何更新如上运行deploy脚本即可</p>
 <h1 id="修改主题">修改主题</h1>
 <p>此处仅列举常见需修改内容，更多内容请看<a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration"  target="_blank" rel="noopener"
-    >stack主题文档</a>，搜到大神深度<a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html"  target="_blank" rel="noopener"
-    >定制好文请点这里</a></p>
+    >stack主题文档</a>，搜到大神<a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html"  target="_blank" rel="noopener"
+    >深度定制文章请点这里</a></p>
 <h2 id="主题配置">主题配置</h2>
 <p>1.修改~/myblog/config.yaml</p>
 <div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html">1   baseurl: https://username.github.io     #改为自己的
@@ -251,7 +253,7 @@ categories:                #文章分类
 <p>启用https：待续..</p>
 <p>没有域名？</p>
 <p>为贯彻白嫖精神，可在freenom和cloudflare申请域名和解析，并使用freenom脚本自动续期，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。</p>
-<p>本文暂未重测，我也正在使用调试中，如有错漏请见谅</p>
+<p>本文暂未重测，如有错漏请见谅</p>
 
 </section>
 
