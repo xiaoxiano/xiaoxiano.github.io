@@ -105,18 +105,20 @@ git push origin master
 &lt;ul>
 &lt;li>
 &lt;p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss&lt;/p>
-&lt;/li>
+&lt;ul>
 &lt;li>
 &lt;p>section-separation: 20px 卡之间的分离&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>link-background-color: 0, 255, 255 链接颜色&lt;/p>
 &lt;/li>
-&lt;li>
-&lt;p>~/scss/grid.scss&lt;/p>
+&lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>margin-left: 30px; 左侧空白&lt;/p>
+&lt;p>~/scss/grid.scss&lt;/p>
+&lt;ul>
+&lt;li>margin-left: 30px; 左侧空白&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="创建文章">创建文章&lt;/h2>
