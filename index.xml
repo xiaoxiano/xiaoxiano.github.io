@@ -117,7 +117,7 @@ git push origin master
 &lt;li>
 &lt;p>~/scss/grid.scss&lt;/p>
 &lt;ul>
-&lt;li>margin-left: 30px; 左侧空白&lt;/li>
+&lt;li>margin-left: 30px; 左边距&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>

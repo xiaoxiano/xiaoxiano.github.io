@@ -80,7 +80,7 @@ git push origin master
 152 startLevel: 1                           #从文章1级标题使用文章目录
 </code></pre></div><p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>2  title: &#39;关于&#39;     #中文左侧菜单about，后同
-</code></pre></div><p>3.修改scss，由于缓存修改后需执行hugo server使部署有效</p><ul><li><p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss</p><ul><li><p>section-separation: 20px 卡之间的分离</p></li><li><p>link-background-color: 0, 255, 255 链接颜色</p></li></ul></li><li><p>~/scss/grid.scss</p><ul><li>margin-left: 30px; 左侧空白</li></ul></li></ul><h2 id=创建文章>创建文章</h2><div class=highlight><pre class=chroma><code class=language-html data-lang=html>hugo new post/文件夹名/index.md      #创建文章
+</code></pre></div><p>3.修改scss，由于缓存修改后需执行hugo server使部署有效</p><ul><li><p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss</p><ul><li><p>section-separation: 20px 卡之间的分离</p></li><li><p>link-background-color: 0, 255, 255 链接颜色</p></li></ul></li><li><p>~/scss/grid.scss</p><ul><li>margin-left: 30px; 左边距</li></ul></li></ul><h2 id=创建文章>创建文章</h2><div class=highlight><pre class=chroma><code class=language-html data-lang=html>hugo new post/文件夹名/index.md      #创建文章
 </code></pre></div><p>写文章：</p><p>1.front matter:</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>---
 title: hugo使用stack主题搭建博客及部署        #标题
 description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁       #副标题
