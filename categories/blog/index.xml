@@ -6,4 +6,5 @@ ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; #生成SSH Key
 ssh -T git@github.com #验证连接，输入yes 官方文档
 5.git ssh 代理设置
 非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作
+创建~/.ssh/config 文件：
 Host github.com User git ProxyCommand nc -v -x 127.</description></item></channel></rss>

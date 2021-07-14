@@ -63,6 +63,7 @@ ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; #此为常
 >官方文档&lt;/a>&lt;/p>
 &lt;p>5.git ssh 代理设置&lt;/p>
 &lt;p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作&lt;/p>
+&lt;p>创建~/.ssh/config 文件：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
 User git
 ProxyCommand nc -v -x 127.0.0.1:10808 %h %p #请修改127.0.0.1:10808

@@ -6,7 +6,7 @@ git config --global user.email johndoe@example.com   #配置邮箱
 ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                    #此为常用版   
 </code></pre></div><div class=highlight><pre class=chroma><code class=language-html data-lang=html>cat ~/.ssh/id_ed25519.pub                          #复制
 </code></pre></div><p>点击github右上角头像-> Settings -> SSH and GPG Keys -> New SSH key添加</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>ssh -T git@github.com   #验证连接，输入yes
-</code></pre></div><p><a class=link href=https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent target=_blank rel=noopener>官方文档</a></p><p>5.git ssh 代理设置</p><p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>Host github.com
+</code></pre></div><p><a class=link href=https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent target=_blank rel=noopener>官方文档</a></p><p>5.git ssh 代理设置</p><p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作</p><p>创建~/.ssh/config 文件：</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>Host github.com
     User git
     ProxyCommand nc -v -x 127.0.0.1:10808 %h %p    #请修改127.0.0.1:10808
 </code></pre></div><h1 id=安装>安装</h1><div class=highlight><pre class=chroma><code class=language-html data-lang=html>snap install hugo --channel=extended  #安装hugo
