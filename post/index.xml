@@ -1,7 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 银之介</title><link>https://www.jiangdaoli.cf/post/</link><description>Recent content in Posts on 银之介</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/post/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>准备 1.Ubuntu
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 银之介</title><link>https://www.jiangdaoli.cf/post/</link><description>Recent content in Posts on 银之介</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/post/index.xml" rel="self" type="application/rss+xml"/><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>前言 A股人均韭菜请谨慎，美股放水暂不讨论
+希望更容易找到好股，欢迎留言，荐股理由请简短
+本人买入 国恩股份：发文时(2021-07-13)收盘价24.38
+可降解塑料概念，同类中估值较低 渝农商行：发文时(2021-07-13)收盘价3.94
+感觉被低估 观察中 微芯生物：
+创新药，带头人不是半路出家，低位期及销量增长期可能将近
+大股东持续大量减持
+天建集团：
+估值较低，业绩可能新一轮增长
+行业处于高位，未来下行概率较大
+历史 买入 国恩股份：发文时(2021-07-13)收盘价24.38
+渝农商行：发文时(2021-07-13)收盘价3.94
+卖出 暂无，本人持股周期较长</description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>准备 1.Ubuntu
 sudo apt update #更新 2.github账号
 3.git配置
 git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱 4.连接github
 ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; #生成SSH Keys 此为新版 ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; #此为常用版 cat ~/.ssh/id_ed25519.pub #复制 点击github右上角头像-&amp;gt; Settings -&amp;gt; SSH and GPG Keys -&amp;gt; New SSH key添加
 ssh -T git@github.com #验证连接，输入yes 官方文档
-安装 snap install hugo --channel=extended #安装hugo hugo version #验证 hugo new site myblog #创建博客 git init #初始化 git remote add origin git@github.</description></item><item><title>Markdown Syntax Guide</title><link>https://www.jiangdaoli.cf/p/markdown-syntax-guide/</link><pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/markdown-syntax-guide/</guid><description>&lt;p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p></description></item></channel></rss>
+安装 snap install hugo --channel=extended #安装hugo hugo version #验证 hugo new site myblog #创建博客 git init #初始化 git remote add origin git@github.</description></item></channel></rss>
