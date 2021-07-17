@@ -140,8 +140,11 @@ git push origin master
 &lt;p>到此已完成部署，之后任何更新如上运行deploy脚本即可&lt;/p>
 &lt;h1 id="修改主题">修改主题&lt;/h1>
 &lt;p>此处仅列举常见需修改内容，更多内容请看&lt;a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration" target="_blank" rel="noopener"
->stack主题文档&lt;/a>，搜到大神&lt;a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html" target="_blank" rel="noopener"
->深度定制文章请点这里&lt;/a>&lt;/p>
+>stack主题文档&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
+>本博客修改样式来自rmdhnreza&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html" target="_blank" rel="noopener"
+>更多深度定制文章请点这里&lt;/a>&lt;/p>
 &lt;h2 id="主题配置">主题配置&lt;/h2>
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">1 baseurl: https://username.github.io #改为自己的
@@ -161,18 +164,7 @@ git push origin master
 &lt;li>
 &lt;p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;p>section-separation: 20px 卡之间的分离&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>link-background-color: 0, 255, 255 链接颜色&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>~/scss/grid.scss&lt;/p>
-&lt;ul>
-&lt;li>margin-left: 30px; 左边距&lt;/li>
+&lt;li>link-background-color: 0, 255, 255 链接背景颜色&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -219,5 +211,4 @@ categories: #文章分类
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>
 &lt;p>没有域名？&lt;/p>
-&lt;p>为了白嫖可在freenom和cloudflare申请域名和解析，并使用freenom脚本自动续期，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p>
-&lt;p>本文暂未重测，如有错漏请见谅&lt;/p></description></item></channel></rss>
+&lt;p>为了白嫖可在freenom和cloudflare申请域名和解析，并使用freenom脚本自动续期，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p></description></item></channel></rss>
