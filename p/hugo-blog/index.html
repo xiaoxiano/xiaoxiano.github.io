@@ -73,7 +73,7 @@ git commit -m &#34;$msg&#34;
 
 # Push source and build repos.  
 git push origin master 
-</code></pre></div><p>在myblog下运行 sh deploy.sh命令</p><p>到此已完成部署，之后任何更新如上运行deploy脚本即可</p><h1 id=修改主题>修改主题</h1><p>此处仅列举常见需修改内容，更多内容请看<a class=link href=https://docs.stack.jimmycai.com/v/zh-cn/configuration target=_blank rel=noopener>stack主题文档</a></p><p><a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>本博客修改样式来自rmdhnreza</a></p><p><a class=link href=https://yinhe.co/archives/20210401_hugo_theme_stack.html target=_blank rel=noopener>更多深度定制文章请点这里</a></p><h2 id=主题配置>主题配置</h2><p>1.修改~/myblog/config.yaml</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>1   baseurl: https://username.github.io     #改为自己的
+</code></pre></div><p>在myblog下运行 sh deploy.sh命令</p><p>到此已完成部署，之后任何更新如上运行deploy脚本即可</p><h1 id=修改主题>修改主题</h1><p>此处仅列举常见需修改内容，更多内容请看<a class=link href=https://docs.stack.jimmycai.com/v/zh-cn/configuration target=_blank rel=noopener>stack主题文档</a></p><p><a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>本博客修改样式来自rmdhnreza</a></p><p><a class=link href=https://yinhe.co/archives/20210401_hugo_theme_stack.html target=_blank rel=noopener>更多定制文章可以参考这里</a></p><h2 id=主题配置>主题配置</h2><p>1.修改~/myblog/config.yaml</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>1   baseurl: https://username.github.io     #改为自己的
 2   languageCode: zh-CN                     #中文编码
 5   title: Example Site                     #博客名
 15  DefaultContentLanguage: zh-cn           #中文
@@ -84,7 +84,7 @@ git push origin master
 152 startLevel: 1                           #从文章1级标题使用文章目录
 </code></pre></div><p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>2  title: &#39;关于&#39;     #中文左侧菜单about，后同
-</code></pre></div><p>3.修改scss，由于缓存修改后需执行hugo server使部署有效</p><ul><li><p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss</p><ul><li>link-background-color: 0, 255, 255 链接背景颜色</li></ul></li></ul><h2 id=创建文章>创建文章</h2><div class=highlight><pre class=chroma><code class=language-html data-lang=html>hugo new post/文件夹名/index.md      #创建文章
+</code></pre></div><p>3.修改scss，由于缓存修改后需执行hugo server使部署有效</p><ul><li><p>~/myblog/assets/scss/variables.scss</p><ul><li>link-background-color: 0, 255, 255 链接背景颜色</li></ul></li></ul><h2 id=创建文章>创建文章</h2><div class=highlight><pre class=chroma><code class=language-html data-lang=html>hugo new post/文件夹名/index.md      #创建文章
 </code></pre></div><p>写文章：</p><p>1.front matter:</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>---
 title: hugo使用stack主题搭建博客及部署        #标题
 description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁       #副标题

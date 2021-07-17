@@ -144,7 +144,7 @@ git push origin master
 &lt;p>&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
 >本博客修改样式来自rmdhnreza&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://yinhe.co/archives/20210401_hugo_theme_stack.html" target="_blank" rel="noopener"
->更多深度定制文章请点这里&lt;/a>&lt;/p>
+>更多定制文章可以参考这里&lt;/a>&lt;/p>
 &lt;h2 id="主题配置">主题配置&lt;/h2>
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">1 baseurl: https://username.github.io #改为自己的
@@ -162,7 +162,7 @@ git push origin master
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>3.修改scss，由于缓存修改后需执行hugo server使部署有效&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>~/myblog/themes/hugo-theme-stack/assets/scss/variables.scss&lt;/p>
+&lt;p>~/myblog/assets/scss/variables.scss&lt;/p>
 &lt;ul>
 &lt;li>link-background-color: 0, 255, 255 链接背景颜色&lt;/li>
 &lt;/ul>
