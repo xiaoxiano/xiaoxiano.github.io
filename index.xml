@@ -197,7 +197,7 @@ categories: #文章分类
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>`单行代码` &lt;/code>&lt;br>
-&lt;code> &lt;/code> &lt;code> &lt;/code>有`号需双反引号&lt;code> &lt;/code> &lt;code> &lt;/code> \&lt;/p>
+&lt;code> &lt;/code> &lt;code>`` ``&lt;/code> &lt;code>有`号需双反引号&lt;/code> &lt;code>`` ``&lt;/code> &lt;code> &lt;/code> \&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>&lt;code>```html&lt;/code>&lt;br>
