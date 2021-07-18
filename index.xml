@@ -200,10 +200,10 @@ categories: #文章分类
 &lt;ul>
 &lt;li>&lt;code>[链接](https://)&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>```html
-code
-```&lt;/p>
-&lt;h2 id="评论系统">评论系统&lt;/h2>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">\```html\
+code\
+\```
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="评论系统">评论系统&lt;/h2>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
 >waline官方文档&lt;/a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL&lt;/p>
 &lt;p>然后修改~/myblog/config.yaml&lt;/p>
