@@ -192,12 +192,10 @@ categories: #文章分类
 &lt;p>&lt;code># 一级标题 ## 二级标题 ······ ######六级标题&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;code>```html&lt;/code>&lt;/p>
+&lt;p>&lt;code>```html&lt;/code>&lt;br>
+&lt;code>code&lt;/code>&lt;br>
+&lt;code>```&lt;/code>&lt;/p>
 &lt;/li>
-&lt;/ul>
-&lt;p>　　&lt;code>code&lt;/code>&lt;/p>
-&lt;p>　　&lt;code>```&lt;/code>&lt;/p>
-&lt;ul>
 &lt;li>
 &lt;p>&lt;code>[链接](https://)&lt;/code>&lt;/p>
 &lt;/li>
