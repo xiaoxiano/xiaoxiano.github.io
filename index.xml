@@ -109,7 +109,7 @@ with:
 hugo-version: latest #可使用指定版本，例：hugo-version: &amp;#39;0.83.1&amp;#39;
 extended: true
 - name: Build
-run: hugo --minify
+run: hugo --gc --forceSyncStatic --minify --cleanDestinationDir
 - name: Deploy
 uses: peaceiris/actions-gh-pages@v3
 with:
@@ -159,7 +159,9 @@ git push origin master
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>3.修改scss，由于缓存修改后需执行hugo server使部署有效&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>3.覆盖主题样式&lt;/p>
+&lt;p>我使用了rmdhnreza(&lt;a href="https://github.com/rmdhnreza/rmdhnreza.my.id">https://github.com/rmdhnreza/rmdhnreza.my.id&lt;/a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹&lt;/p>
+&lt;p>另外修改：&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>~/myblog/assets/scss/variables.scss&lt;/p>
@@ -168,6 +170,7 @@ git push origin master
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;p>注：浏览器可能缓存样式，可使用无痕模式&lt;/p>
 &lt;h2 id="创建文章">创建文章&lt;/h2>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">hugo new post/文件夹名/index.md #创建文章
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>写文章：&lt;/p>
@@ -197,6 +200,8 @@ categories: #文章分类
 &lt;ul>
 &lt;li>&lt;code>[链接](https://)&lt;/code>&lt;/li>
 &lt;/ul>
+&lt;p>*```html*
+code&lt;/p>
 &lt;h2 id="评论系统">评论系统&lt;/h2>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
 >waline官方文档&lt;/a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL&lt;/p>
