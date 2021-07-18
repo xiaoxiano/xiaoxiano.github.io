@@ -93,14 +93,18 @@ slug: hugo-blog            #URL的尾部，用于文章地址
 categories:                #文章分类
     - blog
 ---
-</code></pre></div><p>front matter仅列举本文使用，<a class=link href=https://gohugo.io/content-management/front-matter#readout target=_blank rel=noopener>hugo front matter官方文档</a></p><p>2.常见文章markdown语法：</p><ul><li><p><code># 一级标题</code><br><code>## 二级标题</code><br><code>### 三级标题</code><br><code>#### 四级标题</code><br><code>##### 五级标题</code><br><code>###### 六级标题</code></p></li><li><p><code>`单行代码`</code><br><code>有`号需双反引号</code><br><code>\</code>有`号需双反引号<code> </code>\</p></li></ul><p><code>```html</code><br><code>多行代码</code><br><code>```</code></p><ul><li><p><code>[链接](https://)</code></p></li><li><p><code>\</code> 写在特殊符号前为转义；写在行尾为换行\</p></li><li><p><code>*斜体*</code><br><code>**加粗**</code></p></li><li><p><code>* 无序列表</code><br><code>双空格+* 子无序列表</code></p></li><li><p><code>![图片描述](本地图片.jpg)</code></p></li><li><p>表格\</p></li></ul><div class=highlight><pre class=chroma><code class=language-html data-lang=html>| Italics   | Bold     | Code   |
+</code></pre></div><p>front matter仅列举本文使用，<a class=link href=https://gohugo.io/content-management/front-matter#readout target=_blank rel=noopener>hugo front matter官方文档</a></p><p>2.常见文章markdown语法：</p><ul><li><p><code># 一级标题</code><br><code>## 二级标题</code><br><code>### 三级标题</code><br><code>#### 四级标题</code><br><code>##### 五级标题</code><br><code>###### 六级标题</code></p></li><li><p><code>`单行代码`</code><br><code>\`\`有`号需双反引号\`\`</code>\</p></li></ul><div class=highlight><pre class=chroma><code class=language-html data-lang=html>\```html ``
+多行代码
+\```
+</code></pre></div><ul><li><p><code>[链接](https://)</code></p></li><li><p><code>\</code> 写在特殊符号前为转义；写在行尾为换行\</p></li><li><p><code>*斜体*</code><br><code>**加粗**</code></p></li><li><p><code>* 无序列表</code><br><code>双空格* 子无序列表</code></p></li><li><p><code>![图片描述](本地图片.jpg)</code></p></li><li><p>表格</p></li></ul><div class=highlight><pre class=chroma><code class=language-html data-lang=html>| Italics   | Bold     | Code   |
 | --------  | -------- | ------ |
 | *italics* | **bold** | `code` |
-</code></pre></div><ul><li></li></ul><div class=highlight><pre class=chroma><code class=language-html data-lang=html><details class=spoiler id=spoiler-0>
+</code></pre></div><ul><li></li></ul><div class=highlight><pre class=chroma><code class=language-html data-lang=html>\<details class=spoiler id=spoiler-0>
   <summary>点击展开和折叠代码</summary>
   <p>```html
 code
-```</p>
+```
+\</p>
 </details>
 </code></pre></div><h2 id=评论系统>评论系统</h2><p><a class=link href=https://waline.js.org/en/guide/get-started.html#leancloud-settings-database target=_blank rel=noopener>waline官方文档</a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL</p><p>然后修改~/myblog/config.yaml</p><div class=highlight><pre class=chroma><code class=language-html data-lang=html>52  provider: waline                        #评论系统，本文示例使用waline
 73  serverURL: https://                     #评论系统URL用你自己的

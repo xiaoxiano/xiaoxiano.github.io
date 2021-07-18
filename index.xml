@@ -197,14 +197,13 @@ categories: #文章分类
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>`单行代码` &lt;/code>&lt;br>
-&lt;code>有`号需双反引号&lt;/code>&lt;br>
-&lt;code> \&lt;/code>有`号需双反引号&lt;code> &lt;/code>\&lt;/p>
+&lt;code>\`\`有`号需双反引号\`\`&lt;/code>\&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;code>```html&lt;/code>&lt;br>
-&lt;code>多行代码&lt;/code>&lt;br>
-&lt;code>```&lt;/code>&lt;/p>
-&lt;ul>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">\```html ``
+多行代码
+\```
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>&lt;code>[链接](https://)&lt;/code>&lt;/p>
 &lt;/li>
@@ -217,13 +216,13 @@ categories: #文章分类
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>* 无序列表&lt;/code>&lt;br>
-&lt;code>双空格+* 子无序列表&lt;/code>&lt;/p>
+&lt;code>双空格* 子无序列表&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>![图片描述](本地图片.jpg)&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>表格\&lt;/p>
+&lt;p>表格&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">| Italics | Bold | Code |
@@ -232,11 +231,12 @@ categories: #文章分类
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">&lt;details class="spoiler " id="spoiler-0">
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">\&lt;details class="spoiler " id="spoiler-0">
 &lt;summary>点击展开和折叠代码&lt;/summary>
 &lt;p>```html
 code
-```&lt;/p>
+```
+\&lt;/p>
 &lt;/details>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="评论系统">评论系统&lt;/h2>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
