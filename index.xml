@@ -17,43 +17,44 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;/ul>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:10809&amp;#34; #写自己ip
 export https_proxy=&amp;#34;http://ip:10809&amp;#34; #写自己ip
+source ~/.bashrc #使配置生效
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>git config\&lt;/li>
+&lt;li>git config&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 git config --global user.email johndoe@example.com #配置邮箱
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>git ssh 代理\
+&lt;li>git ssh 代理 \
 创建~/.ssh/config 文件：&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
 User git
 ProxyCommand nc -v -x ip:10808 %h %p #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
-&lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，不行在52论坛搜搜看&lt;br>
+&lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;br>
 软件设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>Wallpaper Engine #壁纸，steam购买&lt;/p>
+&lt;p>Wallpaper Engine　　　　　　#壁纸，steam购买&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Everything + uTools #便捷文件搜索及工具&lt;/p>
+&lt;p>Everything + uTools　　　　#便捷文件搜索及工具&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>DeskGo #腾讯出品的桌面软件格子&lt;/p>
+&lt;p>DeskGo　　　　　　　　　　　#腾讯出品的桌面软件格子&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Geek Uninstaller #卸载无残留&lt;/p>
+&lt;p>Geek Uninstaller　　　　　　#卸载无残留&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>clover #资源管理器多标签页&lt;/p>
+&lt;p>clover　　　　　　　　　　　#资源管理器多标签页&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>火绒 #屏蔽弹窗&lt;/p>
+&lt;p>火绒　　　　　　　　　　　　#屏蔽弹窗&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>typora #markdown记事本，据说notion在线笔记，我把博客当作在线笔记了&lt;/p>
+&lt;p>typora　　　　　　　　　　　#markdown记事本，据说notion在线笔记，我把博客当作在线笔记了&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="开发工具">开发工具&lt;/h2>
@@ -75,23 +76,23 @@ ProxyCommand nc -v -x ip:10808 %h %p #写自己ip
 &lt;p>浏览器：Chrome、Kiwi、Via&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>影视：整点视频 + AdGuard # AdGuard设置复杂请自行研究，去除视频广告可在日志中拦截mp4&lt;/p>
+&lt;p>影视：整点视频 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频广告可在日志中拦截mp4&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：倒带、QMD # 并不完美，希望找到更全更好用的&lt;/p>
+&lt;p>音乐：倒带、QMD　　　　　　# 并不完美，希望找到更全更好用的&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>小说：笔趣阁 # 这是个蓝底app，52纯净多源&lt;/p>
+&lt;p>小说：笔趣阁　　　　　　　　# 这是个蓝底app，52纯净多源&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：启动加速 #有后台权限且更好用&lt;/p>
+&lt;p>去除启动广告：启动加速　　　#有后台权限且更好用&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>其他&lt;/p>
 &lt;ul>
 &lt;li>向日葵远程控制&lt;/li>
-&lt;li>接听宝 #代接电话&lt;/li>
-&lt;li>zarchiver #文件管理和解压&lt;/li>
+&lt;li>接听宝　　　　　　　　　#代接电话&lt;/li>
+&lt;li>zarchiver　　　　　　　#文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
 &lt;li>福昕PDF阅读器&lt;/li>
 &lt;/ul>
