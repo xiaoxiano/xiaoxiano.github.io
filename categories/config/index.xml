@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>软件配置 on 银之介</title><link>https://www.jiangdaoli.cf/categories/config/</link><description>Recent content in 软件配置 on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/config/index.xml" rel="self" type="application/rss+xml"/><item><title>软件及配置</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>部分电脑配置记录 前言 请自备代理，查看端口，允许局域网 目前使用clash.net增强代理，标注历史均为历史配置，如果没有使用真全局代理可作为参考
-win10 config Terminal（历史） set http_proxy=http://127.0.0.1:port.http #临时命令行代理 set https_proxy=http://127.0.0.1:port.http #临时命令行代理 git git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks C:\Users\90487\.gitconfig #文件路径，90487是我的用户名
-VM Ubuntu config 代理
+win10 config git git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks C:\Users\90487\.gitconfig #文件路径，90487是我的用户名
+Terminal（历史） set http_proxy=http://127.0.0.1:port.http #临时命令行代理 set https_proxy=http://127.0.0.1:port.http #临时命令行代理 VM Ubuntu config 代理
 Windows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址
-终端代理（历史）
-直接在.bashrc最后加入：
-export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip source ~/.bashrc #使配置生效 git config git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.</description></item></channel></rss>
+git config
+git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱 git ssh 代理 创建~/.ssh/config 文件：
+Host github.com User git ProxyCommand nc -v -x ip:port.</description></item></channel></rss>
