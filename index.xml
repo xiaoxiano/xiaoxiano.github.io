@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>软件及配置</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
-&lt;p>请自备代理，查看端口，允许局域网&lt;/p>
-&lt;h2 id="win10-git-config">win10 git config&lt;/h2>
-&lt;p>C:\Users\90487.gitconfig #90487是我的用户名&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global http.https://www.github.com.proxy socks5://127.0.0.1:10808
-git config --global https.https://www.github.com.proxy socks5://127.0.0.1:10808
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
+&lt;h2 id="前言">前言&lt;/h2>
+&lt;p>请自备代理，查看端口，允许局域网
+目前使用clash.net增强代理，标注历史均为历史配置，如果没有使用&lt;strong>真全局&lt;/strong>代理可作为参考&lt;/p>
+&lt;h2 id="win10-config">win10 config&lt;/h2>
+&lt;ul>
+&lt;li>Terminal（历史）&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
+set https_proxy=http://127.0.0.1:port.http #临时命令行代理
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>git&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks
+git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>C:\Users\90487\.gitconfig&lt;/code> #文件路径，90487是我的用户名&lt;/p>
+&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
 &lt;li>
 &lt;p>代理&lt;br>
 Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>终端代理&lt;br>
-直接在.bashrc最后加入：&lt;/p>
+&lt;p>终端代理（历史）&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:10809&amp;#34; #写自己ip
-export https_proxy=&amp;#34;http://ip:10809&amp;#34; #写自己ip
-source ~/.bashrc #使配置生效
+&lt;p>直接在.bashrc最后加入：&lt;/p>
+&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">source ~/.bashrc #使配置生效
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>git config&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 git config --global user.email johndoe@example.com #配置邮箱
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>git ssh 代理 \
-创建~/.ssh/config 文件：&lt;/li>
+&lt;li>git ssh 代理&lt;/li>
 &lt;/ul>
+&lt;p>创建~/.ssh/config 文件：&lt;/p>
 &lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
 User git
-ProxyCommand nc -v -x ip:10808 %h %p #写自己ip
+ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;br>
-软件设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
+软件的设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -56,9 +66,17 @@ ProxyCommand nc -v -x ip:10808 %h %p #写自己ip
 &lt;li>
 &lt;p>typora　　　　　　　　　　　#markdown记事本，据说notion在线笔记，我把博客当作在线笔记了&lt;/p>
 &lt;/li>
+&lt;li>
+&lt;p>win10 microsoft store工具&lt;/p>
+&lt;ul>
+&lt;li>Windows Terminal　　　　　#命令行&lt;/li>
+&lt;li>TranslucentTB　　　　　　　#任务栏透明&lt;/li>
+&lt;li>EarTrumpet　　　　　　　　#音频管理&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h2 id="开发工具">开发工具&lt;/h2>
-&lt;p>软件多说无用&lt;br>
+&lt;p>多说无用&lt;br>
 先记录goland无限试用，方法适用IDEA系列&lt;/p>
 &lt;ol>
 &lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
