@@ -1,18 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 18 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>软件及配置</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用</title><link>https://www.jiangdaoli.cf/p/develop/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/develop/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
+&lt;h2 id="文件">文件&lt;/h2>
+&lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo gedit ~/File //编辑
+sudo mv //移动文件
+touch File //新建文件
+sudo rm -r Folder //删除文件夹
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装包">安装包&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt upgrade //更新
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>apt&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">dpkg --list //显示所有软件
+sudo apt-get install 包名 //安装
+sudo apt-get remove 包名 //卸载不删除配置文件
+sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>snap&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo snap list //列出已经安装的snap包
+sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
+sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
+sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu安装go">Ubuntu安装go&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt install snap #安装snap，使用snap更易安装、更新
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo snap install go --classic #安装go
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo vim /etc/profile #编辑profile
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export GOROOT=/snap/go #在最后一行添加
+export PATH=$PATH:$GOROOT/bin
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile
+go version #验证
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>请自备代理，查看端口，允许局域网
-目前使用clash.net增强代理，标注&lt;strong>历史&lt;/strong>均为历史配置，如果没有使用&lt;em>真全局&lt;/em>代理可作为参考&lt;/p>
+目前使用clash.net可增强代理，标注&lt;strong>历史&lt;/strong>均为历史配置，仅作参考不推荐使用&lt;/p>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
 &lt;li>git&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks
 git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>C:\Users\90487\.gitconfig&lt;/code> #文件路径，90487是我的用户名&lt;/p>
 &lt;ul>
 &lt;li>Terminal（历史）&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
 set https_proxy=http://127.0.0.1:port.http #临时命令行代理
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
@@ -24,22 +55,31 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;p>git config&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 git config --global user.email johndoe@example.com #配置邮箱
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>git ssh 代理&lt;/li>
 &lt;/ul>
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
 User git
 ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>终端代理（历史，已弃用）&lt;/li>
+&lt;li>
+&lt;p>终端代理（历史，已弃用）&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>方法一：直接在命令前加proxychains&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>方法二：直接在.bashrc最后加入：&lt;/p>
+&lt;/li>
 &lt;/ul>
-&lt;p>直接在.bashrc最后加入：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">source ~/.bashrc #使配置生效
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source ~/.bashrc #使配置生效
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;br>
 软件的设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
@@ -117,8 +157,8 @@ export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/li>
 &lt;/ul>
 &lt;p>暂时介绍这些，适用于专业领域的以后看情况再说，如果有其它好用的请赐教，感谢&lt;/p></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
-&lt;p>本人小散，A股人均韭菜请谨慎，美股放水暂不讨论&lt;/p>
-&lt;p>希望和股友交流发现好股，欢迎留言，荐股理由请简短&lt;/p>
+&lt;p>本文仅为个人投资记录，不构成投资建议，A股人均韭菜请谨慎，美股放水暂不讨论&lt;/p>
+&lt;p>希望和股友交流发现好股，欢迎留言，股票特点请简短&lt;/p>
 &lt;h2 id="本人买入">本人买入&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -166,39 +206,39 @@ export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;h2 id="卖出">卖出&lt;/h2>
 &lt;p>暂无，本人持股周期较长&lt;/p></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>
 &lt;p>1.Ubuntu&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">sudo apt update #更新
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt update #更新
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>2.github账号&lt;/p>
 &lt;p>3.git配置&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 git config --global user.email johndoe@example.com #配置邮箱
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>4.连接github&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; #生成SSH Keys 此为新版
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; #生成SSH Keys 此为新版
 ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; #此为常用版
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">cat ~/.ssh/id_ed25519.pub #复制
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">cat ~/.ssh/id_ed25519.pub #复制
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; SSH and GPG Keys -&amp;gt; New SSH key添加&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">ssh -T git@github.com #验证连接，输入yes
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">ssh -T git@github.com #验证连接，输入yes
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener"
 >官方文档&lt;/a>&lt;/p>
 &lt;p>5.git ssh 代理设置&lt;/p>
 &lt;p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作&lt;/p>
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Host github.com
 User git
 ProxyCommand nc -v -x 127.0.0.1:10808 %h %p #请修改127.0.0.1:10808
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="安装">安装&lt;/h1>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">snap install hugo --channel=extended #安装hugo
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">hugo version #验证
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">hugo new site myblog #创建博客
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git init #初始化
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git remote add origin git@github.com:**** #连接远程仓库
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . #使用主题的配置文件
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">snap install hugo --channel=extended #安装hugo
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">hugo version #验证
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">hugo new site myblog #创建博客
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git init #初始化
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git remote add origin git@github.com:**** #连接远程仓库
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . #使用主题的配置文件
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章&lt;/p>
 &lt;p>本地预览：
 myblog下执行&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">hugo server
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">hugo server
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>浏览器打开：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">http://localhost:1313/ #目前本地运行不显示文章目录，估计是操作系统原因
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">http://localhost:1313/ #目前本地运行不显示文章目录，估计是操作系统原因
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="部署">部署&lt;/h1>
 &lt;p>注：我将介绍使用github存放源码，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
 &lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开个人配置，不开放源码使用github pages需要创建2个仓库:
@@ -206,9 +246,9 @@ myblog下执行&lt;/p>
 &lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便&lt;/p>
 &lt;p>找到源码仓库Settings-&amp;gt; Secrets -&amp;gt; New repository secret #Name写PERSONAL_TOKEN，Value粘贴token&lt;/p>
 &lt;p>2.创建github actions的workflows自动部署文件：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">mkdir -p .github/workflows &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> touch ~/myblog/.github/workflows/main.yml
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">mkdir -p .github/workflows &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> touch ~/myblog/.github/workflows/main.yml
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">name: github pages
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">name: github pages
 on:
 push:
 branches:
@@ -240,9 +280,9 @@ commit_message: ${{ github.event.head_commit.message }}
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>只需更改external_repository: username/username.github.io 为你的github账户名，&lt;a class="link" href="https://github.com/marketplace/actions/github-pages-action" target="_blank" rel="noopener"
 >脚本详情&lt;/a>&lt;/p>
 &lt;p>3.在myblog文件夹下创建deploy.sh&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">touch deploy.sh
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">touch deploy.sh
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">#!/bin/bash
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#!/bin/bash
 echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
 # Add changes to git.
 git add .
@@ -265,7 +305,7 @@ git push origin master
 >更多定制文章可以参考这里&lt;/a>&lt;/p>
 &lt;h2 id="主题配置">主题配置&lt;/h2>
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">1 baseurl: https://username.github.io #改为自己的
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">1 baseurl: https://username.github.io #改为自己的
 2 languageCode: zh-CN #中文编码
 5 title: Example Site #博客名
 15 DefaultContentLanguage: zh-cn #中文
@@ -276,9 +316,10 @@ git push origin master
 152 startLevel: 1 #从文章1级标题使用文章目录
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>3.覆盖主题样式&lt;/p>
-&lt;p>我使用了rmdhnreza(&lt;a href="https://github.com/rmdhnreza/rmdhnreza.my.id">https://github.com/rmdhnreza/rmdhnreza.my.id&lt;/a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹&lt;/p>
+&lt;p>我使用了rmdhnreza(&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
+>https://github.com/rmdhnreza/rmdhnreza.my.id&lt;/a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹&lt;/p>
 &lt;p>另外修改：&lt;/p>
 &lt;ul>
 &lt;li>
@@ -290,10 +331,10 @@ git push origin master
 &lt;/ul>
 &lt;p>注：浏览器可能缓存样式，可使用无痕模式&lt;/p>
 &lt;h2 id="创建文章">创建文章&lt;/h2>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">hugo new post/文件夹名/index.md #创建文章
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">hugo new post/文件夹名/index.md #创建文章
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>写文章：&lt;/p>
 &lt;p>1.front matter:&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">---
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">---
 title: hugo使用stack主题搭建博客及部署 #标题
 description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁 #副标题
 date: 2021-07-04 #日期
@@ -343,7 +384,7 @@ categories: #文章分类
 &lt;p>表格&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">| Italics | Bold | Code |
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">| Italics | Bold | Code |
 | -------- | -------- | ------ |
 | *italics* | **bold** | `code` |
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -357,12 +398,14 @@ code&lt;br>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
 >waline官方文档&lt;/a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL&lt;/p>
 &lt;p>然后修改~/myblog/config.yaml&lt;/p>
-&lt;div class="highlight">&lt;pre class="chroma">&lt;code class="language-html" data-lang="html">52 provider: waline #评论系统，本文示例使用waline
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">52 provider: waline #评论系统，本文示例使用waline
 73 serverURL: https:// #评论系统URL用你自己的
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh deploy.sh即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
-&lt;p>在~/myblog/config.yaml修改baseurl: &lt;a href="https://username.github.io">https://username.github.io&lt;/a>&lt;/p>
-&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: &lt;a href="http://www.example.com">www.example.com&lt;/a>&lt;/p>
+&lt;p>在~/myblog/config.yaml修改baseurl: &lt;a class="link" href="https://username.github.io" target="_blank" rel="noopener"
+>https://username.github.io&lt;/a>&lt;/p>
+&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: &lt;a class="link" href="http://www.example.com" target="_blank" rel="noopener"
+>www.example.com&lt;/a>&lt;/p>
 &lt;p>执行sh deploy.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>

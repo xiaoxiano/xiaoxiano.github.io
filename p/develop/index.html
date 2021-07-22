@@ -1,0 +1,193 @@
+<!doctype html><html lang=zh-cn>
+<head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
+sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包 sudo apt update &amp;amp;&amp;amp; apt upgrade //更新  apt  dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 Ubuntu安装go sudo apt install snap #安装snap，使用snap更易安装、更新 sudo snap install go --classic #安装go sudo vim /etc/profile #编辑profile export GOROOT=/snap/go #在最后一行添加 export PATH=$PATH:$GOROOT/bin source /etc/profile go version #验证 "><title>Ubuntu常用</title>
+<link rel=canonical href=https://www.jiangdaoli.cf/p/develop/>
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Ubuntu常用">
+<meta property="og:description" content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
+sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包 sudo apt update &amp;amp;&amp;amp; apt upgrade //更新  apt  dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 Ubuntu安装go sudo apt install snap #安装snap，使用snap更易安装、更新 sudo snap install go --classic #安装go sudo vim /etc/profile #编辑profile export GOROOT=/snap/go #在最后一行添加 export PATH=$PATH:$GOROOT/bin source /etc/profile go version #验证 ">
+<meta property="og:url" content="https://www.jiangdaoli.cf/p/develop/">
+<meta property="og:site_name" content="银之介">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-07-22T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-22T00:00:00+00:00">
+<meta name=twitter:title content="Ubuntu常用">
+<meta name=twitter:description content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
+sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包 sudo apt update &amp;amp;&amp;amp; apt upgrade //更新  apt  dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 Ubuntu安装go sudo apt install snap #安装snap，使用snap更易安装、更新 sudo snap install go --classic #安装go sudo vim /etc/profile #编辑profile export GOROOT=/snap/go #在最后一行添加 export PATH=$PATH:$GOROOT/bin source /etc/profile go version #验证 "><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<link rel=icon href=/favicon.svg type=image/svg+xml>
+<link rel=manifest href=/site.webmanifest>
+<link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
+<meta name=msapplication-TileColor content="#da532c">
+<meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
+<meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用","headline":"Ubuntu常用","description":"Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc \u002b :\u002b wq 退出并保存修改之后的文件\nsudo gedit ~\/File \/\/编辑 sudo mv \/\/移动文件 touch File \/\/新建文件 sudo rm -r Folder \/\/删除文件夹 安装包 sudo apt update \u0026amp;\u0026amp; apt upgrade \/\/更新  apt  dpkg --list \/\/显示所有软件 sudo apt-get install 包名 \/\/安装 sudo apt-get remove 包名 \/\/卸载不删除配置文件 sudo apt-get --purge remove 包名 \/\/软件及其配置文件一并删除  snap  sudo snap list \/\/列出已经安装的snap包 sudo snap install \u0026lt;snap name\u0026gt; \/\/安装一个snap包 sudo snap refresh \u0026lt;snap name\u0026gt; \/\/更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove \u0026lt;snap name\u0026gt; \/\/删除一个snap包 Ubuntu安装go sudo apt install snap #安装snap，使用snap更易安装、更新 sudo snap install go --classic #安装go sudo vim \/etc\/profile #编辑profile export GOROOT=\/snap\/go #在最后一行添加 export PATH=$PATH:$GOROOT\/bin source \/etc\/profile go version #验证 ","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/develop\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-07-22T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/develop\/","wordCount":"101","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+</head>
+<body class="article-page has-toc">
+<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+<div class="container main-container flex
+extended">
+<div id=article-toolbar>
+<a href=https://www.jiangdaoli.cf class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
+</a>
+</div>
+<main class="main full-width">
+<article class=main-article>
+<header class=article-header>
+<div class=article-details>
+<header class=article-time>
+<ul id=menu class="breadcrumb article-category" itemscope itemtype=https://schema.org/BreadcrumbList>
+<li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
+<a itemprop=item href=/>
+<span itemprop=name>Home</span>
+<meta itemprop=position content="1">
+</a>
+</li>
+<li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
+<a itemprop=item href=/categories/computer>
+<span itemprop=name>computer</span>
+</a>
+<meta itemprop=position content="2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time>Jul 22, 2021</time>
+<li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
+<span style=display:none class=bold__text itemprop=name>Ubuntu常用</span>
+<meta itemprop=position content="3">
+</li>
+</ul>
+</header>
+<h2 class="article-title center-text">
+<a href=/p/develop/>Ubuntu常用</a>
+</h2>
+</div>
+<aside class=top-toc>
+<section class="widget archives">
+<h2 class=title-toc style="margin:20px 0 0">目录</h2>
+<div class=mobile--widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#ubuntu常用命令>Ubuntu常用命令</a>
+<ol>
+<li><a href=#文件>文件</a></li>
+<li><a href=#安装包>安装包</a></li>
+</ol>
+</li>
+<li><a href=#ubuntu安装go>Ubuntu安装go</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</header>
+<section class=article-content>
+<h1 id=ubuntu常用命令>Ubuntu常用命令</h1>
+<h2 id=文件>文件</h2>
+<p>i 键可以对文件进行修改， <code>Esc + :+ wq</code> 退出并保存修改之后的文件</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo gedit  ~/File                 //编辑
+sudo mv                            //移动文件
+touch File                         //新建文件
+sudo  rm -r Folder                 //删除文件夹
+</code></pre></div><h2 id=安装包>安装包</h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo apt update <span class=err>&amp;&amp;</span> apt upgrade     //更新
+</code></pre></div><ul>
+<li>apt</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>dpkg --list                         //显示所有软件 
+sudo apt-get install 包名           //安装 
+sudo apt-get remove 包名            //卸载不删除配置文件
+sudo apt-get --purge remove 包名    //软件及其配置文件一并删除
+</code></pre></div><ul>
+<li>snap</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo snap list                     //列出已经安装的snap包
+sudo snap install <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>      //安装一个snap包
+sudo snap refresh <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>      //更新一个snap包，如果后面不加包的名字更新所有的snap包
+sudo snap remove <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>       //删除一个snap包
+</code></pre></div><h1 id=ubuntu安装go>Ubuntu安装go</h1>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo apt install snap                   #安装snap，使用snap更易安装、更新
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo snap install go --classic          #安装go
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo vim /etc/profile                   #编辑profile
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>export GOROOT=/snap/go                  #在最后一行添加
+export PATH=$PATH:$GOROOT/bin            
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>source /etc/profile                     
+go version                              #验证
+</code></pre></div>
+</section>
+<footer class=article-footer>
+<section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
+<span>Licensed under CC BY-NC-SA 4.0</span>
+</section>
+</footer>
+</article>
+<aside class=related-contents--wrapper>
+</aside>
+<script src=//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js></script>
+<div id=waline class=waline-container></div>
+<style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}.waline-container .vcount{color:var(--card-text-color-main)}</style><script>new Waline({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],locale:{admin:"Admin"},requiredMeta:["name","email","url"],serverURL:"https://myblog-rho-ebon.vercel.app/"})</script>
+<footer class=site-footer>
+<section class=copyright>
+&copy;
+2021 银之介
+</section>
+<section class=powerby>
+Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=2.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+</section>
+</footer>
+<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div>
+<div class=pswp__scroll-wrap>
+<div class=pswp__container>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+<div class=pswp__item></div>
+</div>
+<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__top-bar>
+<div class=pswp__counter></div>
+<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<button class="pswp__button pswp__button--share" title=Share></button>
+<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+<div class=pswp__preloader>
+<div class=pswp__preloader__icn>
+<div class=pswp__preloader__cut>
+<div class=pswp__preloader__donut></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div>
+</div>
+<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+</button>
+<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+</button>
+<div class=pswp__caption>
+<div class=pswp__caption__center></div>
+</div>
+</div>
+</div>
+</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#ubuntu常用命令>Ubuntu常用命令</a>
+<ol>
+<li><a href=#文件>文件</a></li>
+<li><a href=#安装包>安装包</a></li>
+</ol>
+</li>
+<li><a href=#ubuntu安装go>Ubuntu安装go</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Titillium+Web&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
+</body>
+</html>
