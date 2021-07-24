@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用</title><link>https://www.jiangdaoli.cf/p/develop/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/develop/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu开发</title><link>https://www.jiangdaoli.cf/p/develop/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/develop/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
 &lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo gedit ~/File //编辑
@@ -29,10 +29,29 @@ sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&l
 export PATH=$PATH:$GOROOT/bin
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile
 go version #验证
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct #go get 设置为国内源
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
+&lt;h2 id="使用">使用&lt;/h2>
+&lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
+&lt;li>安装插件：IDE Eval Reset&lt;/li>
+&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
+>下载&lt;/a>&lt;/li>
+&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
+&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
+>原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
+&lt;h2 id="不能输入中文">不能输入中文&lt;/h2>
+&lt;p>在goland.sh注释之后的首行添加&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
+export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
+export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p></description></item><item><title>配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
-&lt;p>请自备代理，查看端口，允许局域网
-目前使用clash.net可增强代理，标注&lt;strong>历史&lt;/strong>均为历史配置，仅作参考不推荐使用&lt;/p>
+&lt;p>请自备代理，查看端口，允许局域网,标注&lt;strong>历史&lt;/strong>均为历史配置，仅作参考不推荐使用&lt;/p>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
 &lt;li>git&lt;/li>
@@ -115,19 +134,6 @@ export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h2 id="开发工具">开发工具&lt;/h2>
-&lt;p>多说无用&lt;br>
-先记录goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
-&lt;li>安装插件：IDE Eval Reset&lt;/li>
-&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
->下载&lt;/a>&lt;/li>
-&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
-&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
->原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
