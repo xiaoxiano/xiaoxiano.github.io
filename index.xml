@@ -252,8 +252,18 @@ export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
 &lt;h1 id="windows-flutter">windows flutter&lt;/h1>
-&lt;p>待写&lt;/p>
-&lt;h1 id="自用软件">自用软件&lt;/h1>
+&lt;ul>
+&lt;li>安装遇坑&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">//配置build.gradle(project:android)
+allprojects {
+repositories {
+google()
+jcenter()
+maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;br>
 软件的设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
