@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu开发</title><link>https://www.jiangdaoli.cf/p/develop/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/develop/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
 &lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo gedit ~/File //编辑
@@ -6,11 +6,11 @@ sudo mv //移动文件
 touch File //新建文件
 sudo rm -r Folder //删除文件夹
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装包">安装包&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt upgrade //更新
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;ul>
 &lt;li>apt&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">dpkg --list //显示所有软件
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt upgrade //更新
+dpkg --list //显示所有软件
 sudo apt-get install 包名 //安装
 sudo apt-get remove 包名 //卸载不删除配置文件
 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
@@ -21,35 +21,158 @@ sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
 sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
 sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
 sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu安装go">Ubuntu安装go&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt install snap #安装snap，使用snap更易安装、更新
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo snap install go --classic #安装go
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo vim /etc/profile #编辑profile
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export GOROOT=/snap/go #在最后一行添加
-export PATH=$PATH:$GOROOT/bin
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile
-go version #验证
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.io,direct #go get 设置为国内源
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
-&lt;h2 id="使用">使用&lt;/h2>
-&lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
-&lt;li>安装插件：IDE Eval Reset&lt;/li>
-&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
->下载&lt;/a>&lt;/li>
-&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
-&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
->原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
-&lt;h2 id="不能输入中文">不能输入中文&lt;/h2>
-&lt;p>在goland.sh注释之后的首行添加&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
-export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
-export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p></description></item><item><title>配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="脚本">脚本&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set -eux
+#-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
+#-u 　当执行时使用到未定义过的变量，则显示错误信息。
+#-x 　执行指令后，会先显示该指令及所下的参数。
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>繁忙中，待续&lt;/p>
+&lt;h2 id="shell">shell&lt;/h2>
+&lt;p>&lt;a class="link" href="http://www.imooc.com/wiki/shelllesson/shellvariable.html" target="_blank" rel="noopener"
+>原文地址&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">name=&amp;#34;MyName&amp;#34; //定义变量
+echo $name 或 echo ${name} //使用变量
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">val=`expr 2 + 2` #expr 是一款表达式计算工具，使用它能完成表达式的求值操作。
+echo &amp;#34;Total value : $val&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>特殊变量&lt;/th>
+&lt;th>含义&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>$0&lt;/td>
+&lt;td>当前脚本的文件名&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$n&lt;/td>
+&lt;td>传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是$1，第二个参数是$2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$#&lt;/td>
+&lt;td>传递给脚本或函数的参数个数总和&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$*&lt;/td>
+&lt;td>传递给脚本或函数的所有参数，当被双引号 &amp;quot; &amp;quot; 包含时，所有的位置参数被看做一个字符串&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$@&lt;/td>
+&lt;td>传递给脚本或函数的所有参数，当被双引号 &amp;quot; &amp;quot; 包含时，每个位置参数被看做独立的字符串&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$?&lt;/td>
+&lt;td>上个命令的退出状态，或函数的返回值&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$$&lt;/td>
+&lt;td>当前 Shell 进程 ID。对于 Shell 脚本，就是这些脚本所在的进程 ID。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>比较符&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>-eq，equal&lt;/td>
+&lt;td>等于&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-ne，not equal&lt;/td>
+&lt;td>不等于&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-gt，greater than&lt;/td>
+&lt;td>大于&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-lt，lesser than&lt;/td>
+&lt;td>小于&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-ge，greater or equal&lt;/td>
+&lt;td>大于或等于&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-le，lesser or equal&lt;/td>
+&lt;td>小于或等于&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>-z&lt;/th>
+&lt;th>检测字符串长度是否为 0，为 0 返回 true。&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>-e&lt;/td>
+&lt;td>file 检测文件（包括目录）是否存在，如果是，则返回 true。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;td>&amp;mdash;&amp;mdash;&amp;ndash;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-f&lt;/td>
+&lt;td>file 检测文件是否是普通文件（既不是目录，也不是设备文件），如果是，则返回 true。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>待续&lt;/p></description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>请自备代理，查看端口，允许局域网,标注&lt;strong>历史&lt;/strong>均为历史配置，仅作参考不推荐使用&lt;/p>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
@@ -99,7 +222,38 @@ ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source ~/.bashrc #使配置生效
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu安装go">Ubuntu安装go&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt install snap #安装snap，使用snap更易安装、更新
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo snap install go --classic #安装go
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo vim /etc/profile #编辑profile
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export GOROOT=/snap/go #在最后一行添加
+export PATH=$PATH:$GOROOT/bin
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile
+go version #验证
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.io,direct #go get 设置为国内源
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
+&lt;h2 id="使用">使用&lt;/h2>
+&lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
+&lt;li>安装插件：IDE Eval Reset&lt;/li>
+&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
+>下载&lt;/a>&lt;/li>
+&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
+&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
+>原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
+&lt;h2 id="不能输入中文">不能输入中文&lt;/h2>
+&lt;p>在goland.sh注释之后的首行添加&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
+export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
+export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
+&lt;h1 id="windows-flutter">windows flutter&lt;/h1>
+&lt;p>待写&lt;/p>
+&lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;br>
 软件的设置过于复杂且个性化，不做过多介绍自己慢慢玩吧&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
@@ -108,7 +262,10 @@ export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;p>Wallpaper Engine　　　　　　#壁纸，steam购买&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Everything + uTools　　　　#便捷文件搜索及工具&lt;/p>
+&lt;p>Everything + uTools　　　　#文件快捷搜索及工具&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>quicker　　　　　　　　　　 #鼠标便捷操作&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>DeskGo　　　　　　　　　　　#腾讯出品的桌面软件格子&lt;/p>
@@ -344,6 +501,7 @@ git push origin master
 title: hugo使用stack主题搭建博客及部署 #标题
 description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁 #副标题
 date: 2021-07-04 #日期
+lastmod: 2021-07-27 #上次修改内容的日期
 slug: hugo-blog #URL的尾部，用于文章地址
 categories: #文章分类
 - blog
