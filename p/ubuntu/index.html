@@ -18,7 +18,7 @@ sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc \u002b :\u002b wq 退出并保存修改之后的文件\nsudo gedit ~\/File \/\/编辑 sudo mv \/\/移动文件 touch File \/\/新建文件 sudo rm -r Folder \/\/删除文件夹 安装包  apt  sudo apt update \u0026amp;\u0026amp; apt upgrade \/\/更新 dpkg --list \/\/显示所有软件 sudo apt-get install 包名 \/\/安装 sudo apt-get remove 包名 \/\/卸载不删除配置文件 sudo apt-get --purge remove 包名 \/\/软件及其配置文件一并删除  snap  sudo snap list \/\/列出已经安装的snap包 sudo snap install \u0026lt;snap name\u0026gt; \/\/安装一个snap包 sudo snap refresh \u0026lt;snap name\u0026gt; \/\/更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove \u0026lt;snap name\u0026gt; \/\/删除一个snap包 脚本 set -eux #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-07-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"195","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc \u002b :\u002b wq 退出并保存修改之后的文件\nsudo gedit ~\/File \/\/编辑 sudo mv \/\/移动文件 touch File \/\/新建文件 sudo rm -r Folder \/\/删除文件夹 安装包  apt  sudo apt update \u0026amp;\u0026amp; apt upgrade \/\/更新 dpkg --list \/\/显示所有软件 sudo apt-get install 包名 \/\/安装 sudo apt-get remove 包名 \/\/卸载不删除配置文件 sudo apt-get --purge remove 包名 \/\/软件及其配置文件一并删除  snap  sudo snap list \/\/列出已经安装的snap包 sudo snap install \u0026lt;snap name\u0026gt; \/\/安装一个snap包 sudo snap refresh \u0026lt;snap name\u0026gt; \/\/更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove \u0026lt;snap name\u0026gt; \/\/删除一个snap包 脚本 set -eux #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-07-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"171","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -126,48 +126,24 @@ echo &#34;Total value : $val&#34;
 <td>当前脚本的文件名</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>$n</td>
 <td>传递给脚本或函数的参数。n 是一个数字，表示第几个参数。例如，第一个参数是$1，第二个参数是$2</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>$#</td>
 <td>传递给脚本或函数的参数个数总和</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>$*</td>
 <td>传递给脚本或函数的所有参数，当被双引号 " " 包含时，所有的位置参数被看做一个字符串</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>$@</td>
 <td>传递给脚本或函数的所有参数，当被双引号 " " 包含时，每个位置参数被看做独立的字符串</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>$?</td>
 <td>上个命令的退出状态，或函数的返回值</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>$$</td>
@@ -188,40 +164,20 @@ echo &#34;Total value : $val&#34;
 <td>等于</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>-ne，not equal</td>
 <td>不等于</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>-gt，greater than</td>
 <td>大于</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>-lt，lesser than</td>
 <td>小于</td>
 </tr>
 <tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
-</tr>
-<tr>
 <td>-ge，greater or equal</td>
 <td>大于或等于</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>-le，lesser or equal</td>
@@ -240,10 +196,6 @@ echo &#34;Total value : $val&#34;
 <tr>
 <td>-e</td>
 <td>file 检测文件（包括目录）是否存在，如果是，则返回 true。</td>
-</tr>
-<tr>
-<td>&mdash;&mdash;&ndash;</td>
-<td>&mdash;&mdash;&ndash;</td>
 </tr>
 <tr>
 <td>-f</td>
