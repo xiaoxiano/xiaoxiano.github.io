@@ -22,7 +22,14 @@ sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&
 sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
 sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="脚本">脚本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set -eux
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">local #用于声明局部变量
+source
+sed
+systemctl stop service # 停止一个服务
+systemctl daemon-reload # 重载所有修改过的配置文件
+systemctl enable #将服务设置为每次开机启动
+grep
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set -eux #用于脚本开头设置
 #-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
 #-u 　当执行时使用到未定义过的变量，则显示错误信息。
 #-x 　执行指令后，会先显示该指令及所下的参数。
@@ -191,7 +198,7 @@ go env -w GOPROXY=https://goproxy.io,direct #go get 设置为国内源
 &lt;/ol>
 &lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
 >原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
-&lt;h2 id="不能输入中文">不能输入中文&lt;/h2>
+&lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
 &lt;p>在goland.sh注释之后的首行添加&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
 export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
@@ -221,10 +228,10 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>Everything + uTools　　　　#文件快捷搜索及工具&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>quicker　　　　　　　　　　 #鼠标便捷操作&lt;/p>
+&lt;p>quicker　　　　　　　　　　 #鼠标便捷操作神器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>DeskGo　　　　　　　　　　　#腾讯出品的桌面软件格子&lt;/p>
+&lt;p>DeskGo　　　　　　　　　　#腾讯出品的桌面软件格子&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Geek Uninstaller　　　　　　#卸载无残留&lt;/p>
@@ -253,16 +260,16 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>浏览器：Chrome、Kiwi、Via&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>影视：整点视频 + AdGuard　　# AdGuard设置复杂请自行研究，去除开头广告可在日志中拦截mp4字样文件&lt;/p>
+&lt;p>影视：整点视频 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>音乐：倒带、QMD　　　　　　# 并不完美，希望找到更全更好用的&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>小说：笔趣阁　　　　　　　　# 这是个蓝底app，52纯净多源&lt;/p>
+&lt;p>小说：笔趣阁　　　　　　　　# 这是个52蓝底app&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：启动加速　　　#有后台权限且更好用&lt;/p>
+&lt;p>去除启动广告：启动加速　　　#有后台权限更好用&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>其他&lt;/p>
@@ -275,7 +282,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>暂时介绍这些，适用于专业领域的以后看情况再说，如果有其它好用的请赐教，感谢&lt;/p></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>暂时介绍这些，如果有其它好用的请赐教，感谢&lt;/p></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>本文仅为个人投资记录，不构成投资建议，A股人均韭菜请谨慎，美股放水暂不讨论&lt;/p>
 &lt;p>希望和股友交流发现好股，欢迎留言，股票特点请简短&lt;/p>
 &lt;h2 id="本人买入">本人买入&lt;/h2>
