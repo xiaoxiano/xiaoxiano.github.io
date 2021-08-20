@@ -1,5 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="ubuntu常用命令">Ubuntu常用命令&lt;/h1>
-&lt;h2 id="文件">文件&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="日常使用">日常使用&lt;/h1>
+&lt;h2 id="git">git&lt;/h2>
+&lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
+>官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
+&lt;h3 id="push脚本">push脚本&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#!/bin/bash
+echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
+# Add changes to git.
+git add .
+# Commit changes.
+msg=&amp;#34;rebuilding site `date`&amp;#34;
+if [ $# -eq 1 ]
+then msg=&amp;#34;$1&amp;#34;
+fi
+git commit -m &amp;#34;$msg&amp;#34;
+# Push source and build repos.
+git push origin master
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="私人仓库fork">私人仓库fork&lt;/h3>
+&lt;ol>
+&lt;li>fork一个公开仓库&lt;/li>
+&lt;li>使用github&lt;a class="link" href="https://github.com/new/import" target="_blank" rel="noopener"
+>导入功能&lt;/a>，写fork仓库的地址，并创建私有仓库&lt;/li>
+&lt;li>本地操作&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git clone git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #克隆到本地
+git remote add upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #添加上游(源)仓库用于更新
+git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>&lt;code>git remote -v&lt;/code>可以看到：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
+origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (push)
+upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
+upstream DISABLE (push)
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>拉取更新&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git fetch upstream
+git rebase upstream/master
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo gedit ~/File //编辑
 sudo mv //移动文件
@@ -21,7 +59,8 @@ sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
 sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
 sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
 sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="脚本">脚本&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="脚本">脚本&lt;/h1>
+&lt;h2 id="命令">命令&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">local #用于声明局部变量
 source
 sed
@@ -367,7 +406,7 @@ myblog下执行&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">http://localhost:1313/ #目前本地运行不显示文章目录，估计是操作系统原因
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="部署">部署&lt;/h1>
 &lt;p>注：我将介绍使用github存放源码，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
-&lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开个人配置，不开放源码使用github pages需要创建2个仓库:
+&lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库&lt;/p>
 &lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便&lt;/p>
 &lt;p>找到源码仓库Settings-&amp;gt; Secrets -&amp;gt; New repository secret #Name写PERSONAL_TOKEN，Value粘贴token&lt;/p>
@@ -405,8 +444,8 @@ commit_message: ${{ github.event.head_commit.message }}
 #cname: www.example.com # 使用自定义域名
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>只需更改external_repository: username/username.github.io 为你的github账户名，&lt;a class="link" href="https://github.com/marketplace/actions/github-pages-action" target="_blank" rel="noopener"
 >脚本详情&lt;/a>&lt;/p>
-&lt;p>3.在myblog文件夹下创建deploy.sh&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">touch deploy.sh
+&lt;p>3.在myblog文件夹下创建push.sh&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">touch push.sh
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#!/bin/bash
 echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
@@ -420,8 +459,8 @@ fi
 git commit -m &amp;#34;$msg&amp;#34;
 # Push source and build repos.
 git push origin master
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 sh deploy.sh命令&lt;/p>
-&lt;p>到此已完成部署，之后任何更新如上运行deploy脚本即可&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 sh push.sh命令&lt;/p>
+&lt;p>到此已完成部署，之后任何更新如上运行push脚本即可&lt;/p>
 &lt;h1 id="修改主题">修改主题&lt;/h1>
 &lt;p>此处仅列举常见需修改内容，更多内容请看&lt;a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration" target="_blank" rel="noopener"
 >stack主题文档&lt;/a>&lt;/p>
@@ -527,13 +566,13 @@ code&lt;br>
 &lt;p>然后修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">52 provider: waline #评论系统，本文示例使用waline
 73 serverURL: https:// #评论系统URL用你自己的
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh deploy.sh即可&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh push.sh即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
 &lt;p>在~/myblog/config.yaml修改baseurl: &lt;a class="link" href="https://username.github.io" target="_blank" rel="noopener"
 >https://username.github.io&lt;/a>&lt;/p>
 &lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: &lt;a class="link" href="http://www.example.com" target="_blank" rel="noopener"
 >www.example.com&lt;/a>&lt;/p>
-&lt;p>执行sh deploy.sh即可&lt;/p>
+&lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>
 &lt;p>没有域名？&lt;/p>

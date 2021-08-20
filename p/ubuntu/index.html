@@ -1,24 +1,24 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
-sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包  apt  sudo apt update &amp;amp;&amp;amp; apt upgrade //更新 dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 脚本 local #用于声明局部变量 source sed systemctl stop service # 停止一个服务 systemctl daemon-reload # 重载所有修改过的配置文件 systemctl enable #将服务设置为每次开机启动 grep set -eux #用于脚本开头设置 #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续"><title>Ubuntu常用命令</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="日常使用 git 官网git备忘表比各种教程都易看
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><title>Ubuntu常用命令</title>
 <link rel=canonical href=https://www.jiangdaoli.cf/p/ubuntu/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Ubuntu常用命令">
-<meta property="og:description" content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
-sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包  apt  sudo apt update &amp;amp;&amp;amp; apt upgrade //更新 dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 脚本 local #用于声明局部变量 source sed systemctl stop service # 停止一个服务 systemctl daemon-reload # 重载所有修改过的配置文件 systemctl enable #将服务设置为每次开机启动 grep set -eux #用于脚本开头设置 #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续">
+<meta property="og:description" content="日常使用 git 官网git备忘表比各种教程都易看
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github.">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/ubuntu/">
 <meta property="og:site_name" content="银之介">
-<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-07-22T00:00:00+00:00"><meta property="article:modified_time" content="2021-07-27T00:00:00+00:00">
+<meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-07-22T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-18T00:00:00+00:00">
 <meta name=twitter:title content="Ubuntu常用命令">
-<meta name=twitter:description content="Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc + :+ wq 退出并保存修改之后的文件
-sudo gedit ~/File //编辑 sudo mv //移动文件 touch File //新建文件 sudo rm -r Folder //删除文件夹 安装包  apt  sudo apt update &amp;amp;&amp;amp; apt upgrade //更新 dpkg --list //显示所有软件 sudo apt-get install 包名 //安装 sudo apt-get remove 包名 //卸载不删除配置文件 sudo apt-get --purge remove 包名 //软件及其配置文件一并删除  snap  sudo snap list //列出已经安装的snap包 sudo snap install &amp;lt;snap name&amp;gt; //安装一个snap包 sudo snap refresh &amp;lt;snap name&amp;gt; //更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove &amp;lt;snap name&amp;gt; //删除一个snap包 脚本 local #用于声明局部变量 source sed systemctl stop service # 停止一个服务 systemctl daemon-reload # 重载所有修改过的配置文件 systemctl enable #将服务设置为每次开机启动 grep set -eux #用于脚本开头设置 #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<meta name=twitter:description content="日常使用 git 官网git备忘表比各种教程都易看
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon href=/favicon.svg type=image/svg+xml>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"Ubuntu常用命令 文件 i 键可以对文件进行修改， Esc \u002b :\u002b wq 退出并保存修改之后的文件\nsudo gedit ~\/File \/\/编辑 sudo mv \/\/移动文件 touch File \/\/新建文件 sudo rm -r Folder \/\/删除文件夹 安装包  apt  sudo apt update \u0026amp;\u0026amp; apt upgrade \/\/更新 dpkg --list \/\/显示所有软件 sudo apt-get install 包名 \/\/安装 sudo apt-get remove 包名 \/\/卸载不删除配置文件 sudo apt-get --purge remove 包名 \/\/软件及其配置文件一并删除  snap  sudo snap list \/\/列出已经安装的snap包 sudo snap install \u0026lt;snap name\u0026gt; \/\/安装一个snap包 sudo snap refresh \u0026lt;snap name\u0026gt; \/\/更新一个snap包，如果后面不加包的名字更新所有的snap包 sudo snap remove \u0026lt;snap name\u0026gt; \/\/删除一个snap包 脚本 local #用于声明局部变量 source sed systemctl stop service # 停止一个服务 systemctl daemon-reload # 重载所有修改过的配置文件 systemctl enable #将服务设置为每次开机启动 grep set -eux #用于脚本开头设置 #-e 若指令传回值不等于0，则立即退出shell。0表示没有错误 #-u 当执行时使用到未定义过的变量，则显示错误信息。 #-x 执行指令后，会先显示该指令及所下的参数。 繁忙中，待续","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-07-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"189","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"日常使用 git 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"280","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -63,11 +63,21 @@ extended">
 <div class=mobile--widget--toc>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#ubuntu常用命令>Ubuntu常用命令</a>
+<li><a href=#日常使用>日常使用</a>
 <ol>
+<li><a href=#git>git</a>
+<ol>
+<li><a href=#push脚本>push脚本</a></li>
+<li><a href=#私人仓库fork>私人仓库fork</a></li>
+</ol>
+</li>
 <li><a href=#文件>文件</a></li>
 <li><a href=#安装包>安装包</a></li>
-<li><a href=#脚本>脚本</a></li>
+</ol>
+</li>
+<li><a href=#脚本>脚本</a>
+<ol>
+<li><a href=#命令>命令</a></li>
 <li><a href=#shell>shell</a></li>
 </ol>
 </li>
@@ -78,8 +88,49 @@ extended">
 </aside>
 </header>
 <section class=article-content>
-<h1 id=ubuntu常用命令>Ubuntu常用命令</h1>
-<h2 id=文件>文件</h2>
+<h1 id=日常使用>日常使用</h1>
+<h2 id=git>git</h2>
+<p><a class=link href=https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/ target=_blank rel=noopener>官网git备忘表</a>比各种教程都易看</p>
+<h3 id=push脚本>push脚本</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>#!/bin/bash  
+
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;  
+
+# Add changes to git.  
+git add .  
+
+# Commit changes.  
+msg=&#34;rebuilding site `date`&#34;  
+if [ $# -eq 1 ]  
+  then msg=&#34;$1&#34;  
+fi  
+git commit -m &#34;$msg&#34;  
+
+# Push source and build repos.  
+git push origin master  
+
+</code></pre></div><h3 id=私人仓库fork>私人仓库fork</h3>
+<ol>
+<li>fork一个公开仓库</li>
+<li>使用github<a class=link href=https://github.com/new/import target=_blank rel=noopener>导入功能</a>，写fork仓库的地址，并创建私有仓库</li>
+<li>本地操作</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git clone git@github.com:<span class=p>&lt;</span><span class=nt>your_username</span><span class=p>&gt;</span>/<span class=p>&lt;</span><span class=nt>your_repo</span><span class=p>&gt;</span>.git     #克隆到本地
+git remote add upstream git@github.com:<span class=p>&lt;</span><span class=nt>original_owner</span><span class=p>&gt;</span>/<span class=p>&lt;</span><span class=nt>original_repo</span><span class=p>&gt;</span>.git      #添加上游(源)仓库用于更新 
+git remote set-url --push upstream DISABLE   #禁用推送到上游(源)仓库
+</code></pre></div><ol start=4>
+<li><code>git remote -v</code>可以看到：</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>origin	git@github.com:<span class=p>&lt;</span><span class=nt>your_username</span><span class=p>&gt;</span>/<span class=p>&lt;</span><span class=nt>your_repo</span><span class=p>&gt;</span>.git (fetch)
+origin	git@github.com:<span class=p>&lt;</span><span class=nt>your_username</span><span class=p>&gt;</span>/<span class=p>&lt;</span><span class=nt>your_repo</span><span class=p>&gt;</span>.git (push)
+upstream	git@github.com:<span class=p>&lt;</span><span class=nt>original_owner</span><span class=p>&gt;</span>/<span class=p>&lt;</span><span class=nt>original_repo</span><span class=p>&gt;</span>.git (fetch)
+upstream	DISABLE (push)
+</code></pre></div><ol start=5>
+<li>拉取更新</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git fetch upstream
+git rebase upstream/master
+</code></pre></div><h2 id=文件>文件</h2>
 <p>i 键可以对文件进行修改， <code>Esc + :+ wq</code> 退出并保存修改之后的文件</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo gedit  ~/File                 //编辑
 sudo mv                            //移动文件
@@ -101,7 +152,8 @@ sudo apt-get --purge remove 包名    //软件及其配置文件一并删除
 sudo snap install <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>      //安装一个snap包
 sudo snap refresh <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>      //更新一个snap包，如果后面不加包的名字更新所有的snap包
 sudo snap remove <span class=p>&lt;</span><span class=nt>snap</span> <span class=na>name</span><span class=p>&gt;</span>       //删除一个snap包
-</code></pre></div><h2 id=脚本>脚本</h2>
+</code></pre></div><h1 id=脚本>脚本</h1>
+<h2 id=命令>命令</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>local      #用于声明局部变量
 source
 sed
@@ -212,7 +264,7 @@ echo &#34;Total value : $val&#34;
 </section>
 <section class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <span class=article-time--modified>
-最后更新于 Jul 27, 2021 00:00 UTC
+最后更新于 Aug 18, 2021 00:00 UTC
 </span>
 </section></footer>
 </article>
@@ -274,11 +326,21 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#ubuntu常用命令>Ubuntu常用命令</a>
+<li><a href=#日常使用>日常使用</a>
 <ol>
+<li><a href=#git>git</a>
+<ol>
+<li><a href=#push脚本>push脚本</a></li>
+<li><a href=#私人仓库fork>私人仓库fork</a></li>
+</ol>
+</li>
 <li><a href=#文件>文件</a></li>
 <li><a href=#安装包>安装包</a></li>
-<li><a href=#脚本>脚本</a></li>
+</ol>
+</li>
+<li><a href=#脚本>脚本</a>
+<ol>
+<li><a href=#命令>命令</a></li>
 <li><a href=#shell>shell</a></li>
 </ol>
 </li>
