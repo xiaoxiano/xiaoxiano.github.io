@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 银之介</title><link>https://www.jiangdaoli.cf/post/</link><description>Recent content in Posts on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>日常使用 git 官网git备忘表比各种教程都易看
-push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作 git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到： origin git@github.</description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>部分电脑配置记录 前言 请自备代理，查看端口，允许局域网,标注历史均为历史配置，仅作参考不推荐使用
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库 fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作 git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到： origin git@github.</description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>部分电脑配置记录 前言 请自备代理，查看端口，允许局域网,标注历史均为历史配置，仅作参考不推荐使用
 win10 config git git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks C:\Users\90487\.gitconfig #文件路径，90487是我的用户名
 Terminal（历史） set http_proxy=http://127.0.0.1:port.http #临时命令行代理 set https_proxy=http://127.0.0.1:port.http #临时命令行代理 VM Ubuntu config 代理
 Windows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址
 git config
 git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱 git ssh 代理 创建~/.ssh/config 文件：
-Host github.com User git ProxyCommand nc -v -x ip:port.</description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>前言 本文仅为个人投资记录，不构成投资建议，A股人均韭菜请谨慎，美股放水暂不讨论
-希望和股友交流发现好股，欢迎留言，股票特点请简短
+Host github.com User git ProxyCommand nc -v -x ip:port.</description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>前言 本文仅为个人投资记录，不构成投资建议，A股人均韭菜请谨慎
 本人买入 国恩股份：发文时(2021-07-13)收盘价24.38
-可降解塑料概念，同类中估值较低 渝农商行：发文时(2021-07-13)收盘价3.94
+可降解塑料概念，同类中估值较低 上海银行：发文时(2021-09-03)收盘价7.41
 感觉被低估 观察中 微芯生物：
-创新药，带头人不是半路出家，低位期及销量增长期可能将近
+创新药
 大股东持续大量减持
 天建集团：
 估值较低，业绩可能新一轮增长
 行业处于高位，未来下行概率较大
-历史 买入 国恩股份：发文时(2021-07-13)收盘价24.38
-渝农商行：发文时(2021-07-13)收盘价3.94
-卖出 暂无，本人持股周期较长</description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>准备 1.Ubuntu
+历史 买入上海银行：(2021-09-03)收盘价7.41
+卖出渝农商行：(2021-09-03)收盘价3.96，无盈亏
+买入国恩股份：(2021-07-13)收盘价24.38
+买入渝农商行：(2021-07-13)收盘价3.94</description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>准备 1.Ubuntu
 sudo apt update #更新 2.github账号
 3.git配置
 git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱 4.连接github

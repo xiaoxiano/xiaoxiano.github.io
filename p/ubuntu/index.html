@@ -1,24 +1,24 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="日常使用 git 官网git备忘表比各种教程都易看
-push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><title>Ubuntu常用命令</title>
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><title>Ubuntu常用命令</title>
 <link rel=canonical href=https://www.jiangdaoli.cf/p/ubuntu/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="Ubuntu常用命令">
 <meta property="og:description" content="日常使用 git 官网git备忘表比各种教程都易看
-push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github.">
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github.">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/ubuntu/">
 <meta property="og:site_name" content="银之介">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-07-22T00:00:00+00:00"><meta property="article:modified_time" content="2021-08-18T00:00:00+00:00">
 <meta name=twitter:title content="Ubuntu常用命令">
 <meta name=twitter:description content="日常使用 git 官网git备忘表比各种教程都易看
-push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34; # Add changes to git. git add . # Commit changes. msg=&amp;#34;rebuilding site `date`&amp;#34; if [ $# -eq 1 ] then msg=&amp;#34;$1&amp;#34; fi git commit -m &amp;#34;$msg&amp;#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:&amp;lt;your_username&amp;gt;/&amp;lt;your_repo&amp;gt;.git #克隆到本地 git remote add upstream git@github.com:&amp;lt;original_owner&amp;gt;/&amp;lt;original_repo&amp;gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin	git@github."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon href=/favicon.svg type=image/svg+xml>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"日常使用 git 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 私人仓库fork  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"280","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"Ubuntu常用命令","headline":"Ubuntu常用命令","description":"日常使用 git 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"280","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -68,7 +68,7 @@ extended">
 <li><a href=#git>git</a>
 <ol>
 <li><a href=#push脚本>push脚本</a></li>
-<li><a href=#私人仓库fork>私人仓库fork</a></li>
+<li><a href=#公开仓库fork为私有仓库>公开仓库fork为私有仓库</a></li>
 </ol>
 </li>
 <li><a href=#文件>文件</a></li>
@@ -109,7 +109,7 @@ git commit -m &#34;$msg&#34;
 # Push source and build repos.  
 git push origin master  
 
-</code></pre></div><h3 id=私人仓库fork>私人仓库fork</h3>
+</code></pre></div><h3 id=公开仓库fork为私有仓库>公开仓库fork为私有仓库</h3>
 <ol>
 <li>fork一个公开仓库</li>
 <li>使用github<a class=link href=https://github.com/new/import target=_blank rel=noopener>导入功能</a>，写fork仓库的地址，并创建私有仓库</li>
@@ -331,7 +331,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#git>git</a>
 <ol>
 <li><a href=#push脚本>push脚本</a></li>
-<li><a href=#私人仓库fork>私人仓库fork</a></li>
+<li><a href=#公开仓库fork为私有仓库>公开仓库fork为私有仓库</a></li>
 </ol>
 </li>
 <li><a href=#文件>文件</a></li>
