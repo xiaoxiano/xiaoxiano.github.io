@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule" target="_blank" rel="noopener"
 >文档&lt;/a>&lt;/p>
 &lt;p>模板&lt;/p>
 &lt;p>常用actions：&lt;/p>
 &lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
->安装docker&lt;/a>]&lt;/p>
+>安装docker&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#更新apt包索引
 sudo apt-get update
 #安装包以允许apt通过 HTTPS 使用存储库
@@ -16,11 +16,13 @@ curl \
 gnupg \
 lsb-release
 #添加Docker官方的GPG密钥
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --
+dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+(此处可能需要安装gpg:sudo apt-get install gnupg2 -y)
 #设置稳定存储库
 echo \
 &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
-$(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
 #安装最新版本的Docker Engine和containerd
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 #hello-world 映像验证
