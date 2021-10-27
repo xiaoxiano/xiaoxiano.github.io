@@ -5,7 +5,7 @@
 &lt;p>常用actions：&lt;/p>
 &lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
->安装docker&lt;/a>&lt;/p>
+>安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#更新apt包索引
 sudo apt-get update
 #安装包以允许apt通过 HTTPS 使用存储库
@@ -16,8 +16,7 @@ curl \
 gnupg \
 lsb-release
 #添加Docker官方的GPG密钥
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --
-dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 (此处可能需要安装gpg:sudo apt-get install gnupg2 -y)
 #设置稳定存储库
 echo \
@@ -33,7 +32,7 @@ sudo docker run hello-world
 &lt;p>&lt;strong>卷&lt;/strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/p>
 &lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener"
->安装docker compose&lt;/a>&lt;/p>
+>安装docker compose&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#下载 Docker Compose 的当前稳定版本
 sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
 #对二进制文件应用可执行权限
