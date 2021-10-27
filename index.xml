@@ -1,8 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 22 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="日常使用">日常使用&lt;/h1>
-&lt;h2 id="git">git&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 03 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Fri, 03 Sep 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
+&lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule" target="_blank" rel="noopener"
+>文档&lt;/a>&lt;/p>
+&lt;p>模板&lt;/p>
+&lt;p>常用actions：&lt;/p>
+&lt;h1 id="docker">docker&lt;/h1>
+&lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
+>安装docker&lt;/a>]&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#更新apt包索引
+sudo apt-get update
+#安装包以允许apt通过 HTTPS 使用存储库
+sudo apt-get install \
+apt-transport-https \
+ca-certificates \
+curl \
+gnupg \
+lsb-release
+#添加Docker官方的GPG密钥
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+#设置稳定存储库
+echo \
+&amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+$(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+#安装最新版本的Docker Engine和containerd
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+#hello-world 映像验证
+sudo docker run hello-world
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
+>docker文档&lt;/a>：&lt;/p>
+&lt;p>&lt;strong>卷&lt;/strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/p>
+&lt;h1 id="docker-compose">docker compose&lt;/h1>
+&lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener"
+>安装docker compose&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#下载 Docker Compose 的当前稳定版本
+sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
+#对二进制文件应用可执行权限
+sudo chmod +x /usr/local/bin/docker-compose
+#测试安装
+docker-compose --version
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考-1">参考&lt;/h2>
+&lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/" target="_blank" rel="noopener"
+>docker compose文档&lt;/a>：&lt;/p>
+&lt;p>&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#name-1" target="_blank" rel="noopener"
+>Compose 中的网络&lt;/a>:Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。&lt;/p>
+&lt;h1 id="docker常用命令">docker常用命令&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">docker ps -a #查询容器
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
+&lt;p>使用github actions + docker compose部署到github container registry -&amp;gt;&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
+>容器注册平台对比&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
+>参考文章&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
+&lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
 >官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
-&lt;h3 id="push脚本">push脚本&lt;/h3>
+&lt;h2 id="push脚本">push脚本&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#!/bin/bash
 echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
 # Add changes to git.
@@ -15,7 +68,7 @@ fi
 git commit -m &amp;#34;$msg&amp;#34;
 # Push source and build repos.
 git push origin master
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="公开仓库fork为私有仓库">公开仓库fork为私有仓库&lt;/h3>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="公开仓库fork为私有仓库">公开仓库fork为私有仓库&lt;/h2>
 &lt;ol>
 &lt;li>fork一个公开仓库&lt;/li>
 &lt;li>使用github&lt;a class="link" href="https://github.com/new/import" target="_blank" rel="noopener"
@@ -37,11 +90,12 @@ upstream DISABLE (push)
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git fetch upstream
 git rebase upstream/master
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="文件">文件&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="linux命令">Linux命令&lt;/h1>
+&lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo gedit ~/File //编辑
-sudo mv //移动文件
 touch File //新建文件
+mkdir -p Folder/a/src //新建文件夹
 sudo rm -r Folder //删除文件夹
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装包">安装包&lt;/h2>
 &lt;ul>
@@ -59,6 +113,10 @@ sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
 sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
 sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
 sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="端口">端口&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt-get install lsof //安装lsof
+lsof -i:80 //查看80端口
+kill -9 pid //强制杀进程
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="脚本">脚本&lt;/h1>
 &lt;h2 id="命令">命令&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">local #用于声明局部变量
@@ -302,7 +360,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>影视：整点视频 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：倒带、QMD　　　　　　# 并不完美，希望找到更全更好用的&lt;/p>
+&lt;p>音乐：listen1　　　　　　# 并不完美，希望找到更全更好用的&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>小说：笔趣阁　　　　　　　　# 这是个52蓝底app&lt;/p>
@@ -314,7 +372,6 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>其他&lt;/p>
 &lt;ul>
 &lt;li>向日葵远程控制&lt;/li>
-&lt;li>接听宝　　　　　　　　　#代接电话&lt;/li>
 &lt;li>zarchiver　　　　　　　#文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
 &lt;li>福昕PDF阅读器&lt;/li>
@@ -403,11 +460,11 @@ myblog下执行&lt;/p>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>浏览器打开：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">http://localhost:1313/ #目前本地运行不显示文章目录，估计是操作系统原因
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="部署">部署&lt;/h1>
-&lt;p>注：我将介绍使用github存放源码，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
+&lt;p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
 &lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库&lt;/p>
-&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便&lt;/p>
-&lt;p>找到源码仓库Settings-&amp;gt; Secrets -&amp;gt; New repository secret #Name写PERSONAL_TOKEN，Value粘贴token&lt;/p>
+&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）&lt;/p>
+&lt;p>找到源码仓库Settings-&amp;gt; Secrets -&amp;gt; New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）&lt;/p>
 &lt;p>2.创建github actions的workflows自动部署文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">mkdir -p .github/workflows &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> touch ~/myblog/.github/workflows/main.yml
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
@@ -566,10 +623,8 @@ code&lt;br>
 73 serverURL: https:// #评论系统URL用你自己的
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh push.sh即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
-&lt;p>在~/myblog/config.yaml修改baseurl: &lt;a class="link" href="https://username.github.io" target="_blank" rel="noopener"
->https://username.github.io&lt;/a>&lt;/p>
-&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: &lt;a class="link" href="http://www.example.com" target="_blank" rel="noopener"
->www.example.com&lt;/a>&lt;/p>
+&lt;p>在~/myblog/config.yaml修改baseurl: &lt;code>https://username.github.io&lt;/code>&lt;/p>
+&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: www.example.com&lt;/code>&lt;/p>
 &lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>

@@ -116,11 +116,11 @@ myblog下执行</p>
 </code></pre></div><p>浏览器打开：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>http://localhost:1313/      #目前本地运行不显示文章目录，估计是操作系统原因
 </code></pre></div><h1 id=部署>部署</h1>
-<p>注：我将介绍使用github存放源码，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。</p>
+<p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。</p>
 <p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库</p>
-<p>点击github右上角头像-> Settings -> Developer Settings-> Personal access tokens -> Generate new token #Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便</p>
-<p>找到源码仓库Settings-> Secrets -> New repository secret #Name写PERSONAL_TOKEN，Value粘贴token</p>
+<p>点击github右上角头像-> Settings -> Developer Settings-> Personal access tokens -> Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）</p>
+<p>找到源码仓库Settings-> Secrets -> New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）</p>
 <p>2.创建github actions的workflows自动部署文件：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>mkdir -p .github/workflows <span class=err>&amp;&amp;</span> touch ~/myblog/.github/workflows/main.yml
 </code></pre></div><p>粘贴脚本：</p>
@@ -282,8 +282,8 @@ code<br>
 73  serverURL: https://                     #评论系统URL用你自己的
 </code></pre></div><p>执行sh push.sh即可</p>
 <h2 id=自定义域名>自定义域名</h2>
-<p>在~/myblog/config.yaml修改baseurl: <a class=link href=https://username.github.io target=_blank rel=noopener>https://username.github.io</a></p>
-<p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改#cname: <a class=link href=http://www.example.com target=_blank rel=noopener>www.example.com</a></p>
+<p>在~/myblog/config.yaml修改baseurl: <code>https://username.github.io</code></p>
+<p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改<code>cname: www.example.com</code></p>
 <p>执行sh push.sh即可</p>
 <p>启用https：<a class=link href=https://last2win.com/2020/02/21/github-pages-https/ target=_blank rel=noopener>参考链接</a></p>
 <p>没有域名？</p>
