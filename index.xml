@@ -1,9 +1,338 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 27 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
-&lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#onschedule" target="_blank" rel="noopener"
->文档&lt;/a>&lt;/p>
-&lt;p>模板&lt;/p>
-&lt;p>常用actions：&lt;/p>
-&lt;h1 id="docker">docker&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和使用tasker</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+&lt;p>前文晚发了，是因为root手机。以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现在有个新的问题，手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
+&lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是我们小破站文章可靠。大概分为以下几个步骤：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>解bl锁
+各品牌手机解锁可能有所不同，我仅简述我本次解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube拍了教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
+>短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>刷入 TWRP recovery
+建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
+>这个网站&lt;/a>找到华为的TWRP，我当时看到他网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>root
+安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="tasker">tasker&lt;/h1>
+&lt;h3 id="基础">基础&lt;/h3>
+&lt;ol>
+&lt;li>设置：打开右上角的菜单，单击更多选项，点击Android设置&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>防止系统清理：进入系统最近任务界面，点击Tasker应用旁边的小锁，锁定Tasker不被系统清理&lt;/li>
+&lt;li>忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略Tasker&lt;/li>
+&lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭Tasker自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
+&lt;li>权限全部打开&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>即使给了权限，手机可能仍然会休眠不执行任务。唤醒屏幕可以设置无声无振动的闹钟，网友说secure setting插件也可以。&lt;/li>
+&lt;li>在任务里创建你需要的操作，配置里添加场景（例如时间）即可，这里不多介绍，估计很快可以学会。&lt;/li>
+&lt;/ol>
+&lt;h3 id="shell">shell&lt;/h3>
+&lt;p>除了tasker自带的功能，它支持的shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
+>shell命令摘录网站&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#按键事件
+input text &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">string&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> #输入文本
+input keyevent 20 #向下
+input keyevent 4 #返回
+input keyevent 3 #Home
+input keyevent 6 #挂机
+input keyevent 84 #搜索
+input keyevent 26 #电源，息屏
+input keyevent 24 #音量+
+input keyevent 25 #音量-
+#模拟点击
+input tap 100 100
+#滑动
+input swipe x1 y1 x2 y2 ms
+input swipe 100 100 400 100 300 #左往右
+input swipe 400 100 100 100 300 #右往左
+input swipe 100 100 100 400 300 #上往下
+input swipe 100 400 100 100 300 #下往上
+input swipe 100 100 400 400 300 #上往下斜
+input swipe 400 400 100 100 300 #下往上斜
+#长按
+input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom续期</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;ol>
+&lt;li>fork&lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
+>luolongfei&lt;/a>大佬的库，再添加以下workflow：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">###### 说明 ######
+# 1、Fork 本仓库
+# 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
+# FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
+# TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
+# （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
+# 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
+#
+# 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+#
+# @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+#
+###### end 说明 ######
+name: Run it on action
+on:
+# push:
+# branches:
+# - master
+schedule:
+- cron: 15 01 * * *
+watch:
+types: started
+env:
+CONFIG_FILE: .env
+jobs:
+build:
+runs-on: ubuntu-18.04
+if: github.event.repository.owner.id == github.event.sender.id
+name: Run it on action
+steps:
+- name: Checkout master
+uses: actions/checkout@v2
+- name: Setup PHP
+uses: shivammathur/setup-php@v2
+with:
+php-version: &amp;#39;7.2&amp;#39;
+- name: Clone source code
+run: git clone https://github.com/super-yan86/freenom-AutoSub.git
+- name: copy env
+run: cd next-freenom &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp .env.example .env
+- name: Setting
+run: |
+echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
+echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
+echo &amp;#39;@Url: https://github.com/Lancenas/next-freenom.git&amp;#39;
+if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
+if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
+sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
+- name: mv env
+run: |
+[ -e $CONFIG_FILE ] &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> mv $CONFIG_FILE next-freenom/.env
+- name: Run
+run: |
+cd next-freenom
+php run
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>在你 Fork 的本仓库下的 &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Secrets&lt;/code> 页面追加以下几个&lt;code>secret&lt;/code>秘密环境变量
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">变量名&lt;/th>
+&lt;th style="text-align:center">含义&lt;/th>
+&lt;th style="text-align:center">默认值&lt;/th>
+&lt;th style="text-align:center">是否必须&lt;/th>
+&lt;th style="text-align:center">备注&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">FREENOM_USERNAME&lt;/td>
+&lt;td style="text-align:center">freenom 账户&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;td style="text-align:center">只支持邮箱账户，不支持也不打算支持第三方社交账户登录&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">FREENOM_PASSWORD&lt;/td>
+&lt;td style="text-align:center">freenom 密码&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;td style="text-align:center">某些特殊字符可能需要转义，在&lt;code>Github actions&lt;/code>环境，请在除字母数字以外的字符前加上“\”，否则可能无法正确读取密码，此举是防止某些字符在&lt;code>shell&lt;/code>命令行被解析，举个例子，比如我密码是&lt;code>fei.,:!~@#$%^&amp;amp;*?233-_abcd^$$&lt;/code>，那么写到秘密变量时就应写为&lt;code>fei\.\,\:\!\~\@\#\$\%\^\&amp;amp;\*\?233\-\_abcd\^\$\$&lt;/code>。而在普通&lt;code>VPS&lt;/code>环境，则只用在密码中的“#”或单双引号前加“\”，请参考&lt;code>.env.example&lt;/code>文件内的注释，应该没人会设置那么变态的密码吧&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">MULTIPLE_ACCOUNTS&lt;/td>
+&lt;td style="text-align:center">多账户支持&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">多个账户和密码的格式必须是“&lt;code>&amp;lt;账户1&amp;gt;@&amp;lt;密码1&amp;gt;|&amp;lt;账户2&amp;gt;@&amp;lt;密码2&amp;gt;|&amp;lt;账户3&amp;gt;@&amp;lt;密码3&amp;gt;&lt;/code>”，如果设置了多账户，上面的&lt;code>FREENOM_USERNAME&lt;/code>和&lt;code>FREENOM_PASSWORD&lt;/code>可不设置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">MAIL_USERNAME&lt;/td>
+&lt;td style="text-align:center">机器人邮箱账户&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;td style="text-align:center">支持&lt;code>Gmail&lt;/code>、&lt;code>QQ邮箱&lt;/code>以及&lt;code>163邮箱&lt;/code>，尽可能使用&lt;code>163邮箱&lt;/code>或者&lt;code>QQ邮箱&lt;/code>，而非之前推荐的&lt;code>Gmail&lt;/code>。因为谷歌的安全机制，每次在新设备登录 &lt;code>Gmail&lt;/code> 都会先被限制，需要手动解除限制才行，而&lt;code>Github Actions&lt;/code>每次创建的虚拟环境都会分配一个新的设备&lt;code>IP&lt;/code>，相当于每次都是从新设备登录&lt;code>Gmail&lt;/code>，而我们不可能每次都去手动为&lt;code>Gmail&lt;/code>解除登录限制，所以这种机制会导致无法发出通知邮件。具体的配置方法参考「 &lt;a class="link" href="#--%e9%85%8d%e7%bd%ae%e5%8f%91%e4%bf%a1%e9%82%ae%e7%ae%b1" >配置发信邮箱&lt;/a> 」&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">MAIL_PASSWORD&lt;/td>
+&lt;td style="text-align:center">机器人邮箱密码&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;td style="text-align:center">&lt;code>Gmail&lt;/code>填密码，&lt;code>QQ邮箱&lt;/code>或&lt;code>163邮箱&lt;/code>填授权码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">TO&lt;/td>
+&lt;td style="text-align:center">接收通知的邮箱&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">是&lt;/td>
+&lt;td style="text-align:center">你自己最常用的邮箱，推荐使用&lt;code>QQ邮箱&lt;/code>，用来接收机器人邮箱发出的域名相关邮件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">MAIL_ENABLE&lt;/td>
+&lt;td style="text-align:center">是否启用邮件推送功能&lt;/td>
+&lt;td style="text-align:center">true&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;!-- raw HTML omitted -->&lt;code>false&lt;/code>：不启用&lt;!-- raw HTML omitted -->默认启用，如果设为&lt;code>false&lt;/code>，不启用邮件推送功能，则上面的&lt;code>MAIL_USERNAME&lt;/code>、&lt;code>MAIL_PASSWORD&lt;/code>、&lt;code>TO&lt;/code>变量变为非必须，可不设置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">TELEGRAM_CHAT_ID&lt;/td>
+&lt;td style="text-align:center">你的&lt;code>chat_id&lt;/code>&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">通过发送&lt;code>/start&lt;/code>给&lt;code>@userinfobot&lt;/code>可以获取自己的&lt;code>id&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">TELEGRAM_BOT_TOKEN&lt;/td>
+&lt;td style="text-align:center">你的&lt;code>Telegram bot&lt;/code>的&lt;code>token&lt;/code>&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">TELEGRAM_BOT_ENABLE&lt;/td>
+&lt;td style="text-align:center">是否启用&lt;code>Telegram Bot&lt;/code>推送功能&lt;/td>
+&lt;td style="text-align:center">false&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;!-- raw HTML omitted -->&lt;code>false&lt;/code>：不启用&lt;!-- raw HTML omitted -->默认不启用，如果设为&lt;code>true&lt;/code>，则必须设置上面的&lt;code>TELEGRAM_CHAT_ID&lt;/code>和&lt;code>TELEGRAM_BOT_TOKEN&lt;/code>变量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">NOTICE_FREQ&lt;/td>
+&lt;td style="text-align:center">通知频率&lt;/td>
+&lt;td style="text-align:center">1&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">&lt;code>0&lt;/code>：仅当有续期操作的时候&lt;!-- raw HTML omitted -->&lt;code>1&lt;/code>：每次执行&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;/ol>
+&lt;p>（注：你只用关注上面表格中的必须项，非必须项可不设置，将保持默认值。更多相关变量的含义、格式以及默认值，请参考本项目的&lt;code>.env.example&lt;/code>文件内的注释）&lt;/p>
+&lt;ol start="3">
+&lt;li>启用 Actions ，完成。&lt;/li>
+&lt;/ol>
+&lt;p>附：&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
+>github workflow 语法文档&lt;/a>&lt;/p>
+&lt;p>　　&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
+>修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
+&lt;p>示例如下：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">on:
+push:
+branches:
+- master
+env:
+REGISTRY: ghcr.io
+IMAGE_NAME: ${{ github.repository }}
+jobs:
+build-and-push-image:
+runs-on: ubuntu-latest
+permissions:
+contents: read
+packages: write
+strategy:
+matrix:
+node: [ &amp;#39;14&amp;#39; ]
+steps:
+- name: Checkout repository
+uses: actions/checkout@v2
+- name: Setup node
+uses: actions/setup-node@v2
+with:
+node-version: ${{ matrix.node }}
+- name: npm install
+run: |
+cd site
+npm install
+- name: Set up QEMU
+uses: docker/setup-qemu-action@v1
+- uses: docker/setup-buildx-action@v1
+id: builder1
+- uses: docker/setup-buildx-action@v1
+id: builder2
+- name: Log in to the Container registry
+uses: docker/login-action@v1
+with:
+registry: ${{ env.REGISTRY }}
+username: ${{ github.actor }}
+password: ${{ secrets.GITHUB_TOKEN }}
+- name: Extract metadata (tags, labels) for Docker
+id: meta
+uses: docker/metadata-action@v3
+with:
+images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+- name: Build and push Docker image 1
+uses: docker/build-push-action@v2
+with:
+builder: ${{ steps.builder2.outputs.name }}
+context: ./server
+file: ./server/Dockerfile
+push: true
+tags: ${{ steps.meta.outputs.tags }}
+labels: ${{ steps.meta.outputs.labels }}
+- name: Build and push Docker image 2
+uses: docker/build-push-action@v2
+with:
+builder: ${{ steps.builder2.outputs.name }}
+context: ./site
+file: ./site/Dockerfile
+push: true
+tags: ${{ steps.meta.outputs.tags }}
+labels: ${{ steps.meta.outputs.labels }}
+deploy:
+runs-on: ubuntu-latest
+needs: build-and-push-image
+steps:
+- name: Log in to the Container registry
+uses: docker/login-action@v1
+with:
+registry: ${{ env.REGISTRY }}
+username: ${{ github.actor }}
+password: ${{ secrets.GITHUB_TOKEN }}
+- uses: appleboy/ssh-action@master
+with:
+host: ${{ secrets.host }}
+username: root
+password: ${{ secrets.password }}
+port: ${{ secrets.port }}
+script: |
+echo $CR_PAT | docker login ghcr.io -u xiaoxiano --password-stdin
+docker-compose pull
+docker-compose up -d --no-deps
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
+&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
+>参考文章&lt;/a>&lt;/p>
+&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
+>容器注册平台对比&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>准备：如无docker和docker compose基础请先看文档和&lt;a class="link" href="https://jiangdaoli.cf/p/docker-compose/" target="_blank" rel="noopener"
+>前文&lt;/a>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在服务器上完成&lt;a class="link" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-container-registry#" target="_blank" rel="noopener"
+>向 Container registry 验证&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
+>示例&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
+>acme-companion&lt;/a>和上述示例文档。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
+>Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#更新apt包索引
@@ -25,10 +354,12 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 #hello-world 映像验证
 sudo docker run hello-world
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考">参考&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
 &lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
 >docker文档&lt;/a>：&lt;/p>
-&lt;p>&lt;strong>卷&lt;/strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>卷&lt;/strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/li>
+&lt;/ol>
 &lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
@@ -38,19 +369,17 @@ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2
 sudo chmod +x /usr/local/bin/docker-compose
 #测试安装
 docker-compose --version
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="参考-1">参考&lt;/h2>
-&lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/" target="_blank" rel="noopener"
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="基础知识参考-1">基础知识参考&lt;/h2>
+&lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/compose/" target="_blank" rel="noopener"
 >docker compose文档&lt;/a>：&lt;/p>
-&lt;p>&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#name-1" target="_blank" rel="noopener"
->Compose 中的网络&lt;/a>:Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。&lt;/p>
-&lt;h1 id="docker常用命令">docker常用命令&lt;/h1>
+&lt;ol>
+&lt;li>Compose 中的&lt;strong>网络&lt;/strong>:&lt;/li>
+&lt;/ol>
+&lt;p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。&lt;/p>
+&lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
+>external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
+&lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">docker ps -a #查询容器
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
-&lt;p>使用github actions + docker compose部署到github container registry -&amp;gt;&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
->容器注册平台对比&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
->参考文章&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
@@ -628,5 +957,5 @@ code&lt;br>
 &lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>
-&lt;p>没有域名？&lt;/p>
-&lt;p>为了白嫖可在freenom和cloudflare申请域名和解析，并使用freenom脚本自动续期，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p></description></item></channel></rss>
+&lt;p>没有域名？为了白嫖可在freenom和cloudflare进行申请域名和解析，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p>
+&lt;p>&lt;a class="link" href="URL" >freenom脚本自动续期参考后续文章&lt;/a>&lt;/p></description></item></channel></rss>
