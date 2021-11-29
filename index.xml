@@ -560,7 +560,7 @@ echo &amp;#34;Total value : $val&amp;#34;
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git config --global http.https://www.github.com.proxy socks5://127.0.0.1:port.socks
 git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>C:\Users\90487\.gitconfig&lt;/code> #文件路径，90487是我的用户名&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\90487\.gitconfig&lt;/code>，90487是我的用户名&lt;/p>
 &lt;ul>
 &lt;li>Terminal（历史）&lt;/li>
 &lt;/ul>
