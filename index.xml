@@ -380,7 +380,7 @@ docker-compose --version
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
 &lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">docker ps -a #查询容器
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Ubuntu常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
 >官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
@@ -689,10 +689,13 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>影视：整点视频 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：listen1　　　　　　# 并不完美，希望找到更全更好用的&lt;/p>
+&lt;p>音乐：listen1　　　　　　# 并不完美，希望找到更好用的&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>小说：笔趣阁　　　　　　　　# 这是个52蓝底app&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>阅读：福昕PDF阅读器、ReadEra&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>去除启动广告：启动加速　　　#有后台权限更好用&lt;/p>
@@ -700,10 +703,11 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;li>
 &lt;p>其他&lt;/p>
 &lt;ul>
+&lt;li>tasker #手机自动化，使用见后文&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
+&lt;li>AirDroid和AirMirror #手机远程控制手机&lt;/li>
 &lt;li>zarchiver　　　　　　　#文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
-&lt;li>福昕PDF阅读器&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
