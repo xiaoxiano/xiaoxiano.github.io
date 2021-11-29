@@ -607,10 +607,10 @@ export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo vim /etc/profile #编辑profile
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export GOROOT=/snap/go #在最后一行添加
 export PATH=$PATH:$GOROOT/bin
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">source /etc/profile #保存
 go version #验证
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">go env -w GO111MODULE=on
-go env -w GOPROXY=https://goproxy.io,direct #go get 设置为国内源
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export GO111MODULE=on
+export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
 &lt;h2 id="使用">使用&lt;/h2>
 &lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
