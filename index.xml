@@ -58,7 +58,7 @@ input swipe 400 400 100 100 300 #下往上斜
 #长按
 input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom续期</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;ol>
-&lt;li>fork&lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
+&lt;li>fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
 >luolongfei&lt;/a>大佬的库，再添加以下workflow：&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">###### 说明 ######
@@ -69,26 +69,21 @@ input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
 # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
 #
-# 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+# 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
 #
 # @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 #
 ###### end 说明 ######
 name: Run it on action
 on:
-# push:
-# branches:
-# - master
+push:
+branches:
+- main
 schedule:
-- cron: 15 01 * * *
-watch:
-types: started
-env:
-CONFIG_FILE: .env
+- cron: 00 02 * * *
 jobs:
-build:
+run-it:
 runs-on: ubuntu-18.04
-if: github.event.repository.owner.id == github.event.sender.id
 name: Run it on action
 steps:
 - name: Checkout master
@@ -97,15 +92,12 @@ uses: actions/checkout@v2
 uses: shivammathur/setup-php@v2
 with:
 php-version: &amp;#39;7.2&amp;#39;
-- name: Clone source code
-run: git clone https://github.com/super-yan86/freenom-AutoSub.git
-- name: copy env
-run: cd next-freenom &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp .env.example .env
 - name: Setting
 run: |
 echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
 echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
-echo &amp;#39;@Url: https://github.com/Lancenas/next-freenom.git&amp;#39;
+echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
+cp .env.example .env
 if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
 if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
 if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
@@ -119,12 +111,8 @@ if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]
 if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
 if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
 sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
-- name: mv env
-run: |
-[ -e $CONFIG_FILE ] &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> mv $CONFIG_FILE next-freenom/.env
 - name: Run
 run: |
-cd next-freenom
 php run
 &lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>在你 Fork 的本仓库下的 &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Secrets&lt;/code> 页面追加以下几个&lt;code>secret&lt;/code>秘密环境变量

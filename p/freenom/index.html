@@ -1,21 +1,21 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="forkluolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: # push: # branches: # - master schedule: - cron: 15 01 * * * watch: types: started env: CONFIG_FILE: ."><title>freenom续期</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><title>freenom续期</title>
 <link rel=canonical href=https://www.jiangdaoli.cf/p/freenom/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="freenom续期">
-<meta property="og:description" content="forkluolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: # push: # branches: # - master schedule: - cron: 15 01 * * * watch: types: started env: CONFIG_FILE: .">
+<meta property="og:description" content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/freenom/">
 <meta property="og:site_name" content="银之介">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-19T00:00:00+00:00"><meta property="article:modified_time" content="2021-11-19T00:00:00+00:00">
 <meta name=twitter:title content="freenom续期">
-<meta name=twitter:description content="forkluolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: # push: # branches: # - master schedule: - cron: 15 01 * * * watch: types: started env: CONFIG_FILE: ."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<meta name=twitter:description content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon href=/favicon.svg type=image/svg+xml>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"freenom续期","headline":"freenom续期","description":"forkluolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings \u0026gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX \u0026lt;https:\/\/github.com\/RouRouX\u0026gt; \u0026amp; mybsdc \u0026lt;mybsdc@gmail.com\u0026gt; # ###### end 说明 ###### name: Run it on action on: # push: # branches: # - master schedule: - cron: 15 01 * * * watch: types: started env: CONFIG_FILE: .","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-11-19T00:00:00+00:00","dateModified":"2021-11-19T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/","wordCount":"483","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"freenom续期","headline":"freenom续期","description":"fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings \u0026gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX \u0026lt;https:\/\/github.com\/RouRouX\u0026gt; \u0026amp; mybsdc \u0026lt;mybsdc@gmail.com\u0026gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-11-19T00:00:00+00:00","dateModified":"2021-11-19T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/","wordCount":"440","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class=article-page>
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -91,7 +91,7 @@ on-phone--column extended">
 </header>
 <section class=article-content>
 <ol>
-<li>fork<a class=link href=https://github.com/luolongfei/freenom target=_blank rel=noopener>luolongfei</a>大佬的库，再添加以下workflow：</li>
+<li>fork <a class=link href=https://github.com/luolongfei/freenom target=_blank rel=noopener>luolongfei</a>大佬的库，再添加以下workflow：</li>
 </ol>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>######  说明  ######
 # 1、Fork 本仓库
@@ -101,7 +101,7 @@ on-phone--column extended">
 # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
 #  项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
 #
-# 下面定时任务中的时间是世界时间，每天设定时间执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+# 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
 #
 # @Author of yml configuration file: RouRouX <span class=p>&lt;</span><span class=nt>https:</span><span class=err>//</span><span class=na>github</span><span class=err>.</span><span class=na>com</span><span class=err>/</span><span class=na>RouRouX</span><span class=p>&gt;</span> <span class=err>&amp;</span> mybsdc <span class=p>&lt;</span><span class=nt>mybsdc</span><span class=err>@</span><span class=na>gmail</span><span class=err>.</span><span class=na>com</span><span class=p>&gt;</span>
 #
@@ -110,22 +110,14 @@ on-phone--column extended">
 name: Run it on action
 
 on:
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - main
   schedule:
-    - cron: 15 01 * * *
-  watch:
-    types: started
-  
-env:
-  CONFIG_FILE: .env
-
+    - cron: 00 02 * * *
 jobs:
-  build:
+  run-it:
     runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
-    
     name: Run it on action
     steps:
       - name: Checkout master
@@ -134,18 +126,12 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: &#39;7.2&#39;
-      
-      - name: Clone source code
-        run:  git clone https://github.com/super-yan86/freenom-AutoSub.git
- 
-      - name: copy env
-        run:  cd next-freenom <span class=err>&amp;&amp;</span> cp .env.example .env
-      
       - name: Setting
         run: |
           echo &#39;Renew freenom domain name automatically.&#39;
           echo &#39;@Author of yml configuration file: RouRouX <span class=p>&lt;</span><span class=nt>https:</span><span class=err>//</span><span class=na>github</span><span class=err>.</span><span class=na>com</span><span class=err>/</span><span class=na>RouRouX</span><span class=p>&gt;</span> <span class=err>&amp;</span> mybsdc <span class=p>&lt;</span><span class=nt>mybsdc</span><span class=err>@</span><span class=na>gmail</span><span class=err>.</span><span class=na>com</span><span class=p>&gt;</span>&#39;
-          echo &#39;@Url: https://github.com/Lancenas/next-freenom.git&#39;
+          echo &#39;@Url: https://github.com/luolongfei/freenom&#39;
+          cp .env.example .env
           if [[ (&#39;${{ secrets.FREENOM_USERNAME }}&#39; == &#39;&#39; || &#39;${{ secrets.FREENOM_PASSWORD }}&#39; == &#39;&#39;) <span class=err>&amp;&amp;</span> &#39;${{ secrets.MULTIPLE_ACCOUNTS }}&#39; == &#39;&#39; ]]; then echo &#39;你在 Github 的当前项目的 Settings &gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&#39;; fi
           if [ &#39;${{ secrets.FREENOM_USERNAME }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&#39;${{ secrets.FREENOM_USERNAME }}&#39;/&#34; .env; fi
           if [ &#39;${{ secrets.FREENOM_PASSWORD }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&#39;${{ secrets.FREENOM_PASSWORD }}&#39;/&#34; .env; fi
@@ -159,13 +145,8 @@ jobs:
           if [ &#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&#39;/&#34; .env; fi
           if [ &#39;${{ secrets.NOTICE_FREQ }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&#39;${{ secrets.NOTICE_FREQ }}&#39;/&#34; .env; fi
           sed -i &#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&#34; .env
-      - name: mv env
-        run: |
-          [ -e $CONFIG_FILE ] <span class=err>&amp;&amp;</span> mv $CONFIG_FILE next-freenom/.env
-      
       - name: Run
         run: |
-          cd next-freenom
           php run
 </code></pre></div><ol start=2>
 <li>在你 Fork 的本仓库下的 <code>Settings</code> -> <code>Secrets</code> 页面追加以下几个<code>secret</code>秘密环境变量
