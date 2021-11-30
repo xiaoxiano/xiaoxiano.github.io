@@ -29,7 +29,12 @@
 &lt;li>权限全部打开&lt;/li>
 &lt;/ul>
 &lt;ol start="2">
-&lt;li>即使给了权限，手机可能仍然会休眠不执行任务。唤醒屏幕可以设置无声无振动的闹钟，网友说secure setting插件也可以。&lt;/li>
+&lt;li>即使给了权限，手机可能仍然会休眠不执行任务。唤醒屏幕可以用secure setting插件，不建议使用闹钟唤醒，操作如下：&lt;/li>
+&lt;/ol>
+&lt;p>①打开Secure Settings然后 enable System+ Modul&lt;/p>
+&lt;p>②打开Tasker -&amp;gt; 任务 -&amp;gt; 新建任务 -&amp;gt; 插件 -&amp;gt; Secure Settings -&amp;gt; 配置 -&amp;gt; Actions -&amp;gt; Wake Device&lt;/p>
+&lt;p>③手机系统设置中找到设备管理器，激活 Secure Settings，设置后台运行。&lt;/p>
+&lt;ol start="3">
 &lt;li>在任务里创建你需要的操作，配置里添加场景（例如时间）即可，这里不多介绍，估计很快可以学会。&lt;/li>
 &lt;/ol>
 &lt;h3 id="shell">shell&lt;/h3>
