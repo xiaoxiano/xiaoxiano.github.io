@@ -57,9 +57,10 @@ input swipe 100 100 400 400 300 #上往下斜
 input swipe 400 400 100 100 300 #下往上斜
 #长按
 input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
-&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom续期</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;ol>
-&lt;li>fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
->luolongfei&lt;/a>大佬的库，再添加以下workflow：&lt;/li>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom自动续期</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;h1 id="freenom自动续期">freenom自动续期&lt;/h1>
+&lt;ol>
+&lt;li>Fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
+>luolongfei大佬的freenom库&lt;/a>，再添加以下workflow：&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">###### 说明 ######
 # 1、Fork 本仓库
@@ -212,9 +213,119 @@ php run
 &lt;ol start="3">
 &lt;li>启用 Actions ，完成。&lt;/li>
 &lt;/ol>
-&lt;p>附：&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
+&lt;h1 id="保活">保活&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>Fork &lt;a class="link" href="https://github.com/zhzhzhy/Workflow-Keep-Alive" target="_blank" rel="noopener"
+>zhzhzhy/Workflow-Keep-Alive库&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>创建 sercets ：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:center">变量名&lt;/th>
+&lt;th style="text-align:center">值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">REST_TOKEN&lt;/td>
+&lt;td style="text-align:center">个人访问令牌（Personal access tokens）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">API_ADDRESS&lt;/td>
+&lt;td style="text-align:center">&lt;a class="link" href="https://api.github.com/repos/%7bowner%7d/%7brepo%7d/actions/workflows/enable_workflow/enable" target="_blank" rel="noopener"
+>https://api.github.com/repos/{owner}/{repo}/actions/workflows/enable_workflow/enable&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/li>
+&lt;li>
+&lt;p>在目标仓库的工作流程中执行上述步骤，然后在之后添加以下 Github Action &lt;code>step&lt;/code>:&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"> - name: curl
+id: enable_workflow
+env:
+REST_TOKEN: ${{ secrets.REST_TOKEN }}
+API_ADDRESS: ${{ secrets.API_ADDRESS }}
+run: |
+echo &amp;#34;Enable Workflow Start...&amp;#34;
+curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
+echo &amp;#34;Finished&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>“点击展开完整代码”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 1、Fork 本仓库
+# 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
+# FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
+# TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
+# （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
+# 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
+#
+# 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+#
+# @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+#
+###### end 说明 ######
+name: Run it on action
+on:
+push:
+branches:
+- main
+schedule:
+- cron: 00 02 * * *
+jobs:
+run-it:
+runs-on: ubuntu-18.04
+name: Run it on action
+steps:
+- name: Checkout master
+uses: actions/checkout@v2
+- name: Setup PHP
+uses: shivammathur/setup-php@v2
+with:
+php-version: &amp;#39;7.2&amp;#39;
+- name: Setting
+run: |
+echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
+echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
+echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
+cp .env.example .env
+if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
+if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
+sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
+- name: Run
+run: |
+php run
+- name: curl
+id: enable_workflow
+env:
+REST_TOKEN: ${{ secrets.REST_TOKEN }}
+API_ADDRESS: ${{ secrets.API_ADDRESS }}
+run: |
+echo &amp;#34;Enable Workflow Start...&amp;#34;
+curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
+echo &amp;#34;Finished&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;ol start="4">
+&lt;li>运行 github action，完成。&lt;/li>
+&lt;/ol>
+&lt;h1 id="附">附&lt;/h1>
+&lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
 >github workflow 语法文档&lt;/a>&lt;/p>
-&lt;p>　　&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
+&lt;p>&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
 >修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
 &lt;p>示例如下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">on:

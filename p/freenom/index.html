@@ -1,65 +1,31 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><title>freenom续期</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="freenom自动续期  Fork luolongfei大佬的freenom库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><title>freenom自动续期</title>
 <link rel=canonical href=https://www.jiangdaoli.cf/p/freenom/>
-<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="freenom续期">
-<meta property="og:description" content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.">
+<link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="freenom自动续期">
+<meta property="og:description" content="freenom自动续期  Fork luolongfei大佬的freenom库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/freenom/">
 <meta property="og:site_name" content="银之介">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-11-19T00:00:00+00:00"><meta property="article:modified_time" content="2021-11-19T00:00:00+00:00">
-<meta name=twitter:title content="freenom续期">
-<meta name=twitter:description content="fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+<meta name=twitter:title content="freenom自动续期">
+<meta name=twitter:description content="freenom自动续期  Fork luolongfei大佬的freenom库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX &amp;lt;https://github.com/RouRouX&amp;gt; &amp;amp; mybsdc &amp;lt;mybsdc@gmail.com&amp;gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon href=/favicon.svg type=image/svg+xml>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"freenom续期","headline":"freenom续期","description":"fork luolongfei大佬的库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings \u0026gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX \u0026lt;https:\/\/github.com\/RouRouX\u0026gt; \u0026amp; mybsdc \u0026lt;mybsdc@gmail.com\u0026gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-11-19T00:00:00+00:00","dateModified":"2021-11-19T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/","wordCount":"440","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"freenom自动续期","headline":"freenom自动续期","description":"freenom自动续期  Fork luolongfei大佬的freenom库，再添加以下workflow：  ###### 说明 ###### # 1、Fork 本仓库 # 2、在你 Fork 的本仓库下的 Settings \u0026gt; Secrets 画面追加以下几个 secret 变量： # FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、 # TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ # （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些 # 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认） # # 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行 # # @Author of yml configuration file: RouRouX \u0026lt;https:\/\/github.com\/RouRouX\u0026gt; \u0026amp; mybsdc \u0026lt;mybsdc@gmail.com\u0026gt; # ###### end 说明 ###### name: Run it on action on: push: branches: - main schedule: - cron: 00 02 * * * jobs: run-it: runs-on: ubuntu-18.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-11-19T00:00:00+00:00","dateModified":"2021-11-19T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/freenom\/","wordCount":"873","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
-<body class=article-page>
+<body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
 <div class="container main-container flex
-on-phone--column extended">
-<aside class="sidebar left-sidebar sticky">
-<button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box>
-<span class=hamburger-inner></span>
-</span>
-</button>
-<header class=site-info>
-<figure class=site-avatar>
-<img src=/img/avatar_hu45d9d6b92b0e2c7b760024d72fbde663_30609_300x0_resize_box_3.png width=300 height=263 class=site-logo loading=lazy alt=Avatar>
-</figure>
-<h1 class=site-name><a href=https://www.jiangdaoli.cf>银之介</a></h1>
-<h2 class=site-description>个人杂记</h2>
-</header>
-<ol class=menu id=main-menu>
-<li>
-<a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><rect x="10" y="12" width="4" height="4"/></svg>
-<span>首页</span>
+extended">
+<div id=article-toolbar>
+<a href=https://www.jiangdaoli.cf class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
+<span>返回</span>
 </a>
-</li>
-<li>
-<a href=/%E5%85%B3%E4%BA%8E/><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" width="24" height="24" xmlns:v="https://vecta.io/nano"><path d="M12 5.9a2.1 2.1.0 110 4.2 2.1 2.1.0 110-4.2m0 9c2.97.0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4a4 4 0 100 8 4 4 0 100-8zm0 9c-2.67.0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>
-<span>关于</span>
-</a>
-</li>
-<li>
-<a href=/archives/><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:currentColor"><title>GitBook icon</title><path d="M10.802 17.77a.703.703.0 11-.002 1.406.703.703.0 01.002-1.406m11.024-4.347a.703.703.0 11.001-1.406.703.703.0 01-.001 1.406m0-2.876a2.176 2.176.0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165.0 00-1.784-.937c-.829.0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474.0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175.0 002.15 1.862 2.177 2.177.0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176.0 0024 12.72a2.176 2.176.0 00-2.174-2.174"/></svg>
-<span>档案</span>
-</a>
-</li>
-<li>
-<a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
-<span>搜索</span>
-</a>
-</li>
-<li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
-<span>暗色模式</span>
-</li>
-</ol>
-</aside>
+</div>
 <main class="main full-width">
 <article class=main-article>
 <header class=article-header>
@@ -79,19 +45,34 @@ on-phone--column extended">
 <meta itemprop=position content="2"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <time>Nov 19, 2021</time>
 <li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
-<span style=display:none class=bold__text itemprop=name>freenom续期</span>
+<span style=display:none class=bold__text itemprop=name>freenom自动续期</span>
 <meta itemprop=position content="3">
 </li>
 </ul>
 </header>
 <h2 class="article-title center-text">
-<a href=/p/freenom/>freenom续期</a>
+<a href=/p/freenom/>freenom自动续期</a>
 </h2>
 </div>
+<aside class=top-toc>
+<section class="widget archives">
+<h2 class=title-toc style="margin:20px 0 0">目录</h2>
+<div class=mobile--widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#freenom自动续期>freenom自动续期</a></li>
+<li><a href=#保活>保活</a></li>
+<li><a href=#附>附</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
 </header>
 <section class=article-content>
+<h1 id=freenom自动续期>freenom自动续期</h1>
 <ol>
-<li>fork <a class=link href=https://github.com/luolongfei/freenom target=_blank rel=noopener>luolongfei</a>大佬的库，再添加以下workflow：</li>
+<li>Fork <a class=link href=https://github.com/luolongfei/freenom target=_blank rel=noopener>luolongfei大佬的freenom库</a>，再添加以下workflow：</li>
 </ol>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>######  说明  ######
 # 1、Fork 本仓库
@@ -246,8 +227,119 @@ jobs:
 <ol start=3>
 <li>启用 Actions ，完成。</li>
 </ol>
-<p>附：<a class=link href=https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions target=_blank rel=noopener>github workflow 语法文档</a></p>
-<p>　　<a class=link href=https://crontab.guru/examples.html target=_blank rel=noopener>修改定时任务 —— Cron示例</a></p>
+<h1 id=保活>保活</h1>
+<ol>
+<li>
+<p>Fork <a class=link href=https://github.com/zhzhzhy/Workflow-Keep-Alive target=_blank rel=noopener>zhzhzhy/Workflow-Keep-Alive库</a></p>
+</li>
+<li>
+<p>创建 sercets ：</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:center>变量名</th>
+<th style=text-align:center>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:center>REST_TOKEN</td>
+<td style=text-align:center>个人访问令牌（Personal access tokens）</td>
+</tr>
+<tr>
+<td style=text-align:center>API_ADDRESS</td>
+<td style=text-align:center><a class=link href=https://api.github.com/repos/%7bowner%7d/%7brepo%7d/actions/workflows/enable_workflow/enable target=_blank rel=noopener>https://api.github.com/repos/{owner}/{repo}/actions/workflows/enable_workflow/enable</a></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>在目标仓库的工作流程中执行上述步骤，然后在之后添加以下 Github Action <code>step</code>:</p>
+</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>    - name: curl
+      id: enable_workflow
+      env:
+        REST_TOKEN: ${{ secrets.REST_TOKEN }}
+        API_ADDRESS: ${{ secrets.API_ADDRESS }}
+      run: |
+        echo &#34;Enable Workflow Start...&#34;
+        curl -X PUT -H &#34;Authorization: token $REST_TOKEN&#34; &#34;$API_ADDRESS&#34;
+        echo &#34;Finished&#34;
+</code></pre></div><details class=spoiler id=spoiler-0>
+<summary>“点击展开完整代码”</summary>
+<p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># 1、Fork 本仓库
+# 2、在你 Fork 的本仓库下的 Settings &gt; Secrets 画面追加以下几个 secret 变量：
+# FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
+# TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
+# （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
+#  项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
+#
+# 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+#
+# @Author of yml configuration file: RouRouX <span class=p>&lt;</span><span class=nt>https:</span><span class=err>//</span><span class=na>github</span><span class=err>.</span><span class=na>com</span><span class=err>/</span><span class=na>RouRouX</span><span class=p>&gt;</span> <span class=err>&amp;</span> mybsdc <span class=p>&lt;</span><span class=nt>mybsdc</span><span class=err>@</span><span class=na>gmail</span><span class=err>.</span><span class=na>com</span><span class=p>&gt;</span>
+#
+######  end 说明  ######
+
+name: Run it on action
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: 00 02 * * *
+jobs:
+  run-it:
+    runs-on: ubuntu-18.04
+    name: Run it on action
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v2
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: &#39;7.2&#39;
+      - name: Setting
+        run: |
+          echo &#39;Renew freenom domain name automatically.&#39;
+          echo &#39;@Author of yml configuration file: RouRouX <span class=p>&lt;</span><span class=nt>https:</span><span class=err>//</span><span class=na>github</span><span class=err>.</span><span class=na>com</span><span class=err>/</span><span class=na>RouRouX</span><span class=p>&gt;</span> <span class=err>&amp;</span> mybsdc <span class=p>&lt;</span><span class=nt>mybsdc</span><span class=err>@</span><span class=na>gmail</span><span class=err>.</span><span class=na>com</span><span class=p>&gt;</span>&#39;
+          echo &#39;@Url: https://github.com/luolongfei/freenom&#39;
+          cp .env.example .env
+          if [[ (&#39;${{ secrets.FREENOM_USERNAME }}&#39; == &#39;&#39; || &#39;${{ secrets.FREENOM_PASSWORD }}&#39; == &#39;&#39;) <span class=err>&amp;&amp;</span> &#39;${{ secrets.MULTIPLE_ACCOUNTS }}&#39; == &#39;&#39; ]]; then echo &#39;你在 Github 的当前项目的 Settings &gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&#39;; fi
+          if [ &#39;${{ secrets.FREENOM_USERNAME }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&#39;${{ secrets.FREENOM_USERNAME }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.FREENOM_PASSWORD }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&#39;${{ secrets.FREENOM_PASSWORD }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.MULTIPLE_ACCOUNTS }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&#39;${{ secrets.MULTIPLE_ACCOUNTS }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.MAIL_USERNAME }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&#39;${{ secrets.MAIL_USERNAME }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.MAIL_PASSWORD }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&#39;${{ secrets.MAIL_PASSWORD }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.TO }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^TO=.*$/TO=&#39;${{ secrets.TO }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.MAIL_ENABLE }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&#39;${{ secrets.MAIL_ENABLE }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.TELEGRAM_CHAT_ID }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&#39;${{ secrets.TELEGRAM_CHAT_ID }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&#39;/&#34; .env; fi
+          if [ &#39;${{ secrets.NOTICE_FREQ }}&#39; != &#39;&#39; ]; then sed -i &#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&#39;${{ secrets.NOTICE_FREQ }}&#39;/&#34; .env; fi
+          sed -i &#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&#34; .env
+      - name: Run
+        run: |
+          php run
+
+    - name: curl
+      id: enable_workflow
+      env:
+        REST_TOKEN: ${{ secrets.REST_TOKEN }}
+        API_ADDRESS: ${{ secrets.API_ADDRESS }}
+      run: |
+        echo &#34;Enable Workflow Start...&#34;
+        curl -X PUT -H &#34;Authorization: token $REST_TOKEN&#34; &#34;$API_ADDRESS&#34;
+        echo &#34;Finished&#34;          
+</code></pre></div></p>
+</details>
+<ol start=4>
+<li>运行 github action，完成。</li>
+</ol>
+<h1 id=附>附</h1>
+<p><a class=link href=https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions target=_blank rel=noopener>github workflow 语法文档</a></p>
+<p><a class=link href=https://crontab.guru/examples.html target=_blank rel=noopener>修改定时任务 —— Cron示例</a></p>
 </section>
 <footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
@@ -307,6 +399,20 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 </div>
 </div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
 </main>
+<aside class="sidebar right-sidebar sticky">
+<section class="widget archives">
+<h2 class="widget-title section-title">目录</h2>
+<div class=widget--toc>
+<nav id=TableOfContents>
+<ol>
+<li><a href=#freenom自动续期>freenom自动续期</a></li>
+<li><a href=#保活>保活</a></li>
+<li><a href=#附>附</a></li>
+</ol>
+</nav>
+</div>
+</section>
+</aside>
 </div>
 <script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
 <script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Titillium+Web&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
