@@ -332,7 +332,8 @@ echo &amp;#34;Finished&amp;#34;
 &lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
 >github workflow 语法文档&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
->修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="github-actions">github actions&lt;/h1>
+>修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="本文草稿待细写">本文草稿，待细写&lt;/h1>
+&lt;h1 id="github-actions">github actions&lt;/h1>
 &lt;p>示例如下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">on:
 push:
@@ -413,7 +414,7 @@ username: root
 password: ${{ secrets.password }}
 port: ${{ secrets.port }}
 script: |
-echo $CR_PAT | docker login ghcr.io -u xiaoxiano --password-stdin
+echo $CR_PAT | docker login ghcr.io -u Username --password-stdin
 docker-compose pull
 docker-compose up -d --no-deps
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
@@ -523,7 +524,7 @@ upstream DISABLE (push)
 &lt;li>拉取更新&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git fetch upstream
-git rebase upstream/master
+git merge upstream/master
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="linux命令">Linux命令&lt;/h1>
 &lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
