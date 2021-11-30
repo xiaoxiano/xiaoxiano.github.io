@@ -323,15 +323,15 @@ jobs:
         run: |
           php run
 
-    - name: curl
-      id: enable_workflow
-      env:
-        REST_TOKEN: ${{ secrets.REST_TOKEN }}
-        API_ADDRESS: ${{ secrets.API_ADDRESS }}
-      run: |
-        echo &#34;Enable Workflow Start...&#34;
-        curl -X PUT -H &#34;Authorization: token $REST_TOKEN&#34; &#34;$API_ADDRESS&#34;
-        echo &#34;Finished&#34;          
+      - name: curl
+        id: enable_workflow
+        env:
+          REST_TOKEN: ${{ secrets.REST_TOKEN }}
+          API_ADDRESS: ${{ secrets.API_ADDRESS }}
+        run: |
+          echo &#34;Enable Workflow Start...&#34;
+          curl -X PUT -H &#34;Authorization: token $REST_TOKEN&#34; &#34;$API_ADDRESS&#34;
+          echo &#34;Finished&#34;          
 </code></pre></div></p>
 </details>
 <ol start=4>
