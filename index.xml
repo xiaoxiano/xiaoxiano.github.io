@@ -235,7 +235,7 @@ php run
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">API_ADDRESS&lt;/td>
-&lt;td style="text-align:center">&lt;code>https://api.github.com/repos/{owner}/{repo}/actions/workflows/enable_workflow/enable&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;code>https://api.github.com/repos/{owner}/{target-repo}/actions/workflows/enable_workflow/enable&lt;/code>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
