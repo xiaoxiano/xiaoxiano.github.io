@@ -15,7 +15,7 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"hugo使用stack主题搭建博客及部署","headline":"hugo使用stack主题搭建博客及部署","description":"搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-03T00:00:00+00:00","dateModified":"2021-11-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/","wordCount":"487","tag":[],"keywords":[],"articleSection":["blog"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"hugo使用stack主题搭建博客及部署","headline":"hugo使用stack主题搭建博客及部署","description":"搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-03T00:00:00+00:00","dateModified":"2021-11-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/","wordCount":"486","tag":[],"keywords":[],"articleSection":["blog"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -107,7 +107,7 @@ ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                   
 </code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>hugo new site myblog   #创建博客
 </code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git init    #初始化
 </code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git remote add origin git@github.com:****       #连接远程仓库
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git clone https://github.com/CaiJimmy/hugo-theme-stack/ #安装stack主题
 </code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>rm config.toml <span class=err>&amp;&amp;</span> cp themes/hugo-theme-stack/exampleSite/config.yaml .     #使用主题的配置文件
 </code></pre></div><p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章</p>
 <p>本地预览：
@@ -293,8 +293,8 @@ code<br>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
 </section>
-<section class=article-time><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
-<span class=article-time--modified>
+<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<span>
 最后更新于 Nov 16, 2021 00:00 UTC
 </span>
 </section></footer>
@@ -311,7 +311,7 @@ code<br>
 </section>
 <section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
-Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=2.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
+Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
 </section>
 </footer>
 <div class=pswp tabindex=-1 role=dialog aria-hidden=true>

@@ -883,7 +883,7 @@ ProxyCommand nc -v -x 127.0.0.1:10808 %h %p #请修改127.0.0.1:10808
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">hugo new site myblog #创建博客
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git init #初始化
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git remote add origin git@github.com:**** #连接远程仓库
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack #安装stack主题
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">git clone https://github.com/CaiJimmy/hugo-theme-stack/ #安装stack主题
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . #使用主题的配置文件
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章&lt;/p>
 &lt;p>本地预览：
