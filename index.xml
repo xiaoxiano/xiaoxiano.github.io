@@ -82,6 +82,7 @@ branches:
 - main
 schedule:
 - cron: 00 02 * * *
+workflow_dispatch:
 jobs:
 run-it:
 runs-on: ubuntu-18.04
@@ -274,6 +275,7 @@ branches:
 - main
 schedule:
 - cron: 00 02 * * *
+workflow_dispatch:
 jobs:
 run-it:
 runs-on: ubuntu-18.04
