@@ -21,7 +21,7 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：\n 卷存储在由 Docker管理的主机文件系统（在 Linux 上的\/var\/lib\/docker\/volumes\/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose：","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"118","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：\n 卷存储在由 Docker管理的主机文件系统（在 Linux 上的\/var\/lib\/docker\/volumes\/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose：","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"216","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -135,7 +135,36 @@ docker-compose --version
 <p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。</p>
 <p>但是，当你使用<a class=link href=https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1 target=_blank rel=noopener>external</a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用<code>docker network create Your_Nerwork</code>预先创建网络。</p>
 <h1 id=常用命令>常用命令</h1>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>docker ps -a    #查询容器
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>docker-compose up -d                        # 在后台启动服务
+docker-compose pull                         # 拉取
+docker-compose -f docker-compose.yml up -d  # 指定docker-compose.yml
+docker-compose -f docker-compose.yml pull   # 指定docker-compose.yml
+
+
+docker ps -a                                # 查询所有容器
+docker-compose ps                           # 查看正在运行中的容器
+docker-compose ps -a                        # 查看所有编排容器，包括已停止的容器
+docker-compose images                       # 列出Compose文件构建的镜像
+
+
+docker-compose stop                         # 停止服务
+docker-compose start                        # 启动已经存在的服务
+docker-compose rm                           # 删除所有（停止状态的）服务容器
+docker-compose down                         # 删除所有容器
+
+docker-compose pause [serviceName]          # 暂停服务
+docker-compose unpause [serviceName]        # 恢复服务
+docker-compose restart [serviceName]        # 重启服务
+
+
+docker-compose logs                         # 查看日志
+docker-compose logs [serviceName]           # 查看某服务的日志 
+docker-compose logs -f [serviceName]        # 查看某服务的实时日志
+
+docker-compose config  -q       # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
+docker-compose exec --index=1 [serviceName] sh     # 进入某服务的第1个容器执行命令
+
+docker-compose --help                       # 帮助
 </code></pre></div>
 </section>
 <footer class=article-footer>

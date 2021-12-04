@@ -485,7 +485,27 @@ docker-compose --version
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
 &lt;h1 id="常用命令">常用命令&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">docker ps -a #查询容器
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">docker-compose up -d # 在后台启动服务
+docker-compose pull # 拉取
+docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
+docker-compose -f docker-compose.yml pull # 指定docker-compose.yml
+docker ps -a # 查询所有容器
+docker-compose ps # 查看正在运行中的容器
+docker-compose ps -a # 查看所有编排容器，包括已停止的容器
+docker-compose images # 列出Compose文件构建的镜像
+docker-compose stop # 停止服务
+docker-compose start # 启动已经存在的服务
+docker-compose rm # 删除所有（停止状态的）服务容器
+docker-compose down # 删除所有容器
+docker-compose pause [serviceName] # 暂停服务
+docker-compose unpause [serviceName] # 恢复服务
+docker-compose restart [serviceName] # 重启服务
+docker-compose logs # 查看日志
+docker-compose logs [serviceName] # 查看某服务的日志
+docker-compose logs -f [serviceName] # 查看某服务的实时日志
+docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
+docker-compose exec --index=1 [serviceName] sh # 进入某服务的第1个容器执行命令
+docker-compose --help # 帮助
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
@@ -658,8 +678,6 @@ echo &amp;#34;Total value : $val&amp;#34;
 &lt;/tbody>
 &lt;/table>
 &lt;p>待续&lt;/p></description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
-&lt;h2 id="前言">前言&lt;/h2>
-&lt;p>请自备代理，查看端口，允许局域网,标注&lt;strong>历史&lt;/strong>均为历史配置，仅作参考不推荐使用&lt;/p>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
 &lt;li>git&lt;/li>
@@ -668,7 +686,7 @@ echo &amp;#34;Total value : $val&amp;#34;
 git config --global https.https://www.github.com.proxy socks5://127.0.0.1:port.socks
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\90487\.gitconfig&lt;/code>，90487是我的用户名&lt;/p>
 &lt;ul>
-&lt;li>Terminal（历史）&lt;/li>
+&lt;li>Terminal（临时使用）&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
 set https_proxy=http://127.0.0.1:port.http #临时命令行代理
@@ -693,7 +711,7 @@ User git
 ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
-&lt;p>终端代理（历史，已弃用）&lt;/p>
+&lt;p>终端代理（临时使用）&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>方法一：直接在命令前加proxychains&lt;/p>
