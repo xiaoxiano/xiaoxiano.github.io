@@ -18,7 +18,7 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"461","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"460","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -190,42 +190,42 @@ docker-compose --version
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Docker命令
 
 镜像命令
-    docker images [-a][-q]                #列出本地主机的镜像
+    docker images [-a][-q]                    #列出本地主机的镜像
         -a 显示所有信息
         -q 显示所有id
-  　docker search xxx                     #搜索docker hub
-  　docker pull 镜像：版本号               #拉取镜像
-  　docker rmi -f xxx                     #删除单个镜像
-    docker rim -f $(docker images -aq)    #删除所有的镜像。 
+  　docker search xxx                         #搜索docker hub
+  　docker pull 镜像：版本号                   #拉取镜像
+  　docker rmi -f xxx                         #删除单个镜像
+    docker rmi -f $(docker images -aq)        #删除所有的镜像。 
     
 容器命令
-　　docker run [可选参数] imagename        #新建并启动容器    
+　　docker run [可选参数] imagename            #新建并启动容器    
 　　　　--name = &#34;name&#34; 容器取名
 　　　　-it 交互模式进入容器
 　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 　　　　-p ip:主机端口:容器端口 #指定端口映射
 
 　　查看：
-　　　　docker ps [-a][-q]                   #显示当前正在运行的容器
-　　　　    -a 显示当前运行的容器，并显示历史运行过的容器
-　　　    　-q 只显示运行容器的编号
-　　　　docker logs 容器id                   #日志     
-　　　　docker top 容器id                    #查看容器中进程信息
-　　　　docker inspect 容器id                #查看容器的详细信息
+　　docker ps [-a][-q]                         #显示当前正在运行的容器
+　　　　-a 显示当前运行的容器，并显示历史运行过的容器
+　　　  -q 只显示运行容器的编号
+　　docker logs 容器id                         #日志     
+　　docker top 容器id                          #查看容器中进程信息
+　　docker inspect 容器id                      #查看容器的详细信息
 
 
     操作：
-　　　　docker start 容器id                  #启动容器
-　　　　docker restart 容器id                #重启容器
-　　　　docker stop 容器id                   #停止容器
-　　　　docker kill 容器id                   #强制停止容器
-　　　　docker rm 容器id                     #删除停止状态的容器
-　　　　docker rm -f 容器id                  #强制删除容器
-　　　　docker stop $(docker ps -a -q)       #停止所有容器运行
-　　　　docker rm - f $(docker ps -qa)       #删除所有容器
-　　　　docker ps -a -q : wargs docker rm    #利用管道删除所有容器
-　　　　exit 容器停止并退出
-　　　　ctrl+p+q 容器不停止退出
+　　docker start 容器id                        #启动容器
+　　docker restart 容器id                      #重启容器
+　　docker stop 容器id                         #停止容器
+　　docker kill 容器id                         #强制停止容器
+　　docker rm 容器id                           #删除停止状态的容器
+　  docker rm -f 容器id                        #强制删除容器
+　　docker stop $(docker ps -a -q)             #停止所有容器运行
+　　docker rm $(docker ps -a -q)               #删除所有容器
+    docker network rm $(docker network ls -q)  #删除 所有network
+　　exit 容器停止并退出
+　　ctrl+p+q 容器不停止退出
 
 　　　　
 　　进入正在执行的容器：

@@ -535,7 +535,7 @@ docker images [-a][-q] #列出本地主机的镜像
 　docker search xxx #搜索docker hub
 　docker pull 镜像：版本号 #拉取镜像
 　docker rmi -f xxx #删除单个镜像
-docker rim -f $(docker images -aq) #删除所有的镜像。
+docker rmi -f $(docker images -aq) #删除所有的镜像。
 容器命令
 　　docker run [可选参数] imagename #新建并启动容器
 　　　　--name = &amp;#34;name&amp;#34; 容器取名
@@ -543,24 +543,24 @@ docker rim -f $(docker images -aq) #删除所有的镜像。
 　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 　　　　-p ip:主机端口:容器端口 #指定端口映射
 　　查看：
-　　　　docker ps [-a][-q] #显示当前正在运行的容器
-　　　　 -a 显示当前运行的容器，并显示历史运行过的容器
-　　　 　-q 只显示运行容器的编号
-　　　　docker logs 容器id #日志
-　　　　docker top 容器id #查看容器中进程信息
-　　　　docker inspect 容器id #查看容器的详细信息
+　　docker ps [-a][-q] #显示当前正在运行的容器
+　　　　-a 显示当前运行的容器，并显示历史运行过的容器
+　　　 -q 只显示运行容器的编号
+　　docker logs 容器id #日志
+　　docker top 容器id #查看容器中进程信息
+　　docker inspect 容器id #查看容器的详细信息
 操作：
-　　　　docker start 容器id #启动容器
-　　　　docker restart 容器id #重启容器
-　　　　docker stop 容器id #停止容器
-　　　　docker kill 容器id #强制停止容器
-　　　　docker rm 容器id #删除停止状态的容器
-　　　　docker rm -f 容器id #强制删除容器
-　　　　docker stop $(docker ps -a -q) #停止所有容器运行
-　　　　docker rm - f $(docker ps -qa) #删除所有容器
-　　　　docker ps -a -q : wargs docker rm #利用管道删除所有容器
-　　　　exit 容器停止并退出
-　　　　ctrl+p+q 容器不停止退出
+　　docker start 容器id #启动容器
+　　docker restart 容器id #重启容器
+　　docker stop 容器id #停止容器
+　　docker kill 容器id #强制停止容器
+　　docker rm 容器id #删除停止状态的容器
+　 docker rm -f 容器id #强制删除容器
+　　docker stop $(docker ps -a -q) #停止所有容器运行
+　　docker rm $(docker ps -a -q) #删除所有容器
+docker network rm $(docker network ls -q) #删除 所有network
+　　exit 容器停止并退出
+　　ctrl+p+q 容器不停止退出
 　　　　
 　　进入正在执行的容器：
 　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
