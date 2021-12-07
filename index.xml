@@ -529,12 +529,12 @@ docker-compose --version
 &lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker命令
 镜像命令
-　　docker images [-a][-q] #列出本地主机的镜像
-　　 -a 显示所有信息
-　 　-q 显示所有id
-　　docker search xxx #搜索docker hub
-　　docker pull 镜像：版本号 #拉取镜像
-　　docker rmi -f xxx #删除单个镜像
+docker images [-a][-q] #列出本地主机的镜像
+-a 显示所有信息
+-q 显示所有id
+　docker search xxx #搜索docker hub
+　docker pull 镜像：版本号 #拉取镜像
+　docker rmi -f xxx #删除单个镜像
 docker rim -f $(docker images -aq) #删除所有的镜像。
 容器命令
 　　docker run [可选参数] imagename #新建并启动容器
@@ -543,7 +543,7 @@ docker rim -f $(docker images -aq) #删除所有的镜像。
 　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 　　　　-p ip:主机端口:容器端口 #指定端口映射
 　　查看：
-　　　　docker ps #显示当前正在运行的容器
+　　　　docker ps [-a][-q] #显示当前正在运行的容器
 　　　　 -a 显示当前运行的容器，并显示历史运行过的容器
 　　　 　-q 只显示运行容器的编号
 　　　　docker logs 容器id #日志
