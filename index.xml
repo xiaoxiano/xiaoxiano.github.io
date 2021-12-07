@@ -460,7 +460,49 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 #hello-world 映像验证
 sudo docker run hello-world
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dockerfile">Dockerfile&lt;/h2>
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>“点击展开和折叠代码”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 这个参考示例来自李文周大佬的bluebell项目
+FROM golang:alpine AS builder
+# 为我们的镜像设置必要的环境变量
+ENV GO111MODULE=on \
+CGO_ENABLED=0 \
+GOOS=linux \
+GOARCH=amd64
+# 移动到工作目录：/build
+WORKDIR /build
+# 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+# 将代码复制到容器中
+COPY . .
+# 将我们的代码编译成二进制可执行文件 bluebell_app
+RUN go build -o bluebell_app .
+###################
+# 接下来创建一个小镜像
+###################
+FROM debian:stretch-slim
+COPY ./wait-for.sh /
+COPY ./templates /templates
+COPY ./static /static
+COPY ./conf /conf
+# 从builder镜像中把/dist/app 拷贝到当前目录
+COPY --from=builder /build/bluebell_app /
+RUN set -eux; \
+apt-get update; \
+apt-get install -y \
+--no-install-recommends \
+netcat; \
+chmod 755 wait-for.sh
+# 声明服务端口
+EXPOSE 8084
+# 需要运行的命令
+#ENTRYPOINT [&amp;#34;/bluebell_app&amp;#34;, &amp;#34;conf/config.yaml&amp;#34;]
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
 &lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
 >docker文档&lt;/a>：&lt;/p>
 &lt;ol>
@@ -485,11 +527,11 @@ docker-compose --version
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
 &lt;h1 id="常用命令">常用命令&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker命令
 镜像命令
 　　docker images [-a][-q] #列出本地主机的镜像
-　　-a 显示所有信息
-　　-q 显示所有id
+　　 -a 显示所有信息
+　 　-q 显示所有id
 　　docker search xxx #搜索docker hub
 　　docker pull 镜像：版本号 #拉取镜像
 　　docker rmi -f xxx #删除单个镜像
@@ -500,26 +542,24 @@ docker rim -f $(docker images -aq) #删除所有的镜像。
 　　　　-it 交互模式进入容器
 　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 　　　　-p ip:主机端口:容器端口 #指定端口映射
-　　docker ps #显示当前正在运行的容器
-　　　　-a 显示当前运行的容器，并显示历史运行过的容器
-　　　　-q 只显示运行容器的编号
-　　退出容器：
-　　　　exit 容器停止并退出
-　　　　ctrl+p+q 容器不停止退出
-　　删除容器：
+　　查看：
+　　　　docker ps #显示当前正在运行的容器
+　　　　 -a 显示当前运行的容器，并显示历史运行过的容器
+　　　 　-q 只显示运行容器的编号
+　　　　docker logs 容器id #日志
+　　　　docker top 容器id #查看容器中进程信息
+　　　　docker inspect 容器id #查看容器的详细信息
+操作：
+　　　　docker start 容器id #启动容器
+　　　　docker restart 容器id #重启容器
+　　　　docker stop 容器id #停止容器
+　　　　docker kill 容器id #强制停止容器
 　　　　docker rm 容器id #删除停止状态的容器
 　　　　docker rm -f 容器id #强制删除容器
 　　　　docker rm - f $(docker ps -qa) #删除所有容器
 　　　　docker ps -a -q : wargs docker rm #利用管道删除所有容器
-　　启动和停止容器：
-　　　　docker start 容器id
-　　　　docker restart 容器id
-　　　　docker stop 容器id
-　　　　docker kill 容器id
-　　查看容器：
-　　　　docker logs 容器id #日志
-　　　　docker top 容器id #查看容器中进程信息
-　　　　docker inspect 容器id #查看容器的详细信息
+　　　　exit 容器停止并退出
+　　　　ctrl+p+q 容器不停止退出
 　　　　
 　　进入正在执行的容器：
 　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
@@ -527,7 +567,7 @@ docker rim -f $(docker images -aq) #删除所有的镜像。
 　　　　两者区别 exec进入容器后开启新的终端，可以在里边操作（常用）；attach进入容器正在执行的终端，不会新启进程
 　　从容器拷贝内容到主机：
 　　　　docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker-compose命令
 docker-compose up -d # 在后台启动服务
 docker-compose pull # 拉取
 docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml

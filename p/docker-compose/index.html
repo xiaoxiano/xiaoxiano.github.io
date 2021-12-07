@@ -1,27 +1,24 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="docker 安装docker：
-#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：
- 卷存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose："><title>docker和docker-compose</title>
+#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \ CGO_ENABLED=0 \ GOOS=linux \ GOARCH=amd64 # 移动到工作目录：/build WORKDIR /build # 复制项目中的 go."><title>docker和docker-compose</title>
 <link rel=canonical href=https://www.jiangdaoli.cf/p/docker-compose/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="docker和docker-compose">
 <meta property="og:description" content="docker 安装docker：
-#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：
- 卷存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose：">
+#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \ CGO_ENABLED=0 \ GOOS=linux \ GOARCH=amd64 # 移动到工作目录：/build WORKDIR /build # 复制项目中的 go.">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/docker-compose/">
 <meta property="og:site_name" content="银之介">
 <meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-27T00:00:00+00:00"><meta property="article:modified_time" content="2021-10-27T00:00:00+00:00">
 <meta name=twitter:title content="docker和docker-compose">
 <meta name=twitter:description content="docker 安装docker：
-#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：
- 卷存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose："><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
+#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg #设置稳定存储库 echo \ &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \ $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \ CGO_ENABLED=0 \ GOOS=linux \ GOARCH=amd64 # 移动到工作目录：/build WORKDIR /build # 复制项目中的 go."><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png>
 <link rel=icon href=/favicon.svg type=image/svg+xml>
 <link rel=manifest href=/site.webmanifest>
 <link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5>
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world 基础知识参考 以下简介节选自docker文档：\n 卷存储在由 Docker管理的主机文件系统（在 Linux 上的\/var\/lib\/docker\/volumes\/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。  docker compose 安装docker compose：","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"347","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"453","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -68,6 +65,7 @@ extended">
 <ol>
 <li><a href=#docker>docker</a>
 <ol>
+<li><a href=#dockerfile>Dockerfile</a></li>
 <li><a href=#基础知识参考>基础知识参考</a></li>
 </ol>
 </li>
@@ -111,7 +109,61 @@ extended">
 #hello-world 映像验证
  sudo docker run hello-world
 
-</code></pre></div><h2 id=基础知识参考>基础知识参考</h2>
+</code></pre></div><h2 id=dockerfile>Dockerfile</h2>
+<details class=spoiler id=spoiler-0>
+<summary>“点击展开和折叠代码”</summary>
+<p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># 这个参考示例来自李文周大佬的bluebell项目
+
+FROM golang:alpine AS builder
+
+# 为我们的镜像设置必要的环境变量
+ENV GO111MODULE=on \
+    CGO_ENABLED=0 \
+    GOOS=linux \
+    GOARCH=amd64
+
+# 移动到工作目录：/build
+WORKDIR /build
+
+# 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
+COPY go.mod .
+COPY go.sum .
+RUN go mod download
+
+# 将代码复制到容器中
+COPY . .
+
+# 将我们的代码编译成二进制可执行文件 bluebell_app
+RUN go build -o bluebell_app .
+
+###################
+# 接下来创建一个小镜像
+###################
+FROM debian:stretch-slim
+
+COPY ./wait-for.sh /
+COPY ./templates /templates
+COPY ./static /static
+COPY ./conf /conf
+
+# 从builder镜像中把/dist/app 拷贝到当前目录
+COPY --from=builder /build/bluebell_app /
+
+RUN set -eux; \
+	apt-get update; \
+	apt-get install -y \
+		--no-install-recommends \
+		netcat; \
+        chmod 755 wait-for.sh
+
+# 声明服务端口
+EXPOSE 8084
+
+# 需要运行的命令
+#ENTRYPOINT [&#34;/bluebell_app&#34;, &#34;conf/config.yaml&#34;]
+</code></pre></div></p>
+</details>
+<h2 id=基础知识参考>基础知识参考</h2>
 <p>以下简介节选自<a class=link href=https://docs.docker.com/get-started/ target=_blank rel=noopener>docker文档</a>：</p>
 <ol>
 <li><strong>卷</strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。</li>
@@ -135,55 +187,46 @@ docker-compose --version
 <p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。</p>
 <p>但是，当你使用<a class=link href=https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1 target=_blank rel=noopener>external</a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用<code>docker network create Your_Nerwork</code>预先创建网络。</p>
 <h1 id=常用命令>常用命令</h1>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Docker
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Docker命令
+
 镜像命令
-
 　　docker images [-a][-q]                #列出本地主机的镜像
-　　-a 显示所有信息
-　　-q 显示所有id
-
+　　    -a 显示所有信息
+　    　-q 显示所有id
 　　docker search xxx                     #搜索docker hub
-
-　　docker pull 镜像：版本号               #拉取镜像
-
+　　docker pull 镜像：版本号                #拉取镜像
 　　docker rmi -f xxx                     #删除单个镜像
-    docker rim -f $(docker images -aq)    #删除所有的镜像。
-    
+    docker rim -f $(docker images -aq)    #删除所有的镜像。 
     
 容器命令
-
 　　docker run [可选参数] imagename        #新建并启动容器    
 　　　　--name = &#34;name&#34; 容器取名
 　　　　-it 交互模式进入容器
 　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 　　　　-p ip:主机端口:容器端口 #指定端口映射
 
-　　docker ps                             #显示当前正在运行的容器
-　　　　-a 显示当前运行的容器，并显示历史运行过的容器
-　　　　-q 只显示运行容器的编号
+　　查看：
+　　　　docker ps                             #显示当前正在运行的容器
+　　　　    -a 显示当前运行的容器，并显示历史运行过的容器
+　　　    　-q 只显示运行容器的编号
+　　　　docker logs 容器id                   #日志     
+　　　　docker top 容器id                    #查看容器中进程信息
+　　　　docker inspect 容器id                #查看容器的详细信息
 
-　　退出容器：
+
+    操作：
+　　　　docker start 容器id                  #启动容器
+　　　　docker restart 容器id                #重启容器
+　　　　docker stop 容器id                   #停止容器
+　　　　docker kill 容器id                   #强制停止容器
+　　　　docker rm 容器id                     #删除停止状态的容器
+　　　　docker rm -f 容器id                  #强制删除容器
+　　　　docker rm - f $(docker ps -qa)       #删除所有容器
+　　　　docker ps -a -q : wargs docker rm    #利用管道删除所有容器
 　　　　exit 容器停止并退出
 　　　　ctrl+p+q 容器不停止退出
 
-　　删除容器：
-　　　　docker rm 容器id                    #删除停止状态的容器
-　　　　docker rm -f 容器id                 #强制删除容器
-　　　　docker rm - f $(docker ps -qa)      #删除所有容器
-　　　　docker ps -a -q : wargs docker rm   #利用管道删除所有容器
-
-　　启动和停止容器：
-　　　　docker start 容器id
-　　　　docker restart 容器id
-　　　　docker stop 容器id
-　　　　docker kill 容器id 
-
-　　查看容器：
-　　　　docker logs 容器id           #日志     
-　　　　docker top 容器id            #查看容器中进程信息
-　　　　docker inspect 容器id        #查看容器的详细信息
 　　　　
-
 　　进入正在执行的容器：
 　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
 　　　　docker attach 容器id #进入执行的容器。
@@ -191,7 +234,8 @@ docker-compose --version
 
 　　从容器拷贝内容到主机：
 　　　　docker cp 容器id: 路径  主机目的路径 #此处不必进入容器，容器可以是关闭的。
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Docker-compose命令
+
 docker-compose up -d                        # 在后台启动服务
 docker-compose pull                         # 拉取
     docker-compose -f docker-compose.yml up -d  # 指定docker-compose.yml
@@ -287,6 +331,7 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <ol>
 <li><a href=#docker>docker</a>
 <ol>
+<li><a href=#dockerfile>Dockerfile</a></li>
 <li><a href=#基础知识参考>基础知识参考</a></li>
 </ol>
 </li>
