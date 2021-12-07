@@ -535,7 +535,8 @@ docker images [-a][-q] #列出本地主机的镜像
 　docker search xxx #搜索docker hub
 　docker pull 镜像：版本号 #拉取镜像
 　docker rmi -f xxx #删除单个镜像
-docker rmi -f $(docker images -aq) #删除所有的镜像。
+docker rmi -f $(docker images -aq) #删除所有的镜像
+docker system prune --all --force --volumes #删除一切
 容器命令
 　　docker run [可选参数] imagename #新建并启动容器
 　　　　--name = &amp;#34;name&amp;#34; 容器取名
@@ -558,7 +559,7 @@ docker rm 容器id #删除停止状态的容器
 docker rm -f 容器id #强制删除容器
 docker stop $(docker ps -a -q) #停止所有容器运行
 docker rm $(docker ps -a -q) #删除所有容器
-docker network rm $(docker network ls -q) #删除 所有network
+docker network rm $(docker network ls -q) #删除所有network
 exit 容器停止并退出
 ctrl+p+q 容器不停止退出
 　　　　

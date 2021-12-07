@@ -18,7 +18,7 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"460","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开和折叠代码”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2021-10-27T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"466","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -196,7 +196,8 @@ docker-compose --version
   　docker search xxx                         #搜索docker hub
   　docker pull 镜像：版本号                   #拉取镜像
   　docker rmi -f xxx                         #删除单个镜像
-    docker rmi -f $(docker images -aq)        #删除所有的镜像。 
+    docker rmi -f $(docker images -aq)        #删除所有的镜像
+    docker system prune --all --force --volumes #删除一切 
     
 容器命令
 　　docker run [可选参数] imagename            #新建并启动容器    
@@ -223,7 +224,7 @@ docker-compose --version
 	docker rm -f 容器id                        #强制删除容器
 	docker stop $(docker ps -a -q)             #停止所有容器运行
 	docker rm $(docker ps -a -q)               #删除所有容器
-	docker network rm $(docker network ls -q)  #删除 所有network
+	docker network rm $(docker network ls -q)  #删除所有network
 	exit 容器停止并退出
 	ctrl+p+q 容器不停止退出
 
