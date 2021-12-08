@@ -528,46 +528,44 @@ docker-compose --version
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
 &lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker命令
-镜像命令
-docker images [-a][-q] #列出本地主机的镜像
+docker run [可选参数] imagename #新建并启动容器
+　　--name = &amp;#34;name&amp;#34; 容器取名
+　　-it 交互模式进入容器
+　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
+　　-p ip:主机端口:容器端口 #指定端口映射
+查看：
+docker search xxx #搜索dockerhub-镜像
+docker images [-a][-q] #列出本地主机的-镜像
 -a 显示所有信息
 -q 显示所有id
-　docker search xxx #搜索docker hub
-　docker pull 镜像：版本号 #拉取镜像
-　docker rmi -f xxx #删除单个镜像
-docker rmi -f $(docker images -aq) #删除所有的镜像
-docker system prune --all --force --volumes #删除一切
-容器命令
-　　docker run [可选参数] imagename #新建并启动容器
-　　　　--name = &amp;#34;name&amp;#34; 容器取名
-　　　　-it 交互模式进入容器
-　　　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
-　　　　-p ip:主机端口:容器端口 #指定端口映射
-　　查看：
-　　docker ps [-a][-q] #显示当前正在运行的容器
-　　　　-a 显示当前运行的容器，并显示历史运行过的容器
-　　　 -q 只显示运行容器的编号
-　　docker logs 容器id #日志
-　　docker top 容器id #查看容器中进程信息
-　　docker inspect 容器id #查看容器的详细信息
+docker ps [-a][-q] #显示当前正在运行的容器
+　　-a 显示当前运行的容器，并显示历史运行过的容器
+　　-q 只显示运行容器的编号
+docker logs 容器id #日志
+docker top 容器id #查看容器中进程信息
+docker inspect 容器id #查看容器的详细信息
 操作：
+docker pull 镜像：版本号 #拉取-镜像
 docker start 容器id #启动容器
 docker restart 容器id #重启容器
 docker stop 容器id #停止容器
 docker kill 容器id #强制停止容器
 docker rm 容器id #删除停止状态的容器
 docker rm -f 容器id #强制删除容器
+docker rmi -f xxx #删除单个-镜像
+docker rmi -f $(docker images -aq) #删除所有-镜像
 docker stop $(docker ps -a -q) #停止所有容器运行
 docker rm $(docker ps -a -q) #删除所有容器
 docker network rm $(docker network ls -q) #删除所有network
+docker system prune --all --force --volumes #删除一切
 exit 容器停止并退出
 ctrl+p+q 容器不停止退出
 　　　　
-　　进入正在执行的容器：
+进入正在执行的容器：
 　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
 　　　　docker attach 容器id #进入执行的容器。
 　　　　两者区别 exec进入容器后开启新的终端，可以在里边操作（常用）；attach进入容器正在执行的终端，不会新启进程
-　　从容器拷贝内容到主机：
+从容器拷贝内容到主机：
 　　　　docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker-compose命令
 docker-compose up -d # 在后台启动服务
