@@ -1073,13 +1073,15 @@ git push origin master
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">1 baseurl: https://username.github.io #改为自己的
 2 languageCode: zh-CN #中文编码
-5 title: Example Site #博客名
+5 title: Example Site #博客名字
 15 DefaultContentLanguage: zh-cn #中文
 29 since: 2021
+33 published: 2006-01-02 #日期格式
+34 lastUpdated: 2006-01-02 #更新日期格式
 37 emoji: 🍥 #头像角标
 41 src: img/avatar.png #头像，myblog/themes/hugo-theme-stack/assets/img
-132 name: &amp;#39;首页&amp;#39; #改中文左侧菜单home
-152 startLevel: 1 #从文章1级标题使用文章目录
+135 name: &amp;#39;首页&amp;#39; #改中文左侧菜单home
+155 startLevel: 1 #从文章1级标题使用文章目录
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
