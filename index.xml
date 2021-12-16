@@ -896,7 +896,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;p>影视：zd01.tv下载 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：listen1　　　　　　# 并不完美，希望找到更好用的&lt;/p>
+&lt;p>音乐：listen1　　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>小说：笔趣阁　　　　　　　　# 52论坛蓝底app&lt;/p>
@@ -910,9 +910,9 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>tasker #手机自动化，使用见后文&lt;/li>
-&lt;li>Moonlight #局域网流畅投屏&lt;/li>
-&lt;li>AirDroid和AirMirror #手机远程控制手机&lt;/li>
+&lt;li>tasker　　　　　　　　　　#手机自动化，使用见后文&lt;/li>
+&lt;li>Moonlight　　　　　　　　#局域网流畅投屏&lt;/li>
+&lt;li>AirDroid和AirMirror　　　#手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
 &lt;/ul>
 &lt;/li>
