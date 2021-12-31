@@ -30,7 +30,7 @@ Host github.com User git ProxyCommand nc -v -x ip:port."><link rel=apple-touch-i
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"环境配置和软件","headline":"环境配置和软件","description":"部分电脑配置记录 win10 config  git  git config --global http.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks git config --global https.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks 文件路径：C:\\Users\\90487\\.gitconfig，90487是我的用户名\n Terminal（临时使用）  set http_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 set https_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 VM Ubuntu config   代理\nWindows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址\n  git config\n  git config --global user.name \u0026#34;John Doe\u0026#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱  git ssh 代理  创建~\/.ssh\/config 文件：\nHost github.com User git ProxyCommand nc -v -x ip:port.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/config\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-18T00:00:00+00:00","dateModified":"2021-12-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/config\/","wordCount":"217","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"环境配置和软件","headline":"环境配置和软件","description":"部分电脑配置记录 win10 config  git  git config --global http.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks git config --global https.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks 文件路径：C:\\Users\\90487\\.gitconfig，90487是我的用户名\n Terminal（临时使用）  set http_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 set https_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 VM Ubuntu config   代理\nWindows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址\n  git config\n  git config --global user.name \u0026#34;John Doe\u0026#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱  git ssh 代理  创建~\/.ssh\/config 文件：\nHost github.com User git ProxyCommand nc -v -x ip:port.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/config\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-18T00:00:00+00:00","dateModified":"2021-12-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/config\/","wordCount":"216","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -250,7 +250,7 @@ allprojects {
 <li>
 <p>手机控制</p>
 <ul>
-<li>tasker　　　　　　　　　　#手机自动化，使用见后文</li>
+<li>tasker、hamibot　　　　　　　　　#手机自动化，使用见后文</li>
 <li>Moonlight　　　　　　　　#局域网流畅投屏</li>
 <li>AirDroid和AirMirror　　　#手机远程控制手机</li>
 <li>向日葵远程控制</li>
@@ -264,7 +264,6 @@ allprojects {
 </ul>
 </li>
 </ul>
-<p>暂时介绍这些，如果有其它好用的请赐教，感谢</p>
 </section>
 <footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>

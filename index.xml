@@ -332,13 +332,25 @@ echo &amp;#34;Finished&amp;#34;
 &lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
 >github workflow 语法文档&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
->修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="本文草稿待细写">本文草稿，待细写&lt;/h1>
-&lt;h1 id="github-actions">github actions&lt;/h1>
-&lt;p>示例如下：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">on:
+>修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
+&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
+>参考文章&lt;/a>&lt;/p>
+&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
+>容器注册平台对比&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>准备好你的dockerfile，如无docker和docker-compose基础请先看文档和&lt;a class="link" href="https://jiangdaoli.cf/p/docker-compose/" target="_blank" rel="noopener"
+>前文&lt;/a>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用github actions
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>“点击展开示例actions”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">on:
 push:
 branches:
 - master
+workflow_dispatch:
 env:
 REGISTRY: ghcr.io
 IMAGE_NAME: ${{ github.repository }}
@@ -360,7 +372,7 @@ with:
 node-version: ${{ matrix.node }}
 - name: npm install
 run: |
-cd site
+cd web #进入前端dockerfile目录
 npm install
 - name: Set up QEMU
 uses: docker/setup-qemu-action@v1
@@ -374,70 +386,72 @@ with:
 registry: ${{ env.REGISTRY }}
 username: ${{ github.actor }}
 password: ${{ secrets.GITHUB_TOKEN }}
+# 用于消毒标签，tag是此动作的重要功能之一，本示例没使用，请见文档
 - name: Extract metadata (tags, labels) for Docker
-id: meta
+id: meta1
 uses: docker/metadata-action@v3
 with:
-images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+images: ghcr.io/username/server # images地址
+- name: Extract metadata (tags, labels) for Docker
+id: meta2
+uses: docker/metadata-action@v3
+with:
+images: ghcr.io/username/web # images地址
 - name: Build and push Docker image 1
 uses: docker/build-push-action@v2
 with:
-builder: ${{ steps.builder2.outputs.name }}
-context: ./server
-file: ./server/Dockerfile
+builder: ${{ steps.builder1.outputs.name }}
+context: ./server # 服务端dockerfile目录
+file: ./server/Dockerfile # 服务端dockerfile
 push: true
-tags: ${{ steps.meta.outputs.tags }}
-labels: ${{ steps.meta.outputs.labels }}
+tags: ${{ steps.meta1.outputs.tags }}
+labels: ${{ steps.meta1.outputs.labels }}
+cache-from: type=gha
+cache-to: type=gha,mode=max
 - name: Build and push Docker image 2
 uses: docker/build-push-action@v2
 with:
 builder: ${{ steps.builder2.outputs.name }}
-context: ./site
-file: ./site/Dockerfile
+context: ./web # 前端dockerfile目录
+file: ./web/Dockerfile # 前端dockerfile
 push: true
-tags: ${{ steps.meta.outputs.tags }}
-labels: ${{ steps.meta.outputs.labels }}
+tags: ${{ steps.meta2.outputs.tags }}
+labels: ${{ steps.meta2.outputs.labels }}
+cache-from: type=gha
+cache-to: type=gha,mode=max
 deploy:
 runs-on: ubuntu-latest
 needs: build-and-push-image
 steps:
-- name: Log in to the Container registry
-uses: docker/login-action@v1
-with:
-registry: ${{ env.REGISTRY }}
-username: ${{ github.actor }}
-password: ${{ secrets.GITHUB_TOKEN }}
 - uses: appleboy/ssh-action@master
 with:
-host: ${{ secrets.host }}
+host: ${{ secrets.host }} #仓库设置中添加Secrets：HOST
 username: root
-password: ${{ secrets.password }}
-port: ${{ secrets.port }}
+password: ${{ secrets.PASSWORD }} #仓库设置中添加Secrets：PASSWORD
+port: 22
 script: |
-echo $CR_PAT | docker login ghcr.io -u Username --password-stdin
-docker-compose pull
-docker-compose up -d --no-deps
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
-&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
->参考文章&lt;/a>&lt;/p>
-&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
->容器注册平台对比&lt;/a>&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>准备：如无docker和docker compose基础请先看文档和&lt;a class="link" href="https://jiangdaoli.cf/p/docker-compose/" target="_blank" rel="noopener"
->前文&lt;/a>。&lt;/p>
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin # 用户名
+docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml pull # docker-compose名
+docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml up -d # docker-compose名
+# 此actions许多参数由github自动提供，无需添加，需修改的均已注释
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>在服务器上完成&lt;a class="link" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-container-registry#" target="_blank" rel="noopener"
 >向 Container registry 验证&lt;/a>&lt;/p>
 &lt;/li>
-&lt;li>
-&lt;p>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
->示例&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
->acme-companion&lt;/a>和上述示例文档。&lt;/p>
-&lt;/li>
 &lt;/ol>
-&lt;p>最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
+&lt;p>具体操作：打开/etc/profile&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">export CR_PAT=YOUR_TOKEN
+source /etc/profile
+echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
+>示例&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
+>acme-companion&lt;/a>和上述示例文档。&lt;/li>
+&lt;/ol>
+&lt;p>最后，我前文的示例 或 &lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
 >Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
@@ -462,7 +476,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo docker run hello-world
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dockerfile">Dockerfile&lt;/h2>
 &lt;details class="spoiler " id="spoiler-0">
-&lt;summary>“点击展开和折叠代码”&lt;/summary>
+&lt;summary>“点击展开go语言示例”&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 这个参考示例来自李文周大佬的bluebell项目
 FROM golang:alpine AS builder
 # 为我们的镜像设置必要的环境变量
@@ -502,6 +516,119 @@ EXPOSE 8084
 #ENTRYPOINT [&amp;#34;/bluebell_app&amp;#34;, &amp;#34;conf/config.yaml&amp;#34;]
 &lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
+&lt;details class="spoiler " id="spoiler-1">
+&lt;summary>“点击展开js示例”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 设置node.js环境，来自https://github.com/nodejs/docker-node，警示apt-utils is not installed等内容无实际影响
+# builder stage
+FROM debian:buster-slim
+RUN groupadd --gid 1000 node \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> useradd --uid 1000 --gid node --shell /bin/bash --create-home node
+ENV NODE_VERSION 14.18.2
+RUN ARCH= &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> dpkgArch=&amp;#34;$(dpkg --print-architecture)&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> case &amp;#34;${dpkgArch##*-}&amp;#34; in \
+amd64) ARCH=&amp;#39;x64&amp;#39;;; \
+ppc64el) ARCH=&amp;#39;ppc64le&amp;#39;;; \
+s390x) ARCH=&amp;#39;s390x&amp;#39;;; \
+arm64) ARCH=&amp;#39;arm64&amp;#39;;; \
+armhf) ARCH=&amp;#39;armv7l&amp;#39;;; \
+i386) ARCH=&amp;#39;x86&amp;#39;;; \
+*) echo &amp;#34;unsupported architecture&amp;#34;; exit 1 ;; \
+esac \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> set -ex \
+# libatomic1 for arm
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y ca-certificates curl wget gnupg dirmngr xz-utils libatomic1 --no-install-recommends \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm -rf /var/lib/apt/lists/* \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> for key in \
+4ED778F539E3634C779C87C6D7062848A1AB005C \
+94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
+74F12602B6F1C4E913FAA37AD3A89613643B6201 \
+71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
+8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
+C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
+C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C \
+DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
+A48C2BEE680E841632CD4E44F07496B3EB3C1762 \
+108F52B48DB57BB0CC439B2997B01419BD92F80A \
+B9E2F5981AA6E0CD28160D9FF13993A75599653C \
+; do \
+gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &amp;#34;$key&amp;#34; || \
+gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &amp;#34;$key&amp;#34; ; \
+done \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> grep &amp;#34; node-v$NODE_VERSION-linux-$ARCH.tar.xz\$&amp;#34; SHASUMS256.txt | sha256sum -c - \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> tar -xJf &amp;#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; -C /usr/local --strip-components=1 --no-same-owner \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm &amp;#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; SHASUMS256.txt.asc SHASUMS256.txt \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-mark auto &amp;#39;.*&amp;#39; &amp;gt; /dev/null \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> find /usr/local -type f -executable -exec ldd &amp;#39;{}&amp;#39; &amp;#39;;&amp;#39; \
+| awk &amp;#39;/=&amp;gt;/ { print $(NF-1) }&amp;#39; \
+| sort -u \
+| xargs -r dpkg-query --search \
+| cut -d: -f1 \
+| sort -u \
+| xargs -r apt-mark manual \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /usr/local/bin/node /usr/local/bin/nodejs \
+# smoke tests
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> node --version \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> npm --version
+ENV YARN_VERSION 1.22.15
+RUN set -ex \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> savedAptMark=&amp;#34;$(apt-mark showmanual)&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm -rf /var/lib/apt/lists/* \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> for key in \
+6A010C5166006599AA17F08146C2130DFD2497F5 \
+; do \
+gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &amp;#34;$key&amp;#34; || \
+gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &amp;#34;$key&amp;#34; ; \
+done \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc&amp;#34; \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> mkdir -p /opt \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-mark auto &amp;#39;.*&amp;#39; &amp;gt; /dev/null \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> { [ -z &amp;#34;$savedAptMark&amp;#34; ] || apt-mark manual $savedAptMark &amp;gt; /dev/null; } \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> find /usr/local -type f -executable -exec ldd &amp;#39;{}&amp;#39; &amp;#39;;&amp;#39; \
+| awk &amp;#39;/=&amp;gt;/ { print $(NF-1) }&amp;#39; \
+| sort -u \
+| xargs -r dpkg-query --search \
+| cut -d: -f1 \
+| sort -u \
+| xargs -r apt-mark manual \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
+# smoke test
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> yarn --version
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT [&amp;#34;docker-entrypoint.sh&amp;#34;]
+CMD [ &amp;#34;node&amp;#34; ]
+# 以下内容待完善，仅作参考
+# Set locale: https://daten-und-bass.io/blog/fixing-missing-locale-setting-in-ubuntu-docker-image/
+RUN &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> sed -i -e &amp;#39;s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/&amp;#39; /etc/locale.gen \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> dpkg-reconfigure --frontend=noninteractive locales \
+&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> update-locale LANG=en_US.UTF-8
+ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+# Create app directory
+WORKDIR /app
+# Install app dependencies
+# 国内环境
+ENV TZ=Asia/Shanghai
+ENV sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
+ENV registry=https://registry.npm.taobao.org
+COPY [&amp;#34;package.json&amp;#34;, &amp;#34;package-lock.json*&amp;#34;, &amp;#34;./&amp;#34;]
+RUN npm install --production
+# If you are building your code for production
+# RUN npm ci --only=production
+# Bundle app source
+COPY . .
+CMD [ &amp;#34;node&amp;#34;, &amp;#34;server.js&amp;#34; ]
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
 &lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
 &lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
 >docker文档&lt;/a>：&lt;/p>
@@ -517,7 +644,136 @@ sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2
 sudo chmod +x /usr/local/bin/docker-compose
 #测试安装
 docker-compose --version
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="基础知识参考-1">基础知识参考&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="docker-composeyaml">docker-compose.yaml&lt;/h2>
+&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>“点击展开和折叠代码”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">version: &amp;#39;3.7&amp;#39;
+services:
+mysql5.7:
+# 镜像名
+image: &amp;#39;mysql:5.7&amp;#39;
+# 容器名(以后的控制都通过这个)
+container_name: mysql5.7
+# 重启策略
+restart: always
+environment:
+# 时区上海
+TZ: Asia/Shanghai
+# root 密码
+MYSQL_ROOT_PASSWORD: root
+# 初始化数据库(后续的初始化sql会在这个库执行)
+MYSQL_DATABASE: nacos_config
+# 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
+MYSQL_USER: nacos
+# 用户密码
+MYSQL_PASSWORD: nacos
+# 映射端口
+ports:
+- 3306:3306
+volumes:
+# 数据挂载
+#- /root/mysql/data/:/var/lib/mysql/
+# 配置挂载
+#- /root/mysql/conf/:/etc/mysql/conf.d/
+# 初始化目录挂载，注意此处我只跑了这个挂载，只是为了说明其他配置不应该数据初始化
+- /root/mysql/init/:/docker-entrypoint-initdb.d/
+command:
+# 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+--default-authentication-plugin=mysql_native_password
+--character-set-server=utf8mb4
+--collation-server=utf8mb4_general_ci
+--explicit_defaults_for_timestamp=true
+--lower_case_table_names=1
+networks:
+- proxy
+server:
+image: ghcr.io/USERNAME/server:master
+container_name: server
+ports:
+- 8082:8082
+expose:
+- &amp;#34;8082&amp;#34;
+depends_on:
+- mysql5.7
+restart: always
+volumes:
+- &amp;#39;./data:/data/&amp;#39;
+networks:
+- proxy
+web:
+image: ghcr.io/USERNAME/web:master
+container_name: web
+depends_on:
+- server
+restart: always
+ports:
+- 3000:3000
+expose:
+- &amp;#34;3000&amp;#34;
+environment:
+- VIRTUAL_HOST=example.com
+- VIRTUAL_PORT=3000
+- LETSENCRYPT_HOST=example.com
+- LETSENCRYPT_EMAIL=mail@example.com
+networks:
+- proxy
+networks:
+proxy:
+external:
+name: nginx-proxy
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;details class="spoiler " id="spoiler-3">
+&lt;summary>“点击展开nginx-proxy代码”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">version: &amp;#39;3&amp;#39;
+services:
+nginx-proxy:
+image: jwilder/nginx-proxy
+container_name: nginx-proxy
+ports:
+- &amp;#34;80:80&amp;#34;
+- &amp;#34;443:443&amp;#34;
+volumes:
+- conf:/etc/nginx/conf.d
+- vhost:/etc/nginx/vhost.d
+- html:/usr/share/nginx/html
+- dhparam:/etc/nginx/dhparam
+- certs:/etc/nginx/certs:ro
+- /var/run/docker.sock:/tmp/docker.sock:ro
+restart: always
+networks:
+- nginxproxy
+labels:
+- &amp;#34;com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy&amp;#34;
+letsencrypt:
+image: jrcs/letsencrypt-nginx-proxy-companion
+container_name: nginx-proxy-le
+depends_on:
+- nginx-proxy
+volumes:
+- vhost:/etc/nginx/vhost.d
+- html:/usr/share/nginx/html
+- dhparam:/etc/nginx/dhparam:ro
+- certs:/etc/nginx/certs
+- acme:/etc/acme.sh
+- /var/run/docker.sock:/var/run/docker.sock:ro
+restart: always
+networks:
+- nginxproxy
+volumes:
+conf:
+vhost:
+html:
+dhparam:
+certs:
+acme:
+networks:
+nginxproxy:
+external:
+name: nginx-proxy
+&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;h2 id="基础知识参考-1">基础知识参考&lt;/h2>
 &lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/compose/" target="_blank" rel="noopener"
 >docker compose文档&lt;/a>：&lt;/p>
 &lt;ol>
@@ -571,7 +827,7 @@ ctrl+p+q 容器不停止退出
 docker-compose up -d # 在后台启动服务
 docker-compose pull # 拉取
 docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
-docker-compose -f docker-compose.yml pull # 指定docker-compose.yml
+docker-compose -f docker-compose.yml pull # 指定docker-compose.yml，后同
 查看：
 docker-compose ps # 查看正在运行中的容器
 docker-compose ps -a # 查看所有编排容器，包括已停止的容器
@@ -587,6 +843,7 @@ docker-compose unpause [serviceName] # 恢复服务
 docker-compose restart [serviceName] # 重启服务
 docker-compose rm # 删除所有（停止状态的）服务容器
 docker-compose down # 删除所有容器
+docker-compose down --remove-orphans # 删除orphans容器
 docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
 docker-compose exec --index=1 [serviceName] sh # 进入某服务的第1个容器执行命令
 docker-compose --help # 帮助
@@ -910,7 +1167,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>tasker　　　　　　　　　　#手机自动化，使用见后文&lt;/li>
+&lt;li>tasker、hamibot　　　　　　　　　#手机自动化，使用见后文&lt;/li>
 &lt;li>Moonlight　　　　　　　　#局域网流畅投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　#手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
@@ -923,8 +1180,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;li>星空视频壁纸&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul>
-&lt;p>暂时介绍这些，如果有其它好用的请赐教，感谢&lt;/p></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;/ul></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
 &lt;p>本文仅为个人投资记录，不构成投资建议，A股人均韭菜请谨慎&lt;/p>
 &lt;h2 id="本人买入">本人买入&lt;/h2>
 &lt;ul>
