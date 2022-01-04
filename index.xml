@@ -713,8 +713,8 @@ expose:
 environment:
 - VIRTUAL_HOST=example.com
 - VIRTUAL_PORT=3000
-- LETSENCRYPT_HOST=example.com
-- LETSENCRYPT_EMAIL=mail@example.com
+# - LETSENCRYPT_HOST=example.com
+# - LETSENCRYPT_EMAIL=mail@example.com
 networks:
 - proxy
 networks:
@@ -757,6 +757,10 @@ volumes:
 - certs:/etc/nginx/certs
 - acme:/etc/acme.sh
 - /var/run/docker.sock:/var/run/docker.sock:ro
+# 由于LETSENCRYPT证书速率限制，建议使用ZeroSSL
+environment:
+- ACME_CA_URI=https://acme.zerossl.com/v2/DV90
+- ZEROSSL_API_KEY=
 restart: always
 networks:
 - nginxproxy
@@ -1200,26 +1204,10 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;h2 id="观察中">观察中&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>微芯生物：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>创新药&lt;/p>
+&lt;p>微芯生物&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>大股东持续大量减持&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>天建集团：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>估值较低，业绩可能新一轮增长&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>行业处于高位，未来下行概率较大&lt;/p>
-&lt;/li>
-&lt;/ul>
+&lt;p>托斯达&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="历史">历史&lt;/h1>
