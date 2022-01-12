@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>flutter备忘</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>flutter(windows)
+&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
+>flutter安装&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
+set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>安装遇坑&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">//配置build.gradle(project:android)
+allprojects {
+repositories {
+google()
+jcenter()
+maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
 &lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
 &lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是小破站文章可靠。大概分为以下几个步骤：&lt;/p>
 &lt;ol>
