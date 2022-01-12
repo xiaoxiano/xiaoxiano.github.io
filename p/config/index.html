@@ -30,7 +30,7 @@ Host github.com User git ProxyCommand nc -v -x ip:port."><link rel=apple-touch-i
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"环境配置和软件","headline":"环境配置和软件","description":"部分电脑配置记录 win10 config  git  git config --global http.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks git config --global https.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks 文件路径：C:\\Users\\90487\\.gitconfig，90487是我的用户名\n Terminal（临时使用）  set http_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 set https_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 VM Ubuntu config   代理\nWindows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址\n  git config\n  git config --global user.name \u0026#34;John Doe\u0026#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱  git ssh 代理  创建~\/.ssh\/config 文件：\nHost github.com User git ProxyCommand nc -v -x ip:port.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/config\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-18T00:00:00+00:00","dateModified":"2021-12-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/config\/","wordCount":"199","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"环境配置和软件","headline":"环境配置和软件","description":"部分电脑配置记录 win10 config  git  git config --global http.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks git config --global https.https:\/\/www.github.com.proxy socks5:\/\/127.0.0.1:port.socks 文件路径：C:\\Users\\90487\\.gitconfig，90487是我的用户名\n Terminal（临时使用）  set http_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 set https_proxy=http:\/\/127.0.0.1:port.http #临时命令行代理 VM Ubuntu config   代理\nWindows中使用ipconfig查看VMware Network Adapter VMnet8的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在Socks Host里写入之前查到的ip地址\n  git config\n  git config --global user.name \u0026#34;John Doe\u0026#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱  git ssh 代理  创建~\/.ssh\/config 文件：\nHost github.com User git ProxyCommand nc -v -x ip:port.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/config\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-18T00:00:00+00:00","dateModified":"2021-12-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/config\/","wordCount":"229","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -86,6 +86,12 @@ extended">
 <ol>
 <li><a href=#使用>使用</a></li>
 <li><a href=#不能输入中文ubuntu>不能输入中文（Ubuntu）</a></li>
+</ol>
+</li>
+<li><a href=#flutter>flutter</a>
+<ol>
+<li><a href=#安装>安装</a></li>
+<li><a href=#创建-flutter-项目>创建 Flutter 项目</a></li>
 </ol>
 </li>
 <li><a href=#自用软件>自用软件</a>
@@ -177,6 +183,51 @@ export GOPROXY=https://goproxy.cn       #设置 go get 为国内源（无代理�
 export GTK_IM_MODULE=&#34;ibus&#34;
 export QT_IM_MODULE=&#34;ibus&#34;
 </code></pre></div><p>goland.vmoptions添加<code>-Drecreate.x11.input.method=true</code></p>
+<h1 id=flutter>flutter</h1>
+<h2 id=安装>安装</h2>
+<ol>
+<li>
+<p>配置 JDK、安装配置Android Studio</p>
+</li>
+<li>
+<p>flutter(windows)
+<a class=link href=https://docs.flutter.dev/get-started/install/windows target=_blank rel=noopener>flutter安装</a></p>
+</li>
+</ol>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>set PUB_HOSTED_URL=&#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&#34;   #配置国内镜像
+set FLUTTER_STORAGE_BASE_URL=&#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&#34;
+</code></pre></div><ul>
+<li>安装遇坑</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>//配置build.gradle(project:android)
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url &#34;https://storage.googleapis.com/download.flutter.io&#34; }
+    }
+}
+</code></pre></div><h2 id=创建-flutter-项目>创建 Flutter 项目</h2>
+<p><figure class=gallery-image style=flex-grow:57;flex-basis:136px>
+<a href=/p/config/1.jpg data-size=1325x2324>
+<img src=/p/config/1.jpg width=1325 height=2324 srcset="/p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_480x0_resize_q75_box.jpg 480w, /p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p><figure class=gallery-image style=flex-grow:167;flex-basis:401px>
+<a href=/p/config/2.jpg data-size=1255x751>
+<img src=/p/config/2.jpg width=1255 height=751 srcset="/p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_480x0_resize_q75_box.jpg 480w, /p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p><figure class=gallery-image style=flex-grow:188;flex-basis:452px>
+<a href=/p/config/3.jpg data-size=1745x926>
+<img src=/p/config/3.jpg width=1745 height=926 srcset="/p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_480x0_resize_q75_box.jpg 480w, /p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p><figure class=gallery-image style=flex-grow:167;flex-basis:402px>
+<a href=/p/config/4.jpg data-size=1877x1120>
+<img src=/p/config/4.jpg width=1877 height=1120 srcset="/p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_480x0_resize_q75_box.jpg 480w, /p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
 <h1 id=自用软件>自用软件</h1>
 <p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看</p>
 <h2 id=win10优雅必备>win10优雅必备</h2>
@@ -332,6 +383,12 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <ol>
 <li><a href=#使用>使用</a></li>
 <li><a href=#不能输入中文ubuntu>不能输入中文（Ubuntu）</a></li>
+</ol>
+</li>
+<li><a href=#flutter>flutter</a>
+<ol>
+<li><a href=#安装>安装</a></li>
+<li><a href=#创建-flutter-项目>创建 Flutter 项目</a></li>
 </ol>
 </li>
 <li><a href=#自用软件>自用软件</a>

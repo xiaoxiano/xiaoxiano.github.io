@@ -1,88 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>flutter</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
-&lt;ol>
-&lt;li>
-&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>flutter(windows)
-&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
-set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>安装遇坑&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">//配置build.gradle(project:android)
-allprojects {
-repositories {
-google()
-jcenter()
-maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 57;
-flex-basis: 136px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/1.jpg" data-size="1325x2324">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/1.jpg"
-width="1325"
-height="2324"
-srcset="https://www.jiangdaoli.cf/p/flutter/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 167;
-flex-basis: 401px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/2.jpg" data-size="1255x751">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/2.jpg"
-width="1255"
-height="751"
-srcset="https://www.jiangdaoli.cf/p/flutter/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 188;
-flex-basis: 452px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/3.jpg" data-size="1745x926">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/3.jpg"
-width="1745"
-height="926"
-srcset="https://www.jiangdaoli.cf/p/flutter/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 167;
-flex-basis: 402px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/4.jpg" data-size="1877x1120">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/4.jpg"
-width="1877"
-height="1120"
-srcset="https://www.jiangdaoli.cf/p/flutter/4_hu51785015fe51b68ebcd4023b90b5069d_254474_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/4_hu51785015fe51b68ebcd4023b90b5069d_254474_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
 &lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
 &lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是小破站文章可靠。大概分为以下几个步骤：&lt;/p>
 &lt;ol>
@@ -1177,6 +1093,92 @@ export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
 export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
+&lt;h1 id="flutter">flutter&lt;/h1>
+&lt;h2 id="安装">安装&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>flutter(windows)
+&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
+>flutter安装&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
+set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>安装遇坑&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">//配置build.gradle(project:android)
+allprojects {
+repositories {
+google()
+jcenter()
+maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="创建-flutter-项目">创建 Flutter 项目&lt;/h2>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 57;
+flex-basis: 136px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/config/1.jpg" data-size="1325x2324">
+&lt;img src="https://www.jiangdaoli.cf/p/config/1.jpg"
+width="1325"
+height="2324"
+srcset="https://www.jiangdaoli.cf/p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 167;
+flex-basis: 401px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/config/2.jpg" data-size="1255x751">
+&lt;img src="https://www.jiangdaoli.cf/p/config/2.jpg"
+width="1255"
+height="751"
+srcset="https://www.jiangdaoli.cf/p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 188;
+flex-basis: 452px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/config/3.jpg" data-size="1745x926">
+&lt;img src="https://www.jiangdaoli.cf/p/config/3.jpg"
+width="1745"
+height="926"
+srcset="https://www.jiangdaoli.cf/p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 167;
+flex-basis: 402px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/config/4.jpg" data-size="1877x1120">
+&lt;img src="https://www.jiangdaoli.cf/p/config/4.jpg"
+width="1877"
+height="1120"
+srcset="https://www.jiangdaoli.cf/p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
