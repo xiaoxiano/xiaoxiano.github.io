@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和使用tasker</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
-&lt;p>前文晚发了，是因为root手机。以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现在有个新的问题，手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
-&lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是我们小破站文章可靠。大概分为以下几个步骤：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
+&lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是小破站文章可靠。大概分为以下几个步骤：&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>解bl锁
@@ -17,28 +17,22 @@
 安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h1 id="tasker">tasker&lt;/h1>
-&lt;h3 id="基础">基础&lt;/h3>
+&lt;h1 id="macrodroid">MacroDroid&lt;/h1>
+&lt;h2 id="基础">基础&lt;/h2>
 &lt;ol>
-&lt;li>设置：打开右上角的菜单，单击更多选项，点击Android设置&lt;/li>
+&lt;li>设置&lt;/li>
 &lt;/ol>
 &lt;ul>
-&lt;li>防止系统清理：进入系统最近任务界面，点击Tasker应用旁边的小锁，锁定Tasker不被系统清理&lt;/li>
-&lt;li>忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略Tasker&lt;/li>
-&lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭Tasker自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
+&lt;li>防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理&lt;/li>
+&lt;li>忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略应用&lt;/li>
+&lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
 &lt;li>权限全部打开&lt;/li>
 &lt;/ul>
 &lt;ol start="2">
-&lt;li>即使给了权限，手机可能仍然会休眠不执行任务。唤醒屏幕可以用secure setting插件，不建议使用闹钟唤醒，操作如下：&lt;/li>
+&lt;li>创建你需要的操作，这里不多介绍，估计很快可以学会。&lt;/li>
 &lt;/ol>
-&lt;p>①打开Secure Settings然后 enable System+ Modul&lt;/p>
-&lt;p>②打开Tasker -&amp;gt; 任务 -&amp;gt; 新建任务 -&amp;gt; 插件 -&amp;gt; Secure Settings -&amp;gt; 配置 -&amp;gt; Actions -&amp;gt; Wake Device&lt;/p>
-&lt;p>③手机系统设置中找到设备管理器，激活 Secure Settings，设置后台运行。&lt;/p>
-&lt;ol start="3">
-&lt;li>在任务里创建你需要的操作，配置里添加场景（例如时间）即可，这里不多介绍，估计很快可以学会。&lt;/li>
-&lt;/ol>
-&lt;h3 id="shell">shell&lt;/h3>
-&lt;p>除了tasker自带的功能，它支持的shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
+&lt;h2 id="shell">shell&lt;/h2>
+&lt;p>shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
 >shell命令摘录网站&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#按键事件
 input text &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">string&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> #输入文本
@@ -1099,19 +1093,7 @@ export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
 export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
-&lt;h1 id="windows-flutter">windows flutter&lt;/h1>
-&lt;ul>
-&lt;li>安装遇坑&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">//配置build.gradle(project:android)
-allprojects {
-repositories {
-google()
-jcenter()
-maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="自用软件">自用软件&lt;/h1>
+&lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
@@ -1171,7 +1153,7 @@ maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34;
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>tasker、hamibot　　　　　　　　　#手机自动化，使用见后文&lt;/li>
+&lt;li>MacroDroid、hamibot　　　#手机自动化，使用见后文&lt;/li>
 &lt;li>Moonlight　　　　　　　　#局域网流畅投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　#手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
