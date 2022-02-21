@@ -510,126 +510,16 @@ EXPOSE 8084
 #ENTRYPOINT [&amp;#34;/bluebell_app&amp;#34;, &amp;#34;conf/config.yaml&amp;#34;]
 &lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
-&lt;details class="spoiler " id="spoiler-1">
-&lt;summary>“点击展开js示例”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 设置node.js环境，来自https://github.com/nodejs/docker-node，警示apt-utils is not installed等内容无实际影响
-# builder stage
-FROM debian:buster-slim
-RUN groupadd --gid 1000 node \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-ENV NODE_VERSION 14.18.2
-RUN ARCH= &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> dpkgArch=&amp;#34;$(dpkg --print-architecture)&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> case &amp;#34;${dpkgArch##*-}&amp;#34; in \
-amd64) ARCH=&amp;#39;x64&amp;#39;;; \
-ppc64el) ARCH=&amp;#39;ppc64le&amp;#39;;; \
-s390x) ARCH=&amp;#39;s390x&amp;#39;;; \
-arm64) ARCH=&amp;#39;arm64&amp;#39;;; \
-armhf) ARCH=&amp;#39;armv7l&amp;#39;;; \
-i386) ARCH=&amp;#39;x86&amp;#39;;; \
-*) echo &amp;#34;unsupported architecture&amp;#34;; exit 1 ;; \
-esac \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> set -ex \
-# libatomic1 for arm
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y ca-certificates curl wget gnupg dirmngr xz-utils libatomic1 --no-install-recommends \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm -rf /var/lib/apt/lists/* \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> for key in \
-4ED778F539E3634C779C87C6D7062848A1AB005C \
-94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
-74F12602B6F1C4E913FAA37AD3A89613643B6201 \
-71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
-8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
-C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
-C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C \
-DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
-A48C2BEE680E841632CD4E44F07496B3EB3C1762 \
-108F52B48DB57BB0CC439B2997B01419BD92F80A \
-B9E2F5981AA6E0CD28160D9FF13993A75599653C \
-; do \
-gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &amp;#34;$key&amp;#34; || \
-gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &amp;#34;$key&amp;#34; ; \
-done \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> grep &amp;#34; node-v$NODE_VERSION-linux-$ARCH.tar.xz\$&amp;#34; SHASUMS256.txt | sha256sum -c - \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> tar -xJf &amp;#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; -C /usr/local --strip-components=1 --no-same-owner \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm &amp;#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&amp;#34; SHASUMS256.txt.asc SHASUMS256.txt \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-mark auto &amp;#39;.*&amp;#39; &amp;gt; /dev/null \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> find /usr/local -type f -executable -exec ldd &amp;#39;{}&amp;#39; &amp;#39;;&amp;#39; \
-| awk &amp;#39;/=&amp;gt;/ { print $(NF-1) }&amp;#39; \
-| sort -u \
-| xargs -r dpkg-query --search \
-| cut -d: -f1 \
-| sort -u \
-| xargs -r apt-mark manual \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-# smoke tests
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> node --version \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> npm --version
-ENV YARN_VERSION 1.22.15
-RUN set -ex \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> savedAptMark=&amp;#34;$(apt-mark showmanual)&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm -rf /var/lib/apt/lists/* \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> for key in \
-6A010C5166006599AA17F08146C2130DFD2497F5 \
-; do \
-gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &amp;#34;$key&amp;#34; || \
-gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &amp;#34;$key&amp;#34; ; \
-done \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> curl -fsSLO --compressed &amp;#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc&amp;#34; \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> mkdir -p /opt \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-mark auto &amp;#39;.*&amp;#39; &amp;gt; /dev/null \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> { [ -z &amp;#34;$savedAptMark&amp;#34; ] || apt-mark manual $savedAptMark &amp;gt; /dev/null; } \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> find /usr/local -type f -executable -exec ldd &amp;#39;{}&amp;#39; &amp;#39;;&amp;#39; \
-| awk &amp;#39;/=&amp;gt;/ { print $(NF-1) }&amp;#39; \
-| sort -u \
-| xargs -r dpkg-query --search \
-| cut -d: -f1 \
-| sort -u \
-| xargs -r apt-mark manual \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-# smoke test
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> yarn --version
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT [&amp;#34;docker-entrypoint.sh&amp;#34;]
-CMD [ &amp;#34;node&amp;#34; ]
-# 以下内容待完善，仅作参考
-# Set locale: https://daten-und-bass.io/blog/fixing-missing-locale-setting-in-ubuntu-docker-image/
-RUN &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> sed -i -e &amp;#39;s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/&amp;#39; /etc/locale.gen \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> dpkg-reconfigure --frontend=noninteractive locales \
-&lt;span class="err">&amp;amp;&amp;amp;&lt;/span> update-locale LANG=en_US.UTF-8
-ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
-# Create app directory
-WORKDIR /app
-# Install app dependencies
-# 国内环境
-ENV TZ=Asia/Shanghai
-ENV sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-ENV registry=https://registry.npm.taobao.org
-COPY [&amp;#34;package.json&amp;#34;, &amp;#34;package-lock.json*&amp;#34;, &amp;#34;./&amp;#34;]
-RUN npm install --production
-# If you are building your code for production
-# RUN npm ci --only=production
-# Bundle app source
-COPY . .
-CMD [ &amp;#34;node&amp;#34;, &amp;#34;server.js&amp;#34; ]
-&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
-&lt;/details>
 &lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
 &lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
 >docker文档&lt;/a>：&lt;/p>
 &lt;ol>
-&lt;li>&lt;strong>卷&lt;/strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/li>
+&lt;li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/li>
 &lt;/ol>
-&lt;h1 id="docker-compose">docker compose&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 将当前目录的相对路径挂载到/app目录中
+volumes:
+- ./:/app
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">#下载 Docker Compose 的当前稳定版本
@@ -639,7 +529,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 #测试安装
 docker-compose --version
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="docker-composeyaml">docker-compose.yaml&lt;/h2>
-&lt;details class="spoiler " id="spoiler-2">
+&lt;details class="spoiler " id="spoiler-1">
 &lt;summary>“点击展开和折叠代码”&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">version: &amp;#39;3.7&amp;#39;
 services:
@@ -707,8 +597,8 @@ expose:
 environment:
 - VIRTUAL_HOST=example.com
 - VIRTUAL_PORT=3000
-# - LETSENCRYPT_HOST=example.com
-# - LETSENCRYPT_EMAIL=mail@example.com
+- LETSENCRYPT_HOST=example.com
+- LETSENCRYPT_EMAIL=mail@example.com
 networks:
 - proxy
 networks:
@@ -717,7 +607,7 @@ external:
 name: nginx-proxy
 &lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
-&lt;details class="spoiler " id="spoiler-3">
+&lt;details class="spoiler " id="spoiler-2">
 &lt;summary>“点击展开nginx-proxy代码”&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">version: &amp;#39;3&amp;#39;
 services:
@@ -751,10 +641,14 @@ volumes:
 - certs:/etc/nginx/certs
 - acme:/etc/acme.sh
 - /var/run/docker.sock:/var/run/docker.sock:ro
-# 由于LETSENCRYPT证书速率限制，建议使用ZeroSSL
-environment:
-- ACME_CA_URI=https://acme.zerossl.com/v2/DV90
-- ZEROSSL_API_KEY=
+&lt;span class="c">&amp;lt;!-- # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- # 注释掉web服务environment中的：--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- - LETSENCRYPT_HOST=example.com--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- - LETSENCRYPT_EMAIL=mail@example.com--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- # 需添加如下environment--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- environment:--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- - ACME_CA_URI=https://acme.zerossl.com/v2/DV90--&amp;gt;&lt;/span>
+&lt;span class="c">&amp;lt;!-- - ZEROSSL_API_KEY=--&amp;gt;&lt;/span>
 restart: always
 networks:
 - nginxproxy
@@ -814,13 +708,9 @@ docker network rm $(docker network ls -q) #删除所有network
 docker system prune --all --force --volumes #删除一切
 exit 容器停止并退出
 ctrl+p+q 容器不停止退出
-　　　　
-进入正在执行的容器：
-　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
-　　　　docker attach 容器id #进入执行的容器。
-　　　　两者区别 exec进入容器后开启新的终端，可以在里边操作（常用）；attach进入容器正在执行的终端，不会新启进程
+docker exec -it mysql /bin/bash #进入正在执行的mysql容器
 从容器拷贝内容到主机：
-　　　　docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
+docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker-compose命令
 docker-compose up -d # 在后台启动服务
 docker-compose pull # 拉取
@@ -911,8 +801,7 @@ sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&l
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">sudo apt-get install lsof //安装lsof
 lsof -i:80 //查看80端口
 kill -9 pid //强制杀进程
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="脚本">脚本&lt;/h1>
-&lt;h2 id="命令">命令&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="脚本">脚本&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">local #用于声明局部变量
 source
 sed
@@ -924,7 +813,126 @@ grep
 #-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
 #-u 　当执行时使用到未定义过的变量，则显示错误信息。
 #-x 　执行指令后，会先显示该指令及所下的参数。
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>繁忙中，待续&lt;/p>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="编程语言备忘录">编程语言备忘录&lt;/h1>
+&lt;h2 id="dart">dart&lt;/h2>
+&lt;h3 id="变量">变量&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># 创建一个变量并将其初始化
+var name = &amp;#39;Bob&amp;#39;;
+# 指定类型
+String name = &amp;#39;Bob&amp;#39;;
+# 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
+Object name = &amp;#39;Bob&amp;#39;;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常量">常量&lt;/h3>
+&lt;p>final 和 const&lt;/p>
+&lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
+final String nickname = &amp;#39;Bobby&amp;#39;;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="内置类型">内置类型&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">int 整数值
+double 浮点数字
+String 字符串
+bool 布尔类型
+List 集合类型
+Set 无序集合
+Map 字典型
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html"># Set主要的功能就是去除数组重复内容
+void main(){
+List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
+var s=new Set();
+s.addAll(myList);
+print(s);
+print(s.toList());
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="函数">函数&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">bool isNoble(int atomicNumber) { # bool:返回类型
+return _nobleGases[atomicNumber] != null;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>箭头函数 =&amp;gt;
+&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
+&lt;h3 id="运算符">运算符：&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>算术运算符&lt;/p>
+&lt;p>&lt;code>+&lt;/code>(加) &lt;code>–&lt;/code>(减) &lt;code>-&lt;/code>(负) &lt;code>*&lt;/code>(乘) &lt;code>/&lt;/code>(除) &lt;code>~/&lt;/code>(取整) &lt;code>%&lt;/code>（取余）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>关系运算符&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>==&lt;/code> &lt;code>！=&lt;/code> &lt;code>&amp;gt;&lt;/code> &lt;code>&amp;lt;&lt;/code> &lt;code>&amp;gt;=&lt;/code> &lt;code>&amp;lt;=&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>逻辑运算符&lt;/li>
+&lt;/ul>
+&lt;p>&lt;code>!&lt;/code>(取反) &lt;code>&amp;amp;&amp;amp;&lt;/code>(与) &lt;code>||&lt;/code>(或)&lt;/p>
+&lt;ul>
+&lt;li>赋值运算符&lt;/li>
+&lt;/ul>
+&lt;p>基础赋值运算符 &lt;code>=&lt;/code> &lt;code>??=&lt;/code>(为 null 的变量赋值)
+复合赋值运算符 &lt;code>+=&lt;/code> &lt;code>-=&lt;/code> &lt;code>*=&lt;/code> &lt;code>/=&lt;/code> &lt;code>%=&lt;/code> &lt;code>~/=&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>其他运算符
+&lt;code>()&lt;/code> 使用一个方法
+&lt;code>[]&lt;/code> 访问 List
+&lt;code>?[]&lt;/code> 访问 List,左侧可以为null
+&lt;code>.&lt;/code> 访问成员
+&lt;code>?.&lt;/code> 访问成员,左侧可以为null&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>if-else的表达式：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>condition &lt;code>?&lt;/code> expr1 &lt;code>:&lt;/code> expr2
+如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。&lt;/p>
+&lt;p>expr1 &lt;code>??&lt;/code> expr2
+如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
+&lt;h3 id="类">类&lt;/h3>
+&lt;ul>
+&lt;li>抽象类、抽象方法
+抽象类常用于定义接口，抽象类常常会包含抽象方法&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">abstract class Doer {
+// Define instance variables and methods...
+void doSomething(); // Define an abstract method.
+}
+class EffectiveDoer extends Doer {
+void doSomething() {
+// Provide an implementation, so the method is not abstract here...
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="泛型">泛型&lt;/h3>
+&lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 281;
+flex-basis: 675px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/ubuntu/fanxing.jpg" data-size="1263x449">
+&lt;img src="https://www.jiangdaoli.cf/p/ubuntu/fanxing.jpg"
+width="1263"
+height="449"
+srcset="https://www.jiangdaoli.cf/p/ubuntu/fanxing_hu022946fc38ef91feb47691dce96d4f93_98353_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/ubuntu/fanxing_hu022946fc38ef91feb47691dce96d4f93_98353_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>@override 注解来表示你重写了一个成员
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 191;
+flex-basis: 460px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/ubuntu/override.jpg" data-size="1265x659">
+&lt;img src="https://www.jiangdaoli.cf/p/ubuntu/override.jpg"
+width="1265"
+height="659"
+srcset="https://www.jiangdaoli.cf/p/ubuntu/override_hu52550e144139e3b33bf8462b0daa1e5c_250738_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/ubuntu/override_hu52550e144139e3b33bf8462b0daa1e5c_250738_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
 &lt;h2 id="shell">shell&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.imooc.com/wiki/shelllesson/shellvariable.html" target="_blank" rel="noopener"
 >原文地址&lt;/a>&lt;/p>
@@ -1452,8 +1460,14 @@ categories: #文章分类
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>*斜体*&lt;/code>&lt;br>
-&lt;code>**加粗**&lt;/code>&lt;/p>
+&lt;code>**加粗**&lt;/code>&lt;br>
+&lt;code>~~删除线~~&lt;/code>&lt;br>
+&lt;code>&amp;lt;font color = #00FFFF size=default face=&amp;quot;STCAIYUN&amp;quot;&amp;gt;高亮&amp;lt;/font&amp;gt;&lt;/code>
+&lt;del>删除线&lt;/del>&lt;/p>
 &lt;/li>
+&lt;/ul>
+&lt;p>&lt;!-- raw HTML omitted -->高亮&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;ul>
 &lt;li>
 &lt;p>&lt;code>* 无序列表&lt;/code>&lt;br>
 &lt;code>双空格* 子无序列表&lt;/code>&lt;/p>

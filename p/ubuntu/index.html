@@ -18,7 +18,7 @@ push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"常用命令","headline":"常用命令","description":"git git命令 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"295","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"常用命令","headline":"常用命令","description":"git git命令 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"494","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -75,11 +75,22 @@ extended">
 <li><a href=#文件>文件</a></li>
 <li><a href=#安装包>安装包</a></li>
 <li><a href=#端口>端口</a></li>
+<li><a href=#脚本>脚本</a></li>
 </ol>
 </li>
-<li><a href=#脚本>脚本</a>
+<li><a href=#编程语言备忘录>编程语言备忘录</a>
 <ol>
-<li><a href=#命令>命令</a></li>
+<li><a href=#dart>dart</a>
+<ol>
+<li><a href=#变量>变量</a></li>
+<li><a href=#常量>常量</a></li>
+<li><a href=#内置类型>内置类型</a></li>
+<li><a href=#函数>函数</a></li>
+<li><a href=#运算符>运算符：</a></li>
+<li><a href=#类>类</a></li>
+<li><a href=#泛型>泛型</a></li>
+</ol>
+</li>
 <li><a href=#shell>shell</a></li>
 </ol>
 </li>
@@ -159,8 +170,7 @@ sudo snap remove <span class=p>&lt;</span><span class=nt>snap</span> <span class
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo apt-get install lsof          //安装lsof
 lsof -i:80                         //查看80端口
 kill -9 pid                        //强制杀进程
-</code></pre></div><h1 id=脚本>脚本</h1>
-<h2 id=命令>命令</h2>
+</code></pre></div><h2 id=脚本>脚本</h2>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>local      #用于声明局部变量
 source
 sed
@@ -172,7 +182,116 @@ grep
 #-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
 #-u 　当执行时使用到未定义过的变量，则显示错误信息。
 #-x 　执行指令后，会先显示该指令及所下的参数。
-</code></pre></div><p>繁忙中，待续</p>
+</code></pre></div><h1 id=编程语言备忘录>编程语言备忘录</h1>
+<h2 id=dart>dart</h2>
+<h3 id=变量>变量</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># 创建一个变量并将其初始化
+var name = &#39;Bob&#39;;
+
+# 指定类型
+String name = &#39;Bob&#39;;
+
+# 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
+Object name = &#39;Bob&#39;;
+</code></pre></div><h3 id=常量>常量</h3>
+<p>final 和 const</p>
+<p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&lsquo;懒加载&rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>final name = &#39;Bob&#39;; // Without a type annotation
+final String nickname = &#39;Bobby&#39;;
+</code></pre></div><h3 id=内置类型>内置类型</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>int    整数值
+double 浮点数字
+String 字符串
+bool   布尔类型
+List   集合类型
+Set    无序集合
+Map    字典型
+</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># Set主要的功能就是去除数组重复内容
+
+void main(){
+
+  List myList=[&#39;香蕉&#39;,&#39;苹果&#39;,&#39;西瓜&#39;,&#39;香蕉&#39;,&#39;苹果&#39;,&#39;香蕉&#39;,&#39;苹果&#39;];
+
+  var s=new Set();
+
+  s.addAll(myList);
+
+  print(s);
+
+  print(s.toList());
+}
+</code></pre></div><h3 id=函数>函数</h3>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>bool isNoble(int atomicNumber) {                 # bool:返回类型
+  return _nobleGases[atomicNumber] != null;
+}
+</code></pre></div><p>箭头函数 =>
+<code>=> expr</code> 是 <code>{ return expr; }</code>的简写</p>
+<h3 id=运算符>运算符：</h3>
+<ul>
+<li>
+<p>算术运算符</p>
+<p><code>+</code>(加) <code>–</code>(减) <code>-</code>(负) <code>*</code>(乘) <code>/</code>(除) <code>~/</code>(取整) <code>%</code>（取余）</p>
+</li>
+<li>
+<p>关系运算符</p>
+</li>
+</ul>
+<p><code>==</code> <code>！=</code> <code>></code> <code>&lt;</code> <code>>=</code> <code>&lt;=</code></p>
+<ul>
+<li>逻辑运算符</li>
+</ul>
+<p><code>!</code>(取反) <code>&&</code>(与) <code>||</code>(或)</p>
+<ul>
+<li>赋值运算符</li>
+</ul>
+<p>基础赋值运算符 <code>=</code> <code>??=</code>(为 null 的变量赋值)
+复合赋值运算符 <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> <code>~/=</code></p>
+<ul>
+<li>
+<p>其他运算符
+<code>()</code> 使用一个方法
+<code>[]</code> 访问 List
+<code>?[]</code> 访问 List,左侧可以为null
+<code>.</code> 访问成员
+<code>?.</code> 访问成员,左侧可以为null</p>
+</li>
+<li>
+<p>if-else的表达式：</p>
+</li>
+</ul>
+<p>condition <code>?</code> expr1 <code>:</code> expr2
+如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。</p>
+<p>expr1 <code>??</code> expr2
+如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。</p>
+<h3 id=类>类</h3>
+<ul>
+<li>抽象类、抽象方法
+抽象类常用于定义接口，抽象类常常会包含抽象方法</li>
+</ul>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>abstract class Doer {
+  // Define instance variables and methods...
+
+  void doSomething(); // Define an abstract method.
+}
+
+class EffectiveDoer extends Doer {
+  void doSomething() {
+    // Provide an implementation, so the method is not abstract here...
+  }
+}
+</code></pre></div><h3 id=泛型>泛型</h3>
+<p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
+<figure class=gallery-image style=flex-grow:281;flex-basis:675px>
+<a href=/p/ubuntu/fanxing.jpg data-size=1263x449>
+<img src=/p/ubuntu/fanxing.jpg width=1263 height=449 srcset="/p/ubuntu/fanxing_hu022946fc38ef91feb47691dce96d4f93_98353_480x0_resize_q75_box.jpg 480w, /p/ubuntu/fanxing_hu022946fc38ef91feb47691dce96d4f93_98353_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
+<p>@override 注解来表示你重写了一个成员
+<figure class=gallery-image style=flex-grow:191;flex-basis:460px>
+<a href=/p/ubuntu/override.jpg data-size=1265x659>
+<img src=/p/ubuntu/override.jpg width=1265 height=659 srcset="/p/ubuntu/override_hu52550e144139e3b33bf8462b0daa1e5c_250738_480x0_resize_q75_box.jpg 480w, /p/ubuntu/override_hu52550e144139e3b33bf8462b0daa1e5c_250738_1024x0_resize_q75_box.jpg 1024w" loading=lazy>
+</a>
+</figure></p>
 <h2 id=shell>shell</h2>
 <p><a class=link href=http://www.imooc.com/wiki/shelllesson/shellvariable.html target=_blank rel=noopener>原文地址</a></p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>name=&#34;MyName&#34;                    //定义变量
@@ -346,11 +465,22 @@ Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=
 <li><a href=#文件>文件</a></li>
 <li><a href=#安装包>安装包</a></li>
 <li><a href=#端口>端口</a></li>
+<li><a href=#脚本>脚本</a></li>
 </ol>
 </li>
-<li><a href=#脚本>脚本</a>
+<li><a href=#编程语言备忘录>编程语言备忘录</a>
 <ol>
-<li><a href=#命令>命令</a></li>
+<li><a href=#dart>dart</a>
+<ol>
+<li><a href=#变量>变量</a></li>
+<li><a href=#常量>常量</a></li>
+<li><a href=#内置类型>内置类型</a></li>
+<li><a href=#函数>函数</a></li>
+<li><a href=#运算符>运算符：</a></li>
+<li><a href=#类>类</a></li>
+<li><a href=#泛型>泛型</a></li>
+</ol>
+</li>
 <li><a href=#shell>shell</a></li>
 </ol>
 </li>

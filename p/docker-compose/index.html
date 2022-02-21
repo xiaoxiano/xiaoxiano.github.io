@@ -18,7 +18,7 @@
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开go语言示例”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2022-01-05T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"1221","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker：\n#更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\ curl \\ gnupg \\ lsb-release #添加Docker官方的GPG密钥 curl -fsSL https:\/\/download.docker.com\/linux\/debian\/gpg | sudo gpg --dearmor -o \/usr\/share\/keyrings\/docker-archive-keyring.gpg #设置稳定存储库 echo \\ \u0026#34;deb [arch=$(dpkg --print-architecture) signed-by=\/usr\/share\/keyrings\/docker-archive-keyring.gpg] https:\/\/download.docker.com\/linux\/debian \\ $(lsb_release -cs) stable\u0026#34; | sudo tee \/etc\/apt\/sources.list.d\/docker.list \u0026gt; \/dev\/null #安装最新版本的Docker Engine和containerd sudo apt-get update sudo apt-get install docker-ce docker-ce-cli containerd.io #hello-world 映像验证 sudo docker run hello-world Dockerfile “点击展开go语言示例”\r# 这个参考示例来自李文周大佬的bluebell项目 FROM golang:alpine AS builder # 为我们的镜像设置必要的环境变量 ENV GO111MODULE=on \\ CGO_ENABLED=0 \\ GOOS=linux \\ GOARCH=amd64 # 移动到工作目录：\/build WORKDIR \/build # 复制项目中的 go.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2022-01-05T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"693","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -164,142 +164,15 @@ EXPOSE 8084
 #ENTRYPOINT [&#34;/bluebell_app&#34;, &#34;conf/config.yaml&#34;]
 </code></pre></div></p>
 </details>
-<details class=spoiler id=spoiler-1>
-<summary>“点击展开js示例”</summary>
-<p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># 设置node.js环境，来自https://github.com/nodejs/docker-node，警示apt-utils is not installed等内容无实际影响
-
-# builder stage
-FROM debian:buster-slim
-    
-RUN groupadd --gid 1000 node \
-  <span class=err>&amp;&amp;</span> useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-
-ENV NODE_VERSION 14.18.2
-
-RUN ARCH= <span class=err>&amp;&amp;</span> dpkgArch=&#34;$(dpkg --print-architecture)&#34; \
-    <span class=err>&amp;&amp;</span> case &#34;${dpkgArch##*-}&#34; in \
-      amd64) ARCH=&#39;x64&#39;;; \
-      ppc64el) ARCH=&#39;ppc64le&#39;;; \
-      s390x) ARCH=&#39;s390x&#39;;; \
-      arm64) ARCH=&#39;arm64&#39;;; \
-      armhf) ARCH=&#39;armv7l&#39;;; \
-      i386) ARCH=&#39;x86&#39;;; \
-      *) echo &#34;unsupported architecture&#34;; exit 1 ;; \
-    esac \
-    <span class=err>&amp;&amp;</span> set -ex \
-    # libatomic1 for arm
-    <span class=err>&amp;&amp;</span> apt-get update <span class=err>&amp;&amp;</span> apt-get install -y ca-certificates curl wget gnupg dirmngr xz-utils libatomic1 --no-install-recommends \
-    <span class=err>&amp;&amp;</span> rm -rf /var/lib/apt/lists/* \
-    <span class=err>&amp;&amp;</span> for key in \
-      4ED778F539E3634C779C87C6D7062848A1AB005C \
-      94AE36675C464D64BAFA68DD7434390BDBE9B9C5 \
-      74F12602B6F1C4E913FAA37AD3A89613643B6201 \
-      71DCFD284A79C3B38668286BC97EC7A07EDE3FC1 \
-      8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600 \
-      C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8 \
-      C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C \
-      DD8F2338BAE7501E3DD5AC78C273792F7D83545D \
-      A48C2BEE680E841632CD4E44F07496B3EB3C1762 \
-      108F52B48DB57BB0CC439B2997B01419BD92F80A \
-      B9E2F5981AA6E0CD28160D9FF13993A75599653C \
-    ; do \
-      gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &#34;$key&#34; || \
-      gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &#34;$key&#34; ; \
-    done \
-    <span class=err>&amp;&amp;</span> curl -fsSLO --compressed &#34;https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz&#34; \
-    <span class=err>&amp;&amp;</span> curl -fsSLO --compressed &#34;https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc&#34; \
-    <span class=err>&amp;&amp;</span> gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc \
-    <span class=err>&amp;&amp;</span> grep &#34; node-v$NODE_VERSION-linux-$ARCH.tar.xz\$&#34; SHASUMS256.txt | sha256sum -c - \
-    <span class=err>&amp;&amp;</span> tar -xJf &#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&#34; -C /usr/local --strip-components=1 --no-same-owner \
-    <span class=err>&amp;&amp;</span> rm &#34;node-v$NODE_VERSION-linux-$ARCH.tar.xz&#34; SHASUMS256.txt.asc SHASUMS256.txt \
-    <span class=err>&amp;&amp;</span> apt-mark auto &#39;.*&#39; &gt; /dev/null \
-    <span class=err>&amp;&amp;</span> find /usr/local -type f -executable -exec ldd &#39;{}&#39; &#39;;&#39; \
-      | awk &#39;/=&gt;/ { print $(NF-1) }&#39; \
-      | sort -u \
-      | xargs -r dpkg-query --search \
-      | cut -d: -f1 \
-      | sort -u \
-      | xargs -r apt-mark manual \
-    <span class=err>&amp;&amp;</span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-    <span class=err>&amp;&amp;</span> ln -s /usr/local/bin/node /usr/local/bin/nodejs \
-    # smoke tests
-    <span class=err>&amp;&amp;</span> node --version \
-    <span class=err>&amp;&amp;</span> npm --version
-
-ENV YARN_VERSION 1.22.15
-
-RUN set -ex \
-  <span class=err>&amp;&amp;</span> savedAptMark=&#34;$(apt-mark showmanual)&#34; \
-  <span class=err>&amp;&amp;</span> apt-get update <span class=err>&amp;&amp;</span> apt-get install -y ca-certificates curl wget gnupg dirmngr --no-install-recommends \
-  <span class=err>&amp;&amp;</span> rm -rf /var/lib/apt/lists/* \
-  <span class=err>&amp;&amp;</span> for key in \
-    6A010C5166006599AA17F08146C2130DFD2497F5 \
-  ; do \
-    gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys &#34;$key&#34; || \
-    gpg --batch --keyserver keyserver.ubuntu.com --recv-keys &#34;$key&#34; ; \
-  done \
-  <span class=err>&amp;&amp;</span> curl -fsSLO --compressed &#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz&#34; \
-  <span class=err>&amp;&amp;</span> curl -fsSLO --compressed &#34;https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc&#34; \
-  <span class=err>&amp;&amp;</span> gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
-  <span class=err>&amp;&amp;</span> mkdir -p /opt \
-  <span class=err>&amp;&amp;</span> tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
-  <span class=err>&amp;&amp;</span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
-  <span class=err>&amp;&amp;</span> ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
-  <span class=err>&amp;&amp;</span> rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz \
-  <span class=err>&amp;&amp;</span> apt-mark auto &#39;.*&#39; &gt; /dev/null \
-  <span class=err>&amp;&amp;</span> { [ -z &#34;$savedAptMark&#34; ] || apt-mark manual $savedAptMark &gt; /dev/null; } \
-  <span class=err>&amp;&amp;</span> find /usr/local -type f -executable -exec ldd &#39;{}&#39; &#39;;&#39; \
-    | awk &#39;/=&gt;/ { print $(NF-1) }&#39; \
-    | sort -u \
-    | xargs -r dpkg-query --search \
-    | cut -d: -f1 \
-    | sort -u \
-    | xargs -r apt-mark manual \
-  <span class=err>&amp;&amp;</span> apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
-  # smoke test
-  <span class=err>&amp;&amp;</span> yarn --version
-
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT [&#34;docker-entrypoint.sh&#34;]
-
-CMD [ &#34;node&#34; ]
-
-# 以下内容待完善，仅作参考
-
-# Set locale: https://daten-und-bass.io/blog/fixing-missing-locale-setting-in-ubuntu-docker-image/
-RUN <span class=err>&amp;&amp;</span> sed -i -e &#39;s/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/&#39; /etc/locale.gen \
-    <span class=err>&amp;&amp;</span> dpkg-reconfigure --frontend=noninteractive locales \
-    <span class=err>&amp;&amp;</span> update-locale LANG=en_US.UTF-8
-ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
-
-# Create app directory
-WORKDIR /app
-
-# Install app dependencies
-
-# 国内环境
-ENV TZ=Asia/Shanghai
-ENV sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-ENV registry=https://registry.npm.taobao.org
-
-COPY [&#34;package.json&#34;, &#34;package-lock.json*&#34;, &#34;./&#34;]
-
-RUN npm install --production
-# If you are building your code for production
-# RUN npm ci --only=production
-
-# Bundle app source
-COPY . .
-
-CMD [ &#34;node&#34;, &#34;server.js&#34; ]
-</code></pre></div></p>
-</details>
 <h2 id=基础知识参考>基础知识参考</h2>
 <p>以下简介节选自<a class=link href=https://docs.docker.com/get-started/ target=_blank rel=noopener>docker文档</a>：</p>
 <ol>
-<li><strong>卷</strong>存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。</li>
+<li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。</li>
 </ol>
-<h1 id=docker-compose>docker compose</h1>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html># 将当前目录的相对路径挂载到/app目录中
+     volumes:
+       - ./:/app
+</code></pre></div><h1 id=docker-compose>docker compose</h1>
 <p><a class=link href=https://docs.docker.com/compose/install/ target=_blank rel=noopener>安装docker compose</a>：</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>#下载 Docker Compose 的当前稳定版本
  sudo curl -L &#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&#34; -o /usr/local/bin/docker-compose
@@ -311,7 +184,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
 </code></pre></div><h2 id=docker-composeyaml>docker-compose.yaml</h2>
-<details class=spoiler id=spoiler-2>
+<details class=spoiler id=spoiler-1>
 <summary>“点击展开和折叠代码”</summary>
 <p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>version: &#39;3.7&#39;
 services:
@@ -382,8 +255,8 @@ services:
     environment:
       - VIRTUAL_HOST=example.com
       - VIRTUAL_PORT=3000
-     # - LETSENCRYPT_HOST=example.com
-     # - LETSENCRYPT_EMAIL=mail@example.com
+      - LETSENCRYPT_HOST=example.com
+      - LETSENCRYPT_EMAIL=mail@example.com
     networks:
       - proxy
 
@@ -393,7 +266,7 @@ networks:
       name: nginx-proxy
 </code></pre></div></p>
 </details>
-<details class=spoiler id=spoiler-3>
+<details class=spoiler id=spoiler-2>
 <summary>“点击展开nginx-proxy代码”</summary>
 <p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>version: &#39;3&#39;
 
@@ -430,10 +303,14 @@ services:
       - certs:/etc/nginx/certs
       - acme:/etc/acme.sh
       - /var/run/docker.sock:/var/run/docker.sock:ro
-    # 由于LETSENCRYPT证书速率限制，建议使用ZeroSSL
-    environment:
-      - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
-      - ZEROSSL_API_KEY=
+<span class=c>&lt;!--    # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL--&gt;</span>
+<span class=c>&lt;!--    # 注释掉web服务environment中的：--&gt;</span>
+<span class=c>&lt;!--      - LETSENCRYPT_HOST=example.com--&gt;</span>
+<span class=c>&lt;!--      - LETSENCRYPT_EMAIL=mail@example.com--&gt;</span>
+<span class=c>&lt;!--    # 需添加如下environment--&gt;</span>
+<span class=c>&lt;!--    environment:--&gt;</span>
+<span class=c>&lt;!--      - ACME_CA_URI=https://acme.zerossl.com/v2/DV90--&gt;</span>
+<span class=c>&lt;!--      - ZEROSSL_API_KEY=--&gt;</span>
     restart: always
     networks:
       - nginxproxy
@@ -482,7 +359,7 @@ docker inspect 容器id                       #查看容器的详细信息
 
 
 操作：
-docker pull 镜像：版本号                    #拉取-镜像
+docker pull 镜像：版本号                     #拉取-镜像
 docker start 容器id                         #启动容器
 docker restart 容器id                       #重启容器
 docker stop 容器id                          #停止容器
@@ -497,15 +374,10 @@ docker network rm $(docker network ls -q)   #删除所有network
 docker system prune --all --force --volumes #删除一切
 exit 容器停止并退出
 ctrl+p+q 容器不停止退出
-
-　　　　
-进入正在执行的容器：
-　　　　docker exec -it 容器id bashshell #正在执行的容器，进入容器
-　　　　docker attach 容器id #进入执行的容器。
-　　　　两者区别 exec进入容器后开启新的终端，可以在里边操作（常用）；attach进入容器正在执行的终端，不会新启进程
+docker exec -it mysql /bin/bash             #进入正在执行的mysql容器
 
 从容器拷贝内容到主机：
-　　　　docker cp 容器id: 路径  主机目的路径 #此处不必进入容器，容器可以是关闭的。
+docker cp 容器id: 路径  主机目的路径 #此处不必进入容器，容器可以是关闭的。
 </code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Docker-compose命令
 
 docker-compose up -d                        # 在后台启动服务
