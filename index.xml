@@ -1462,11 +1462,10 @@ categories: #文章分类
 &lt;p>&lt;code>*斜体*&lt;/code>&lt;br>
 &lt;code>**加粗**&lt;/code>&lt;br>
 &lt;code>~~删除线~~&lt;/code>&lt;br>
-&lt;code>&amp;lt;font color = #00FFFF size=default face=&amp;quot;STCAIYUN&amp;quot;&amp;gt;高亮&amp;lt;/font&amp;gt;&lt;/code>
-&lt;del>删除线&lt;/del>&lt;/p>
+&lt;code>&amp;lt;font color = #00FFFF size=default face=&amp;quot;STCAIYUN&amp;quot;&amp;gt;高亮&amp;lt;/font&amp;gt;&lt;/code>&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;!-- raw HTML omitted -->高亮&lt;!-- raw HTML omitted -->&lt;/p>
+&lt;p>==gkl==&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;code>* 无序列表&lt;/code>&lt;br>
