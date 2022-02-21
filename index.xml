@@ -850,48 +850,50 @@ print(s.toList());
 return _nobleGases[atomicNumber] != null;
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>箭头函数 =&amp;gt;&lt;/li>
+&lt;li>
+&lt;p>箭头函数 =&amp;gt;&lt;/p>
+&lt;p>&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
+&lt;/li>
 &lt;/ul>
-&lt;p>　&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
 &lt;h3 id="运算符">运算符：&lt;/h3>
 &lt;ul>
-&lt;li>算术运算符&lt;/li>
-&lt;/ul>
-&lt;p>　&lt;code>+&lt;/code>(加)　　&lt;code>–&lt;/code>(减)　　&lt;code>-&lt;/code>(负)　　&lt;code>*&lt;/code>(乘)　　&lt;code>/&lt;/code>(除)　　&lt;code>~/&lt;/code>(取整)　　&lt;code>%&lt;/code>（取余）&lt;/p>
-&lt;ul>
-&lt;li>关系运算符&lt;/li>
-&lt;/ul>
-&lt;p>　&lt;code>==&lt;/code>　　&lt;code>！=&lt;/code>　　&lt;code>&amp;gt;&lt;/code>　　&lt;code>&amp;lt;&lt;/code>　　&lt;code>&amp;gt;=&lt;/code>　　&lt;code>&amp;lt;=&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>逻辑运算符&lt;/li>
-&lt;/ul>
-&lt;p>　&lt;code>!&lt;/code>(取反)　　&lt;code>&amp;amp;&amp;amp;&lt;/code>(与)　　&lt;code>||&lt;/code>(或)&lt;/p>
-&lt;ul>
-&lt;li>赋值运算符&lt;/li>
-&lt;/ul>
-&lt;p>　基础赋值运算符　　&lt;code>=&lt;/code>　　&lt;code>??=&lt;/code>(为 null 的变量赋值)&lt;/p>
-&lt;p>　复合赋值运算符　　&lt;code>+=&lt;/code>　　&lt;code>-=&lt;/code>　　&lt;code>*=&lt;/code>　　&lt;code>/=&lt;/code>　　&lt;code>%=&lt;/code>　　&lt;code>~/=&lt;/code>&lt;/p>
-&lt;ul>
-&lt;li>其他运算符
-　&lt;code>()&lt;/code>　　使用一个方法&lt;/li>
-&lt;/ul>
-&lt;p>　&lt;code>[]&lt;/code>　　访问 List&lt;/p>
-&lt;p>　&lt;code>?[]&lt;/code>　　访问 List,左侧可以为null&lt;/p>
-&lt;p>　&lt;code>.&lt;/code>　　访问成员&lt;/p>
-&lt;p>　&lt;code>?.&lt;/code>　　访问成员,左侧可以为null&lt;/p>
-&lt;ul>
+&lt;li>
+&lt;p>算术运算符&lt;/p>
+&lt;p>&lt;code>+&lt;/code>(加)　　&lt;code>–&lt;/code>(减)　　&lt;code>-&lt;/code>(负)　　&lt;code>*&lt;/code>(乘)　　&lt;code>/&lt;/code>(除)　　&lt;code>~/&lt;/code>(取整)　　&lt;code>%&lt;/code>（取余）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>关系运算符&lt;/p>
+&lt;p>&lt;code>==&lt;/code>　　&lt;code>！=&lt;/code>　　&lt;code>&amp;gt;&lt;/code>　　&lt;code>&amp;lt;&lt;/code>　　&lt;code>&amp;gt;=&lt;/code>　　&lt;code>&amp;lt;=&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>逻辑运算符&lt;/p>
+&lt;p>&lt;code>!&lt;/code>(取反)　　&lt;code>&amp;amp;&amp;amp;&lt;/code>(与)　　&lt;code>||&lt;/code>(或)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>赋值运算符&lt;/p>
+&lt;p>基础赋值运算符　　&lt;code>=&lt;/code>　　&lt;code>??=&lt;/code>(为 null 的变量赋值)&lt;/p>
+&lt;p>复合赋值运算符　　&lt;code>+=&lt;/code>　　&lt;code>-=&lt;/code>　　&lt;code>*=&lt;/code>　　&lt;code>/=&lt;/code>　　&lt;code>%=&lt;/code>　　&lt;code>~/=&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>其他运算符
+&lt;code>()&lt;/code>　　使用一个方法&lt;/p>
+&lt;p>&lt;code>[]&lt;/code>　　访问 List&lt;/p>
+&lt;p>&lt;code>?[]&lt;/code>　　访问 List,左侧可以为null&lt;/p>
+&lt;p>&lt;code>.&lt;/code>　　访问成员&lt;/p>
+&lt;p>&lt;code>?.&lt;/code>　　访问成员,左侧可以为null&lt;/p>
+&lt;/li>
 &lt;li>
 &lt;p>if-else的表达式：&lt;/p>
 &lt;ul>
 &lt;li>condition &lt;code>?&lt;/code> expr1 &lt;code>:&lt;/code> expr2&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>　如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。&lt;/p>
+&lt;p>如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。&lt;/p>
 &lt;ul>
 &lt;li>expr1 &lt;code>??&lt;/code> expr2&lt;/li>
 &lt;/ul>
-&lt;p>　如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
+&lt;p>如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h3 id="类">类&lt;/h3>
 &lt;ul>
 &lt;li>抽象类、抽象方法
@@ -1030,9 +1032,7 @@ echo &amp;#34;Total value : $val&amp;#34;
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>待续&lt;/p>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
+&lt;p>待续&lt;/p></description></item><item><title>环境配置和软件</title><link>https://www.jiangdaoli.cf/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
 &lt;li>git&lt;/li>
