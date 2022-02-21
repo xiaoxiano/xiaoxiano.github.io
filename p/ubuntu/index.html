@@ -18,7 +18,7 @@ push脚本 #!/bin/bash echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...
 <meta name=msapplication-TileColor content="#da532c">
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"常用命令","headline":"常用命令","description":"git git命令 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"498","tag":[],"keywords":[],"articleSection":["computer"]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"常用命令","headline":"常用命令","description":"git git命令 官网git备忘表比各种教程都易看\npush脚本 #!\/bin\/bash echo -e \u0026#34;\\033[0;32mDeploying updates to GitHub...\\033[0m\u0026#34; # Add changes to git. git add . # Commit changes. msg=\u0026#34;rebuilding site `date`\u0026#34; if [ $# -eq 1 ] then msg=\u0026#34;$1\u0026#34; fi git commit -m \u0026#34;$msg\u0026#34; # Push source and build repos. git push origin master 公开仓库fork为私有仓库  fork一个公开仓库 使用github导入功能，写fork仓库的地址，并创建私有仓库 本地操作  git clone git@github.com:\u0026lt;your_username\u0026gt;\/\u0026lt;your_repo\u0026gt;.git #克隆到本地 git remote add upstream git@github.com:\u0026lt;original_owner\u0026gt;\/\u0026lt;original_repo\u0026gt;.git #添加上游(源)仓库用于更新 git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库 git remote -v可以看到：  origin\tgit@github.","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-22T00:00:00+00:00","dateModified":"2021-08-18T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/ubuntu\/","wordCount":"494","tag":[],"keywords":[],"articleSection":["computer"]}</script>
 </head>
 <body class="article-page has-toc">
 <script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
@@ -194,7 +194,9 @@ String name = &#39;Bob&#39;;
 # 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
 Object name = &#39;Bob&#39;;
 </code></pre></div><h3 id=常量>常量</h3>
-<p>final 和 const</p>
+<ul>
+<li>final 和 const</li>
+</ul>
 <p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&lsquo;懒加载&rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化</p>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>final name = &#39;Bob&#39;; // Without a type annotation
 final String nickname = &#39;Bobby&#39;;
@@ -227,52 +229,50 @@ void main(){
 </code></pre></div><ul>
 <li>箭头函数 =></li>
 </ul>
-<p><code>=> expr</code> 是 <code>{ return expr; }</code>的简写</p>
+<p>　<code>=> expr</code> 是 <code>{ return expr; }</code>的简写</p>
 <h3 id=运算符>运算符：</h3>
 <ul>
-<li>
-<p>算术运算符</p>
-<p><code>+</code>(加)　　<code>–</code>(减)　　<code>-</code>(负)　　<code>*</code>(乘)　　<code>/</code>(除)　　<code>~/</code>(取整)　　<code>%</code>（取余）</p>
-</li>
-<li>
-<p>关系运算符</p>
-</li>
+<li>算术运算符</li>
 </ul>
-<p><code>==</code>　　<code>！=</code>　　<code>></code>　　<code>&lt;</code>　　<code>>=</code>　　<code>&lt;=</code></p>
+<p>　<code>+</code>(加)　　<code>–</code>(减)　　<code>-</code>(负)　　<code>*</code>(乘)　　<code>/</code>(除)　　<code>~/</code>(取整)　　<code>%</code>（取余）</p>
+<ul>
+<li>关系运算符</li>
+</ul>
+<p>　<code>==</code>　　<code>！=</code>　　<code>></code>　　<code>&lt;</code>　　<code>>=</code>　　<code>&lt;=</code></p>
 <ul>
 <li>逻辑运算符</li>
 </ul>
-<p><code>!</code>(取反)　　<code>&&</code>(与)　　<code>||</code>(或)</p>
+<p>　<code>!</code>(取反)　　<code>&&</code>(与)　　<code>||</code>(或)</p>
 <ul>
 <li>赋值运算符</li>
 </ul>
-<p>基础赋值运算符　　<code>=</code>　　<code>??=</code>(为 null 的变量赋值)</p>
-<p>复合赋值运算符　　<code>+=</code>　　<code>-=</code>　　<code>*=</code>　　<code>/=</code>　　<code>%=</code>　　<code>~/=</code></p>
+<p>　基础赋值运算符　　<code>=</code>　　<code>??=</code>(为 null 的变量赋值)</p>
+<p>　复合赋值运算符　　<code>+=</code>　　<code>-=</code>　　<code>*=</code>　　<code>/=</code>　　<code>%=</code>　　<code>~/=</code></p>
 <ul>
 <li>其他运算符
-<code>()</code>　　使用一个方法</li>
+　<code>()</code>　　使用一个方法</li>
 </ul>
-<p><code>[]</code>　　访问 List</p>
-<p><code>?[]</code>　　访问 List,左侧可以为null</p>
-<p><code>.</code>　　访问成员</p>
-<p><code>?.</code>　　访问成员,左侧可以为null</p>
+<p>　<code>[]</code>　　访问 List</p>
+<p>　<code>?[]</code>　　访问 List,左侧可以为null</p>
+<p>　<code>.</code>　　访问成员</p>
+<p>　<code>?.</code>　　访问成员,左侧可以为null</p>
 <ul>
 <li>
 <p>if-else的表达式：</p>
-</li>
-<li>
-<p>condition <code>?</code> expr1 <code>:</code> expr2</p>
+<ul>
+<li>condition <code>?</code> expr1 <code>:</code> expr2</li>
+</ul>
 </li>
 </ul>
-<p>如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。</p>
+<p>　如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。</p>
 <ul>
 <li>expr1 <code>??</code> expr2</li>
 </ul>
-<p>如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。</p>
+<p>　如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。</p>
 <h3 id=类>类</h3>
 <ul>
 <li>抽象类、抽象方法
-抽象类常用于定义接口，抽象类常常会包含抽象方法</li>
+　抽象类常用于定义接口，抽象类常常会包含抽象方法</li>
 </ul>
 <div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>abstract class Doer {
   // Define instance variables and methods...
@@ -389,8 +389,6 @@ echo &#34;Total value : $val&#34;
 </tbody>
 </table>
 <p>待续</p>
-<p>&lt;!doctype html></p>
-<p>&lt;!doctype html></p>
 </section>
 <footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
