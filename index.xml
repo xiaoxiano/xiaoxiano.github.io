@@ -709,6 +709,7 @@ docker system prune --all --force --volumes #删除一切
 exit 容器停止并退出
 ctrl+p+q 容器不停止退出
 docker exec -it mysql /bin/bash #进入正在执行的mysql容器
+docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; container_name_or_id #查看容器ip
 从容器拷贝内容到主机：
 docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
 &lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">Docker-compose命令
