@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>flutter自用组件</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h3 id="for-dropdownbutton2">For DropdownButton2:&lt;/h3>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 05 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>flutter自用组件</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 05 Mar 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h3 id="for-dropdownbutton2">For DropdownButton2:&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1173,7 +1173,10 @@
 &lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="内置类型">内置类型&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型">类型&lt;/h3>
+&lt;ul>
+&lt;li>内置类型&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">int 整数值
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">double 浮点数字
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
@@ -1181,10 +1184,16 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">[enum](https://dart.dev/guides/language/language-tour#enumerated-types) 枚举类型,在switch语句中运行良好
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># Set主要的功能就是去除数组重复内容
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main(){
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://dart.dev/guides/language/language-tour#enumerated-types" target="_blank" rel="noopener"
+>enum&lt;/a> 枚举类型,在switch语句中运行良好&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Set主要的功能就是去除数组重复内容&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main(){
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -1196,8 +1205,11 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">将 list 映射为 widget 数组
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
+>映射&lt;/a>为 widget 数组&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="函数">函数&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { # bool:返回类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
