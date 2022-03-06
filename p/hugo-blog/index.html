@@ -1,7 +1,6 @@
 <!doctype html><html lang=zh-cn>
 <head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好"><title>hugo使用stack主题搭建博客及部署</title>
-<link rel=canonical href=https://www.jiangdaoli.cf/p/hugo-blog/>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好"><title>hugo使用stack主题搭建博客及部署</title><link rel=canonical href=https://www.jiangdaoli.cf/p/hugo-blog/>
 <link rel=stylesheet href=/scss/style.min.css><meta property="og:title" content="hugo使用stack主题搭建博客及部署">
 <meta property="og:description" content="搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好">
 <meta property="og:url" content="https://www.jiangdaoli.cf/p/hugo-blog/">
@@ -16,17 +15,15 @@
 <meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"hugo使用stack主题搭建博客及部署","headline":"hugo使用stack主题搭建博客及部署","description":"搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好","inLanguage":"en-US","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/"},"author":{"@type":"Person","name":"rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"银之介","copyrightYear":"2021","datePublished":"2021-07-03T00:00:00+00:00","dateModified":"2021-12-16T00:00:00+00:00","publisher":{"@type":"Organization","name":"银之介","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/avatar.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/hugo-blog\/","wordCount":"495","tag":[],"keywords":[],"articleSection":["blog"]}</script>
-</head>
-<body class="article-page has-toc">
-<script>(function(){const a='StackColorScheme';localStorage.getItem(a)||localStorage.setItem(a,"auto")})()</script><script>(function(){const b='StackColorScheme',a=localStorage.getItem(b),c=window.matchMedia('(prefers-color-scheme: dark)').matches===!0;a=='dark'||a==='auto'&&c?document.documentElement.dataset.scheme='dark':document.documentElement.dataset.scheme='light'})()</script>
+</head><body class="article-page has-toc">
+<script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script>
 <div class="container main-container flex
 extended">
 <div id=article-toolbar>
 <a href=https://www.jiangdaoli.cf class=back-home><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="15 6 9 12 15 18"/></svg>
 <span>返回</span>
 </a>
-</div>
-<main class="main full-width">
+</div><main class="main full-width">
 <article class=main-article>
 <header class=article-header>
 <div class=article-details>
@@ -37,8 +34,7 @@ extended">
 <span itemprop=name>Home</span>
 <meta itemprop=position content="1">
 </a>
-</li>
-<li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
+</li><li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
 <a itemprop=item href=/categories/blog>
 <span itemprop=name>blog</span>
 </a>
@@ -47,338 +43,193 @@ extended">
 <li itemprop=itemListElement itemscope itemtype=https://schema.org/ListItem>
 <span style=display:none class=bold__text itemprop=name>hugo使用stack主题搭建博客及部署</span>
 <meta itemprop=position content="3">
-</li>
-</ul>
-</header>
-<h2 class="article-title center-text">
+</li></ul></header><h2 class="article-title center-text">
 <a href=/p/hugo-blog/>hugo使用stack主题搭建博客及部署</a>
-</h2>
-<h3 class=article-subtitle>
+</h2><h3 class=article-subtitle>
 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁,对初学者友好
-</h3>
-</div>
-<aside class=top-toc>
+</h3></div><aside class=top-toc>
 <section class="widget archives">
-<h2 class=title-toc style="margin:20px 0 0">目录</h2>
-<div class=mobile--widget--toc>
+<h2 class=title-toc style="margin:20px 0 0">目录</h2><div class=mobile--widget--toc>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#准备>准备</a></li>
-<li><a href=#安装>安装</a></li>
-<li><a href=#部署>部署</a></li>
-<li><a href=#修改主题>修改主题</a>
+<li><a href=#准备>准备</a></li><li><a href=#安装>安装</a></li><li><a href=#部署>部署</a></li><li><a href=#修改主题>修改主题</a>
 <ol>
-<li><a href=#主题配置>主题配置</a></li>
-<li><a href=#创建文章>创建文章</a></li>
-<li><a href=#评论系统>评论系统</a></li>
-<li><a href=#自定义域名>自定义域名</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</header>
-<section class=article-content>
-<h1 id=准备>准备</h1>
-<p>1.Ubuntu</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>sudo apt update    #更新
-</code></pre></div><p>2.github账号</p>
-<p>3.git配置</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git config --global user.name &#34;John Doe&#34;             #配置github账号用户名
-git config --global user.email johndoe@example.com   #配置邮箱
-</code></pre></div><p>4.连接github</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;          #生成SSH Keys  此为新版
-ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                    #此为常用版   
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>cat ~/.ssh/id_ed25519.pub                          #复制
-</code></pre></div><p>点击github右上角头像-> Settings -> SSH and GPG Keys -> New SSH key添加</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>ssh -T git@github.com   #验证连接，输入yes
-</code></pre></div><p><a class=link href=https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent target=_blank rel=noopener>官方文档</a></p>
-<p>5.git ssh 代理设置</p>
-<p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作</p>
-<p>创建~/.ssh/config 文件：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>Host github.com
-    User git
-    ProxyCommand nc -v -x 127.0.0.1:10808 %h %p    #请修改127.0.0.1:10808
-</code></pre></div><h1 id=安装>安装</h1>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>snap install hugo --channel=extended  #安装hugo
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>hugo version     #验证
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>hugo new site myblog   #创建博客
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git init    #初始化
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git remote add origin git@github.com:****       #连接远程仓库
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>git clone https://github.com/CaiJimmy/hugo-theme-stack/ #安装stack主题
-</code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>rm config.toml <span class=err>&amp;&amp;</span> cp themes/hugo-theme-stack/exampleSite/config.yaml .     #使用主题的配置文件
-</code></pre></div><p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章</p>
-<p>本地预览：
-myblog下执行</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>hugo server          
-</code></pre></div><p>浏览器打开：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>http://localhost:1313/      #目前本地运行不显示文章目录，估计是操作系统原因
-</code></pre></div><h1 id=部署>部署</h1>
-<p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。</p>
-<p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
-创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库</p>
-<p>点击github右上角头像-> Settings -> Developer Settings-> Personal access tokens -> Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）</p>
-<p>找到源码仓库Settings-> Secrets -> New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）</p>
-<p>2.创建github actions的workflows自动部署文件：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>mkdir -p .github/workflows <span class=err>&amp;&amp;</span> touch ~/myblog/.github/workflows/main.yml
-</code></pre></div><p>粘贴脚本：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>name: github pages
-
-on:
-  push:
-    branches:
-      - master
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest        #可使用指定版本，例：runs-on: ubuntu-18.04
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: latest     #可使用指定版本，例：hugo-version: &#39;0.83.1&#39;
-          extended: true
-
-      - name: Build
-        run: hugo --gc --forceSyncStatic --minify --cleanDestinationDir
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }} # PERSONAL_TOKEN是源码仓库secrets的name
-          external_repository: username/username.github.io # Pages 远程仓库 
-          publish_branch: master  # 部署的分支
-          publish_dir: ./public
-          commit_message: ${{ github.event.head_commit.message }}
-          #cname: www.example.com # 使用自定义域名
-</code></pre></div><p>只需更改external_repository: username/username.github.io 为你的github账户名，<a class=link href=https://github.com/marketplace/actions/github-pages-action target=_blank rel=noopener>脚本详情</a></p>
-<p>3.在myblog文件夹下创建push.sh</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>touch push.sh
-</code></pre></div><p>粘贴脚本：</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>#!/bin/bash  
-
-echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; 
-
- 
-# Add changes to git.  
-git add . 
-
-# Commit changes.  
-msg=&#34;rebuilding site `date`&#34; 
-if [ $# -eq 1 ] 
-  then msg=&#34;$1&#34; 
-fi 
-git commit -m &#34;$msg&#34; 
-
-# Push source and build repos.  
-git push origin master 
-</code></pre></div><p>在myblog下运行 sh push.sh命令</p>
-<p>到此已完成部署，之后任何更新如上运行push脚本即可</p>
-<h1 id=修改主题>修改主题</h1>
-<p>此处仅列举常见需修改内容，更多内容请看<a class=link href=https://docs.stack.jimmycai.com/v/zh-cn/configuration target=_blank rel=noopener>stack主题文档</a></p>
-<p><a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>本博客修改样式来自rmdhnreza</a></p>
-<p><a class=link href=https://yinhe.co/archives/20210401_hugo_theme_stack.html target=_blank rel=noopener>更多定制文章可以参考这里</a></p>
-<h2 id=主题配置>主题配置</h2>
-<p>1.修改~/myblog/config.yaml</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>1   baseurl: https://username.github.io     #改为自己的
-2   languageCode: zh-CN                     #中文编码
-5   title: Example Site                     #博客名字
-15  DefaultContentLanguage: zh-cn           #中文
-29  since: 2021 
-33  published: 2006-01-02                   #日期格式
-34  lastUpdated: 2006-01-02                 #更新日期格式
-37  emoji: 🍥                               #头像角标
-41  src: img/avatar.png                     #头像，myblog/themes/hugo-theme-stack/assets/img
-135 name: &#39;首页&#39;                            #改中文左侧菜单home
-155 startLevel: 1                           #从文章1级标题使用文章目录
-</code></pre></div><p>2.左侧菜单栏
-~/myblog/content/page用于左侧菜单，请自定义</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>2  title: &#39;关于&#39;     #中文左侧菜单about，后同
-</code></pre></div><p>3.覆盖主题样式</p>
-<p>我使用了rmdhnreza(<a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>https://github.com/rmdhnreza/rmdhnreza.my.id</a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹</p>
-<p>另外修改：</p>
-<ul>
+<li><a href=#主题配置>主题配置</a></li><li><a href=#创建文章>创建文章</a></li><li><a href=#评论系统>评论系统</a></li><li><a href=#自定义域名>自定义域名</a></li></ol></li></ol></nav></div></section></aside></header><section class=article-content>
+<h1 id=准备>准备</h1><p>1.Ubuntu</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>sudo apt update    #更新
+</span></span></code></pre></div><p>2.github账号</p><p>3.git配置</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>git config --global user.name &#34;John Doe&#34;             #配置github账号用户名
+</span></span><span class=line><span class=cl>git config --global user.email johndoe@example.com   #配置邮箱
+</span></span></code></pre></div><p>4.连接github</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;          #生成SSH Keys  此为新版
+</span></span><span class=line><span class=cl>ssh-keygen -t rsa -b 4096 -C &#34;your_email@example.com&#34;                    #此为常用版   
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>cat ~/.ssh/id_ed25519.pub                          #复制
+</span></span></code></pre></div><p>点击github右上角头像-> Settings -> SSH and GPG Keys -> New SSH key添加</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>ssh -T git@github.com   #验证连接，输入yes
+</span></span></code></pre></div><p><a class=link href=https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent target=_blank rel=noopener>官方文档</a></p><p>5.git ssh 代理设置</p><p>非必要步骤，如果有一天ssh push网速极慢但https push正常，可尝试此操作</p><p>创建~/.ssh/config 文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>Host github.com
+</span></span><span class=line><span class=cl>    User git
+</span></span><span class=line><span class=cl>    ProxyCommand nc -v -x 127.0.0.1:10808 %h %p    #请修改127.0.0.1:10808
+</span></span></code></pre></div><h1 id=安装>安装</h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>snap install hugo --channel=extended  #安装hugo
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>hugo version     #验证
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>hugo new site myblog   #创建博客
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>git init    #初始化
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>git remote add origin git@github.com:****       #连接远程仓库
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>git clone https://github.com/CaiJimmy/hugo-theme-stack/ #安装stack主题
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>rm config.toml <span class=err>&amp;&amp;</span> cp themes/hugo-theme-stack/exampleSite/config.yaml .     #使用主题的配置文件
+</span></span></code></pre></div><p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章</p><p>本地预览：
+myblog下执行</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>hugo server          
+</span></span></code></pre></div><p>浏览器打开：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>http://localhost:1313/      #目前本地运行不显示文章目录，估计是操作系统原因
+</span></span></code></pre></div><h1 id=部署>部署</h1><p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。</p><p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
+创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库</p><p>点击github右上角头像-> Settings -> Developer Settings-> Personal access tokens -> Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）</p><p>找到源码仓库Settings-> Secrets -> New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）</p><p>2.创建github actions的workflows自动部署文件：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>mkdir -p .github/workflows <span class=err>&amp;&amp;</span> touch ~/myblog/.github/workflows/main.yml
+</span></span></code></pre></div><p>粘贴脚本：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>name: github pages
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>on:
+</span></span><span class=line><span class=cl>  push:
+</span></span><span class=line><span class=cl>    branches:
+</span></span><span class=line><span class=cl>      - master
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>jobs:
+</span></span><span class=line><span class=cl>  deploy:
+</span></span><span class=line><span class=cl>    runs-on: ubuntu-latest        #可使用指定版本，例：runs-on: ubuntu-18.04
+</span></span><span class=line><span class=cl>    steps:
+</span></span><span class=line><span class=cl>      - uses: actions/checkout@v2
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          submodules: true  # Fetch Hugo themes (true OR recursive)
+</span></span><span class=line><span class=cl>          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Setup Hugo
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-hugo@v2
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          hugo-version: latest     #可使用指定版本，例：hugo-version: &#39;0.83.1&#39;
+</span></span><span class=line><span class=cl>          extended: true
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Build
+</span></span><span class=line><span class=cl>        run: hugo --gc --forceSyncStatic --minify --cleanDestinationDir
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>      - name: Deploy
+</span></span><span class=line><span class=cl>        uses: peaceiris/actions-gh-pages@v3
+</span></span><span class=line><span class=cl>        with:
+</span></span><span class=line><span class=cl>          personal_token: ${{ secrets.PERSONAL_TOKEN }} # PERSONAL_TOKEN是源码仓库secrets的name
+</span></span><span class=line><span class=cl>          external_repository: username/username.github.io # Pages 远程仓库 
+</span></span><span class=line><span class=cl>          publish_branch: master  # 部署的分支
+</span></span><span class=line><span class=cl>          publish_dir: ./public
+</span></span><span class=line><span class=cl>          commit_message: ${{ github.event.head_commit.message }}
+</span></span><span class=line><span class=cl>          #cname: www.example.com # 使用自定义域名
+</span></span></code></pre></div><p>只需更改external_repository: username/username.github.io 为你的github账户名，<a class=link href=https://github.com/marketplace/actions/github-pages-action target=_blank rel=noopener>脚本详情</a></p><p>3.在myblog文件夹下创建push.sh</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>touch push.sh
+</span></span></code></pre></div><p>粘贴脚本：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>#!/bin/bash  
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl>echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34; 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl> 
+</span></span><span class=line><span class=cl># Add changes to git.  
+</span></span><span class=line><span class=cl>git add . 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Commit changes.  
+</span></span><span class=line><span class=cl>msg=&#34;rebuilding site `date`&#34; 
+</span></span><span class=line><span class=cl>if [ $# -eq 1 ] 
+</span></span><span class=line><span class=cl>  then msg=&#34;$1&#34; 
+</span></span><span class=line><span class=cl>fi 
+</span></span><span class=line><span class=cl>git commit -m &#34;$msg&#34; 
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl># Push source and build repos.  
+</span></span><span class=line><span class=cl>git push origin master 
+</span></span></code></pre></div><p>在myblog下运行 sh push.sh命令</p><p>到此已完成部署，之后任何更新如上运行push脚本即可</p><h1 id=修改主题>修改主题</h1><p>此处仅列举常见需修改内容，更多内容请看<a class=link href=https://docs.stack.jimmycai.com/v/zh-cn/configuration target=_blank rel=noopener>stack主题文档</a></p><p><a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>本博客修改样式来自rmdhnreza</a></p><p><a class=link href=https://yinhe.co/archives/20210401_hugo_theme_stack.html target=_blank rel=noopener>更多定制文章可以参考这里</a></p><h2 id=主题配置>主题配置</h2><p>1.修改~/myblog/config.yaml</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>1   baseurl: https://username.github.io     #改为自己的
+</span></span><span class=line><span class=cl>2   languageCode: zh-CN                     #中文编码
+</span></span><span class=line><span class=cl>5   title: Example Site                     #博客名字
+</span></span><span class=line><span class=cl>15  DefaultContentLanguage: zh-cn           #中文
+</span></span><span class=line><span class=cl>29  since: 2021 
+</span></span><span class=line><span class=cl>33  published: 2006-01-02                   #日期格式
+</span></span><span class=line><span class=cl>34  lastUpdated: 2006-01-02                 #更新日期格式
+</span></span><span class=line><span class=cl>37  emoji: 🍥                               #头像角标
+</span></span><span class=line><span class=cl>41  src: img/avatar.png                     #头像，myblog/themes/hugo-theme-stack/assets/img
+</span></span><span class=line><span class=cl>135 name: &#39;首页&#39;                            #改中文左侧菜单home
+</span></span><span class=line><span class=cl>155 startLevel: 1                           #从文章1级标题使用文章目录
+</span></span></code></pre></div><p>2.左侧菜单栏
+~/myblog/content/page用于左侧菜单，请自定义</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>2  title: &#39;关于&#39;     #中文左侧菜单about，后同
+</span></span></code></pre></div><p>3.覆盖主题样式</p><p>我使用了rmdhnreza(<a class=link href=https://github.com/rmdhnreza/rmdhnreza.my.id target=_blank rel=noopener>https://github.com/rmdhnreza/rmdhnreza.my.id</a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹</p><p>另外修改：</p><ul>
 <li>
-<p>~/myblog/assets/scss/variables.scss</p>
-<ul>
-<li>link-background-color: 0, 255, 255 链接背景颜色</li>
-</ul>
-</li>
-</ul>
-<p>注：浏览器可能缓存样式，可使用无痕模式</p>
-<h2 id=创建文章>创建文章</h2>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>hugo new post/文件夹名/index.md      #创建文章
-</code></pre></div><p>写文章：</p>
-<p>1.front matter:</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>---
-title: hugo使用stack主题搭建博客及部署        #标题
-description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁       #副标题
-date: 2021-07-04           #日期
-lastmod: 2021-07-27        #上次修改内容的日期
-slug: hugo-blog            #URL的尾部，用于文章地址
-categories:                #文章分类
-    - blog
----
-</code></pre></div><p>front matter仅列举本文使用，<a class=link href=https://gohugo.io/content-management/front-matter#readout target=_blank rel=noopener>hugo front matter官方文档</a></p>
-<p>2.常见文章markdown语法：</p>
-<ul>
+<p>~/myblog/assets/scss/variables.scss</p><ul>
+<li>link-background-color: 0, 255, 255 链接背景颜色</li></ul></li></ul><p>注：浏览器可能缓存样式，可使用无痕模式</p><h2 id=创建文章>创建文章</h2><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>hugo new post/文件夹名/index.md      #创建文章
+</span></span></code></pre></div><p>写文章：</p><p>1.front matter:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>---
+</span></span><span class=line><span class=cl>title: hugo使用stack主题搭建博客及部署        #标题
+</span></span><span class=line><span class=cl>description: 搜索了搭建博客教程，仍花费我几天时间，本文旨在更全面简洁       #副标题
+</span></span><span class=line><span class=cl>date: 2021-07-04           #日期
+</span></span><span class=line><span class=cl>lastmod: 2021-07-27        #上次修改内容的日期
+</span></span><span class=line><span class=cl>slug: hugo-blog            #URL的尾部，用于文章地址
+</span></span><span class=line><span class=cl>categories:                #文章分类
+</span></span><span class=line><span class=cl>    - blog
+</span></span><span class=line><span class=cl>---
+</span></span></code></pre></div><p>front matter仅列举本文使用，<a class=link href=https://gohugo.io/content-management/front-matter#readout target=_blank rel=noopener>hugo front matter官方文档</a></p><p>2.常见文章markdown语法：</p><ul>
 <li>
 <p><code># 一级标题</code><br>
 <code>## 二级标题</code><br>
 <code>### 三级标题</code><br>
 <code>#### 四级标题</code><br>
 <code>##### 五级标题</code><br>
-<code>###### 六级标题</code></p>
-</li>
-<li>
+<code>###### 六级标题</code></p></li><li>
 <p><code>`单行代码` </code><br>
-<code>``</code> <code>有`需用双反引号</code> <code>``</code></p>
-</li>
-<li>
+<code>``</code> <code>有`需用双反引号</code> <code>``</code></p></li><li>
 <p><code>```html</code><br>
 <code>多行代码</code><br>
-<code>```</code></p>
-</li>
-<li>
-<p><code>[链接](https://)</code></p>
-</li>
-<li>
-<p><code>\</code> 写在特殊符号前为转义；写在行尾为换行\</p>
-</li>
-<li>
+<code>```</code></p></li><li>
+<p><code>[链接](https://)</code></p></li><li>
+<p><code>\</code> 写在特殊符号前为转义；写在行尾为换行\</p></li><li>
 <p><code>*斜体*</code><br>
 <code>**加粗**</code><br>
-<code>~~删除线~~</code></p>
-</li>
-<li>
+<code>~~删除线~~</code></p></li><li>
 <p><code>* 无序列表</code><br>
-<code>双空格* 子无序列表</code></p>
-</li>
-<li>
-<p><code>![图片描述](本地图片.jpg)</code></p>
-</li>
-<li>
-<p>表格</p>
-</li>
-</ul>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>| Italics   | Bold     | Code   |
-| --------  | -------- | ------ |
-| *italics* | **bold** | `code` |
-</code></pre></div><ul>
+<code>双空格* 子无序列表</code></p></li><li>
+<p><code>![图片描述](本地图片.jpg)</code></p></li><li>
+<p>表格</p></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>| Italics   | Bold     | Code   |
+</span></span><span class=line><span class=cl>| --------  | -------- | ------ |
+</span></span><span class=line><span class=cl>| *italics* | **bold** | `code` |
+</span></span></code></pre></div><ul>
 <li>{{&lt; spoiler text=&ldquo;点击展开和折叠代码&rdquo; >}}<br>
 ```html<br>
 code<br>
 ```<br>
-{{&lt; /spoiler >}}</li>
-</ul>
-<h2 id=评论系统>评论系统</h2>
-<p><a class=link href=https://waline.js.org/en/guide/get-started.html#leancloud-settings-database target=_blank rel=noopener>waline官方文档</a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL</p>
-<p>然后修改~/myblog/config.yaml</p>
-<div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html>52  provider: waline                        #评论系统，本文示例使用waline
-73  serverURL: https://                     #评论系统URL用你自己的
-</code></pre></div><p>执行sh push.sh即可</p>
-<h2 id=自定义域名>自定义域名</h2>
-<p>在~/myblog/config.yaml修改baseurl: <code>https://username.github.io</code></p>
-<p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改<code>cname: www.example.com</code></p>
-<p>执行sh push.sh即可</p>
-<p>启用https：<a class=link href=https://last2win.com/2020/02/21/github-pages-https/ target=_blank rel=noopener>参考链接</a></p>
-<p>没有域名？为了白嫖可在freenom和cloudflare进行申请域名和解析，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。</p>
-<p><a class=link href=URL>freenom脚本自动续期参考后续文章</a></p>
-</section>
-<footer class=article-footer>
+{{&lt; /spoiler >}}</li></ul><h2 id=评论系统>评论系统</h2><p><a class=link href=https://waline.js.org/en/guide/get-started.html#leancloud-settings-database target=_blank rel=noopener>waline官方文档</a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL</p><p>然后修改~/myblog/config.yaml</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>52  provider: waline                        #评论系统，本文示例使用waline
+</span></span><span class=line><span class=cl>73  serverURL: https://                     #评论系统URL用你自己的
+</span></span></code></pre></div><p>执行sh push.sh即可</p><h2 id=自定义域名>自定义域名</h2><p>在~/myblog/config.yaml修改baseurl: <code>https://username.github.io</code></p><p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改<code>cname: www.example.com</code></p><p>执行sh push.sh即可</p><p>启用https：<a class=link href=https://last2win.com/2020/02/21/github-pages-https/ target=_blank rel=noopener>参考链接</a></p><p>没有域名？为了白嫖可在freenom和cloudflare进行申请域名和解析，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。</p><p><a class=link href=URL>freenom脚本自动续期参考后续文章</a></p></section><footer class=article-footer>
 <section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg>
 <span>Licensed under CC BY-NC-SA 4.0</span>
-</section>
-<section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+</section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
 <span>
 最后更新于 2021-12-16
 </span>
-</section></footer>
-</article>
-<aside class=related-contents--wrapper>
-</aside>
-<script src=//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js></script>
-<div id=waline class=waline-container></div>
-<style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}.waline-container .vcount{color:var(--card-text-color-main)}</style><script>new Waline({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],locale:{admin:"Admin"},requiredMeta:["name","email","url"],serverURL:"https://myblog-rho-ebon.vercel.app/"})</script>
+</section></footer></article><aside class=related-contents--wrapper>
+</aside><script src=//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js></script>
+<div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}.waline-container .vcount{color:var(--card-text-color-main)}</style><script>new Waline({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],locale:{admin:"Admin"},requiredMeta:["name","email","url"],serverURL:"https://myblog-rho-ebon.vercel.app/"})</script>
 <footer class=site-footer>
 <section class=copyright>
 &copy;
 2021 -
 2022 银之介
-</section>
-<section class=powerby>
+</section><section class=powerby>
 Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> <br>
 Theme <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.5.0>Stack</a></b> designed by <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a>
-</section>
-</footer>
-<div class=pswp tabindex=-1 role=dialog aria-hidden=true>
-<div class=pswp__bg></div>
-<div class=pswp__scroll-wrap>
+</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true>
+<div class=pswp__bg></div><div class=pswp__scroll-wrap>
 <div class=pswp__container>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-<div class=pswp__item></div>
-</div>
-<div class="pswp__ui pswp__ui--hidden">
+<div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden">
 <div class=pswp__top-bar>
-<div class=pswp__counter></div>
-<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+<div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
 <button class="pswp__button pswp__button--share" title=Share></button>
 <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 <div class=pswp__preloader>
 <div class=pswp__preloader__icn>
 <div class=pswp__preloader__cut>
-<div class=pswp__preloader__donut></div>
-</div>
-</div>
-</div>
-</div>
-<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-<div class=pswp__share-tooltip></div>
-</div>
-<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+<div class=pswp__preloader__donut></div></div></div></div></div><div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+<div class=pswp__share-tooltip></div></div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
 </button>
 <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
 </button>
 <div class=pswp__caption>
-<div class=pswp__caption__center></div>
-</div>
-</div>
-</div>
-</div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
-</main>
-<aside class="sidebar right-sidebar sticky">
+<div class=pswp__caption__center></div></div></div></div></div><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin=anonymous defer></script><script src=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin=anonymous defer></script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css integrity="sha256-c0uckgykQ9v5k+IqViZOZKc47Jn7KQil4/MP3ySA3F8=" crossorigin=anonymous><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css integrity="sha256-SBLU4vv6CA6lHsZ1XyTdhyjJxCjPif/TRkjnsyGAGnE=" crossorigin=anonymous>
+</main><aside class="sidebar right-sidebar sticky">
 <section class="widget archives">
-<h2 class="widget-title section-title">目录</h2>
-<div class=widget--toc>
+<h2 class="widget-title section-title">目录</h2><div class=widget--toc>
 <nav id=TableOfContents>
 <ol>
-<li><a href=#准备>准备</a></li>
-<li><a href=#安装>安装</a></li>
-<li><a href=#部署>部署</a></li>
-<li><a href=#修改主题>修改主题</a>
+<li><a href=#准备>准备</a></li><li><a href=#安装>安装</a></li><li><a href=#部署>部署</a></li><li><a href=#修改主题>修改主题</a>
 <ol>
-<li><a href=#主题配置>主题配置</a></li>
-<li><a href=#创建文章>创建文章</a></li>
-<li><a href=#评论系统>评论系统</a></li>
-<li><a href=#自定义域名>自定义域名</a></li>
-</ol>
-</li>
-</ol>
-</nav>
-</div>
-</section>
-</aside>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
-<script>(function(){const a=document.createElement('link');a.href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Titillium+Web&display=swap",a.type="text/css",a.rel="stylesheet",document.head.appendChild(a)})()</script>
-</body>
-</html>
+<li><a href=#主题配置>主题配置</a></li><li><a href=#创建文章>创建文章</a></li><li><a href=#评论系统>评论系统</a></li><li><a href=#自定义域名>自定义域名</a></li></ol></li></ol></nav></div></section></aside></div><script src=https://cdn.jsdelivr.net/npm/node-vibrant@3.1.5/dist/vibrant.min.js integrity="sha256-5NovOZc4iwiAWTYIFiIM7DxKUXKWvpVEuMEPLzcm5/g=" crossorigin=anonymous defer></script><script type=text/javascript src=/ts/main.js defer></script>
+<script>(function(){const e=document.createElement("link");e.href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Titillium+Web&display=swap",e.type="text/css",e.rel="stylesheet",document.head.appendChild(e)})()</script>
+</body></html>
