@@ -63,18 +63,19 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom自动续期</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;h1 id="freenom自动续期">freenom自动续期&lt;/h1>
 &lt;ol>
-&lt;li>Fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
->luolongfei大佬的freenom库&lt;/a>，再添加以下workflow：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">###### 说明 ######
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1、Fork 本仓库
+&lt;li>
+&lt;p>Fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
+>luolongfei大佬的freenom库&lt;/a>，再添加以下workflow：
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>“点击展开完整代码”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 1、Fork 本仓库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00（本示例已改为2:00） 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
@@ -122,8 +123,22 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Run
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php run
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>在你 Fork 的本仓库下的 &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Secrets&lt;/code> 页面追加以下几个&lt;code>secret&lt;/code>秘密环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 以下为保活所需step
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: curl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: enable_workflow
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在你 Fork 的本仓库下的 &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Secrets&lt;/code> 页面追加以下几个&lt;code>secret&lt;/code>秘密环境变量&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -212,6 +227,20 @@
 &lt;td style="text-align:center">否&lt;/td>
 &lt;td style="text-align:center">&lt;code>0&lt;/code>：仅当有续期操作的时候&lt;!-- raw HTML omitted -->&lt;code>1&lt;/code>：每次执行&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">REST_TOKEN&lt;/td>
+&lt;td style="text-align:center">如后文所示&lt;/td>
+&lt;td style="text-align:center">无&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">保活所需&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">API_ADDRESS&lt;/td>
+&lt;td style="text-align:center">如后文所示&lt;/td>
+&lt;td style="text-align:center">无&lt;/td>
+&lt;td style="text-align:center">否&lt;/td>
+&lt;td style="text-align:center">保活所需&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;/li>
@@ -233,104 +262,29 @@
 &lt;tr>
 &lt;th style="text-align:center">变量名&lt;/th>
 &lt;th style="text-align:center">值&lt;/th>
+&lt;th style="text-align:center">备注&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td style="text-align:center">REST_TOKEN&lt;/td>
 &lt;td style="text-align:center">个人访问令牌（Personal access tokens）&lt;/td>
+&lt;td style="text-align:center">点击个人资料照片-&amp;gt;设置-&amp;gt;Developer settings&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">API_ADDRESS&lt;/td>
 &lt;td style="text-align:center">&lt;code>https://api.github.com/repos/{owner}/{target-repo}/actions/workflows/enable_workflow/enable&lt;/code>&lt;/td>
+&lt;td style="text-align:center">修改{owner}/{target-repo}&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;/li>
 &lt;li>
-&lt;p>在目标仓库的工作流程中执行上述步骤，然后在之后添加以下 Github Action &lt;code>step&lt;/code>:&lt;/p>
+&lt;p>运行 github action。&lt;/p>
 &lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> - name: curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: enable_workflow
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-0">
-&lt;summary>“点击展开完整代码”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 1、Fork 本仓库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###### end 说明 ######
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> schedule:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - cron: 00 02 * * *
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run-it:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-18.04
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup PHP
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: shivammathur/setup-php@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php-version: &amp;#39;7.2&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setting
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp .env.example .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: enable_workflow
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
-&lt;/details>
-&lt;ol start="4">
-&lt;li>运行 github action，完成。&lt;/li>
+&lt;li>
+&lt;p>相互唤醒，再次在目标 repo 的工作流程中执行上述步骤，并添加所需 Github Action step（此步骤已标注请回看）。&lt;/p>
+&lt;/li>
 &lt;/ol>
 &lt;h1 id="附">附&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
@@ -1369,13 +1323,13 @@ loading="lazy"
 &lt;h2 id="本人买入">本人买入&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>国恩股份：发文时(2021-07-13)收盘价24.38&lt;/p>
+&lt;p>国恩股份：&lt;/p>
 &lt;ul>
 &lt;li>可降解塑料概念，同类中估值较低&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>上海银行：发文时(2021-09-03)收盘价7.41&lt;/p>
+&lt;p>上海银行：&lt;/p>
 &lt;ul>
 &lt;li>感觉被低估&lt;/li>
 &lt;/ul>
@@ -1386,9 +1340,10 @@ loading="lazy"
 &lt;li>微芯生物&lt;/li>
 &lt;/ul>
 &lt;h1 id="历史">历史&lt;/h1>
-&lt;p>卖出国恩股份25.7，加仓上海银行7.02(2022-03-02)&lt;/p>
+&lt;p>买入国恩股份：(2021-07-13)收盘价24.38&lt;/p>
 &lt;p>买入上海银行：(2021-09-03)收盘价7.41&lt;/p>
-&lt;p>买入国恩股份：(2021-07-13)收盘价24.38&lt;/p></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>
+&lt;p>卖出国恩股份25.7盈利约5%，加仓上海银行7.02(2022-03-02)&lt;/p>
+&lt;p>买入国恩股份22.1，卖出上海银行6.6亏损约10%(2022-04-01)&lt;/p></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>
 &lt;p>1.Ubuntu&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt update #更新
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.github账号&lt;/p>
