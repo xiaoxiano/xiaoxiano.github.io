@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
-&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root。&lt;/p>
-&lt;p>据网友文章说新华为解锁难度大，就找了一个荣耀8青春版。然后找教程，发现还是小破站文章可靠。大概分为以下几个步骤：&lt;/p>
+&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。
+大概分为以下几个步骤：&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>解bl锁
-各品牌手机解锁可能有所不同，我仅简述我本次解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube拍了教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
+各品牌手机解锁有所不同，大部分厂商官方给解锁码，我仅简述我本次华为旧机解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
 >短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>刷入 TWRP recovery
 建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
->这个网站&lt;/a>找到华为的TWRP，我当时看到他网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
+>这个网站&lt;/a>找到华为的TWRP，我当时看到他的网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>root
@@ -19,18 +19,13 @@
 &lt;/ol>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
-&lt;ol>
-&lt;li>设置&lt;/li>
-&lt;/ol>
+&lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理&lt;/li>
 &lt;li>忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略应用&lt;/li>
 &lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
 &lt;li>权限全部打开&lt;/li>
 &lt;/ul>
-&lt;ol start="2">
-&lt;li>创建你需要的操作，这里不多介绍，估计很快可以学会。&lt;/li>
-&lt;/ol>
 &lt;h2 id="shell">shell&lt;/h2>
 &lt;p>shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
 >shell命令摘录网站&lt;/a>&lt;/p>
@@ -230,14 +225,14 @@
 &lt;tr>
 &lt;td style="text-align:center">REST_TOKEN&lt;/td>
 &lt;td style="text-align:center">如后文所示&lt;/td>
-&lt;td style="text-align:center">无&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
 &lt;td style="text-align:center">否&lt;/td>
 &lt;td style="text-align:center">保活所需&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">API_ADDRESS&lt;/td>
 &lt;td style="text-align:center">如后文所示&lt;/td>
-&lt;td style="text-align:center">无&lt;/td>
+&lt;td style="text-align:center">-&lt;/td>
 &lt;td style="text-align:center">否&lt;/td>
 &lt;td style="text-align:center">保活所需&lt;/td>
 &lt;/tr>
@@ -269,7 +264,7 @@
 &lt;tr>
 &lt;td style="text-align:center">REST_TOKEN&lt;/td>
 &lt;td style="text-align:center">个人访问令牌（Personal access tokens）&lt;/td>
-&lt;td style="text-align:center">点击个人资料照片-&amp;gt;设置-&amp;gt;Developer settings&lt;/td>
+&lt;td style="text-align:center">个人资料照片-&amp;gt;设置-&amp;gt;Developer settings&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">API_ADDRESS&lt;/td>
@@ -427,7 +422,239 @@
 >acme-companion&lt;/a>和上述示例文档。&lt;/li>
 &lt;/ol>
 &lt;p>最后，我前文的示例 或 &lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
->Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
+>Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/auto-deploy/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>flutter(windows)
+&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
+>flutter安装&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>安装遇坑&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">//配置build.gradle(project:android)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="创建-flutter-项目">创建 Flutter 项目&lt;/h2>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 146;
+flex-basis: 352px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/auto-deploy/1.jpg" data-size="1317x897">
+&lt;img src="https://www.jiangdaoli.cf/p/auto-deploy/1.jpg"
+width="1317"
+height="897"
+srcset="https://www.jiangdaoli.cf/p/auto-deploy/1_huff754efb2c95fdbde3860fe3076e21cb_150899_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/auto-deploy/1_huff754efb2c95fdbde3860fe3076e21cb_150899_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 141;
+flex-basis: 339px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/auto-deploy/2.jpg" data-size="1279x903">
+&lt;img src="https://www.jiangdaoli.cf/p/auto-deploy/2.jpg"
+width="1279"
+height="903"
+srcset="https://www.jiangdaoli.cf/p/auto-deploy/2_hucf4eac703c21ad8fecf4d8297c8a4909_91996_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/auto-deploy/2_hucf4eac703c21ad8fecf4d8297c8a4909_91996_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 137;
+flex-basis: 330px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/auto-deploy/3.jpg" data-size="1234x897">
+&lt;img src="https://www.jiangdaoli.cf/p/auto-deploy/3.jpg"
+width="1234"
+height="897"
+srcset="https://www.jiangdaoli.cf/p/auto-deploy/3_huf5771a4378f496e08370a30e6aea2a57_268237_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/auto-deploy/3_huf5771a4378f496e08370a30e6aea2a57_268237_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 178;
+flex-basis: 427px"
+>
+&lt;a href="https://www.jiangdaoli.cf/p/auto-deploy/4.jpg" data-size="1738x975">
+&lt;img src="https://www.jiangdaoli.cf/p/auto-deploy/4.jpg"
+width="1738"
+height="975"
+srcset="https://www.jiangdaoli.cf/p/auto-deploy/4_hu749a3588d7f75328d4ce8cfeb04f0fea_609718_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/auto-deploy/4_hu749a3588d7f75328d4ce8cfeb04f0fea_609718_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="dart">dart&lt;/h2>
+&lt;h3 id="变量">变量&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 指定类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Object name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">? 可空类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int? a=123; // int? 表示a是一个可空类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 类型断言
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a! // a不为空
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常量">常量&lt;/h3>
+&lt;ul>
+&lt;li>final 和 const&lt;/li>
+&lt;/ul>
+&lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型">类型&lt;/h3>
+&lt;ul>
+&lt;li>内置类型&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">int 整数值
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">double 浮点数字
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bool 布尔类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://dart.dev/guides/language/language-tour#enumerated-types" target="_blank" rel="noopener"
+>enum&lt;/a>　　枚举类型,在switch语句中运行良好&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Set主要的功能就是去除数组重复内容&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main(){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var s=new Set();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> s.addAll(myList);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
+>映射&lt;/a>为 widget 数组&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="函数">函数&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { # bool:返回类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>箭头函数 =&amp;gt;&lt;/p>
+&lt;p>&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="运算符">运算符：&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>算术运算符&lt;/p>
+&lt;p>&lt;code>+&lt;/code>(加)　　&lt;code>–&lt;/code>(减)　　&lt;code>-&lt;/code>(负)　　&lt;code>*&lt;/code>(乘)　　&lt;code>/&lt;/code>(除)　　&lt;code>~/&lt;/code>(取整)　　&lt;code>%&lt;/code>（取余）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>关系运算符&lt;/p>
+&lt;p>&lt;code>==&lt;/code>　　&lt;code>！=&lt;/code>　　&lt;code>&amp;gt;&lt;/code>　　&lt;code>&amp;lt;&lt;/code>　　&lt;code>&amp;gt;=&lt;/code>　　&lt;code>&amp;lt;=&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>逻辑运算符&lt;/p>
+&lt;p>&lt;code>!&lt;/code>(取反)　　&lt;code>&amp;amp;&amp;amp;&lt;/code>(与)　　&lt;code>||&lt;/code>(或)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>赋值运算符&lt;/p>
+&lt;p>基础赋值运算符　　&lt;code>=&lt;/code>　　&lt;code>??=&lt;/code>(为 null 的变量赋值)&lt;/p>
+&lt;p>复合赋值运算符　　&lt;code>+=&lt;/code>　　&lt;code>-=&lt;/code>　　&lt;code>*=&lt;/code>　　&lt;code>/=&lt;/code>　　&lt;code>%=&lt;/code>　　&lt;code>~/=&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>其他运算符
+&lt;code>()&lt;/code>　　使用一个方法&lt;/p>
+&lt;p>&lt;code>[]&lt;/code>　　访问 List&lt;/p>
+&lt;p>&lt;code>?[]&lt;/code>　　访问 List,左侧可以为null&lt;/p>
+&lt;p>&lt;code>.&lt;/code>　　访问成员&lt;/p>
+&lt;p>&lt;code>?.&lt;/code>　　访问成员,左侧可以为null&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>if-else的表达式：&lt;/p>
+&lt;ul>
+&lt;li>condition &lt;code>?&lt;/code> expr1 &lt;code>:&lt;/code> expr2&lt;/li>
+&lt;/ul>
+&lt;p>如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。&lt;/p>
+&lt;ul>
+&lt;li>expr1 &lt;code>??&lt;/code> expr2&lt;/li>
+&lt;/ul>
+&lt;p>如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="类">类&lt;/h3>
+&lt;ul>
+&lt;li>抽象类、抽象方法
+　抽象类常用于定义接口，抽象类常常会包含抽象方法&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">abstract class Doer {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Define instance variables and methods...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething(); // Define an abstract method.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class EffectiveDoer extends Doer {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="泛型">泛型&lt;/h3>
+&lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
+&lt;figure
+>
+&lt;a href="https://www.jiangdaoli.cf/fanxing.jpg" >
+&lt;img src="https://www.jiangdaoli.cf/fanxing.jpg"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>@override 注解来表示你重写了一个成员
+&lt;figure
+>
+&lt;a href="https://www.jiangdaoli.cf/override.jpg" >
+&lt;img src="https://www.jiangdaoli.cf/override.jpg"
+loading="lazy"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h2 id="flutter">flutter&lt;/h2>
+&lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度
+double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#更新apt包索引
@@ -838,159 +1065,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-u 　当执行时使用到未定义过的变量，则显示错误信息。
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-x 　执行指令后，会先显示该指令及所下的参数。
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="编程语言备忘录">编程语言备忘录&lt;/h1>
-&lt;h2 id="dart">dart&lt;/h2>
-&lt;h3 id="变量">变量&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 指定类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Object name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常量">常量&lt;/h3>
-&lt;ul>
-&lt;li>final 和 const&lt;/li>
-&lt;/ul>
-&lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型">类型&lt;/h3>
-&lt;ul>
-&lt;li>内置类型&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">int 整数值
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">double 浮点数字
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bool 布尔类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://dart.dev/guides/language/language-tour#enumerated-types" target="_blank" rel="noopener"
->enum&lt;/a>　　枚举类型,在switch语句中运行良好&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Set主要的功能就是去除数组重复内容&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main(){
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var s=new Set();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> s.addAll(myList);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
->映射&lt;/a>为 widget 数组&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="函数">函数&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { # bool:返回类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>箭头函数 =&amp;gt;&lt;/p>
-&lt;p>&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="运算符">运算符：&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>算术运算符&lt;/p>
-&lt;p>&lt;code>+&lt;/code>(加)　　&lt;code>–&lt;/code>(减)　　&lt;code>-&lt;/code>(负)　　&lt;code>*&lt;/code>(乘)　　&lt;code>/&lt;/code>(除)　　&lt;code>~/&lt;/code>(取整)　　&lt;code>%&lt;/code>（取余）&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>关系运算符&lt;/p>
-&lt;p>&lt;code>==&lt;/code>　　&lt;code>！=&lt;/code>　　&lt;code>&amp;gt;&lt;/code>　　&lt;code>&amp;lt;&lt;/code>　　&lt;code>&amp;gt;=&lt;/code>　　&lt;code>&amp;lt;=&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>逻辑运算符&lt;/p>
-&lt;p>&lt;code>!&lt;/code>(取反)　　&lt;code>&amp;amp;&amp;amp;&lt;/code>(与)　　&lt;code>||&lt;/code>(或)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>赋值运算符&lt;/p>
-&lt;p>基础赋值运算符　　&lt;code>=&lt;/code>　　&lt;code>??=&lt;/code>(为 null 的变量赋值)&lt;/p>
-&lt;p>复合赋值运算符　　&lt;code>+=&lt;/code>　　&lt;code>-=&lt;/code>　　&lt;code>*=&lt;/code>　　&lt;code>/=&lt;/code>　　&lt;code>%=&lt;/code>　　&lt;code>~/=&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>其他运算符
-&lt;code>()&lt;/code>　　使用一个方法&lt;/p>
-&lt;p>&lt;code>[]&lt;/code>　　访问 List&lt;/p>
-&lt;p>&lt;code>?[]&lt;/code>　　访问 List,左侧可以为null&lt;/p>
-&lt;p>&lt;code>.&lt;/code>　　访问成员&lt;/p>
-&lt;p>&lt;code>?.&lt;/code>　　访问成员,左侧可以为null&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>if-else的表达式：&lt;/p>
-&lt;ul>
-&lt;li>condition &lt;code>?&lt;/code> expr1 &lt;code>:&lt;/code> expr2&lt;/li>
-&lt;/ul>
-&lt;p>如果条件为真，则计算expr1（并返回其值）；否则，计算并返回expr2的值。&lt;/p>
-&lt;ul>
-&lt;li>expr1 &lt;code>??&lt;/code> expr2&lt;/li>
-&lt;/ul>
-&lt;p>如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="类">类&lt;/h3>
-&lt;ul>
-&lt;li>抽象类、抽象方法
-　抽象类常用于定义接口，抽象类常常会包含抽象方法&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">abstract class Doer {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Define instance variables and methods...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething(); // Define an abstract method.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class EffectiveDoer extends Doer {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething() {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="泛型">泛型&lt;/h3>
-&lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 249;
-flex-basis: 599px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/ubuntu/fanxing.jpg" data-size="1122x449">
-&lt;img src="https://www.jiangdaoli.cf/p/ubuntu/fanxing.jpg"
-width="1122"
-height="449"
-srcset="https://www.jiangdaoli.cf/p/ubuntu/fanxing_hu6d02cad28d2736a6e42659b75fd941e7_62001_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/ubuntu/fanxing_hu6d02cad28d2736a6e42659b75fd941e7_62001_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>@override 注解来表示你重写了一个成员
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 177;
-flex-basis: 427px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/ubuntu/override.jpg" data-size="1173x659">
-&lt;img src="https://www.jiangdaoli.cf/p/ubuntu/override.jpg"
-width="1173"
-height="659"
-srcset="https://www.jiangdaoli.cf/p/ubuntu/override_huf3ae0c28a53250be072483b49c760168_125842_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/ubuntu/override_huf3ae0c28a53250be072483b49c760168_125842_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="脚本语言备忘录">脚本语言备忘录&lt;/h1>
 &lt;h2 id="shell">shell&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.imooc.com/wiki/shelllesson/shellvariable.html" target="_blank" rel="noopener"
 >原文地址&lt;/a>&lt;/p>
@@ -1098,7 +1173,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>代理&lt;br>
+&lt;p>代理
 Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
 &lt;/li>
 &lt;li>
@@ -1159,92 +1234,6 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
-&lt;h1 id="flutter">flutter&lt;/h1>
-&lt;h2 id="安装">安装&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>flutter(windows)
-&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>安装遇坑&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">//配置build.gradle(project:android)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="创建-flutter-项目">创建 Flutter 项目&lt;/h2>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 57;
-flex-basis: 136px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/config/1.jpg" data-size="1325x2324">
-&lt;img src="https://www.jiangdaoli.cf/p/config/1.jpg"
-width="1325"
-height="2324"
-srcset="https://www.jiangdaoli.cf/p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/1_hu5d1e27dd8cae3be82a376e550243ba5f_300346_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 167;
-flex-basis: 401px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/config/2.jpg" data-size="1255x751">
-&lt;img src="https://www.jiangdaoli.cf/p/config/2.jpg"
-width="1255"
-height="751"
-srcset="https://www.jiangdaoli.cf/p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/2_hu81fa969734d5dd4a557c1b7b09aa2597_119603_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 188;
-flex-basis: 452px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/config/3.jpg" data-size="1745x926">
-&lt;img src="https://www.jiangdaoli.cf/p/config/3.jpg"
-width="1745"
-height="926"
-srcset="https://www.jiangdaoli.cf/p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/3_huf55ceb339b2d0f0aaf2ecaa8582e484a_222184_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 167;
-flex-basis: 402px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/config/4.jpg" data-size="1877x1120">
-&lt;img src="https://www.jiangdaoli.cf/p/config/4.jpg"
-width="1877"
-height="1120"
-srcset="https://www.jiangdaoli.cf/p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/config/4_hu51785015fe51b68ebcd4023b90b5069d_254474_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
@@ -1285,7 +1274,7 @@ loading="lazy"
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、Kiwi、Via&lt;/p>
+&lt;p>浏览器：Chrome、Kiwi、x浏览器&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>影视：zd01.tv下载 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
@@ -1294,18 +1283,18 @@ loading="lazy"
 &lt;p>音乐：listen1　　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>小说：笔趣阁　　　　　　　　# 52论坛蓝底app&lt;/p>
+&lt;p>小说：阅读　 # 酷安评论区可以找书源&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>阅读：福昕PDF阅读器、ReadEra&lt;/p>
+&lt;p>阅读：ReadEra、福昕PDF阅读器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：启动加速　　　#有后台权限更好用&lt;/p>
+&lt;p>去除启动广告：跳过广告&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>MacroDroid、hamibot　　　#手机自动化，使用见后文&lt;/li>
+&lt;li>MacroDroid、hamibot　　　#手机自动化&lt;/li>
 &lt;li>Moonlight　　　　　　　　#局域网流畅投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　#手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
@@ -1316,6 +1305,7 @@ loading="lazy"
 &lt;ul>
 &lt;li>zarchiver　　　　　　　#文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
+&lt;li>Sendapp #提取apk&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item><item><title>投资记录</title><link>https://www.jiangdaoli.cf/p/investment/</link><pubDate>Tue, 13 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/investment/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
