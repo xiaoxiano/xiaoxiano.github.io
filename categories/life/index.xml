@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on 银之介</title><link>https://www.jiangdaoli.cf/categories/life/</link><description>Recent content in 生活 on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>购买配件 较重要的配件有以下两个：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on 银之介</title><link>https://www.jiangdaoli.cf/categories/life/</link><description>Recent content in 生活 on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>购买配件 个人感觉较为重要的配件有以下两个：
 配件 用途 mq2 pro 续航版 头戴，提升头戴舒适度，可以按照自己需要选择没有续航的 磁吸镜片 近视适用 网络 国内quest2用户应该已经具备上外网的条件，不再赘述。
 quest2需要无线网络链接，解决网络问题一般有以下方式：
 刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。 电脑热点，下文介绍。 如果你有网线连接电脑，可以试试clash TUN模式开热点。
@@ -7,7 +7,9 @@ quest2需要无线网络链接，解决网络问题一般有以下方式：
 下载sstap，我使用的1.1.0.1版本。
 配置并打开sstap
 打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。
-邀请领取30美金奖励</description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>root（不同手机不同操作，刷机有变砖风险！） 以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。 大概分为以下几个步骤：
+注册，接受邀请领取30美金奖励 使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。
+接受邀请比较麻烦，不想了解的跳过下面这段，或直接找别人代操作。
+注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号，所以放弃30美金也是省心的选择，想玩破解版的玩家可以花1块钱去极客VR注册。</description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>root（不同手机不同操作，刷机有变砖风险！） 以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。 大概分为以下几个步骤：
 解bl锁 各品牌手机解锁有所不同，大部分厂商官方给解锁码，我仅简述我本次华为旧机解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，短接点可以参考这里。获得解锁码搜华为工具箱即可解锁。
 刷入 TWRP recovery 建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在这个网站找到华为的TWRP，我当时看到他的网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。
 root 安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。
