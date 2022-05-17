@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
-&lt;p>个人感觉较为重要的配件有以下两个：&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -10,11 +9,15 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>mq2 pro 续航版&lt;/td>
-&lt;td>头戴，提升头戴舒适度，可以按照自己需要选择没有续航的&lt;/td>
+&lt;td>提升头戴舒适度，有必要买，可以按照自己需要选择没有续航的&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>磁吸镜片&lt;/td>
 &lt;td>近视适用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>皮质眼罩鼻垫&lt;/td>
+&lt;td>防汗防漏光&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -78,7 +81,7 @@ loading="lazy"
 &lt;p>使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>接受邀请比较麻烦，不想了解的跳过下面这段，或直接找别人代操作。&lt;/p>
+&lt;p>接受邀请比较麻烦，以下方式成本过高，仅作为了解，有需要直接去找别人代操作受邀！！&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;em>注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号，所以放弃30美金也是省心的选择，想玩破解版的玩家可以花1块钱去&lt;a class="link" href="gizvr.cn" >极客VR&lt;/a>注册。&lt;/em>&lt;/p>
@@ -430,10 +433,10 @@ loading="lazy"
 &lt;/figure>&lt;/p>
 &lt;h1 id="常见问题">常见问题&lt;/h1>
 &lt;ul>
-&lt;li>恢复出厂设置
-手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置
-登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/li>
-&lt;/ul></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+&lt;li>恢复出厂设置&lt;/li>
+&lt;/ul>
+&lt;p>手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置&lt;/p>
+&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>配置 JDK、安装配置Android Studio&lt;/p>
