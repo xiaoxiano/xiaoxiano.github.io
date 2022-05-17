@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>银之介</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on 银之介</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xiaoxian</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1873,6 +1873,7 @@ myblog下执行&lt;/p>
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">1 baseurl: https://username.github.io #改为自己的
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 languageCode: zh-CN #中文编码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4 paginate: 10 #文章分页数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5 title: Example Site #博客名字
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">15 DefaultContentLanguage: zh-cn #中文
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">29 since: 2021
