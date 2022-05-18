@@ -19,6 +19,10 @@
 &lt;td>皮质眼罩鼻垫&lt;/td>
 &lt;td>防汗防漏光&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>USB3.0串流线&lt;/td>
+&lt;td>玩steam的游戏需要和电脑串流&lt;/td>
+&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h1 id="网络">网络&lt;/h1>
@@ -436,7 +440,12 @@ loading="lazy"
 &lt;li>恢复出厂设置&lt;/li>
 &lt;/ul>
 &lt;p>手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置&lt;/p>
-&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p>
+&lt;ul>
+&lt;li>人气游戏&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a class="link" href="https://gizvr.cn/forum/resources/featured" target="_blank" rel="noopener"
+>https://gizvr.cn/forum/resources/featured&lt;/a>&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
 &lt;ol>
 &lt;li>
 &lt;p>配置 JDK、安装配置Android Studio&lt;/p>
