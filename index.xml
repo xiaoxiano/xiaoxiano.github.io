@@ -9,7 +9,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>mq2 pro 续航版&lt;/td>
-&lt;td>提升头戴舒适度，有必要买，可以按照自己需要选择没有续航的&lt;/td>
+&lt;td>提升头戴舒适度，可以按照自己需要选择没有续航的&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>磁吸镜片&lt;/td>
@@ -310,6 +310,9 @@ loading="lazy"
 &lt;h1 id="激活">激活&lt;/h1>
 &lt;p>下载Oculus App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
 &lt;h1 id="安装第三方应用">安装第三方应用&lt;/h1>
+&lt;h2 id="便携方式">便携方式&lt;/h2>
+&lt;p>87vr助手安装热门游戏和应用，安卓apk可以通过QQ发送直接安装&lt;/p>
+&lt;h2 id="常规方式">常规方式&lt;/h2>
 &lt;ol>
 &lt;li>首先需要开启开发者模式。在&lt;a class="link" href="https://developer.oculus.com/manage/organizations/create/" target="_blank" rel="noopener"
 >Oculus开发者网站&lt;/a>创建一个开发者组织，再去Oculus APP菜单 -&amp;gt; 设备 -&amp;gt; 开发者模式 -&amp;gt; 打开 。&lt;/li>
@@ -440,12 +443,7 @@ loading="lazy"
 &lt;li>恢复出厂设置&lt;/li>
 &lt;/ul>
 &lt;p>手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置&lt;/p>
-&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p>
-&lt;ul>
-&lt;li>人气游戏&lt;/li>
-&lt;/ul>
-&lt;p>&lt;a class="link" href="https://gizvr.cn/forum/resources/featured" target="_blank" rel="noopener"
->https://gizvr.cn/forum/resources/featured&lt;/a>&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h2 id="安装">安装&lt;/h2>
+&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;ol>
 &lt;li>
 &lt;p>配置 JDK、安装配置Android Studio&lt;/p>
@@ -469,7 +467,10 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="创建-flutter-项目">创建 Flutter 项目&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更新">更新&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
 &lt;p>&lt;figure
 class="gallery-image"
 style="
@@ -530,8 +531,8 @@ loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
-&lt;h2 id="dart">dart&lt;/h2>
-&lt;h3 id="变量">变量&lt;/h3>
+&lt;h1 id="dart">dart&lt;/h1>
+&lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -547,14 +548,14 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 类型断言
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a! // a不为空
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常量">常量&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常量">常量&lt;/h2>
 &lt;ul>
 &lt;li>final 和 const&lt;/li>
 &lt;/ul>
 &lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型">类型&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="类型">类型&lt;/h2>
 &lt;ul>
 &lt;li>内置类型&lt;/li>
 &lt;/ul>
@@ -586,12 +587,30 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型转换">类型转换&lt;/h3>
+&lt;ul>
+&lt;li>String -&amp;gt; int&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myint = int.parse(myString);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>String -&amp;gt; double&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mydouble = double.parse(myString);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>int -&amp;gt; String&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = myint.toString();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>double -&amp;gt; String&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = 3.14159.toStringAsFixed(2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># myString = &amp;#39;3.14&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
->映射&lt;/a>为 widget 数组&lt;/li>
+>映射&lt;/a>为 widget List&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="函数">函数&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数">函数&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { # bool:返回类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
@@ -601,7 +620,7 @@ loading="lazy"
 &lt;p>&lt;code>=&amp;gt; expr&lt;/code> 是 &lt;code>{ return expr; }&lt;/code>的简写&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="运算符">运算符：&lt;/h3>
+&lt;h2 id="运算符">运算符&lt;/h2>
 &lt;ul>
 &lt;li>
 &lt;p>算术运算符&lt;/p>
@@ -640,7 +659,7 @@ loading="lazy"
 &lt;p>如果expr1不为 null，则返回其值；否则，计算并返回expr2的值。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="类">类&lt;/h3>
+&lt;h2 id="类">类&lt;/h2>
 &lt;ul>
 &lt;li>抽象类、抽象方法
 　抽象类常用于定义接口，抽象类常常会包含抽象方法&lt;/li>
@@ -656,7 +675,7 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="泛型">泛型&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="泛型">泛型&lt;/h2>
 &lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
 &lt;figure
 class="gallery-image"
@@ -689,9 +708,9 @@ loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
-&lt;h2 id="flutter">flutter&lt;/h2>
-&lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度
-double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+&lt;h1 id="flutter">flutter&lt;/h1>
+&lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
+&lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
 &lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。
 大概分为以下几个步骤：&lt;/p>
 &lt;ol>
