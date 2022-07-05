@@ -1355,14 +1355,16 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - certs:/etc/nginx/certs
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - acme:/etc/acme.sh
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - /var/run/docker.sock:/var/run/docker.sock:ro
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- # 注释掉web服务environment中的：--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- - LETSENCRYPT_HOST=example.com--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- - LETSENCRYPT_EMAIL=mail@example.com--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- # 需添加如下environment--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- environment:--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- - ACME_CA_URI=https://acme.zerossl.com/v2/DV90--&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- - ZEROSSL_API_KEY=--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ##################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 注释掉web服务environment中的：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_HOST=example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_EMAIL=mail@example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 需添加如下environment
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ZEROSSL_API_KEY=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ##################
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - nginxproxy
