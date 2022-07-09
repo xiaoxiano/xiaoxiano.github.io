@@ -572,6 +572,13 @@ loading="lazy"
 >enum&lt;/a>　　枚举类型,在switch语句中运行良好&lt;/p>
 &lt;/li>
 &lt;li>
+&lt;p>Object　对象类型，允许任何类型&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://dart.dev/guides/language/effective-dart/design#avoid-using-dynamic-unless-you-want-to-disable-static-checking" target="_blank" rel="noopener"
+>dynamic&lt;/a>　动态类型，不仅接受所有对象，而且还允许所有操作&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>Set主要的功能就是去除数组重复内容&lt;/p>
 &lt;/li>
 &lt;/ul>
