@@ -566,21 +566,28 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="不常用类型">不常用类型&lt;/h3>
+&lt;ul>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://dart.dev/guides/language/language-tour#enumerated-types" target="_blank" rel="noopener"
->enum&lt;/a>　　枚举类型,在switch语句中运行良好&lt;/p>
+>enum&lt;/a>　　枚举类型,用于表示固定数量的常量值。在switch语句中运行良好。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Object　对象类型，允许任何类型&lt;/p>
+&lt;p>Object　对象类型，允许任何类型。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://dart.dev/guides/language/effective-dart/design#avoid-using-dynamic-unless-you-want-to-disable-static-checking" target="_blank" rel="noopener"
 >dynamic&lt;/a>　动态类型，不仅接受所有对象，而且还允许所有操作&lt;/p>
 &lt;/li>
-&lt;li>
-&lt;p>Set主要的功能就是去除数组重复内容&lt;/p>
-&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dynamic foo=&amp;#34;bar&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(foo);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> foo=123;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(foo);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Set　无序集合，主要的功能就是去除数组重复内容&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main(){
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -594,6 +601,19 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="几乎不用的类型">几乎不用的类型&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>runes 暴露了字符串的 Unicode 代码点（Unicode 为每个字母、数字和符号定义了一个唯一的数值）。例如，用于表情符号，(😆) 是&lt;code>\u{1f606}&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Symbol 表示标识符，例如&lt;code>#&lt;/code>。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> assert(Symbol(&amp;#39;bar&amp;#39;)==#bar);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// true
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型转换">类型转换&lt;/h3>
 &lt;ul>
 &lt;li>String -&amp;gt; int&lt;/li>
@@ -611,14 +631,14 @@ loading="lazy"
 &lt;li>double -&amp;gt; String&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = 3.14159.toStringAsFixed(2);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># myString = &amp;#39;3.14&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// myString = &amp;#39;3.14&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
 >映射&lt;/a>为 widget List&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数">函数&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { # bool:返回类型
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { // bool:返回类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
