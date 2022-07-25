@@ -1343,21 +1343,22 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ./:/app
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="docker-compose">docker compose&lt;/h1>
-&lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener"
+&lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#下载 Docker Compose 的当前稳定版本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#单独下载和安装 Compose，不装Docker CLI
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#下载 Docker Compose 的当前稳定版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#对二进制文件应用可执行权限
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#测试安装
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose --version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">脚本
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 脚本
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com -o get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sh get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker -v &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo curl -L &amp;#34;https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)&amp;#34; -o /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose --version
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="docker-composeyaml">docker-compose.yaml&lt;/h2>
