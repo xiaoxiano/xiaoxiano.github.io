@@ -1,18 +1,576 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/life/</link><description>Recent content in 生活 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>购买配件 配件 用途 mq2 pro 续航版 提升头戴舒适度，可以按照自己需要选择没有续航的 磁吸镜片 近视适用 皮质眼罩鼻垫 防汗防漏光 USB3.0串流线 玩steam的游戏需要和电脑串流 网络 国内quest2用户应该已经具备上外网的条件，不再赘述。
-quest2需要无线网络链接，解决网络问题一般有以下方式：
-刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。 电脑热点，下文介绍。 如果你有网线连接电脑，可以试试clash TUN模式开热点。
-下面介绍通用的sstap方法。
-打开科学上网，允许局域网连接。
-下载sstap，我使用的1.1.0.1版本。
-配置并打开sstap 打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。 注册，接受邀请领取30美金奖励 使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。
-接受邀请比较麻烦（实际上大多玩家只玩破解版，无需受邀，无需此步骤！），有需要直接去找别人代操作受邀！！以下方式成本过高，作为邀请别人的参考！
-注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号
-我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type是hosting），会被识别屏蔽。所以要用住宅代理（type是isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal
-代理厂商 特点 价格 911s5 自有软件，pc端指定软件代理，使用简单，ip质量差，部分可以邀请使用 最低28美元/150ip，每ip可用24小时 iproyal 直接给地址端口和用户，所以在国内必须自己搭建国外节点并且中转才能使用，但是ip质量较好、使用舒适。必须实名，不实名很多网站不能访问（包括facebook），而且实名较为耗时 3美元/GB ，paypal入金最低20美元 “以xui为例的中转配置文件”
-// 直接修改&amp;#34;servers&amp;#34;即可使用 { &amp;#34;api&amp;#34;: { &amp;#34;services&amp;#34;: [ &amp;#34;HandlerService&amp;#34;, &amp;#34;LoggerService&amp;#34;, &amp;#34;StatsService&amp;#34; ], &amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34; }, &amp;#34;inbounds&amp;#34;: [ { &amp;#34;listen&amp;#34;: &amp;#34;127.</description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>root（不同手机不同操作，刷机有变砖风险！） 以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。 大概分为以下几个步骤：
-解bl锁 各品牌手机解锁有所不同，大部分厂商官方给解锁码，我仅简述我本次华为旧机解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，短接点可以参考这里。获得解锁码搜华为工具箱即可解锁。
-刷入 TWRP recovery 建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在这个网站找到华为的TWRP，我当时看到他的网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。
-root 安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。
-MacroDroid 基础 设置：
-防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理 忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略应用 设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动 权限全部打开 shell shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。shell命令摘录网站
-#按键事件 input text &amp;lt;string&amp;gt; #输入文本 input keyevent 20 #向下 input keyevent 4 #返回 input keyevent 3 #Home input keyevent 6 #挂机 input keyevent 84 #搜索 input keyevent 26 #电源，息屏 input keyevent 24 #音量+ input keyevent 25 #音量- #模拟点击 input tap 100 100 #滑动 input swipe x1 y1 x2 y2 ms input swipe 100 100 400 100 300 #左往右 input swipe 400 100 100 100 300 #右往左 input swipe 100 100 100 400 300 #上往下 input swipe 100 400 100 100 300 #下往上 input swipe 100 100 400 400 300 #上往下斜 input swipe 400 400 100 100 300 #下往上斜 #长按 input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/life/</link><description>Recent content in 生活 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>配件&lt;/th>
+&lt;th>用途&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>mq2 pro 续航版&lt;/td>
+&lt;td>提升头戴舒适度，可以按照自己需要选择没有续航的&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>磁吸镜片&lt;/td>
+&lt;td>近视适用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>皮质眼罩鼻垫&lt;/td>
+&lt;td>防汗防漏光&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>USB3.0串流线&lt;/td>
+&lt;td>玩steam的游戏需要和电脑串流&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="网络">网络&lt;/h1>
+&lt;p>国内quest2用户应该已经具备上外网的条件，不再赘述。&lt;/p>
+&lt;p>quest2需要&lt;strong>无线网络链接&lt;/strong>，解决网络问题一般有以下方式：&lt;/p>
+&lt;ol>
+&lt;li>刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。&lt;/li>
+&lt;li>电脑热点，下文介绍。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;em>如果你有&lt;strong>网线&lt;/strong>连接电脑，可以试试clash TUN模式开热点。&lt;/em>&lt;/p>
+&lt;p>&lt;strong>下面介绍通用的sstap方法。&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>打开科学上网，允许局域网连接。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://github.com/solikethis/SSTap-backup" target="_blank" rel="noopener"
+>下载sstap&lt;/a>，我使用的1.1.0.1版本。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>配置并打开sstap
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 84;
+flex-basis: 202px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/1.jpg" data-size="762x904">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/1.jpg"
+width="762"
+height="904"
+srcset="https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。
+&lt;figure
+class="gallery-image"
+style="
+flex-grow: 147;
+flex-basis: 354px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/2.jpg" data-size="1314x890">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/2.jpg"
+width="1314"
+height="890"
+srcset="https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
+&lt;ol>
+&lt;li>
+&lt;p>使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>接受邀请比较麻烦（实际上大多玩家只玩破解版，无需受邀，无需此步骤！），有需要直接去找别人代操作受邀！！以下方式成本过高，作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;em>注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号&lt;/em>&lt;/p>
+&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type是hosting），会被识别屏蔽。所以要用住宅代理（type是isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>代理厂商&lt;/th>
+&lt;th>特点&lt;/th>
+&lt;th>价格&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>911s5&lt;/td>
+&lt;td>自有软件，pc端指定软件代理，使用简单，ip质量差，部分可以邀请使用&lt;/td>
+&lt;td>最低28美元/150ip，每ip可用24小时&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>iproyal&lt;/td>
+&lt;td>直接给地址端口和用户，所以在国内必须自己搭建国外节点并且&lt;strong>中转&lt;/strong>才能使用，但是ip质量较好、使用舒适。必须实名，不实名很多网站不能访问（包括facebook），而且实名较为耗时&lt;/td>
+&lt;td>3美元/GB ，paypal入金最低20美元&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>“以xui为例的中转配置文件”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 直接修改&amp;#34;servers&amp;#34;即可使用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;api&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;services&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;HandlerService&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;LoggerService&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;StatsService&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inbounds&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;port&amp;#34;: 62789,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;dokodemo-door&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outbounds&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;Socks&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;servers&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;address&amp;#34;: &amp;#34;proxy.iproyal.com&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;port&amp;#34;: 12325,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;users&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;user&amp;#34;: &amp;#34;user&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;pass&amp;#34;: &amp;#34;pass&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;level&amp;#34;: 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;ip2&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;blackhole&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;blocked&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;policy&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;system&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;statsInboundDownlink&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;statsInboundUplink&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;routing&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;rules&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inboundTag&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inbound-12325&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;ip2&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inboundTag&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;api&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;api&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;ip&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;geoip:private&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;blocked&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;blocked&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;bittorrent&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;stats&amp;#34;: {}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 配置文件详解
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;api&amp;#34;: { // api: 提供了一些 API 接口供远程调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;services&amp;#34;: [ // services: [string] 开启的 API 列表
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;HandlerService&amp;#34;, // HandlerService:添加、删除一个入站、出站代理在一个入站代理中添加、删除一个用户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;LoggerService&amp;#34;, // 内置Logger
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;StatsService&amp;#34; // 内置的数据统计服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34; // tag: string api中的tag是**出站**代理标识
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inbounds&amp;#34;: [ // 入站 -&amp;gt; 路由 不用修改
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;listen&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;port&amp;#34;: 62789,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;dokodemo-door&amp;#34;, // 任意门,可以监听一个本地端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outbounds&amp;#34;: [ // 出站
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##################此处开始添加##################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> { // 添加出站节点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;Socks&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;servers&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;port&amp;#34;: 12325,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;users&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;user&amp;#34;: &amp;#34;test user&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;pass&amp;#34;: &amp;#34;test pass&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;level&amp;#34;: 0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;ip2&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#################此处结束添加###################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;freedom&amp;#34;, // 向任意网络发送（正常的）TCP 或 UDP 数据
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: &amp;#34;blackhole&amp;#34;, // 禁止访问
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;settings&amp;#34;: {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;tag&amp;#34;: &amp;#34;blocked&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;policy&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;system&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;statsInboundDownlink&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;statsInboundUplink&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;routing&amp;#34;: { // 路由 -&amp;gt; 出站
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;rules&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">##################此处开始添加##################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> { // 添加路由，xui的&amp;#34;inboundTag&amp;#34;规则是&amp;#34;inbound-port&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inboundTag&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inbound-12325&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;ip2&amp;#34;, // -&amp;gt; &amp;#34;outbounds&amp;#34;: {&amp;#34;tag&amp;#34;: &amp;#34;ip2&amp;#34;}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#################此处结束添加###################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;inboundTag&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;api&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;api&amp;#34;, // -&amp;gt; &amp;#34;api&amp;#34;: {&amp;#34;tag&amp;#34;: &amp;#34;api&amp;#34;}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;ip&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;geoip:private&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;blocked&amp;#34;, // -&amp;gt; 禁止访问
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;outboundTag&amp;#34;: &amp;#34;blocked&amp;#34;, // -&amp;gt; 禁止访问
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;protocol&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;bittorrent&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;field&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;stats&amp;#34;: {}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;h1 id="激活">激活&lt;/h1>
+&lt;p>下载Oculus App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
+&lt;h1 id="安装第三方应用">安装第三方应用&lt;/h1>
+&lt;h2 id="便携方式">便携方式&lt;/h2>
+&lt;p>87vr助手安装热门游戏和应用，安卓apk可以通过QQ发送直接安装。
+更多破解应用可以看看&lt;a class="link" href="https://gizvr.cn/" target="_blank" rel="noopener"
+>极客VR&lt;/a>（1元注册）、&lt;a class="link" href="https://www.vrmoo.cn/" target="_blank" rel="noopener"
+>VR魔趣网&lt;/a>。&lt;/p>
+&lt;h2 id="常规方式">常规方式&lt;/h2>
+&lt;ol>
+&lt;li>首先需要开启开发者模式。在&lt;a class="link" href="https://developer.oculus.com/manage/organizations/create/" target="_blank" rel="noopener"
+>Oculus开发者网站&lt;/a>创建一个开发者组织，再去Oculus APP菜单 -&amp;gt; 设备 -&amp;gt; 开发者模式 -&amp;gt; 打开 。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 277;
+flex-basis: 666px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/3.jpg" data-size="1890x681">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/3.jpg"
+width="1890"
+height="681"
+srcset="https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="2">
+&lt;li>&lt;a class="link" href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener"
+>下载SideQuest&lt;/a>并安装。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 170;
+flex-basis: 410px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/4.jpg" data-size="926x542">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/4.jpg"
+width="926"
+height="542"
+srcset="https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="3">
+&lt;li>下载Oculus ADB驱动。右键单击android_winusb.inf选择“安装”。然后用USB线将头显和电脑连接起来，在头显中点击“允许”。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 245;
+flex-basis: 590px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/5.jpg" data-size="1043x424">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/5.jpg"
+width="1043"
+height="424"
+srcset="https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="4">
+&lt;li>然后就可以安装apk了。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 398;
+flex-basis: 957px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/6.jpg" data-size="706x177">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/6.jpg"
+width="706"
+height="177"
+srcset="https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="5">
+&lt;li>如果apk附带文件夹，就拖入obb文件夹。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 489;
+flex-basis: 1173px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/7.jpg" data-size="675x138">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/7.jpg"
+width="675"
+height="138"
+srcset="https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 302;
+flex-basis: 726px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/8.jpg" data-size="1278x422">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/8.jpg"
+width="1278"
+height="422"
+srcset="https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="6">
+&lt;li>进入头显的未知来源就可以使用了。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 100;
+flex-basis: 240px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/9.jpg" data-size="1024x1024">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/9.jpg"
+width="1024"
+height="1024"
+srcset="https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h1 id="skybox">SKYBOX&lt;/h1>
+&lt;p>vr影片体积超过10G的很常见，quest2装不了多少。&lt;/p>
+&lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用本地网络播放电脑上的影片。&lt;/p>
+&lt;ol>
+&lt;li>在电脑上共享存放影片的文件夹。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 170;
+flex-basis: 408px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/10.jpg" data-size="1260x740">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/10.jpg"
+width="1260"
+height="740"
+srcset="https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 132;
+flex-basis: 319px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/11.jpg" data-size="790x594">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/11.jpg"
+width="790"
+height="594"
+srcset="https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 133;
+flex-basis: 319px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/12.jpg" data-size="788x592">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/12.jpg"
+width="788"
+height="592"
+srcset="https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;ol start="2">
+&lt;li>关闭共享密码。&lt;/li>
+&lt;/ol>
+&lt;p>&lt;figure
+class="gallery-image"
+style="
+flex-grow: 170;
+flex-basis: 409px"
+>
+&lt;a target="_blank" href="https://www.jiangdaoli.cf/p/quest2/13.jpg" data-size="1255x735">
+&lt;img loading="lazy"
+src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
+width="1255"
+height="735"
+srcset="https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
+>
+&lt;/a>
+&lt;/figure>&lt;/p>
+&lt;h1 id="常见问题">常见问题&lt;/h1>
+&lt;ul>
+&lt;li>恢复出厂设置&lt;/li>
+&lt;/ul>
+&lt;p>手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置&lt;/p>
+&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。
+大概分为以下几个步骤：&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>解bl锁
+各品牌手机解锁有所不同，大部分厂商官方给解锁码，我仅简述我本次华为旧机解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
+>短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>刷入 TWRP recovery
+建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
+>这个网站&lt;/a>找到华为的TWRP，我当时看到他的网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>root
+安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="macrodroid">MacroDroid&lt;/h1>
+&lt;h2 id="基础">基础&lt;/h2>
+&lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理&lt;/li>
+&lt;li>忽略电池优化：依次打开系统设置，应用和通知，应用管理，设置，特殊访问权限，忽略电池优化（直接在设置搜索栏搜索电池也能找到），允许忽略应用&lt;/li>
+&lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
+&lt;li>权限全部打开&lt;/li>
+&lt;/ul>
+&lt;h2 id="shell">shell&lt;/h2>
+&lt;p>shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
+>shell命令摘录网站&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#按键事件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input text &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">string&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> #输入文本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 20 #向下
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 4 #返回
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 3 #Home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 6 #挂机
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 84 #搜索
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 26 #电源，息屏
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 24 #音量+
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input keyevent 25 #音量-
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#模拟点击
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input tap 100 100
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#滑动
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe x1 y1 x2 y2 ms
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 400 100 300 #左往右
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 400 100 100 100 300 #右往左
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 100 400 300 #上往下
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 400 100 100 300 #下往上
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 400 400 300 #上往下斜
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 400 400 100 100 300 #下往上斜
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#长按
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
