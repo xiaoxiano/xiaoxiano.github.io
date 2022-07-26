@@ -2537,7 +2537,7 @@ code&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;36px&amp;rdquo; style=&amp;ldquo;italic&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; &amp;gt;}}&lt;br>
+&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;36px&amp;rdquo; style=&amp;ldquo;italic&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; &amp;gt;}}&lt;br>
 font - Google 字体
 size - 大小
 style - italic 斜体
