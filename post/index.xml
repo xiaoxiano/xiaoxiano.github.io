@@ -31,7 +31,7 @@ git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用�
 Host github.com User git ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip 终端代理（临时使用）
 方法一：直接在命令前加proxychains
 方法二：直接在.bashrc最后加入：
-export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip export https_proxy=&amp;#34;http://ip:port.</description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>准备 1.Ubuntu
+export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip export https_proxy=&amp;#34;http://ip:port.</description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>本主题hugo-theme-stack新版不再支持，可使用v3.6.0 准备 1.Ubuntu
 sudo apt update #更新 2.github账号
 3.git配置
 git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名 git config --global user.email johndoe@example.com #配置邮箱 4.连接github
