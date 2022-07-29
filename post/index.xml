@@ -3446,8 +3446,7 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;li>Sendapp #提取apk&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="本主题hugo-theme-stack新版不再支持可使用v360">本主题hugo-theme-stack新版不再支持，可使用v3.6.0&lt;/h1>
-&lt;h1 id="准备">准备&lt;/h1>
+&lt;/ul></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>
 &lt;p>1.Ubuntu&lt;/p>
 &lt;div class="highlight">&lt;div class="chroma">
 &lt;table class="lntable">&lt;tr>&lt;td class="lntd">
@@ -3789,8 +3788,9 @@ myblog下执行&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>3.覆盖主题样式&lt;/p>
-&lt;p>我使用了rmdhnreza(&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
->https://github.com/rmdhnreza/rmdhnreza.my.id&lt;/a>)修改的样式，直接在~/myblog下复制他的assets、layouts文件夹&lt;/p>
+&lt;p>直接在~/myblog下&lt;a class="link" href="https://github.com/xiaoxiano/xiaoxiano.github.io.source" target="_blank" rel="noopener"
+>复制&lt;/a>复制我的assets、layouts文件夹，本主题来源于&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
+>rmdhnreza&lt;/a>。&lt;/p>
 &lt;p>另外修改：&lt;/p>
 &lt;ul>
 &lt;li>
