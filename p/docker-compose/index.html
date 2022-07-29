@@ -1,617 +1,311 @@
-<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="docker 安装docker： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \"><title>docker和docker-compose</title><link rel=canonical href=https://www.jiangdaoli.cf/p/docker-compose/><link rel=stylesheet href=/scss/style.min.b5128480a48fbd5e0ac36772479c1faa0ac5e7f2a48ad103ddaf365358e36a59.css><meta property="og:title" content="docker和docker-compose"><meta property="og:description" content="docker 安装docker： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \"><meta property="og:url" content="https://www.jiangdaoli.cf/p/docker-compose/"><meta property="og:site_name" content="xiaoxian"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-27T00:00:00+00:00"><meta property="article:modified_time" content="2022-07-25T00:00:00+00:00"><meta name=twitter:title content="docker和docker-compose"><meta name=twitter:description content="docker 安装docker： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \ ca-certificates \"><link rel=icon type=image/svg+xml href=/favicon.svg><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#00aba9"><meta name=msapplication-TileImage content="/mstile-144x144.png"><meta name=theme-color content="#ffffff"><meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows"><meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 #更新apt包索引 sudo apt-get update #安装包以允许apt通过 HTTPS 使用存储库 sudo apt-get install \\ ca-certificates \\","inLanguage":"id-ID","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza","url":"https://github.com/rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"xiaoxian","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2022-07-25T00:00:00+00:00","publisher":{"@type":"Organization","name":"xiaoxian","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/favicon-96x96.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"2612","tag":[],"keywords":[],"articleSection":["computer"]}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
-<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu45d9d6b92b0e2c7b760024d72fbde663_30609_300x0_resize_box_3.png width=300 height=263 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>xiaoxian</a></h1><h2 class=site-description>个人杂记</h2></div></header><ul class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><rect x="10" y="12" width="4" height="4"/></svg>首页</a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>搜索</a></li><li><a href=/archives/><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:currentColor"><title>GitBook icon</title><path d="M10.802 17.77a.703.703.0 11-.002 1.406.703.703.0 01.002-1.406m11.024-4.347a.703.703.0 11.001-1.406.703.703.0 01-.001 1.406m0-2.876a2.176 2.176.0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165.0 00-1.784-.937c-.829.0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474.0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175.0 002.15 1.862 2.177 2.177.0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176.0 0024 12.72a2.176 2.176.0 00-2.174-2.174"/></svg>档案</a></li><li><a href=/%E5%85%B3%E4%BA%8E/><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" width="24" height="24" xmlns:v="https://vecta.io/nano"><path d="M12 5.9a2.1 2.1.0 110 4.2 2.1 2.1.0 110-4.2m0 9c2.97.0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4a4 4 0 100 8 4 4 0 100-8zm0 9c-2.67.0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>关于</a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li><li class=menu-bottom-section></li></ul></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/computer/>计算机</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/docker-compose/>docker和docker-compose</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2021-10-27</time></div></footer></div></header><section class=article-content><h1 id=docker>docker</h1><p><a class=link href=https://docs.docker.com/engine/install/debian/ target=_blank rel=noopener>安装docker</a>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>#更新apt包索引
-</span></span><span class=line><span class=cl> sudo apt-get update
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#安装包以允许apt通过 HTTPS 使用存储库
-</span></span><span class=line><span class=cl> sudo apt-get install \
-</span></span><span class=line><span class=cl>    ca-certificates \
-</span></span><span class=line><span class=cl>    curl \
-</span></span><span class=line><span class=cl>    gnupg \
-</span></span><span class=line><span class=cl>    lsb-release
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>#添加Docker官方的GPG密钥
-</span></span><span class=line><span class=cl> curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#设置稳定存储库
-</span></span><span class=line><span class=cl> echo \
-</span></span><span class=line><span class=cl>  &#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
-</span></span><span class=line><span class=cl>  $(lsb_release -cs) stable&#34; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
-</span></span><span class=line><span class=cl>  
-</span></span><span class=line><span class=cl>#安装最新版本的Docker Engine和containerd
-</span></span><span class=line><span class=cl> sudo apt-get update
-</span></span><span class=line><span class=cl> sudo apt-get install docker-ce docker-ce-cli containerd.io
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl>#hello-world 映像验证
-</span></span><span class=line><span class=cl> sudo docker run hello-world
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl># 使用脚本安装
-</span></span><span class=line><span class=cl> curl -fsSL https://get.docker.com -o get-docker.sh
-</span></span><span class=line><span class=cl> sudo sh get-docker.sh
-</span></span></code></pre></td></tr></table></div></div><h2 id=dockerfile>Dockerfile</h2><details class=spoiler id=spoiler-0><summary>“点击展开go语言示例”</summary><p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl># 这个参考示例来自李文周大佬的bluebell项目
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>FROM golang:alpine AS builder
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 为我们的镜像设置必要的环境变量
-</span></span><span class=line><span class=cl>ENV GO111MODULE=on \
-</span></span><span class=line><span class=cl>    CGO_ENABLED=0 \
-</span></span><span class=line><span class=cl>    GOOS=linux \
-</span></span><span class=line><span class=cl>    GOARCH=amd64
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 移动到工作目录：/build
-</span></span><span class=line><span class=cl>WORKDIR /build
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
-</span></span><span class=line><span class=cl>COPY go.mod .
-</span></span><span class=line><span class=cl>COPY go.sum .
-</span></span><span class=line><span class=cl>RUN go mod download
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 将代码复制到容器中
-</span></span><span class=line><span class=cl>COPY . .
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 将我们的代码编译成二进制可执行文件 bluebell_app
-</span></span><span class=line><span class=cl>RUN go build -o bluebell_app .
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>###################
-</span></span><span class=line><span class=cl># 接下来创建一个小镜像
-</span></span><span class=line><span class=cl>###################
-</span></span><span class=line><span class=cl>FROM debian:stretch-slim
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>COPY ./wait-for.sh /
-</span></span><span class=line><span class=cl>COPY ./templates /templates
-</span></span><span class=line><span class=cl>COPY ./static /static
-</span></span><span class=line><span class=cl>COPY ./conf /conf
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 从builder镜像中把/dist/app 拷贝到当前目录
-</span></span><span class=line><span class=cl>COPY --from=builder /build/bluebell_app /
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>RUN set -eux; \
-</span></span><span class=line><span class=cl>	apt-get update; \
-</span></span><span class=line><span class=cl>	apt-get install -y \
-</span></span><span class=line><span class=cl>		--no-install-recommends \
-</span></span><span class=line><span class=cl>		netcat; \
-</span></span><span class=line><span class=cl>        chmod 755 wait-for.sh
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 声明服务端口
-</span></span><span class=line><span class=cl>EXPOSE 8084
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl># 需要运行的命令
-</span></span><span class=line><span class=cl>#ENTRYPOINT [&#34;/bluebell_app&#34;, &#34;conf/config.yaml&#34;]
-</span></span></code></pre></td></tr></table></div></div></p></details><h2 id=基础知识参考>基础知识参考</h2><p>以下简介节选自<a class=link href=https://docs.docker.com/get-started/ target=_blank rel=noopener>docker文档</a>：</p><ol><li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。</li></ol><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl># 将当前目录的相对路径挂载到/app目录中
-</span></span><span class=line><span class=cl>     volumes:
-</span></span><span class=line><span class=cl>       - ./:/app
-</span></span></code></pre></td></tr></table></div></div><h1 id=docker-compose>docker compose</h1><p><a class=link href=https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually target=_blank rel=noopener>安装docker compose</a>：</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span><span class=lnt>8
-</span><span class=lnt>9
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>#单独下载和安装 Compose，不装Docker CLI
-</span></span><span class=line><span class=cl>#下载 Docker Compose 的当前稳定版本
-</span></span><span class=line><span class=cl>curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-</span></span><span class=line><span class=cl> 
-</span></span><span class=line><span class=cl>#对二进制文件应用可执行权限
-</span></span><span class=line><span class=cl>sudo chmod +x /usr/local/bin/docker-compose
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>#测试安装
-</span></span><span class=line><span class=cl>docker compose version
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
-</span><span class=lnt>2
-</span><span class=lnt>3
-</span><span class=lnt>4
-</span><span class=lnt>5
-</span><span class=lnt>6
-</span><span class=lnt>7
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl># 脚本
-</span></span><span class=line><span class=cl>curl -fsSL https://get.docker.com -o get-docker.sh <span class=err>&amp;&amp;</span> \
-</span></span><span class=line><span class=cl>sudo sh get-docker.sh <span class=err>&amp;&amp;</span> \
-</span></span><span class=line><span class=cl>docker -v <span class=err>&amp;&amp;</span> \
-</span></span><span class=line><span class=cl>curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose <span class=err>&amp;&amp;</span> \
-</span></span><span class=line><span class=cl>sudo chmod +x /usr/local/bin/docker-compose  <span class=err>&amp;&amp;</span> \
-</span></span><span class=line><span class=cl>docker compose version
-</span></span></code></pre></td></tr></table></div></div><h2 id=docker-composeyaml>docker-compose.yaml</h2><details class=spoiler id=spoiler-1><summary>“点击展开和折叠代码”</summary><p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span><span class=lnt>51
-</span><span class=lnt>52
-</span><span class=lnt>53
-</span><span class=lnt>54
-</span><span class=lnt>55
-</span><span class=lnt>56
-</span><span class=lnt>57
-</span><span class=lnt>58
-</span><span class=lnt>59
-</span><span class=lnt>60
-</span><span class=lnt>61
-</span><span class=lnt>62
-</span><span class=lnt>63
-</span><span class=lnt>64
-</span><span class=lnt>65
-</span><span class=lnt>66
-</span><span class=lnt>67
-</span><span class=lnt>68
-</span><span class=lnt>69
-</span><span class=lnt>70
-</span><span class=lnt>71
-</span><span class=lnt>72
-</span><span class=lnt>73
-</span><span class=lnt>74
-</span><span class=lnt>75
-</span><span class=lnt>76
-</span><span class=lnt>77
-</span><span class=lnt>78
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>version: &#39;3.7&#39;
-</span></span><span class=line><span class=cl>services:
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  mysql5.7:
-</span></span><span class=line><span class=cl>    # 镜像名
-</span></span><span class=line><span class=cl>    image: &#39;mysql:5.7&#39;
-</span></span><span class=line><span class=cl>    # 容器名(以后的控制都通过这个)
-</span></span><span class=line><span class=cl>    container_name: mysql5.7
-</span></span><span class=line><span class=cl>    # 重启策略
-</span></span><span class=line><span class=cl>    restart: always
-</span></span><span class=line><span class=cl>    environment:
-</span></span><span class=line><span class=cl>      # 时区上海
-</span></span><span class=line><span class=cl>      TZ: Asia/Shanghai
-</span></span><span class=line><span class=cl>      # root 密码
-</span></span><span class=line><span class=cl>      MYSQL_ROOT_PASSWORD: root
-</span></span><span class=line><span class=cl>      # 初始化数据库(后续的初始化sql会在这个库执行)
-</span></span><span class=line><span class=cl>      MYSQL_DATABASE: nacos_config
-</span></span><span class=line><span class=cl>      # 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
-</span></span><span class=line><span class=cl>      MYSQL_USER: nacos
-</span></span><span class=line><span class=cl>      # 用户密码
-</span></span><span class=line><span class=cl>      MYSQL_PASSWORD: nacos
-</span></span><span class=line><span class=cl>      # 映射端口
-</span></span><span class=line><span class=cl>    ports:
-</span></span><span class=line><span class=cl>      - 3306:3306
-</span></span><span class=line><span class=cl>    volumes:
-</span></span><span class=line><span class=cl>      # 数据挂载
-</span></span><span class=line><span class=cl>      #- /root/mysql/data/:/var/lib/mysql/
-</span></span><span class=line><span class=cl>      # 配置挂载
-</span></span><span class=line><span class=cl>      #- /root/mysql/conf/:/etc/mysql/conf.d/
-</span></span><span class=line><span class=cl>      # 初始化目录挂载，注意此处我只跑了这个挂载，只是为了说明其他配置不应该数据初始化
-</span></span><span class=line><span class=cl>      - /root/mysql/init/:/docker-entrypoint-initdb.d/
-</span></span><span class=line><span class=cl>    command:
-</span></span><span class=line><span class=cl>      # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
-</span></span><span class=line><span class=cl>      --default-authentication-plugin=mysql_native_password
-</span></span><span class=line><span class=cl>      --character-set-server=utf8mb4
-</span></span><span class=line><span class=cl>      --collation-server=utf8mb4_general_ci
-</span></span><span class=line><span class=cl>      --explicit_defaults_for_timestamp=true
-</span></span><span class=line><span class=cl>      --lower_case_table_names=1
-</span></span><span class=line><span class=cl>    networks:
-</span></span><span class=line><span class=cl>      - proxy
-</span></span><span class=line><span class=cl>      
-</span></span><span class=line><span class=cl>  server:
-</span></span><span class=line><span class=cl>    image: ghcr.io/USERNAME/server:master
-</span></span><span class=line><span class=cl>    container_name: server
-</span></span><span class=line><span class=cl>    ports:
-</span></span><span class=line><span class=cl>      - 8082:8082
-</span></span><span class=line><span class=cl>    expose:
-</span></span><span class=line><span class=cl>      - &#34;8082&#34;
-</span></span><span class=line><span class=cl>    depends_on:
-</span></span><span class=line><span class=cl>      - mysql5.7
-</span></span><span class=line><span class=cl>    restart: always
-</span></span><span class=line><span class=cl>    volumes:
-</span></span><span class=line><span class=cl>      - &#39;./data:/data/&#39;
-</span></span><span class=line><span class=cl>    networks:
-</span></span><span class=line><span class=cl>      - proxy
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  web:
-</span></span><span class=line><span class=cl>    image: ghcr.io/USERNAME/web:master
-</span></span><span class=line><span class=cl>    container_name: web
-</span></span><span class=line><span class=cl>    depends_on:
-</span></span><span class=line><span class=cl>      - server
-</span></span><span class=line><span class=cl>    restart: always
-</span></span><span class=line><span class=cl>    ports:
-</span></span><span class=line><span class=cl>      - 3000:3000
-</span></span><span class=line><span class=cl>    expose:
-</span></span><span class=line><span class=cl>      - &#34;3000&#34;
-</span></span><span class=line><span class=cl>    environment:
-</span></span><span class=line><span class=cl>      - VIRTUAL_HOST=example.com
-</span></span><span class=line><span class=cl>      - VIRTUAL_PORT=3000
-</span></span><span class=line><span class=cl>      - LETSENCRYPT_HOST=example.com
-</span></span><span class=line><span class=cl>      - LETSENCRYPT_EMAIL=mail@example.com
-</span></span><span class=line><span class=cl>    networks:
-</span></span><span class=line><span class=cl>      - proxy
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>networks:
-</span></span><span class=line><span class=cl>  proxy:
-</span></span><span class=line><span class=cl>    external:
-</span></span><span class=line><span class=cl>      name: nginx-proxy
-</span></span></code></pre></td></tr></table></div></div></p></details><details class=spoiler id=spoiler-2><summary>“点击展开nginx-proxy代码”</summary><p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span><span class=lnt>43
-</span><span class=lnt>44
-</span><span class=lnt>45
-</span><span class=lnt>46
-</span><span class=lnt>47
-</span><span class=lnt>48
-</span><span class=lnt>49
-</span><span class=lnt>50
-</span><span class=lnt>51
-</span><span class=lnt>52
-</span><span class=lnt>53
-</span><span class=lnt>54
-</span><span class=lnt>55
-</span><span class=lnt>56
-</span><span class=lnt>57
-</span><span class=lnt>58
-</span><span class=lnt>59
-</span><span class=lnt>60
-</span><span class=lnt>61
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>version: &#39;3&#39;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>services:
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  nginx-proxy:
-</span></span><span class=line><span class=cl>    image: jwilder/nginx-proxy
-</span></span><span class=line><span class=cl>    container_name: nginx-proxy
-</span></span><span class=line><span class=cl>    ports:
-</span></span><span class=line><span class=cl>      - &#34;80:80&#34;
-</span></span><span class=line><span class=cl>      - &#34;443:443&#34;
-</span></span><span class=line><span class=cl>    volumes:
-</span></span><span class=line><span class=cl>      - conf:/etc/nginx/conf.d
-</span></span><span class=line><span class=cl>      - vhost:/etc/nginx/vhost.d
-</span></span><span class=line><span class=cl>      - html:/usr/share/nginx/html
-</span></span><span class=line><span class=cl>      - dhparam:/etc/nginx/dhparam
-</span></span><span class=line><span class=cl>      - certs:/etc/nginx/certs:ro
-</span></span><span class=line><span class=cl>      - /var/run/docker.sock:/tmp/docker.sock:ro
-</span></span><span class=line><span class=cl>    restart: always
-</span></span><span class=line><span class=cl>    networks:
-</span></span><span class=line><span class=cl>      - nginxproxy
-</span></span><span class=line><span class=cl>    labels:
-</span></span><span class=line><span class=cl>      - &#34;com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy&#34;
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  letsencrypt:
-</span></span><span class=line><span class=cl>    image: jrcs/letsencrypt-nginx-proxy-companion
-</span></span><span class=line><span class=cl>    container_name: nginx-proxy-le
-</span></span><span class=line><span class=cl>    depends_on:
-</span></span><span class=line><span class=cl>      - nginx-proxy
-</span></span><span class=line><span class=cl>    volumes:
-</span></span><span class=line><span class=cl>      - vhost:/etc/nginx/vhost.d
-</span></span><span class=line><span class=cl>      - html:/usr/share/nginx/html
-</span></span><span class=line><span class=cl>      - dhparam:/etc/nginx/dhparam:ro
-</span></span><span class=line><span class=cl>      - certs:/etc/nginx/certs
-</span></span><span class=line><span class=cl>      - acme:/etc/acme.sh
-</span></span><span class=line><span class=cl>      - /var/run/docker.sock:/var/run/docker.sock:ro
-</span></span><span class=line><span class=cl>    ##################
-</span></span><span class=line><span class=cl>    # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL
-</span></span><span class=line><span class=cl>    # 注释掉web服务environment中的：
-</span></span><span class=line><span class=cl>      - LETSENCRYPT_HOST=example.com
-</span></span><span class=line><span class=cl>      - LETSENCRYPT_EMAIL=mail@example.com
-</span></span><span class=line><span class=cl>    # 需添加如下environment
-</span></span><span class=line><span class=cl>    environment:
-</span></span><span class=line><span class=cl>      - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
-</span></span><span class=line><span class=cl>      - ZEROSSL_API_KEY=
-</span></span><span class=line><span class=cl>    ##################
-</span></span><span class=line><span class=cl>    restart: always
-</span></span><span class=line><span class=cl>    networks:
-</span></span><span class=line><span class=cl>      - nginxproxy
-</span></span><span class=line><span class=cl>      
-</span></span><span class=line><span class=cl>volumes:
-</span></span><span class=line><span class=cl>  conf:
-</span></span><span class=line><span class=cl>  vhost:
-</span></span><span class=line><span class=cl>  html:
-</span></span><span class=line><span class=cl>  dhparam:
-</span></span><span class=line><span class=cl>  certs:
-</span></span><span class=line><span class=cl>  acme:
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>networks:
-</span></span><span class=line><span class=cl>  nginxproxy:
-</span></span><span class=line><span class=cl>    external:
-</span></span><span class=line><span class=cl>      name: nginx-proxy
-</span></span></code></pre></td></tr></table></div></div></p></details><h2 id=基础知识参考-1>基础知识参考</h2><p>以下简介节选自<a class=link href=https://docs.docker.com/compose/ target=_blank rel=noopener>docker compose文档</a>：</p><ol><li>Compose 中的<strong>网络</strong>:</li></ol><p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。</p><p>但是，当你使用<a class=link href=https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1 target=_blank rel=noopener>external</a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用<code>docker network create Your_Nerwork</code>预先创建网络。</p><h1 id=常用命令>常用命令</h1><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span><span class=lnt>31
-</span><span class=lnt>32
-</span><span class=lnt>33
-</span><span class=lnt>34
-</span><span class=lnt>35
-</span><span class=lnt>36
-</span><span class=lnt>37
-</span><span class=lnt>38
-</span><span class=lnt>39
-</span><span class=lnt>40
-</span><span class=lnt>41
-</span><span class=lnt>42
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>Docker命令
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>docker run [可选参数] imagename              #新建并启动容器    
-</span></span><span class=line><span class=cl>　　--name = &#34;name&#34; 容器取名
-</span></span><span class=line><span class=cl>　　-it 交互模式进入容器
-</span></span><span class=line><span class=cl>　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
-</span></span><span class=line><span class=cl>　　-p ip:主机端口:容器端口 #指定端口映射
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>查看：
-</span></span><span class=line><span class=cl>docker search xxx                           #搜索dockerhub-镜像
-</span></span><span class=line><span class=cl>docker images [-a][-q]                      #列出本地主机的-镜像
-</span></span><span class=line><span class=cl>    -a 显示所有信息
-</span></span><span class=line><span class=cl>    -q 显示所有id
-</span></span><span class=line><span class=cl>docker ps [-a][-q]                          #显示当前正在运行的容器
-</span></span><span class=line><span class=cl>　　-a 显示当前运行的容器，并显示历史运行过的容器
-</span></span><span class=line><span class=cl>　　-q 只显示运行容器的编号
-</span></span><span class=line><span class=cl>docker logs 容器id                          #日志     
-</span></span><span class=line><span class=cl>docker top 容器id                           #查看容器中进程信息
-</span></span><span class=line><span class=cl>docker inspect 容器id                       #查看容器的详细信息
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>操作：
-</span></span><span class=line><span class=cl>docker pull 镜像：版本号                     #拉取-镜像
-</span></span><span class=line><span class=cl>docker start 容器id                         #启动容器
-</span></span><span class=line><span class=cl>docker restart 容器id                       #重启容器
-</span></span><span class=line><span class=cl>docker stop 容器id                          #停止容器
-</span></span><span class=line><span class=cl>docker kill 容器id                          #强制停止容器
-</span></span><span class=line><span class=cl>docker rm 容器id                            #删除停止状态的容器
-</span></span><span class=line><span class=cl>docker rm -f 容器id                         #强制删除容器
-</span></span><span class=line><span class=cl>docker rmi -f xxx                           #删除单个-镜像
-</span></span><span class=line><span class=cl>docker rmi -f $(docker images -aq)          #删除所有-镜像
-</span></span><span class=line><span class=cl>docker stop $(docker ps -a -q)              #停止所有容器运行
-</span></span><span class=line><span class=cl>docker rm $(docker ps -a -q)                #删除所有容器
-</span></span><span class=line><span class=cl>docker network rm $(docker network ls -q)   #删除所有network
-</span></span><span class=line><span class=cl>docker system prune --all --force --volumes #删除一切
-</span></span><span class=line><span class=cl>exit 容器停止并退出
-</span></span><span class=line><span class=cl>ctrl+p+q 容器不停止退出
-</span></span><span class=line><span class=cl>docker exec -it mysql /bin/bash             #进入正在执行的mysql容器
-</span></span><span class=line><span class=cl>docker inspect -f &#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39; container_name_or_id                        #查看容器ip
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>从容器拷贝内容到主机：
-</span></span><span class=line><span class=cl>docker cp 容器id: 路径  主机目的路径 #此处不必进入容器，容器可以是关闭的。
-</span></span></code></pre></td></tr></table></div></div><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
-</span><span class=lnt> 2
-</span><span class=lnt> 3
-</span><span class=lnt> 4
-</span><span class=lnt> 5
-</span><span class=lnt> 6
-</span><span class=lnt> 7
-</span><span class=lnt> 8
-</span><span class=lnt> 9
-</span><span class=lnt>10
-</span><span class=lnt>11
-</span><span class=lnt>12
-</span><span class=lnt>13
-</span><span class=lnt>14
-</span><span class=lnt>15
-</span><span class=lnt>16
-</span><span class=lnt>17
-</span><span class=lnt>18
-</span><span class=lnt>19
-</span><span class=lnt>20
-</span><span class=lnt>21
-</span><span class=lnt>22
-</span><span class=lnt>23
-</span><span class=lnt>24
-</span><span class=lnt>25
-</span><span class=lnt>26
-</span><span class=lnt>27
-</span><span class=lnt>28
-</span><span class=lnt>29
-</span><span class=lnt>30
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>Docker-compose命令
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>docker-compose up -d                        # 在后台启动服务
-</span></span><span class=line><span class=cl>docker-compose pull                         # 拉取
-</span></span><span class=line><span class=cl>    docker-compose -f docker-compose.yml up -d  # 指定docker-compose.yml
-</span></span><span class=line><span class=cl>    docker-compose -f docker-compose.yml pull   # 指定docker-compose.yml，后同
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>查看：
-</span></span><span class=line><span class=cl>docker-compose ps                           # 查看正在运行中的容器
-</span></span><span class=line><span class=cl>docker-compose ps -a                        # 查看所有编排容器，包括已停止的容器
-</span></span><span class=line><span class=cl>docker-compose images                       # 列出Compose文件构建的镜像
-</span></span><span class=line><span class=cl>docker-compose logs                         # 查看日志
-</span></span><span class=line><span class=cl>docker-compose logs [serviceName]           # 查看某服务的日志 
-</span></span><span class=line><span class=cl>docker-compose logs -f [serviceName]        # 查看某服务的实时日志
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>操作：
-</span></span><span class=line><span class=cl>docker-compose stop                         # 停止服务
-</span></span><span class=line><span class=cl>docker-compose start                        # 启动已经存在的服务
-</span></span><span class=line><span class=cl>docker-compose pause [serviceName]          # 暂停服务
-</span></span><span class=line><span class=cl>docker-compose unpause [serviceName]        # 恢复服务
-</span></span><span class=line><span class=cl>docker-compose restart [serviceName]        # 重启服务
-</span></span><span class=line><span class=cl>docker-compose rm                           # 删除所有（停止状态的）服务容器
-</span></span><span class=line><span class=cl>docker-compose down                         # 删除所有容器
-</span></span><span class=line><span class=cl>docker-compose down --remove-orphans        # 删除orphans容器
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>docker-compose config  -q       # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
-</span></span><span class=line><span class=cl>docker-compose exec --index=1 [serviceName] sh     # 进入某服务的第1个容器执行命令
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>docker-compose --help                       # 帮助
-</span></span></code></pre></td></tr></table></div></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最后更新于 2022-07-25</span></section></footer></article><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
+<!doctype html><html lang=zh-cn dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="docker 安装docker： 1#更新apt包索引 2 sudo apt-get update 3 4#安装包以允许apt通过 HTTPS 使用存储库 5 sudo apt-get install \ 6 ca-certificates \ 7 curl \ 8 gnupg \ 9 lsb-release 10 11#添加Dock"><title>docker和docker-compose</title><link rel=canonical href=https://www.jiangdaoli.cf/p/docker-compose/><link rel=stylesheet href=/scss/style.min.b5128480a48fbd5e0ac36772479c1faa0ac5e7f2a48ad103ddaf365358e36a59.css><meta property="og:title" content="docker和docker-compose"><meta property="og:description" content="docker 安装docker： 1#更新apt包索引 2 sudo apt-get update 3 4#安装包以允许apt通过 HTTPS 使用存储库 5 sudo apt-get install \ 6 ca-certificates \ 7 curl \ 8 gnupg \ 9 lsb-release 10 11#添加Dock"><meta property="og:url" content="https://www.jiangdaoli.cf/p/docker-compose/"><meta property="og:site_name" content="xiaoxian"><meta property="og:type" content="article"><meta property="article:section" content="Post"><meta property="article:published_time" content="2021-10-27T00:00:00+00:00"><meta property="article:modified_time" content="2022-07-25T00:00:00+00:00"><meta name=twitter:title content="docker和docker-compose"><meta name=twitter:description content="docker 安装docker： 1#更新apt包索引 2 sudo apt-get update 3 4#安装包以允许apt通过 HTTPS 使用存储库 5 sudo apt-get install \ 6 ca-certificates \ 7 curl \ 8 gnupg \ 9 lsb-release 10 11#添加Dock"><link rel=icon type=image/svg+xml href=/favicon.svg><link rel=manifest href=/site.webmanifest><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><meta name=msapplication-TileColor content="#00aba9"><meta name=msapplication-TileImage content="/mstile-144x144.png"><meta name=theme-color content="#ffffff"><meta name=apple-mobile-web-app-title content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows"><meta name=application-name content="rmdhnreza.my.id - Blog Tutorial For Linux & Windows"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","name":"docker和docker-compose","headline":"docker和docker-compose","description":"docker 安装docker： 1#更新apt包索引 2 sudo apt-get update 3 4#安装包以允许apt通过 HTTPS 使用存储库 5 sudo apt-get install \\ 6 ca-certificates \\ 7 curl \\ 8 gnupg \\ 9 lsb-release 10 11#添加Dock","inLanguage":"id-ID","isFamilyFriendly":"true","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/"},"author":{"@type":"Person","name":"rmdhnreza","url":"https://github.com/rmdhnreza"},"creator":{"@type":"Person","name":"rmdhnreza"},"accountablePerson":{"@type":"Person","name":"rmdhnreza"},"copyrightHolder":"xiaoxian","copyrightYear":"2021","datePublished":"2021-10-27T00:00:00+00:00","dateModified":"2022-07-25T00:00:00+00:00","publisher":{"@type":"Organization","name":"xiaoxian","url":"https://www.jiangdaoli.cf","logo":{"@type":"ImageObject","url":"https:\/\/www.jiangdaoli.cf/favicon-96x96.png","width":"112","height":"112"}},"image":"https://www.jiangdaoli.cf","url":"https:\/\/www.jiangdaoli.cf\/p\/docker-compose\/","wordCount":"2525","tag":[],"keywords":[],"articleSection":["computer"]}</script></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label=切换菜单>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/img/avatar_hu45d9d6b92b0e2c7b760024d72fbde663_30609_300x0_resize_box_3.png width=300 height=263 class=site-logo loading=lazy alt=Avatar></a></figure><div class=site-meta><h1 class=site-name><a href=/>xiaoxian</a></h1><h2 class=site-description>个人杂记</h2></div></header><ul class=menu id=main-menu><li><a href=/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><rect x="10" y="12" width="4" height="4"/></svg>首页</a></li><li><a href=/search/><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:2.5px"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>搜索</a></li><li><a href=/archives/><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill:currentColor"><title>GitBook icon</title><path d="M10.802 17.77a.703.703.0 11-.002 1.406.703.703.0 01.002-1.406m11.024-4.347a.703.703.0 11.001-1.406.703.703.0 01-.001 1.406m0-2.876a2.176 2.176.0 00-2.174 2.174c0 .233.039.465.115.691l-7.181 3.823a2.165 2.165.0 00-1.784-.937c-.829.0-1.584.475-1.95 1.216l-6.451-3.402c-.682-.358-1.192-1.48-1.138-2.502.028-.533.212-.947.493-1.107.178-.1.392-.092.62.027l.042.023c1.71.9 7.304 3.847 7.54 3.956.363.169.565.237 1.185-.057l11.564-6.014c.17-.064.368-.227.368-.474.0-.342-.354-.477-.355-.477-.658-.315-1.669-.788-2.655-1.25-2.108-.987-4.497-2.105-5.546-2.655-.906-.474-1.635-.074-1.765.006l-.252.125C7.78 6.048 1.46 9.178 1.1 9.397.457 9.789.058 10.57.006 11.539c-.08 1.537.703 3.14 1.824 3.727l6.822 3.518a2.175 2.175.0 002.15 1.862 2.177 2.177.0 002.173-2.14l7.514-4.073c.38.298.853.461 1.337.461A2.176 2.176.0 0024 12.72a2.176 2.176.0 00-2.174-2.174"/></svg>档案</a></li><li><a href=/%E5%85%B3%E4%BA%8E/><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" width="24" height="24" xmlns:v="https://vecta.io/nano"><path d="M12 5.9a2.1 2.1.0 110 4.2 2.1 2.1.0 110-4.2m0 9c2.97.0 6.1 1.46 6.1 2.1v1.1H5.9V17c0-.64 3.13-2.1 6.1-2.1M12 4a4 4 0 100 8 4 4 0 100-8zm0 9c-2.67.0-8 1.34-8 4v3h16v-3c0-2.66-5.33-4-8-4z"/></svg>关于</a></li><li id=dark-mode-toggle><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg><span>暗色模式</span></li><li class=menu-bottom-section></li></ul></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><header class=article-category><a href=/categories/computer/>计算机</a></header><div class=article-title-wrapper><h2 class=article-title><a href=/p/docker-compose/>docker和docker-compose</a></h2></div><footer class=article-time><div><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg><time class=article-time--published>2021-10-27</time></div></footer></div></header><section class=article-content><h1 id=docker>docker</h1><p><a class=link href=https://docs.docker.com/engine/install/debian/ target=_blank rel=noopener>安装docker</a>：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl>#更新apt包索引
+</span></span><span class=line><span class=ln> 2</span><span class=cl> sudo apt-get update
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>#安装包以允许apt通过 HTTPS 使用存储库
+</span></span><span class=line><span class=ln> 5</span><span class=cl> sudo apt-get install \
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    ca-certificates \
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    curl \
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    gnupg \
+</span></span><span class=line><span class=ln> 9</span><span class=cl>    lsb-release
+</span></span><span class=line><span class=ln>10</span><span class=cl>    
+</span></span><span class=line><span class=ln>11</span><span class=cl>#添加Docker官方的GPG密钥
+</span></span><span class=line><span class=ln>12</span><span class=cl> curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl>#设置稳定存储库
+</span></span><span class=line><span class=ln>15</span><span class=cl> echo \
+</span></span><span class=line><span class=ln>16</span><span class=cl>  &#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+</span></span><span class=line><span class=ln>17</span><span class=cl>  $(lsb_release -cs) stable&#34; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null
+</span></span><span class=line><span class=ln>18</span><span class=cl>  
+</span></span><span class=line><span class=ln>19</span><span class=cl>#安装最新版本的Docker Engine和containerd
+</span></span><span class=line><span class=ln>20</span><span class=cl> sudo apt-get update
+</span></span><span class=line><span class=ln>21</span><span class=cl> sudo apt-get install docker-ce docker-ce-cli containerd.io
+</span></span><span class=line><span class=ln>22</span><span class=cl> 
+</span></span><span class=line><span class=ln>23</span><span class=cl>#hello-world 映像验证
+</span></span><span class=line><span class=ln>24</span><span class=cl> sudo docker run hello-world
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln>1</span><span class=cl># 使用脚本安装
+</span></span><span class=line><span class=ln>2</span><span class=cl> curl -fsSL https://get.docker.com -o get-docker.sh
+</span></span><span class=line><span class=ln>3</span><span class=cl> sudo sh get-docker.sh
+</span></span></code></pre></div><h2 id=dockerfile>Dockerfile</h2><details class=spoiler id=spoiler-0><summary>“点击展开go语言示例”</summary><p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl># 这个参考示例来自李文周大佬的bluebell项目
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>FROM golang:alpine AS builder
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl># 为我们的镜像设置必要的环境变量
+</span></span><span class=line><span class=ln> 6</span><span class=cl>ENV GO111MODULE=on \
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    CGO_ENABLED=0 \
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    GOOS=linux \
+</span></span><span class=line><span class=ln> 9</span><span class=cl>    GOARCH=amd64
+</span></span><span class=line><span class=ln>10</span><span class=cl>
+</span></span><span class=line><span class=ln>11</span><span class=cl># 移动到工作目录：/build
+</span></span><span class=line><span class=ln>12</span><span class=cl>WORKDIR /build
+</span></span><span class=line><span class=ln>13</span><span class=cl>
+</span></span><span class=line><span class=ln>14</span><span class=cl># 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
+</span></span><span class=line><span class=ln>15</span><span class=cl>COPY go.mod .
+</span></span><span class=line><span class=ln>16</span><span class=cl>COPY go.sum .
+</span></span><span class=line><span class=ln>17</span><span class=cl>RUN go mod download
+</span></span><span class=line><span class=ln>18</span><span class=cl>
+</span></span><span class=line><span class=ln>19</span><span class=cl># 将代码复制到容器中
+</span></span><span class=line><span class=ln>20</span><span class=cl>COPY . .
+</span></span><span class=line><span class=ln>21</span><span class=cl>
+</span></span><span class=line><span class=ln>22</span><span class=cl># 将我们的代码编译成二进制可执行文件 bluebell_app
+</span></span><span class=line><span class=ln>23</span><span class=cl>RUN go build -o bluebell_app .
+</span></span><span class=line><span class=ln>24</span><span class=cl>
+</span></span><span class=line><span class=ln>25</span><span class=cl>###################
+</span></span><span class=line><span class=ln>26</span><span class=cl># 接下来创建一个小镜像
+</span></span><span class=line><span class=ln>27</span><span class=cl>###################
+</span></span><span class=line><span class=ln>28</span><span class=cl>FROM debian:stretch-slim
+</span></span><span class=line><span class=ln>29</span><span class=cl>
+</span></span><span class=line><span class=ln>30</span><span class=cl>COPY ./wait-for.sh /
+</span></span><span class=line><span class=ln>31</span><span class=cl>COPY ./templates /templates
+</span></span><span class=line><span class=ln>32</span><span class=cl>COPY ./static /static
+</span></span><span class=line><span class=ln>33</span><span class=cl>COPY ./conf /conf
+</span></span><span class=line><span class=ln>34</span><span class=cl>
+</span></span><span class=line><span class=ln>35</span><span class=cl># 从builder镜像中把/dist/app 拷贝到当前目录
+</span></span><span class=line><span class=ln>36</span><span class=cl>COPY --from=builder /build/bluebell_app /
+</span></span><span class=line><span class=ln>37</span><span class=cl>
+</span></span><span class=line><span class=ln>38</span><span class=cl>RUN set -eux; \
+</span></span><span class=line><span class=ln>39</span><span class=cl>	apt-get update; \
+</span></span><span class=line><span class=ln>40</span><span class=cl>	apt-get install -y \
+</span></span><span class=line><span class=ln>41</span><span class=cl>		--no-install-recommends \
+</span></span><span class=line><span class=ln>42</span><span class=cl>		netcat; \
+</span></span><span class=line><span class=ln>43</span><span class=cl>        chmod 755 wait-for.sh
+</span></span><span class=line><span class=ln>44</span><span class=cl>
+</span></span><span class=line><span class=ln>45</span><span class=cl># 声明服务端口
+</span></span><span class=line><span class=ln>46</span><span class=cl>EXPOSE 8084
+</span></span><span class=line><span class=ln>47</span><span class=cl>
+</span></span><span class=line><span class=ln>48</span><span class=cl># 需要运行的命令
+</span></span><span class=line><span class=ln>49</span><span class=cl>#ENTRYPOINT [&#34;/bluebell_app&#34;, &#34;conf/config.yaml&#34;]
+</span></span></code></pre></div></p></details><h2 id=基础知识参考>基础知识参考</h2><p>以下简介节选自<a class=link href=https://docs.docker.com/get-started/ target=_blank rel=noopener>docker文档</a>：</p><ol><li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。</li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln>1</span><span class=cl># 将当前目录的相对路径挂载到/app目录中
+</span></span><span class=line><span class=ln>2</span><span class=cl>     volumes:
+</span></span><span class=line><span class=ln>3</span><span class=cl>       - ./:/app
+</span></span></code></pre></div><h1 id=docker-compose>docker compose</h1><p><a class=link href=https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually target=_blank rel=noopener>安装docker compose</a>：</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln>1</span><span class=cl>#单独下载和安装 Compose，不装Docker CLI
+</span></span><span class=line><span class=ln>2</span><span class=cl>#下载 Docker Compose 的当前稳定版本
+</span></span><span class=line><span class=ln>3</span><span class=cl>curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+</span></span><span class=line><span class=ln>4</span><span class=cl> 
+</span></span><span class=line><span class=ln>5</span><span class=cl>#对二进制文件应用可执行权限
+</span></span><span class=line><span class=ln>6</span><span class=cl>sudo chmod +x /usr/local/bin/docker-compose
+</span></span><span class=line><span class=ln>7</span><span class=cl>
+</span></span><span class=line><span class=ln>8</span><span class=cl>#测试安装
+</span></span><span class=line><span class=ln>9</span><span class=cl>docker compose version
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln>1</span><span class=cl># 脚本
+</span></span><span class=line><span class=ln>2</span><span class=cl>curl -fsSL https://get.docker.com -o get-docker.sh <span class=err>&amp;&amp;</span> \
+</span></span><span class=line><span class=ln>3</span><span class=cl>sudo sh get-docker.sh <span class=err>&amp;&amp;</span> \
+</span></span><span class=line><span class=ln>4</span><span class=cl>docker -v <span class=err>&amp;&amp;</span> \
+</span></span><span class=line><span class=ln>5</span><span class=cl>curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose <span class=err>&amp;&amp;</span> \
+</span></span><span class=line><span class=ln>6</span><span class=cl>sudo chmod +x /usr/local/bin/docker-compose  <span class=err>&amp;&amp;</span> \
+</span></span><span class=line><span class=ln>7</span><span class=cl>docker compose version
+</span></span></code></pre></div><h2 id=docker-composeyaml>docker-compose.yaml</h2><details class=spoiler id=spoiler-1><summary>“点击展开和折叠代码”</summary><p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl>version: &#39;3.7&#39;
+</span></span><span class=line><span class=ln> 2</span><span class=cl>services:
+</span></span><span class=line><span class=ln> 3</span><span class=cl>
+</span></span><span class=line><span class=ln> 4</span><span class=cl>  mysql5.7:
+</span></span><span class=line><span class=ln> 5</span><span class=cl>    # 镜像名
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    image: &#39;mysql:5.7&#39;
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    # 容器名(以后的控制都通过这个)
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    container_name: mysql5.7
+</span></span><span class=line><span class=ln> 9</span><span class=cl>    # 重启策略
+</span></span><span class=line><span class=ln>10</span><span class=cl>    restart: always
+</span></span><span class=line><span class=ln>11</span><span class=cl>    environment:
+</span></span><span class=line><span class=ln>12</span><span class=cl>      # 时区上海
+</span></span><span class=line><span class=ln>13</span><span class=cl>      TZ: Asia/Shanghai
+</span></span><span class=line><span class=ln>14</span><span class=cl>      # root 密码
+</span></span><span class=line><span class=ln>15</span><span class=cl>      MYSQL_ROOT_PASSWORD: root
+</span></span><span class=line><span class=ln>16</span><span class=cl>      # 初始化数据库(后续的初始化sql会在这个库执行)
+</span></span><span class=line><span class=ln>17</span><span class=cl>      MYSQL_DATABASE: nacos_config
+</span></span><span class=line><span class=ln>18</span><span class=cl>      # 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
+</span></span><span class=line><span class=ln>19</span><span class=cl>      MYSQL_USER: nacos
+</span></span><span class=line><span class=ln>20</span><span class=cl>      # 用户密码
+</span></span><span class=line><span class=ln>21</span><span class=cl>      MYSQL_PASSWORD: nacos
+</span></span><span class=line><span class=ln>22</span><span class=cl>      # 映射端口
+</span></span><span class=line><span class=ln>23</span><span class=cl>    ports:
+</span></span><span class=line><span class=ln>24</span><span class=cl>      - 3306:3306
+</span></span><span class=line><span class=ln>25</span><span class=cl>    volumes:
+</span></span><span class=line><span class=ln>26</span><span class=cl>      # 数据挂载
+</span></span><span class=line><span class=ln>27</span><span class=cl>      #- /root/mysql/data/:/var/lib/mysql/
+</span></span><span class=line><span class=ln>28</span><span class=cl>      # 配置挂载
+</span></span><span class=line><span class=ln>29</span><span class=cl>      #- /root/mysql/conf/:/etc/mysql/conf.d/
+</span></span><span class=line><span class=ln>30</span><span class=cl>      # 初始化目录挂载，注意此处我只跑了这个挂载，只是为了说明其他配置不应该数据初始化
+</span></span><span class=line><span class=ln>31</span><span class=cl>      - /root/mysql/init/:/docker-entrypoint-initdb.d/
+</span></span><span class=line><span class=ln>32</span><span class=cl>    command:
+</span></span><span class=line><span class=ln>33</span><span class=cl>      # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+</span></span><span class=line><span class=ln>34</span><span class=cl>      --default-authentication-plugin=mysql_native_password
+</span></span><span class=line><span class=ln>35</span><span class=cl>      --character-set-server=utf8mb4
+</span></span><span class=line><span class=ln>36</span><span class=cl>      --collation-server=utf8mb4_general_ci
+</span></span><span class=line><span class=ln>37</span><span class=cl>      --explicit_defaults_for_timestamp=true
+</span></span><span class=line><span class=ln>38</span><span class=cl>      --lower_case_table_names=1
+</span></span><span class=line><span class=ln>39</span><span class=cl>    networks:
+</span></span><span class=line><span class=ln>40</span><span class=cl>      - proxy
+</span></span><span class=line><span class=ln>41</span><span class=cl>      
+</span></span><span class=line><span class=ln>42</span><span class=cl>  server:
+</span></span><span class=line><span class=ln>43</span><span class=cl>    image: ghcr.io/USERNAME/server:master
+</span></span><span class=line><span class=ln>44</span><span class=cl>    container_name: server
+</span></span><span class=line><span class=ln>45</span><span class=cl>    ports:
+</span></span><span class=line><span class=ln>46</span><span class=cl>      - 8082:8082
+</span></span><span class=line><span class=ln>47</span><span class=cl>    expose:
+</span></span><span class=line><span class=ln>48</span><span class=cl>      - &#34;8082&#34;
+</span></span><span class=line><span class=ln>49</span><span class=cl>    depends_on:
+</span></span><span class=line><span class=ln>50</span><span class=cl>      - mysql5.7
+</span></span><span class=line><span class=ln>51</span><span class=cl>    restart: always
+</span></span><span class=line><span class=ln>52</span><span class=cl>    volumes:
+</span></span><span class=line><span class=ln>53</span><span class=cl>      - &#39;./data:/data/&#39;
+</span></span><span class=line><span class=ln>54</span><span class=cl>    networks:
+</span></span><span class=line><span class=ln>55</span><span class=cl>      - proxy
+</span></span><span class=line><span class=ln>56</span><span class=cl>
+</span></span><span class=line><span class=ln>57</span><span class=cl>  web:
+</span></span><span class=line><span class=ln>58</span><span class=cl>    image: ghcr.io/USERNAME/web:master
+</span></span><span class=line><span class=ln>59</span><span class=cl>    container_name: web
+</span></span><span class=line><span class=ln>60</span><span class=cl>    depends_on:
+</span></span><span class=line><span class=ln>61</span><span class=cl>      - server
+</span></span><span class=line><span class=ln>62</span><span class=cl>    restart: always
+</span></span><span class=line><span class=ln>63</span><span class=cl>    ports:
+</span></span><span class=line><span class=ln>64</span><span class=cl>      - 3000:3000
+</span></span><span class=line><span class=ln>65</span><span class=cl>    expose:
+</span></span><span class=line><span class=ln>66</span><span class=cl>      - &#34;3000&#34;
+</span></span><span class=line><span class=ln>67</span><span class=cl>    environment:
+</span></span><span class=line><span class=ln>68</span><span class=cl>      - VIRTUAL_HOST=example.com
+</span></span><span class=line><span class=ln>69</span><span class=cl>      - VIRTUAL_PORT=3000
+</span></span><span class=line><span class=ln>70</span><span class=cl>      - LETSENCRYPT_HOST=example.com
+</span></span><span class=line><span class=ln>71</span><span class=cl>      - LETSENCRYPT_EMAIL=mail@example.com
+</span></span><span class=line><span class=ln>72</span><span class=cl>    networks:
+</span></span><span class=line><span class=ln>73</span><span class=cl>      - proxy
+</span></span><span class=line><span class=ln>74</span><span class=cl>
+</span></span><span class=line><span class=ln>75</span><span class=cl>networks:
+</span></span><span class=line><span class=ln>76</span><span class=cl>  proxy:
+</span></span><span class=line><span class=ln>77</span><span class=cl>    external:
+</span></span><span class=line><span class=ln>78</span><span class=cl>      name: nginx-proxy
+</span></span></code></pre></div></p></details><details class=spoiler id=spoiler-2><summary>“点击展开nginx-proxy代码”</summary><p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl>version: &#39;3&#39;
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>services:
+</span></span><span class=line><span class=ln> 4</span><span class=cl>
+</span></span><span class=line><span class=ln> 5</span><span class=cl>  nginx-proxy:
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    image: jwilder/nginx-proxy
+</span></span><span class=line><span class=ln> 7</span><span class=cl>    container_name: nginx-proxy
+</span></span><span class=line><span class=ln> 8</span><span class=cl>    ports:
+</span></span><span class=line><span class=ln> 9</span><span class=cl>      - &#34;80:80&#34;
+</span></span><span class=line><span class=ln>10</span><span class=cl>      - &#34;443:443&#34;
+</span></span><span class=line><span class=ln>11</span><span class=cl>    volumes:
+</span></span><span class=line><span class=ln>12</span><span class=cl>      - conf:/etc/nginx/conf.d
+</span></span><span class=line><span class=ln>13</span><span class=cl>      - vhost:/etc/nginx/vhost.d
+</span></span><span class=line><span class=ln>14</span><span class=cl>      - html:/usr/share/nginx/html
+</span></span><span class=line><span class=ln>15</span><span class=cl>      - dhparam:/etc/nginx/dhparam
+</span></span><span class=line><span class=ln>16</span><span class=cl>      - certs:/etc/nginx/certs:ro
+</span></span><span class=line><span class=ln>17</span><span class=cl>      - /var/run/docker.sock:/tmp/docker.sock:ro
+</span></span><span class=line><span class=ln>18</span><span class=cl>    restart: always
+</span></span><span class=line><span class=ln>19</span><span class=cl>    networks:
+</span></span><span class=line><span class=ln>20</span><span class=cl>      - nginxproxy
+</span></span><span class=line><span class=ln>21</span><span class=cl>    labels:
+</span></span><span class=line><span class=ln>22</span><span class=cl>      - &#34;com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy&#34;
+</span></span><span class=line><span class=ln>23</span><span class=cl>
+</span></span><span class=line><span class=ln>24</span><span class=cl>  letsencrypt:
+</span></span><span class=line><span class=ln>25</span><span class=cl>    image: jrcs/letsencrypt-nginx-proxy-companion
+</span></span><span class=line><span class=ln>26</span><span class=cl>    container_name: nginx-proxy-le
+</span></span><span class=line><span class=ln>27</span><span class=cl>    depends_on:
+</span></span><span class=line><span class=ln>28</span><span class=cl>      - nginx-proxy
+</span></span><span class=line><span class=ln>29</span><span class=cl>    volumes:
+</span></span><span class=line><span class=ln>30</span><span class=cl>      - vhost:/etc/nginx/vhost.d
+</span></span><span class=line><span class=ln>31</span><span class=cl>      - html:/usr/share/nginx/html
+</span></span><span class=line><span class=ln>32</span><span class=cl>      - dhparam:/etc/nginx/dhparam:ro
+</span></span><span class=line><span class=ln>33</span><span class=cl>      - certs:/etc/nginx/certs
+</span></span><span class=line><span class=ln>34</span><span class=cl>      - acme:/etc/acme.sh
+</span></span><span class=line><span class=ln>35</span><span class=cl>      - /var/run/docker.sock:/var/run/docker.sock:ro
+</span></span><span class=line><span class=ln>36</span><span class=cl>    ##################
+</span></span><span class=line><span class=ln>37</span><span class=cl>    # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL
+</span></span><span class=line><span class=ln>38</span><span class=cl>    # 注释掉web服务environment中的：
+</span></span><span class=line><span class=ln>39</span><span class=cl>      - LETSENCRYPT_HOST=example.com
+</span></span><span class=line><span class=ln>40</span><span class=cl>      - LETSENCRYPT_EMAIL=mail@example.com
+</span></span><span class=line><span class=ln>41</span><span class=cl>    # 需添加如下environment
+</span></span><span class=line><span class=ln>42</span><span class=cl>    environment:
+</span></span><span class=line><span class=ln>43</span><span class=cl>      - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
+</span></span><span class=line><span class=ln>44</span><span class=cl>      - ZEROSSL_API_KEY=
+</span></span><span class=line><span class=ln>45</span><span class=cl>    ##################
+</span></span><span class=line><span class=ln>46</span><span class=cl>    restart: always
+</span></span><span class=line><span class=ln>47</span><span class=cl>    networks:
+</span></span><span class=line><span class=ln>48</span><span class=cl>      - nginxproxy
+</span></span><span class=line><span class=ln>49</span><span class=cl>      
+</span></span><span class=line><span class=ln>50</span><span class=cl>volumes:
+</span></span><span class=line><span class=ln>51</span><span class=cl>  conf:
+</span></span><span class=line><span class=ln>52</span><span class=cl>  vhost:
+</span></span><span class=line><span class=ln>53</span><span class=cl>  html:
+</span></span><span class=line><span class=ln>54</span><span class=cl>  dhparam:
+</span></span><span class=line><span class=ln>55</span><span class=cl>  certs:
+</span></span><span class=line><span class=ln>56</span><span class=cl>  acme:
+</span></span><span class=line><span class=ln>57</span><span class=cl>
+</span></span><span class=line><span class=ln>58</span><span class=cl>networks:
+</span></span><span class=line><span class=ln>59</span><span class=cl>  nginxproxy:
+</span></span><span class=line><span class=ln>60</span><span class=cl>    external:
+</span></span><span class=line><span class=ln>61</span><span class=cl>      name: nginx-proxy
+</span></span></code></pre></div></p></details><h2 id=基础知识参考-1>基础知识参考</h2><p>以下简介节选自<a class=link href=https://docs.docker.com/compose/ target=_blank rel=noopener>docker compose文档</a>：</p><ol><li>Compose 中的<strong>网络</strong>:</li></ol><p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。</p><p>但是，当你使用<a class=link href=https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1 target=_blank rel=noopener>external</a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用<code>docker network create Your_Nerwork</code>预先创建网络。</p><h1 id=常用命令>常用命令</h1><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl>Docker命令
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>docker run [可选参数] imagename              #新建并启动容器    
+</span></span><span class=line><span class=ln> 4</span><span class=cl>　　--name = &#34;name&#34; 容器取名
+</span></span><span class=line><span class=ln> 5</span><span class=cl>　　-it 交互模式进入容器
+</span></span><span class=line><span class=ln> 6</span><span class=cl>　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
+</span></span><span class=line><span class=ln> 7</span><span class=cl>　　-p ip:主机端口:容器端口 #指定端口映射
+</span></span><span class=line><span class=ln> 8</span><span class=cl>
+</span></span><span class=line><span class=ln> 9</span><span class=cl>查看：
+</span></span><span class=line><span class=ln>10</span><span class=cl>docker search xxx                           #搜索dockerhub-镜像
+</span></span><span class=line><span class=ln>11</span><span class=cl>docker images [-a][-q]                      #列出本地主机的-镜像
+</span></span><span class=line><span class=ln>12</span><span class=cl>    -a 显示所有信息
+</span></span><span class=line><span class=ln>13</span><span class=cl>    -q 显示所有id
+</span></span><span class=line><span class=ln>14</span><span class=cl>docker ps [-a][-q]                          #显示当前正在运行的容器
+</span></span><span class=line><span class=ln>15</span><span class=cl>　　-a 显示当前运行的容器，并显示历史运行过的容器
+</span></span><span class=line><span class=ln>16</span><span class=cl>　　-q 只显示运行容器的编号
+</span></span><span class=line><span class=ln>17</span><span class=cl>docker logs 容器id                          #日志     
+</span></span><span class=line><span class=ln>18</span><span class=cl>docker top 容器id                           #查看容器中进程信息
+</span></span><span class=line><span class=ln>19</span><span class=cl>docker inspect 容器id                       #查看容器的详细信息
+</span></span><span class=line><span class=ln>20</span><span class=cl>
+</span></span><span class=line><span class=ln>21</span><span class=cl>
+</span></span><span class=line><span class=ln>22</span><span class=cl>操作：
+</span></span><span class=line><span class=ln>23</span><span class=cl>docker pull 镜像：版本号                     #拉取-镜像
+</span></span><span class=line><span class=ln>24</span><span class=cl>docker start 容器id                         #启动容器
+</span></span><span class=line><span class=ln>25</span><span class=cl>docker restart 容器id                       #重启容器
+</span></span><span class=line><span class=ln>26</span><span class=cl>docker stop 容器id                          #停止容器
+</span></span><span class=line><span class=ln>27</span><span class=cl>docker kill 容器id                          #强制停止容器
+</span></span><span class=line><span class=ln>28</span><span class=cl>docker rm 容器id                            #删除停止状态的容器
+</span></span><span class=line><span class=ln>29</span><span class=cl>docker rm -f 容器id                         #强制删除容器
+</span></span><span class=line><span class=ln>30</span><span class=cl>docker rmi -f xxx                           #删除单个-镜像
+</span></span><span class=line><span class=ln>31</span><span class=cl>docker rmi -f $(docker images -aq)          #删除所有-镜像
+</span></span><span class=line><span class=ln>32</span><span class=cl>docker stop $(docker ps -a -q)              #停止所有容器运行
+</span></span><span class=line><span class=ln>33</span><span class=cl>docker rm $(docker ps -a -q)                #删除所有容器
+</span></span><span class=line><span class=ln>34</span><span class=cl>docker network rm $(docker network ls -q)   #删除所有network
+</span></span><span class=line><span class=ln>35</span><span class=cl>docker system prune --all --force --volumes #删除一切
+</span></span><span class=line><span class=ln>36</span><span class=cl>exit 容器停止并退出
+</span></span><span class=line><span class=ln>37</span><span class=cl>ctrl+p+q 容器不停止退出
+</span></span><span class=line><span class=ln>38</span><span class=cl>docker exec -it mysql /bin/bash             #进入正在执行的mysql容器
+</span></span><span class=line><span class=ln>39</span><span class=cl>docker inspect -f &#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39; container_name_or_id                        #查看容器ip
+</span></span><span class=line><span class=ln>40</span><span class=cl>
+</span></span><span class=line><span class=ln>41</span><span class=cl>从容器拷贝内容到主机：
+</span></span><span class=line><span class=ln>42</span><span class=cl>docker cp 容器id: 路径  主机目的路径 #此处不必进入容器，容器可以是关闭的。
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=ln> 1</span><span class=cl>Docker-compose命令
+</span></span><span class=line><span class=ln> 2</span><span class=cl>
+</span></span><span class=line><span class=ln> 3</span><span class=cl>docker-compose up -d                        # 在后台启动服务
+</span></span><span class=line><span class=ln> 4</span><span class=cl>docker-compose pull                         # 拉取
+</span></span><span class=line><span class=ln> 5</span><span class=cl>    docker-compose -f docker-compose.yml up -d  # 指定docker-compose.yml
+</span></span><span class=line><span class=ln> 6</span><span class=cl>    docker-compose -f docker-compose.yml pull   # 指定docker-compose.yml，后同
+</span></span><span class=line><span class=ln> 7</span><span class=cl>
+</span></span><span class=line><span class=ln> 8</span><span class=cl>查看：
+</span></span><span class=line><span class=ln> 9</span><span class=cl>docker-compose ps                           # 查看正在运行中的容器
+</span></span><span class=line><span class=ln>10</span><span class=cl>docker-compose ps -a                        # 查看所有编排容器，包括已停止的容器
+</span></span><span class=line><span class=ln>11</span><span class=cl>docker-compose images                       # 列出Compose文件构建的镜像
+</span></span><span class=line><span class=ln>12</span><span class=cl>docker-compose logs                         # 查看日志
+</span></span><span class=line><span class=ln>13</span><span class=cl>docker-compose logs [serviceName]           # 查看某服务的日志 
+</span></span><span class=line><span class=ln>14</span><span class=cl>docker-compose logs -f [serviceName]        # 查看某服务的实时日志
+</span></span><span class=line><span class=ln>15</span><span class=cl>
+</span></span><span class=line><span class=ln>16</span><span class=cl>操作：
+</span></span><span class=line><span class=ln>17</span><span class=cl>docker-compose stop                         # 停止服务
+</span></span><span class=line><span class=ln>18</span><span class=cl>docker-compose start                        # 启动已经存在的服务
+</span></span><span class=line><span class=ln>19</span><span class=cl>docker-compose pause [serviceName]          # 暂停服务
+</span></span><span class=line><span class=ln>20</span><span class=cl>docker-compose unpause [serviceName]        # 恢复服务
+</span></span><span class=line><span class=ln>21</span><span class=cl>docker-compose restart [serviceName]        # 重启服务
+</span></span><span class=line><span class=ln>22</span><span class=cl>docker-compose rm                           # 删除所有（停止状态的）服务容器
+</span></span><span class=line><span class=ln>23</span><span class=cl>docker-compose down                         # 删除所有容器
+</span></span><span class=line><span class=ln>24</span><span class=cl>docker-compose down --remove-orphans        # 删除orphans容器
+</span></span><span class=line><span class=ln>25</span><span class=cl>
+</span></span><span class=line><span class=ln>26</span><span class=cl>
+</span></span><span class=line><span class=ln>27</span><span class=cl>docker-compose config  -q       # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
+</span></span><span class=line><span class=ln>28</span><span class=cl>docker-compose exec --index=1 [serviceName] sh     # 进入某服务的第1个容器执行命令
+</span></span><span class=line><span class=ln>29</span><span class=cl>
+</span></span><span class=line><span class=ln>30</span><span class=cl>docker-compose --help                       # 帮助
+</span></span></code></pre></div></section><footer class=article-footer><section class=article-copyright><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><path d="M14.5 9a3.5 4 0 100 6"/></svg><span>Licensed under CC BY-NC-SA 4.0</span></section><section class=article-lastmod><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentcolor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin:0 5px"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg><span>最后更新于 2022-07-25</span></section></footer></article><script src=//unpkg.com/@waline/client@v2/dist/waline.js></script>
 <link href=//unpkg.com/@waline/client@v2/dist/waline.css rel=stylesheet><div id=waline class=waline-container></div><style>.waline-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding);--waline-font-size:var(--article-font-size)}.waline-container .wl-count{color:var(--card-text-color-main)}</style><script>Waline.init({dark:'html[data-scheme="dark"]',el:"#waline",emoji:["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],locale:{admin:"Admin",placeholder:null},requiredMeta:["name","email","url"],serverURL:"https://myblog-rho-ebon.vercel.app/"})</script><footer class=site-footer><section class=copyright>&copy;
 2021 -
 2022 xiaoxian</section><section class=powerby>Built with <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a><br>主题 <b><a href=https://github.com/CaiJimmy/hugo-theme-stack target=_blank rel=noopener data-version=3.12.0>Stack</a></b> 由 <a href=https://jimmycai.com target=_blank rel=noopener>Jimmy</a> 设计</section></footer><div class=pswp tabindex=-1 role=dialog aria-hidden=true><div class=pswp__bg></div><div class=pswp__scroll-wrap><div class=pswp__container><div class=pswp__item></div><div class=pswp__item></div><div class=pswp__item></div></div><div class="pswp__ui pswp__ui--hidden"><div class=pswp__top-bar><div class=pswp__counter></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
