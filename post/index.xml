@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on xiaoxian</title><link>https://www.jiangdaoli.cf/post/</link><description>Recent content in Posts on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/post/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>购买配件 配件 用途 mq2 pro 续航版 提升头戴舒适度，可以按照自己需要选择没有续航的 磁吸镜片 近视适用 皮质眼罩鼻垫 防汗防漏光 USB3.0串流线 玩steam的游戏需要和电脑串流 网络 国内quest2用户应该已经具备上外网的条件，不再赘述。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on xiaoxian</title><link>https://www.jiangdaoli.cf/post/</link><description>Recent content in Posts on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/post/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>购买配件 配件 用途 mq2 pro 续航版 提升头戴舒适度，可以按照自己需要选择没有续航的 磁吸镜片 近视适用 USB3.0串流线 玩steam的游戏需要和电脑串流 皮质眼罩鼻垫 防汗防漏光 网络 国内quest2用户应该已经具备上外网的条件，不再赘述。
 quest2需要无线网络链接，解决网络问题一般有以下方式：
-刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。 电脑热点，下文介绍。 如果你有网线连接电脑，可以试试clash TUN模式开热点。
-下面介绍通用的sstap方法。
+刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。 电脑热点，下文介绍。 下面介绍通用的sstap方法。
 打开科学上网，允许局域网连接。
 下载sstap，我使用的1.1.0.1版本。
-配置并打开sstap 打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。 注册，接受邀请领取30美金奖励 使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。
+配置并打开sstap 打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。 clash方法
+如果你安装了clash，并且有网线连接电脑，clash TUN模式开热点应该也可以。
+注册，接受邀请领取30美金奖励 使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。
 接受邀请比较麻烦（实际上大多玩家只玩破解版，无需受邀，无需此步骤！），有需要直接去找别人代操作受邀！！以下方式成本过高，作为邀请别人的参考！
 注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号
 我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type是hosting），会被识别屏蔽。所以要用住宅代理（type是isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal

@@ -16,12 +16,12 @@
 &lt;td>近视适用&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>皮质眼罩鼻垫&lt;/td>
-&lt;td>防汗防漏光&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>USB3.0串流线&lt;/td>
 &lt;td>玩steam的游戏需要和电脑串流&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>皮质眼罩鼻垫&lt;/td>
+&lt;td>防汗防漏光&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -32,7 +32,6 @@
 &lt;li>刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。&lt;/li>
 &lt;li>电脑热点，下文介绍。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;em>如果你有&lt;strong>网线&lt;/strong>连接电脑，可以试试clash TUN模式开热点。&lt;/em>&lt;/p>
 &lt;p>&lt;strong>下面介绍通用的sstap方法。&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>
@@ -79,6 +78,9 @@ loading="lazy"
 &lt;/figure>&lt;/p>
 &lt;/li>
 &lt;/ol>
+&lt;hr>
+&lt;p>clash方法&lt;/p>
+&lt;p>如果你安装了clash，并且有&lt;strong>网线&lt;/strong>连接电脑，clash TUN模式开热点应该也可以。&lt;/p>
 &lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
 &lt;ol>
 &lt;li>
@@ -442,8 +444,8 @@ loading="lazy"
 &lt;/a>
 &lt;/figure>&lt;/p>
 &lt;h1 id="skybox">SKYBOX&lt;/h1>
-&lt;p>vr影片体积超过10G的很常见，quest2装不了多少。&lt;/p>
 &lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用本地网络播放电脑上的影片。&lt;/p>
+&lt;p>vr影片体积超过10G的很常见，quest2装不了多少。&lt;/p>
 &lt;ol>
 &lt;li>在电脑上共享存放影片的文件夹。&lt;/li>
 &lt;/ol>
@@ -510,12 +512,19 @@ loading="lazy"
 >
 &lt;/a>
 &lt;/figure>&lt;/p>
+&lt;ol start="3">
+&lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
+&lt;/ol>
 &lt;h1 id="常见问题">常见问题&lt;/h1>
 &lt;ul>
 &lt;li>恢复出厂设置&lt;/li>
 &lt;/ul>
 &lt;p>手机配对后在app菜单 -&amp;gt; 设备 -&amp;gt; 高级设置 -&amp;gt; 恢复出场设置&lt;/p>
-&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
+&lt;p>登陆Oculus官网 -&amp;gt; 点头像 -&amp;gt; Oculus settings -&amp;gt; Devices DELETE -&amp;gt; DEVICE DATA&lt;/p>
+&lt;ul>
+&lt;li>截图&lt;/li>
+&lt;/ul>
+&lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://www.jiangdaoli.cf/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;ol>
 &lt;li>
 &lt;p>配置 JDK、安装配置Android Studio&lt;/p>
