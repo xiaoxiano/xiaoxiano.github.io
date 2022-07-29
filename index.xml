@@ -43,39 +43,27 @@
 &lt;/li>
 &lt;li>
 &lt;p>配置并打开sstap
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 84;
-flex-basis: 202px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/1.jpg" data-size="762x904">
 &lt;img src="https://www.jiangdaoli.cf/p/quest2/1.jpg"
 width="762"
 height="904"
 srcset="https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="84"
+data-flex-basis="202px"
+>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 147;
-flex-basis: 354px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/2.jpg" data-size="1314x890">
 &lt;img src="https://www.jiangdaoli.cf/p/quest2/2.jpg"
 width="1314"
 height="890"
 srcset="https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="147"
+data-flex-basis="354px"
+>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;hr>
@@ -322,196 +310,130 @@ loading="lazy"
 &lt;li>首先需要开启开发者模式。在&lt;a class="link" href="https://developer.oculus.com/manage/organizations/create/" target="_blank" rel="noopener"
 >Oculus开发者网站&lt;/a>创建一个开发者组织，再去Oculus APP菜单 -&amp;gt; 设备 -&amp;gt; 开发者模式 -&amp;gt; 打开 。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 277;
-flex-basis: 666px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/3.jpg" data-size="1890x681">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/3.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/3.jpg"
 width="1890"
 height="681"
 srcset="https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="277"
+data-flex-basis="666px"
+>&lt;/p>
 &lt;ol start="2">
 &lt;li>&lt;a class="link" href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener"
 >下载SideQuest&lt;/a>并安装。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 170;
-flex-basis: 410px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/4.jpg" data-size="926x542">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/4.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/4.jpg"
 width="926"
 height="542"
 srcset="https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="410px"
+>&lt;/p>
 &lt;ol start="3">
 &lt;li>下载Oculus ADB驱动。右键单击android_winusb.inf选择“安装”。然后用USB线将头显和电脑连接起来，在头显中点击“允许”。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 245;
-flex-basis: 590px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/5.jpg" data-size="1043x424">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/5.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/5.jpg"
 width="1043"
 height="424"
 srcset="https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="245"
+data-flex-basis="590px"
+>&lt;/p>
 &lt;ol start="4">
 &lt;li>然后就可以安装apk了。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 398;
-flex-basis: 957px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/6.jpg" data-size="706x177">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/6.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/6.jpg"
 width="706"
 height="177"
 srcset="https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="398"
+data-flex-basis="957px"
+>&lt;/p>
 &lt;ol start="5">
 &lt;li>如果apk附带文件夹，就拖入obb文件夹。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 489;
-flex-basis: 1173px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/7.jpg" data-size="675x138">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/7.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/7.jpg"
 width="675"
 height="138"
 srcset="https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 302;
-flex-basis: 726px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/8.jpg" data-size="1278x422">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/8.jpg"
+data-flex-grow="489"
+data-flex-basis="1173px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/8.jpg"
 width="1278"
 height="422"
 srcset="https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="302"
+data-flex-basis="726px"
+>&lt;/p>
 &lt;ol start="6">
 &lt;li>进入头显的未知来源就可以使用了。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 100;
-flex-basis: 240px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/9.jpg" data-size="1024x1024">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/9.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/9.jpg"
 width="1024"
 height="1024"
 srcset="https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="100"
+data-flex-basis="240px"
+>&lt;/p>
 &lt;h1 id="skybox">SKYBOX&lt;/h1>
 &lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用本地网络播放电脑上的影片。&lt;/p>
 &lt;p>vr影片体积超过10G的很常见，quest2装不了多少。&lt;/p>
 &lt;ol>
 &lt;li>在电脑上共享存放影片的文件夹。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 170;
-flex-basis: 408px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/10.jpg" data-size="1260x740">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/10.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/10.jpg"
 width="1260"
 height="740"
 srcset="https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 132;
-flex-basis: 319px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/11.jpg" data-size="790x594">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/11.jpg"
+data-flex-grow="170"
+data-flex-basis="408px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/11.jpg"
 width="790"
 height="594"
 srcset="https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 133;
-flex-basis: 319px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/12.jpg" data-size="788x592">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/12.jpg"
+data-flex-grow="132"
+data-flex-basis="319px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/12.jpg"
 width="788"
 height="592"
 srcset="https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="319px"
+>&lt;/p>
 &lt;ol start="2">
 &lt;li>关闭共享密码。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 170;
-flex-basis: 409px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/quest2/13.jpg" data-size="1255x735">
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
 width="1255"
 height="735"
 srcset="https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="409px"
+>&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>
@@ -552,66 +474,42 @@ loading="lazy"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
-&lt;p>&lt;figure
-class="gallery-image"
-style="
-flex-grow: 146;
-flex-basis: 352px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/1.jpg" data-size="1317x897">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/1.jpg"
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/1.jpg"
 width="1317"
 height="897"
 srcset="https://www.jiangdaoli.cf/p/flutter/1_huff754efb2c95fdbde3860fe3076e21cb_150899_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/1_huff754efb2c95fdbde3860fe3076e21cb_150899_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 141;
-flex-basis: 339px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/2.jpg" data-size="1279x903">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/2.jpg"
+data-flex-grow="146"
+data-flex-basis="352px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/2.jpg"
 width="1279"
 height="903"
 srcset="https://www.jiangdaoli.cf/p/flutter/2_hucf4eac703c21ad8fecf4d8297c8a4909_91996_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/2_hucf4eac703c21ad8fecf4d8297c8a4909_91996_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 137;
-flex-basis: 330px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/3.jpg" data-size="1234x897">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/3.jpg"
+data-flex-grow="141"
+data-flex-basis="339px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/3.jpg"
 width="1234"
 height="897"
 srcset="https://www.jiangdaoli.cf/p/flutter/3_huf5771a4378f496e08370a30e6aea2a57_268237_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/3_huf5771a4378f496e08370a30e6aea2a57_268237_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>&lt;figure
 class="gallery-image"
-style="
-flex-grow: 178;
-flex-basis: 427px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/4.jpg" data-size="1738x975">
-&lt;img src="https://www.jiangdaoli.cf/p/flutter/4.jpg"
+data-flex-grow="137"
+data-flex-basis="330px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/4.jpg"
 width="1738"
 height="975"
 srcset="https://www.jiangdaoli.cf/p/flutter/4_hu749a3588d7f75328d4ce8cfeb04f0fea_609718_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/4_hu749a3588d7f75328d4ce8cfeb04f0fea_609718_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="427px"
+>&lt;/p>
 &lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
@@ -785,37 +683,25 @@ loading="lazy"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="泛型">泛型&lt;/h2>
 &lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
-&lt;figure
-class="gallery-image"
-style="
-flex-grow: 249;
-flex-basis: 599px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/fanxing.jpg" data-size="1122x449">
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/fanxing.jpg"
 width="1122"
 height="449"
 srcset="https://www.jiangdaoli.cf/p/flutter/fanxing_hu6d02cad28d2736a6e42659b75fd941e7_62001_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/fanxing_hu6d02cad28d2736a6e42659b75fd941e7_62001_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
-&lt;p>@override 注解来表示你重写了一个成员
-&lt;figure
 class="gallery-image"
-style="
-flex-grow: 177;
-flex-basis: 427px"
->
-&lt;a href="https://www.jiangdaoli.cf/p/flutter/override.jpg" data-size="1173x659">
+data-flex-grow="249"
+data-flex-basis="599px"
+>&lt;/p>
+&lt;p>@override 注解来表示你重写了一个成员
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/override.jpg"
 width="1173"
 height="659"
 srcset="https://www.jiangdaoli.cf/p/flutter/override_huf3ae0c28a53250be072483b49c760168_125842_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/override_huf3ae0c28a53250be072483b49c760168_125842_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
->
-&lt;/a>
-&lt;/figure>&lt;/p>
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="427px"
+>&lt;/p>
 &lt;h2 id="异步">异步&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 示例：等待返回自己ip
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:http/http.dart&amp;#39;as http;
@@ -2574,4 +2460,5 @@ You are awesome. You're even better!
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p>
 &lt;p>没有域名？为了白嫖可在freenom和cloudflare进行申请域名和解析，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p>
-&lt;p>&lt;a class="link" href="URL" >freenom脚本自动续期参考后续文章&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a class="link" href="URL" >freenom脚本自动续期参考后续文章&lt;/a>&lt;/p></description></item><item><title>关于</title><link>https://www.jiangdaoli.cf/%E5%85%B3%E4%BA%8E/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/%E5%85%B3%E4%BA%8E/</guid><description>&lt;h1 id="邮箱">邮箱&lt;/h1>
+&lt;p>&lt;a class="link" href="mailto:792486560@qq.com" >792486560@qq.com&lt;/a>&lt;/p></description></item><item><title>档案</title><link>https://www.jiangdaoli.cf/archives/</link><pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/archives/</guid><description/></item><item><title>搜索</title><link>https://www.jiangdaoli.cf/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/search/</guid><description/></item></channel></rss>
