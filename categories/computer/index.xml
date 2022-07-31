@@ -9,22 +9,22 @@
 >flutter安装&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>安装遇坑&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">//配置build.gradle(project:android)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">allprojects {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl"> repositories {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl"> google()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl"> jcenter()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">7&lt;/span>&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">8&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">//配置build.gradle(project:android)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更新">更新&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">flutter upgrade
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">flutter doctor
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/1.jpg"
 width="1317"
@@ -64,39 +64,39 @@ data-flex-basis="427px"
 >&lt;/p>
 &lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl"># 创建一个变量并将其初始化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"># 指定类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">String name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"># 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">Object name = &amp;#39;Bob&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">? 可空类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">int? a=123; // int? 表示a是一个可空类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">! 类型断言
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">a! // a不为空
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 指定类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Object name = &amp;#39;Bob&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">? 可空类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int? a=123; // int? 表示a是一个可空类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 类型断言
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a! // a不为空
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常量">常量&lt;/h2>
 &lt;ul>
 &lt;li>final 和 const&lt;/li>
 &lt;/ul>
 &lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="类型">类型&lt;/h2>
 &lt;ul>
 &lt;li>内置类型&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">int 整数值
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">double 浮点数字
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">String 字符串
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">bool 布尔类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">List 集合类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">Set 无序集合
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">7&lt;/span>&lt;span class="cl">Map 字典型
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">int 整数值
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">double 浮点数字
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bool 布尔类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="不常用类型">不常用类型&lt;/h3>
 &lt;ul>
 &lt;li>
@@ -111,27 +111,27 @@ data-flex-basis="427px"
 >dynamic&lt;/a>　动态类型，不仅接受所有对象，而且还允许所有操作&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">void main() {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> dynamic foo=&amp;#34;bar&amp;#34;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl"> print(foo);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl"> foo=123;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl"> print(foo);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dynamic foo=&amp;#34;bar&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(foo);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> foo=123;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(foo);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>Set　无序集合，主要的功能就是去除数组重复内容&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">void main(){
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl"> List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> var s=new Set();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> s.addAll(myList);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> print(s);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> print(s.toList());
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main(){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> List myList=[&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;西瓜&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;,&amp;#39;香蕉&amp;#39;,&amp;#39;苹果&amp;#39;];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var s=new Set();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> s.addAll(myList);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="几乎不用的类型">几乎不用的类型&lt;/h3>
 &lt;ul>
 &lt;li>
@@ -141,37 +141,37 @@ data-flex-basis="427px"
 &lt;p>Symbol 表示标识符，例如&lt;code>#&lt;/code>。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">void main() {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> assert(Symbol(&amp;#39;bar&amp;#39;)==#bar);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">// true
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> assert(Symbol(&amp;#39;bar&amp;#39;)==#bar);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// true
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型转换">类型转换&lt;/h3>
 &lt;ul>
 &lt;li>String -&amp;gt; int&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">myint = int.parse(myString);
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myint = int.parse(myString);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>String -&amp;gt; double&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">mydouble = double.parse(myString);
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mydouble = double.parse(myString);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>int -&amp;gt; String&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">myString = myint.toString();
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = myint.toString();
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>double -&amp;gt; String&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">myString = 3.14159.toStringAsFixed(2);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">// myString = &amp;#39;3.14&amp;#39;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = 3.14159.toStringAsFixed(2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// myString = &amp;#39;3.14&amp;#39;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>将 list &lt;a class="link" href="https://dart.dev/codelabs/iterables#mapping" target="_blank" rel="noopener"
 >映射&lt;/a>为 widget List&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">MyList.map((item) =&amp;gt; SomeWidget(item)).toList();
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数">函数&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">bool isNoble(int atomicNumber) { // bool:返回类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { // bool:返回类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>箭头函数 =&amp;gt;&lt;/p>
@@ -222,17 +222,17 @@ data-flex-basis="427px"
 &lt;li>抽象类、抽象方法
 　抽象类常用于定义接口，抽象类常常会包含抽象方法&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">abstract class Doer {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl"> // Define instance variables and methods...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"> void doSomething(); // Define an abstract method.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">class EffectiveDoer extends Doer {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> void doSomething() {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">abstract class Doer {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Define instance variables and methods...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething(); // Define an abstract method.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class EffectiveDoer extends Doer {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void doSomething() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="泛型">泛型&lt;/h2>
 &lt;p>泛型常用于需要要求类型安全的情况，可以减少代码重复。
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/fanxing.jpg"
@@ -255,20 +255,20 @@ data-flex-grow="177"
 data-flex-basis="427px"
 >&lt;/p>
 &lt;h2 id="异步">异步&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">// 示例：等待返回自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">import &amp;#39;package:http/http.dart&amp;#39;as http;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">import &amp;#39;dart:convert&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">Future getIPAddress() async {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> final url =&amp;#39;https://httpbin.org/ip&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> var response = await http.get(Uri.parse(url));
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> String ip = json.decode(response.body)[&amp;#39;origin&amp;#39;];
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> return ip;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">void main() async {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> final ip = await getIPAddress();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> print(ip);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 示例：等待返回自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:http/http.dart&amp;#39;as http;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:convert&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future getIPAddress() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final url =&amp;#39;https://httpbin.org/ip&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var response = await http.get(Uri.parse(url));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String ip = json.decode(response.body)[&amp;#39;origin&amp;#39;];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return ip;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final ip = await getIPAddress();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(ip);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="flutter">flutter&lt;/h1>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>freenom自动续期（废弃）</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15完全被封请去仓库看文档">本github actions方法已于2022-07-15完全被封，请去仓库看文档&lt;/h1>
@@ -279,72 +279,72 @@ data-flex-basis="427px"
 >luolongfei大佬的freenom库&lt;/a>，再添加以下workflow：
 &lt;details class="spoiler " id="spoiler-0">
 &lt;summary>“点击展开完整代码”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl"># 1、Fork 本仓库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl"># 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl"># FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"># TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"># （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"># 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00（本示例已改为2:00） 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"># @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">###### end 说明 ######
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl"> push:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl"> branches:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl"> - main
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl"> schedule:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl"> - cron: 00 02 * * *
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl"> workflow_dispatch:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">jobs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl"> run-it:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl"> runs-on: ubuntu-18.04
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl"> name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl"> - name: Checkout master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl"> uses: actions/checkout@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl"> - name: Setup PHP
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">31&lt;/span>&lt;span class="cl"> uses: shivammathur/setup-php@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">32&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">33&lt;/span>&lt;span class="cl"> php-version: &amp;#39;7.2&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">34&lt;/span>&lt;span class="cl"> - name: Setting
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">35&lt;/span>&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">36&lt;/span>&lt;span class="cl"> echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">37&lt;/span>&lt;span class="cl"> echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">38&lt;/span>&lt;span class="cl"> echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">39&lt;/span>&lt;span class="cl"> cp .env.example .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">40&lt;/span>&lt;span class="cl"> if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">41&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">42&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">43&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">44&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">45&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">46&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">47&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">48&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">49&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">50&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">51&lt;/span>&lt;span class="cl"> if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">52&lt;/span>&lt;span class="cl"> sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">53&lt;/span>&lt;span class="cl"> - name: Run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">54&lt;/span>&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">55&lt;/span>&lt;span class="cl"> php run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">56&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">57&lt;/span>&lt;span class="cl"># 以下为保活所需step
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">58&lt;/span>&lt;span class="cl"> - name: curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">59&lt;/span>&lt;span class="cl"> id: enable_workflow
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">60&lt;/span>&lt;span class="cl"> env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">61&lt;/span>&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">62&lt;/span>&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">63&lt;/span>&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">64&lt;/span>&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">65&lt;/span>&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">66&lt;/span>&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 1、Fork 本仓库
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00（本示例已改为2:00） 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###### end 说明 ######
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">name: Run it on action
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> schedule:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - cron: 00 02 * * *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run-it:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-18.04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: Run it on action
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup PHP
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: shivammathur/setup-php@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php-version: &amp;#39;7.2&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setting
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp .env.example .env
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Run
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php run
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 以下为保活所需step
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: curl
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: enable_workflow
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>&lt;/p>
 &lt;/li>
@@ -515,111 +515,111 @@ data-flex-basis="427px"
 &lt;p>使用github actions
 &lt;details class="spoiler " id="spoiler-0">
 &lt;summary>“点击展开示例actions”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl"> push:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl"> branches:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"> - master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> workflow_dispatch:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> REGISTRY: ghcr.io
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 10&lt;/span>&lt;span class="cl"> IMAGE_NAME: ${{ github.repository }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 11&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 12&lt;/span>&lt;span class="cl">jobs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 13&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 14&lt;/span>&lt;span class="cl"> build-and-push-image:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 15&lt;/span>&lt;span class="cl"> runs-on: ubuntu-latest
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 16&lt;/span>&lt;span class="cl"> permissions:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 17&lt;/span>&lt;span class="cl"> contents: read
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 18&lt;/span>&lt;span class="cl"> packages: write
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 19&lt;/span>&lt;span class="cl"> strategy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 20&lt;/span>&lt;span class="cl"> matrix:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 21&lt;/span>&lt;span class="cl"> node: [ &amp;#39;14&amp;#39; ]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 22&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 23&lt;/span>&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 24&lt;/span>&lt;span class="cl"> - name: Checkout repository
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 25&lt;/span>&lt;span class="cl"> uses: actions/checkout@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 26&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 27&lt;/span>&lt;span class="cl"> - name: Setup node
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 28&lt;/span>&lt;span class="cl"> uses: actions/setup-node@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 29&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 30&lt;/span>&lt;span class="cl"> node-version: ${{ matrix.node }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 31&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 32&lt;/span>&lt;span class="cl"> - name: npm install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 33&lt;/span>&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 34&lt;/span>&lt;span class="cl"> cd web #进入前端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 35&lt;/span>&lt;span class="cl"> npm install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 36&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 37&lt;/span>&lt;span class="cl"> - name: Set up QEMU
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 38&lt;/span>&lt;span class="cl"> uses: docker/setup-qemu-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 39&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 40&lt;/span>&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 41&lt;/span>&lt;span class="cl"> id: builder1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 42&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 43&lt;/span>&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 44&lt;/span>&lt;span class="cl"> id: builder2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 45&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 46&lt;/span>&lt;span class="cl"> - name: Log in to the Container registry
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 47&lt;/span>&lt;span class="cl"> uses: docker/login-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 48&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 49&lt;/span>&lt;span class="cl"> registry: ${{ env.REGISTRY }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 50&lt;/span>&lt;span class="cl"> username: ${{ github.actor }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 51&lt;/span>&lt;span class="cl"> password: ${{ secrets.GITHUB_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 52&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 53&lt;/span>&lt;span class="cl"> # 用于消毒标签，tag是此动作的重要功能之一，本示例没使用，请见文档
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 54&lt;/span>&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 55&lt;/span>&lt;span class="cl"> id: meta1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 56&lt;/span>&lt;span class="cl"> uses: docker/metadata-action@v3
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 57&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 58&lt;/span>&lt;span class="cl"> images: ghcr.io/username/server # images地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 59&lt;/span>&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 60&lt;/span>&lt;span class="cl"> id: meta2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 61&lt;/span>&lt;span class="cl"> uses: docker/metadata-action@v3
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 62&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 63&lt;/span>&lt;span class="cl"> images: ghcr.io/username/web # images地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 64&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 65&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 66&lt;/span>&lt;span class="cl"> - name: Build and push Docker image 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 67&lt;/span>&lt;span class="cl"> uses: docker/build-push-action@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 68&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 69&lt;/span>&lt;span class="cl"> builder: ${{ steps.builder1.outputs.name }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 70&lt;/span>&lt;span class="cl"> context: ./server # 服务端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 71&lt;/span>&lt;span class="cl"> file: ./server/Dockerfile # 服务端dockerfile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 72&lt;/span>&lt;span class="cl"> push: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 73&lt;/span>&lt;span class="cl"> tags: ${{ steps.meta1.outputs.tags }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 74&lt;/span>&lt;span class="cl"> labels: ${{ steps.meta1.outputs.labels }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 75&lt;/span>&lt;span class="cl"> cache-from: type=gha
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 76&lt;/span>&lt;span class="cl"> cache-to: type=gha,mode=max
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 77&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 78&lt;/span>&lt;span class="cl"> - name: Build and push Docker image 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 79&lt;/span>&lt;span class="cl"> uses: docker/build-push-action@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 80&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 81&lt;/span>&lt;span class="cl"> builder: ${{ steps.builder2.outputs.name }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 82&lt;/span>&lt;span class="cl"> context: ./web # 前端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 83&lt;/span>&lt;span class="cl"> file: ./web/Dockerfile # 前端dockerfile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 84&lt;/span>&lt;span class="cl"> push: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 85&lt;/span>&lt;span class="cl"> tags: ${{ steps.meta2.outputs.tags }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 86&lt;/span>&lt;span class="cl"> labels: ${{ steps.meta2.outputs.labels }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 87&lt;/span>&lt;span class="cl"> cache-from: type=gha
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 88&lt;/span>&lt;span class="cl"> cache-to: type=gha,mode=max
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 89&lt;/span>&lt;span class="cl"> deploy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 90&lt;/span>&lt;span class="cl"> runs-on: ubuntu-latest
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 91&lt;/span>&lt;span class="cl"> needs: build-and-push-image
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 92&lt;/span>&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 93&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 94&lt;/span>&lt;span class="cl"> - uses: appleboy/ssh-action@master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 95&lt;/span>&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 96&lt;/span>&lt;span class="cl"> host: ${{ secrets.host }} #仓库设置中添加Secrets：HOST
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 97&lt;/span>&lt;span class="cl"> username: root
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 98&lt;/span>&lt;span class="cl"> password: ${{ secrets.PASSWORD }} #仓库设置中添加Secrets：PASSWORD
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 99&lt;/span>&lt;span class="cl"> port: 22
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">100&lt;/span>&lt;span class="cl"> script: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">101&lt;/span>&lt;span class="cl"> echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin # 用户名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">102&lt;/span>&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml pull # docker-compose名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">103&lt;/span>&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml up -d # docker-compose名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">104&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">105&lt;/span>&lt;span class="cl"># 此actions许多参数由github自动提供，无需添加，需修改的均已注释
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">env:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REGISTRY: ghcr.io
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> IMAGE_NAME: ${{ github.repository }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> build-and-push-image:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> permissions:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> contents: read
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packages: write
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> strategy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> matrix:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node: [ &amp;#39;14&amp;#39; ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout repository
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup node
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/setup-node@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node-version: ${{ matrix.node }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: npm install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cd web #进入前端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> npm install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Set up QEMU
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/setup-qemu-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Log in to the Container registry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/login-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> registry: ${{ env.REGISTRY }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: ${{ github.actor }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.GITHUB_TOKEN }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 用于消毒标签，tag是此动作的重要功能之一，本示例没使用，请见文档
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/server # images地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/web # images地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder1.outputs.name }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./server # 服务端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./server/Dockerfile # 服务端dockerfile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta1.outputs.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta1.outputs.labels }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder2.outputs.name }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./web # 前端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./web/Dockerfile # 前端dockerfile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta2.outputs.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta2.outputs.labels }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> needs: build-and-push-image
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: appleboy/ssh-action@master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> host: ${{ secrets.host }} #仓库设置中添加Secrets：HOST
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: root
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.PASSWORD }} #仓库设置中添加Secrets：PASSWORD
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 22
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> script: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin # 用户名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml pull # docker-compose名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml up -d # docker-compose名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 此actions许多参数由github自动提供，无需添加，需修改的均已注释
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>&lt;/p>
 &lt;/li>
@@ -629,9 +629,9 @@ data-flex-basis="427px"
 &lt;/li>
 &lt;/ol>
 &lt;p>具体操作：打开/etc/profile&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">export CR_PAT=YOUR_TOKEN
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">source /etc/profile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export CR_PAT=YOUR_TOKEN
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source /etc/profile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
 >示例&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
@@ -641,85 +641,85 @@ data-flex-basis="427px"
 >Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">#更新apt包索引
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl"> sudo apt-get update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">#安装包以允许apt通过 HTTPS 使用存储库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> sudo apt-get install \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> ca-certificates \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> curl \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> gnupg \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> lsb-release
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">#添加Docker官方的GPG密钥
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">#设置稳定存储库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"> echo \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl"> &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl"> $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">#安装最新版本的Docker Engine和containerd
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl"> sudo apt-get update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl"> sudo apt-get install docker-ce docker-ce-cli containerd.io
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">#hello-world 映像验证
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl"> sudo docker run hello-world
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl"># 使用脚本安装
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> curl -fsSL https://get.docker.com -o get-docker.sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl"> sudo sh get-docker.sh
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#更新apt包索引
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#安装包以允许apt通过 HTTPS 使用存储库
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt-get install \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ca-certificates \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> gnupg \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lsb-release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#添加Docker官方的GPG密钥
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#设置稳定存储库
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> $(lsb_release -cs) stable&amp;#34; | sudo tee /etc/apt/sources.list.d/docker.list &amp;gt; /dev/null
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#安装最新版本的Docker Engine和containerd
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#hello-world 映像验证
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo docker run hello-world
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 使用脚本安装
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -fsSL https://get.docker.com -o get-docker.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sudo sh get-docker.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dockerfile">Dockerfile&lt;/h2>
 &lt;details class="spoiler " id="spoiler-0">
 &lt;summary>“点击展开go语言示例”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl"># 这个参考示例来自李文周大佬的bluebell项目
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">FROM golang:alpine AS builder
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"># 为我们的镜像设置必要的环境变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">ENV GO111MODULE=on \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> CGO_ENABLED=0 \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> GOOS=linux \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> GOARCH=amd64
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"># 移动到工作目录：/build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">WORKDIR /build
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl"># 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">COPY go.mod .
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">COPY go.sum .
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">RUN go mod download
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl"># 将代码复制到容器中
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">COPY . .
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl"># 将我们的代码编译成二进制可执行文件 bluebell_app
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">RUN go build -o bluebell_app .
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">###################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl"># 接下来创建一个小镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">###################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl">FROM debian:stretch-slim
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl">COPY ./wait-for.sh /
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">31&lt;/span>&lt;span class="cl">COPY ./templates /templates
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">32&lt;/span>&lt;span class="cl">COPY ./static /static
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">33&lt;/span>&lt;span class="cl">COPY ./conf /conf
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">34&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">35&lt;/span>&lt;span class="cl"># 从builder镜像中把/dist/app 拷贝到当前目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">36&lt;/span>&lt;span class="cl">COPY --from=builder /build/bluebell_app /
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">37&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">38&lt;/span>&lt;span class="cl">RUN set -eux; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">39&lt;/span>&lt;span class="cl"> apt-get update; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">40&lt;/span>&lt;span class="cl"> apt-get install -y \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">41&lt;/span>&lt;span class="cl"> --no-install-recommends \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">42&lt;/span>&lt;span class="cl"> netcat; \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">43&lt;/span>&lt;span class="cl"> chmod 755 wait-for.sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">44&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">45&lt;/span>&lt;span class="cl"># 声明服务端口
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">46&lt;/span>&lt;span class="cl">EXPOSE 8084
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">47&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">48&lt;/span>&lt;span class="cl"># 需要运行的命令
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">49&lt;/span>&lt;span class="cl">#ENTRYPOINT [&amp;#34;/bluebell_app&amp;#34;, &amp;#34;conf/config.yaml&amp;#34;]
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 这个参考示例来自李文周大佬的bluebell项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM golang:alpine AS builder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 为我们的镜像设置必要的环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ENV GO111MODULE=on \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> CGO_ENABLED=0 \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GOOS=linux \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GOARCH=amd64
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 移动到工作目录：/build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WORKDIR /build
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 复制项目中的 go.mod 和 go.sum文件并下载依赖信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY go.mod .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY go.sum .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">RUN go mod download
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 将代码复制到容器中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY . .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 将我们的代码编译成二进制可执行文件 bluebell_app
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">RUN go build -o bluebell_app .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 接下来创建一个小镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">FROM debian:stretch-slim
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY ./wait-for.sh /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY ./templates /templates
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY ./static /static
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY ./conf /conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 从builder镜像中把/dist/app 拷贝到当前目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">COPY --from=builder /build/bluebell_app /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">RUN set -eux; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apt-get update; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> apt-get install -y \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --no-install-recommends \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> netcat; \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> chmod 755 wait-for.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 声明服务端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EXPOSE 8084
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 需要运行的命令
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#ENTRYPOINT [&amp;#34;/bluebell_app&amp;#34;, &amp;#34;conf/config.yaml&amp;#34;]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
@@ -728,174 +728,174 @@ data-flex-basis="427px"
 &lt;ol>
 &lt;li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl"># 将当前目录的相对路径挂载到/app目录中
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl"> - ./:/app
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 将当前目录的相对路径挂载到/app目录中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ./:/app
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">#单独下载和安装 Compose，不装Docker CLI
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">#下载 Docker Compose 的当前稳定版本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">#对二进制文件应用可执行权限
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">7&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">8&lt;/span>&lt;span class="cl">#测试安装
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">9&lt;/span>&lt;span class="cl">docker compose version
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl"># 脚本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">curl -fsSL https://get.docker.com -o get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">sudo sh get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">docker -v &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">6&lt;/span>&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">7&lt;/span>&lt;span class="cl">docker compose version
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#单独下载和安装 Compose，不装Docker CLI
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#下载 Docker Compose 的当前稳定版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#对二进制文件应用可执行权限
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#测试安装
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker compose version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 脚本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -fsSL https://get.docker.com -o get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo sh get-docker.sh &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker -v &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl -SL https://github.com/docker/compose/releases/download/v2.7.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo chmod +x /usr/local/bin/docker-compose &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker compose version
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="docker-composeyaml">docker-compose.yaml&lt;/h2>
 &lt;details class="spoiler " id="spoiler-1">
 &lt;summary>“点击展开和折叠代码”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">version: &amp;#39;3.7&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">services:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl"> mysql5.7:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> # 镜像名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> image: &amp;#39;mysql:5.7&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> # 容器名(以后的控制都通过这个)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> container_name: mysql5.7
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> # 重启策略
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"> restart: always
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> environment:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> # 时区上海
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> TZ: Asia/Shanghai
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl"> # root 密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"> MYSQL_ROOT_PASSWORD: root
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl"> # 初始化数据库(后续的初始化sql会在这个库执行)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl"> MYSQL_DATABASE: nacos_config
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl"> # 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl"> MYSQL_USER: nacos
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl"> # 用户密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl"> MYSQL_PASSWORD: nacos
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl"> # 映射端口
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl"> ports:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl"> - 3306:3306
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl"> # 数据挂载
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl"> #- /root/mysql/data/:/var/lib/mysql/
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl"> # 配置挂载
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl"> #- /root/mysql/conf/:/etc/mysql/conf.d/
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl"> # 初始化目录挂载，注意此处我只跑了这个挂载，只是为了说明其他配置不应该数据初始化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">31&lt;/span>&lt;span class="cl"> - /root/mysql/init/:/docker-entrypoint-initdb.d/
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">32&lt;/span>&lt;span class="cl"> command:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">33&lt;/span>&lt;span class="cl"> # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">34&lt;/span>&lt;span class="cl"> --default-authentication-plugin=mysql_native_password
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">35&lt;/span>&lt;span class="cl"> --character-set-server=utf8mb4
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">36&lt;/span>&lt;span class="cl"> --collation-server=utf8mb4_general_ci
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">37&lt;/span>&lt;span class="cl"> --explicit_defaults_for_timestamp=true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">38&lt;/span>&lt;span class="cl"> --lower_case_table_names=1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">39&lt;/span>&lt;span class="cl"> networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">40&lt;/span>&lt;span class="cl"> - proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">41&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">42&lt;/span>&lt;span class="cl"> server:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">43&lt;/span>&lt;span class="cl"> image: ghcr.io/USERNAME/server:master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">44&lt;/span>&lt;span class="cl"> container_name: server
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">45&lt;/span>&lt;span class="cl"> ports:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">46&lt;/span>&lt;span class="cl"> - 8082:8082
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">47&lt;/span>&lt;span class="cl"> expose:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">48&lt;/span>&lt;span class="cl"> - &amp;#34;8082&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">49&lt;/span>&lt;span class="cl"> depends_on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">50&lt;/span>&lt;span class="cl"> - mysql5.7
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">51&lt;/span>&lt;span class="cl"> restart: always
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">52&lt;/span>&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">53&lt;/span>&lt;span class="cl"> - &amp;#39;./data:/data/&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">54&lt;/span>&lt;span class="cl"> networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">55&lt;/span>&lt;span class="cl"> - proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">56&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">57&lt;/span>&lt;span class="cl"> web:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">58&lt;/span>&lt;span class="cl"> image: ghcr.io/USERNAME/web:master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">59&lt;/span>&lt;span class="cl"> container_name: web
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">60&lt;/span>&lt;span class="cl"> depends_on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">61&lt;/span>&lt;span class="cl"> - server
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">62&lt;/span>&lt;span class="cl"> restart: always
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">63&lt;/span>&lt;span class="cl"> ports:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">64&lt;/span>&lt;span class="cl"> - 3000:3000
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">65&lt;/span>&lt;span class="cl"> expose:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">66&lt;/span>&lt;span class="cl"> - &amp;#34;3000&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">67&lt;/span>&lt;span class="cl"> environment:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">68&lt;/span>&lt;span class="cl"> - VIRTUAL_HOST=example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">69&lt;/span>&lt;span class="cl"> - VIRTUAL_PORT=3000
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">70&lt;/span>&lt;span class="cl"> - LETSENCRYPT_HOST=example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">71&lt;/span>&lt;span class="cl"> - LETSENCRYPT_EMAIL=mail@example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">72&lt;/span>&lt;span class="cl"> networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">73&lt;/span>&lt;span class="cl"> - proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">74&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">75&lt;/span>&lt;span class="cl">networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">76&lt;/span>&lt;span class="cl"> proxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">77&lt;/span>&lt;span class="cl"> external:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">78&lt;/span>&lt;span class="cl"> name: nginx-proxy
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">version: &amp;#39;3.7&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">services:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mysql5.7:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 镜像名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: &amp;#39;mysql:5.7&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 容器名(以后的控制都通过这个)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: mysql5.7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 重启策略
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 时区上海
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TZ: Asia/Shanghai
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # root 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MYSQL_ROOT_PASSWORD: root
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 初始化数据库(后续的初始化sql会在这个库执行)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MYSQL_DATABASE: nacos_config
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 初始化用户(不能是root 会报错, 后续需要给新用户赋予权限)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MYSQL_USER: nacos
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 用户密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MYSQL_PASSWORD: nacos
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 映射端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ports:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - 3306:3306
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 数据挂载
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> #- /root/mysql/data/:/var/lib/mysql/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 配置挂载
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> #- /root/mysql/conf/:/etc/mysql/conf.d/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 初始化目录挂载，注意此处我只跑了这个挂载，只是为了说明其他配置不应该数据初始化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - /root/mysql/init/:/docker-entrypoint-initdb.d/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> command:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --default-authentication-plugin=mysql_native_password
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --character-set-server=utf8mb4
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --collation-server=utf8mb4_general_ci
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --explicit_defaults_for_timestamp=true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> --lower_case_table_names=1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> server:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: ghcr.io/USERNAME/server:master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ports:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - 8082:8082
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> expose:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;8082&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> depends_on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - mysql5.7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#39;./data:/data/&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> web:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: ghcr.io/USERNAME/web:master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: web
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> depends_on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - server
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ports:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - 3000:3000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> expose:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;3000&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - VIRTUAL_HOST=example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - VIRTUAL_PORT=3000
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_HOST=example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_EMAIL=mail@example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;details class="spoiler " id="spoiler-2">
 &lt;summary>“点击展开nginx-proxy代码”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">version: &amp;#39;3&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">services:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> nginx-proxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> image: jwilder/nginx-proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl"> container_name: nginx-proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"> ports:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl"> - &amp;#34;80:80&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl"> - &amp;#34;443:443&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> - conf:/etc/nginx/conf.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> - vhost:/etc/nginx/vhost.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl"> - html:/usr/share/nginx/html
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"> - dhparam:/etc/nginx/dhparam
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl"> - certs:/etc/nginx/certs:ro
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl"> - /var/run/docker.sock:/tmp/docker.sock:ro
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl"> restart: always
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl"> networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl"> - nginxproxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl"> labels:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl"> - &amp;#34;com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl"> letsencrypt:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl"> image: jrcs/letsencrypt-nginx-proxy-companion
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl"> container_name: nginx-proxy-le
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl"> depends_on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl"> - nginx-proxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl"> - vhost:/etc/nginx/vhost.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">31&lt;/span>&lt;span class="cl"> - html:/usr/share/nginx/html
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">32&lt;/span>&lt;span class="cl"> - dhparam:/etc/nginx/dhparam:ro
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">33&lt;/span>&lt;span class="cl"> - certs:/etc/nginx/certs
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">34&lt;/span>&lt;span class="cl"> - acme:/etc/acme.sh
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">35&lt;/span>&lt;span class="cl"> - /var/run/docker.sock:/var/run/docker.sock:ro
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">36&lt;/span>&lt;span class="cl"> ##################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">37&lt;/span>&lt;span class="cl"> # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">38&lt;/span>&lt;span class="cl"> # 注释掉web服务environment中的：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">39&lt;/span>&lt;span class="cl"> - LETSENCRYPT_HOST=example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">40&lt;/span>&lt;span class="cl"> - LETSENCRYPT_EMAIL=mail@example.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">41&lt;/span>&lt;span class="cl"> # 需添加如下environment
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">42&lt;/span>&lt;span class="cl"> environment:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">43&lt;/span>&lt;span class="cl"> - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">44&lt;/span>&lt;span class="cl"> - ZEROSSL_API_KEY=
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">45&lt;/span>&lt;span class="cl"> ##################
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">46&lt;/span>&lt;span class="cl"> restart: always
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">47&lt;/span>&lt;span class="cl"> networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">48&lt;/span>&lt;span class="cl"> - nginxproxy
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">49&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">50&lt;/span>&lt;span class="cl">volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">51&lt;/span>&lt;span class="cl"> conf:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">52&lt;/span>&lt;span class="cl"> vhost:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">53&lt;/span>&lt;span class="cl"> html:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">54&lt;/span>&lt;span class="cl"> dhparam:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">55&lt;/span>&lt;span class="cl"> certs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">56&lt;/span>&lt;span class="cl"> acme:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">57&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">58&lt;/span>&lt;span class="cl">networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">59&lt;/span>&lt;span class="cl"> nginxproxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">60&lt;/span>&lt;span class="cl"> external:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">61&lt;/span>&lt;span class="cl"> name: nginx-proxy
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">version: &amp;#39;3&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">services:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nginx-proxy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: jwilder/nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ports:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;80:80&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;443:443&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - conf:/etc/nginx/conf.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - vhost:/etc/nginx/vhost.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - html:/usr/share/nginx/html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - dhparam:/etc/nginx/dhparam
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - certs:/etc/nginx/certs:ro
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - /var/run/docker.sock:/tmp/docker.sock:ro
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - nginxproxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> letsencrypt:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> image: jrcs/letsencrypt-nginx-proxy-companion
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> container_name: nginx-proxy-le
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> depends_on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - vhost:/etc/nginx/vhost.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - html:/usr/share/nginx/html
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - dhparam:/etc/nginx/dhparam:ro
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - certs:/etc/nginx/certs
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - acme:/etc/acme.sh
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - /var/run/docker.sock:/var/run/docker.sock:ro
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ##################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 由于LETSENCRYPT证书速率限制，可使用ZeroSSL
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 注释掉web服务environment中的：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_HOST=example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - LETSENCRYPT_EMAIL=mail@example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 需添加如下environment
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ACME_CA_URI=https://acme.zerossl.com/v2/DV90
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ZEROSSL_API_KEY=
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ##################
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> restart: always
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - nginxproxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> conf:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> vhost:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> html:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dhparam:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> certs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> acme:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nginxproxy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h2 id="基础知识参考-1">基础知识参考&lt;/h2>
@@ -908,99 +908,99 @@ data-flex-basis="427px"
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
 &lt;h1 id="常用命令">常用命令&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">Docker命令
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">docker run [可选参数] imagename #新建并启动容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">　　--name = &amp;#34;name&amp;#34; 容器取名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl">　　-it 交互模式进入容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">　　-p ip:主机端口:容器端口 #指定端口映射
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">查看：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">docker search xxx #搜索dockerhub-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">docker images [-a][-q] #列出本地主机的-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl"> -a 显示所有信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl"> -q 显示所有id
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">docker ps [-a][-q] #显示当前正在运行的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">　　-a 显示当前运行的容器，并显示历史运行过的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">　　-q 只显示运行容器的编号
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">docker logs 容器id #日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">docker top 容器id #查看容器中进程信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">docker inspect 容器id #查看容器的详细信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">操作：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">docker pull 镜像：版本号 #拉取-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">docker start 容器id #启动容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">docker restart 容器id #重启容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">docker stop 容器id #停止容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">docker kill 容器id #强制停止容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl">docker rm 容器id #删除停止状态的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl">docker rm -f 容器id #强制删除容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl">docker rmi -f xxx #删除单个-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">31&lt;/span>&lt;span class="cl">docker rmi -f $(docker images -aq) #删除所有-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">32&lt;/span>&lt;span class="cl">docker stop $(docker ps -a -q) #停止所有容器运行
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">33&lt;/span>&lt;span class="cl">docker rm $(docker ps -a -q) #删除所有容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">34&lt;/span>&lt;span class="cl">docker network rm $(docker network ls -q) #删除所有network
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">35&lt;/span>&lt;span class="cl">docker system prune --all --force --volumes #删除一切
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">36&lt;/span>&lt;span class="cl">exit 容器停止并退出
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">37&lt;/span>&lt;span class="cl">ctrl+p+q 容器不停止退出
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">38&lt;/span>&lt;span class="cl">docker exec -it mysql /bin/bash #进入正在执行的mysql容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">39&lt;/span>&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; container_name_or_id #查看容器ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">40&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">41&lt;/span>&lt;span class="cl">从容器拷贝内容到主机：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">42&lt;/span>&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">Docker-compose命令
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">docker-compose up -d # 在后台启动服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">docker-compose pull # 拉取
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 指定docker-compose.yml，后同
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl">查看：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">docker-compose ps # 查看正在运行中的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">docker-compose ps -a # 查看所有编排容器，包括已停止的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl">docker-compose images # 列出Compose文件构建的镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">docker-compose logs # 查看日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">docker-compose logs [serviceName] # 查看某服务的日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">docker-compose logs -f [serviceName] # 查看某服务的实时日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">操作：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">17&lt;/span>&lt;span class="cl">docker-compose stop # 停止服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">18&lt;/span>&lt;span class="cl">docker-compose start # 启动已经存在的服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">19&lt;/span>&lt;span class="cl">docker-compose pause [serviceName] # 暂停服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">20&lt;/span>&lt;span class="cl">docker-compose unpause [serviceName] # 恢复服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">21&lt;/span>&lt;span class="cl">docker-compose restart [serviceName] # 重启服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">22&lt;/span>&lt;span class="cl">docker-compose rm # 删除所有（停止状态的）服务容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">23&lt;/span>&lt;span class="cl">docker-compose down # 删除所有容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">24&lt;/span>&lt;span class="cl">docker-compose down --remove-orphans # 删除orphans容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">25&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">26&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">27&lt;/span>&lt;span class="cl">docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">28&lt;/span>&lt;span class="cl">docker-compose exec --index=1 [serviceName] sh # 进入某服务的第1个容器执行命令
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">29&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">30&lt;/span>&lt;span class="cl">docker-compose --help # 帮助
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker命令
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run [可选参数] imagename #新建并启动容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　--name = &amp;#34;name&amp;#34; 容器取名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-it 交互模式进入容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-p ip:主机端口:容器端口 #指定端口映射
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search xxx #搜索dockerhub-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker images [-a][-q] #列出本地主机的-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -a 显示所有信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -q 显示所有id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker ps [-a][-q] #显示当前正在运行的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-a 显示当前运行的容器，并显示历史运行过的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-q 只显示运行容器的编号
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker logs 容器id #日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker top 容器id #查看容器中进程信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect 容器id #查看容器的详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">操作：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull 镜像：版本号 #拉取-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker start 容器id #启动容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker restart 容器id #重启容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop 容器id #停止容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker kill 容器id #强制停止容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm 容器id #删除停止状态的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm -f 容器id #强制删除容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f xxx #删除单个-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f $(docker images -aq) #删除所有-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop $(docker ps -a -q) #停止所有容器运行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm $(docker ps -a -q) #删除所有容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker network rm $(docker network ls -q) #删除所有network
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker system prune --all --force --volumes #删除一切
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">exit 容器停止并退出
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ctrl+p+q 容器不停止退出
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash #进入正在执行的mysql容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; container_name_or_id #查看容器ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">从容器拷贝内容到主机：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker-compose命令
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose up -d # 在后台启动服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose pull # 拉取
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 指定docker-compose.yml，后同
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose ps # 查看正在运行中的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose ps -a # 查看所有编排容器，包括已停止的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose images # 列出Compose文件构建的镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose logs # 查看日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose logs [serviceName] # 查看某服务的日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose logs -f [serviceName] # 查看某服务的实时日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">操作：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose stop # 停止服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose start # 启动已经存在的服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose pause [serviceName] # 暂停服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose unpause [serviceName] # 恢复服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose restart [serviceName] # 重启服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose rm # 删除所有（停止状态的）服务容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down # 删除所有容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down --remove-orphans # 删除orphans容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose exec --index=1 [serviceName] sh # 进入某服务的第1个容器执行命令
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose --help # 帮助
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>常用命令</title><link>https://www.jiangdaoli.cf/p/ubuntu/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/ubuntu/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
 >官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
 &lt;h2 id="push脚本">push脚本&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln"> 1&lt;/span>&lt;span class="cl">#!/bin/bash
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 2&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 3&lt;/span>&lt;span class="cl">echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 4&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 5&lt;/span>&lt;span class="cl"># Add changes to git.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 6&lt;/span>&lt;span class="cl">git add .
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 7&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 8&lt;/span>&lt;span class="cl"># Commit changes.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln"> 9&lt;/span>&lt;span class="cl">msg=&amp;#34;rebuilding site `date`&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">10&lt;/span>&lt;span class="cl">if [ $# -eq 1 ]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">11&lt;/span>&lt;span class="cl"> then msg=&amp;#34;$1&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">12&lt;/span>&lt;span class="cl">fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">13&lt;/span>&lt;span class="cl">git commit -m &amp;#34;$msg&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">14&lt;/span>&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">15&lt;/span>&lt;span class="cl"># Push source and build repos.
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">16&lt;/span>&lt;span class="cl">git push origin master
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo -e &amp;#34;\033[0;32mDeploying updates to GitHub...\033[0m&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Add changes to git.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Commit changes.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">msg=&amp;#34;rebuilding site `date`&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if [ $# -eq 1 ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> then msg=&amp;#34;$1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &amp;#34;$msg&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Push source and build repos.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="公开仓库fork为私有仓库">公开仓库fork为私有仓库&lt;/h2>
 &lt;ol>
 &lt;li>fork一个公开仓库&lt;/li>
@@ -1008,58 +1008,58 @@ data-flex-basis="427px"
 >导入功能&lt;/a>，写fork仓库的地址，并创建私有仓库&lt;/li>
 &lt;li>本地操作&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">git clone git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #克隆到本地
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">git remote add upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #添加上游(源)仓库用于更新
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #克隆到本地
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #添加上游(源)仓库用于更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>&lt;code>git remote -v&lt;/code>可以看到：&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (push)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">upstream DISABLE (push)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">origin git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (push)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git (fetch)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">upstream DISABLE (push)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
 &lt;li>拉取更新&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">git fetch upstream
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">git merge upstream/master
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git fetch upstream
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git merge upstream/master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="linux">Linux&lt;/h1>
 &lt;h2 id="文件">文件&lt;/h2>
 &lt;p>i 键可以对文件进行修改， &lt;code>Esc + :+ wq&lt;/code> 退出并保存修改之后的文件&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo gedit ~/File //编辑
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">touch File //新建文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">mkdir -p Folder/a/src //新建文件夹
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">sudo rm -r Folder //删除文件夹
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo gedit ~/File //编辑
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch File //新建文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mkdir -p Folder/a/src //新建文件夹
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm -r Folder //删除文件夹
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装包">安装包&lt;/h2>
 &lt;ul>
 &lt;li>apt&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo apt update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt upgrade //更新
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">dpkg --list //显示所有软件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">sudo apt-get install 包名 //安装
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">sudo apt-get remove 包名 //卸载不删除配置文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt upgrade //更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dpkg --list //显示所有软件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get install 包名 //安装
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get remove 包名 //卸载不删除配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get --purge remove 包名 //软件及其配置文件一并删除
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>snap&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo snap list //列出已经安装的snap包
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap list //列出已经安装的snap包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo snap install &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //安装一个snap包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo snap refresh &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //更新一个snap包，如果后面不加包的名字更新所有的snap包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo snap remove &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">snap&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> //删除一个snap包
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="端口">端口&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo apt-get install lsof //安装lsof
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">lsof -i:80 //查看80端口
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">kill -9 pid //强制杀进程
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt-get install lsof //安装lsof
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lsof -i:80 //查看80端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">kill -9 pid //强制杀进程
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="命令">命令&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">local #用于声明局部变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">source
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">systemctl stop service # 停止一个服务
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">systemctl daemon-reload # 重载所有修改过的配置文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">5&lt;/span>&lt;span class="cl">systemctl enable #将服务设置为每次开机启动
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">set -eux #用于脚本开头设置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">#-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">#-u 　当执行时使用到未定义过的变量，则显示错误信息。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">4&lt;/span>&lt;span class="cl">#-x 　执行指令后，会先显示该指令及所下的参数。
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">local #用于声明局部变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl stop service # 停止一个服务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl daemon-reload # 重载所有修改过的配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">systemctl enable #将服务设置为每次开机启动
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set -eux #用于脚本开头设置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-e 　若指令传回值不等于0，则立即退出shell。0表示没有错误
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-u 　当执行时使用到未定义过的变量，则显示错误信息。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#-x 　执行指令后，会先显示该指令及所下的参数。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="grep-sedawk">grep 、sed、awk&lt;/h3>
 &lt;p>&lt;strong>grep 、sed、awk被称为linux中的&amp;quot;三剑客&amp;quot;。&lt;/strong>&lt;/p>
 &lt;ul>
@@ -1072,7 +1072,7 @@ data-flex-basis="427px"
 &lt;ul>
 &lt;li>语法&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sed [option] &amp;#39;command&amp;#39; fileName
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sed [option] &amp;#39;command&amp;#39; fileName
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>选项&lt;/p>
@@ -1202,11 +1202,11 @@ data-flex-basis="427px"
 &lt;h2 id="shell">shell&lt;/h2>
 &lt;p>&lt;a class="link" href="http://www.imooc.com/wiki/shelllesson/shellvariable.html" target="_blank" rel="noopener"
 >原文地址&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">name=&amp;#34;MyName&amp;#34; //定义变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">echo $name 或 echo ${name} //使用变量
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">val=`expr 2 + 2` #expr 是一款表达式计算工具，使用它能完成表达式的求值操作。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">echo &amp;#34;Total value : $val&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">2&amp;gt;&lt;span class="err">&amp;amp;&lt;/span>1 把&amp;#34;标准错误输出&amp;#34;重定向到&amp;#34;标准输出&amp;#34;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">name=&amp;#34;MyName&amp;#34; //定义变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $name 或 echo ${name} //使用变量
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">val=`expr 2 + 2` #expr 是一款表达式计算工具，使用它能完成表达式的求值操作。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo &amp;#34;Total value : $val&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">2&amp;gt;&lt;span class="err">&amp;amp;&lt;/span>1 把&amp;#34;标准错误输出&amp;#34;重定向到&amp;#34;标准输出&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -1569,14 +1569,14 @@ data-flex-basis="427px"
 &lt;ul>
 &lt;li>git&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">git config --global http.proxy http://127.0.0.1:port.http
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">git config --global https.proxy https://127.0.0.1:port.http
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global http.proxy http://127.0.0.1:port.http
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global https.proxy https://127.0.0.1:port.http
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\90487\.gitconfig&lt;/code>，90487是我的用户名&lt;/p>
 &lt;ul>
 &lt;li>Terminal（临时使用）&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">set https_proxy=http://127.0.0.1:port.http #临时命令行代理
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:port.http #临时命令行代理
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -1587,15 +1587,15 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;p>git config&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>git ssh 代理&lt;/li>
 &lt;/ul>
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">Host github.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl"> User git
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl"> ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>终端代理（临时使用）&lt;/p>
@@ -1609,19 +1609,19 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">source ~/.bashrc #使配置生效
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu安装go">Ubuntu安装go&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo snap install go --classic #安装go
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">sudo vim /etc/profile #编辑profile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">export GOROOT=/snap/go #在最后一行添加
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">export PATH=$PATH:$GOROOT/bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">source /etc/profile #保存
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">go version #验证
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">export GO111MODULE=on
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap install go --classic #安装go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo vim /etc/profile #编辑profile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GOROOT=/snap/go #在最后一行添加
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export PATH=$PATH:$GOROOT/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source /etc/profile #保存
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">go version #验证
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GO111MODULE=on
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
 &lt;h2 id="使用">使用&lt;/h2>
 &lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
@@ -1637,9 +1637,9 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 >原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
 &lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
 &lt;p>在goland.sh注释之后的首行添加&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="ln">1&lt;/span>&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">2&lt;/span>&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="ln">3&lt;/span>&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
