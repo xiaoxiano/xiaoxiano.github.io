@@ -1,4 +1,698 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xiaoxian</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xiaoxian</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>postman使用（转）</title><link>https://www.jiangdaoli.cf/p/postman/</link><pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/postman/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
+>转载地址&lt;/a>&lt;/p>
+&lt;h1 id="api-是什么">API 是什么？&lt;/h1>
+&lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写。不要被这么长的单词吓到，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
+&lt;h1 id="postman-是什么">Postman 是什么？&lt;/h1>
+&lt;p>Postman 是一款 API 开发协作工具，它可以帮助你测试和开发 API，Postman 提供了测试 API 的友好界面和功能，使用简单便捷，安全可靠。Postman 是 API 接口测试工具的 Top 3，因为它简单可靠又免费，目前有超过 800 万开发者用户使用。特别是 API 批量测试功能，在近几次的大版本更新中，用户体验得到了极大的提升。Postman 是每一位前后端开发者必掌握的开发工具。&lt;/p>
+&lt;h1 id="一-如何安装-postman">一. 如何安装 Postman&lt;/h1>
+&lt;p>如何安装 Postman&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/1.jpg"
+width="780"
+height="477"
+srcset="https://www.jiangdaoli.cf/p/postman/1_hu1ed0e96d62f824200f97b34baa52ccd9_31556_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/1_hu1ed0e96d62f824200f97b34baa52ccd9_31556_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+>&lt;/p>
+&lt;p>前往 Postman 官网免费下载，安装非常傻瓜，这里就不展开写了，如果安装过程有任何问题，欢迎评论区提问。&lt;/p>
+&lt;p>Postman 支持 Windows、Mac 和 Linux，也可以直接跑在浏览器里，跨平台，使用相当便捷。&lt;/p>
+&lt;h1 id="二-api-模拟工具-gorest">二. API 模拟工具 GoRest&lt;/h1>
+&lt;p>本教程使用模拟 API 工具 GoRest 进行模拟 API 测试。GoRest 有非常多的使用场景，比如，后端接口还没有准备好时，我们可以先用 GoRest 模拟测试，又或者你自己暂时不想搞服务器，也不想搭后端，也可以先用 GoRest 来测。&lt;/p>
+&lt;p>GoRest 可以理解为后端工程师帮你搭好了后端服务器，而且是完全测过的，几乎不可能有 Bug。GoRest 除了其中的数据是模拟的，所有 API 响应都是完全真实的，你可以通过 API 调用的返回数据判断你的前端是否有问题。&lt;/p>
+&lt;p>API 模拟工具 GoRest&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/2.jpg"
+width="780"
+height="221"
+srcset="https://www.jiangdaoli.cf/p/postman/2_hube20950ec9e25d58b88e660b40557cb1_15577_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/2_hube20950ec9e25d58b88e660b40557cb1_15577_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="352"
+data-flex-basis="847px"
+>&lt;/p>
+&lt;p>GoRest 的 API 调用 URL 及规则。&lt;/p>
+&lt;p>通常 API 由 BaseURL + Endpoint 构成。比如上图中第一个 Resources：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这个 API 是由 &lt;a class="link" href="https://gorest.co.in" target="_blank" rel="noopener"
+>https://gorest.co.in&lt;/a> + /public/v1/users 即 BaseURL +Endpoint 组成的。一般我们可以从 API 地址看出调取信息的大意，这段 URL 是调用 GoRest 上有关 users 的信息。&lt;/p>
+&lt;p>下一节，我们使用 GET 请求调用这个 API ，看看返回结果是不是与 users 信息有关。&lt;/p>
+&lt;h1 id="三-用-postman-发出第一个-get-请求">三. 用 Postman 发出第一个 GET 请求&lt;/h1>
+&lt;ol>
+&lt;li>GET 请求基本操作&lt;/li>
+&lt;/ol>
+&lt;p>GET 请求是 API 中使用最频繁的请求之一，GET 请求仅从数据库中请求读取数据，不会修改服务器中的数据。&lt;/p>
+&lt;p>接下来，我们来创建一个基本的 GET 请求&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/3.jpg"
+width="780"
+height="276"
+srcset="https://www.jiangdaoli.cf/p/postman/3_huea8564f558db9e40cdb712e1531d4db4_15474_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/3_huea8564f558db9e40cdb712e1531d4db4_15474_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="282"
+data-flex-basis="678px"
+>&lt;/p>
+&lt;p>GET 请求基本操作&lt;/p>
+&lt;p>（1）点击主界面「+」号，新建一个请求页&lt;/p>
+&lt;p>（2）选择 GET 请求命令&lt;/p>
+&lt;p>（3）输入 API 地址：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在 GoRest API 设计中 GET 请求无需鉴权（下一节 POST 请求会讲解 API 鉴权问题），所有我们直接点击「Send」即可远程调取服务器信息。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/4.jpg"
+width="780"
+height="588"
+srcset="https://www.jiangdaoli.cf/p/postman/4_hu653be2600f7148457265c8c206b5164d_28448_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/4_hu653be2600f7148457265c8c206b5164d_28448_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;p>GET 请求基本操作&lt;/p>
+&lt;p>点击「Send」，我们可以看到下方的 Body 显示了 GET API 返回值，第一段落是 users 信息概览，下面是一组组 user 信息。&lt;/p>
+&lt;p>如果我们只想看调取其中一位用户的信息应该怎么办呢？我们可以在 API URL 中带上参数。&lt;/p>
+&lt;ol start="2">
+&lt;li>带参数的 GET 请求&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/5.jpg"
+width="780"
+height="266"
+srcset="https://www.jiangdaoli.cf/p/postman/5_hu61bc7237f03831ddaeca34567e20c96d_16924_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/5_hu61bc7237f03831ddaeca34567e20c96d_16924_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="293"
+data-flex-basis="703px"
+>&lt;/p>
+&lt;p>带参数的 GET 请求&lt;/p>
+&lt;p>如果我们想查询 ID 为 2043 的用户信息，我们只需要在请求页面中的 Params(参数) 标签页的 KEY - VALUE 内填写对应的参数即可，之后 Postman 会自动在 API URL 中生成你填写的参数，使 URL 带上参数 GET 请求。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users?id=2043
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>设置完成后，点击「Send」&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/6.jpg"
+width="780"
+height="588"
+srcset="https://www.jiangdaoli.cf/p/postman/6_hua01f77d100f45c448c354a8248c0cdc6_27052_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/6_hua01f77d100f45c448c354a8248c0cdc6_27052_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;p>带参数的 GET 请求&lt;/p>
+&lt;p>我们可以看到，返回值中仅包含我们请求的 user id 为 2043 的用户信息。&lt;/p>
+&lt;ol start="3">
+&lt;li>&lt;/li>
+&lt;/ol>
+&lt;p>有时，我们需要使用 API 进行多条件查询操作，比如想找 &lt;code>name&lt;/code> 值为 &lt;code>kalacloud.com&lt;/code> ，同时 &lt;code>gender&lt;/code> 值为 &lt;code>male&lt;/code> 的用户。（特别提示：此格式是通用写法，但最终要看 API 的开发者如何约定调用方式）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">BaseURL + ResourceName + ? + key1 = value1 + &amp;amp; + key 2 = value 2 ……
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>主 URL 之后使用 &lt;code>?&lt;/code> 连接参数，参数与参数之间使用 &lt;code>&amp;amp;&lt;/code> 连接符连接。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public-api/users/?name=kalacloud.com&amp;amp;gender=male
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/7.jpg"
+width="780"
+height="279"
+srcset="https://www.jiangdaoli.cf/p/postman/7_hu069cf5c74c5591848496c4d99804f130_19196_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/7_hu069cf5c74c5591848496c4d99804f130_19196_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="279"
+data-flex-basis="670px"
+>&lt;/p>
+&lt;p>当然，我们可以直接在 Postman 的 Params 中直接填写 KEY - VALUE&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/8.jpg"
+width="780"
+height="230"
+srcset="https://www.jiangdaoli.cf/p/postman/8_hu75397afa6c0d3767ce56a8662b2c88df_11487_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/8_hu75397afa6c0d3767ce56a8662b2c88df_11487_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="339"
+data-flex-basis="813px"
+>&lt;/p>
+&lt;p>让 Postman 帮我们生成，然后点击「Send」&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/9.jpg"
+width="780"
+height="797"
+srcset="https://www.jiangdaoli.cf/p/postman/9_huadee4e48b5745e802653f0461771db4b_34515_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/9_huadee4e48b5745e802653f0461771db4b_34515_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="97"
+data-flex-basis="234px"
+>&lt;/p>
+&lt;p>可以看到 API GET 调取了我们设定的两个 VALUE 值的 data 信息。&lt;/p>
+&lt;p>特别提示，你可以点击右上角的「Bulk Edit」进行参数的批量编辑&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/10.jpg"
+width="780"
+height="366"
+srcset="https://www.jiangdaoli.cf/p/postman/10_hub64c0fcc57537599cc9a711fa7c58fa5_18468_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/10_hub64c0fcc57537599cc9a711fa7c58fa5_18468_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="213"
+data-flex-basis="511px"
+>&lt;/p>
+&lt;h1 id="四-在-postman-中发送-post-请求">四. 在 Postman 中发送 POST 请求&lt;/h1>
+&lt;p>这一节我们讲 POST 请求，POST 请求和 GET 请求最大的区别是 GET 请求仅使用只读形式读取数据，而 POST 请求会修改服务器中的数据，比如创建新用户，创建用户信息，上传图片等操作都是用 POST 完成的。&lt;/p>
+&lt;h1 id="1-post-请求前使用-postman-对-api-鉴权">1. POST 请求前，使用 Postman 对 API 鉴权&lt;/h1>
+&lt;p>POST 不再仅仅是读取数据，会涉及到对数据的写入，这种敏感的操作，一定会涉及到账号鉴权操作。&lt;/p>
+&lt;p>GoRest 模拟 API 工具使用 HTTP Basic Authentication 鉴权方式&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/11.jpg"
+width="780"
+height="214"
+srcset="https://www.jiangdaoli.cf/p/postman/11_hufeed9050b917293dc4e0b97d96b0575d_14513_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/11_hufeed9050b917293dc4e0b97d96b0575d_14513_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="364"
+data-flex-basis="874px"
+>&lt;/p>
+&lt;p>这种鉴权方式可以直接放在 Headers 中以 Key - Value 的形式进行验证，本教程演示稍微复杂点的 OAuth2 鉴权方式，好让大家学到更多。&lt;/p>
+&lt;p>首先在 GoRest 注册账号，然后点击顶部的「Rest Console」进入控制页，我们可以在这个页面获得自己的 Auth Token，这段就是 API 用于鉴权的密钥。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/12.jpg"
+width="780"
+height="303"
+srcset="https://www.jiangdaoli.cf/p/postman/12_huabe1267e4cbc92ea4023efa2d5cbb23a_19916_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/12_huabe1267e4cbc92ea4023efa2d5cbb23a_19916_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="257"
+data-flex-basis="617px"
+>&lt;/p>
+&lt;p>在 Postman 请求页的 Auth 标签中，选择鉴权类型（Type）为 OAuth 2.0，然后在 Access Token 中填写网页上的这段 Value 后，在请求类型中选择 POST，输入 API 请求地址&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后点击「Send」&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/13.jpg"
+width="780"
+height="828"
+srcset="https://www.jiangdaoli.cf/p/postman/13_hu92960735e98e499657da5feb965db5e8_35878_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/13_hu92960735e98e499657da5feb965db5e8_35878_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="94"
+data-flex-basis="226px"
+>&lt;/p>
+&lt;p>如果 HTTP 响应代码返回 422，表示鉴权成功，只是没有填写数据。&lt;/p>
+&lt;p>&lt;code>特别提示：&lt;/code>在本案例中使用的GoRest API 是先检测 Token 是否正确，之后在检测 body 等信息。也有先检测提交信息是否正确再鉴权的 API，这取决于 API 的开发者怎么设定，那么这种情况 422 就不代表鉴权成功。所以谨慎起见，所有 4XX 开头的响应代码，你都可以理解为出现了错误。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/14.jpg"
+width="780"
+height="576"
+srcset="https://www.jiangdaoli.cf/p/postman/14_hufed576de3827e7f35c7d21018167ba30_27393_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/14_hufed576de3827e7f35c7d21018167ba30_27393_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="135"
+data-flex-basis="325px"
+>&lt;/p>
+&lt;p>如果返回 401 说明鉴权验证失败（Authentication failed）你的 Token 可能复制错了，请检查后再试。&lt;/p>
+&lt;p>鉴权成功后，下一节，我们通过 API POST 请求将第一组数据写入服务器数据库。&lt;/p>
+&lt;h1 id="2用-postman-发出第一个-post-请求">（2）用 Postman 发出第一个 POST 请求&lt;/h1>
+&lt;p>上一节，我们通过 API Token 鉴权成功，下面我们在请求页设置 POST 请求信息。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/15.jpg"
+width="780"
+height="351"
+srcset="https://www.jiangdaoli.cf/p/postman/15_hu0b66375a84622ce34bd20cea2c7217f8_20121_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/15_hu0b66375a84622ce34bd20cea2c7217f8_20121_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="222"
+data-flex-basis="533px"
+>&lt;/p>
+&lt;p>1.请求命令选择 POST，然后在地址栏填写 API 地址：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.在「Auth」标签页根据本文上一小节设置 API 鉴权 Access Token&lt;/p>
+&lt;p>3.在 Body 中选择 raw 然后选择 JSON 格式。&lt;/p>
+&lt;p>4.将下列 JSON 代码填入编辑框，此为本次 POST 发送给服务器的内容。&lt;/p>
+&lt;p>5.我们将注册一个新用户，用户信息包含在这个 JSON 文本里。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;name&amp;#34;: &amp;#34;kalacloud&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;gender&amp;#34;: &amp;#34;Male&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;email&amp;#34;: &amp;#34;JiangChuan@kalacloud.com&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;status&amp;#34;: &amp;#34;Active&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后，点击「Send」，发送 POST 请求。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/16.jpg"
+width="780"
+height="641"
+srcset="https://www.jiangdaoli.cf/p/postman/16_hu54867dd6e426838f2b6a42a81588c80c_28435_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/16_hu54867dd6e426838f2b6a42a81588c80c_28435_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="292px"
+>&lt;/p>
+&lt;p>我们可以看到 API 返回信息，已经在服务器中注册好新用户，新用户 ID 为 2151，并一起返回了我们刚刚提交的用户注册信息。&lt;/p>
+&lt;p>如果你也看到了类似的返回结果，那么恭喜，你的第一个 POST 请求被服务器成功接受，你通过 API 在服务器上注册了一个新用户。&lt;/p>
+&lt;p>扩展阅读：最好的 6 个免费天气 API 接口对比测评&lt;/p>
+&lt;h1 id="五-用-postman-发送第一个-put-更新请求">五. 用 Postman 发送第一个 PUT 更新请求&lt;/h1>
+&lt;p>PUT 请求一般用于更新服务器已有资源，如果服务器中没有对应的资源，那么 PUT 会创建相应的资源（特别提醒：虽然 PUT 有创建新资源的功能，但是否能创建成功，最终取决于你调用的 API 是否支持此功能）&lt;/p>
+&lt;p>打开你的 Postman 我们来创建一个 PUT 请求。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>点击「+」号，新建一个请求页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>请求类型选择「PUT」&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>根据第四节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 PUT 修改 ID 为 1475 资源的请求地址应该写：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>选择在 &lt;code>Body&lt;/code> 标签中填写 JSON 格式的资源修改信息。我们将 &lt;code>1475&lt;/code> 中的邮箱由&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">JiangChuan@kalacloud.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>修改为 &lt;code>Hi@kalacloud.com&lt;/code>，所以我们在 Body 中填写以下代码。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;name&amp;#34;: &amp;#34;kalacloud&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;gender&amp;#34;: &amp;#34;Male&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;email&amp;#34;: &amp;#34;Hi@kalacloud.com&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;status&amp;#34;: &amp;#34;Active&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>点击 「Send」发送 PUT 请求&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/17.jpg"
+width="780"
+height="588"
+srcset="https://www.jiangdaoli.cf/p/postman/17_hueefed72c682fb492266139d2e0ca7c93_28056_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/17_hueefed72c682fb492266139d2e0ca7c93_28056_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;ul>
+&lt;li>如上图所示，可以看到红4位置 响应代码返回 200 ，这说明 PUT 请求已经执行成功。&lt;/li>
+&lt;li>返回的 Body 信息中，email 字段已经更新为 &lt;code>Hi@kalacloud.com&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h1 id="六-用-postman-发送第一个-patch-更新请求">六. 用 Postman 发送第一个 PATCH 更新请求&lt;/h1>
+&lt;p>PATCH 请求一般用于服务器资源的部分更新，它相对于 PUT 提交的数据更少，不用提整个数据，只需要提交需要修改的字段即可。有关 PUT 和 PATCH 的更多区别，可查看本文第七节。&lt;/p>
+&lt;p>打开你的 Postman 我们来创建一个 PATCH 请求。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>点击「+」号，新建一个请求页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>请求类型选择「PATCH」&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>根据第四节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 PATCH 修改 ID 为 1475 资源的请求地址应该写，到这里都和 PUT 请求修改资源的方法一样。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>选择在 &lt;code>Body&lt;/code> 标签中填写 JSON 格式的资源修改信息。上一节我们已经将 ID 为 &lt;code>1475&lt;/code> 资源的邮箱改为 &lt;code>Hi@kalacloud.com&lt;/code> ，接着我们用 PATCH 请求把这个邮箱改为&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HelloWord@kalacloud.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;email&amp;#34;:&amp;#34;HelloWord@kalacloud.com&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>点击 「Send」发送 PATCH 请求&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/18.jpg"
+width="780"
+height="588"
+srcset="https://www.jiangdaoli.cf/p/postman/18_hueafacd55cb3e243dcca7f16297d3cd9e_27788_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/18_hueafacd55cb3e243dcca7f16297d3cd9e_27788_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="132"
+data-flex-basis="318px"
+>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>如上图所示，可以看到红4位置 响应代码返回 200 ，这说明 PATCH 请求已经执行成功。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>返回的 Body 信息中，email 字段已经更新为&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HelloWord@kalacloud.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ul>
+&lt;h1 id="七-put-和-patch-的区别">七. PUT 和 PATCH 的区别&lt;/h1>
+&lt;p>在 HTTP 协议中，PUT 和 PATCH 都是用于更新服务器资源的命令，但他们有着不同的格式和用途。&lt;/p>
+&lt;p>PUT 请求：一般用于更新服务器已有资源，如果服务器中没有对应的资源，那么 PUT 会创建相应的资源（特别提醒：虽然 PUT 有创建新资源的功能，但是否能创建最终取决于你调用的 API 是否支持此功能）&lt;/p>
+&lt;p>PATCH 请求：用于局部更新服务器现有资源，它不用像 PUT 更新资源中的一点点也要提交所有字段信息，PATCH 更新哪个字段就提交哪个字段的更新信息即可。&lt;/p>
+&lt;p>&lt;code>举例说明PUT 和 PATCH 的区别：&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/19.jpg"
+width="780"
+height="263"
+srcset="https://www.jiangdaoli.cf/p/postman/19_huda2a1c0ebe4bcfb14216027fe2f1ab79_13723_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/19_huda2a1c0ebe4bcfb14216027fe2f1ab79_13723_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="296"
+data-flex-basis="711px"
+>&lt;/p>
+&lt;p>同样是更新资源中的 Email 信息，PUT 需要带上资源中的所有信息，然后在更新&lt;code>（上图）&lt;/code>&lt;/p>
+&lt;p>而 PATCH 则仅需要提交更新部分，即仅提交邮箱信息即可&lt;code>（下图）&lt;/code>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/20.jpg"
+width="780"
+height="269"
+srcset="https://www.jiangdaoli.cf/p/postman/20_hu4966b7454a7afa23a140f0b93ed970ed_13804_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/20_hu4966b7454a7afa23a140f0b93ed970ed_13804_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="289"
+data-flex-basis="695px"
+>&lt;/p>
+&lt;p>那么，如果 PUT 像 PATCH 一样仅提交资源的局部信息会发生什么呢？会 400 报错。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/21.jpg"
+width="780"
+height="491"
+srcset="https://www.jiangdaoli.cf/p/postman/21_huf83142ee0bab4f71dc642b8adcfa23ad_24623_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/21_huf83142ee0bab4f71dc642b8adcfa23ad_24623_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="158"
+data-flex-basis="381px"
+>&lt;/p>
+&lt;p>PUT 不论修改多少，必须把修改资源的全部字段写全，否则会 400 报错。&lt;/p>
+&lt;h1 id="八-用-postman-发送第一个-delete-删除请求">八. 用 Postman 发送第一个 DELETE 删除请求&lt;/h1>
+&lt;p>我们在上文讲了获取(GET)，创建(POST)，更新(PUT / PATCH) 请求，接着我们来说说删除(DELETE) 请求。顾名思义，DELETE 请求执行可删除整个资源。我们来直接实践一次你就明白了。&lt;/p>
+&lt;p>打开你的 Postman ，跟随本教程一起创建一个 DELETE 请求。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>点击「+」号，新建一个请求页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>请求类型选择「DELETE」&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>我们来把上文刚刚创建的 ID 为 &lt;code>1475&lt;/code> 的资源彻底删掉。根据 GoRest API 的文档得知，删除资源的 API 请求地址为&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 &lt;code>PATCH&lt;/code> 删除 ID 为 1475 资源的请求地址应该写：&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>点击 「Send」发送 DELETE 请求，删除对应的资源。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/22.jpg"
+width="780"
+height="393"
+srcset="https://www.jiangdaoli.cf/p/postman/22_hua865477ba4d92d0fcb103f74bff262bd_20907_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/22_hua865477ba4d92d0fcb103f74bff262bd_20907_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="198"
+data-flex-basis="476px"
+>&lt;/p>
+&lt;p>如上图所示，提交 DELETE 请求后，响应代码为 204 ，返回的 body 为空，删除成功。&lt;/p>
+&lt;p>特别提示：在 GoRest 的文档说明中，特别说了 DELETE 删除返回值的状态。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/23.jpg"
+width="780"
+height="107"
+srcset="https://www.jiangdaoli.cf/p/postman/23_hu5a444ecc2cd619d231b5e2d91f409217_12916_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/23_hu5a444ecc2cd619d231b5e2d91f409217_12916_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="728"
+data-flex-basis="1749px"
+>&lt;/p>
+&lt;p>API 返回状态具体是怎么样的，还要看 API 的开发者是如何约定的，并非只有返回 200 才是成功的。&lt;/p>
+&lt;h1 id="九-postman-中的全局变量环境变量集合变量的设置">九. Postman 中的全局变量、环境变量、集合变量的设置&lt;/h1>
+&lt;h1 id="1-postman-设置变量的意义">1. Postman 设置变量的意义&lt;/h1>
+&lt;p>Postman 里有多种变量，我们可以把某些重要的值抽象出来变成变量，方便我们做场景 / 条件切换。比如，我们可以把 baseURL 抽出来，在环境变量里设置「生产环境变量」和「测试环境变量」，之后，我们只需要切换标签即可快速将数据从一个环境切换到另一个环境中，非常方便。&lt;/p>
+&lt;h1 id="2-postman-常用的三种变量形式">2. Postman 常用的三种变量形式&lt;/h1>
+&lt;ul>
+&lt;li>全局变量：全局变量一旦声明，即可应用到 Postman 中所有测试的 API 中。任何请求都可以直接使用全局变量，它的作用域是全局的。&lt;/li>
+&lt;li>环境变量：Postman 的环境变量可以理解为一组选项，当这组环境变量选项被选中时，才会生效，特别适合「生产环境」和「测试环境」之间的切换等应用场景。&lt;/li>
+&lt;li>集合变量：集合变量是针对集合（Collections）生效的，一个集合下可能有 N 条 API 请求，集合变量可以一次修改集合下的所有变量数值。&lt;/li>
+&lt;/ul>
+&lt;p>以上三种变量的作用域从大到小为 全局 集合 环境，当三个变量形式同时作用于一个 API 测试条时，Postman 会优先使用最小作用域变量。&lt;/p>
+&lt;h1 id="3-如何在-postman-设置全局变量与环境变量">3. 如何在 Postman 设置全局变量与环境变量&lt;/h1>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/24.jpg"
+width="780"
+height="339"
+srcset="https://www.jiangdaoli.cf/p/postman/24_hu3f46bdba652759e817d03a30c2f3c0fe_20545_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/24_hu3f46bdba652759e817d03a30c2f3c0fe_20545_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="230"
+data-flex-basis="552px"
+>&lt;/p>
+&lt;ul>
+&lt;li>新建一个请求页，点击右上角的「小眼睛」进入变量设置页。&lt;/li>
+&lt;li>页面上方为「环境变量」，我们点击编辑设置环境变量名为「卡拉云_API 测试环境」&lt;/li>
+&lt;li>VARIABLE 设置为 &lt;code>baseURL&lt;/code>，INITIAL VALUE 设置为 &lt;code>https://gorest.co.in&lt;/code> ，保存之后我们就可以使用 &lt;code>{{baseURL}}&lt;/code> 变量来替代 API URL 了。&lt;/li>
+&lt;li>页面下方为「全局变量」，VARIABLE 设置为 &lt;code>kalacloud_id&lt;/code>，INITIAL VALUE 设置为 &lt;code>2312&lt;/code> (2312 为 GoRest 中的一个已存在的用户信息 ID)，保存后我们就可以使用 &lt;code>{{kalacloud_id}}&lt;/code> 变量来替代 ID 值了。&lt;/li>
+&lt;/ul>
+&lt;p>我们来一起测一下刚刚设置好的「全局变量」和「环境变量」是否生效。&lt;/p>
+&lt;ul>
+&lt;li>新建一个 GET 请求页，地址栏填入：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{baseURL}}/public/v1/users?id={{kalacloud_id}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>点击「Send」&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/25.jpg"
+width="780"
+height="802"
+srcset="https://www.jiangdaoli.cf/p/postman/25_hu532d10b5292918f32cc50bde7cdeca2c_37000_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/25_hu532d10b5292918f32cc50bde7cdeca2c_37000_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="97"
+data-flex-basis="233px"
+>&lt;/p>
+&lt;p>返回响应代码为 200 说明请求成功，返回的 Body 信息是 ID 为 &lt;code>2312&lt;/code> 的用户信息，说明全局和环境变量已生效。&lt;/p>
+&lt;h1 id="4-如何在-postman-设置集合变量">4. 如何在 Postman 设置集合变量&lt;/h1>
+&lt;p>集合变量是指应用在整个集合所有请求中的变量，集合变量优先与其他变量应用与请求，也就是说如果有集合变量，那么其他变量与集合变量相冲突的化，优先执行集合变量。&lt;/p>
+&lt;p>集合变量很适合临时修改整个集合中的变量，来针对集合进行测试。&lt;/p>
+&lt;p>打开你的 Postman，我们一起操作一遍。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/26.jpg"
+width="780"
+height="275"
+srcset="https://www.jiangdaoli.cf/p/postman/26_hu79d68642b788fbbc24059bc3291e54c3_19910_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/26_hu79d68642b788fbbc24059bc3291e54c3_19910_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="283"
+data-flex-basis="680px"
+>&lt;/p>
+&lt;ul>
+&lt;li>选中一个集合，点击集合标题右侧「&amp;hellip;」选择编辑。&lt;/li>
+&lt;li>进入集合设置页，选择 Variables 设置集合变量&lt;/li>
+&lt;li>此时，整个集合下所有请求页，都应用了此集合变量。&lt;/li>
+&lt;/ul>
+&lt;h1 id="十-如何使用-postman-pre-request-scripts-预请求脚本">十. 如何使用 Postman &lt;code>Pre-request scripts&lt;/code> 预请求脚本&lt;/h1>
+&lt;p>Pre-request scripts 预请求脚本是在 API 请求之前执行的脚本，我们可以临时更改请求的某些变量。一般预请求脚本有这么两种常见的应用场景。(1)设置动态请求头信息。 (2)设置动态请求参数信息。比如，当我们要请求一个与时间有关的资源时，我们可以在预请求脚本中添加 &lt;code>timestamp&lt;/code> 字段，这是一个动态值，我们可以通过前置请求脚本来实现。&lt;/p>
+&lt;p>&lt;code>举例说明：&lt;/code>比如我们要在 header 中包含一个时间戳，我们可以这样操作&lt;/p>
+&lt;ul>
+&lt;li>在 Pre-request scripts 中添加获取时间戳的代码&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.environment.set(&amp;#34;TimeStampHeader&amp;#34;,new Date());
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/27.jpg"
+width="780"
+height="331"
+srcset="https://www.jiangdaoli.cf/p/postman/27_hu8d24557a50ac1abeee8fc4533f535bdb_18505_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/27_hu8d24557a50ac1abeee8fc4533f535bdb_18505_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="235"
+data-flex-basis="565px"
+>&lt;/p>
+&lt;ul>
+&lt;li>在 header 中添加预脚本中的变量 &lt;code>TimeStampHeader&lt;/code> 当请求时，Postman 会先执行预脚本获取时间戳，然后再将时间戳赋予到 header 中 timestamp 值中。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/28.jpg"
+width="780"
+height="312"
+srcset="https://www.jiangdaoli.cf/p/postman/28_huc7645f22b2c0495ea5ca0e9d9f854f5c_15945_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/28_huc7645f22b2c0495ea5ca0e9d9f854f5c_15945_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="250"
+data-flex-basis="600px"
+>&lt;/p>
+&lt;ul>
+&lt;li>接着我们来执行这条 GET 请求，打开控制控制台，在控制台中，可以看到 Request Headers 中包含我们刚刚设置的时间戳 「timestamp」特别提示：有关控制台的讲解，在本教程第十二节。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/29.jpg"
+width="780"
+height="583"
+srcset="https://www.jiangdaoli.cf/p/postman/29_huae5b01fcbe01a7531db07d1193bc4403_30930_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/29_huae5b01fcbe01a7531db07d1193bc4403_30930_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="133"
+data-flex-basis="321px"
+>&lt;/p>
+&lt;p>&lt;code>附：常用的 Pre-request scripts ：&lt;/code>&lt;/p>
+&lt;p>&lt;code>获取变量&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.getGlobalVariable(&amp;#34;key&amp;#34;); //获取全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.getEnvironmentVariable(&amp;#34;key&amp;#34;); //获取环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.get(&amp;#34;key&amp;#34;); //获取全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.get(&amp;#34;key&amp;#34;); //获取环境变量
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>设置变量&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setGlobalVariable(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.get(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.get(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置环境变量
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>清除变量&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.clearGlobalVariable(&amp;#34;key&amp;#34;); //清除全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.clearEnvironmentVariable(&amp;#34;key&amp;#34;); //清除环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.unset(&amp;#34;key&amp;#34;); //清除全局变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.unset(&amp;#34;key&amp;#34;); //清除环境变量
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>将数组、嵌套对象存储到全局&amp;amp;环境变量中&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//将数组储存到环境变量中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var array = [1, 2, 3, 4];
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;array&amp;#34;, JSON.stringify(array));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//将嵌套对象储存到环境变量中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var obj = { a: [1, 2, 3, 4], b: { c: &amp;#39;val&amp;#39; } };
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;obj&amp;#34;, JSON.stringify(obj));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//从环境变量中获取数组对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var array = JSON.parse(postman.getEnvironmentVariable(&amp;#34;array&amp;#34;));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//从环境变量中获取嵌套对象/json对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var obj = JSON.parse(postman.getEnvironmentVariable(&amp;#34;obj&amp;#34;));
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="十一-如何创建-postman-tests-测试脚本---postman-断言功能">十一. &lt;code>如何创建 Postman Tests 测试脚本 - Postman 断言功能&lt;/code>&lt;/h1>
+&lt;p>在 Postman 中 Pre-request 和 Tests 是两兄弟，一个是在调用前执行（Pre-request），一个是在调用后执行（Tests），我们可以在 Tests 中使用 JavaScript 校验代码协助我们验证结果，可以说 Tests 是 Postman 的断言功能&lt;/p>
+&lt;h1 id="1-postman-tests-断言的实际应用">1. &lt;code>Postman Tests 断言的实际应用&lt;/code>&lt;/h1>
+&lt;ul>
+&lt;li>&lt;code>Postman 状态类断言&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/30.jpg"
+width="780"
+height="425"
+srcset="https://www.jiangdaoli.cf/p/postman/30_hu6d4c59ad85bc4762a1650b211ae988f8_25225_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/30_hu6d4c59ad85bc4762a1650b211ae988f8_25225_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="183"
+data-flex-basis="440px"
+>&lt;/p>
+&lt;p>1.我们首先创建一个 GET 请求，然后点击 Postman 中 Tests 标签，进入断言设置。&lt;/p>
+&lt;p>2.我们可以在右侧已经预设好的断言代码，我们先点击「Status code: Code is 200」，可以看到预设的代码直接写入编辑框。这段代码的意思是，如果执行调用，服务器返回响应代码为 &lt;code>200&lt;/code> 时，判断为 &lt;code>PASS&lt;/code> 即调用成功。&lt;/p>
+&lt;p>3.点击「Send」执行 GET 请求，返回的断言可以在 Test Results 中看到结果。&lt;/p>
+&lt;p>4.绿色的 PASS，说明服务器返回的响应代码为 200 ，调用成功。&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Postman 结果比较类断言&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>我们再添加一条带有变量的 JavaScript 断言设置，比较预期结果和实际返回结果之间是否一致。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/31.jpg"
+width="780"
+height="389"
+srcset="https://www.jiangdaoli.cf/p/postman/31_hubc556dbf787462ceaff1b4aa65111ce5_18017_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/31_hubc556dbf787462ceaff1b4aa65111ce5_18017_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="200"
+data-flex-basis="481px"
+>&lt;/p>
+&lt;p>我们刚刚 GET 请求了 ID 2312 的用户信息，其中 &lt;code>name&lt;/code> 的值为 &lt;code>kalacloud&lt;/code>&lt;/p>
+&lt;p>那么我们接下来写一个 JS 判断预期与返回结果是否一致。即预期为 &lt;code>name&lt;/code> 的值为「kalacloud」，写断言自动判断返回结果的&lt;code>name&lt;/code>值是否也是「kalacloud」&lt;/p>
+&lt;p>1.在 Tests 选项卡右侧选择「Response body:JSON value check」，我们来检测 &lt;code>ID&lt;/code> 为 &lt;code>2312&lt;/code> 的返回值中，&lt;code>name&lt;/code> 的值是否为 &lt;code>kalacloud&lt;/code>&lt;/p>
+&lt;p>2.我们将「Your Test Name」替换为「检查 ID 为 2312 的 name 返回值为 kalacloud」让这条测试的名字直接反应出我们想测试的内容。&lt;/p>
+&lt;p>3.使用&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">jsonData.data[0].name
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>代替&lt;code>jsonData.value&lt;/code> ，即检测第一个返回值中的 &lt;code>name&lt;/code> 的 &lt;code>value&lt;/code>&lt;/p>
+&lt;p>4.检测返回值：在 &lt;code>to.eql()&lt;/code> 中输入待检测值 &lt;code>&amp;quot;kalacloud&amp;quot;&lt;/code>，即需要检测的 text。&lt;/p>
+&lt;p>5.代码如下，你可以复制并根据你的情况简单修改，然后在 Postman 中，跟随教程一起测试。&lt;/p>
+&lt;p>&lt;code>特别注意：&lt;/code>这里的 &lt;code>ID = 2312&lt;/code> 是我这里的情况，你需要根据你的情况进行相应修改。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;Status code is 200&amp;#34;, function () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.response.to.have.status(200);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;检查 ID 为 2312 的 name 返回值为 kalacloud&amp;#34;, function () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var jsonData = pm.response.json();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.expect(jsonData.data[0].name).to.eql(&amp;#34;kalacloud&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/32.jpg"
+width="780"
+height="436"
+srcset="https://www.jiangdaoli.cf/p/postman/32_hu47217341b9871beaf84079c07f12c825_29010_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/32_hu47217341b9871beaf84079c07f12c825_29010_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="178"
+data-flex-basis="429px"
+>&lt;/p>
+&lt;h1 id="十二-如何在-postman-中使用控制台">十二. 如何在 Postman 中使用控制台&lt;/h1>
+&lt;p>控制台可以非常直观的显示当前调用的一系列信息，我们可以在「菜单 → view → Show Postman Console」或者点击 Postman 左下角的「Console」图标，打开控制台。&lt;/p>
+&lt;p>我们可以在 Tests 测试脚本中加入 &lt;code>console.log&lt;/code> 来显示我们需要在控制台显示的调用信息。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/33.jpg"
+width="780"
+height="806"
+srcset="https://www.jiangdaoli.cf/p/postman/33_hu3eb35c9a910b1043d5774817ccd70a83_40816_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/33_hu3eb35c9a910b1043d5774817ccd70a83_40816_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="96"
+data-flex-basis="232px"
+>&lt;/p>
+&lt;p>如上图，我们在 Test 脚本中加入以下代码&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">console.log(&amp;#34;本次测试 id 值为&amp;#34;,pm.variables.get(&amp;#34;kalacloud_id&amp;#34;));
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以显示隐藏在变量下面的具体变量值，方便我们测试时，进行相应的判断。&lt;/p>
+&lt;h1 id="十三-如何使用-runner-批量执行测试批量更换变量测试">十三. 如何使用 Runner 批量执行测试，批量更换变量测试&lt;/h1>
+&lt;p>当我们有一组 API 且这一组之间相互关联的关系，使用手动测试效率非常低。这时，我们就要用到 Postman 的批量执行（Runner）功能，Runner 不仅可以批量执行 API 调用，还可以批量更换变量。掌握此方法，大幅度提升 API 测试效率。&lt;/p>
+&lt;p>打开你的 Postman ，跟随本教程一起操作一遍吧。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/34.jpg"
+width="774"
+height="440"
+srcset="https://www.jiangdaoli.cf/p/postman/34_huc68b28d4dd28a1b9f68975346c2e3229_24137_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/34_huc68b28d4dd28a1b9f68975346c2e3229_24137_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="175"
+data-flex-basis="422px"
+>&lt;/p>
+&lt;ul>
+&lt;li>本次批量 API 测试，我们先导入一个 CSV 文件，文件中包含四组等待新建的用户信息，将 CSV 文件导入 Runner 中待用。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/35.jpg"
+width="780"
+height="289"
+srcset="https://www.jiangdaoli.cf/p/postman/35_hu6db0e7d82d4a94829a1ccc5dcf1f991c_18048_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/35_hu6db0e7d82d4a94829a1ccc5dcf1f991c_18048_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="269"
+data-flex-basis="647px"
+>&lt;/p>
+&lt;ul>
+&lt;li>新建 POST 调用页，在 Body 里写上创建用户所需信息，所有值使用变量替代，这些变量将从 CSV 中读取。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/36.jpg"
+width="780"
+height="259"
+srcset="https://www.jiangdaoli.cf/p/postman/36_hu2f772fbf6a2081459114be20dbd25c84_17021_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/36_hu2f772fbf6a2081459114be20dbd25c84_17021_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="301"
+data-flex-basis="722px"
+>&lt;/p>
+&lt;ul>
+&lt;li>新建 GET 调用页，使用 &lt;code>email&lt;/code> 作为查询 KEY 进行查询，如果上一步 POST 执行成功，那么 GET 就能成功查询到新建用户对应的 email，查询到表示 POST 创建成功。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/37.jpg"
+width="780"
+height="266"
+srcset="https://www.jiangdaoli.cf/p/postman/37_hu0865bc58493d116029bf159eebe8e135_19034_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/37_hu0865bc58493d116029bf159eebe8e135_19034_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="293"
+data-flex-basis="703px"
+>&lt;/p>
+&lt;ul>
+&lt;li>在「卡拉云_kalacloud.com_批量测试」这个集合中设置 Tests 中设置全局断言，每当一个调用执行完毕时，进行 Tests 一次判断。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;Status code is 200&amp;#34;, function () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.response.to.have.status(200);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/38.jpg"
+width="780"
+height="376"
+srcset="https://www.jiangdaoli.cf/p/postman/38_hu3bcce46d83762d09643fbe1c6435ef67_21759_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/38_hu3bcce46d83762d09643fbe1c6435ef67_21759_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="207"
+data-flex-basis="497px"
+>&lt;/p>
+&lt;ul>
+&lt;li>打开「卡拉云_kalacloud.com_批量测试」合集的「Run Collection」的设置页&lt;/li>
+&lt;li>Iterations：这是测试组，我们 CSV 文件中有 4 组测试条目&lt;/li>
+&lt;li>Delay：延迟，一般填 2000 毫秒，太密集的请求，容易被服务器拒绝&lt;/li>
+&lt;li>Data：这里选择我们刚刚的 CSV 文件：kalacloud_users.csv 导入测试数据&lt;/li>
+&lt;li>点击 RUN 蓝色按钮开始执行批量测试&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/39.jpg"
+width="780"
+height="677"
+srcset="https://www.jiangdaoli.cf/p/postman/39_hu55767ebc7fa9a347e2a26860b454c923_28108_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/postman/39_hu55767ebc7fa9a347e2a26860b454c923_28108_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="115"
+data-flex-basis="276px"
+>&lt;/p>
+&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1140,11 +1834,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
->示例&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
->acme-companion&lt;/a>和上述示例文档。&lt;/li>
-&lt;/ol>
-&lt;p>最后，我前文的示例 或 &lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
->Issues中的实例&lt;/a>应该会有帮助。&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
+>示例文档&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
+>acme-companion&lt;/a>和示例文档。最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
+>Issues中的实例&lt;/a>可能会有帮助。&lt;/li>
+&lt;/ol></description></item><item><title>docker和docker-compose</title><link>https://www.jiangdaoli.cf/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#更新apt包索引
@@ -2434,20 +3127,20 @@ code&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;36px&amp;rdquo; style=&amp;ldquo;italic&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; color=&amp;ldquo;blue&amp;rdquo;&amp;gt;}}&lt;br>
-font - Google 字体&lt;br>
-size - 大小&lt;br>
-style - italic 斜体&lt;br>
-weight - bold 加粗 ， lighter 更细&lt;br>
-{{&amp;lt; /typography &amp;gt;}}&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
+&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;30px&amp;rdquo; style=&amp;ldquo;italic&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; color=&amp;ldquo;blue&amp;rdquo;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'font-family'; font-size:36px; font-style:italic; font-weight:bold; color: blue">
-You are awesome. You're even better!
+&lt;div style="font-family:'font-family'; font-size:30px; font-style:italic; font-weight:bold; color: blue">
+自定义字体
 &lt;/div>
+{{&amp;lt; /typography &amp;gt;}}&lt;br>
+# font　　　Google 字体&lt;br>
+# size　　　大小&lt;br>
+# style　　　italic 斜体&lt;br>
+# weight　　bold 加粗 ， lighter 更细&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="评论系统">评论系统&lt;/h2>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
 >waline官方文档&lt;/a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL&lt;/p>
