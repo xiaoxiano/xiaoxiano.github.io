@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 03 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>postman使用（转）</title><link>https://www.jiangdaoli.cf/p/postman/</link><pubDate>Wed, 03 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/postman/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>postman使用（转）</title><link>https://www.jiangdaoli.cf/p/postman/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/postman/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
 >原文地址&lt;/a>&lt;/p>
 &lt;h1 id="api-是什么">API 是什么？&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写。不要被这么长的单词吓到，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
 &lt;h1 id="postman-是什么">Postman 是什么？&lt;/h1>
 &lt;p>Postman 是一款 API 开发协作工具，它可以帮助你测试和开发 API，Postman 提供了测试 API 的友好界面和功能，使用简单便捷，安全可靠。Postman 是 API 接口测试工具的 Top 3，因为它简单可靠又免费，目前有超过 800 万开发者用户使用。特别是 API 批量测试功能，在近几次的大版本更新中，用户体验得到了极大的提升。Postman 是每一位前后端开发者必掌握的开发工具。&lt;/p>
-&lt;h1 id="一-如何安装-postman">一. 如何安装 Postman&lt;/h1>
+&lt;h1 id="如何安装-postman">如何安装 Postman&lt;/h1>
 &lt;p>如何安装 Postman&lt;/p>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/1.jpg"
 width="780"
@@ -17,7 +17,7 @@ data-flex-basis="392px"
 >&lt;/p>
 &lt;p>前往 Postman 官网免费下载，安装非常傻瓜，这里就不展开写了，如果安装过程有任何问题，欢迎评论区提问。&lt;/p>
 &lt;p>Postman 支持 Windows、Mac 和 Linux，也可以直接跑在浏览器里，跨平台，使用相当便捷。&lt;/p>
-&lt;h1 id="二-api-模拟工具-gorest">二. API 模拟工具 GoRest&lt;/h1>
+&lt;h1 id="api-模拟工具-gorest">API 模拟工具 GoRest&lt;/h1>
 &lt;p>本教程使用模拟 API 工具 GoRest 进行模拟 API 测试。GoRest 有非常多的使用场景，比如，后端接口还没有准备好时，我们可以先用 GoRest 模拟测试，又或者你自己暂时不想搞服务器，也不想搭后端，也可以先用 GoRest 来测。&lt;/p>
 &lt;p>GoRest 可以理解为后端工程师帮你搭好了后端服务器，而且是完全测过的，几乎不可能有 Bug。GoRest 除了其中的数据是模拟的，所有 API 响应都是完全真实的，你可以通过 API 调用的返回数据判断你的前端是否有问题。&lt;/p>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/2.jpg"
@@ -35,7 +35,7 @@ data-flex-basis="847px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这个 API 是由 &lt;a class="link" href="https://gorest.co.in" target="_blank" rel="noopener"
 >https://gorest.co.in&lt;/a> + /public/v1/users 即 BaseURL +Endpoint 组成的。一般我们可以从 API 地址看出调取信息的大意，这段 URL 是调用 GoRest 上有关 users 的信息。&lt;/p>
 &lt;p>下一节，我们使用 GET 请求调用这个 API ，看看返回结果是不是与 users 信息有关。&lt;/p>
-&lt;h1 id="三-用-postman-发出第一个-get-请求">三. 用 Postman 发出第一个 GET 请求&lt;/h1>
+&lt;h1 id="用-postman-发出第一个-get-请求">用 Postman 发出第一个 GET 请求&lt;/h1>
 &lt;ol>
 &lt;li>GET 请求基本操作&lt;/li>
 &lt;/ol>
@@ -138,7 +138,7 @@ class="gallery-image"
 data-flex-grow="213"
 data-flex-basis="511px"
 >&lt;/p>
-&lt;h1 id="四-在-postman-中发送-post-请求">四. 在 Postman 中发送 POST 请求&lt;/h1>
+&lt;h1 id="在-postman-中发送-post-请求">在 Postman 中发送 POST 请求&lt;/h1>
 &lt;p>这一节我们讲 POST 请求，POST 请求和 GET 请求最大的区别是 GET 请求仅使用只读形式读取数据，而 POST 请求会修改服务器中的数据，比如创建新用户，创建用户信息，上传图片等操作都是用 POST 完成的。&lt;/p>
 &lt;ol>
 &lt;li>POST 请求前，使用 Postman 对 API 鉴权&lt;/li>
@@ -226,7 +226,7 @@ data-flex-basis="292px"
 &lt;p>我们可以看到 API 返回信息，已经在服务器中注册好新用户，新用户 ID 为 2151，并一起返回了我们刚刚提交的用户注册信息。&lt;/p>
 &lt;p>如果你也看到了类似的返回结果，那么恭喜，你的第一个 POST 请求被服务器成功接受，你通过 API 在服务器上注册了一个新用户。&lt;/p>
 &lt;p>扩展阅读：最好的 6 个免费天气 API 接口对比测评&lt;/p>
-&lt;h1 id="五-用-postman-发送第一个-put-更新请求">五. 用 Postman 发送第一个 PUT 更新请求&lt;/h1>
+&lt;h1 id="用-postman-发送第一个-put-更新请求">用 Postman 发送第一个 PUT 更新请求&lt;/h1>
 &lt;p>PUT 请求一般用于更新服务器已有资源，如果服务器中没有对应的资源，那么 PUT 会创建相应的资源（特别提醒：虽然 PUT 有创建新资源的功能，但是否能创建成功，最终取决于你调用的 API 是否支持此功能）&lt;/p>
 &lt;p>打开你的 Postman 我们来创建一个 PUT 请求。&lt;/p>
 &lt;ul>
@@ -237,7 +237,7 @@ data-flex-basis="292px"
 &lt;p>请求类型选择「PUT」&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>根据第四节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
+&lt;p>根据第6节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 PUT 修改 ID 为 1475 资源的请求地址应该写：&lt;/p>
 &lt;/li>
@@ -257,7 +257,7 @@ data-flex-basis="292px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;status&amp;#34;: &amp;#34;Active&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第6节《使用 Postman 对 API 鉴权》&lt;/li>
 &lt;li>点击 「Send」发送 PUT 请求&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/17.jpg"
@@ -273,8 +273,8 @@ data-flex-basis="318px"
 &lt;li>如上图所示，可以看到红4位置 响应代码返回 200 ，这说明 PUT 请求已经执行成功。&lt;/li>
 &lt;li>返回的 Body 信息中，email 字段已经更新为 &lt;code>Hi@kalacloud.com&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;h1 id="六-用-postman-发送第一个-patch-更新请求">六. 用 Postman 发送第一个 PATCH 更新请求&lt;/h1>
-&lt;p>PATCH 请求一般用于服务器资源的部分更新，它相对于 PUT 提交的数据更少，不用提整个数据，只需要提交需要修改的字段即可。有关 PUT 和 PATCH 的更多区别，可查看本文第七节。&lt;/p>
+&lt;h1 id="用-postman-发送第一个-patch-更新请求">用 Postman 发送第一个 PATCH 更新请求&lt;/h1>
+&lt;p>PATCH 请求一般用于服务器资源的部分更新，它相对于 PUT 提交的数据更少，不用提整个数据，只需要提交需要修改的字段即可。有关 PUT 和 PATCH 的更多区别，可查看本文第9节。&lt;/p>
 &lt;p>打开你的 Postman 我们来创建一个 PATCH 请求。&lt;/p>
 &lt;ul>
 &lt;li>
@@ -284,7 +284,7 @@ data-flex-basis="318px"
 &lt;p>请求类型选择「PATCH」&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>根据第四节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
+&lt;p>根据第6节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 PATCH 修改 ID 为 1475 资源的请求地址应该写，到这里都和 PUT 请求修改资源的方法一样。&lt;/p>
 &lt;/li>
@@ -296,7 +296,7 @@ data-flex-basis="318px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;email&amp;#34;:&amp;#34;HelloWord@kalacloud.com&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第6节《使用 Postman 对 API 鉴权》&lt;/li>
 &lt;li>点击 「Send」发送 PATCH 请求&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/18.jpg"
@@ -317,7 +317,7 @@ data-flex-basis="318px"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HelloWord@kalacloud.com
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ul>
-&lt;h1 id="七-put-和-patch-的区别">七. PUT 和 PATCH 的区别&lt;/h1>
+&lt;h1 id="put-和-patch-的区别">PUT 和 PATCH 的区别&lt;/h1>
 &lt;p>在 HTTP 协议中，PUT 和 PATCH 都是用于更新服务器资源的命令，但他们有着不同的格式和用途。&lt;/p>
 &lt;p>PUT 请求：一般用于更新服务器已有资源，如果服务器中没有对应的资源，那么 PUT 会创建相应的资源（特别提醒：虽然 PUT 有创建新资源的功能，但是否能创建最终取决于你调用的 API 是否支持此功能）&lt;/p>
 &lt;p>PATCH 请求：用于局部更新服务器现有资源，它不用像 PUT 更新资源中的一点点也要提交所有字段信息，PATCH 更新哪个字段就提交哪个字段的更新信息即可。&lt;/p>
@@ -353,7 +353,7 @@ data-flex-grow="158"
 data-flex-basis="381px"
 >&lt;/p>
 &lt;p>PUT 不论修改多少，必须把修改资源的全部字段写全，否则会 400 报错。&lt;/p>
-&lt;h1 id="八-用-postman-发送第一个-delete-删除请求">八. 用 Postman 发送第一个 DELETE 删除请求&lt;/h1>
+&lt;h1 id="用-postman-发送第一个-delete-删除请求">用 Postman 发送第一个 DELETE 删除请求&lt;/h1>
 &lt;p>我们在上文讲了获取(GET)，创建(POST)，更新(PUT / PATCH) 请求，接着我们来说说删除(DELETE) 请求。顾名思义，DELETE 请求执行可删除整个资源。我们来直接实践一次你就明白了。&lt;/p>
 &lt;p>打开你的 Postman ，跟随本教程一起创建一个 DELETE 请求。&lt;/p>
 &lt;ul>
@@ -371,7 +371,7 @@ data-flex-basis="381px"
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第四节《使用 Postman 对 API 鉴权》&lt;/li>
+&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第6节《使用 Postman 对 API 鉴权》&lt;/li>
 &lt;li>点击 「Send」发送 DELETE 请求，删除对应的资源。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/22.jpg"
@@ -395,7 +395,7 @@ data-flex-grow="728"
 data-flex-basis="1749px"
 >&lt;/p>
 &lt;p>API 返回状态具体是怎么样的，还要看 API 的开发者是如何约定的，并非只有返回 200 才是成功的。&lt;/p>
-&lt;h1 id="九-postman-中的全局变量环境变量集合变量的设置">九. Postman 中的全局变量、环境变量、集合变量的设置&lt;/h1>
+&lt;h1 id="postman-中的全局变量环境变量集合变量的设置">Postman 中的全局变量、环境变量、集合变量的设置&lt;/h1>
 &lt;ol>
 &lt;li>Postman 设置变量的意义&lt;/li>
 &lt;/ol>
@@ -465,7 +465,7 @@ data-flex-basis="680px"
 &lt;li>进入集合设置页，选择 Variables 设置集合变量&lt;/li>
 &lt;li>此时，整个集合下所有请求页，都应用了此集合变量。&lt;/li>
 &lt;/ul>
-&lt;h1 id="十-如何使用-postman-pre-request-scripts-预请求脚本">十. 如何使用 Postman &lt;code>Pre-request scripts&lt;/code> 预请求脚本&lt;/h1>
+&lt;h1 id="如何使用-postman-pre-request-scripts-预请求脚本">如何使用 Postman &lt;code>Pre-request scripts&lt;/code> 预请求脚本&lt;/h1>
 &lt;p>Pre-request scripts 预请求脚本是在 API 请求之前执行的脚本，我们可以临时更改请求的某些变量。一般预请求脚本有这么两种常见的应用场景。(1)设置动态请求头信息。 (2)设置动态请求参数信息。比如，当我们要请求一个与时间有关的资源时，我们可以在预请求脚本中添加 &lt;code>timestamp&lt;/code> 字段，这是一个动态值，我们可以通过前置请求脚本来实现。&lt;/p>
 &lt;p>&lt;code>举例说明：&lt;/code>比如我们要在 header 中包含一个时间戳，我们可以这样操作&lt;/p>
 &lt;ul>
@@ -494,7 +494,7 @@ data-flex-grow="250"
 data-flex-basis="600px"
 >&lt;/p>
 &lt;ul>
-&lt;li>接着我们来执行这条 GET 请求，打开控制控制台，在控制台中，可以看到 Request Headers 中包含我们刚刚设置的时间戳 「timestamp」特别提示：有关控制台的讲解，在本教程第十二节。&lt;/li>
+&lt;li>接着我们来执行这条 GET 请求，打开控制控制台，在控制台中，可以看到 Request Headers 中包含我们刚刚设置的时间戳 「timestamp」特别提示：有关控制台的讲解，在本教程第14节。&lt;/li>
 &lt;/ul>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/29.jpg"
 width="780"
@@ -544,7 +544,7 @@ data-flex-basis="321px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//从环境变量中获取嵌套对象/json对象
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var obj = JSON.parse(postman.getEnvironmentVariable(&amp;#34;obj&amp;#34;));
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="十一-如何创建-postman-tests-测试脚本---postman-断言功能">十一. &lt;code>如何创建 Postman Tests 测试脚本 - Postman 断言功能&lt;/code>&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="如何创建-postman-tests-测试脚本---postman-断言功能">如何创建 Postman Tests 测试脚本 - Postman 断言功能&lt;/h1>
 &lt;p>在 Postman 中 Pre-request 和 Tests 是两兄弟，一个是在调用前执行（Pre-request），一个是在调用后执行（Tests），我们可以在 Tests 中使用 JavaScript 校验代码协助我们验证结果，可以说 Tests 是 Postman 的断言功能&lt;/p>
 &lt;ol>
 &lt;li>&lt;code>Postman Tests 断言的实际应用&lt;/code>&lt;/li>
@@ -605,7 +605,7 @@ class="gallery-image"
 data-flex-grow="178"
 data-flex-basis="429px"
 >&lt;/p>
-&lt;h1 id="十二-如何在-postman-中使用控制台">十二. 如何在 Postman 中使用控制台&lt;/h1>
+&lt;h1 id="如何在-postman-中使用控制台">如何在 Postman 中使用控制台&lt;/h1>
 &lt;p>控制台可以非常直观的显示当前调用的一系列信息，我们可以在「菜单 → view → Show Postman Console」或者点击 Postman 左下角的「Console」图标，打开控制台。&lt;/p>
 &lt;p>我们可以在 Tests 测试脚本中加入 &lt;code>console.log&lt;/code> 来显示我们需要在控制台显示的调用信息。&lt;/p>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/33.jpg"
@@ -620,7 +620,7 @@ data-flex-basis="232px"
 &lt;p>如上图，我们在 Test 脚本中加入以下代码&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">console.log(&amp;#34;本次测试 id 值为&amp;#34;,pm.variables.get(&amp;#34;kalacloud_id&amp;#34;));
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以显示隐藏在变量下面的具体变量值，方便我们测试时，进行相应的判断。&lt;/p>
-&lt;h1 id="十三-如何使用-runner-批量执行测试批量更换变量测试">十三. 如何使用 Runner 批量执行测试，批量更换变量测试&lt;/h1>
+&lt;h1 id="如何使用-runner-批量执行测试批量更换变量测试">如何使用 Runner 批量执行测试，批量更换变量测试&lt;/h1>
 &lt;p>当我们有一组 API 且这一组之间相互关联的关系，使用手动测试效率非常低。这时，我们就要用到 Postman 的批量执行（Runner）功能，Runner 不仅可以批量执行 API 调用，还可以批量更换变量。掌握此方法，大幅度提升 API 测试效率。&lt;/p>
 &lt;p>打开你的 Postman ，跟随本教程一起操作一遍吧。&lt;/p>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/34.jpg"
