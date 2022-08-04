@@ -1872,7 +1872,7 @@ sed
 &lt;/li>
 &lt;/ul>
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'font-family'; font-size:18px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'font-family'; font-size:18px; font-style:normal; font-weight:bold; color: green">
 示例
 &lt;/div>
 &lt;ul>

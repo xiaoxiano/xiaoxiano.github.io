@@ -2378,7 +2378,7 @@ sed
 &lt;/li>
 &lt;/ul>
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'font-family'; font-size:18px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'font-family'; font-size:18px; font-style:normal; font-weight:bold; color: green">
 示例
 &lt;/div>
 &lt;ul>
@@ -3139,7 +3139,7 @@ code&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;30px&amp;rdquo; style=&amp;ldquo;italic&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; color=&amp;ldquo;blue&amp;rdquo;&amp;gt;}}
+&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;30px&amp;rdquo; style=&amp;ldquo;normal&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; color=&amp;ldquo;blue&amp;rdquo;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'font-family'; font-size:30px; font-style:italic; font-weight:bold; color: blue">
 自定义字体
@@ -3147,7 +3147,7 @@ code&lt;br>
 {{&amp;lt; /typography &amp;gt;}}&lt;br>
 # font　　　Google 字体&lt;br>
 # size　　　大小&lt;br>
-# style　　　italic 斜体&lt;br>
+# style　　　normal正常， italic 斜体&lt;br>
 # weight　　bold 加粗 ， lighter 更细&lt;/p>
 &lt;/li>
 &lt;/ul>
