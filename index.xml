@@ -3132,14 +3132,14 @@ myblog下执行&lt;/p>
 &lt;p>shortcodes &lt;code>./myblog/layouts/shortcodes&lt;/code>&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>{{&amp;lt; spoiler text=&amp;ldquo;点击展开和折叠代码&amp;rdquo; &amp;gt;}}&lt;br>
+&lt;p>{{&amp;lt; spoiler text=&amp;quot;点击展开和折叠代码&amp;quot; &amp;gt;}}&lt;br>
 ```html&lt;br>
 code&lt;br>
 ```&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{{&amp;lt; typography font=&amp;ldquo;monoton&amp;rdquo; size=&amp;ldquo;30px&amp;rdquo; style=&amp;ldquo;normal&amp;rdquo; weight=&amp;ldquo;bold&amp;rdquo; color=&amp;ldquo;blue&amp;rdquo;&amp;gt;}}
+&lt;p>{{&amp;lt; typography font=&amp;quot;monoton&amp;quot; size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'font-family'; font-size:30px; font-style:italic; font-weight:bold; color: blue">
 自定义字体
