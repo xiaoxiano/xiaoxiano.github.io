@@ -1,9 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>postman使用（转）</title><link>https://www.jiangdaoli.cf/p/postman/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/postman/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
->原文地址&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>postman使用</title><link>https://www.jiangdaoli.cf/p/postman/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/postman/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
+>主要参考文章&lt;/a>&lt;/p>
 &lt;h1 id="api-是什么">API 是什么？&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写。不要被这么长的单词吓到，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
-&lt;h1 id="postman-是什么">Postman 是什么？&lt;/h1>
+&lt;h1 id="postman-介绍">Postman 介绍&lt;/h1>
 &lt;p>Postman 是一款 API 开发协作工具，它可以帮助你测试和开发 API，Postman 提供了测试 API 的友好界面和功能，使用简单便捷，安全可靠。Postman 是 API 接口测试工具的 Top 3，因为它简单可靠又免费，目前有超过 800 万开发者用户使用。特别是 API 批量测试功能，在近几次的大版本更新中，用户体验得到了极大的提升。Postman 是每一位前后端开发者必掌握的开发工具。&lt;/p>
+&lt;p>&lt;strong>界面导航说明&lt;/strong>
+&lt;img src="https://www.jiangdaoli.cf/p/postman/1.png"
+width="958"
+height="505"
+srcset="https://www.jiangdaoli.cf/p/postman/1_hua5dba7d0290429ab5e2421ded386b7d2_112466_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/postman/1_hua5dba7d0290429ab5e2421ded386b7d2_112466_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="189"
+data-flex-basis="455px"
+>&lt;/p>
+&lt;p>&lt;strong>请求：&lt;/strong>&lt;/p>
+&lt;p>params：get请求传参。&lt;/p>
+&lt;p>Authrization：鉴权&lt;/p>
+&lt;p>Headers：请求头&lt;/p>
+&lt;p>​ accept:客户端接收的数据类型。&lt;/p>
+&lt;p>​ content-type:客户端发送给服务器的数据类型&lt;/p>
+&lt;p>​ user-agent:客户端的类型&lt;/p>
+&lt;p>​ xmlhttprequest:异步请求&lt;/p>
+&lt;p>Body：Post请求传参&lt;/p>
+&lt;p>​ none：没有参数&lt;/p>
+&lt;p>​ form-data：文件上传（包含键值对和文件上传）&lt;/p>
+&lt;p>​ x-www-from-urlencodeed：表单请求（键值对）&lt;/p>
+&lt;p>​ raw：使用原始数据格式请求（JSON，XML，HTML，Text，Javascript）&lt;/p>
+&lt;p>​ binary：二进制文件上传。&lt;/p>
+&lt;p>Pre-request-script：请求之前的脚本。&lt;/p>
+&lt;p>Tests；请求之后的脚本。&lt;/p>
+&lt;p>Setting：设置&lt;/p>
+&lt;p>Cookies：用于自动管理Cookie的功能&lt;/p>
+&lt;p>&lt;strong>响应：&lt;/strong>&lt;/p>
+&lt;p>Body：返回的信息&lt;/p>
+&lt;p>​ Pretty（各种格式查看返回数据）&lt;/p>
+&lt;p>​ Raw（文本格式）&lt;/p>
+&lt;p>​ Preview（网页）&lt;/p>
+&lt;p>Cookie：响应Cookie&lt;/p>
+&lt;p>token鉴权码：&lt;/p>
+&lt;p>​ csrf_token：一般情况下有效期是7-15天。&lt;/p>
+&lt;p>​ access_token：一般情况下有效期是10分钟-2小时&lt;/p>
+&lt;p>Headers：响应头&lt;/p>
+&lt;p>TestResults：测试结果&lt;/p>
+&lt;p>200 响应码&lt;/p>
 &lt;h1 id="如何安装-postman">如何安装 Postman&lt;/h1>
 &lt;p>如何安装 Postman&lt;/p>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/postman/1.jpg"
@@ -1529,8 +1569,8 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">networks:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external: true
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;details class="spoiler " id="spoiler-2">
@@ -1594,8 +1634,8 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">networks:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nginxproxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external: true
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h2 id="基础知识参考-1">基础知识参考&lt;/h2>
@@ -1607,7 +1647,18 @@ data-flex-basis="427px"
 &lt;p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。&lt;/p>
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
-&lt;h1 id="常用命令">常用命令&lt;/h1>
+&lt;p>注意：文档中示例写法错误，会&lt;a class="link" href="https://github.com/docker/compose-cli/issues/1856" target="_blank" rel="noopener"
+>报错&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>应写为:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">networks:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external: true
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run [可选参数] imagename #新建并启动容器
@@ -1646,7 +1697,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">exit 容器停止并退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ctrl+p+q 容器不停止退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash #进入正在执行的mysql容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; container_name_or_id #查看容器ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 /bin/sh #进入alpine制作的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34;apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y vim&amp;#34; #进入容器安装vim编辑器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34; apk add --update vim&amp;#34; #进入alpine容器安装vim编辑器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; [container_name_or_id] #查看容器ip
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">从容器拷贝内容到主机：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
