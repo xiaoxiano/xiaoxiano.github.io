@@ -2469,7 +2469,243 @@ sed
 &lt;/tbody>
 &lt;/table>
 &lt;p>待续&lt;/p>
-&lt;h1 id="正则表达式">正则表达式&lt;/h1>
+&lt;h2 id="python">python&lt;/h2>
+&lt;h3 id="os">os&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>使用方法&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>getcwd()&lt;/td>
+&lt;td>返回当前工作目录&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>chdir(path)&lt;/td>
+&lt;td>改变工作目录&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>listdir(path=&amp;rsquo;.')&lt;/td>
+&lt;td>列举指定目录中的文件名（&amp;rsquo;.&amp;lsquo;表示当前目录，&amp;rsquo;..&amp;lsquo;表示上一级目录）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>mkdir(path)&lt;/td>
+&lt;td>创建单层目录，如该目录已存在抛出异常&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>makedirs(path)&lt;/td>
+&lt;td>递归创建多层目录，如该目录已存在抛出异常，注意：&amp;lsquo;E:\a\b&amp;rsquo;和&amp;rsquo;E:\a\c&amp;rsquo;并不会冲突&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>remove(path)&lt;/td>
+&lt;td>删除文件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rmdir(path)&lt;/td>
+&lt;td>删除单层目录，如该目录非空则抛出异常&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>removedirs(path)&lt;/td>
+&lt;td>递归删除目录，从子目录到父目录逐层尝试删除，遇到目录非空则抛出异常&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>rename(old, new)&lt;/td>
+&lt;td>将文件old重命名为new&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>system(command)&lt;/td>
+&lt;td>运行系统的shell命令&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>walk(top)&lt;/td>
+&lt;td>遍历top路径以下所有的子目录，返回一个三元组：(路径, [包含目录], [包含文件])【具体实现方案请看：第30讲课后作业^_^】&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;em>以下是支持路径操作中常用到的一些定义，支持所有平台&lt;/em>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os.curdir&lt;/td>
+&lt;td>指代当前目录（&amp;rsquo;.&amp;rsquo;）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os.pardir&lt;/td>
+&lt;td>指代上一级目录（&amp;rsquo;..&amp;rsquo;）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os.sep&lt;/td>
+&lt;td>输出操作系统特定的路径分隔符（Win下为&amp;rsquo;\&amp;rsquo;，Linux下为&amp;rsquo;/&amp;rsquo;）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os.linesep&lt;/td>
+&lt;td>当前平台使用的行终止符（Win下为&amp;rsquo;\r\n&amp;rsquo;，Linux下为&amp;rsquo;\n&amp;rsquo;）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>os.name&lt;/td>
+&lt;td>指代当前使用的操作系统（包括：&amp;lsquo;posix&amp;rsquo;, &amp;rsquo;nt&amp;rsquo;, &amp;lsquo;mac&amp;rsquo;, &amp;lsquo;os2&amp;rsquo;, &amp;lsquo;ce&amp;rsquo;, &amp;lsquo;java&amp;rsquo;）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="ospath">os.path&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>使用方法&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>basename(path)&lt;/td>
+&lt;td>去掉目录路径，单独返回文件名&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>dirname(path)&lt;/td>
+&lt;td>去掉文件名，单独返回目录路径&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>join(path1[, path2[, &amp;hellip;]])&lt;/td>
+&lt;td>将path1, path2各部分组合成一个路径名&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>split(path)&lt;/td>
+&lt;td>分割文件名与路径，返回(f_path, f_name)元组。如果完全使用目录，它也会将最后一个目录作为文件名分离，且不会判断文件或者目录是否存在&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>splitext(path)&lt;/td>
+&lt;td>分离文件名与扩展名，返回(f_name, f_extension)元组&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>getsize(file)&lt;/td>
+&lt;td>返回指定文件的尺寸，单位是字节&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>getatime(file)&lt;/td>
+&lt;td>返回指定文件最近的访问时间（浮点型秒数，可用time模块的gmtime()或localtime()函数换算）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>getctime(file)&lt;/td>
+&lt;td>返回指定文件的创建时间（浮点型秒数，可用time模块的gmtime()或localtime()函数换算）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>getmtime(file)&lt;/td>
+&lt;td>返回指定文件最新的修改时间（浮点型秒数，可用time模块的gmtime()或localtime()函数换算）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;em>以下为函数返回 True 或 False&lt;/em>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>exists(path)&lt;/td>
+&lt;td>判断指定路径（目录或文件）是否存在&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>isabs(path)&lt;/td>
+&lt;td>判断指定路径是否为绝对路径&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>isdir(path)&lt;/td>
+&lt;td>判断指定路径是否存在且是一个目录&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>isfile(path)&lt;/td>
+&lt;td>判断指定路径是否存在且是一个文件&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>islink(path)&lt;/td>
+&lt;td>判断指定路径是否存在且是一个符号链接&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ismount(path)&lt;/td>
+&lt;td>判断指定路径是否存在且是一个挂载点&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>samefile(path1, paht2)&lt;/td>
+&lt;td>判断path1和path2两个路径是否指向同一个文件&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="beautifulsoup">BeautifulSoup&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">from bs4 import BeautifulSoup
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">html_doc = &amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>The Dormouse&amp;#39;s story&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>The Dormouse&amp;#39;s story&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">b&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;story&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Once upon a time there were three little sisters; and their names were
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://example.com/elsie&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sister&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;link1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Elsie&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://example.com/lacie&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sister&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;link2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Lacie&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> and
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://example.com/tillie&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;sister&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;link3&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Tillie&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">and they lived at the bottom of a well.&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;story&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>...&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 解析html_doc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup = BeautifulSoup(html_doc, &amp;#39;html.parser&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 按照标准的缩进格式的结构输出
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(soup.prettify())
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 选择元素
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.title # &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>The Dormouse&amp;#39;s story&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 提取节点信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.title.name # u&amp;#39;title&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获取属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.p.attrs # {&amp;#39;class&amp;#39;: [&amp;#39;title&amp;#39;], &amp;#39;name&amp;#39;: &amp;#39;Dormouse&amp;#39;}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.p.attrs[&amp;#39;name&amp;#39;] # Dormouse
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获取文本内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.title.get_text()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.title.string # u&amp;#39;The Dormouse&amp;#39;s story&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获取第一个P标签下的所有的子节点，children是迭代器，所以用list转换
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">list(soup.p.children)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">list(soup.p.children)[0].text
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获取前面和后面的兄弟节点，迭代器类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">list(soup.a.next_siblings)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">list(soup.a.previous_siblings)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 找到标签
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">soup.find(&amp;#39;title&amp;#39;) # &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>The Dormouse&amp;#39;s story&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 找到所有&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>标签的链接
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">for link in soup.find_all(&amp;#39;a&amp;#39;):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(link.get(&amp;#39;href&amp;#39;))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># CSS选择器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">html_doc = &amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;panel&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;panel-heading&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Hello World&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h4&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;panel-body&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list-1&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Foo&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Bar&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Jay&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ul&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list list-samll&amp;#34;&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;list-2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Foo&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Bar&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">li&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;element&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>Jay&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">li&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">ul&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;&amp;#34;&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(soup.select(&amp;#39;.panel .panel-heading&amp;#39;)) # 获取class为panel-heading的节点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(soup.select(&amp;#39;ul li&amp;#39;)) # 获取ul下的li节点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(soup.select(&amp;#39;#list-2 li&amp;#39;)) # 获取id为list-2下的li节点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(soup.select(&amp;#39;ul&amp;#39;)) # 获取所有的ul节点
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="正则表达式">正则表达式&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
