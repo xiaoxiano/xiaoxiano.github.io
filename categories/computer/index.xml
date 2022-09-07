@@ -730,7 +730,6 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int? a=123; // int? 表示a是一个可空类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 类型断言
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a! // a不为空
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常量">常量&lt;/h2>
 &lt;ul>
@@ -1089,13 +1088,13 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (_cache.containsKey(name)) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _cache[name];
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } else {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final logger = Logger._internal(name);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final logger = Logger._internal(name); # 调用构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _cache[name] = logger;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return logger;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name); # 定义构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void log(String msg) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!mute) print(msg);
@@ -1111,9 +1110,14 @@ data-flex-basis="427px"
 &lt;/blockquote>
 &lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
 &lt;p>如此这般，我们可以创建名字为UI / SYS / API 等的实例，然后在debug的时候，如果设置名字为UI的Logger实例的mute为true，就不会打印UI相关的log，而不影响其它两个名字的log。&lt;/p>
-&lt;h3 id="扩展类和扩展方法">扩展类和扩展方法&lt;/h3>
+&lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/5.jpg"
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+extends
+&lt;/div>
+&lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
+&lt;img src="https://www.jiangdaoli.cf/p/flutter/5.jpg"
 width="1233"
 height="641"
 srcset="https://www.jiangdaoli.cf/p/flutter/5_hu572765b138c1f7437a19c6cea77cac10_136967_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/5_hu572765b138c1f7437a19c6cea77cac10_136967_1024x0_resize_q75_box.jpg 1024w"
@@ -1122,7 +1126,25 @@ class="gallery-image"
 data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
-&lt;h4 id="扩展方法">扩展方法&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+implements
+&lt;/div>
+&lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+with
+&lt;/div>
+&lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># extends只能扩展一个类，而mixin有限制，可以一起使用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class Maestro extends Person with Musical, Aggressive, Demented {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Maestro(String maestroName) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name = maestroName;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> canConduct = true;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="扩展方法">扩展方法&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">extension FancyNum on num {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num plus(num other) =&amp;gt; this + other;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
