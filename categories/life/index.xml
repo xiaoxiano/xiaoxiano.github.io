@@ -19,10 +19,6 @@
 &lt;td>USB3.0串流线&lt;/td>
 &lt;td>玩steam的游戏需要和电脑串流&lt;/td>
 &lt;/tr>
-&lt;tr>
-&lt;td>皮质眼罩鼻垫&lt;/td>
-&lt;td>防汗防漏光&lt;/td>
-&lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;h1 id="网络">网络&lt;/h1>
@@ -391,9 +387,35 @@ data-flex-basis="240px"
 >&lt;/p>
 &lt;h1 id="skybox">SKYBOX&lt;/h1>
 &lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用本地网络播放电脑上的影片。&lt;/p>
-&lt;p>vr影片体积超过10G的很常见，quest2装不了多少。&lt;/p>
+&lt;p>vr影片体积超过10G的很常见，quest2装不了多少，所以放在pc，局域网共享。&lt;/p>
 &lt;ol>
-&lt;li>在电脑上共享存放影片的文件夹。&lt;/li>
+&lt;li>电脑设置开启共享。
+&lt;img src="https://www.jiangdaoli.cf/p/quest2/14.jpg"
+width="1776"
+height="630"
+srcset="https://www.jiangdaoli.cf/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="281"
+data-flex-basis="676px"
+>&lt;/li>
+&lt;/ol>
+&lt;p>无密码的共享
+&lt;img src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
+width="1255"
+height="735"
+srcset="https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="170"
+data-flex-basis="409px"
+>&lt;/p>
+&lt;p>有密码的共享，找到用户名和改密码
+&lt;img src="https://www.jiangdaoli.cf/15.jpg"
+loading="lazy"
+>&lt;/p>
+&lt;ol start="2">
+&lt;li>共享存放影片的文件夹。(以后删除共享点击图一的“删除访问”)&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/10.jpg"
 width="1260"
@@ -422,18 +444,6 @@ class="gallery-image"
 data-flex-grow="133"
 data-flex-basis="319px"
 >&lt;/p>
-&lt;ol start="2">
-&lt;li>关闭共享密码。&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
-width="1255"
-height="735"
-srcset="https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="170"
-data-flex-basis="409px"
->&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>
@@ -447,24 +457,28 @@ data-flex-basis="409px"
 &lt;li>截图&lt;/li>
 &lt;/ul>
 &lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
-&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是我就找了旧手机root，以荣耀8青春版为例。
-大概分为以下几个步骤：&lt;/p>
+&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是只能root。
+大概分为以下步骤：&lt;/p>
 &lt;ol>
-&lt;li>
-&lt;p>解bl锁
-各品牌手机解锁有所不同，大部分厂商官方给解锁码，我仅简述我本次华为旧机解锁，我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了，视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了，&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
->短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>刷入 TWRP recovery
-建议不要刷机软件一键刷机，都是垃圾系统，就用官方系统刷适合你手机的TWRP，我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
->这个网站&lt;/a>找到华为的TWRP，我当时看到他的网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>root
-安卓7及以上使用magisk，有大神建议用20.4版本，github下载zip放进手机储存卡，进入TWRP recovery安装，开机后酷安装magisk app即可。&lt;/p>
-&lt;/li>
+&lt;li>解bl锁&lt;/li>
 &lt;/ol>
+&lt;p>各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。\&lt;/p>
+&lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
+>短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
+&lt;ol start="2">
+&lt;li>刷rom（系统）、刷入 TWRP recovery&lt;/li>
+&lt;/ol>
+&lt;p>建议不要刷机软件一键刷机，都是垃圾系统，一般就用原系统刷适合你手机的TWRP。新手机找不到官方TWRP去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
+>https://unofficialtwrp.com/&lt;/a>，点图片左下角手机品牌可以进入分类，收录了全面的非官方TWRP。 \&lt;/p>
+&lt;p>小米为例：在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
+>https://xiaomirom.com/&lt;/a>下载刷机工具，刷酷安ID乌堆小透明的ROM（另外欧版eu社区版ROM不错，但我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联网，小米手机已被我拉黑）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
+>此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。\&lt;/p>
+&lt;p>华为为例：我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
+>https://m.huaweirom.com/rom/&lt;/a>找到华为有TWRP的rom，我当时看到网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
+&lt;ol start="3">
+&lt;li>root&lt;/li>
+&lt;/ol>
+&lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>

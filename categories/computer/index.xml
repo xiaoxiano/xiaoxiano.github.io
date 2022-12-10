@@ -1,4 +1,327 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>测试接口</title><link>https://www.jiangdaoli.cf/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>acme.sh 申请证书</title><link>https://www.jiangdaoli.cf/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
+>Internet Security Research Group（ISRG）&lt;/a>提供的服务。&lt;/p>
+&lt;p>acme.sh 则是实现了 acme 协议, 可以从 letsencrypt 生成免费的证书。&lt;/p>
+&lt;ul>
+&lt;li>Let’s Encrypt 速率限制
+&lt;ul>
+&lt;li>每个注册网域(Registered Domain) 的凭证颁发数量，限制为每周50 张&lt;/li>
+&lt;li>更新凭证受到重复凭证限制，一个星期内仅能颁发5 张重复的凭证。&lt;/li>
+&lt;li>网域验证失败限制，对于每个帐号每域名每小时5 次的限制。&lt;/li>
+&lt;li>每个IP 位置每3 个小时最多能建立10 个帐号。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果你达到速率限制，你只能等待一个星期直到速率限制结束。&lt;/p>
+&lt;h1 id="安装-acmesh">安装 acme.sh&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">curl https://get.acme.sh | sh
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install socat # 安装socat
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="选择默认-ca">选择默认 CA&lt;/h2>
+&lt;h3 id="zerossl">Zerossl&lt;/h3>
+&lt;p>从 acme.sh v 3.0.0 开始，acme.sh 使用 Zerossl 作为默认 ca，您必须先注册帐户（一次），然后才能颁发新证书。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh –register-account -m xxxx@xxxx.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lets-encrypt">Let&amp;rsquo;s Encrypt&lt;/h3>
+&lt;p>如果需要更换Let&amp;rsquo;s Encrypt可以使用如下命令：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="通过-http-方式申请证书">通过 http 方式申请证书&lt;/h1>
+&lt;h2 id="webroot模式">Webroot模式&lt;/h2>
+&lt;p>这种方式需要你的服务器上面已经部署了网站环境。Acme 自动在你的网站根目录下放置一个文件,来验证你的域名所有权,完成验证. 然后就可以生成证书了.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 生成 RSA 证书：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com -w /var/www/_letsencrypt/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 生成 ECC 证书：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com -w /var/www/_letsencrypt/ --keylength ec-256
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/var/www/_letsencrypt/ 为 example.com 站点下的 /.well-known/acme-challenge/ 证书请求目录。&lt;/p>
+&lt;h2 id="80-端口空闲的证书申请方式">80 端口空闲的证书申请方式&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com --standalone
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装证书到指定文件夹">安装证书到指定文件夹&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --installcert -d mydomain.com --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crtchmod -R 755 /root/cert
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面的 /root/private.key 以及 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt。&lt;/p>
+&lt;h2 id="更新">更新&lt;/h2>
+&lt;h3 id="更新证书">更新证书&lt;/h3>
+&lt;h4 id="手动更新">手动更新&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --renew -d example.com --force
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="自动更新">自动更新&lt;/h4>
+&lt;p>安装 acme.sh 时会自动创建一个 cronjob，每天定期检查所有证书，如果证书需要更新会自动更新证书。
+通过 crontab -l 查看 crontab 任务:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">46 0 * * * &amp;#34;/root/.acme.sh&amp;#34;/acme.sh --cron --home &amp;#34;/root/.acme.sh&amp;#34; &amp;gt; /dev/null
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="更新-acme-脚本">更新 Acme 脚本&lt;/h3>
+&lt;p>升级 Acme.sh 到最新版本&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你不想手动升级, 可以开启自动升级:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --upgrade --auto-upgrade
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="通过-dns-方式申请证书通常只支持付费域名">通过 DNS 方式申请证书(通常只支持付费域名)&lt;/h1>
+&lt;p>几个 CA 的简单对比&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>功能&lt;/th>
+&lt;th>LE&lt;/th>
+&lt;th>Buypass&lt;/th>
+&lt;th>ZeroSSL&lt;/th>
+&lt;th>SSL.com&lt;/th>
+&lt;th>Google Public CA&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>有效期&lt;/td>
+&lt;td>90 天&lt;/td>
+&lt;td>180 天&lt;/td>
+&lt;td>90 天&lt;/td>
+&lt;td>90 天&lt;/td>
+&lt;td>90 天&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>多域名&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;td>支持，最多 5 个&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;td>收费支持&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>泛域名&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;td>不支持&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;td>收费支持&lt;/td>
+&lt;td>支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Rate Limit&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>收费无&lt;/td>
+&lt;td>未知&lt;/td>
+&lt;td>有&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GUI 管理&lt;/td>
+&lt;td>否&lt;/td>
+&lt;td>否&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>无&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ECC 证书链&lt;/td>
+&lt;td>否&lt;/td>
+&lt;td>否&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>未知&lt;/td>
+&lt;td>无&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>客户支持&lt;/td>
+&lt;td>社区&lt;/td>
+&lt;td>收费&lt;/td>
+&lt;td>收费&lt;/td>
+&lt;td>收费&lt;/td>
+&lt;td>收费&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="cloudflare">cloudflare&lt;/h2>
+&lt;p>使用全局 API 密钥，您需要登录您的 Cloudflare 帐户以获取您的&lt;a class="link" href="https://dash.cloudflare.com/profile" target="_blank" rel="noopener"
+>API 密钥&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export CF_Key=&amp;#34;sdfsdfsdfljlbjkljlkjsdfoiwje&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export CF_Email=&amp;#34;xxxx@sss.com&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>颁发证书：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">./acme.sh --issue --dns dns_cf -d example.com -d www.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="阿里云-dns-申请方式">阿里云 DNS 申请方式&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export Ali_Key=&amp;#34;abcd&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export Ali_Secret=&amp;#34;xxxxxxxxxx&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># RSA 证书
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">acme.sh --issue --dns dns_ali -d example.com -d *.example.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># ECC 证书
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">acme.sh --issue --dns dns_ali -d example.com -d *.example.com --keylength ec-256
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Ali_Key 和 Ali_Secret 需要从阿里云RAM访问控制中获取。&lt;/p>
+&lt;h2 id="dnspod-申请方式">DNSPod 申请方式&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export DP_Id=&amp;#34;1234&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export DP_Key=&amp;#34;xxxxxxxxxxx&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">acme.sh --issue --dns dns_dp -d example.com -d www.example.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="文档">文档&lt;/h1>
+&lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert" target="_blank" rel="noopener"
+>如何颁发证书&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi" target="_blank" rel="noopener"
+>使用 DNS API&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/Options-and-Params" target="_blank" rel="noopener"
+>选项和参数&lt;/a>&lt;/p></description></item><item><title>云服务</title><link>https://www.jiangdaoli.cf/p/cloud-service/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/cloud-service/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
+&lt;p>云是我们常用的服务，aws是头部厂商，但我们还有更多选择，以降低价格。即使aws有高昂且复杂的定价，仍有很多人使用，所以本文也将介绍。&lt;/p>
+&lt;p>目前我在使用的云存储是Backblaze B2（兼容S3 API），价格仅为 Amazon S3、Microsoft Azure 和 Google Cloud 的1/4。&lt;/p>
+&lt;p>我们同样需要一个CDN缓存加速（cloudflare 与传统 CDN 不同，CloudFlare 处理对网站的所有请求，能够阻止针对网站的攻击，可以再加到传统CDN前作为防护），CDN在用户第一次请求后，会在接近用户的区域缓存源服务器的静态资源（没人请求不缓存，不主动和服务器保持同步），后续访问就更加快速，并降低服务器压力，可以使用cloudfront免费套餐，如果每月传出超过 1T 数据，可以考虑使用 bunny CDN。&lt;/p>
+&lt;h1 id="s3">S3&lt;/h1>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Bucket桶
+&lt;/div>
+&lt;p>桶就类似于根文件夹，其命名必须全局性唯一。也就是说，如果别人已经创建了命为X的Bucket，你就不能再用X作为桶的名字了。&lt;/p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Events事件
+&lt;/div>
+&lt;p>在S3中，可以定义很多事件及其处理函数。比如当文件被创建，修改，删除，复制时，触发Lambda。这样就可以构建Event Driven Architecture，比如：新文件到S3 -&amp;gt; 触发Lambda处理函数 -&amp;gt; 处理结束后通知AppSync/GraphQL API -&amp;gt; 通知用户文件已经处理完毕。&lt;/p>
+&lt;h2 id="s3费用决定因素">S3费用决定因素&lt;/h2>
+&lt;p>官方：存储和管理数据时需要考虑六大 Amazon S3 成本组成：存储定价、请求和数据检索定价、数据传输和传输加速定价、数据管理和分析定价、复制定价以及使用 S3 Object Lambda 处理数据的价格。&lt;/p>
+&lt;p>通常我们关注&lt;a class="link" href="https://aws.amazon.com/cn/s3/storage-classes/?nc1=h_ls" target="_blank" rel="noopener"
+>存储类型&lt;/a>、&lt;a class="link" href="https://aws.amazon.com/s3/pricing/?nc1=h_ls" target="_blank" rel="noopener"
+>储存数据量、请求量、数据传输&lt;/a>的费用。&lt;/p>
+&lt;h2 id="存储类型">存储类型&lt;/h2>
+&lt;h3 id="s3-标准">S3 标准&lt;/h3>
+&lt;p>S3 标准是一种通用对象存储平台，提供较低的延迟和较高的吞吐量，因此非常适合各种使用案例，包括云应用程序、动态网站、内容分发、移动和游戏应用程序以及大数据分析。&lt;/p>
+&lt;h3 id="s3-智能分层-通用选它">S3 智能分层 ——通用选它&lt;/h3>
+&lt;p>S3 智能分层可自动识别并将不常访问的数据（30天内未访问的数据）移动到成本较低的基础架构中。当访问不频繁层中的对象时，它会自动移回更高性能层，并且30天时钟重新启动。在访问模式发生变化时，在两个访问层（频繁访问层和不频繁访问层）之间移动数据来实现自动节省成本，非常适用于访问模式未知或不断变化的数据。&lt;/p>
+&lt;h3 id="s3标准-ia不频繁访问备份选它">S3标准-IA（不频繁访问）——备份选它&lt;/h3>
+&lt;p>S3 Standard-IA 适用于不常访问（超过30天访问一次）、但在需要时要求快速访问的数据。提供与“S3 标准”相同的高持久性、高吞吐量和低延迟，成本较低且性能出色使得“S3标准–IA”很适合长期存储和备份，以及用作灾难恢复文件的数据存储。&lt;/p>
+&lt;h3 id="s3-单区域---ia不频繁访问">S3 单区域 - IA（不频繁访问）&lt;/h3>
+&lt;p>S3标准-IA 的单区域存储，此类别不会自动在至少三个AZ上存储数据。&lt;/p>
+&lt;h3 id="s3-glacier-即时检索">S3 Glacier 即时检索&lt;/h3>
+&lt;p>Amazon S3 Glacier Instant Retrieval 是一种归档存储类，可以为很少访问（超过90天访问一次）且需要毫秒级检索速度的长期数据提供最低成本的存储。&lt;/p>
+&lt;h3 id="s3-glacier-灵活检索前称为-s3-glacier">S3 Glacier 灵活检索（前称为 S3 Glacier）&lt;/h3>
+&lt;p>S3 Glacier Flexible Retrieval 为每年访问 1—2 次且异步检索的归档数据提供低成本存储，数据检索时间可配置，从数分钟到数小时不等。&lt;/p>
+&lt;h3 id="amazon-s3-glacier-深度档案">Amazon S3 Glacier 深度档案&lt;/h3>
+&lt;p>支持长期保留和数字化保存一年可能访问一到两次的数据，数据检索时间为 12 小时以内。&lt;/p>
+&lt;h1 id="cloudfront">cloudfront&lt;/h1>
+&lt;p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Origin domain
+&lt;/div>
+：源域，选S3 存储桶需配置Alternate Domain Names作为加速站点，写自己解析过的域名即为加速的站点&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Amazon S3 存储桶&lt;/strong>– &lt;code>DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>配置为网站的 Amazon S3 存储桶&lt;/strong>– &lt;code>https://DOC-EXAMPLE-BUCKET.s3-website.us-west-2.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>MediaStore 容器&lt;/strong>– &lt;code>examplemediastore.data.mediastore.us-west-1.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>MediaPackage 端点&lt;/strong>– &lt;code>examplemediapackage.mediapackage.us-west-1.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>亚马逊 EC2 实例&lt;/strong>– &lt;code>ec2-203-0-113-25.compute-1.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Elastic Load Balancing 负载均衡器&lt;/strong>– &lt;code>example-load-balancer-1234567890.us-west-2.elb.amazonaws.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>您自己的网络服务器&lt;/strong>– &lt;code>https://www.example.com&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="自选ip失败经历">自选ip失败经历&lt;/h2>
+&lt;ol>
+&lt;li>查看&lt;a class="link" href="https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips" target="_blank" rel="noopener"
+>官方公布的ip段&lt;/a>（我们只需要边缘节点ip-&amp;ldquo;CLOUDFRONT_REGIONAL_EDGE_IP_LIST&amp;rdquo;，因为GLOBAL站点会自动判断离边缘节点最近的区域和进行健康检查，再连到边缘节点）&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/6.jpg"
+width="1481"
+height="776"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/6_hu3b2469080d4faee78417b89ef3c50a6a_411521_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/cloud-service/6_hu3b2469080d4faee78417b89ef3c50a6a_411521_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="190"
+data-flex-basis="458px"
+>&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>由于给的ip是CIDR格式，我们需要转换。先&lt;a class="link" href="https://uutool.cn/json2list/" target="_blank" rel="noopener"
+>JSON转列表&lt;/a>。然后&lt;a class="link" href="https://github.com/codeexpress/cidr2ip" target="_blank" rel="noopener"
+>CIDR转ip&lt;/a>（因为在线转不支持批量转换，所以建议下载这个工具），重命名为cidr2ip.exe，新建cidrs.txt，把列表复制进去，cmd执行&lt;code>cidr2ip -f cidrs.txt&lt;/code>可得很大一列ip。最后&lt;a class="link" href="https://reallyfreegeoip.org/bulk" target="_blank" rel="noopener"
+>ip批量查询&lt;/a>，下载后可以看到ip地区，复制你所需地区的ip（查询速度会很慢，我的vps是日本的，排在最前面，运气很好没有查询很久）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>创建Cloud front测速链接&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>aws首页搜索cloud front
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/1.png"
+width="1135"
+height="408"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/1_hu85604e3e532b9e4406b55b22f5237dcf_46780_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/cloud-service/1_hu85604e3e532b9e4406b55b22f5237dcf_46780_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="278"
+data-flex-basis="667px"
+>&lt;/p>
+&lt;p>创建分配&lt;/p>
+&lt;p>源域填写能测速的地址：cachefly.cachefly.net
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/2.png"
+width="992"
+height="612"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/2_huc85c47aaf706b0a65eee2892fa33884b_26552_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/cloud-service/2_huc85c47aaf706b0a65eee2892fa33884b_26552_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="162"
+data-flex-basis="389px"
+>&lt;/p>
+&lt;p>协议：匹配查看器&lt;/p>
+&lt;p>自动压缩对象：No
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/3.png"
+width="609"
+height="359"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/3_hud24bdac1aa1c3679a9782cb9786512ee_11726_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/cloud-service/3_hud24bdac1aa1c3679a9782cb9786512ee_11726_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="169"
+data-flex-basis="407px"
+>&lt;/p>
+&lt;p>缓存键和源请求（选择第二项）：Legacy cache settings
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/4.png"
+width="658"
+height="403"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/4_hua6090ffe8ecdcf317fc66ef50d6be74a_18973_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/cloud-service/4_hua6090ffe8ecdcf317fc66ef50d6be74a_18973_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="391px"
+>&lt;/p>
+&lt;p>创建&lt;/p>
+&lt;p>复制得到的域名
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/5.png"
+width="930"
+height="145"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/5_hu494523e1baf1edb4b63c1cb845894442_11299_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/cloud-service/5_hu494523e1baf1edb4b63c1cb845894442_11299_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="641"
+data-flex-basis="1539px"
+>&lt;/p>
+&lt;p>打开显示为测速地址即可（需要等到部署完成）&lt;/p>
+&lt;ol start="4">
+&lt;li>使用CloudflareSpeedTest](&lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest" target="_blank" rel="noopener"
+>https://github.com/XIU2/CloudflareSpeedTest&lt;/a>)优选ip，
+cmd输入&lt;code>CloudflareST.exe -url xxxxxxxxxxx.cloudfront.net/100mb.test&lt;/code>发现ip全部不能用。&lt;/li>
+&lt;/ol>
+&lt;h1 id="aws查看vcpu">aws查看vcpu&lt;/h1>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/1.jpg"
+width="471"
+height="591"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/1_hu2f8e34afb48fd63fc4903e6deb73443c_53028_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/cloud-service/1_hu2f8e34afb48fd63fc4903e6deb73443c_53028_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="79"
+data-flex-basis="191px"
+>
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/2.jpg"
+width="467"
+height="170"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/2_hu4a3f08219f133ce2a57d82a81b51aa7f_25822_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/cloud-service/2_hu4a3f08219f133ce2a57d82a81b51aa7f_25822_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="274"
+data-flex-basis="659px"
+>
+&lt;img src="https://www.jiangdaoli.cf/p/cloud-service/3.jpg"
+width="1429"
+height="363"
+srcset="https://www.jiangdaoli.cf/p/cloud-service/3_hu9e28f6c2b5c0aca10cd7be28458132ed_137509_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/cloud-service/3_hu9e28f6c2b5c0aca10cd7be28458132ed_137509_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="393"
+data-flex-basis="944px"
+>&lt;/p></description></item><item><title>测试接口</title><link>https://www.jiangdaoli.cf/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
 >主要参考文章&lt;/a>&lt;/p>
 &lt;h1 id="api">API&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
@@ -1136,7 +1459,7 @@ implements
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># extends只能扩展一个类，而mixin有限制，可以一起使用
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># extends只能扩展一个类，而mixin没有限制，可以一起使用
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class Maestro extends Person with Musical, Aggressive, Demented {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Maestro(String maestroName) {
@@ -1144,6 +1467,16 @@ with
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> canConduct = true;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="super">super&lt;/h4>
+&lt;p>&lt;code>super&lt;/code>关键字用于调用父类的对象、方法、构造函数和子类中的属性。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 访问父类变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super.variable_name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 访问父类方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">super.method_name();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 转发给超类的构造函数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const MyApp({Key? key}) : super(key: key);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="扩展方法">扩展方法&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">extension FancyNum on num {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num plus(num other) =&amp;gt; this + other;
@@ -1191,6 +1524,111 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(ip);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="flutter">flutter&lt;/h1>
+&lt;h2 id="生命周期">生命周期&lt;/h2>
+&lt;p>Flutter 中万物皆为Widget，&lt;code>widget&lt;/code>类继承自&lt;code>DiagnosticableTree&lt;/code>。&lt;/p>
+&lt;p>&lt;code>DiagnosticableTree&lt;/code>即“诊断树”，主要作用是提供调试信息。&lt;/p>
+&lt;p>&lt;code>Widget.createElement()&lt;/code> :创建一个Element实例，记为&lt;code>element&lt;/code>。&lt;/p>
+&lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。&lt;/p>
+&lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置，否则就会创建新的&lt;code>Element&lt;/code>。&lt;/p>
+&lt;p>&lt;code>createState()&lt;/code>:为每一个&lt;code>StatefulElement&lt;/code>创建一个State实例。&lt;/p>
+&lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
+&lt;p>&lt;strong>StatelessWidget生命周期图&lt;/strong>
+&lt;img src="https://www.jiangdaoli.cf/p/flutter/6.jpg"
+width="1787"
+height="966"
+srcset="https://www.jiangdaoli.cf/p/flutter/6_hu9df739c1aeb15e1ce9f35dea789d6e83_349244_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/flutter/6_hu9df739c1aeb15e1ce9f35dea789d6e83_349244_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="184"
+data-flex-basis="443px"
+>&lt;/p>
+&lt;p>StatefulWidgets更为复杂，使用Getx接管更好用，不再详解&lt;/p>
+&lt;h2 id="getx">Getx&lt;/h2>
+&lt;p>###状态管理
+####声明一个反应变量
+你有3种方法可以把一个变量变成是 &amp;ldquo;可观察的&amp;rdquo;。&lt;/p>
+&lt;p>1 - 第一种是使用 &lt;strong>&lt;code>Rx{Type}&lt;/code>&lt;/strong>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// 建议使用初始值，但不是强制性的
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final name = RxString(&amp;#39;&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final isLogged = RxBool(false);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count = RxInt(0);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final balance = RxDouble(0.0);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final items = RxList&amp;lt;String&amp;gt;([]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final myMap = RxMap&amp;lt;String, int&amp;gt;({});
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2 - 第二种是使用 &lt;strong>&lt;code>Rx&lt;/code>&lt;/strong>，规定泛型 &lt;code>Rx&amp;lt;Type&amp;gt;&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">final name = Rx&amp;lt;String&amp;gt;(&amp;#39;&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final isLogged = Rx&amp;lt;Bool&amp;gt;(false);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count = Rx&amp;lt;Int&amp;gt;(0);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final balance = Rx&amp;lt;Double&amp;gt;(0.0);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final number = Rx&amp;lt;Num&amp;gt;(0)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final items = Rx&amp;lt;List&amp;lt;String&amp;gt;&amp;gt;([]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final myMap = Rx&amp;lt;Map&amp;lt;String, int&amp;gt;&amp;gt;({});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 自定义类 - 可以是任何类
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final user = Rx&amp;lt;User&amp;gt;();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3 - 第三种更实用、更简单、更可取的方法，只需添加 &lt;strong>&lt;code>.obs&lt;/code>&lt;/strong> 作为&lt;code>value&lt;/code>的属性。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;&amp;#39;.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final isLogged = false.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final balance = 0.0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final number = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final items = &amp;lt;String&amp;gt;[].obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final myMap = &amp;lt;String, int&amp;gt;{}.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 自定义类 - 可以是任何类
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final user = User().obs;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="使用值">使用值&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// controller
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count1 = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count2 = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int get sum =&amp;gt; count1.value + count2.value; // 由于.obs把变量换成`Rx{Type}`类型，所以需要用.value取值
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// 视图
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GetX&amp;lt;Controller&amp;gt;(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (controller) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;count 1 rebuild&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;${controller.count1.value}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GetX&amp;lt;Controller&amp;gt;(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (controller) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;count 2 rebuild&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;${controller.count2.value}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">GetX&amp;lt;Controller&amp;gt;(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (controller) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;count 3 rebuild&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;${controller.sum}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">),
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dio">dio&lt;/h2>
+&lt;h3 id="原理">原理&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># dio_mixin.dart 文件中 DioMixin 实现了 Dio
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">abstract class DioMixin implements Dio {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Response&lt;/span>&lt;span class="err">&amp;lt;&lt;/span>&lt;span class="na">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;gt; post&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String path, { # path： 请求的url链接
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data, # data： 请求数据，例如上传用到的FromData
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Map&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">dynamic&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>? queryParameters, # data： 请求数据，例如上传用到的FromData
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Options? options, # queryParameters： 查询参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> CancelToken? cancelToken, # cancelToken： 用来取消发送请求的token
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProgressCallback? onSendProgress, # onSendProgress： 网络请求发送的进度
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProgressCallback? onReceiveProgress, # onSendProgress： 网络请求发送的进度
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return request&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>( # 返回request方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> path,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> data: data,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> options: checkOptions(&amp;#39;POST&amp;#39;, options),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> queryParameters: queryParameters,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cancelToken: cancelToken,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onSendProgress: onSendProgress,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onReceiveProgress: onReceiveProgress,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>get() post() 等调用时，返回request方法，request 方法对请求参数处理，并返回 fetch 方法，fetch 进行响应数据设定、构建请求流、添加拦截器、请求分发。&lt;/p>
+&lt;h2 id="其他">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>freenom自动续期（废弃）</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15完全被封请去仓库看文档">本github actions方法已于2022-07-15完全被封，请去仓库看文档&lt;/h1>
 &lt;h1 id="freenom自动续期">freenom自动续期&lt;/h1>
@@ -1846,6 +2284,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-it 交互模式进入容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-p ip:主机端口:容器端口 #指定端口映射
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-v或--volume /卷名称的路径:/容器中的挂载路径
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search xxx #搜索dockerhub-镜像
@@ -1861,6 +2300,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">操作：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t tag . #构建标签为tag的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull 镜像：版本号 #拉取-镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker start 容器id #启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker restart 容器id #重启容器
@@ -1877,7 +2317,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">exit 容器停止并退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ctrl+p+q 容器不停止退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash #进入正在执行的mysql容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 /bin/sh #进入alpine制作的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 /bin/sh #进入容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34;apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y vim&amp;#34; #进入容器安装vim编辑器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34; apk add --update vim&amp;#34; #进入alpine容器安装vim编辑器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; [container_name_or_id] #查看容器ip
@@ -2755,13 +3195,11 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:port.http #临时命令行代理
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
-&lt;li>
-&lt;p>代理
-Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>git config&lt;/p>
-&lt;/li>
+&lt;li>代理&lt;/li>
+&lt;/ul>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
+&lt;ul>
+&lt;li>git config&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
@@ -2788,7 +3226,7 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu升级">Ubuntu升级&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu升级">Ubuntu升级&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt upgrade
@@ -2818,7 +3256,7 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使用Google DNS作为首选 DNS 服务器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.8.8
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.4.4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="ubuntu安装go">Ubuntu安装go&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu安装go">Ubuntu安装go&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap install go --classic #安装go
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo vim /etc/profile #编辑profile
@@ -2847,6 +3285,31 @@ Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
+&lt;h1 id="win10-系统问题">Win10 系统问题&lt;/h1>
+&lt;h2 id="win10-资源管理器无限重启闪屏">Win10 资源管理器无限重启闪屏&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>安全模式开机&lt;/p>
+&lt;p>长按开机键3次，选择【疑难解答】-【高级选项】-【启动设置】- 【重启】，在启动设置内，
+按 4 或 F4 就可以进入安全模式了。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>更换本地账户、新建本地账户。&lt;/p>
+&lt;p>开机后&lt;strong>右键windows图标&lt;/strong>点击 powershell（管理员）&lt;/p>
+&lt;p>在命令提示符(管理员)中复制粘贴输入以下指令：&lt;/p>
+&lt;p>&lt;code>net user User ****** /add&lt;/code> (User是新建账户，******是新建的随机密码)　　&lt;/p>
+&lt;p>&lt;code>net localgroup administrators User /add&lt;/code> (赋予该账号管理员权限)&lt;/p>
+&lt;p>重启后按电源键息屏，再开启后可以切换到User账户，进去后一切正常，表示故障原因不在硬件和系统方面，肯定是第三方软件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>新建文本粘贴以下代码&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Windows Registry Editor Version 5.00
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\explorer.exe]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;DumpFolder&amp;#34;=hex(2):43,00,3a,00,5c,00,43,00,72,00,61,00,73,00,68,00,44,00,75,\
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">00,6d,00,70,00,73,00,00,00
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>重命名为1.reg，运行后会在C盘建立CrashDumps文件夹（路径C:\CrashDumps），当系统闪屏后里面有后缀.dmp文件，把这个文件拖到Visual Studio里打开，可以排查相关的第三方软件的路径，挨个卸载。我放在vs里显示我IDM下载程序缺少二进制文件，卸载后完美进入系统。&lt;/p>
+&lt;/li>
+&lt;/ol>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
