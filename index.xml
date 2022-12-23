@@ -163,7 +163,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-6.有序分配问题逐分法:
+5.有序分配问题逐分法:
 &lt;/div>
 &lt;div class="box info" >
 &lt;span class="icon-box baseline">
@@ -182,7 +182,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>A、$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　B、3$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　C、$C_{12}^{4}$$C_8^4$$A_3^3$ 种 　D、$\frac{C_{12}^{4}C_8^4C_4^4}{A_3^3}$ 种&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-7.元素不同的分配问题先选后排:
+6.元素不同的分配问题先选后排:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 4 名优秀学生全部保送到 3 所学校去，每所学校至少去一名，则不同的保送方案有多少种？&lt;/p>
 &lt;details class="spoiler " id="spoiler-16">
@@ -197,7 +197,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-8.元素相同的分配问题隔板法:
+7.元素相同的分配问题隔板法:
 &lt;/div>
 &lt;p>&lt;strong>例 1：&lt;/strong> 10 个三好学生名额分到 7 个班级，每个班级至少一个名额，有多少种不同分配方案？&lt;/p>
 &lt;details class="spoiler " id="spoiler-19">
@@ -213,7 +213,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-9.限制条件的分配问题分类法:
+8.限制条件的分配问题分类法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 某高校从某系的 10 名优秀毕业生中选 4 人分别到西部四城市参加中国西部经济开发建设，其中甲同学不到银川，乙不到西宁，共有多少种不同派遣方案？&lt;/p>
 &lt;details class="spoiler " id="spoiler-22">
@@ -223,7 +223,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-10.多元问题分类法：
+9.多元问题分类法：
 &lt;/div>
 &lt;p>&lt;strong>例 1&lt;/strong> （1）由数字 0，1，2，3，4，5 组成没有重复数字的六位数，其中个位数字小于十位数字的共有（ ）&lt;/p>
 &lt;p>A、210 种 　B、300 种 　C、464 种 　D、600 种&lt;/p>
@@ -238,7 +238,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-11.交 叉 问 题 集 合 法 ：
+10.交 叉 问 题 集 合 法 ：
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 6 名运动员中选出 4 人参加 4×100 米接力赛，如果甲不跑第一棒，乙不跑第四棒，共有多少种不同的参赛方案？&lt;/p>
 &lt;details class="spoiler " id="spoiler-26">
@@ -248,16 +248,16 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-12.定位问题优先法：
+11.配对问题：
 &lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 现 1 名老师和 4 名获奖同学排成一排照相留念，若老师不站两端则有不同的排法有多少种？&lt;/p>
+&lt;p>&lt;strong>例 1.&lt;/strong> 5双相异的鞋共10只,现随机地取出6只,恰好能配成2双鞋的取法是多少?&lt;/p>
 &lt;details class="spoiler " id="spoiler-28">
 &lt;summary>解析&lt;/summary>
-&lt;p>老师在中间三个位置上选一个有 $A_3^1$种，4 名同学在其余 4 个位置上有 $A_4^4$种方法；所以共有$A_3^1$$A_4^4$=72 种.&lt;/p>
+&lt;p>$C_{5}^{2} C_{6}^{1} C_{4}^{1}$=240&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-13.多排问题单排法:
+12.多排问题单排法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8人排成前后两排，每排4人，其中甲乙在前排，丙在后排，共有多少排法？&lt;/p>
 &lt;details class="spoiler " id="spoiler-30">
@@ -266,7 +266,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-14.“至少”“至多”问题用间接排除法或分类法:
+13.“至少”“至多”问题用间接排除法或分类法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 4 台甲型和 5 台乙型电视机中任取 3 台，其中至少要甲型和乙 型电视机各一台，则不同的取法共有（ ）&lt;/p>
 &lt;p>A、140 种 　B、80 种 　C、70 种 　D、35 种&lt;/p>
@@ -276,7 +276,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-16.部分合条件问题排除法:
+14.部分合条件问题排除法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> （1）以正方体的顶点为顶点的四面体共有（ ）&lt;/p>
 &lt;p>A、70 种 　B、64 种 　C、58 种 　D、52 种&lt;/p>
@@ -290,7 +290,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-17.可重复的排列求幂法:
+15.可重复的排列求幂法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 把 6 名实习生分配到 7 个车间实习共有多少种不同方法？&lt;/p>
 &lt;details class="spoiler " id="spoiler-36">
@@ -299,20 +299,33 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-19.元素个数较少的排列组合问题可以考虑枚举法:
+16.上楼梯问题:
+&lt;/div>
+&lt;p>&lt;strong>例 1.&lt;/strong> 10级台阶，某人可一步跨一级，也可跨两级，也可跨三级。
+（1）他6步就可上完台阶的方法数是多少？
+（2）他上完台阶的方法总数是多少？&lt;/p>
+&lt;details class="spoiler " id="spoiler-38">
+&lt;summary>解析&lt;/summary>
+&lt;p>&lt;p>（1）按照 3，3，1，1，1，1 的走法有 $C_{6}^{2}$ 种，按照 3，2，2，1，1，1 的走法有 $C_{6}^{1} C_{5}^{2}$ 种，按照 2，2，2，2，1，1 的走法有 $C_{6}^{4}$ 种，所以恰好6步上完台阶的方法种数是 $C_{6}^{2}$+$C_{6}^{1} C_{5}^{2}$+$C_{6}^{4}$=15+60+15=90 .&lt;/p>
+&lt;p>（2）上楼梯问题是典型的斐波那契数列，设爬n级台阶的解法总数为f(n)，因为规定每一步只能跨一级或两级或三级，则f(n)=f(n-1)+f(n-2)+f(n-3)。易知f(1)=1，f(2)=2，f(3)=4,递推可得f(4)=7,f(5)=13,f(6)=24,f(7)=44,f(8)=81,f(9)=149,f10)=274&lt;/p>
+&lt;/p>
+&lt;/details>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+17.元素个数较少的排列组合问题可以考虑枚举法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 设有编号为 1，2，3，4，5 的五个球和编号为 1，2，3，4，5 的盒子现将这 5 个球投入 5 个盒子要求每个盒子放一个球，并且恰好有两个球的号码与盒子号码相同，问有多少种不同的方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-38">
+&lt;details class="spoiler " id="spoiler-40">
 &lt;summary>解析&lt;/summary>
 &lt;p>从 5 个球中取出 2 个与盒子对号有 $C_5^2$种，还剩下 3 个球与 3 个盒子序号不能对应，利用枚举法分析，如果剩下 3，4，5 号球与 3，4，5 号盒子时，3 号球不能装入 3 号盒子，当 3 号球装入 4 号盒子时，4，5 号球只有1 种装法，3 号球装入 5 号盒子时，4，5 号球也只有 1 种装法，所以剩下三球只有 2 种装法，因此总共装法数为2$C_5^2$= 20 种.&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-20.复杂的排列组合问题也可用分解与合成法:
+28.复杂的排列组合问题也可用分解与合成法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong>（1）30030 能被多少个不同偶数整除？&lt;/p>
 &lt;p>（2）正方体 8 个顶点可连成多少队异面直线？&lt;/p>
-&lt;details class="spoiler " id="spoiler-40">
+&lt;details class="spoiler " id="spoiler-42">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）先把 30030 分解成质因数的形式：30030=2×3×5×7×11×13；依题意偶因数 2 必取，3，5，7，11，13这 5 个因数中任取若干个组成成积，所有的偶因数为$C_5^0$+$C_5^1$+$C_5^2$+$C_5^3$+$C_5^4$+$C_5^5$= 32 个.&lt;/p>
 &lt;p>（2）因为四面体中仅有 3 对异面直线，可将问题分解成正方体的 8 个顶点可构成多少个不同的四面体，从正方体 8 个顶点中任取四个顶点构成的四面体有$C_8^4$-12= 58 个，所以 8 个顶点可连成的异面直线有 3×58=174 对.&lt;/p>
@@ -320,7 +333,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-21.利用对应思想转化法:
+19.利用对应思想转化法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> （1）圆周上有 10 点，以这些点为端点的弦相交于圆内的交点有多少个？&lt;/p>
 &lt;p>（2）某城市的街区有 12 个全等的矩形组成，其中实线表示马路，从 A到 B的最短路径有多少种？&lt;/p>
@@ -333,7 +346,7 @@ class="gallery-image"
 data-flex-grow="219"
 data-flex-basis="526px"
 >&lt;/p>
-&lt;details class="spoiler " id="spoiler-42">
+&lt;details class="spoiler " id="spoiler-44">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）因为圆的一个内接四边形的两条对角线相交于圆内一点，一个圆的内接四边形就对应着两条弦相交于圆内的一个交点，于是问题就转化为圆周上的 10 个点可以确定多少个不同的四边形，显然有 $C_{10}^{4}$个，所以圆周上有10 点，以这些点为端点的弦相交于圆内的交点有 $C_{10}^{4}$个.&lt;/p>
 &lt;p>（2）可将图中矩形的一边叫一小段，从 A到 B最短路线必须走 7 小段，其中：向东 4 段，向北 3 段；而且前一段的尾接后一段的首，所以只要确定向东走过 4 段的走法，便能确定路径，因此不同走法有 $C_{7}^{4}$种.&lt;/p>
@@ -341,10 +354,10 @@ data-flex-basis="526px"
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-22.全错位排列问题公式法:
+20.全错位排列问题公式法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 分别编有 1，2，3，4，5 号码的人与椅，其中i 号人不坐i 号椅（i = 1,2,3,4,5）的不同坐法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-44">
+&lt;details class="spoiler " id="spoiler-46">
 &lt;summary>解析&lt;/summary>
 &lt;p>全错位排列是组合数学中的经典问题之一，使用公式不容易出错：
 $$
@@ -354,46 +367,46 @@ $$
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-23.环排问题
+21.环排问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8 人围桌而坐,共有多少种坐法?&lt;/p>
-&lt;details class="spoiler " id="spoiler-46">
+&lt;details class="spoiler " id="spoiler-48">
 &lt;summary>解析&lt;/summary>
 &lt;p>$\mathrm{n}$ 个不同元素作圆形排列,共有 $(\mathrm{n}-1)$!种排法.即7!
 如果从 $\mathrm{n}$ 个不同元素中取出 $\mathrm{m}$ 个元素作圆形排列共有 $\frac{1}{n} A_n^m$ 。&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-24.正难则反策略
+22.正难则反策略
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 0,1,2,3,4,5,6,7,8,9 这十个数字中取出三个数，使其和为不小于 10 的
 偶数,不同的取法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-48">
+&lt;details class="spoiler " id="spoiler-50">
 &lt;summary>解析&lt;/summary>
 &lt;p>这问题中如果直接求不小于 10 的偶数很困难, 可用总体淘汰法。这十个数字 中有 5 个偶数 5 个奇数, 所取的三个数含有 3 个偶数的取法有 $C_5^3$, 只含有 1 个偶数 的取法有 $C_5^1 C_5^2$, 和为偶数的取法共有 $C_5^1 C_5^2+C_5^3$ 。再淘汰和小于 10 的偶数共 9 种, 符合条件的取法共有 $C_5^1 C_5^2+C_5^3-9$&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-25.平均分组问题
+23.平均分组问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 6 本不同的书平均分成 3 堆,每堆 2 本共有多少分法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-50">
+&lt;details class="spoiler " id="spoiler-52">
 &lt;summary>解析&lt;/summary>
 &lt;p>分三步取书得 $C_6^2 C_4^2 C_2^2$ 种方法, 但这里出现重复计数的现象, 不妨记 6 本书为 $A B C D E F$, 若第一步取 $A B$, 第二步取 $C D$, 第三步取 $E F$ 该分法记为 (AB, $C D, E F)$, 则 $C_6^2 C_4^2 C_2^2$ 中还有 (AB, $\left.\mathrm{EF}, \mathrm{CD}\right)$, (CD, AB, $\mathrm{EF}$ ), (CD, EF, AB) (EF, CD, AB), (EF, AB, CD) 共有 $A_3^3$ 种取法, 而这些分法仅是 ( $\left.\mathrm{AB}, \mathrm{CD}, \mathrm{EF}\right)$ 一种分法, 故共有 $C_6^2 C_4^2 C_2^2 / A_3^3$ 种分法。&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-26.分类与分步策略
+24.分类与分步策略
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 有红、黄、兰色的球各 5 只,分别标有 A、B、C、D、E 五个字母,现从中取
 5 只,要求各字母均有且三色齐备,则共有多少种不同的取法&lt;/p>
-&lt;details class="spoiler " id="spoiler-52">
+&lt;details class="spoiler " id="spoiler-54">
 &lt;summary>解析&lt;/summary>
 &lt;p>按颜色分有1 1 3和1 2 2 两种，各3种方案。2.分字母，1 1 3对应有$C_5^1$$C_4^1$$C_3^3$共20种，1 2 2对应$C_5^1$$C_4^2$$C_2^2$共30种，3&lt;em>20+3&lt;/em>30=150&lt;/p>
 &lt;/details>
 &lt;p>&lt;strong>例 2.&lt;/strong> 在一次演唱会上共 10 名演员,其中 8 人能能唱歌,5 人会跳舞,现要演出一个
 2 人唱歌 2 人伴舞的节目,有多少选派方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-53">
+&lt;details class="spoiler " id="spoiler-55">
 &lt;summary>解析&lt;/summary>
 &lt;p>10 演员中有 5 人只会唱歌, 2 人只会跳舞 3 人为全能演员。选上唱歌人员为 标准进行研究只会唱的 5 人中没有人选上唱歌人员共有 $C_3^2 C_3^2$ 种, 只会唱的 5 人中只 有 1 人选上唱歌人员 $C_5^1 C_3^1 C_4^2$ 种, 只会唱的 5 人中只有 2 人选上唱歌人员有 $C_5^2 C_5^2$ 种, 由分类计数原理共有 $C_3^2 C_3^2+C_5^1 C_3^1 C_4^2+C_5^2 C_5^2$ 种。&lt;/p>
 &lt;/details></description></item><item><title>acme.sh 申请证书</title><link>https://www.jiangdaoli.cf/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
