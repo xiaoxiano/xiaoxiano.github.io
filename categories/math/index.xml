@@ -153,31 +153,12 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 4.定序问题:
 &lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 例4、 7 人排队，其中甲乙丙 3 人顺序一定（可以不相邻），共有多少不同的排法?&lt;/p>
+&lt;p>&lt;strong>例 1.&lt;/strong> 7 人排队，其中甲乙丙 3 人顺序一定（可以不相邻），共有多少不同的排法?&lt;/p>
 &lt;details class="spoiler " id="spoiler-11">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>(倍缩法) 对于某几个元素顺序一定的排列问题，可先把这几个元素与其他元素一起进行排列，然后用总排列数除以这几个元素之间的全排列数，则共有不 同排法种数是: $A_7^7 / A_3^3$&lt;/p>
-&lt;p>(空位法) 设想有7把椅子让除甲乙丙以外的四人就坐共有（ $\left.A_7^4\right$） 种方法，其余的三个位置甲乙丙共有（1）种坐法，则共有（ $\left.A_7^4\right$） 种方法。&lt;/p>
+&lt;p>(空位法) 设想有7把椅子让除甲乙丙以外的四人就坐共有$A_7^4$ 种方法，其余的三个位置甲乙丙共有（1）种坐法，则共有$A_7^4$ 种方法。&lt;/p>
 &lt;/p>
-&lt;/details>
-&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-5.标号排位问题分步法:
-&lt;/div>
-&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>把元素排到指定位置上，可先把某个元素按规定排入，第二步再排另一个元素，如此继
-续下去，依次即可完成.&lt;/p>
-&lt;/div>
-&lt;/p>
-&lt;p>&lt;strong>例 1.&lt;/strong> 将数字 1，2，3，4 填入标号为 1，2，3，4 的四个方格里，每格填一个数，则每个方格的标号与所填数字均不相同的填法有（ ）&lt;/p>
-&lt;p>A、6 种 　B、9 种 　C、11 种 　D、23 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-14">
-&lt;summary>解析&lt;/summary>
-&lt;p>先把 1 填入方格中，符合条件的有 3 种方法，第二步把被填入方格的对应数字填入其它三个方格，又有三种方法；第三步填余下的两个数字，只有一种填法，共有 3×3×1=9 种填法，选 B.&lt;/p>
 &lt;/details>
 &lt;p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
@@ -191,42 +172,40 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>有序分配问题指把元素分成若干组，可用逐步下量分组法.&lt;/p>
 &lt;/div>
 &lt;/p>
-&lt;p>&lt;strong>例 1.&lt;/strong>（1）有甲乙丙三项任务，甲需 2 人承担，乙丙各需一人承担，从 10 人中选出 4 人承担这三项任务，不同的选法种数是（ ）&lt;/p>
+&lt;p>&lt;strong>例 1.&lt;/strong> 有甲乙丙三项任务，甲需 2 人承担，乙丙各需一人承担，从 10 人中选出 4 人承担这三项任务，不同的选法种数是（ ）&lt;/p>
 &lt;p>A、1260 种 　B、2025 种 　C、2520 种 　D、5040 种&lt;/p>
-&lt;p>（2）12 名同学分别到三个不同的路口进行流量的调查，若每个路口 4 人，则不同的分配方案有（ ）&lt;/p>
-&lt;p>A、$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　B、3$C_12^4$$C_8^4$$C_4^4$ 种 　C、$C_12^4$$C_8^4$$A_3^3$ 种 　D、$\frac{C_{12}^{4}C_8^4C_4^4}{A_3^3}$ 种&lt;/p>
+&lt;details class="spoiler " id="spoiler-14">
+&lt;summary>解析&lt;/summary>
+&lt;p>先从 10 人中选出 2 人承担甲项任务，再从剩下的 8 人中选 1 人承担乙项任务，第三步从另外的 7 人中选1 人承担丙项任务，不同的选法共有 $C_{10}^{2}$$C_8^1$$C_7^1$=2520 种，选 C.&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>例 2.&lt;/strong> 12 名同学分别到三个不同的路口进行流量的调查，若每个路口 4 人，则不同的分配方案有（ A）&lt;/p>
+&lt;p>A、$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　B、3$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　C、$C_{12}^{4}$$C_8^4$$A_3^3$ 种 　D、$\frac{C_{12}^{4}C_8^4C_4^4}{A_3^3}$ 种&lt;/p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+7.元素不同的分配问题先选后排:
+&lt;/div>
+&lt;p>&lt;strong>例 1.&lt;/strong> 4 名优秀学生全部保送到 3 所学校去，每所学校至少去一名，则不同的保送方案有多少种？&lt;/p>
+&lt;details class="spoiler " id="spoiler-16">
+&lt;summary>解析&lt;/summary>
+&lt;p>把四名学生分成 3 组有 $C_4^2$ 种方法，再把三组学生分配到三所学校有 $A_3^3$ 种，故共有 $C_4^2$$A_3^3$=36 种方法.&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>例 2.&lt;/strong> 5 本不同的书，全部分给 4 个学生，每个学生至少一本，不同的分法种数为（ ）&lt;/p>
+&lt;p>A、480 种　B、240 种 　C、120 种 　D、96 种&lt;/p>
 &lt;details class="spoiler " id="spoiler-17">
 &lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>(1) 先从 10 人中选出 2 人承担甲项任务，再从剩下的 8 人中选 1 人承担乙项任务，第三步从另外的 7 人中选1 人承担丙项任务，不同的选法共有 $C_{10}^{2}$$C_8^1$$C_7^1$=2520 种，
-选 C.&lt;/p>
-&lt;p>(2) A.&lt;/p>
-&lt;/p>
+&lt;p>B. $C_5^3$$A_4^4$=240&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-7.全员分配问题分组法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> （1）4 名优秀学生全部保送到 3 所学校去，每所学校至少去一名，则不同的保送方案有多少种？
-（2）5 本不同的书，全部分给 4 个学生，每个学生至少一本，不同的分法种数为（ ）&lt;/p>
-&lt;p>A、480 种　B、240 种 　C、120 种 　D、96 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-19">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>(1) 把四名学生分成 3 组有 $C_4^2$ 种方法，再把三组学生分配到三所学校有 $A_3^3$ 种，故共有 $C_4^2$$A_3^3$=36 种方法.
-说明：分配的元素多于对象且每一对象都有元素分配时常用先分组再分配.&lt;/p>
-&lt;p>(2) B.&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-8.名额分配问题隔板法:
+8.元素相同的分配问题隔板法:
 &lt;/div>
 &lt;p>&lt;strong>例 1：&lt;/strong> 10 个三好学生名额分到 7 个班级，每个班级至少一个名额，有多少种不同分配方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-21">
+&lt;details class="spoiler " id="spoiler-19">
 &lt;summary>解析&lt;/summary>
 &lt;p>10 个名额分到 7 个班级，就是把 10 个名额看成 10 个相同的小球分成 7 堆，每堆至少一个，可以在 10 个小球的 9 个空位中插入 6 块木板，每一种插法对应着一种分配方案，故共有不同的分配方案为$C_9^6$=84 种.&lt;/p>
 &lt;/details>
 &lt;p>&lt;strong>例 2：&lt;/strong> 若x+y+z+w=100,求这个方程组的自然数解的组数.&lt;/p>
-&lt;details class="spoiler " id="spoiler-22">
+&lt;details class="spoiler " id="spoiler-20">
 &lt;summary>解析&lt;/summary>
 &lt;p>我们认为0是自然数，所有存在0+0+0+100=100的情况，所以这里的元素
 个数应为104个，即3个 0和100个1，这104个元素间有103个空位，中间插入
@@ -237,7 +216,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 9.限制条件的分配问题分类法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 某高校从某系的 10 名优秀毕业生中选 4 人分别到西部四城市参加中国西部经济开发建设，其中甲同学不到银川，乙不到西宁，共有多少种不同派遣方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-24">
+&lt;details class="spoiler " id="spoiler-22">
 &lt;summary>解析&lt;/summary>
 &lt;p>因为甲乙有限制条件，所以按照是否含有甲乙来分类，有以下四种情况：
 ①若甲乙都不参加，则有派遣方案 $A_8^4$ 种；②若甲参加而乙不参加，先安排甲有 3 种方法，然后安排其余学生有 $A_8^3$方法，所以共有 3$A_8^3$；③若乙参加而甲不参加同理也有 3$A_8^3$种；④若甲乙都参加，则先安排甲乙，有 7 种方法， 然 后 再 安 排 其 余 8 人 到 另 外 两 个 城 市 有 $A_8^2$种 ， 共 有 7$A_8^2$方 法 . 所 以 共 有 不 同 的 派 遣 方 法 总 数 为 $A_8^4$ + 3$A_8^3$ + 3$A_8^3$ + 7$A_8^2$=4088 种.&lt;/p>
@@ -250,7 +229,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>A、210 种 　B、300 种 　C、464 种 　D、600 种&lt;/p>
 &lt;p>（2）从 1，2，3…，100 这 100 个数中，任取两个数，使它们的乘积能被 7 整除，这两个数的取法（不计顺序）共有多少种？&lt;/p>
 &lt;p>（3）从 1，2，3，…，100 这 100 个数中任取两个数，使其和能被 4 整除的取法（不计顺序）有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-26">
+&lt;details class="spoiler " id="spoiler-24">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）按题意，个位数字只可能是 0，1，2，3，4 共 5 种情况，分别有 $A_5^5$个，$A_4^1$$A_3^1$$A_3^3$ , $A_3^1$$A_3^1$$A_3^3$ , $A_2^1$$A_3^1$$A_3^3$ , $A_3^1$$A_3^3$个，合并总计 300 个,选 B.&lt;/p>
 &lt;p>（2）被取的两个数中至少有一个能被 7 整除时，他们的乘积就能被 7 整除，将这 100 个数组成的集合视为全集I,能被 7 整除的数的集合记做 $\overline{A}$ = { 7，14，21，$\cdots$，98 } 共有 14 个元素,不能被 7 整除的数组成的集合记做 $\overline{A}$ = { 1，2，3，4,$\cdots$，100 } 共有 86 个元素；由此可知，从 A中任取 2 个元素的取法有 $C_{14}^{2}$，从 A中任取一个，又从$\overline{A}$中任取一个共有 $C_{14}^{1}$$C_{86}^{1}$，两种情形共符合要求的取法有 $C_{14}^{2}$ + $C_{14}^{1}$$C_{86}^{1}$=1295 种.&lt;/p>
@@ -262,7 +241,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 11.交 叉 问 题 集 合 法 ：
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 6 名运动员中选出 4 人参加 4×100 米接力赛，如果甲不跑第一棒，乙不跑第四棒，共有多少种不同的参赛方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-28">
+&lt;details class="spoiler " id="spoiler-26">
 &lt;summary>解析&lt;/summary>
 &lt;p>设全集= {6 人中任取 4 人参赛的排列} ，A={甲跑第一棒的排列} ，B={乙跑第四棒的排列} ，根据求集合元素个数的公式得参赛方法共有：
 n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
@@ -272,7 +251,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 12.定位问题优先法：
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 现 1 名老师和 4 名获奖同学排成一排照相留念，若老师不站两端则有不同的排法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-30">
+&lt;details class="spoiler " id="spoiler-28">
 &lt;summary>解析&lt;/summary>
 &lt;p>老师在中间三个位置上选一个有 $A_3^1$种，4 名同学在其余 4 个位置上有 $A_4^4$种方法；所以共有$A_3^1$$A_4^4$=72 种.&lt;/p>
 &lt;/details>
@@ -281,7 +260,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 13.多排问题单排法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8人排成前后两排，每排4人，其中甲乙在前排，丙在后排，共有多少排法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-32">
+&lt;details class="spoiler " id="spoiler-30">
 &lt;summary>解析&lt;/summary>
 &lt;p>看成一排，某 2 个元素在前半段四个位置中选排 2 个，有 $A_4^2$种，某 1 个元素排在后半段的四个位置中选一个有 $A_4^1$种，其余 5 个元素任排 5 个位置上有 $A_5^5$种，故共有 $A_4^2$$A_4^1$$A_5^5$=5760 种排法.&lt;/p>
 &lt;/details>
@@ -291,21 +270,9 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 4 台甲型和 5 台乙型电视机中任取 3 台，其中至少要甲型和乙 型电视机各一台，则不同的取法共有（ ）&lt;/p>
 &lt;p>A、140 种 　B、80 种 　C、70 种 　D、35 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-34">
+&lt;details class="spoiler " id="spoiler-32">
 &lt;summary>解析&lt;/summary>
 &lt;p>至少要甲型和乙 型电视机各一台可分两种情况：甲型 1 台乙型 2 台；甲型 2 台乙型 1 台；故不同的取法有 $C_5^2$$C_4^1$ + $C_5^1$$C_4^2$ =70 台,选 C.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-15.排列组合混合问题先选后排:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> （1）四个不同球放入编号为 1，2，3，4 的四个盒中，则恰有一个空盒的放法有多少种？&lt;/p>
-&lt;p>（2）9 名乒乓球运动员，其中男 5 名，女 4 名，现在要进行混合双打训练，有多少种不同的分组方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-36">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）先取四个球中二个为一组，另二组各一个球的方法有 $C_4^2$种，再排：在四个盒中每次排 3 个有 $A_4^3$种A，故共 有$C_4^2$$A_4^3$=144 种.&lt;/p>
-&lt;p>（2）先取男女运动员各 2 名，有 $C_5^2$$C_4^2$种，这四名运动员混和双打练习有 $A_2^2$中排法，故共有$C_5^2$$C_4^2$$A_2^2$=120 种.&lt;/p>
-&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
@@ -315,7 +282,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;p>A、70 种 　B、64 种 　C、58 种 　D、52 种&lt;/p>
 &lt;p>（2）四面体的顶点和各棱中点共 10 点，在其中取 4 个不共面的点，不同的取法共有（ ）&lt;/p>
 &lt;p>A、150 种 　B、147 种 　C、144 种 　D、141 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-38">
+&lt;details class="spoiler " id="spoiler-34">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）正方体 8 个顶点从中每次取四点，理论上可构成 $C_8^4$四面体，但 6 个表面和 6 个对角面的四个顶点共面都不能构成四面体，所以四面体实际共有$C_8^4$-12= 58 个.&lt;/p>
 &lt;p>（2）10 个点中任取 4 个点共有 $C_{10}^{4}$种，其中四点共面的有三种情况：①在四面体的四个面上，每面内四点共面的情况为 $C_6^4$，四个面共有 4$C_6^4$个；②过空间四边形各边中点的平行四边形共 3 个；③过棱上三点与对棱中点的三角形共 6 个.所以四点不共面的情况的种数是 $C_{10}^{4}$ - 4$C_6^4$ -3-6=141 种.&lt;/p>
@@ -326,26 +293,16 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 17.可重复的排列求幂法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 把 6 名实习生分配到 7 个车间实习共有多少种不同方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-40">
+&lt;details class="spoiler " id="spoiler-36">
 &lt;summary>解析&lt;/summary>
 &lt;p>完成此事共分 6 步，第一步；将第一名实习生分配到车间有 7 种不同方案，第二步：将第二名实习生分配到车间也有 7 种不同方案，依次类推，由分步计数原理知共有 $A_{7}^{6}$种不同方案.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-18.复杂排列组合问题构造模型法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 马路上有编号为 1，2，3$\cdots$，9 九只路灯，现要关掉其中的三盏，但不能关掉相邻的二盏或三盏，也不能关掉两端的两盏，求满足条件的关灯方案有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-42">
-&lt;summary>解析&lt;/summary>
-&lt;p>把此问题当作一个排对模型，在 6 盏亮灯的 5 个空隙中插入 3 盏不亮的灯 $C_5^3$种方法,所以满足条件的关灯方案有 10 种.
-说明：一些不易理解的排列组合题，如果能转化为熟悉的模型如填空模型，排队模型，装盒模型可使问题容易解决.&lt;/p>
 &lt;/details>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 19.元素个数较少的排列组合问题可以考虑枚举法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 设有编号为 1，2，3，4，5 的五个球和编号为 1，2，3，4，5 的盒子现将这 5 个球投入 5 个盒子要求每个盒子放一个球，并且恰好有两个球的号码与盒子号码相同，问有多少种不同的方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-44">
+&lt;details class="spoiler " id="spoiler-38">
 &lt;summary>解析&lt;/summary>
 &lt;p>从 5 个球中取出 2 个与盒子对号有 $C_5^2$种，还剩下 3 个球与 3 个盒子序号不能对应，利用枚举法分析，如果剩下 3，4，5 号球与 3，4，5 号盒子时，3 号球不能装入 3 号盒子，当 3 号球装入 4 号盒子时，4，5 号球只有1 种装法，3 号球装入 5 号盒子时，4，5 号球也只有 1 种装法，所以剩下三球只有 2 种装法，因此总共装法数为2$C_5^2$= 20 种.&lt;/p>
 &lt;/details>
@@ -355,7 +312,7 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong>（1）30030 能被多少个不同偶数整除？&lt;/p>
 &lt;p>（2）正方体 8 个顶点可连成多少队异面直线？&lt;/p>
-&lt;details class="spoiler " id="spoiler-46">
+&lt;details class="spoiler " id="spoiler-40">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）先把 30030 分解成质因数的形式：30030=2×3×5×7×11×13；依题意偶因数 2 必取，3，5，7，11，13这 5 个因数中任取若干个组成成积，所有的偶因数为$C_5^0$+$C_5^1$+$C_5^2$+$C_5^3$+$C_5^4$+$C_5^5$= 32 个.&lt;/p>
 &lt;p>（2）因为四面体中仅有 3 对异面直线，可将问题分解成正方体的 8 个顶点可构成多少个不同的四面体，从正方体 8 个顶点中任取四个顶点构成的四面体有$C_8^4$-12= 58 个，所以 8 个顶点可连成的异面直线有 3×58=174 对.&lt;/p>
@@ -376,7 +333,7 @@ class="gallery-image"
 data-flex-grow="219"
 data-flex-basis="526px"
 >&lt;/p>
-&lt;details class="spoiler " id="spoiler-48">
+&lt;details class="spoiler " id="spoiler-42">
 &lt;summary>解析&lt;/summary>
 &lt;p>&lt;p>（1）因为圆的一个内接四边形的两条对角线相交于圆内一点，一个圆的内接四边形就对应着两条弦相交于圆内的一个交点，于是问题就转化为圆周上的 10 个点可以确定多少个不同的四边形，显然有 $C_{10}^{4}$个，所以圆周上有10 点，以这些点为端点的弦相交于圆内的交点有 $C_{10}^{4}$个.&lt;/p>
 &lt;p>（2）可将图中矩形的一边叫一小段，从 A到 B最短路线必须走 7 小段，其中：向东 4 段，向北 3 段；而且前一段的尾接后一段的首，所以只要确定向东走过 4 段的走法，便能确定路径，因此不同走法有 $C_{7}^{4}$种.&lt;/p>
@@ -387,7 +344,7 @@ data-flex-basis="526px"
 22.全错位排列问题公式法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 分别编有 1，2，3，4，5 号码的人与椅，其中i 号人不坐i 号椅（i = 1,2,3,4,5）的不同坐法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-50">
+&lt;details class="spoiler " id="spoiler-44">
 &lt;summary>解析&lt;/summary>
 &lt;p>全错位排列是组合数学中的经典问题之一，使用公式不容易出错：
 $$
@@ -400,7 +357,7 @@ $$
 23.环排问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8 人围桌而坐,共有多少种坐法?&lt;/p>
-&lt;details class="spoiler " id="spoiler-52">
+&lt;details class="spoiler " id="spoiler-46">
 &lt;summary>解析&lt;/summary>
 &lt;p>$\mathrm{n}$ 个不同元素作圆形排列,共有 $(\mathrm{n}-1)$!种排法.即7!
 如果从 $\mathrm{n}$ 个不同元素中取出 $\mathrm{m}$ 个元素作圆形排列共有 $\frac{1}{n} A_n^m$ 。&lt;/p>
@@ -411,7 +368,7 @@ $$
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 0,1,2,3,4,5,6,7,8,9 这十个数字中取出三个数，使其和为不小于 10 的
 偶数,不同的取法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-54">
+&lt;details class="spoiler " id="spoiler-48">
 &lt;summary>解析&lt;/summary>
 &lt;p>这问题中如果直接求不小于 10 的偶数很困难, 可用总体淘汰法。这十个数字 中有 5 个偶数 5 个奇数, 所取的三个数含有 3 个偶数的取法有 $C_5^3$, 只含有 1 个偶数 的取法有 $C_5^1 C_5^2$, 和为偶数的取法共有 $C_5^1 C_5^2+C_5^3$ 。再淘汰和小于 10 的偶数共 9 种, 符合条件的取法共有 $C_5^1 C_5^2+C_5^3-9$&lt;/p>
 &lt;/details>
@@ -420,7 +377,7 @@ $$
 25.平均分组问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 6 本不同的书平均分成 3 堆,每堆 2 本共有多少分法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-56">
+&lt;details class="spoiler " id="spoiler-50">
 &lt;summary>解析&lt;/summary>
 &lt;p>分三步取书得 $C_6^2 C_4^2 C_2^2$ 种方法, 但这里出现重复计数的现象, 不妨记 6 本书为 $A B C D E F$, 若第一步取 $A B$, 第二步取 $C D$, 第三步取 $E F$ 该分法记为 (AB, $C D, E F)$, 则 $C_6^2 C_4^2 C_2^2$ 中还有 (AB, $\left.\mathrm{EF}, \mathrm{CD}\right)$, (CD, AB, $\mathrm{EF}$ ), (CD, EF, AB) (EF, CD, AB), (EF, AB, CD) 共有 $A_3^3$ 种取法, 而这些分法仅是 ( $\left.\mathrm{AB}, \mathrm{CD}, \mathrm{EF}\right)$ 一种分法, 故共有 $C_6^2 C_4^2 C_2^2 / A_3^3$ 种分法。&lt;/p>
 &lt;/details>
@@ -430,13 +387,13 @@ $$
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 有红、黄、兰色的球各 5 只,分别标有 A、B、C、D、E 五个字母,现从中取
 5 只,要求各字母均有且三色齐备,则共有多少种不同的取法&lt;/p>
-&lt;details class="spoiler " id="spoiler-58">
+&lt;details class="spoiler " id="spoiler-52">
 &lt;summary>解析&lt;/summary>
 &lt;p>按颜色分有1 1 3和1 2 2 两种，各3种方案。2.分字母，1 1 3对应有$C_5^1$$C_4^1$$C_3^3$共20种，1 2 2对应$C_5^1$$C_4^2$$C_2^2$共30种，3&lt;em>20+3&lt;/em>30=150&lt;/p>
 &lt;/details>
 &lt;p>&lt;strong>例 2.&lt;/strong> 在一次演唱会上共 10 名演员,其中 8 人能能唱歌,5 人会跳舞,现要演出一个
 2 人唱歌 2 人伴舞的节目,有多少选派方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-59">
+&lt;details class="spoiler " id="spoiler-53">
 &lt;summary>解析&lt;/summary>
 &lt;p>10 演员中有 5 人只会唱歌, 2 人只会跳舞 3 人为全能演员。选上唱歌人员为 标准进行研究只会唱的 5 人中没有人选上唱歌人员共有 $C_3^2 C_3^2$ 种, 只会唱的 5 人中只 有 1 人选上唱歌人员 $C_5^1 C_3^1 C_4^2$ 种, 只会唱的 5 人中只有 2 人选上唱歌人员有 $C_5^2 C_5^2$ 种, 由分类计数原理共有 $C_3^2 C_3^2+C_5^1 C_3^1 C_4^2+C_5^2 C_5^2$ 种。&lt;/p>
 &lt;/details></description></item></channel></rss>
