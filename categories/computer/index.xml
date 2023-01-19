@@ -1525,14 +1525,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="flutter">flutter&lt;/h1>
 &lt;h2 id="生命周期">生命周期&lt;/h2>
-&lt;p>Flutter 中万物皆为Widget，&lt;code>widget&lt;/code>类继承自&lt;code>DiagnosticableTree&lt;/code>。&lt;/p>
-&lt;p>&lt;code>DiagnosticableTree&lt;/code>即“诊断树”，主要作用是提供调试信息。&lt;/p>
-&lt;p>&lt;code>Widget.createElement()&lt;/code> :创建一个Element实例，记为&lt;code>element&lt;/code>。&lt;/p>
-&lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。&lt;/p>
-&lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置，否则就会创建新的&lt;code>Element&lt;/code>。&lt;/p>
-&lt;p>&lt;code>createState()&lt;/code>:为每一个&lt;code>StatefulElement&lt;/code>创建一个State实例。&lt;/p>
-&lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
-&lt;p>&lt;strong>StatelessWidget生命周期图&lt;/strong>
+&lt;p>&lt;strong>StatelessWidget生命周期源码图&lt;/strong>
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/6.jpg"
 width="1787"
 height="966"
@@ -1542,11 +1535,91 @@ class="gallery-image"
 data-flex-grow="184"
 data-flex-basis="443px"
 >&lt;/p>
-&lt;p>StatefulWidgets更为复杂，使用Getx接管更好用，不再详解&lt;/p>
+&lt;p>Flutter 中万物皆为Widget，&lt;code>widget&lt;/code>类继承自&lt;code>DiagnosticableTree&lt;/code>。&lt;/p>
+&lt;p>&lt;code>DiagnosticableTree&lt;/code>即“诊断树”，主要作用是提供调试信息。&lt;/p>
+&lt;p>&lt;code>Widget.createElement()&lt;/code> :创建一个Element实例，记为&lt;code>element&lt;/code>。&lt;/p>
+&lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。&lt;/p>
+&lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置，否则就会创建新的&lt;code>Element&lt;/code>。&lt;/p>
+&lt;p>&lt;code>createState()&lt;/code>:为每一个&lt;code>StatefulElement&lt;/code>创建一个State实例。&lt;/p>
+&lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
+&lt;p>StatefulWidgets更为复杂，使用Getx接管更好用，不再详解。&lt;/p>
 &lt;h2 id="getx">Getx&lt;/h2>
-&lt;p>###状态管理
-####声明一个反应变量
-你有3种方法可以把一个变量变成是 &amp;ldquo;可观察的&amp;rdquo;。&lt;/p>
+&lt;h3 id="状态管理">状态管理&lt;/h3>
+&lt;h4 id="介绍">介绍&lt;/h4>
+&lt;table>
+&lt;tr>
+&lt;td>分类&lt;/td>
+&lt;td>状态管理器&lt;/td>
+&lt;td>消耗RAM&lt;/td>
+&lt;td>结论&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>简单的状态管理&lt;/td>
+&lt;td>GetBuilder&lt;/td>
+&lt;td>最少&lt;/td>
+&lt;td>性能最好，最常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="2">反应式状态管理&lt;/td>
+&lt;td>Obx&lt;/td>
+&lt;td>较少&lt;/td>
+&lt;td>反应式的基础层，较Getx简洁&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GetX&lt;/td>
+&lt;td>较多&lt;/td>
+&lt;td>可以灵活使用的反应式，较Obx实用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>混合态管理&lt;/td>
+&lt;td>MixinBuilder&lt;/td>
+&lt;td>最多&lt;/td>
+&lt;td>在GetBuilder中插入一个Obx，既可以响应式更新、也可以手动更新&lt;/td>
+&lt;/tr>
+&lt;/table>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
+代码结构：
+&lt;/div>
+&lt;p>都可以分为GetXController（控制器层）和view（界面层），GetXController 可以进一步分为state（状态层/变量层），logic（逻辑层）。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">└── sinup
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── controller.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── login
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── logic.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── state.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
+使用场景：
+&lt;/div>
+&lt;p>&lt;strong>Obx&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>当我的控制器&lt;strong>已经&lt;/strong>在其他地方注册&lt;/li>
+&lt;li>最少的代码/噪音&lt;/li>
+&lt;li>反应式小部件，自动刷新，不用&lt;code>update()&lt;/code>&lt;/li>
+&lt;li>监听&lt;strong>多个&lt;/strong>GetXController的状态改变&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>GetX&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>当我的控制器&lt;strong>尚未&lt;/strong>注册&lt;/li>
+&lt;li>我想非常明确/明显地使用哪个控制器&lt;/li>
+&lt;li>我需要&lt;code>initState&lt;/code>在创建过程中进行一些调用&lt;/li>
+&lt;li>反应式小部件，自动刷新，不用&lt;code>update()&lt;/code>&lt;/li>
+&lt;li>只更新某个小组件的状态，只重建特定组件，性能更好&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>GetBuilder&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>我想手动决定何时重建小部件&lt;/li>
+&lt;li>我有几个状态变量，可以作为一个组一起刷新&lt;/li>
+&lt;li>需要update()手动刷新&lt;/li>
+&lt;li>更新几乎整个页面或几乎所有的变量，性能更好&lt;/li>
+&lt;/ul>
+&lt;h4 id="反应状态管理">反应状态管理&lt;/h4>
+&lt;h5 id="反应变量">反应变量&lt;/h5>
+&lt;p>使用反应状态管理需要声明反应变量，你有3种方法可以把一个变量变成是 &amp;ldquo;可观察的&amp;rdquo;。&lt;/p>
 &lt;p>1 - 第一种是使用 &lt;strong>&lt;code>Rx{Type}&lt;/code>&lt;/strong>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// 建议使用初始值，但不是强制性的
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final name = RxString(&amp;#39;&amp;#39;);
@@ -1566,7 +1639,7 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 自定义类 - 可以是任何类
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final user = Rx&amp;lt;User&amp;gt;();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3 - 第三种更实用、更简单、更可取的方法，只需添加 &lt;strong>&lt;code>.obs&lt;/code>&lt;/strong> 作为&lt;code>value&lt;/code>的属性。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3 - 第三种更实用、更简单和&lt;strong>首选的&lt;/strong>方法，只需添加 &lt;strong>&lt;code>.obs&lt;/code>&lt;/strong> 作为&lt;code>value&lt;/code>的属性。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;&amp;#39;.obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final isLogged = false.obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count = 0.obs;
@@ -1575,9 +1648,9 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final items = &amp;lt;String&amp;gt;[].obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final myMap = &amp;lt;String, int&amp;gt;{}.obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 自定义类 - 可以是任何类
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 自定义类 - 可以是任何class, literally
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final user = User().obs;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="使用值">使用值&lt;/h4>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="使用value">使用value&lt;/h5>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">// controller
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count1 = 0.obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final count2 = 0.obs;
@@ -1601,7 +1674,339 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;${controller.sum}&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">),
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dio">dio&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="obx">Obx&lt;/h5>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class StateObxView extends StatelessWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> StateObxView({Key? key}) : super(key: key);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final count = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: Text(&amp;#34;Obx(...)&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Obx(() =&amp;gt; Text(&amp;#34;count1 -&amp;gt; &amp;#34; + count.toString())),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Obx(() =&amp;gt; Text(&amp;#34;count2 -&amp;gt; &amp;#34; + count.toString())),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> count.value++;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;add&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="getx-1">GetX&lt;/h5>
+&lt;p>Controller&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class CountController extends GetxController {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final _count = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> set count(value) =&amp;gt; this._count.value = value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> get count =&amp;gt; this._count.value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final _count2 = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> set count2(value) =&amp;gt; this._count2.value = value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> get count2 =&amp;gt; this._count2.value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> add() =&amp;gt; _count.value++;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> add2() =&amp;gt; _count2.value++;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>View&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class StateGetxView extends StatelessWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> StateGetxView({Key? key}) : super(key: key);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final controller = CountController();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: Text(&amp;#34;Getx&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetX&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetX - 1&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value 1 -&amp;gt; ${_.count}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetX&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetX - 2&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value 2 -&amp;gt; ${_.count}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetX&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetX - 3&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Text(&amp;#39;value 3 -&amp;gt; ${_.count}&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _.add();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;count1&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // count2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetX&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetX - 4&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value 4 -&amp;gt; ${_.count2}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.add();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;count1&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.add2();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;count2&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="简单状态管理">简单状态管理&lt;/h4>
+&lt;h5 id="getbuilder">GetBuilder&lt;/h5>
+&lt;p>Controller同Getx&lt;/p>
+&lt;p>View&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class StateGetBuilderView extends StatelessWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> StateGetBuilderView({Key? key}) : super(key: key);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final controller = CountController();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: Text(&amp;#34;GetBuilder&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetBuilder&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetBuilder - 1&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value -&amp;gt; ${_.count}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetBuilder&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetBuilder - 2&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value -&amp;gt; ${_.count}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetBuilder&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetBuilder - 3&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Text(&amp;#39;value -&amp;gt; ${_.count}&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _.add();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;GetBuilder -&amp;gt; add&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // count2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetBuilder&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetBuilder - 4&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;value count2 -&amp;gt; ${_.count2}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // id2 标记一个 `builder` ，触发方式`controller.update([&amp;#34;id2&amp;#34;]);` ，可传多个 `Array` 类型。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> GetBuilder&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: &amp;#34;id2&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> init: controller,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initState: (_) {},
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: (_) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;GetBuilder - 4&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Text(&amp;#39;id2 -&amp;gt; value count2 -&amp;gt; ${_.count2}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Divider(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.add();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;add&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.add2();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;add2&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.update();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;controller.update()&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller.update([&amp;#34;id2&amp;#34;]);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#39;controller.update(id2)&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="workers">Workers&lt;/h4>
+&lt;p>Worker可以精确控制事件发生时触发回调，常用于Controller的onInit中：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class CountController extends GetxController {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final _count = 0.obs;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> set count(value) =&amp;gt; this._count.value = value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> get count =&amp;gt; this._count.value;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> add() =&amp;gt; _count.value++;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onInit() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> super.onInit();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 每次_count变化时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ever(_count, (value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;ever -&amp;gt; &amp;#34; + value.toString());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 第一次被改变时才会被调用。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> once(_count, (value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;once -&amp;gt; &amp;#34; + value.toString());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 防DDos - 每当用户停止输入1秒时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debounce(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _count,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;debounce -&amp;gt; &amp;#34; + value.toString());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> time: Duration(seconds: 1),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 忽略1秒内的所有变化。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> interval(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _count,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#34;interval -&amp;gt; &amp;#34; + value.toString());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> time: Duration(seconds: 1),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="路由管理">路由管理&lt;/h3>
+&lt;h4 id="普通路由">普通路由&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 导航到新的页面。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.to(NextScreen());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 要导航到下一条路由，并在返回后立即接收或更新数据。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var data = await Get.to(Payment());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 关闭SnackBars、Dialogs、BottomSheets或任何你通常会用Navigator.pop(context)关闭的东西。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.back();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 在另一个页面上，发送前一个路由的数据。并使用它。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.back(result: &amp;#39;success&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">if(data == &amp;#39;success&amp;#39;) madeAnything();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 进入下一个页面，但没有返回上一个页面的选项（用于SplashScreens，登录页面等）。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.off(NextScreen());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 进入下一个界面并取消之前的所有路由（在购物车、投票和测试中很有用）。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offAll(NextScreen());
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="别名路由">别名路由&lt;/h4>
+&lt;p>普通路由管理起来比较麻烦,通常我们使用别名路由。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 导航到下一个页面
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.toNamed(&amp;#34;/NextScreen&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 传递参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.toNamed(&amp;#34;/NextScreen&amp;#34;, arguments: &amp;#34;Hello&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 浏览并删除前一个页面。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offNamed(&amp;#34;/NextScreen&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 浏览并删除所有以前的页面。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offAllNamed(&amp;#34;/NextScreen&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 动态URL
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offAllNamed(&amp;#34;/NextScreen?device=phone&lt;span class="ni">&amp;amp;id=354&amp;amp;name=Enzo&amp;#34;);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="依赖注入">依赖注入&lt;/h3>
+&lt;p>&lt;strong>Get.put()：&lt;/strong> 不使用控制器实例也会被创建&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.put(CountController());
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Get.lazyPut()：&lt;/strong> 懒加载方式创建实例，只有在使用时才创建&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.lazyPut&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(() =&amp;gt; CountController());
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Get.putAsync()：&lt;/strong> &lt;code>Get.put()&lt;/code>的异步版版本&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.putAsync&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>(() async =&amp;gt; await CountController());
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Get.create()：&lt;/strong> 每次使用都会创建一个新的实例&lt;/p>
+&lt;p>&lt;strong>Get.find()：&lt;/strong> 你可以实例化100万个控制器，Get总会找到你所需的控制器&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.find&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他高级-api">其他高级 API&lt;/h3>
+&lt;p>&lt;a class="link" href="https://github.com/jonataslaw/getx#other-advanced-apis" target="_blank" rel="noopener"
+>https://github.com/jonataslaw/getx#other-advanced-apis&lt;/a>&lt;/p>
+&lt;h2 id="dio">dio&lt;/h2>
 &lt;h3 id="原理">原理&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># dio_mixin.dart 文件中 DioMixin 实现了 Dio
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -1767,7 +2172,7 @@ data-flex-basis="443px"
 &lt;td style="text-align:center">是否启用邮件推送功能&lt;/td>
 &lt;td style="text-align:center">true&lt;/td>
 &lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;!-- raw HTML omitted -->&lt;code>false&lt;/code>：不启用&lt;!-- raw HTML omitted -->默认启用，如果设为&lt;code>false&lt;/code>，不启用邮件推送功能，则上面的&lt;code>MAIL_USERNAME&lt;/code>、&lt;code>MAIL_PASSWORD&lt;/code>、&lt;code>TO&lt;/code>变量变为非必须，可不设置&lt;/td>
+&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;br>&lt;code>false&lt;/code>：不启用&lt;br>默认启用，如果设为&lt;code>false&lt;/code>，不启用邮件推送功能，则上面的&lt;code>MAIL_USERNAME&lt;/code>、&lt;code>MAIL_PASSWORD&lt;/code>、&lt;code>TO&lt;/code>变量变为非必须，可不设置&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">TELEGRAM_CHAT_ID&lt;/td>
@@ -1788,14 +2193,14 @@ data-flex-basis="443px"
 &lt;td style="text-align:center">是否启用&lt;code>Telegram Bot&lt;/code>推送功能&lt;/td>
 &lt;td style="text-align:center">false&lt;/td>
 &lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;!-- raw HTML omitted -->&lt;code>false&lt;/code>：不启用&lt;!-- raw HTML omitted -->默认不启用，如果设为&lt;code>true&lt;/code>，则必须设置上面的&lt;code>TELEGRAM_CHAT_ID&lt;/code>和&lt;code>TELEGRAM_BOT_TOKEN&lt;/code>变量&lt;/td>
+&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;br>&lt;code>false&lt;/code>：不启用&lt;br>默认不启用，如果设为&lt;code>true&lt;/code>，则必须设置上面的&lt;code>TELEGRAM_CHAT_ID&lt;/code>和&lt;code>TELEGRAM_BOT_TOKEN&lt;/code>变量&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">NOTICE_FREQ&lt;/td>
 &lt;td style="text-align:center">通知频率&lt;/td>
 &lt;td style="text-align:center">1&lt;/td>
 &lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>0&lt;/code>：仅当有续期操作的时候&lt;!-- raw HTML omitted -->&lt;code>1&lt;/code>：每次执行&lt;/td>
+&lt;td style="text-align:center">&lt;code>0&lt;/code>：仅当有续期操作的时候&lt;br>&lt;code>1&lt;/code>：每次执行&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td style="text-align:center">REST_TOKEN&lt;/td>

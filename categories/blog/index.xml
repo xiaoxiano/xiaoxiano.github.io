@@ -109,20 +109,21 @@ myblog下执行&lt;/p>
 >更多定制文章可以参考这里&lt;/a>&lt;/p>
 &lt;h2 id="主题配置">主题配置&lt;/h2>
 &lt;p>1.修改~/myblog/config.yaml&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">1 baseurl: https://username.github.io #改为自己的
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 languageCode: zh-CN #中文编码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4 paginate: 10 #文章分页数
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5 title: Example Site #博客名字
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">30 DefaultContentLanguage: zh-cn #中文
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">34 hasCJKLanguage: true #正确计数中、日、韩文语言的字数
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">1 baseurl: https://username.github.io # 改为自己的
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">2 languageCode: zh-CN # 中文编码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">4 paginate: 10 # 文章分页数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">5 title: Example Site # 博客名字
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">30 DefaultContentLanguage: zh-cn # 中文
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">34 hasCJKLanguage: true # 正确计数中、日、韩文语言的字数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">48 since: 2021
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">52 published: 2006-01-02 #日期格式
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">53 lastUpdated: 2006-01-02 #更新日期格式
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">56 emoji: 🍥 #头像角标
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">57 subtitle: #博客名下的简介
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">61 src: img/avatar.png #头像，myblog/themes/hugo-theme-stack/assets/img
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">135 name: &amp;#39;首页&amp;#39; #改中文左侧菜单home
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">155 startLevel: 1 #从文章1级标题使用文章目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">52 published: 2006-01-02 # 日期格式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">53 lastUpdated: 2006-01-02 # 更新日期格式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">56 emoji: 🍥 # 头像角标
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">57 subtitle: # 博客名下的简介
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">61 src: img/avatar.png # 头像，myblog/themes/hugo-theme-stack/assets/img
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">135 name: &amp;#39;首页&amp;#39; # 改中文左侧菜单home
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">155 startLevel: 1 # 从文章1级标题使用文章目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">195 unsafe: true # 允许Markdown嵌入html
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.左侧菜单栏
 ~/myblog/content/page用于左侧菜单，请自定义&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
