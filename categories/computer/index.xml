@@ -1260,6 +1260,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="构造函数">构造函数&lt;/h3>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+特点：
+&lt;/div>
 &lt;ol>
 &lt;li>
 &lt;p>实例化类时会被自动触发&lt;/p>
@@ -1271,7 +1275,10 @@ data-flex-basis="427px"
 &lt;p>没有返回值&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;h4 id="普通构造函数">普通构造函数&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+普通构造函数
+&lt;/div>
 &lt;p>构造函数方法名和类名相同&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num x, y;
@@ -1290,7 +1297,11 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // before the constructor body runs.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="命名构造函数">命名构造函数&lt;/h4>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+命名构造函数
+&lt;/div>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num x, y;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -1303,7 +1314,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>请记住，命名构造函数不可继承，如果子类想要有 和父类一样的命名构造函数，那就写个同名的（通常也会在子类的命名构造函数里，调用父类的同名命名构造函数）&lt;/p>
-&lt;h4 id="调用父类构造函数">调用父类构造函数&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+调用父类构造函数
+&lt;/div>
 &lt;p>如果你的类，继承于父类，那么子类的构造函数，势必要调用父类的构造函数，这时候就要分两种情况：&lt;/p>
 &lt;ul>
 &lt;li>Dart语言帮你调用父类的无参数构造函数&lt;/li>
@@ -1347,7 +1361,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // in Employee
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>初始化列表就是构造函数名的冒号后面，打括号前面的部分。&lt;/p>
-&lt;h4 id="初始化列表">初始化列表&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+初始化列表
+&lt;/div>
 &lt;p>初始化列表的执行顺序，在整个构造函数的最前面，它除了可以调用父类的构造函数，还可以在构造函数方法体之前，初始化一些成员变量。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// Initializer list sets instance variables before
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// the constructor body runs.
@@ -1374,7 +1391,11 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var p = new Point(2, 3);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(p.distanceFromOrigin);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="重定向构造函数">重定向构造函数&lt;/h4>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+重定向构造函数
+&lt;/div>
 &lt;p>定义构造函数的时候，除了一个普通构造函数，还可以有若干命名构造函数，这些构造函数之间，有时候会有一些相同的逻辑，如果分别书写在各个构造函数中，会有些多余，所以构造函数可以传递。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num x, y;
@@ -1386,7 +1407,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point.alongXAxis(num x) : this(x, 0);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>传递构造函数，没有方法体，会在初始化列表中，调用另一个构造函数。&lt;/p>
-&lt;h4 id="常量构造函数">常量构造函数&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+常量构造函数
+&lt;/div>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class ImmutablePoint {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static final ImmutablePoint origin =
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const ImmutablePoint(0, 0);
@@ -1396,7 +1420,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const ImmutablePoint(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你的类，创建的对象永远不会改变，你可以在编译期就创建这个常量实例，并且定义一个常量构造函数，并且确保所有的成员变量都是final的。&lt;/p>
-&lt;h4 id="工厂构造函数">工厂构造函数&lt;/h4>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+工厂构造函数
+&lt;/div>
 &lt;p>有时候可能有一种需求，并不需要每次都创建新的类实例，而是每一种情况，只需要一个实例：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Logger {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final String name;
