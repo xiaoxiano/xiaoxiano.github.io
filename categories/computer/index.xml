@@ -22,15 +22,15 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="lets-encrypt">Let&amp;rsquo;s Encrypt&lt;/h3>
 &lt;p>如果需要更换Let&amp;rsquo;s Encrypt可以使用如下命令：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --set-default-ca --server letsencrypt
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="通过-http-方式申请证书">通过 http 方式申请证书&lt;/h1>
-&lt;h2 id="webroot模式">Webroot模式&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="通过-http-方式申请证书">通过 http 方式申请证书&lt;/h2>
+&lt;h3 id="webroot模式">Webroot模式&lt;/h3>
 &lt;p>这种方式需要你的服务器上面已经部署了网站环境。Acme 自动在你的网站根目录下放置一个文件,来验证你的域名所有权,完成验证. 然后就可以生成证书了.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 生成 RSA 证书：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com -w /var/www/_letsencrypt/
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 生成 ECC 证书：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com -w /var/www/_letsencrypt/ --keylength ec-256
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>/var/www/_letsencrypt/ 为 example.com 站点下的 /.well-known/acme-challenge/ 证书请求目录。&lt;/p>
-&lt;h2 id="80-端口空闲的证书申请方式">80 端口空闲的证书申请方式&lt;/h2>
+&lt;h3 id="80-端口空闲的证书申请方式">80 端口空闲的证书申请方式&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com --standalone
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装证书到指定文件夹">安装证书到指定文件夹&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --installcert -d mydomain.com --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crtchmod -R 755 /root/cert
@@ -48,7 +48,7 @@
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --upgrade
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你不想手动升级, 可以开启自动升级:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --upgrade --auto-upgrade
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="通过-dns-方式申请证书通常只支持付费域名">通过 DNS 方式申请证书(通常只支持付费域名)&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="通过-dns-方式申请证书通常只支持付费域名">通过 DNS 方式申请证书(通常只支持付费域名)&lt;/h2>
 &lt;p>几个 CA 的简单对比&lt;/p>
 &lt;table>
 &lt;thead>
@@ -120,14 +120,14 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h2 id="cloudflare">cloudflare&lt;/h2>
+&lt;h3 id="cloudflare">cloudflare&lt;/h3>
 &lt;p>使用全局 API 密钥，您需要登录您的 Cloudflare 帐户以获取您的&lt;a class="link" href="https://dash.cloudflare.com/profile" target="_blank" rel="noopener"
 >API 密钥&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export CF_Key=&amp;#34;sdfsdfsdfljlbjkljlkjsdfoiwje&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export CF_Email=&amp;#34;xxxx@sss.com&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>颁发证书：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">./acme.sh --issue --dns dns_cf -d example.com -d www.example.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="阿里云-dns-申请方式">阿里云 DNS 申请方式&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="阿里云-dns-申请方式">阿里云 DNS 申请方式&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export Ali_Key=&amp;#34;abcd&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export Ali_Secret=&amp;#34;xxxxxxxxxx&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># RSA 证书
@@ -135,7 +135,7 @@
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># ECC 证书
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">acme.sh --issue --dns dns_ali -d example.com -d *.example.com --keylength ec-256
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Ali_Key 和 Ali_Secret 需要从阿里云RAM访问控制中获取。&lt;/p>
-&lt;h2 id="dnspod-申请方式">DNSPod 申请方式&lt;/h2>
+&lt;h3 id="dnspod-申请方式">DNSPod 申请方式&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export DP_Id=&amp;#34;1234&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export DP_Key=&amp;#34;xxxxxxxxxxx&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">acme.sh --issue --dns dns_dp -d example.com -d www.example.com
@@ -1199,9 +1199,10 @@ data-flex-basis="427px"
 &lt;p>其他运算符
 &lt;code>()&lt;/code>　　使用一个方法&lt;/p>
 &lt;p>&lt;code>[]&lt;/code>　　访问 List&lt;/p>
-&lt;p>&lt;code>?[]&lt;/code>　　访问 List,左侧可以为null&lt;/p>
+&lt;p>&lt;code>?[]&lt;/code>　　访问 List,左侧/?表示可以为null&lt;/p>
 &lt;p>&lt;code>.&lt;/code>　　访问成员&lt;/p>
-&lt;p>&lt;code>?.&lt;/code>　　访问成员,左侧可以为null&lt;/p>
+&lt;p>&lt;code>?.&lt;/code>　　访问成员,左侧/?表示可以为null&lt;/p>
+&lt;p>&lt;code>..&lt;/code> 级联，可以在同一个对象上访问实例成员和调用多个实例方法&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>if-else的表达式：&lt;/p>
@@ -1463,7 +1464,7 @@ data-flex-basis="427px"
 &lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -1477,12 +1478,12 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -1505,7 +1506,8 @@ with
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 转发给超类的构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">const MyApp({Key? key}) : super(key: key);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="扩展方法">扩展方法&lt;/h4>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">extension FancyNum on num {
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 扩展 num，就可以使用 num.attribute 和 num.method
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">extension FancyNum on num {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num plus(num other) =&amp;gt; this + other;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num times(num other) =&amp;gt; this * other;
@@ -1524,7 +1526,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="249"
 data-flex-basis="599px"
->&lt;/p>
+>
+如果 T 是一个class，则表示传入该类型的参数。&lt;/p>
 &lt;p>@override 注解来表示你重写了一个成员
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/override.jpg"
 width="1173"
@@ -1551,7 +1554,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(ip);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="flutter">flutter&lt;/h1>
-&lt;h2 id="生命周期">生命周期&lt;/h2>
+&lt;h2 id="widget生命周期">Widget生命周期&lt;/h2>
 &lt;p>&lt;strong>StatelessWidget生命周期源码图&lt;/strong>
 &lt;img src="https://www.jiangdaoli.cf/p/flutter/6.jpg"
 width="1787"
@@ -1569,7 +1572,7 @@ data-flex-basis="443px"
 &lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置，否则就会创建新的&lt;code>Element&lt;/code>。&lt;/p>
 &lt;p>&lt;code>createState()&lt;/code>:为每一个&lt;code>StatefulElement&lt;/code>创建一个State实例。&lt;/p>
 &lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
-&lt;p>StatefulWidgets更为复杂，使用Getx接管更好用，不再详解。&lt;/p>
+&lt;p>StatefulWidget更为复杂，使用Getx接管更好用，不再详解。&lt;/p>
 &lt;h2 id="getx">Getx&lt;/h2>
 &lt;h3 id="状态管理">状态管理&lt;/h3>
 &lt;h4 id="介绍">介绍&lt;/h4>
@@ -1606,20 +1609,6 @@ data-flex-basis="443px"
 &lt;/table>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
-代码结构：
-&lt;/div>
-&lt;p>都可以分为GetXController（控制器层）和view（界面层），GetXController 可以进一步分为state（状态层/变量层），logic（逻辑层）。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">└── sinup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── controller.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── login
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── logic.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── state.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
 使用场景：
 &lt;/div>
 &lt;p>&lt;strong>Obx&lt;/strong>&lt;/p>
@@ -1644,6 +1633,29 @@ data-flex-basis="443px"
 &lt;li>需要update()手动刷新&lt;/li>
 &lt;li>更新几乎整个页面或几乎所有的变量，性能更好&lt;/li>
 &lt;/ul>
+&lt;h4 id="controller">Controller&lt;/h4>
+&lt;p>Getx状态管理的代码结构都可以分为GetXController（控制器层）和view（界面层），GetXController 可以进一步分为state（状态层/变量层），logic（逻辑层）。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">└── sinup
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── controller.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── login
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── logic.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── state.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
+生命周期
+&lt;/div>
+在 StatefulWidget 中，使用&lt;code>initState&lt;/code>或&lt;code>dispose()&lt;/code>，而在 Controller 中我们可以使用相对应的操作：&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>onStart&lt;/code>（开始）：组件在内存分配的时间点就会被调用，&lt;strong>不可覆盖&lt;/strong>，完成后会调用onInit方法&lt;/li>
+&lt;li>&lt;code>onInit&lt;/code>（初始化）：组件在内存分配后会被马上调用，适用于初始化 Controller（例如一些成员属性的初始化），详见Workers小节&lt;/li>
+&lt;li>&lt;code>onReady&lt;/code>（加载完成）：在 onInit 一帧后被调用，适合做一些导航进入的事件（例如对话框提示、SnackBar）或异步网络请求&lt;/li>
+&lt;li>&lt;code>onClose&lt;/code>（控制器被释放）：在 &lt;code>onDelete&lt;/code> 方法前调用、用于销毁 &lt;code>controller&lt;/code> 使用的资源（例如关闭事件监听，关闭流对象、动画）或者销毁可能造成内存泄露的对象（例如 &lt;code>TextEditingController&lt;/code>，&lt;code>AniamtionController&lt;/code>）。也适用于将数据进行离线持久化。&lt;/li>
+&lt;li>&lt;code>onDelete&lt;/code>（删除）：在 &lt;code>controller&lt;/code>销毁前调用，将控制器从内存中删除，&lt;strong>不可覆盖&lt;/strong>&lt;/li>
+&lt;/ol>
 &lt;h4 id="反应状态管理">反应状态管理&lt;/h4>
 &lt;h5 id="反应变量">反应变量&lt;/h5>
 &lt;p>使用反应状态管理需要声明反应变量，你有3种方法可以把一个变量变成是 &amp;ldquo;可观察的&amp;rdquo;。&lt;/p>
@@ -1947,7 +1959,7 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="workers">Workers&lt;/h4>
-&lt;p>Worker可以精确控制事件发生时触发回调，常用于Controller的onInit中：&lt;/p>
+&lt;p>Workers可以精确控制事件发生时触发回调，常用于Controller的onInit中：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class CountController extends GetxController {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final _count = 0.obs;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> set count(value) =&amp;gt; this._count.value = value;
@@ -2060,6 +2072,23 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>get() post() 等调用时，返回request方法，request 方法对请求参数处理，并返回 fetch 方法，fetch 进行响应数据设定、构建请求流、添加拦截器、请求分发。&lt;/p>
+&lt;h2 id="画图">画图&lt;/h2>
+&lt;p>Ai 设置：视图-&amp;gt;显示网格&lt;/p>
+&lt;p>多边形变换：多边形工具-&amp;gt;自定义变换工具&lt;/p>
+&lt;p>缩放：鼠标左键向右划放大、向左划缩小&lt;/p>
+&lt;p>形状合成：选中区域-&amp;gt;形状生成器工具-&amp;gt;穿过需要的区域-&amp;gt;按住Alt穿过不要的区域&lt;/p>
+&lt;p>渐变：双击圆圈弹出调色板&lt;/p>
+&lt;h2 id="动画">动画&lt;/h2>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/flutter/donghua.png"
+width="1396"
+height="785"
+srcset="https://www.jiangdaoli.cf/p/flutter/donghua_hub3ab5e6cde8a9a4aeac5a591ce269148_435997_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/flutter/donghua_hub3ab5e6cde8a9a4aeac5a591ce269148_435997_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="177"
+data-flex-basis="426px"
+>&lt;/p>
+&lt;p>lottie需要用到Ae，rive是在线编辑。&lt;/p>
 &lt;h2 id="其他">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>freenom自动续期（废弃）</title><link>https://www.jiangdaoli.cf/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15完全被封请去仓库看文档">本github actions方法已于2022-07-15完全被封，请去仓库看文档&lt;/h1>
@@ -3631,7 +3660,8 @@ sed
 &lt;/ul>
 &lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
 &lt;ul>
-&lt;li>git config&lt;/li>
+&lt;li>git config
+默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
@@ -3650,7 +3680,7 @@ sed
 &lt;p>方法一：直接在命令前加proxychains&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>方法二：直接在.bashrc最后加入：&lt;/p>
+&lt;p>方法二：在.bashrc最后加入：&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -3658,7 +3688,7 @@ sed
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu升级">Ubuntu升级&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu升级">VM Ubuntu升级&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt upgrade
@@ -3688,7 +3718,25 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使用Google DNS作为首选 DNS 服务器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.8.8
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.4.4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu安装go">Ubuntu安装go&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu克隆">VM Ubuntu克隆&lt;/h2>
+&lt;p>&lt;strong>1. 概念&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>虚拟机克隆
+&lt;ul>
+&lt;li>完整克隆
+是和原始虚拟机完全独立的一个备份，可以脱离原始虚拟机独立使用&lt;/li>
+&lt;li>链接克隆
+需要和原始虚拟机共享同一虚拟磁盘文件，不能脱离原始虚拟机独立运行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>虚拟机模板克隆
+克隆虚拟机固然是快速部署虚拟机的利器，但是所有的虚拟机都可以克隆，被克隆的虚拟机也可以再次被克隆，长此以往系统就会崩毁，从而给管理员带来诸多的麻烦。模板就是解决此问题的最好的方法，即将一台经常发起克隆的虚拟机做成虚拟机模板，每次需要克隆类似的虚拟机时都通过模板发起&lt;/li>
+&lt;li>虚拟快照
+快照是针对虚拟机的VMDK文件在某一时间点的&amp;quot;备份&amp;quot;，快照任务启动时，将冻结虚拟机源VMDK文件处于只读状态，同时创建出1个快照文件，今后所有修改的数据都会写入这个快照文件。一旦触发快照恢复操作。系统将放弃文件的内容，回滚到源VMDK文件的状态，实现快照恢复&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>2. 模板克隆过程&lt;/strong>
+关机 -&amp;gt; 创建快照 -&amp;gt; 虚拟机、设置、高级、启用模板模式 -&amp;gt; 右键虚拟机克隆 -&amp;gt; 从快照克隆 -&amp;gt; 完整克隆&lt;/p>
+&lt;h2 id="ubuntu安装go">Ubuntu安装go&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap install go --classic #安装go
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo vim /etc/profile #编辑profile
@@ -3718,6 +3766,12 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
 &lt;h1 id="win10-系统问题">Win10 系统问题&lt;/h1>
+&lt;h2 id="文件删不掉">文件删不掉&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">TASKKILL /IM explorer* /F # 关掉任务栏
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">explorer.exe # 开启任务栏
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭win10防火墙通知">关闭Win10防火墙通知&lt;/h2>
+&lt;p>控制面板-&amp;gt;安全与维护-&amp;gt;更改用户账户控制设置-&amp;gt;从不通知&lt;/p>
+&lt;p>搜索&amp;quot;编辑组策略&amp;quot;-&amp;gt;管理模板-&amp;gt;windows组件-&amp;gt;windows安全中心-&amp;gt;通知-&amp;gt;打开隐藏所有通知-&amp;gt;已启用&lt;/p>
 &lt;h2 id="win10-资源管理器无限重启闪屏">Win10 资源管理器无限重启闪屏&lt;/h2>
 &lt;ol>
 &lt;li>
@@ -3747,28 +3801,36 @@ sed
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>Wallpaper Engine　　　　　　#壁纸，steam购买&lt;/p>
+&lt;p>Wallpaper Engine　　　　　　# 壁纸，steam购买&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Everything + uTools　　　　#文件快捷搜索及工具&lt;/p>
+&lt;p>Everything + uTools　　　　# 文件快捷搜索及工具&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>quicker　　　　　　　　　　 #鼠标便捷操作神器&lt;/p>
+&lt;p>quicker　　　　　　　　　　 # 鼠标便捷操作神器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>DeskGo　　　　　　　　　　#腾讯出品的桌面软件格子&lt;/p>
+&lt;p>DeskGo　　　　　　　　　　# 腾讯出品的桌面软件格子&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Geek Uninstaller　　　　　　#卸载无残留&lt;/p>
+&lt;p>Geek Uninstaller　　　　　　# 卸载无残留&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>clover　　　　　　　　　　　#资源管理器多标签页&lt;/p>
+&lt;p>clover　　　　　　　　　　　# 资源管理器多标签页&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>火绒　　　　　　　　　　　　#屏蔽弹窗&lt;/p>
+&lt;p>火绒　　　　　　　　　　　　# 屏蔽弹窗&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>typora　　　　　　　　　　　#markdown记事本，据说notion在线笔记，我把博客当作在线笔记了&lt;/p>
+&lt;p>开发者实用工具&lt;/p>
+&lt;ul>
+&lt;li>typora　　　　　　　　　　　# markdown记事本&lt;/li>
+&lt;li>joplin # markdown多端同步&lt;/li>
+&lt;li>Pr # 视频剪辑&lt;/li>
+&lt;li>Ae # 动画特效&lt;/li>
+&lt;li>Ps # 图片处理&lt;/li>
+&lt;li>Ai # 插图&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>win10 microsoft store工具&lt;/p>
@@ -3782,10 +3844,14 @@ sed
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、Kiwi、x浏览器&lt;/p>
+&lt;p>浏览器：Chrome、Kiwi、三星浏览器、x浏览器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>影视：zd01.tv下载 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/p>
+&lt;p>影视：&lt;/p>
+&lt;ul>
+&lt;li>论坛haopanyou.net&lt;/li>
+&lt;li>zd01.tv下载 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>音乐：listen1　　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
@@ -3802,18 +3868,19 @@ sed
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>MacroDroid、hamibot　　　#手机自动化&lt;/li>
-&lt;li>Moonlight　　　　　　　　#局域网流畅投屏&lt;/li>
-&lt;li>AirDroid和AirMirror　　　#手机远程控制手机&lt;/li>
+&lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
+&lt;li>Moonlight　　　　　　　　# 局域网流畅投屏&lt;/li>
+&lt;li>AirDroid和AirMirror　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>其他&lt;/p>
 &lt;ul>
-&lt;li>zarchiver　　　　　　　#文件管理和解压&lt;/li>
+&lt;li>zarchiver　　　　　　　# 文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
-&lt;li>Sendapp #提取apk&lt;/li>
+&lt;li>Sendapp # 提取apk&lt;/li>
+&lt;li>ES文件浏览器 # 访问局域网文件&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item></channel></rss>

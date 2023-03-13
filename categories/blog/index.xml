@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/blog/</link><description>Recent content in 博客 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 03 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo使用stack主题搭建博客及部署</title><link>https://www.jiangdaoli.cf/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>
 &lt;p>1.Ubuntu&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt update #更新
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt update # 更新
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>2.github账号&lt;/p>
-&lt;p>3.git配置&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
+&lt;p>3.git配置
+默认保存在用户的主目录下的 .gitconfig 文件内&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; # 配置github账号用户名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com # 配置邮箱
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>4.连接github&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; #生成SSH Keys 此为新版
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; #此为常用版
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cat ~/.ssh/id_ed25519.pub #复制
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ssh-keygen -t ed25519 -C &amp;#34;your_email@example.com&amp;#34; # 生成SSH Keys 此为新版
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa -b 4096 -C &amp;#34;your_email@example.com&amp;#34; # 此为旧版
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cat ~/.ssh/id_ed25519.pub # 复制
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; SSH and GPG Keys -&amp;gt; New SSH key添加&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ssh -T git@github.com #验证连接，输入yes
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ssh -T git@github.com # 验证连接，输入yes
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://docs.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank" rel="noopener"
 >官方文档&lt;/a>&lt;/p>
 &lt;p>5.git ssh 代理设置&lt;/p>
@@ -18,27 +19,27 @@
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x 127.0.0.1:10808 %h %p #请修改127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x 127.0.0.1:10808 %h %p # 请修改127.0.0.1:10808
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="安装">安装&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">snap install hugo --channel=extended #安装hugo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo version #验证
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo new site myblog #创建博客
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git init #初始化
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:**** #连接远程仓库
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone https://github.com/CaiJimmy/hugo-theme-stack/ #安装stack主题
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . #使用主题的配置文件
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">snap install hugo --channel=extended # 安装hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo version # 验证
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo new site myblog # 创建博客
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git init # 初始化
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone https://github.com/CaiJimmy/hugo-theme-stack/ # 在themes下安装stack主题
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . # 使用主题的配置文件
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章&lt;/p>
 &lt;p>本地预览：
 myblog下执行&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo server
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>浏览器打开：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">http://localhost:1313/ #目前本地运行不显示文章目录，估计是操作系统原因
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">http://localhost:1313/
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="部署">部署&lt;/h1>
 &lt;p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
 &lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库&lt;/p>
-&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）&lt;/p>
-&lt;p>找到源码仓库Settings-&amp;gt; Secrets -&amp;gt; New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:******.github.io.source.git # 连接远程仓库
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）&lt;/p>
+&lt;p>找到源码仓库Settings-&amp;gt; Secrets and variables -&amp;gt; Actions -&amp;gt; New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）&lt;/p>
 &lt;p>2.创建github actions的workflows自动部署文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mkdir -p .github/workflows &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> touch ~/myblog/.github/workflows/main.yml
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
@@ -51,7 +52,7 @@ myblog下执行&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest #可使用指定版本，例：runs-on: ubuntu-18.04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest #可 使用指定版本，例：runs-on: ubuntu-18.04
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: actions/checkout@v2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
@@ -61,7 +62,7 @@ myblog下执行&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup Hugo
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: peaceiris/actions-hugo@v2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hugo-version: latest #可使用指定版本，例：hugo-version: &amp;#39;0.83.1&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hugo-version: latest # 可使用指定版本，例：hugo-version: &amp;#39;0.83.1&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> extended: true
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build
