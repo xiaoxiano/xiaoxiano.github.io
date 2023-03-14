@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>VPS</title><link>https://www.jiangdaoli.cf/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/computer/</link><description>Recent content in 计算机 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>VPS 选购</title><link>https://www.jiangdaoli.cf/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>性能是根据自身需要的，一般需要看内存，跑代理512M足够了，跑业务最好在2G以上。&lt;/p>
@@ -43,11 +43,11 @@
 &lt;p>香港IPLC、香港CN2 GIA：价格不在博主承担范围。&lt;/p>
 &lt;ol start="2">
 &lt;li>次优：
-日本SoftBank：价格较高，可以考虑。&lt;/li>
+日本SoftBank（推荐）：价格较高，搬瓦工$169/年。&lt;/li>
 &lt;/ol>
 &lt;p>新加坡CN2：价格太高。&lt;/p>
-&lt;p>日本IIJ（推荐）：超过200ms。有平价大带宽产品。&lt;/p>
-&lt;p>香港CMI（推荐）：超过200ms。有平价大带宽产品。香港的vps高峰期会降速。&lt;/p>
+&lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
+&lt;p>香港CMI：超过200ms。vmiss有平价大带宽产品。香港的vps高峰期会降速。&lt;/p>
 &lt;ol start="3">
 &lt;li>一般：&lt;/li>
 &lt;/ol>
