@@ -4,7 +4,7 @@ class="fs12 priceTable priceTableA tabB10" isselfdefine="1" width="800">
 &lt;tbody>
 &lt;tr>
 &lt;td bgcolor="#d9d2e9" rowspan="25" height="35"
-style="text-align: center; padding: 0px; margin: 0px; font-weight: bold;">
+style="text-align: center; vertical-align: middle; padding: 0px; margin: 0px; font-weight: bold;">
 &lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">一次性电池&lt;/span>&lt;/font>
 &lt;/td>
 &lt;/tr>
@@ -213,7 +213,7 @@ battery&lt;br>有机自由基电池&amp;nbsp;&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td bgcolor="#c9daf8" rowspan="25" height="35"
-style="text-align: center; padding: 0px; margin: 0px; font-weight: bold;">
+style="text-align: center; vertical-align: middle; padding: 0px; margin: 0px; font-weight: bold;">
 &lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">可充电电池&lt;/span>&lt;/font>
 &lt;/td>
 &lt;/tr>
