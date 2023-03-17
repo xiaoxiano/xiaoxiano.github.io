@@ -1,4 +1,463 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xiaoxian</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>VPS 选购</title><link>https://www.jiangdaoli.cf/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>xiaoxian</title><link>https://www.jiangdaoli.cf/</link><description>Recent content on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 17 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/index.xml" rel="self" type="application/rss+xml"/><item><title>行业研究</title><link>https://www.jiangdaoli.cf/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/research/</guid><description>&lt;h1 id="电池">电池&lt;/h1>
+&lt;table align="tablePos" bgcolor="#c6c6c6" border="0" cellpadding="5" cellspacing="1"
+class="fs12 priceTable priceTableA tabB10" isselfdefine="1" width="800">
+&lt;tbody>
+&lt;tr>
+&lt;td bgcolor="#d9d2e9" rowspan="25" height="35"
+style="text-align: center; padding: 0px; margin: 0px; font-weight: bold;">
+&lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">一次性电池&lt;/span>&lt;/font>
+&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
+style="font-size: 12px;">&lt;b>命名&lt;/b>&lt;/span>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
+style="font-size: 12px;">&lt;b>负极&lt;/b>&lt;/span>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
+style="font-size: 12px;">电解质&lt;/span>&lt;/strong>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
+style="font-size: 12px;">正极&lt;/span>&lt;/strong>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
+style="font-size: 12px;">&lt;b>标称电压(V)&lt;/b>&lt;/span>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
+style="font-size: 12px;">特点&lt;/span>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">
+&lt;p>　　Alkaline battery&lt;br>碱性电池&lt;/p>
+&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">容量大&lt;br>自放电率低&lt;br>价格便宜&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Aluminium–air batteries&lt;br>铝空气电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铝&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;br>氢氧化钠&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">军事用途&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Atomic battery&lt;br>原子能电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">放射性同位素&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">航天器&lt;br>登月车&lt;br>水下仪器&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Bunsen's cell&lt;br>本生电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.9&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1841发明&lt;br>以本生命名&lt;br>有毒&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Earth battery&lt;br>接地电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜/铁/锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">土壤&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜/铁/锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">防强电冲击&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Frog battery&lt;br>青蛙电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">青蛙腿&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">生物电试验&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Galvanic cell&lt;br>Voltaic cell&lt;br>原电池
+&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硫酸锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">伽伐尼VS伏打&lt;br>最终两人同登&lt;br>名人堂&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Grove cell&lt;br>格罗夫电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铂&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">浓硝酸&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">还记得武汉&lt;br>格罗夫汽车&lt;br>吗？&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Leclanché cell&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;br>碳&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳锌电池雏形&lt;br>目前Leclanché是&lt;br>电池企业品牌&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lemon/potato battery&lt;br>柠檬/马铃薯电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">柠檬/马铃薯&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">教学电池&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium battery&lt;br>锂电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锂化合物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.7&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">21世纪&lt;br>电池之王&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium–air battery&lt;br>锂空气电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">酸性水溶液&lt;br>等&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锂&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">2.91&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Magnesium battery&lt;br>镁电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二硫化锆&lt;br>氧化钴&lt;br>二硒化钨&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.1&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Mercury battery&lt;br>汞电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化汞&lt;br>二氧化锰&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.4&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">纽扣电池&lt;br>记得放&lt;br>“有害垃圾”桶&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Molten-salt battery&lt;br>熔盐电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">盐类熔融体&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>储能成本低&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel oxyhydroxide
+battery&lt;br>羟基氧化镍电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;br>羟基氧化镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Organic radical
+battery&lt;br>有机自由基电池&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">塑料电池？&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Paper battery&lt;br>纸电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">PPT产物？&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver-oxide battery&lt;br>银锌电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.55&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Solid-state battery&lt;br>固态电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sugar battery&lt;br>糖电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">麦芽糖糊精&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">PPT产物？&lt;br>索尼率先发表&lt;br>论文的喔……&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Zinc–carbon battery&lt;br>锌碳电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;br>氯化锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Zinc–air battery&lt;br>锌氧电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;br>氯化锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.4&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">也叫&lt;br>“锌空气电池”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td bgcolor="#c9daf8" rowspan="25" height="35"
+style="text-align: center; padding: 0px; margin: 0px; font-weight: bold;">
+&lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">可充电电池&lt;/span>&lt;/font>
+&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">
+&lt;p>　　Aluminium-ion battery&lt;br>铝离子电池&lt;/p>
+&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铝&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">2.0(?)&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">理想很丰满&lt;br>现实很骨感&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Dual carbon battery&lt;br>双碳电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钾离子电解液&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">耐高温&lt;br>充电超快&lt;br>当超级电容吧&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Flow battery&lt;br>液流电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">需要建设&lt;br>全产业链&lt;br>才能运作&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lead–acid battery&lt;br>铅酸电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铅&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硫酸溶液&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化铅&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">12&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">电压稳定&lt;br>产业成熟&lt;br>能量密度低&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Glass battery&lt;br>玻璃电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">可能是下&lt;br>一个突破口&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium-ion battery&lt;br>锂离子电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;br>等&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无数种&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无数种&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.2&lt;br>3.7&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">21世纪&lt;br>电池之王&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Magnesium-ion battery&lt;br>镁离子电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;br>2.0&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高能量密度&lt;br>循环寿命长&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Metal–air electrochemical
+cells&lt;br>金属-空气电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;br>铝&lt;br>锌&lt;br>等&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱性溶液&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">细分种类&lt;br>非常多&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Molten-salt battery&lt;br>熔盐电池&lt;span
+style="white-space:pre"> &lt;/span>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">盐类熔融体&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>电网级储能&lt;br>储能成本低&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Microbial fuel cell&lt;br>微生物燃料电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">微生物电极&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">微生物电极&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">利用污水&lt;br>或光合作用&lt;br>发电&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–cadmium battery&lt;br>镍镉电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镉&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">老式手机电池&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel hydrogen battery&lt;br>镍氢气电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;br>氢气&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">催化剂&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.25&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">使用气态氢&lt;br>高压电池&lt;br>循环寿命长&lt;br>用在卫星上&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel metal hydride battery&lt;br>镍氢电池
+&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">金属氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍镉进化版&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–iron battery&lt;br>镍铁电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铁&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">爱迪生发明&lt;br>价格高&lt;br>可靠性极高&lt;br>铁道车辆使用&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–zinc battery&lt;br>镍锌电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.65&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">历史悠久&lt;br>一致性差&lt;br>不能过充&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Organic radical battery&lt;br>有机自由基电池
+&lt;span style="white-space:pre"> &lt;/span>&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">塑料电池？&lt;br>不含重金属&lt;br>可制薄膜电池&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Solid-state battery&lt;br>固态电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">能量密度高&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Potassium-ion battery&lt;br>钾离子电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">金属氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态聚合物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳类&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钾便宜&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Rechargeable alkaline
+battery&lt;br>可充电碱性电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">循环寿命短&lt;br>20个深度循环&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silicon–air battery&lt;br>硅空气电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硅&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">材料便宜环保&lt;br>能量密度高&lt;br>暂未实用化&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver zinc battery&lt;br>银锌电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.55&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">笔记本电脑&lt;br>助听器&lt;br>人造卫星&lt;br>潜艇与鱼雷&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver-cadmium battery&lt;br>银镉电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镉&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.1&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">有毒&lt;br>电压太低&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sodium-ion battery&lt;br>钠离子电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无烟煤基&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锰基&lt;br>铜基&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钠丰度高&lt;br>替代铅酸&lt;br>低速电动车&lt;/td>
+&lt;/tr>
+&lt;tr bgcolor="#ffffff" iscontent="1">
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sodium–sulfur battery&lt;br>钠硫电池&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">熔融金属钠&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">液态硫&lt;br>多硫化钠熔盐&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
+&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>制造简单&lt;br>电网储能&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;a class="link" href="https://www.pcauto.com.cn/tech/2368/23689092.html#commentPlaceHolder" target="_blank" rel="noopener"
+>原文地址&lt;/a>&lt;/p>
+&lt;h2 id="动力电池">动力电池&lt;/h2>
+&lt;p>新能源车的动力电池类型主要分为磷酸铁锂和三元锂电池，两者基本上瓜分了新能源市场的动力电池份额。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/research/1.png"
+width="1884"
+height="642"
+srcset="https://www.jiangdaoli.cf/p/research/1_hu2db551834465226518e15fae87fc2e4b_890652_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/research/1_hu2db551834465226518e15fae87fc2e4b_890652_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="293"
+data-flex-basis="704px"
+>&lt;/p>
+&lt;p>&lt;strong>固态电池&lt;/strong>&lt;/p>
+&lt;p>全固态电池规模化量产尚需5-10 年，半固态成过渡期优选。出于对高能量密度和高安全性电池的追求，各国企业进入军备竞赛阶段，加注研发固态电池。但全固态电池还有离子电导率低导致性能变差、成本高昂等缺点有待解决，而半固态电池由于高安全性、长寿命与良好的经济性，成为液态电池向全固态电池过渡的产品。&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/research/2.png"
+width="794"
+height="804"
+srcset="https://www.jiangdaoli.cf/p/research/2_hu89acafa183fb31acf85639f040b25613_199393_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/research/2_hu89acafa183fb31acf85639f040b25613_199393_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="98"
+data-flex-basis="237px"
+>&lt;/p>
+&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/research/3.png"
+width="775"
+height="253"
+srcset="https://www.jiangdaoli.cf/p/research/3_hu9a69dbfd7006638e708d8e8e2faf3d02_59979_480x0_resize_box_3.png 480w, https://www.jiangdaoli.cf/p/research/3_hu9a69dbfd7006638e708d8e8e2faf3d02_59979_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="306"
+data-flex-basis="735px"
+>&lt;/p>
+&lt;h2 id="生活电池">生活电池&lt;/h2>
+&lt;p>&lt;strong>碳性电池&lt;/strong>&lt;/p>
+&lt;p>碳性电池是一种一次电池，属于原电池，它以二氧化锰为正极，电量约700mAh。碳性电池适合用在低电流的电器上，如石英钟、遥控器等。&lt;/p>
+&lt;p>&lt;strong>碱性电池&lt;/strong>&lt;/p>
+&lt;p>碱性电池是一种一次电池，电量约1800~2000mAh。碱性电池适用在高电流的电器上，如数码相机、玩具、剃须刀、无线鼠标等。&lt;/p>
+&lt;p>&lt;strong>锂铁电池&lt;/strong>&lt;/p>
+&lt;p>锂铁电池是一种一次电池，属于锂电池，电量约3000mAh。锂铁电池寿命长，尤其适用鼠标等，目前厂家仅有耐时电池和小米超级电池。&lt;/p></description></item><item><title>VPS 选购</title><link>https://www.jiangdaoli.cf/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>性能是根据自身需要的，一般需要看内存，跑代理512M足够了，跑业务最好在2G以上。&lt;/p>
@@ -47,11 +506,11 @@
 &lt;/ol>
 &lt;p>新加坡CN2：价格太高。&lt;/p>
 &lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
-&lt;p>香港CMI：超过200ms。vmiss有平价大带宽产品。香港的vps高峰期会降速。&lt;/p>
+&lt;p>香港CMI：超过200ms。慎买。&lt;/p>
 &lt;ol start="3">
 &lt;li>一般：&lt;/li>
 &lt;/ol>
-&lt;p>新加坡NTT：超过300ms。&lt;/p>
+&lt;p>新加坡NTT：超过300ms。慎买。&lt;/p>
 &lt;p>美国CN2 GIA（较为推荐）：超过500ms。平价大带宽，价格合理，且访问的大多服务器设在美国。&lt;/p>
 &lt;ol start="4">
 &lt;li>差线路：&lt;/li>
@@ -62,7 +521,7 @@
 &lt;p>有些商家线路会绕路欧美，至少要看测评，最好自测。&lt;/p>
 &lt;p>韩国vps：会要求实名，即使你购买了可以使用，也会在一个月内要求实名，需自备韩国身份。&lt;/p>
 &lt;p>日本vps：极少数涉及日本版权的网站和图片打不开，可能是日本的网络审查。少数情况，问题不大。&lt;/p>
-&lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。少数情况，问题不大。&lt;/p></description></item><item><title>数学问题</title><link>https://www.jiangdaoli.cf/p/math-qustion/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/math-qustion/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
+&lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p></description></item><item><title>数学问题</title><link>https://www.jiangdaoli.cf/p/math-qustion/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/math-qustion/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 1.特殊元素和特殊位置优先策略
@@ -4850,7 +5309,7 @@ sed
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：listen1　　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
+&lt;p>音乐：lx-music　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>小说：阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/p>

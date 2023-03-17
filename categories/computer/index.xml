@@ -47,11 +47,11 @@
 &lt;/ol>
 &lt;p>新加坡CN2：价格太高。&lt;/p>
 &lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
-&lt;p>香港CMI：超过200ms。vmiss有平价大带宽产品。香港的vps高峰期会降速。&lt;/p>
+&lt;p>香港CMI：超过200ms。慎买。&lt;/p>
 &lt;ol start="3">
 &lt;li>一般：&lt;/li>
 &lt;/ol>
-&lt;p>新加坡NTT：超过300ms。&lt;/p>
+&lt;p>新加坡NTT：超过300ms。慎买。&lt;/p>
 &lt;p>美国CN2 GIA（较为推荐）：超过500ms。平价大带宽，价格合理，且访问的大多服务器设在美国。&lt;/p>
 &lt;ol start="4">
 &lt;li>差线路：&lt;/li>
@@ -62,7 +62,7 @@
 &lt;p>有些商家线路会绕路欧美，至少要看测评，最好自测。&lt;/p>
 &lt;p>韩国vps：会要求实名，即使你购买了可以使用，也会在一个月内要求实名，需自备韩国身份。&lt;/p>
 &lt;p>日本vps：极少数涉及日本版权的网站和图片打不开，可能是日本的网络审查。少数情况，问题不大。&lt;/p>
-&lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。少数情况，问题不大。&lt;/p></description></item><item><title>acme.sh 申请证书</title><link>https://www.jiangdaoli.cf/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
+&lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p></description></item><item><title>acme.sh 申请证书</title><link>https://www.jiangdaoli.cf/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
 >Internet Security Research Group（ISRG）&lt;/a>提供的服务。&lt;/p>
 &lt;p>acme.sh 则是实现了 acme 协议, 可以从 letsencrypt 生成免费的证书。&lt;/p>
 &lt;ul>
@@ -3919,7 +3919,7 @@ sed
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：listen1　　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
+&lt;p>音乐：lx-music　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>小说：阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/p>
