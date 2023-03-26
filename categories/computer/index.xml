@@ -98,9 +98,9 @@
 &lt;h3 id="80-端口空闲的证书申请方式">80 端口空闲的证书申请方式&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --issue -d example.com --standalone
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="安装证书到指定文件夹">安装证书到指定文件夹&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --installcert -d mydomain.com --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crtchmod -R 755 /root/cert
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面的 /root/private.key 以及 /root/cert.crt 是把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt。&lt;/p>
-&lt;h2 id="更新后续操作">更新（后续操作）&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 把密钥和证书安装到 /root 目录，并改名为 private.key 和 cert.crt。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --installcert -d mydomain.com --key-file /root/cert/private.key --fullchain-file /root/cert/cert.crtchmod -R 755 /root/cert
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="更新后续操作">更新（后续操作）&lt;/h2>
 &lt;h3 id="更新证书">更新证书&lt;/h3>
 &lt;h4 id="手动更新">手动更新&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">~/.acme.sh/acme.sh --renew -d example.com --force
@@ -2137,6 +2137,269 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>get() post() 等调用时，返回request方法，request 方法对请求参数处理，并返回 fetch 方法，fetch 进行响应数据设定、构建请求流、添加拦截器、请求分发。&lt;/p>
+&lt;h2 id="webview">WebView&lt;/h2>
+&lt;p>WebView是应用内显示网页的功能，查看项目的官网、文档、条款等经常用到。推荐使用flutter_inappwebview，比官方webview_flutter有更丰富的功能和详尽的&lt;a class="link" href="https://inappwebview.dev/docs/5.x.x/intro" target="_blank" rel="noopener"
+>文档&lt;/a>。主要功能：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/webview/in-app-webview" target="_blank" rel="noopener"
+>InAppWebView&lt;/a>：是一个内嵌原生 WebView 小部件，集成到 Flutter 小部件树中。&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://inappwebview.dev/docs/webview/context-menu" target="_blank" rel="noopener"
+>ContextMenu&lt;/a>：WebView 的快捷菜单。例如长按网页文本后的复制。&lt;/li>
+&lt;li>&lt;a class="link" href="https://inappwebview.dev/docs/webview/headless-in-app-webview" target="_blank" rel="noopener"
+>HeadlessInAppWebView&lt;/a>：无头模式下的 WebView。在没有界面或UI的情况下运行WebView。它可以在没有用户界面的情况下执行网页加载和渲染操作，而不需要在用户界面中显示网页，用于后台处理网页数据、自动化测试、网络爬虫等。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>InAppBrowser&lt;/p>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://inappwebview.dev/docs/in-app-browsers/in-app-browser" target="_blank" rel="noopener"
+>InAppBrowser&lt;/a>：显示在 Flutter 应用程序顶部的原生 WebView，它没有集成到 Flutter 小部件树中。&lt;/li>
+&lt;li>&lt;a class="link" href="https://inappwebview.dev/docs/in-app-browsers/chrome-safari-browser" target="_blank" rel="noopener"
+>ChromeSafariBrowser&lt;/a>：Android 上的 &lt;a class="link" href="https://developer.chrome.com/docs/android/custom-tabs/overview/" target="_blank" rel="noopener"
+>Chrome 自定义选项卡&lt;/a>和 iOS 上的&lt;a class="link" href="https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller" target="_blank" rel="noopener"
+>SFSafariViewController&lt;/a>。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/in-app-localhost-server" target="_blank" rel="noopener"
+>InAppLocalhostServer&lt;/a>：这个类允许你在 http://localhost:[port] 上创建一个简单的服务器。默认端口值为 8080。能够在本地服务器上缓存 js，html等资产文件，优化加载时间。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/cookie-manager" target="_blank" rel="noopener"
+>CookieManager&lt;/a>：此类实现了一个单例对象（共享实例），该对象管理 WebView 实例使用的 cookie。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/http-auth-credential-database" target="_blank" rel="noopener"
+>HttpAuthCredentialDatabase&lt;/a>：此类实现管理共享 HTTP 身份验证凭据缓存的单例对象（共享实例）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/web-storage-manager" target="_blank" rel="noopener"
+>WebStorageManager&lt;/a>：这个类实现了一个单例对象（共享实例），它管理 WebView 实例使用的 Web 存储。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://inappwebview.dev/docs/service-worker" target="_blank" rel="noopener"
+>Service Worker&lt;/a>：Service Worker 是 PWA 的基本组成部分。它们支持快速加载（无论网络如何）、离线访问、推送通知和其他功能。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;details class="spoiler " id="spoiler-13">
+&lt;summary>InAppWebView官方示例注释&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/foundation.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/material.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter_inappwebview/flutter_inappwebview.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:url_launcher/url_launcher.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future main() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WidgetsFlutterBinding.ensureInitialized();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 如果是Android，则对加载到 WebView 中的 Web内容（HTML/CSS/JavaScript）启用调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!kIsWeb &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> defaultTargetPlatform == TargetPlatform.android) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> await InAppWebViewController.setWebContentsDebuggingEnabled(true);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runApp(const MaterialApp(home: MyApp()));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyApp extends StatefulWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const MyApp({super.key});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createState() =&amp;gt; _MyAppState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final GlobalKey webViewKey = GlobalKey();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> InAppWebViewController? webViewController;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> InAppWebViewSettings settings = InAppWebViewSettings(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 能够监听 WebView.shouldOverrideUrlLoading（URL即将加载时）的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> useShouldOverrideUrlLoading: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 设置为 true 以防止 HTML5 音频或视频自动播放。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mediaPlaybackRequiresUserGesture: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 允许 HTML5 媒体播放在屏幕布局中内嵌显示，即让媒体播放器嵌入到网页的其他内容中一起显示
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> allowsInlineMediaPlayback: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 根据请求的来源定义了哪些功能可供使用（例如，访问麦克风、摄像头、电池、网络共享等）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> iframeAllow: &amp;#34;camera; microphone&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 如果 iframe 可以通过调用 requestFullscreen() 方法激活全屏模式，则设置为 true。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> iframeAllowFullscreen: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> PullToRefreshController? pullToRefreshController;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String url = &amp;#34;&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double progress = 0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final urlController = TextEditingController();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void initState() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> super.initState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 在 WebView 中开启下拉刷新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pullToRefreshController = kIsWeb ? null : PullToRefreshController(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> settings: PullToRefreshSettings(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: Colors.blue,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onRefresh: () async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (defaultTargetPlatform == TargetPlatform.android) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.reload();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } else if (defaultTargetPlatform == TargetPlatform.iOS) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.loadUrl(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> urlRequest: URLRequest(url: await webViewController?.getUrl()));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(title: const Text(&amp;#34;Official InAppWebView website&amp;#34;)),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: SafeArea(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(children: &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Widget&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>[
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> TextField(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> decoration: const InputDecoration(prefixIcon: Icon(Icons.search)),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> controller: urlController,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyboardType: TextInputType.url,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onSubmitted: (value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var url = WebUri(value);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (url.scheme.isEmpty) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> url = WebUri(&amp;#34;https://www.google.com/search?q=$value&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.loadUrl(urlRequest: URLRequest(url: url));
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Expanded(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Stack(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> InAppWebView(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> key: webViewKey,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 初始化URL
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initialUrlRequest:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> URLRequest(url: WebUri(&amp;#34;https://inappwebview.dev/&amp;#34;)),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 初始化设置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> initialSettings: settings,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 下拉刷新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pullToRefreshController: pullToRefreshController,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 创建 WebView 时触发的事件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onWebViewCreated: (controller) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController = controller;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当 WebView 开始加载 url 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onLoadStart: (controller, url) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.url = url.toString();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> urlController.text = this.url;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 请求无访问权限资源 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPermissionRequest: (controller, request) async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return PermissionResponse(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> resources: request.resources,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> action: PermissionResponseAction.GRANT);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 让APP有机会在 URL即将加载 时进行控制。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> shouldOverrideUrlLoading:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (controller, navigationAction) async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var uri = navigationAction.request.url!;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (![
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;http&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;https&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;file&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;chrome&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;data&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;javascript&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;about&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ].contains(uri.scheme)) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (await canLaunchUrl(uri)) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Launch the App
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> await launchUrl(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uri,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // and cancel the request
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return NavigationActionPolicy.CANCEL;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return NavigationActionPolicy.ALLOW;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 完成加载 url 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onLoadStop: (controller, url) async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pullToRefreshController?.endRefreshing();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.url = url.toString();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> urlController.text = this.url;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 加载请求时遇到错误 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onReceivedError: (controller, request, error) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pullToRefreshController?.endRefreshing();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 更改正在加载的页面 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onProgressChanged: (controller, progress) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (progress == 100) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pullToRefreshController?.endRefreshing();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.progress = progress / 100;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> urlController.text = url;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // APP更新其访问的链接 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onUpdateVisitedHistory: (controller, url, androidIsReload) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.url = url.toString();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> urlController.text = this.url;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // WebView收到控制台报错 时触发的事件。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onConsoleMessage: (controller, consoleMessage) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (kDebugMode) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(consoleMessage);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 进度指示器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> progress &lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">1.0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">?&lt;/span> &lt;span class="na">LinearProgressIndicator&lt;/span>&lt;span class="err">(&lt;/span>&lt;span class="na">value:&lt;/span> &lt;span class="na">progress&lt;/span>&lt;span class="err">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">:&lt;/span> &lt;span class="na">Container&lt;/span>&lt;span class="err">(),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">],&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">),&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ButtonBar&lt;/span>&lt;span class="err">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alignment:&lt;/span> &lt;span class="na">MainAxisAlignment&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">center&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">children:&lt;/span> &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="na">Widget&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>[
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 后退按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: const Icon(Icons.arrow_back),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.goBack();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 前进按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: const Icon(Icons.arrow_forward),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.goForward();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 刷新按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ElevatedButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: const Icon(Icons.refresh),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> webViewController?.reload();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
 &lt;h2 id="画图">画图&lt;/h2>
 &lt;p>Ai 设置：视图-&amp;gt;显示网格&lt;/p>
 &lt;p>多边形变换：多边形工具-&amp;gt;自定义变换工具&lt;/p>
@@ -2884,6 +3147,19 @@ data-flex-basis="426px"
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
 >官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
+&lt;p>&lt;strong>submodule&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git submodule add [git@github.com:xxx/submodule.git] [directory] # 添加子模块
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone [git@github.com:xxx/submodule.git] [directory] --recurse-submodules # 克隆一个存储库,并自动更新仓库中所有子模块（更新可能不兼容，慎用）
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git submodule update # 更新
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>问题&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>更新被拒绝，因为远程仓库包含您本地尚不存在的提交。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git push -u origin +master # 强制push
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>gitmodules错误
+删掉.git和.gitmodules重新初始化更容易。&lt;/li>
+&lt;/ol>
 &lt;h2 id="push脚本">push脚本&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">

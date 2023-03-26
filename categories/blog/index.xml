@@ -25,7 +25,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo version # 验证
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">hugo new site myblog # 创建博客
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git init # 初始化
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone https://github.com/CaiJimmy/hugo-theme-stack/ # 在themes下安装stack主题
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git submodule add https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack # 删掉themes文件夹，安装stack主题作为子模块
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">rm config.toml &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> cp themes/hugo-theme-stack/exampleSite/config.yaml . # 使用主题的配置文件
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>把myblog/themes/hugo-theme-stack/exampleSite/content内容移到myblog/content使用主题示例文章&lt;/p>
 &lt;p>本地预览：
@@ -37,7 +37,7 @@ myblog下执行&lt;/p>
 &lt;p>注：我将介绍使用github托管源码自动化部署，如果您仅在本地存放源码，提交public文件夹即可，无需使用下列方法。&lt;/p>
 &lt;p>1.虽然博客内容全都能看到，但我们可能不太希望公开源码，不开放源码使用github pages需要创建2个仓库:
 创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:******.github.io.source.git # 连接远程仓库
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:******.github.io.source.git # 连接远程仓库。注意使用ssh连接，如果使用https连接每次都要输账号密码。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Generate new token （Note随意，Select scopes全选,复制token，我们这里使用Personal tokens比Deploy keys更方便）&lt;/p>
 &lt;p>找到源码仓库Settings-&amp;gt; Secrets and variables -&amp;gt; Actions -&amp;gt; New repository secret （Name写PERSONAL_TOKEN，Value粘贴token）&lt;/p>
 &lt;p>2.创建github actions的workflows自动部署文件：&lt;/p>
@@ -99,7 +99,7 @@ myblog下执行&lt;/p>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Push source and build repos.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 sh push.sh命令&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 sh push.sh命令。&lt;/p>
 &lt;p>到此已完成部署，之后任何更新如上运行push脚本即可&lt;/p>
 &lt;h1 id="修改主题">修改主题&lt;/h1>
 &lt;p>此处仅列举常见需修改内容，更多内容请看&lt;a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration" target="_blank" rel="noopener"
