@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/life/</link><description>Recent content in 生活 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://www.jiangdaoli.cf/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Janus</title><link>https://xiaoxiano.github.io/categories/life/</link><description>Recent content in 生活 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>quest2入门使用汇总</title><link>https://xiaoxiano.github.io/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -39,10 +39,10 @@
 &lt;/li>
 &lt;li>
 &lt;p>配置并打开sstap
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/1.jpg"
+&lt;img src="https://xiaoxiano.github.io/p/quest2/1.jpg"
 width="762"
 height="904"
-srcset="https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/1_hu05598ef3f23291f76f2030fc640c9d6f_138617_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="84"
@@ -51,10 +51,10 @@ data-flex-basis="202px"
 &lt;/li>
 &lt;li>
 &lt;p>打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/2.jpg"
+&lt;img src="https://xiaoxiano.github.io/p/quest2/2.jpg"
 width="1314"
 height="890"
-srcset="https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/2_hu286664c3a18791c6ce86785b99d75d5c_206462_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="147"
@@ -306,10 +306,10 @@ data-flex-basis="354px"
 &lt;li>首先需要开启开发者模式。在&lt;a class="link" href="https://developer.oculus.com/manage/organizations/create/" target="_blank" rel="noopener"
 >Oculus开发者网站&lt;/a>创建一个开发者组织，再去Oculus APP菜单 -&amp;gt; 设备 -&amp;gt; 开发者模式 -&amp;gt; 打开 。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/3.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/3.jpg"
 width="1890"
 height="681"
-srcset="https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/3_hu12e14b7c4164af371baa9202565e842d_257944_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="277"
@@ -319,10 +319,10 @@ data-flex-basis="666px"
 &lt;li>&lt;a class="link" href="https://sidequestvr.com/setup-howto" target="_blank" rel="noopener"
 >下载SideQuest&lt;/a>并安装。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/4.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/4.jpg"
 width="926"
 height="542"
-srcset="https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/4_hu17a372bafe153704ca78bb23fa0ab3ca_170969_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="170"
@@ -331,10 +331,10 @@ data-flex-basis="410px"
 &lt;ol start="3">
 &lt;li>下载Oculus ADB驱动。右键单击android_winusb.inf选择“安装”。然后用USB线将头显和电脑连接起来，在头显中点击“允许”。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/5.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/5.jpg"
 width="1043"
 height="424"
-srcset="https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/5_hue7bdfd98572c040d1b975b0887f1a766_100388_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="245"
@@ -343,10 +343,10 @@ data-flex-basis="590px"
 &lt;ol start="4">
 &lt;li>然后就可以安装apk了。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/6.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/6.jpg"
 width="706"
 height="177"
-srcset="https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/6_hu26241288b6e9df49f96a074c68bac755_38841_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="398"
@@ -355,19 +355,19 @@ data-flex-basis="957px"
 &lt;ol start="5">
 &lt;li>如果apk附带文件夹，就拖入obb文件夹。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/7.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/7.jpg"
 width="675"
 height="138"
-srcset="https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/7_huf99fb6261387974025db04e2263378d0_38642_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="489"
 data-flex-basis="1173px"
 >&lt;/p>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/8.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/8.jpg"
 width="1278"
 height="422"
-srcset="https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/8_hu5e190ebc36a18c706cb7024a413612a7_166580_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="302"
@@ -376,10 +376,10 @@ data-flex-basis="726px"
 &lt;ol start="6">
 &lt;li>进入头显的未知来源就可以使用了。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/9.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/9.jpg"
 width="1024"
 height="1024"
-srcset="https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/9_hu9999e3505472b8edceb589735c6b0c21_132513_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="100"
@@ -390,10 +390,10 @@ data-flex-basis="240px"
 &lt;p>vr影片体积超过10G的很常见，quest2装不了多少，所以放在pc，局域网共享。&lt;/p>
 &lt;ol>
 &lt;li>电脑设置开启共享。
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/14.jpg"
+&lt;img src="https://xiaoxiano.github.io/p/quest2/14.jpg"
 width="1776"
 height="630"
-srcset="https://www.jiangdaoli.cf/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/14_hu3e2d1ac8ebb64e484a893fcfcc0b2ae1_302374_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="281"
@@ -401,44 +401,44 @@ data-flex-basis="676px"
 >&lt;/li>
 &lt;/ol>
 &lt;p>无密码的共享
-&lt;img src="https://www.jiangdaoli.cf/p/quest2/13.jpg"
+&lt;img src="https://xiaoxiano.github.io/p/quest2/13.jpg"
 width="1255"
 height="735"
-srcset="https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/13_hudbe70be0ac89ff2146686fdf171af9bc_294615_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="170"
 data-flex-basis="409px"
 >&lt;/p>
 &lt;p>有密码的共享，找到用户名和改密码
-&lt;img src="https://www.jiangdaoli.cf/15.jpg"
+&lt;img src="https://xiaoxiano.github.io/15.jpg"
 loading="lazy"
 >&lt;/p>
 &lt;ol start="2">
 &lt;li>共享存放影片的文件夹。(以后删除共享点击图一的“删除访问”)&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/10.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/10.jpg"
 width="1260"
 height="740"
-srcset="https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="170"
 data-flex-basis="408px"
 >&lt;/p>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/11.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/11.jpg"
 width="790"
 height="594"
-srcset="https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="132"
 data-flex-basis="319px"
 >&lt;/p>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/quest2/12.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/12.jpg"
 width="788"
 height="592"
-srcset="https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="133"
@@ -456,7 +456,7 @@ data-flex-basis="319px"
 &lt;ul>
 &lt;li>截图&lt;/li>
 &lt;/ul>
-&lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>root手机和自动化</title><link>https://www.jiangdaoli.cf/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
+&lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
 &lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是只能root。
 大概分为以下步骤：&lt;/p>
 &lt;ol>

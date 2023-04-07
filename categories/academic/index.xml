@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>数学 on xiaoxian</title><link>https://www.jiangdaoli.cf/categories/math/</link><description>Recent content in 数学 on xiaoxian</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.jiangdaoli.cf/categories/math/index.xml" rel="self" type="application/rss+xml"/><item><title>数学问题</title><link>https://www.jiangdaoli.cf/p/math-qustion/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://www.jiangdaoli.cf/p/math-qustion/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学术 on Janus</title><link>https://xiaoxiano.github.io/categories/academic/</link><description>Recent content in 学术 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/academic/index.xml" rel="self" type="application/rss+xml"/><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 1.特殊元素和特殊位置优先策略
@@ -337,10 +337,10 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> （1）圆周上有 10 点，以这些点为端点的弦相交于圆内的交点有多少个？&lt;/p>
 &lt;p>（2）某城市的街区有 12 个全等的矩形组成，其中实线表示马路，从 A到 B的最短路径有多少种？&lt;/p>
-&lt;p>&lt;img src="https://www.jiangdaoli.cf/p/math-qustion/1.jpg"
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/math/1.jpg"
 width="509"
 height="232"
-srcset="https://www.jiangdaoli.cf/p/math-qustion/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_480x0_resize_q75_box.jpg 480w, https://www.jiangdaoli.cf/p/math-qustion/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_1024x0_resize_q75_box.jpg 1024w"
+srcset="https://xiaoxiano.github.io/p/math/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/math/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_1024x0_resize_q75_box.jpg 1024w"
 loading="lazy"
 class="gallery-image"
 data-flex-grow="219"
@@ -409,4 +409,4 @@ $$
 &lt;details class="spoiler " id="spoiler-55">
 &lt;summary>解析&lt;/summary>
 &lt;p>10 演员中有 5 人只会唱歌, 2 人只会跳舞 3 人为全能演员。选上唱歌人员为 标准进行研究只会唱的 5 人中没有人选上唱歌人员共有 $C_3^2 C_3^2$ 种, 只会唱的 5 人中只 有 1 人选上唱歌人员 $C_5^1 C_3^1 C_4^2$ 种, 只会唱的 5 人中只有 2 人选上唱歌人员有 $C_5^2 C_5^2$ 种, 由分类计数原理共有 $C_3^2 C_3^2+C_5^1 C_3^1 C_4^2+C_5^2 C_5^2$ 种。&lt;/p>
-&lt;/details></description></item></channel></rss>
+&lt;/details></description></item><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description/></item></channel></rss>
