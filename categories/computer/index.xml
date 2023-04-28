@@ -1054,29 +1054,31 @@ data-flex-basis="276px"
 >&lt;/p>
 &lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;ol>
-&lt;li>
-&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>flutter(windows)
+&lt;li>安装 JDK&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#java8-windows" target="_blank" rel="noopener"
+>下载地址&lt;/a>&lt;/p>
+&lt;ol start="2">
+&lt;li>安装配置Android Studio&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://docs.flutter.dev/release/archive?tab=windows#windows" target="_blank" rel="noopener"
+>下载地址&lt;/a>&lt;/p>
+&lt;ol start="3">
+&lt;li>flutter(windows)
 &lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/p>
-&lt;/li>
+>flutter安装&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>安装遇坑&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">//配置build.gradle(project:android)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更新">更新&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>配置环境变量path&lt;/li>
+&lt;/ol>
+&lt;p>Dart: 无需配置，flutter现在自带dart。&lt;/p>
+&lt;p>Flutter: C:\flutter\bin&lt;/p>
+&lt;p>Java: C:\Program Files\Java\jdk1.8.0_281\bin&lt;/p>
+&lt;p>Android SDK Tools:C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
+&lt;p>Android SDK Platform-Tools:C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
+&lt;h1 id="更新">更新&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
@@ -1116,7 +1118,40 @@ class="gallery-image"
 data-flex-grow="178"
 data-flex-basis="427px"
 >&lt;/p>
-&lt;h1 id="dart">dart&lt;/h1>
+&lt;h1 id="故障排除">故障排除&lt;/h1>
+&lt;h2 id="配置">配置&lt;/h2>
+&lt;ul>
+&lt;li>配置build.gradle(project:android)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">allprojects {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;ul>
+&lt;li>更新flutter&lt;/li>
+&lt;li>更新Android Studio&lt;/li>
+&lt;li>重新建项目&lt;/li>
+&lt;li>\android\app\build.gradle&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">compileSdkVersion 33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">minSdkVersion 21
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>\android\app\src\main\AndroidManifest.xml&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">manifest&lt;/span> &lt;span class="na">xmlns:android&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">xmlns:tools&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">package&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;com.example.flutter_ocr2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">application&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">tools:replace&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android:label&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;flutter_ocr2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;${applicationName}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@mipmap/ic_launcher&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">activity&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
@@ -1148,7 +1183,6 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bool 布尔类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="不常用类型">不常用类型&lt;/h3>
 &lt;ul>
@@ -1296,8 +1330,14 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;h2 id="类">类&lt;/h2>
 &lt;h3 id="方法">方法&lt;/h3>
-&lt;h4 id="实例方法">实例方法&lt;/h4>
-&lt;p>实例方法可以访问实例变量和 this&lt;/p>
+&lt;h4 id="实例变量和方法">实例变量和方法&lt;/h4>
+&lt;p>实例变量:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double? x; // Declare instance variable x, initially null.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double? y; // Declare y, initially null.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double z = 0; // Declare z, initially 0.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>实例方法可以访问实例变量和 this&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:math&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class Point {
@@ -1312,8 +1352,14 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return sqrt(dx * dx + dy * dy);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="get-和-set">get 和 set&lt;/h5>
-&lt;p>特殊方法:实例对象的每一个属性都有一个隐式的 Getter 方法，非 final 属性还会有一个 Setter 方法&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="静态变量和方法">静态变量和方法&lt;/h4>
+&lt;p>使用关键字 static 可以声明类变量或类方法。静态成员可以通过类名称直接访问（不需要实例化），提高性能。静态方法不能访问非静态成员，非静态方法可以访问静态成员，不能使用this关键字。&lt;/p>
+&lt;h4 id="get-和-set">get 和 set&lt;/h4>
+&lt;ul>
+&lt;li>特殊方法:实例对象的每一个属性都有一个隐式的 Getter 方法，非 final 属性还会有一个 Setter 方法。&lt;/li>
+&lt;li>通过get和set修饰的方法不带小括号，可以使访问方法像访问属性一样，简便我们的使用。访问&lt;/li>
+&lt;li>set：传入属性，get：访问属性。&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Rectangle {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double left, top, width, height;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -1381,12 +1427,13 @@ data-flex-basis="427px"
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 命名构造函数
 &lt;/div>
+&lt;p>命名构造函数(类名.函数名)可以实现多个构造器。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num x, y;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 命名构造函数，新增代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 命名构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point.origin() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x = 0;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y = 0;
@@ -1444,7 +1491,18 @@ data-flex-basis="427px"
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 初始化列表
 &lt;/div>
-&lt;p>初始化列表的执行顺序，在整个构造函数的最前面，它除了可以调用父类的构造函数，还可以在构造函数方法体之前，初始化一些成员变量。&lt;/p>
+&lt;p>在构造函数后加上&lt;code>: x = , y = &lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>可以在构造函数中设置属性的默认值&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在构造函数体执行之前执行&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以调用父类的构造函数&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// Initializer list sets instance variables before
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// the constructor body runs.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Point.fromJson(Map&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">num&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> json)
@@ -1501,9 +1559,20 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你的类，创建的对象永远不会改变，你可以在编译期就创建这个常量实例，并且定义一个常量构造函数，并且确保所有的成员变量都是final的。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
-工厂构造函数
+工厂构造函数/单例模式
 &lt;/div>
-&lt;p>有时候可能有一种需求，并不需要每次都创建新的类实例，而是每一种情况，只需要一个实例：&lt;/p>
+&lt;p>在构造函数前加上&lt;code>factory&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>只实例化一次，节省相同实例化带来的消耗&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>第一次调用命名构造函数进入工厂函数中实例化，后续调用就用缓存中现成的实例&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>工厂构造函数，没有权利访问this&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Logger {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final String name;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bool mute = false;
@@ -1523,7 +1592,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name); # 定义构造函数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name); # 定义命名构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void log(String msg) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!mute) print(msg);
@@ -1534,15 +1603,12 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var logger = Logger(&amp;#39;UI&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> logger.log(&amp;#39;Button clicked&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>工厂构造函数，没有权利访问this&lt;/p>
-&lt;/blockquote>
-&lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
 &lt;p>如此这般，我们可以创建名字为UI / SYS / API 等的实例，然后在debug的时候，如果设置名字为UI的Logger实例的mute为true，就不会打印UI相关的log，而不影响其它两个名字的log。&lt;/p>
 &lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -1556,12 +1622,12 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -4143,9 +4209,6 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">InfoTip=分类名称
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另存为，保存类型：所有文件，编码：ANSI&lt;/p>
 &lt;ol start="2">
-&lt;li>
-&lt;p>设置 desktop.ini属性为隐藏&lt;/p>
-&lt;/li>
 &lt;li>
 &lt;p>生效：文件夹属性 -&amp;gt; 自定义 -&amp;gt; 更改图标 -&amp;gt; 还原默认值&lt;/p>
 &lt;/li>

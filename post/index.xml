@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Janus</title><link>https://xiaoxiano.github.io/post/</link><description>Recent content in Posts on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 17 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;h1 id="电池">电池&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Janus</title><link>https://xiaoxiano.github.io/post/</link><description>Recent content in Posts on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Chromebook</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，有这些选择：&lt;/p>
+&lt;ul>
+&lt;li>surface pro系不错，可高价买低配给人冤大头的感觉&lt;/li>
+&lt;li>ROG 幻X，高配显卡反而拉低续航，二合一的屏幕尺寸也不适合用来打游戏&lt;/li>
+&lt;li>Chromebook duet5 ，折腾开始。&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>首先SSTap分享网络登录进去（前文quest2有使用方法）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>从主机上取下可拆卸键盘，按住[提高音量]+[降低音量]+[电源按钮]约 10 秒钟，然后松开，您应该看到恢复模式屏幕。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>音量键可以切换语言，然后选中高级-&amp;gt;开发者模式-&amp;gt;从内部磁盘启动，系统将发出哔哔声重新启动并开始设置。&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description>&lt;p>挖坑&lt;/p></description></item><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;h1 id="电池">电池&lt;/h1>
 &lt;table align="tablePos" bgcolor="#c6c6c6" border="0" cellpadding="5" cellspacing="1"
 class="fs12 priceTable priceTableA tabB10" isselfdefine="1" width="800">
 &lt;tbody>
@@ -945,632 +961,7 @@ $$
 &lt;details class="spoiler " id="spoiler-55">
 &lt;summary>解析&lt;/summary>
 &lt;p>10 演员中有 5 人只会唱歌, 2 人只会跳舞 3 人为全能演员。选上唱歌人员为 标准进行研究只会唱的 5 人中没有人选上唱歌人员共有 $C_3^2 C_3^2$ 种, 只会唱的 5 人中只 有 1 人选上唱歌人员 $C_5^1 C_3^1 C_4^2$ 种, 只会唱的 5 人中只有 2 人选上唱歌人员有 $C_5^2 C_5^2$ 种, 由分类计数原理共有 $C_3^2 C_3^2+C_5^1 C_3^1 C_4^2+C_5^2 C_5^2$ 种。&lt;/p>
-&lt;/details></description></item><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description>&lt;!DOCTYPE html>
-&lt;!-- saved from url=(0016)http://localhost -->
-&lt;html>
-&lt;head>
-&lt;meta charset="utf-8"/>
-&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-&lt;title>执医&lt;/title>
-&lt;style>
-body{
-margin: 0;
-}
-#content-info{
-width: auto;
-margin: 0 auto;
-text-align: center;
-}
-#author-info{
-white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
-}
-#title{
-text-overflow: ellipsis;
-white-space: nowrap;
-overflow: hidden;
-padding-top: 10px;
-margin-bottom: 2px;
-font-size: 34px;
-color: #505050;
-}
-.text{
-white-space:nowrap;
-text-overflow: ellipsis;
-display: inline-block;
-margin-right: 20px;
-margin-bottom: 2px;
-font-size: 20px;
-color: #8c8c8c;
-}
-#navBar{
-width: auto;
-height: auto;
-position: fixed;
-right:0;
-bottom: 0;
-background-color: #f0f3f4;
-overflow-y: auto;
-text-align: center;
-}
-#svg-container{
-width: 100%;
-overflow-x: scroll;
-min-width: 0px;
-margin: 0 10px;
-overflow: visible;
-position: relative;
-}
-#nav-thumbs{
-overflow-y: scroll;
-padding: 0 5px;
-}
-.nav-thumb{
-position: relative;
-margin: 10px auto;
-}
-.nav-thumb >p{
-text-align: center;
-font-size: 12px;
-margin: 4px 0 0 0;
-}
-.nav-thumb >div{
-position: relative;
-display: inline-block;
-border: 1px solid #c6cfd5;
-}
-.nav-thumb img{
-display: block;
-}
-#main-content{
-bottom: 0;
-left: 0;
-right: 0;
-background-color: #d0cfd8;
-display: flex;
-height: auto;
-flex-flow: row wrap;
-text-align:center;
-}
-#svg-container >svg{
-overflow: visible;
-display: block;
-margin:5px auto;
-margin-bottom: 5px;
-}
-#copyright{
-bottom: 0;
-left: 50%;
-margin: 5px auto;
-font-size: 16px;
-color: #515151;
-}
-#copyright >a{
-text-decoration: none;
-color: #77C;
-}
-.number{
-position: absolute;
-top:0;
-left:0;
-border-top:22px solid #08a1ef;
-border-right: 22px solid transparent;
-}
-.pagenum{
-font-size: 12px;
-color: #fff;
-position: absolute;
-top: -23px;
-left: 2px;
-}
-#navBar::-webkit-scrollbar{
-width: 8px;
-background-color: #f5f5f5;
-}
-#navBar::-webkit-scrollbar-track{
--webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
-border-radius: 8px;
-background-color: #fff;
-}
-#navBar::-webkit-scrollbar-thumb{
-border-radius: 8px;
--webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.3);
-background-color: #6b6b70;
-}
-#navBar::-webkit-scrollbar-thumb:hover{
-background-color: #4a4a4f;
-}
-&lt;/style>
-&lt;/head>
-&lt;body>
-&lt;div id="main-area">
-&lt;div id="content-info">
-&lt;div id="content-info">
-&lt;div id="title">执医&lt;/div>
-&lt;/div>
-&lt;div id="author-info">
-&lt;div id="author-name" class="text">90487&lt;/div>
-&lt;div id="share-time" class="text">2023-04-09&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;div id="main-content">
-&lt;div id="svg-container">&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 2937" xmlns:ev="http://www.w3.org/2001/xml-events" height="2937" ed:vSpacing="30" preserveAspectRadio="xMinYMin meet" id="page0" xmlns:xlink="http://www.w3.org/1999/xlink" ed:hSpacing="30" width="900" xmlns:ed="https://www.edrawsoft.com/xml/2017/SVGExtensions/" ed:name="Page-1">
-&lt;style type="text/css">&lt;![CDATA[
-g[ed\:togtopicid],g[ed\:hyperlink],g[ed\:comment],g[ed\:note] {cursor:pointer;}
-g[id] {-moz-user-select: none;-ms-user-select: none;user-select: none;}
-svg text::selection,svg tspan::selection{background-color: #4285f4;color: #ffffff;fill: #ffffff;}
-.st3 {fill:#000000;font-family:微软雅黑;font-size:10pt}
-.st2 {fill:#303030;font-family:微软雅黑;font-size:14pt;font-weight:bold}
-.st5 {fill:#547fd5;font-size:11.76pt;font-weight:bold}
-.st1 {fill:#ffffff;font-family:微软雅黑;font-size:18pt;font-weight:bold}
-.st4 {font-size:11.76pt}
-]]>&lt;/style>
-&lt;defs/>
-&lt;rect height="2937" y="0" x="0" fill="#ffffff" width="900"/>
-&lt;path d="M14.8,324.6L46.3,324.6L46.3,-318.6C46.3,-321.9,49,-324.6,52.3,-324.6L77.8,-324.6" stroke="#454545" ed:tosuperid="102" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,1917.92)" stroke-width="2" id="103" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M0,-15.5L0,9.5C0,12.8,2.7,15.5,6,15.5L13.5,15.5" stroke="#454545" ed:tosuperid="230" stroke-linejoin="round" transform="matrix(1,0,0,1,438.9,2628.45)" id="231" fill="none" ed:parentid="224" stroke-linecap="round"/>
-&lt;path d="M0,0C0,0,2.7,0,6,0L13.5,0" stroke="#454545" ed:tosuperid="228" stroke-linejoin="round" transform="matrix(1,0,0,1,438.9,2613)" id="229" fill="none" ed:parentid="224" stroke-linecap="round"/>
-&lt;path d="M-13.5,15.5L0,15.5L0,-9.4C0,-12.8,2.7,-15.4,6,-15.4L13.5,-15.4" stroke="#454545" ed:tosuperid="226" stroke-linejoin="round" transform="matrix(1,0,0,1,438.9,2597.55)" id="227" fill="none" ed:parentid="224" stroke-linecap="round"/>
-&lt;path d="M14.8,-185.2L46.3,-185.2L46.3,179.2C46.3,182.5,49,185.2,52.3,185.2L77.8,185.2" stroke="#454545" ed:tosuperid="224" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,2427.78)" stroke-width="2" id="225" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M0,-61.4L0,55.4C0,58.7,2.7,61.4,6,61.4L13.5,61.4" stroke="#454545" ed:tosuperid="222" stroke-linejoin="round" transform="matrix(1,0,0,1,414.9,2463.28)" id="223" fill="none" ed:parentid="104" stroke-linecap="round"/>
-&lt;path d="M0,-15.2L0,9.2C0,12.5,2.7,15.2,6,15.2L13.5,15.2" stroke="#454545" ed:tosuperid="200" stroke-linejoin="round" transform="matrix(1,0,0,1,499.9,2176.5)" id="201" fill="none" ed:parentid="194" stroke-linecap="round"/>
-&lt;path d="M0,0C0,0,2.7,0,6,0L13.5,0" stroke="#454545" ed:tosuperid="198" stroke-linejoin="round" transform="matrix(1,0,0,1,499.9,2161.3)" id="199" fill="none" ed:parentid="194" stroke-linecap="round"/>
-&lt;path d="M-13.5,15.2L0,15.2L0,-9.2C0,-12.5,2.7,-15.2,6,-15.2L13.5,-15.2" stroke="#454545" ed:tosuperid="196" stroke-linejoin="round" transform="matrix(1,0,0,1,499.9,2146.1)" id="197" fill="none" ed:parentid="194" stroke-linecap="round"/>
-&lt;path d="M0,-284L0,278C0,281.3,2.7,284,6,284L13.5,284" stroke="#454545" ed:tosuperid="194" stroke-linejoin="round" transform="matrix(1,0,0,1,396.5,1877.3)" id="195" fill="none" ed:parentid="102" stroke-linecap="round"/>
-&lt;path d="M0,-15.5L0,9.5C0,12.8,2.7,15.5,6,15.5L13.5,15.5" stroke="#454545" ed:tosuperid="186" stroke-linejoin="round" transform="matrix(1,0,0,1,398.9,2747.65)" id="187" fill="none" ed:parentid="178" stroke-linecap="round"/>
-&lt;path d="M0,0C0,0,2.7,0,6,0L13.5,0" stroke="#454545" ed:tosuperid="184" stroke-linejoin="round" transform="matrix(1,0,0,1,398.9,2732.2)" id="185" fill="none" ed:parentid="178" stroke-linecap="round"/>
-&lt;path d="M-13.5,15.4L0,15.4L0,-9.5C0,-12.8,2.7,-15.5,6,-15.5L13.5,-15.5" stroke="#454545" ed:tosuperid="182" stroke-linejoin="round" transform="matrix(1,0,0,1,398.9,2716.75)" id="183" fill="none" ed:parentid="178" stroke-linecap="round"/>
-&lt;path d="M14.8,-244.8L46.3,-244.8L46.3,238.8C46.3,242.1,49,244.8,52.3,244.8L77.8,244.8" stroke="#454545" ed:tosuperid="178" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,2487.37)" stroke-width="2" id="179" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M0,-30.8L0,24.8C0,28.1,2.7,30.8,6,30.8L13.5,30.8" stroke="#454545" ed:tosuperid="152" stroke-linejoin="round" transform="matrix(1,0,0,1,545.5,2463.53)" id="153" fill="none" ed:parentid="126" stroke-linecap="round"/>
-&lt;path d="M0,-7.7L0,1.7C0,5,2.7,7.7,6,7.7L13.5,7.7" stroke="#454545" ed:tosuperid="148" stroke-linejoin="round" transform="matrix(1,0,0,1,655.3,2456.18)" id="149" fill="none" ed:parentid="130" stroke-linecap="round"/>
-&lt;path d="M-13.5,7.7L0,7.7L0,-1.7C0,-5,2.7,-7.7,6,-7.7L13.5,-7.7" stroke="#454545" ed:tosuperid="146" stroke-linejoin="round" transform="matrix(1,0,0,1,655.3,2440.73)" id="147" fill="none" ed:parentid="130" stroke-linecap="round"/>
-&lt;path d="M0,-15.5L0,9.5C0,12.8,2.7,15.5,6,15.5L13.5,15.5" stroke="#454545" ed:tosuperid="144" stroke-linejoin="round" transform="matrix(1,0,0,1,653.7,2386.65)" id="145" fill="none" ed:parentid="128" stroke-linecap="round"/>
-&lt;path d="M0,0C0,0,2.7,0,6,0L13.5,0" stroke="#454545" ed:tosuperid="142" stroke-linejoin="round" transform="matrix(1,0,0,1,653.7,2371.2)" id="143" fill="none" ed:parentid="128" stroke-linecap="round"/>
-&lt;path d="M-13.5,15.5L0,15.5L0,-9.5C0,-12.8,2.7,-15.5,6,-15.5L13.5,-15.5" stroke="#454545" ed:tosuperid="140" stroke-linejoin="round" transform="matrix(1,0,0,1,653.7,2355.75)" id="141" fill="none" ed:parentid="128" stroke-linecap="round"/>
-&lt;path d="M0,-15.2L0,9.2C0,12.5,2.7,15.2,6,15.2L13.5,15.2" stroke="#454545" ed:tosuperid="138" stroke-linejoin="round" transform="matrix(1,0,0,1,504.7,2294.2)" id="139" fill="none" ed:parentid="124" stroke-linecap="round"/>
-&lt;path d="M0,0C0,0,2.7,0,6,0L13.5,0" stroke="#454545" ed:tosuperid="136" stroke-linejoin="round" transform="matrix(1,0,0,1,504.7,2279)" id="137" fill="none" ed:parentid="124" stroke-linecap="round"/>
-&lt;path d="M-13.5,15.2L0,15.2L0,-9.2C0,-12.5,2.7,-15.2,6,-15.2L13.5,-15.2" stroke="#454545" ed:tosuperid="134" stroke-linejoin="round" transform="matrix(1,0,0,1,504.7,2263.8)" id="135" fill="none" ed:parentid="124" stroke-linecap="round"/>
-&lt;path d="M0,-7.8L0,1.8C0,5.2,2.7,7.8,6,7.8L13.5,7.8" stroke="#454545" ed:tosuperid="130" stroke-linejoin="round" transform="matrix(1,0,0,1,545.5,2440.6)" id="131" fill="none" ed:parentid="126" stroke-linecap="round"/>
-&lt;path d="M-13.5,30.8L0,30.8L0,-24.8C0,-28.1,2.7,-30.8,6,-30.8L13.5,-30.8" stroke="#454545" ed:tosuperid="128" stroke-linejoin="round" transform="matrix(1,0,0,1,545.5,2401.98)" id="129" fill="none" ed:parentid="126" stroke-linecap="round"/>
-&lt;path d="M0,-15.5L0,9.5C0,12.8,2.7,15.5,6,15.5L13.5,15.5" stroke="#454545" ed:tosuperid="126" stroke-linejoin="round" transform="matrix(1,0,0,1,414.9,2417.3)" id="127" fill="none" ed:parentid="104" stroke-linecap="round"/>
-&lt;path d="M-13.5,61.4L0,61.4L0,-55.4C0,-58.7,2.7,-61.4,6,-61.4L13.5,-61.4" stroke="#454545" ed:tosuperid="124" stroke-linejoin="round" transform="matrix(1,0,0,1,414.9,2340.42)" id="125" fill="none" ed:parentid="104" stroke-linecap="round"/>
-&lt;path d="M0,-22.8L0,16.8C0,20.1,2.7,22.8,6,22.8L13.5,22.8" stroke="#454545" ed:tosuperid="122" stroke-linejoin="round" transform="matrix(1,0,0,1,491.1,2077.7)" id="123" fill="none" ed:parentid="112" stroke-linecap="round"/>
-&lt;path d="M0,-192.8L0,186.8C0,190.1,2.7,192.8,6,192.8L13.5,192.8" stroke="#454545" ed:tosuperid="120" stroke-linejoin="round" transform="matrix(1,0,0,1,396.5,1786.1)" id="121" fill="none" ed:parentid="102" stroke-linecap="round"/>
-&lt;path d="M0,-7.6L0,1.6C0,4.9,2.7,7.6,6,7.6L13.5,7.6" stroke="#454545" ed:tosuperid="118" stroke-linejoin="round" transform="matrix(1,0,0,1,491.1,2062.5)" id="119" fill="none" ed:parentid="112" stroke-linecap="round"/>
-&lt;path d="M0,7.6L0,-1.6C0,-4.9,2.7,-7.6,6,-7.6L13.5,-7.6" stroke="#454545" ed:tosuperid="116" stroke-linejoin="round" transform="matrix(1,0,0,1,491.1,2047.3)" id="117" fill="none" ed:parentid="112" stroke-linecap="round"/>
-&lt;path d="M-13.5,22.8L0,22.8L0,-16.8C0,-20.1,2.7,-22.8,6,-22.8L13.5,-22.8" stroke="#454545" ed:tosuperid="114" stroke-linejoin="round" transform="matrix(1,0,0,1,491.1,2032.1)" id="115" fill="none" ed:parentid="112" stroke-linecap="round"/>
-&lt;path d="M0,-230.8L0,224.8C0,228.1,2.7,230.8,6,230.8L13.5,230.8" stroke="#454545" ed:tosuperid="112" stroke-linejoin="round" transform="matrix(1,0,0,1,396.5,1824.1)" id="113" fill="none" ed:parentid="102" stroke-linecap="round"/>
-&lt;path d="M0,-177.6L0,171.6C0,174.9,2.7,177.6,6,177.6L13.5,177.6" stroke="#454545" ed:tosuperid="110" stroke-linejoin="round" transform="matrix(1,0,0,1,396.5,1770.9)" id="111" fill="none" ed:parentid="102" stroke-linecap="round"/>
-&lt;path d="M-13.5,284L0,284L0,-278C0,-281.3,2.7,-284,6,-284L13.5,-284" stroke="#454545" ed:tosuperid="108" stroke-linejoin="round" transform="matrix(1,0,0,1,396.5,1309.3)" id="109" fill="none" ed:parentid="102" stroke-linecap="round"/>
-&lt;path d="M14.8,-79.7L46.3,-79.7L46.3,73.7C46.3,77,49,79.7,52.3,79.7L77.8,79.7" stroke="#454545" ed:tosuperid="104" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,2322.2)" stroke-width="2" id="105" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M-13.5,446.4L0,446.4L0,-440.4C0,-443.7,2.7,-446.4,6,-446.4L13.5,-446.4" stroke="#454545" ed:tosuperid="267" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,578.9)" id="268" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,386.4L0,-380.4C0,-383.7,2.7,-386.4,6,-386.4L13.5,-386.4" stroke="#454545" ed:tosuperid="269" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,638.9)" id="270" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M14.8,-287.2L46.3,-287.2L46.3,281.2C46.3,284.5,49,287.2,52.3,287.2L77.8,287.2" stroke="#454545" ed:tosuperid="271" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,2529.77)" stroke-width="2" id="272" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M0,218.4L0,-212.4C0,-215.7,2.7,-218.4,6,-218.4L13.5,-218.4" stroke="#454545" ed:tosuperid="273" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,806.9)" id="274" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,158.4L0,-152.4C0,-155.7,2.7,-158.4,6,-158.4L13.5,-158.4" stroke="#454545" ed:tosuperid="285" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,866.9)" id="286" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,109.2L0,-103.2C0,-106.5,2.7,-109.2,6,-109.2L13.5,-109.2" stroke="#454545" ed:tosuperid="287" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,916.1)" id="288" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,27.6L0,-21.6C0,-24.9,2.7,-27.6,6,-27.6L13.5,-27.6" stroke="#454545" ed:tosuperid="289" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,997.7)" id="290" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-64.8L0,58.8C0,62.1,2.7,64.8,6,64.8L13.5,64.8" stroke="#454545" ed:tosuperid="291" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1090.1)" id="292" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M14.8,-324.6L46.3,-324.6L46.3,318.6C46.3,321.9,49,324.6,52.3,324.6L77.8,324.6" stroke="#454545" ed:tosuperid="293" stroke-linejoin="round" transform="matrix(1,0,0,1,192.55,2567.17)" stroke-width="2" id="294" fill="none" ed:parentid="101" stroke-linecap="round"/>
-&lt;path d="M0,-135.6L0,129.6C0,132.9,2.7,135.6,6,135.6L13.5,135.6" stroke="#454545" ed:tosuperid="295" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1160.9)" id="296" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-195.6L0,189.6C0,192.9,2.7,195.6,6,195.6L13.5,195.6" stroke="#454545" ed:tosuperid="297" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1220.9)" id="298" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-234L0,228C0,231.3,2.7,234,6,234L13.5,234" stroke="#454545" ed:tosuperid="299" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1259.3)" id="300" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-272.4L0,266.4C0,269.7,2.7,272.4,6,272.4L13.5,272.4" stroke="#454545" ed:tosuperid="301" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1297.7)" id="302" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-397.2L0,391.2C0,394.5,2.7,397.2,6,397.2L13.5,397.2" stroke="#454545" ed:tosuperid="303" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1422.5)" id="304" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;path d="M0,-446.4L0,440.4C0,443.7,2.7,446.4,6,446.4L13.5,446.4" stroke="#454545" ed:tosuperid="305" stroke-linejoin="round" transform="matrix(1,0,0,1,482.3,1471.7)" id="306" fill="none" ed:parentid="108" stroke-linecap="round"/>
-&lt;g ed:layout="rightmap" ed:topictype="mainidea" ed:width="185.4" ed:height="63" transform="matrix(1,0,0,1,22,2211.05)" id="101">
-&lt;path d="M4,0L181.4,0C184.1,0,185.4,1.3,185.4,4L185.4,59C185.4,61.7,184.1,63,181.4,63L4,63C1.3,63,0,61.7,0,59L0,4C0,1.3,1.3,0,4,0z" stroke="#173679" stroke-linejoin="round" stroke-width="2" fill="#173679"/>
-&lt;text class="st1">
-&lt;tspan style="white-space:pre" textLength="144" y="41.6" x="20">Name+Post&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="112.6" ed:height="41.8" transform="matrix(1,0,0,1,270.4,1572.4)" id="102" ed:parentid="101">
-&lt;path d="M4,0L108.6,0C111.3,0,112.6,1.3,112.6,4L112.6,37.8C112.6,40.5,111.3,41.8,108.6,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="76" y="29" x="18">呼吸系统&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="58.8" ed:height="23.9" transform="matrix(1,0,0,1,410,1001.4)" id="108" ed:parentid="102">
-&lt;path d="M0,23.9L58.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="39" y="17.55" x="8">慢阻肺&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="44.4" ed:height="23.9" transform="matrix(1,0,0,1,410,1924.6)" id="110" ed:parentid="102">
-&lt;path d="M0,23.9L44.4,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="24" y="17.55" x="8">Age&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="194" ed:height="23.9" transform="matrix(1,0,0,1,410,1955)" id="120" ed:parentid="102">
-&lt;path d="M0,23.9L194,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="165" y="17.55" x="8">The position you apply for &lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="67.59999999999999" ed:height="23.9" transform="matrix(1,0,0,1,410,2031)" id="112" ed:parentid="102">
-&lt;path d="M0,23.9L67.6,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="49" y="17.55" x="7">Contact&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="113.2" ed:height="23.9" transform="matrix(1,0,0,1,504.6,1985.4)" id="114" ed:parentid="112">
-&lt;path d="M0,23.9L113.2,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="91" y="17.55" x="8">Phone number&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="107.6" ed:height="23.9" transform="matrix(1,0,0,1,504.6,2015.8)" id="116" ed:parentid="112">
-&lt;path d="M0,23.9L107.6,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="83" y="17.55" x="8">Email address&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="39.6" ed:height="23.9" transform="matrix(1,0,0,1,504.6,2046.2)" id="118" ed:parentid="112">
-&lt;path d="M0,23.9L39.6,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="21" y="17.55" x="8">Fax&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="85.2" ed:height="23.9" transform="matrix(1,0,0,1,504.6,2076.6)" id="122" ed:parentid="112">
-&lt;path d="M0,23.9L85.2,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="63" y="17.55" x="8">Face book&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="76.40000000000001" ed:height="23.9" transform="matrix(1,0,0,1,410,2137.4)" id="194" ed:parentid="102">
-&lt;path d="M0,23.9L76.4,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="53" y="17.55" x="8">Relatives&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="58" ed:height="23.9" transform="matrix(1,0,0,1,513.4,2107)" id="196" ed:parentid="194">
-&lt;path d="M0,23.9L58,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="39" y="17.55" x="8">Father&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="66" ed:height="23.9" transform="matrix(1,0,0,1,513.4,2137.4)" id="198" ed:parentid="194">
-&lt;path d="M0,23.9L66,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="46" y="17.55" x="8">Mother&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="122" ed:height="23.9" transform="matrix(1,0,0,1,513.4,2167.8)" id="200" ed:parentid="194">
-&lt;path d="M0,23.9L122,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="99" y="17.55" x="8">Sister &amp;amp; Brother&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="131" ed:height="41.8" transform="matrix(1,0,0,1,270.4,2380.95)" id="104" ed:parentid="101">
-&lt;path d="M4,0L127,0C129.7,0,131,1.3,131,4L131,37.8C131,40.5,129.7,41.8,127,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="95" y="29" x="18">Education&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="62.8" ed:height="23.9" transform="matrix(1,0,0,1,428.4,2255.1)" id="124" ed:parentid="104">
-&lt;path d="M0,23.9L62.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="42" y="17.55" x="8">School&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="158.8" ed:height="23.9" transform="matrix(1,0,0,1,518.2,2224.7)" id="134" ed:parentid="124">
-&lt;path d="M0,23.9L158.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="133" y="17.55" x="8">Elementary education&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="215.6" ed:height="23.9" transform="matrix(1,0,0,1,518.2,2255.1)" id="136" ed:parentid="124">
-&lt;path d="M0,23.9L215.6,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="182" y="17.55" x="8">Adult education -college level&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="82.8" ed:height="23.9" transform="matrix(1,0,0,1,518.2,2285.5)" id="138" ed:parentid="124">
-&lt;path d="M0,23.9L82.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="61" y="17.55" x="8">University&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="103.6" ed:height="23.9" transform="matrix(1,0,0,1,428.4,2408.85)" id="126" ed:parentid="104">
-&lt;path d="M0,23.9L103.6,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="81" y="17.55" x="8">Certifications&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="81.2" ed:height="23.9" transform="matrix(1,0,0,1,559,2347.3)" id="128" ed:parentid="126">
-&lt;path d="M0,23.9L81.2,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="60" y="17.55" x="8">Language&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,667.2,2315.9)" id="140" ed:parentid="128">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,667.2,2346.8)" id="142" ed:parentid="128">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,667.2,2377.7)" id="144" ed:parentid="128">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="82.8" ed:height="23.9" transform="matrix(1,0,0,1,559,2424.55)" id="130" ed:parentid="126">
-&lt;path d="M0,23.9L82.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="62" y="17.55" x="8">Computer&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,668.8,2408.6)" id="146" ed:parentid="130">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,668.8,2439.5)" id="148" ed:parentid="130">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="114.8" ed:height="23.9" transform="matrix(1,0,0,1,559,2470.4)" id="152" ed:parentid="126">
-&lt;path d="M0,23.9L114.8,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="89" y="17.55" x="8">Driving license&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="65.2" ed:height="23.9" transform="matrix(1,0,0,1,428.4,2500.8)" id="222" ed:parentid="104">
-&lt;path d="M0,23.9L65.2,23.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="45" y="17.55" x="8">Awards&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="155" ed:height="41.8" transform="matrix(1,0,0,1,270.4,2592.1)" id="224" ed:parentid="101">
-&lt;path d="M4,0L151,0C153.7,0,155,1.3,155,4L155,37.8C155,40.5,153.7,41.8,151,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="121" y="29" x="18">Special skills&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,452.4,2557.7)" id="226" ed:parentid="224">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,452.4,2588.6)" id="228" ed:parentid="224">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,452.4,2619.5)" id="230" ed:parentid="224">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="115" ed:height="41.8" transform="matrix(1,0,0,1,270.4,2711.3)" id="178" ed:parentid="101">
-&lt;path d="M4,0L111,0C113.7,0,115,1.3,115,4L115,37.8C115,40.5,113.7,41.8,111,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="80" y="29" x="18">Hobbies&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,412.4,2676.9)" id="182" ed:parentid="178">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,412.4,2707.8)" id="184" ed:parentid="178">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="29" ed:height="24.4" transform="matrix(1,0,0,1,412.4,2738.7)" id="186" ed:parentid="178">
-&lt;path d="M0,24.4L29,24.4" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3"/>
-&lt;/g>
-&lt;g ed:width="370" ed:height="113.5" transform="matrix(1,0,0,1,495.8,19)" id="267" ed:parentid="108">
-&lt;path d="M0,113.5L370,113.5" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="109" y="19.95" x="8" class="st4">1.慢阻肺的概述&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="328" y="41.55" x="8" class="st4">慢性阻塞性肺疾病(COPD)简称慢阻肺，表现为&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" y="63.15" x="8" class="st5">阻塞性&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="304" x="56" class="st4">通气功能障碍，而肺纤维化、胸廓畸形、胸&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="256" y="84.75" x="8" class="st4">腔积液、胸膜增厚或肺切除后均显示&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="264" class="st5">限制性&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="312" class="st4">通气功&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" y="106.35" x="8" class="st4">能障碍。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="113.5" transform="matrix(1,0,0,1,495.8,139)" id="269" ed:parentid="108">
-&lt;path d="M0,113.5L370,113.5" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="109" y="19.95" x="8" class="st4">2.慢阻肺的病因&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" y="41.55" x="8" class="st4">慢阻肺，是以&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" x="104" class="st5">持续气流受限&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="160" x="200" class="st4">为特征的可以预防和治&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="63.15" x="8" class="st4">疗的疾病，其气流受限多呈进行性发展，与气道和&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="336" y="84.75" x="8" class="st4">肺组织对香烟烟雾等有害气体或有害颗粒的异常&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" x="344" class="st5">慢&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" y="106.35" x="8" class="st5">性炎症&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="56" class="st4">有关。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="75.8" ed:height="41.8" transform="matrix(1,0,0,1,270.4,2796.1)" id="271" ed:parentid="101">
-&lt;path d="M4,0L71.8,0C74.5,0,75.8,1.3,75.8,4L75.8,37.8C75.8,40.5,74.5,41.8,71.8,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="38" y="29" x="18">主题&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="329.5" transform="matrix(1,0,0,1,495.8,259)" id="273" ed:parentid="108">
-&lt;path d="M0,329.5L370,329.5" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">3.慢阻肺的病理生理&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">慢阻肺特征性的病理生理变化：特续气流受限致肺&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="339" y="63.15" x="8" class="st4">通气功能障碍。随着病情的发展，(1)肺组织弹性&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="288" y="84.75" x="8" class="st4">日益减退，肺泡持续扩大，回缩障碍，则&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="296" class="st5">残气量&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" x="344" class="st4">及&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="339" y="106.35" x="8" class="st4">残气量占肺总量的百分比增加。(2)肺气肿加重导&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="127.95" x="8" class="st4">致大量肺泡周围的毛细血管受肺泡膨胀的挤压而退&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="149.55" x="8" class="st4">化，致使肺毛细血管大量减少，肺泡间的血流量减&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="171.15" x="8" class="st4">少，此时肺泡虽有通气，但肺泡壁无血液灌流，导&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" y="192.75" x="8" class="st4">致&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="80" x="24" class="st5">生理无效腔&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="256" x="104" class="st4">气量增大；也有部分肺区虽有血液灌&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="214.35" x="8" class="st4">流，但肺泡通气不良，不能参与气体交换，导致功&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="176" y="235.95" x="8" class="st4">能性分流增加，从而产生&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="112" x="184" class="st5">通气与血流比例&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="296" class="st4">失调。&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="339" y="257.55" x="8" class="st4">(3)同时，肺泡及毛细血管大量丧失，弥散面积减&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="279.15" x="8" class="st4">少，进而导致换气功能发生障碍。通气和换气功能&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="300.75" x="8" class="st4">障碍引起缺氧和二氧化碳潴留，可发生不同程度的&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="80" y="322.35" x="8" class="st4">低氧血症和&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="80" x="88" class="st5">高碳酸血症&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="160" x="168" class="st4">，最终出现呼吸衰竭。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="380.4" ed:height="113.5" transform="matrix(1,0,0,1,495.8,595)" id="285" ed:parentid="108">
-&lt;path d="M0,113.5L380.4,113.5" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">4.慢阻肺的病理生理&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">型呼吸衰竭即高碳酸血症性呼吸衰竭，血气分析特&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="279" y="63.15" x="8" class="st4">点是Pa02&amp;lt;60mmHg,同时伴有PaC02>&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="76" y="84.75" x="8" class="st5">50mmHg&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="288" x="82" class="st4">。系肺泡通气不足所致。慢性阻塞性肺疾&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="288" y="106.35" x="8" class="st4">病最易出现的呼吸衰竭为川型呼吸衰竭。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="91.90000000000001" transform="matrix(1,0,0,1,495.8,715)" id="287" ed:parentid="108">
-&lt;path d="M0,91.9L370,91.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">5.慢阻肺的病理生理&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">慢性阻塞性肺疾病所致型呼吸衰竭最主要的机制：&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="240" y="63.15" x="8" class="st4">持续气流受限致肺换气功能障碍，&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="104" x="248" class="st5">肺通气/血流比&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" y="84.75" x="8" class="st5">例&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="24" class="st4">失衡。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="156.7" transform="matrix(1,0,0,1,495.8,813.4)" id="289" ed:parentid="108">
-&lt;path d="M0,156.7L370,156.7" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">6.慢阻肺的临床表现&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">慢阻肺：起病缓慢，病程较长。主要症状包括：慢&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="63.15" x="8" class="st4">性咳嗽、咳痰、气短或呼吸困难、喘息和胸闷。体&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="84.75" x="8" class="st4">格检查：视诊胸廓前后径增大，肋间隙增宽，剑突&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="160" y="106.35" x="8" class="st4">下胸骨下角增宽，称为&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="168" class="st5">桶状胸&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="144" x="216" class="st4">；叩诊肺部过清音，&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="127.95" x="8" class="st4">心浊音界缩小，肺下界和肝浊音界下降；听诊部分&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="288" y="149.55" x="8" class="st4">患者可闻及湿性啰音和（或）干性啰音。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="383.6" ed:height="178.3" transform="matrix(1,0,0,1,495.8,976.6)" id="291" ed:parentid="108">
-&lt;path d="M0,178.3L383.6,178.3" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="157" y="19.95" x="8" class="st4">7.慢阻肺的治疗与预防&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="367" y="41.55" x="8" class="st4">COPD及慢性肺心病的患者，长时间CO2猪留能使中&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="224" y="63.15" x="8" class="st4">枢化学感受器对其刺激作用产生&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" x="232" class="st5">适应现象&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" x="296" class="st4">，而外周&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="84.75" x="8" class="st4">化学感受器则对低氧刺激的适应很慢，在这种情况&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="106.35" x="8" class="st4">下，低氧对外周化学感受器的刺激就成为驱动呼吸&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="127.95" x="8" class="st4">运动的主要刺激因素。此时若给予患者高浓度氧，&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="128" y="149.55" x="8" class="st4">则可能由于解除了&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="112" x="136" class="st5">低氧的刺激作用&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" x="248" class="st4">而引起呼吸抑&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="32" y="171.15" x="8" class="st4">制。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="75.8" ed:height="41.8" transform="matrix(1,0,0,1,270.4,2870.9)" id="293" ed:parentid="101">
-&lt;path d="M4,0L71.8,0C74.5,0,75.8,1.3,75.8,4L75.8,37.8C75.8,40.5,74.5,41.8,71.8,41.8L4,41.8C1.3,41.8,0,40.5,0,37.8L0,4C0,1.3,1.3,0,4,0z" stroke="#454545" stroke-linejoin="round" stroke-width="2" fill="#f9f9f9"/>
-&lt;text class="st2">
-&lt;tspan style="white-space:pre" textLength="38" y="29" x="18">主题&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="135.1" transform="matrix(1,0,0,1,495.8,1161.4)" id="295" ed:parentid="108">
-&lt;path d="M0,135.1L370,135.1" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">8.慢阻肺的辅助检查&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">肺功能检查：判断持续气流受限的主要客观指标，&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="63.15" x="8" class="st4">即诊断慢阻肺的客观指标。吸入支气管扩张剂后，&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="88" y="84.75" x="8" class="st4">FEV1/FVC&amp;lt;&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="35" x="96" class="st5">70%&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="224" x="130" class="st4">可确定为持续气流受限。肺总量&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="269" y="106.35" x="8" class="st4">(TLC)、功能残气量(FRC)和残气量(RV)&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" x="280" class="st5">增&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" y="127.95" x="8" class="st5">高&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" x="24" class="st4">，肺活量(VC)&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="32" x="121" class="st5">减低&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="144" x="153" class="st4">，表明肺过度充气。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="113.5" transform="matrix(1,0,0,1,495.8,1303)" id="297" ed:parentid="108">
-&lt;path d="M0,113.5L370,113.5" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="141" y="19.95" x="8" class="st4">9.慢阻肺的发病机制&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="192" y="41.55" x="8" class="st4">许多研究表明慢阻肺病人的&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" x="200" class="st5">氧化应激&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" x="264" class="st4">增加，激活转&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="329" y="63.15" x="8" class="st4">录因子NF-KB,参与多种炎症介质的转录，如IL-&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="10" y="84.75" x="8" class="st5">8&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="316" x="18" class="st4">、TNF-a以及诱导型一氧化氮合酶(NOS)和环&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="144" y="106.35" x="8" class="st4">氧合物酶等的转录。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="354" ed:height="70.3" transform="matrix(1,0,0,1,495.8,1423)" id="299" ed:parentid="108">
-&lt;path d="M0,70.3L354,70.3" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="166" y="19.95" x="8" class="st4">10.慢阻肺的治疗与预防&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" y="41.55" x="8" class="st4">慢阻肺治疗：&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="96" x="104" class="st5">支气管扩张剂&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="144" x="200" class="st4">是现有控制症状的主&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" y="63.15" x="8" class="st4">要措施。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="70.3" transform="matrix(1,0,0,1,495.8,1499.8)" id="301" ed:parentid="108">
-&lt;path d="M0,70.3L370,70.3" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="150" y="19.95" x="8" class="st4">11.慢阻肺的辅助检查&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">血气检查对确定发生低氧血症、高碳酸血症、酸碱&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="128" y="63.15" x="8" class="st4">平衡失调以及判断&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" x="136" class="st5">呼吸衰竭&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="144" x="200" class="st4">的类型有重要价值。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="243.1" transform="matrix(1,0,0,1,495.8,1576.6)" id="303" ed:parentid="108">
-&lt;path d="M0,243.1L370,243.1" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="86" y="19.95" x="8" class="st4">12.肺性脑病&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="120" y="41.55" x="8" class="st4">C0,潴留使脑脊液&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="25" x="128" class="st5">H+&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="176" x="153" class="st4">浓度增加，影响脑细胞代&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="63.15" x="8" class="st4">谢，降低脑细胞兴奋性，抑制皮质活动；但轻度的&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="349" y="84.75" x="8" class="st4">C02增加，对皮质下层刺激加强，可间接引起皮质&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="32" y="106.35" x="8" class="st5">兴奋&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="301" x="40" class="st4">。C02猪留可引起头痛、头晕、烦躁不安、&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="127.95" x="8" class="st4">言语不清、精神错乱、扑翼样震颤、嗜睡、昏迷、&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="80" y="149.55" x="8" class="st4">抽搐和呼吸&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="32" x="88" class="st5">抑制&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="216" x="120" class="st4">等表现，这种由缺氧和C0,猪留&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="224" y="171.15" x="8" class="st4">所致的神经精神障碍症候群称为&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="64" x="232" class="st5">肺性脑病&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="48" x="296" class="st4">，又称&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="328" y="192.75" x="8" class="st4">C0,麻醉。肺性脑病早期，患者往往有失眠、兴&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="214.35" x="8" class="st4">奋、烦躁不安等症状。除上述神经精神症状外，还&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="235.95" x="8" class="st4">可表现为木僵、视力障碍、球结膜水肿及发绀等。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;g ed:width="370" ed:height="91.90000000000001" transform="matrix(1,0,0,1,495.8,1826.2)" id="305" ed:parentid="108">
-&lt;path d="M0,91.9L370,91.9" stroke="#454545" stroke-linejoin="round" fill="none"/>
-&lt;text class="st3">
-&lt;tspan style="white-space:pre" textLength="166" y="19.95" x="8" class="st4">13.支气管炎的辅助检查&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="352" y="41.55" x="8" class="st4">慢性支气管炎，支气管黏膜活检最主要的炎症细胞&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="16" y="63.15" x="8" class="st4">是&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="80" x="24" class="st5">中性粒细胞&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="224" x="104" class="st4">，急性发作期可见大量中性粒细&lt;/tspan>
-&lt;tspan style="white-space:pre" textLength="320" y="84.75" x="8" class="st4">胞，严重者为化脓性炎症，黏膜充血、水肿。&lt;/tspan>
-&lt;/text>
-&lt;/g>
-&lt;/svg>
-&lt;/div>
-&lt;div id="copyright">Created With &lt;a href="https://www.edrawsoft.com/" target="_blank" title="edrawsoft">EdrawMind&lt;/a>&lt;/div>
-&lt;/div>
-&lt;/div>
-&lt;script>eval(atob('dmFyIG11YSA9IHdpbmRvdy5uYXZpZ2F0b3IudXNlckFnZW50Ow0KdmFyIHVhID0gKG11YS5pbmRleE9mKCdydjoxMScpICsgbXVhLmluZGV4T2YoJ01TSUUnKSkgPj0gMDsNCmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdzdmctY29udGFpbmVyJykub25jb250ZXh0bWVudSA9IGZ1bmN0aW9uIChldmVudCkgew0KICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7DQp9DQpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnc3ZnLWNvbnRhaW5lcicpLm9ubW91c2Vkb3duID0gZnVuY3Rpb24gKGV2ZW50KSB7DQogICAgaWYgKGV2ZW50LndoaWNoID09IDMpIHsNCiAgICAgICAgdGhpcy5zdHlsZS5jdXJzb3IgPSAncG9pbnRlcic7DQogICAgICAgIHRoaXMub25tb3VzZW1vdmUgPSBmdW5jdGlvbiAoZXYpIHsNCiAgICAgICAgICAgIHRoaXMuc2Nyb2xsQnkoLShldi5tb3ZlbWVudFgpLCAwKTsNCiAgICAgICAgICAgIHdpbmRvdy5zY3JvbGxCeSgwLCAtKGV2Lm1vdmVtZW50WSkpDQogICAgICAgIH0NCiAgICAgICAgdGhpcy5vbm1vdXNldXAgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmN1cnNvciA9IG51bGw7DQogICAgICAgICAgICB0aGlzLm9ubW91c2V1cCA9IG51bGw7DQogICAgICAgICAgICB0aGlzLm9ubW91c2Vtb3ZlID0gbnVsbDsNCiAgICAgICAgfQ0KICAgIH0NCn0NCk51bWJlci5wcm90b3R5cGUudG9zdWl0c3ZnID0gZnVuY3Rpb24gKCkgew0KICAgIHZhciBudW0gPSB0aGlzLnZhbHVlT2YoKTsNCiAgICBpZiAobnVtICUgMSA9PT0gMCkgew0KICAgICAgICByZXR1cm4gbnVtICsgMC41DQogICAgfSBlbHNlIHJldHVybiBudW07DQp9Ow0KTnVtYmVyLnByb3RvdHlwZS5wbHVzeiA9IGZ1bmN0aW9uICgpIHsNCiAgICB2YXIgbnVtID0gdGhpcy52YWx1ZU9mKCk7DQogICAgcmV0dXJuIG51bSA8IDEwID8gJzAnICsgbnVtIDogbnVtOw0KfTsNCmZ1bmN0aW9uIHBhcnNlRGF0ZShudW0pIHsNCiAgICB2YXIgZGF0ZSA9IG5ldyBEYXRlKG51bSk7DQogICAgdmFyIFkgPSBkYXRlLmdldEZ1bGxZZWFyKCkgKyAnLSc7DQogICAgdmFyIE0gPSAoZGF0ZS5nZXRNb250aCgpICsgMSkucGx1c3ooKSArICctJzsNCiAgICB2YXIgRCA9IGRhdGUuZ2V0RGF0ZSgpLnBsdXN6KCkgKyAnICc7DQogICAgdmFyIGggPSBkYXRlLmdldEhvdXJzKCkucGx1c3ooKSArICc6JzsNCiAgICB2YXIgbW0gPSBkYXRlLmdldE1pbnV0ZXMoKS5wbHVzeigpICsgJzonOw0KICAgIHZhciBzID0gZGF0ZS5nZXRTZWNvbmRzKCkucGx1c3ooKTsNCiAgICByZXR1cm4gWSArIE0gKyBEICsgaCArIG1tICsgczsNCn0NCi8vLS1wcmVkZWZpbmVkDQovL2NvbW1lbnQtLQ0KDQpmdW5jdGlvbiBnZXRjd2gocG9wdXApIHsNCiAgICBkb2N1bWVudC5ib2R5LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzdmcnKVswXS5hcHBlbmRDaGlsZChwb3B1cCk7DQogICAgdmFyIHcgPSBwb3B1cC5nZXRCb3VuZGluZ0NsaWVudFJlY3QoKS53aWR0aDsNCiAgICB2YXIgaCA9IHBvcHVwLmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpLmhlaWdodDsNCiAgICByZXR1cm4gW3csIGhdDQp9DQpzdmdFbGVtcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoInN2ZyIpOw0KZm9yIChsZXQgaW5kZXggPSAxOyBpbmRleCA8PSBzdmdFbGVtcy5sZW5ndGg7IGluZGV4KyspIHsNCiAgICAvLyB2YXIgY29tbWVudHMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdzdmc6bnRoLWNoaWxkKCcgKyBpbmRleCArICcpIGc+Z1tlZFxcOmNvbW1lbnRdJyk7DQogICAgdmFyIGNvbW1lbnRzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbChgc3ZnOm50aC1jaGlsZCgke2luZGV4fSkgZz5nW2VkXFw6Y29tbWVudF1gKTsNCiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGNvbW1lbnRzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgIHZhciBwb3B1cCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAnZycpOw0KICAgICAgICB2YXIgcG9wdXBSID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICdyZWN0Jyk7DQogICAgICAgIHZhciBob3ZlciA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAncmVjdCcpOw0KICAgICAgICB2YXIgb2xpbmUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ3JlY3QnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCdmaWxsJywgJyNjZGNkZmYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd4JywgJzAnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd5JywgJzAnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCdoZWlnaHQnLCAnMTYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd3aWR0aCcsICcxNicpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2ZpbGwtb3BhY2l0eScsICcwLjYnKTsNCiAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLCBjb21tZW50c1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpKTsNCiAgICAgICAgaG92ZXIuc3R5bGUuZGlzcGxheSA9ICdub25lJzsNCiAgICAgICAgY29tbWVudHNbaV0uYXBwZW5kQ2hpbGQoaG92ZXIpOw0KICAgICAgICB2YXIgYSA9IEpTT04ucGFyc2UoY29tbWVudHNbaV0uZ2V0QXR0cmlidXRlKCdlZDpjb21tZW50JykpOw0KICAgICAgICB2YXIgaGVpZ2h0ID0gMDsNCiAgICAgICAgdmFyIGNhcnIgPSBbXTsNCiAgICAgICAgZm9yICh2YXIgaiA9IDA7IGogPCBhLmxlbmd0aDsgaisrKSB7DQogICAgICAgICAgICB2YXIgc3RhbXAgPSBOdW1iZXIoYVtqXS5EYXRlKSAqIDEwMDA7DQogICAgICAgICAgICB2YXIgdGltZSA9IHBhcnNlRGF0ZShzdGFtcCk7DQogICAgICAgICAgICB2YXIgbmFtZSA9IGFbal0uTmFtZTsNCiAgICAgICAgICAgIHZhciBtZXNzYWdlID0gYVtqXS5NZXNzYWdlOw0KICAgICAgICAgICAgdmFyIG1lc3NhZ2VBcnIgPSBtZXNzYWdlLnNwbGl0KC9cbi8pOw0KICAgICAgICAgICAgdmFyIG8gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ2cnKTsNCiAgICAgICAgICAgIHZhciBuID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICd0ZXh0Jyk7DQogICAgICAgICAgICB2YXIgdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAndGV4dCcpOw0KICAgICAgICAgICAgdmFyIG0gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ3RleHQnKTsNCiAgICAgICAgICAgIG4uc2V0QXR0cmlidXRlKCd4JywgNSk7DQogICAgICAgICAgICBuLnNldEF0dHJpYnV0ZSgneScsIDEyKTsNCiAgICAgICAgICAgIG4uc2V0QXR0cmlidXRlKCdmaWxsJywgJyMwMDZlZmYnKTsNCiAgICAgICAgICAgIG4udGV4dENvbnRlbnQgPSBuYW1lICsgJzogJzsNCiAgICAgICAgICAgIG4uc2V0QXR0cmlidXRlKCdmb250LXNpemUnLCAnMTInKTsNCiAgICAgICAgICAgIHQuc2V0QXR0cmlidXRlKCd4JywgMjAwKTsNCiAgICAgICAgICAgIHQuc2V0QXR0cmlidXRlKCd5JywgMTIpOw0KICAgICAgICAgICAgdC5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCAnIzk2OTY5NicpOw0KICAgICAgICAgICAgdC50ZXh0Q29udGVudCA9IHRpbWU7DQogICAgICAgICAgICB0LnNldEF0dHJpYnV0ZSgnZm9udC1zaXplJywgJzEwJyk7DQogICAgICAgICAgICBtLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywgJ3RyYW5zbGF0ZSgyMCwyNyknKTsNCiAgICAgICAgICAgIG0uc2V0QXR0cmlidXRlKCdmb250LXNpemUnLCAnMTInKTsNCiAgICAgICAgICAgIGZvciAodmFyIGsgPSAwOyBrIDwgbWVzc2FnZUFyci5sZW5ndGg7IGsrKykgew0KICAgICAgICAgICAgICAgIHZhciB0cyA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAndHNwYW4nKTsNCiAgICAgICAgICAgICAgICB0cy5zZXRBdHRyaWJ1dGUoJ3gnLCAnMCcpOw0KICAgICAgICAgICAgICAgIHRzLnNldEF0dHJpYnV0ZSgneScsIGsgKiAxNik7DQogICAgICAgICAgICAgICAgdHMudGV4dENvbnRlbnQgPSBtZXNzYWdlQXJyW2tdOw0KICAgICAgICAgICAgICAgIG0uYXBwZW5kQ2hpbGQodHMpOw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgby5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsICd0cmFuc2xhdGUoMCwnICsgaGVpZ2h0ICsgJyknKTsNCiAgICAgICAgICAgIG8uYXBwZW5kQ2hpbGQobik7DQogICAgICAgICAgICBvLmFwcGVuZENoaWxkKHQpOw0KICAgICAgICAgICAgby5hcHBlbmRDaGlsZChtKTsNCiAgICAgICAgICAgIGNhcnIucHVzaChvKTsNCiAgICAgICAgICAgIHBvcHVwLmFwcGVuZENoaWxkKG8pOw0KICAgICAgICAgICAgaGVpZ2h0ID0gKG1lc3NhZ2VBcnIubGVuZ3RoICsgMSkgKiAxNiArIGhlaWdodDsNCiAgICAgICAgfQ0KICAgICAgICB2YXIgd2FyciA9IGdldGN3aChwb3B1cCk7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneCcsICcwJyk7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneScsICcwJyk7DQogICAgICAgIHZhciBvdyA9IHdhcnJbMF0gKyAxMC41Ow0KICAgICAgICB2YXIgb2ggPSB3YXJyWzFdICsgMzsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCd3aWR0aCcsIG93KTsNCiAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCdoZWlnaHQnLCBvaCk7DQogICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgnZmlsbCcsICd3aGl0ZScpOw0KICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3N0cm9rZScsICcjNjU2NTY1Jyk7DQogICAgICAgIHBvcHVwLmFwcGVuZENoaWxkKG9saW5lKTsNCiAgICAgICAgdmFyIGwgPSBjYXJyLmxlbmd0aDsNCiAgICAgICAgd2hpbGUgKGwtLSkgew0KICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQoY2FycltsXSk7DQogICAgICAgIH0NCiAgICAgICAgcG9wdXAub25tb3VzZW92ZXIgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOw0KICAgICAgICB9Ow0KICAgICAgICBwb3B1cC5vbm1vdXNlb3V0ID0gZnVuY3Rpb24gKCkgew0KICAgICAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICB9Ow0KICAgICAgICB2YXIgY3MgPSBjb21tZW50c1tpXS5xdWVyeVNlbGVjdG9yKCd1c2UnKS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpLm1hdGNoKC9cKChcUyp8XFMqXHNcUyopXCkvKVsxXS5zcGxpdCgvIHwsLyk7DQogICAgICAgIHZhciBwcyA9IGNvbW1lbnRzW2ldLnBhcmVudE5vZGUuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKTsNCiAgICAgICAgaWYgKHBzLnN1YnN0cigwLCAyKSA9PSAndHInKSB7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSkgKyBwYXJzZUZsb2F0KHBwc1swXSk7DQogICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQocHBzWzFdKTsNCiAgICAgICAgICAgIHggPSB4LnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgeSA9IHkudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB2YXIgdHJzdHIgPSAndHJhbnNsYXRlKCcgKyB4ICsgJywnICsgeSArICcpJzsNCiAgICAgICAgfQ0KICAgICAgICBlbHNlIGlmIChwcy5zdWJzdHIoMCwgMikgPT0gJ21hJykgew0KICAgICAgICAgICAgdmFyIHBwcyA9IHBzLm1hdGNoKC8oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pXCkkLyk7DQogICAgICAgICAgICB2YXIgbWFBcnIgPSBbcGFyc2VGbG9hdChwcHNbMV0pLCBwYXJzZUZsb2F0KHBwc1szXSksIHBhcnNlRmxvYXQocHBzWzVdKSwgcGFyc2VGbG9hdChwcHNbN10pLCBwYXJzZUZsb2F0KHBwc1s5XSksIHBhcnNlRmxvYXQocHBzWzExXSldOw0KICAgICAgICAgICAgaWYgKG1hQXJyWzFdID09IDApIHsNCiAgICAgICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pOw0KICAgICAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkgKyAxNjsNCiAgICAgICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICB4MSA9IHgxLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgIHkxID0geTEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gJ3RyYW5zbGF0ZSgnICsgeDEgKyAnLCcgKyB5MSArICcpJzsNCiAgICAgICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSArIDE2Ow0KICAgICAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkgKyAxNjsNCiAgICAgICAgICAgICAgICB2YXIgeDEgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICB4ID0gcGFyc2VGbG9hdChjc1swXSkgKyAxNjsNCiAgICAgICAgICAgICAgICB5ID0gcGFyc2VGbG9hdChjc1sxXSk7DQogICAgICAgICAgICAgICAgdmFyIHgyID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICAgICAgdmFyIHkyID0geCAqIG1hQXJyWzFdICsgeSAqIG1hQXJyWzNdICsgbWFBcnJbNV07DQogICAgICAgICAgICAgICAgdmFyIGZ4ID0geDEgPCB4MiA/IHgxLnRvc3VpdHN2ZygpIDogeDIudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgdmFyIGZ5ID0geTEgPiB5MiA/IHkxLnRvc3VpdHN2ZygpIDogeTIudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgdmFyIG9mZnkgPSBNYXRoLmFicyh5MSAtIHkyKTsNCiAgICAgICAgICAgICAgICB2YXIgdHJzdHIgPSAndHJhbnNsYXRlKCcgKyBmeCArICcsJyArIGZ5ICsgJyknOw0KICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsIG9mZnkudG9TdHJpbmcoKSk7DQogICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCAnMTYnKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCd5JywgKC1vZmZ5KS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCdmaWxsJywgJ3RyYW5zcGFyZW50Jyk7DQogICAgICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgICAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsIHRyc3RyKTsNCiAgICAgICAgcG9wdXAuc2V0QXR0cmlidXRlKCdjb21tZW50JywgJycpOw0KICAgICAgICBwb3B1cC5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICBsZXQgY29tbWVudGlkID0gY29tbWVudHNbaV0ucGFyZW50Tm9kZS5wYXJlbnROb2RlLmlkICsgIiwiICsgY29tbWVudHNbaV0ucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgcG9wdXAuc2V0QXR0cmlidXRlKCdlZDpjb21tZW50aWQnLCBjb21tZW50aWQpOw0KICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZzpudGgtY2hpbGQoJyArIGluZGV4ICsgJyknKS5hcHBlbmRDaGlsZChwb3B1cCk7DQogICAgICAgIGNvbW1lbnRzW2ldLm9ubW91c2VvdmVyID0gZnVuY3Rpb24gKCkgew0KICAgICAgICAgICAgLy8gdmFyIGNvbW1lbnRpZCA9IHRoaXMucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgICAgIHRoaXMucXVlcnlTZWxlY3RvcigncmVjdCcpLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOmNvbW1lbnRpZD0nIiArIGNvbW1lbnRpZCArICInXVtjb21tZW50XSIpLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOw0KICAgICAgICB9Ow0KICAgICAgICBjb21tZW50c1tpXS5vbm1vdXNlb3V0ID0gZnVuY3Rpb24gKCkgew0KICAgICAgICAgICAgLy8gdmFyIGNvbW1lbnRpZCA9IHRoaXMucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgICAgIC8vICAgICAgICB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlQWxsUmFuZ2VzKCk7DQogICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOmNvbW1lbnRpZD0nIiArIGNvbW1lbnRpZCArICInXVtjb21tZW50XSIpLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgIH0NCiAgICB9DQp9DQovLy0tY29tbWVudA0KLy9ub3RlLS0NCmlmICghdWEpIHsNCiAgICBmdW5jdGlvbiBnZXR3aChzLCBwKSB7DQogICAgICAgIHZhciBtYWlucCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOw0KICAgICAgICBtYWlucC5zdHlsZS5jc3NUZXh0ID0gczsNCiAgICAgICAgbWFpbnAuc3R5bGUuZGlzcGxheSA9ICdpbmxpbmUtYmxvY2snOw0KICAgICAgICBtYWlucC5zdHlsZS5tYXhXaWR0aCA9ICc0MDBweCc7DQogICAgICAgIG1haW5wLnN0eWxlLndvcmRCcmVhayA9ICdicmVhay1hbGwnOw0KICAgICAgICBtYWlucC5pbm5lckhUTUwgPSBwOw0KICAgICAgICBkb2N1bWVudC5ib2R5LmFwcGVuZENoaWxkKG1haW5wKTsNCiAgICAgICAgLy8gdmFyIHcgPSBtYWlucC5jbGllbnRXaWR0aDsNCiAgICAgICAgLy8gdmFyIGggPSBtYWlucC5jbGllbnRIZWlnaHQ7DQogICAgICAgIGxldCB7IHdpZHRoLGhlaWdodCB9ID0gbWFpbnAuZ2V0Qm91bmRpbmdDbGllbnRSZWN0KCk7DQogICAgICAgIHZhciB3ID0gTWF0aC5jZWlsKHdpZHRoKQ0KICAgICAgICB2YXIgaCA9IE1hdGguY2VpbChoZWlnaHQpDQogICAgICAgIGRvY3VtZW50LmJvZHkucmVtb3ZlQ2hpbGQobWFpbnApOw0KICAgICAgICByZXR1cm4gW3csIGhdDQogICAgfQ0KICAgIHN2Z0VsZW1zID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgic3ZnIik7DQogICAgZm9yIChsZXQgaW5kZXggPSAxOyBpbmRleCA8PSBzdmdFbGVtcy5sZW5ndGg7IGluZGV4KyspIHsNCiAgICAgICAgdmFyIG5vdGVzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgnc3ZnOm50aC1jaGlsZCgnICsgaW5kZXggKyAnKSBnPmdbZWRcXDpub3RlXScpOw0KICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IG5vdGVzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgYSA9IG5vdGVzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6bm90ZScpOw0KICAgICAgICAgICAgdmFyIG5vdGVMb2NrID0gbm90ZXNbaV0uZ2V0QXR0cmlidXRlKCdlZDpub3RlbG9jaycpOw0KICAgICAgICAgICAgaWYgKG5vdGVMb2NrID09ICd0cnVlJykgew0KICAgICAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgdmFyIG1haW5wID0gYS5tYXRjaCgvPGJvZHlbXj5dKj4oLiopPFwvYm9keT4vKVsxXTsNCiAgICAgICAgICAgIHZhciBtYWlucyA9IGEubWF0Y2goL3N0eWxlPSIoLio/KSIvKVsxXTsNCiAgICAgICAgICAgIHZhciBvdXQgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ2cnKTsNCiAgICAgICAgICAgIHZhciBvbGluZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAncmVjdCcpOw0KICAgICAgICAgICAgdmFyIHBvcHVwID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICdmb3JlaWduT2JqZWN0Jyk7DQogICAgICAgICAgICB2YXIgcG9wdXBSID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICdyZWN0Jyk7DQogICAgICAgICAgICB2YXIgaG92ZXIgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ3JlY3QnKTsNCiAgICAgICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbCcsICcjY2RjZGZmJyk7DQogICAgICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3gnLCAnMCcpOw0KICAgICAgICAgICAgaG92ZXIuc2V0QXR0cmlidXRlKCd5JywgJzAnKTsNCiAgICAgICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnaGVpZ2h0JywgJzE2Jyk7DQogICAgICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywgJzE2Jyk7DQogICAgICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2ZpbGwtb3BhY2l0eScsICcwLjYnKTsNCiAgICAgICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgndHJhbnNmb3JtJywgbm90ZXNbaV0ucXVlcnlTZWxlY3RvcigndXNlJykuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKSk7DQogICAgICAgICAgICBob3Zlci5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICAgICAgbm90ZXNbaV0uYXBwZW5kQ2hpbGQoaG92ZXIpOw0KICAgICAgICAgICAgcG9wdXAuc3R5bGUuY3NzVGV4dCA9IG1haW5zOw0KICAgICAgICAgICAgcG9wdXAuaW5uZXJIVE1MID0gbWFpbnA7DQogICAgICAgICAgICB2YXIgd2ggPSBnZXR3aChtYWlucywgbWFpbnApOw0KICAgICAgICAgICAgcG9wdXAuc2V0QXR0cmlidXRlKCd3aWR0aCcsIHdoWzBdKTsNCiAgICAgICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jywgd2hbMV0pOw0KICAgICAgICAgICAgcG9wdXAuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLCAndHJhbnNsYXRlKDgsNCknKTsNCiAgICAgICAgICAgIHBvcHVwLnN0eWxlLndvcmRCcmVhayA9ICdicmVhay1hbGwnOw0KICAgICAgICAgICAgcG9wdXAuc3R5bGUudGV4dEFsaWduID0gJ2xlZnQnOw0KICAgICAgICAgICAgb2xpbmUuc2V0QXR0cmlidXRlKCd4JywgJzAnKTsNCiAgICAgICAgICAgIG9saW5lLnNldEF0dHJpYnV0ZSgneScsICcwJyk7DQogICAgICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywgd2hbMF0gKyAxNik7DQogICAgICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsIHdoWzFdICsgOCk7DQogICAgICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ3N0cm9rZScsICcjYTI3YTAwJyk7DQogICAgICAgICAgICBvbGluZS5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCAnI2ZmZTc5ZCcpOw0KICAgICAgICAgICAgb3V0LmFwcGVuZENoaWxkKG9saW5lKTsNCiAgICAgICAgICAgIG91dC5hcHBlbmRDaGlsZChwb3B1cCk7DQogICAgICAgICAgICBvdXQuc2V0QXR0cmlidXRlKCdub3RlJywgJycpOw0KICAgICAgICAgICAgb3V0LnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgICAgICBsZXQgbm90ZWlkID0gbm90ZXNbaV0ucGFyZW50Tm9kZS5wYXJlbnROb2RlLmlkICsgIiwiICsgbm90ZXNbaV0ucGFyZW50Tm9kZS5pZDsNCiAgICAgICAgICAgIG91dC5zZXRBdHRyaWJ1dGUoJ2VkOm5vdGVpZCcsIG5vdGVpZCk7DQogICAgICAgICAgICBvdXQub25tb3VzZW92ZXIgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5ID0gJ2Jsb2NrJzsNCiAgICAgICAgICAgIH07DQogICAgICAgICAgICBvdXQub25tb3VzZW91dCA9IGZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgd2luZG93LmdldFNlbGVjdGlvbiA/IHdpbmRvdy5nZXRTZWxlY3Rpb24oKS5yZW1vdmVSYW5nZSh3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmUpOmRvY3VtZW50LnNlbGVjdGlvbi5lbXB0eSgpOw0KDQogICAgICAgICAgICAgICAgdGhpcy5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICAgICAgfTsNCiAgICAgICAgICAgIHZhciBjcyA9IG5vdGVzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgICAgIHZhciBwcyA9IG5vdGVzW2ldLnBhcmVudE5vZGUuZ2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nKTsNCiAgICAgICAgICAgIGlmIChwcy5zdWJzdHIoMCwgMikgPT0gJ3RyJykgew0KICAgICAgICAgICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgICAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSkgKyBwYXJzZUZsb2F0KHBwc1swXSk7DQogICAgICAgICAgICAgICAgdmFyIHkgPSBwYXJzZUZsb2F0KHBwc1sxXSk7DQogICAgICAgICAgICAgICAgeCA9IHgudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgeSA9IHkudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gJ3RyYW5zbGF0ZSgnICsgeCArICcsJyArIHkgKyAnKSc7DQogICAgICAgICAgICB9IGVsc2UgaWYgKHBzLnN1YnN0cigwLCAyKSA9PSAnbWEnKSB7DQogICAgICAgICAgICAgICAgdmFyIHBwcyA9IHBzLm1hdGNoKC8oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pW1wsIF0oXC0/XGQrKFwuXGQrKT8pXCkkLyk7DQogICAgICAgICAgICAgICAgdmFyIG1hQXJyID0gW3BhcnNlRmxvYXQocHBzWzFdKSwgcGFyc2VGbG9hdChwcHNbM10pLCBwYXJzZUZsb2F0KHBwc1s1XSksIHBhcnNlRmxvYXQocHBzWzddKSwgcGFyc2VGbG9hdChwcHNbOV0pLCBwYXJzZUZsb2F0KHBwc1sxMV0pXTsNCiAgICAgICAgICAgICAgICBpZiAobWFBcnJbMV0gPT0gMCkgew0KICAgICAgICAgICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pOw0KICAgICAgICAgICAgICAgICAgICB2YXIgeSA9IHBhcnNlRmxvYXQoY3NbMV0pICsgMTY7DQogICAgICAgICAgICAgICAgICAgIHZhciB4MSA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgICAgICB2YXIgeTEgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICAgICAgeDEgPSB4MS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICAgICAgeTEgPSB5MS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gJ3RyYW5zbGF0ZSgnICsgeDEgKyAnLCcgKyB5MSArICcpJzsNCiAgICAgICAgICAgICAgICB9IGVsc2Ugew0KICAgICAgICAgICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pICsgMTY7DQogICAgICAgICAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChjc1sxXSkgKyAxNjsNCiAgICAgICAgICAgICAgICAgICAgdmFyIHgxID0geCAqIG1hQXJyWzBdICsgeSAqIG1hQXJyWzJdICsgbWFBcnJbNF07DQogICAgICAgICAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgICAgICB4ID0gcGFyc2VGbG9hdChjc1swXSkgKyAxNjsNCiAgICAgICAgICAgICAgICAgICAgeSA9IHBhcnNlRmxvYXQoY3NbMV0pOw0KICAgICAgICAgICAgICAgICAgICB2YXIgeDIgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIHkyID0geCAqIG1hQXJyWzFdICsgeSAqIG1hQXJyWzNdICsgbWFBcnJbNV07DQogICAgICAgICAgICAgICAgICAgIHZhciBmeCA9IHgxIDwgeDIgPyB4MS50b3N1aXRzdmcoKSA6IHgyLnRvc3VpdHN2ZygpOw0KICAgICAgICAgICAgICAgICAgICB2YXIgZnkgPSB5MSA+IHkyID8geTEudG9zdWl0c3ZnKCkgOiB5Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIG9mZnkgPSBNYXRoLmFicyh5MSAtIHkyKTsNCiAgICAgICAgICAgICAgICAgICAgdmFyIHRyc3RyID0gJ3RyYW5zbGF0ZSgnICsgZnggKyAnLCcgKyBmeSArICcpJzsNCiAgICAgICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jywgb2ZmeS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnd2lkdGgnLCAnMTYnKTsNCiAgICAgICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgneScsICgtb2ZmeSkudG9TdHJpbmcoKSk7DQogICAgICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCAndHJhbnNwYXJlbnQnKTsNCiAgICAgICAgICAgICAgICAgICAgcG9wdXAuYXBwZW5kQ2hpbGQocG9wdXBSKTsNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvdXQuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLCB0cnN0cik7DQogICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcjc3ZnLWNvbnRhaW5lciA+IHN2ZzpudGgtY2hpbGQoJyArIGluZGV4ICsgJyknKS5hcHBlbmRDaGlsZChvdXQpOw0KICAgICAgICAgICAgbm90ZXNbaV0ub25tb3VzZW92ZXIgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICAgICAgLy8gdmFyIG5vdGVpZCA9IG5vdGVpZDsNCiAgICAgICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5ID0gJ2Jsb2NrJzsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bm90ZWlkPSciICsgbm90ZWlkICsgIiddW25vdGVdIikuc3R5bGUuZGlzcGxheSA9ICdibG9jayc7DQogICAgICAgICAgICB9Ow0KICAgICAgICAgICAgbm90ZXNbaV0ub25tb3VzZW91dCA9IGZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgICAgICAvLyB2YXIgbm90ZWlkID0gbm90ZWlkOw0KICAgICAgICAgICAgICAgIC8vICAgICAgICB3aW5kb3cuZ2V0U2VsZWN0aW9uKCkucmVtb3ZlQWxsUmFuZ2VzKCk7DQogICAgICAgICAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZGlzcGxheSA9ICdub25lJzsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6bm90ZWlkPSciICsgbm90ZWlkICsgIiddW25vdGVdIikuc3R5bGUuZGlzcGxheSA9ICdub25lJzsNCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCn0gZWxzZSB7DQogICAgY29uc29sZS5sb2coJ+aKseatie+8jElF5rWP6KeI5Zmo5LiN5pSv5oyBbm90Zeino+aekO+8jOivt+S9v+eUqOWFtuS7luWGheaguOa1j+iniOWZqOOAguiwouiwou+8gScpDQp9DQovLy0tbm90ZQ0KLy9oeXBlcmxpbmstLQ0KZnVuY3Rpb24gZ2V0bWF4bGVuKGFyciwgYnJyKSB7DQogICAgdmFyIGwgPSAwOw0KICAgIHZhciBsbCA9IDA7DQogICAgZm9yICh2YXIgaiA9IDA7IGogPCBhcnIubGVuZ3RoOyBqKyspIHsNCiAgICAgICAgdmFyIGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ3RleHQnKTsNCiAgICAgICAgaWYgKCFpc05hTihsaW5rYXJyW2pdKSkgew0KICAgICAgICAgICAgZS50ZXh0Q29udGVudCA9ICdQYWdlLScgKyBhcnJbal07DQogICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICBlLnRleHRDb250ZW50ID0gYXJyW2pdOw0KICAgICAgICB9DQogICAgICAgIGUuc3R5bGUuZm9udFNpemUgPSAnMTJweCc7DQogICAgICAgIGRvY3VtZW50LmJvZHkuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3N2ZycpWzBdLmFwcGVuZENoaWxkKGUpOw0KICAgICAgICB2YXIgZXcgPSBlLmdldEJCb3goKS53aWR0aDsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0ucmVtb3ZlQ2hpbGQoZSk7DQogICAgICAgIHZhciBoID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICd0ZXh0Jyk7DQogICAgICAgIGgudGV4dENvbnRlbnQgPSBicnJbal07DQogICAgICAgIGguc3R5bGUuZm9udFNpemUgPSAnMTJweCc7DQogICAgICAgIGguc3R5bGUuZm9udFdlaWdodCA9ICdib2xkJzsNCiAgICAgICAgZG9jdW1lbnQuYm9keS5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc3ZnJylbMF0uYXBwZW5kQ2hpbGQoaCk7DQogICAgICAgIHZhciBodyA9IGguZ2V0QkJveCgpLndpZHRoOw0KICAgICAgICBkb2N1bWVudC5ib2R5LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdzdmcnKVswXS5yZW1vdmVDaGlsZChoKTsNCiAgICAgICAgbCA9IGV3ID4gaHcgPyBldyA6IGh3Ow0KICAgICAgICBsbCA9IGwgPiBsbCA/IGwgOiBsbDsNCiAgICB9DQogICAgcmV0dXJuIGxsOw0KfQ0Kc3ZnRWxlbXMgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCJzdmciKTsNCmZvciAobGV0IGluZGV4ID0gMTsgaW5kZXggPD0gc3ZnRWxlbXMubGVuZ3RoOyBpbmRleCsrKSB7DQogICAgbGV0IHN2Z0VsZW0gPSBzdmdFbGVtc1tpbmRleF07DQogICAgbGV0IGxpbmtzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgic3ZnOm50aC1jaGlsZCgiICsgaW5kZXggKyAiKSBnPmdbZWRcXDpoeXBlcmxpbmtdIikNCiAgICBjb25zb2xlLmxvZyhsaW5rcyk7DQogICAgLy8gdmFyIGxpbmtzPWRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2c+Z1tlZFxcOmh5cGVybGlua10nKTsNCiAgICBmb3IgKHZhciBpID0gMDsgaSA8IGxpbmtzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgIHZhciBwb3B1cCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAnZycpOw0KICAgICAgICB2YXIgcG9wdXBSID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICdyZWN0Jyk7DQogICAgICAgIHZhciBob3ZlciA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAncmVjdCcpOw0KICAgICAgICB2YXIgZGVzY2FyciA9IFtdOw0KICAgICAgICB2YXIgbGlua2FyciA9IFtdOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCAnI2NkY2RmZicpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3gnLCAnMCcpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3knLCAnMCcpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsICcxNicpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywgJzE2Jyk7DQogICAgICAgIGhvdmVyLnNldEF0dHJpYnV0ZSgnZmlsbC1vcGFjaXR5JywgJzAuNicpOw0KICAgICAgICBob3Zlci5zZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScsIGxpbmtzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykpOw0KICAgICAgICBob3Zlci5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICBsaW5rc1tpXS5hcHBlbmRDaGlsZChob3Zlcik7DQogICAgICAgIC8vIGNvbnNvbGUubG9nKGxpbmtzW2ldLmdldEF0dHJpYnV0ZSgnZWQ6aHlwZXJsaW5rJykpOw0KICAgICAgICB2YXIgYSA9IEpTT04ucGFyc2UobGlua3NbaV0uZ2V0QXR0cmlidXRlKCdlZDpoeXBlcmxpbmsnKSk7DQogICAgICAgIHZhciBjcyA9IGxpbmtzW2ldLnF1ZXJ5U2VsZWN0b3IoJ3VzZScpLmdldEF0dHJpYnV0ZSgndHJhbnNmb3JtJykubWF0Y2goL1woKFxTKnxcUypcc1xTKilcKS8pWzFdLnNwbGl0KC8gfCwvKTsNCiAgICAgICAgdmFyIHBzID0gbGlua3NbaV0ucGFyZW50Tm9kZS5nZXRBdHRyaWJ1dGUoJ3RyYW5zZm9ybScpOw0KICAgICAgICBpZiAocHMuc3Vic3RyKDAsIDIpID09ICd0cicpIHsNCiAgICAgICAgICAgIHZhciBwcHMgPSBwcy5tYXRjaCgvXCgoXFMqfFxTKlxzXFMqKVwpLylbMV0uc3BsaXQoLyB8LC8pOw0KICAgICAgICAgICAgdmFyIHggPSBwYXJzZUZsb2F0KGNzWzBdKSArIHBhcnNlRmxvYXQocHBzWzBdKTsNCiAgICAgICAgICAgIHZhciB5ID0gcGFyc2VGbG9hdChwcHNbMV0pOw0KICAgICAgICAgICAgeCA9IHgudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICB5ID0geS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyArIHggKyAnLCcgKyB5ICsgJyknOw0KICAgICAgICB9IGVsc2UgaWYgKHBzLnN1YnN0cigwLCAyKSA9PSAnbWEnKSB7DQogICAgICAgICAgICB2YXIgcHBzID0gcHMubWF0Y2goLyhcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylbXCwgXShcLT9cZCsoXC5cZCspPylcKSQvKTsNCiAgICAgICAgICAgIHZhciBtYUFyciA9IFtwYXJzZUZsb2F0KHBwc1sxXSksIHBhcnNlRmxvYXQocHBzWzNdKSwgcGFyc2VGbG9hdChwcHNbNV0pLCBwYXJzZUZsb2F0KHBwc1s3XSksIHBhcnNlRmxvYXQocHBzWzldKSwgcGFyc2VGbG9hdChwcHNbMTFdKV07DQogICAgICAgICAgICBpZiAobWFBcnJbMV0gPT0gMCkgew0KICAgICAgICAgICAgICAgIHZhciB4ID0gcGFyc2VGbG9hdChjc1swXSk7DQogICAgICAgICAgICAgICAgdmFyIHkgPSBwYXJzZUZsb2F0KGNzWzFdKSArIDE2Ow0KICAgICAgICAgICAgICAgIHZhciB4MSA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHgxID0geDEudG9zdWl0c3ZnKCk7DQogICAgICAgICAgICAgICAgeTEgPSB5MS50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICB2YXIgdHJzdHIgPSAndHJhbnNsYXRlKCcgKyB4MSArICcsJyArIHkxICsgJyknOw0KICAgICAgICAgICAgfSBlbHNlIHsNCiAgICAgICAgICAgICAgICB2YXIgeCA9IHBhcnNlRmxvYXQoY3NbMF0pICsgMTY7DQogICAgICAgICAgICAgICAgdmFyIHkgPSBwYXJzZUZsb2F0KGNzWzFdKSArIDE2Ow0KICAgICAgICAgICAgICAgIHZhciB4MSA9IHggKiBtYUFyclswXSArIHkgKiBtYUFyclsyXSArIG1hQXJyWzRdOw0KICAgICAgICAgICAgICAgIHZhciB5MSA9IHggKiBtYUFyclsxXSArIHkgKiBtYUFyclszXSArIG1hQXJyWzVdOw0KICAgICAgICAgICAgICAgIHggPSBwYXJzZUZsb2F0KGNzWzBdKSArIDE2Ow0KICAgICAgICAgICAgICAgIHkgPSBwYXJzZUZsb2F0KGNzWzFdKTsNCiAgICAgICAgICAgICAgICB2YXIgeDIgPSB4ICogbWFBcnJbMF0gKyB5ICogbWFBcnJbMl0gKyBtYUFycls0XTsNCiAgICAgICAgICAgICAgICB2YXIgeTIgPSB4ICogbWFBcnJbMV0gKyB5ICogbWFBcnJbM10gKyBtYUFycls1XTsNCiAgICAgICAgICAgICAgICB2YXIgZnggPSB4MSA8IHgyID8geDEudG9zdWl0c3ZnKCkgOiB4Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICB2YXIgZnkgPSB5MSA+IHkyID8geTEudG9zdWl0c3ZnKCkgOiB5Mi50b3N1aXRzdmcoKTsNCiAgICAgICAgICAgICAgICB2YXIgb2ZmeSA9IE1hdGguYWJzKHkxIC0geTIpOw0KICAgICAgICAgICAgICAgIHZhciB0cnN0ciA9ICd0cmFuc2xhdGUoJyArIGZ4ICsgJywnICsgZnkgKyAnKSc7DQogICAgICAgICAgICAgICAgcG9wdXBSLnNldEF0dHJpYnV0ZSgnaGVpZ2h0Jywgb2ZmeS50b1N0cmluZygpKTsNCiAgICAgICAgICAgICAgICBwb3B1cFIuc2V0QXR0cmlidXRlKCd3aWR0aCcsICcxNicpOw0KICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ3knLCAoLW9mZnkpLnRvU3RyaW5nKCkpOw0KICAgICAgICAgICAgICAgIHBvcHVwUi5zZXRBdHRyaWJ1dGUoJ2ZpbGwnLCAndHJhbnNwYXJlbnQnKTsNCiAgICAgICAgICAgICAgICBwb3B1cC5hcHBlbmRDaGlsZChwb3B1cFIpOw0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgICAgIHZhciBhbCA9IGEubGVuZ3RoOw0KICAgICAgICBmb3IgKHZhciBqID0gMDsgaiA8IGFsOyBqKyspIHsNCiAgICAgICAgICAgIGxpbmthcnIucHVzaChhW2pdLmxpbmspOw0KICAgICAgICAgICAgZGVzY2Fyci5wdXNoKGFbal0uZGVzYyk7DQogICAgICAgIH0NCiAgICAgICAgcG9wdXAuc2V0QXR0cmlidXRlKCd0cmFuc2Zvcm0nLCB0cnN0cik7DQogICAgICAgIHZhciBtYXggPSBnZXRtYXhsZW4obGlua2FyciwgZGVzY2Fycik7DQogICAgICAgIGZvciAodmFyIGsgPSAwOyBrIDwgYWw7IGsrKykgew0KICAgICAgICAgICAgdmFyIGMgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ2EnKTsNCiAgICAgICAgICAgIHZhciBkID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudE5TKCdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZycsICdyZWN0Jyk7DQogICAgICAgICAgICB2YXIgZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnROUygnaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnLCAndGV4dCcpOw0KICAgICAgICAgICAgdmFyIGYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50TlMoJ2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJywgJ3RleHQnKTsNCiAgICAgICAgICAgIGlmIChpc05hTihsaW5rYXJyW2tdKSkgew0KICAgICAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiwgInhsaW5rIiwgImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiKTsNCiAgICAgICAgICAgICAgICBjLnNldEF0dHJpYnV0ZU5TKCJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiwgImhyZWYiLCBsaW5rYXJyW2tdKTsNCiAgICAgICAgICAgICAgICBjLnNldEF0dHJpYnV0ZSgndGFyZ2V0JywgJ19ibGFuaycpOw0KICAgICAgICAgICAgICAgIGUudGV4dENvbnRlbnQgPSBsaW5rYXJyW2tdOw0KICAgICAgICAgICAgfSBlbHNlIHsNCiAgICAgICAgICAgICAgICBlLnRleHRDb250ZW50ID0gJ1BhZ2UtJyArIGxpbmthcnJba107DQogICAgICAgICAgICAgICAgYy5zZXRBdHRyaWJ1dGVOUygiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciLCAieGxpbmsiLCAiaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIpOw0KICAgICAgICAgICAgICAgIGMuc2V0QXR0cmlidXRlTlMoImh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiLCAiaHJlZiIsICIjIiArIGxpbmthcnJba10pOw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ3dpZHRoJywgbWF4ICsgMTApOw0KICAgICAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ2hlaWdodCcsICczMycpOw0KICAgICAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ3N0cm9rZScsICcjOTk5OTk5Jyk7DQogICAgICAgICAgICBkLnNldEF0dHJpYnV0ZSgnZmlsbCcsICd3aGl0ZScpOw0KICAgICAgICAgICAgZC5zZXRBdHRyaWJ1dGUoJ3knLCAzMyAqIGspOw0KICAgICAgICAgICAgZi50ZXh0Q29udGVudCA9IGRlc2NhcnJba107DQogICAgICAgICAgICBmLnN0eWxlLmZvbnRTaXplID0gJzEycHgnOw0KICAgICAgICAgICAgZi5zdHlsZS5mb250V2VpZ2h0ID0gJ2JvbGQnOw0KICAgICAgICAgICAgZi5zZXRBdHRyaWJ1dGUoJ3gnLCA1KTsNCiAgICAgICAgICAgIGYuc2V0QXR0cmlidXRlKCd5JywgMzMgKiBrICsgMTIpOw0KICAgICAgICAgICAgZS5zdHlsZS5mb250U2l6ZSA9ICcxMnB4JzsNCiAgICAgICAgICAgIGUuc2V0QXR0cmlidXRlKCd5JywgMzMgKiBrICsgMjgpOw0KICAgICAgICAgICAgZS5zZXRBdHRyaWJ1dGUoJ3gnLCA1KTsNCiAgICAgICAgICAgIGMuYXBwZW5kQ2hpbGQoZCk7DQogICAgICAgICAgICBjLmFwcGVuZENoaWxkKGYpOw0KICAgICAgICAgICAgYy5hcHBlbmRDaGlsZChlKTsNCiAgICAgICAgICAgIGMub25tb3VzZW92ZXIgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICAgICAgdGhpcy5xdWVyeVNlbGVjdG9yKCdyZWN0Jykuc3R5bGUuZmlsbCA9ICcjZTFlMWZmJw0KICAgICAgICAgICAgfTsNCiAgICAgICAgICAgIGMub25tb3VzZW91dCA9IGZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5maWxsID0gJ3doaXRlJw0KICAgICAgICAgICAgfTsNCiAgICAgICAgICAgIHBvcHVwLmFwcGVuZENoaWxkKGMpOw0KICAgICAgICB9DQogICAgICAgIHBvcHVwLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgIHBvcHVwLnNldEF0dHJpYnV0ZSgnaHlwZXJsaW5rJywgJycpOw0KICAgICAgICBwb3B1cC5zZXRBdHRyaWJ1dGUoJ2VkOmxpbmtpZCcsIGxpbmtzW2ldLnBhcmVudE5vZGUucGFyZW50Tm9kZS5pZCArICIsIiArIGxpbmtzW2ldLnBhcmVudE5vZGUuaWQpOw0KICAgICAgICBwb3B1cC5vbm1vdXNlb3ZlciA9IGZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIHRoaXMuc3R5bGUuZGlzcGxheSA9ICdibG9jayc7DQogICAgICAgIH07DQogICAgICAgIHBvcHVwLm9uY2xpY2sgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgIH07DQogICAgICAgIHBvcHVwLm9ubW91c2VvdXQgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB0aGlzLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgIH07DQogICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoJyNzdmctY29udGFpbmVyID4gc3ZnOm50aC1jaGlsZCgnICsgaW5kZXggKyAnKScpLmFwcGVuZENoaWxkKHBvcHVwKTsNCiAgICAgICAgbGlua3NbaV0ub25tb3VzZW92ZXIgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgICAgICB2YXIgbGlua2lkID0gdGhpcy5wYXJlbnROb2RlLnBhcmVudE5vZGUuaWQgKyAiLCIgKyB0aGlzLnBhcmVudE5vZGUuaWQ7DQogICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5ID0gJ2Jsb2NrJzsNCiAgICAgICAgICAgIGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDpsaW5raWQ9JyIgKyBsaW5raWQgKyAiJ11baHlwZXJsaW5rXSIpLnN0eWxlLmRpc3BsYXkgPSAnYmxvY2snOw0KICAgICAgICAgICAgLy8gcG9wdXAuc3R5bGUuZGlzcGxheSA9ICdibG9jayc7DQogICAgICAgIH0NCiAgICAgICAgbGlua3NbaV0ub25tb3VzZW91dCA9IGZ1bmN0aW9uICgpIHsNCiAgICAgICAgICAgIC8vIHZhciBsaW5raWQgPSB0aGlzLnBhcmVudE5vZGUuaWQ7DQogICAgICAgICAgICB2YXIgbGlua2lkID0gdGhpcy5wYXJlbnROb2RlLnBhcmVudE5vZGUuaWQgKyAiLCIgKyB0aGlzLnBhcmVudE5vZGUuaWQ7DQogICAgICAgICAgICB0aGlzLnF1ZXJ5U2VsZWN0b3IoJ3JlY3QnKS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOw0KICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOmxpbmtpZD0nIiArIGxpbmtpZCArICInXVtoeXBlcmxpbmtdIikuc3R5bGUuZGlzcGxheSA9ICdub25lJzsNCiAgICAgICAgICAgIC8vIHBvcHVwLnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7DQogICAgICAgIH0NCiAgICB9DQp9DQoNCi8vLS1oeXBlcmxpbmsNCi8vaW5pdGlhbGl6ZS0tDQp2YXIgc2hhcGUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdnW2VkXFw6dG9ndG9waWNpZF0nKTsNCnZhciBtSWQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCdnW2VkXFw6dG9waWN0eXBlXScpOw0KdmFyIGRhdGFUcmVlID0ge307DQp2YXIgZXh0cmFSZWxhID0ge307DQp2YXIgY2hlY2tJRCA9ICcnOw0KZm9yICh2YXIgaSA9IDA7IGkgPCBtSWQubGVuZ3RoOyBpKyspIHsNCiAgICB2YXIgdHlwZSA9IG1JZFtpXS5nZXRBdHRyaWJ1dGUoJ2VkOnRvcGljdHlwZScpOw0KICAgIHZhciBzaWQgPSBtSWRbaV0uaWQ7DQogICAgaWYgKHR5cGUgIT09ICdjYWxsb3V0Jykgew0KICAgICAgICBpbml0KHNpZCwgZGF0YVRyZWUpDQogICAgfQ0KfQ0KZnVuY3Rpb24gaW5pdChpZCwgb2JqKSB7DQogICAgdmFyIGNoaWxkcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoImdbZWRcXDpwYXJlbnRpZD0nIiArIGlkICsgIiddOm5vdChbZWRcXDp0b3BpY3R5cGVdKSIpOw0KICAgIHZhciBjYWxscyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoImdbZWRcXDpwYXJlbnRpZD0nIiArIGlkICsgIiddW2VkXFw6dG9waWN0eXBlXSIpOw0KICAgIHZhciBzdW1tYXJ5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgicGF0aFtlZFxcOnBhcmVudGlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0nc3VtbWFyeSddIik7DQogICAgdmFyIGJvdW5kYXJ5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgicGF0aFtlZFxcOnBhcmVudGlkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0nYm91bmRhcnknXSIpOw0KICAgIHZhciByZWxhZnJvbSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoImdbZWRcXDpmcm9taWQqPSciICsgaWQgKyAiJ11bZWRcXDp0eXBlPSdyZWxhdGlvbiddIik7DQogICAgdmFyIHJlbGF0byA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoImdbZWRcXDp0b2lkKj0nIiArIGlkICsgIiddW2VkXFw6dHlwZT0ncmVsYXRpb24nXSIpOw0KICAgIG9ialsibSIgKyBpZF0gPSB7fTsNCiAgICB2YXIgdHlwZSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOnRvcGljdHlwZScpOw0KICAgIHZhciBpdyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5nZXRBdHRyaWJ1dGUoJ2VkOndpZHRoJyk7DQogICAgdmFyIGloID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaWQpLmdldEF0dHJpYnV0ZSgnZWQ6aGVpZ2h0Jyk7DQogICAgaWYgKHR5cGUpIHsNCiAgICAgICAgb2JqWyJtIiArIGlkXS50eXBlID0gdHlwZTsNCiAgICB9DQogICAgaWYgKGl3ICYmIGloKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0ud2lkdGggPSBpdzsNCiAgICAgICAgb2JqWyJtIiArIGlkXS5oZWlnaHQgPSBpaDsNCiAgICB9DQogICAgaWYgKHJlbGFmcm9tLmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLnJlbGFmcm9tID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgcmVsYWZyb20ubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBpbmRleGlkID0gcmVsYWZyb21baV0uaWQ7DQogICAgICAgICAgICB2YXIgdG9pZCA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGluZGV4aWQpLmdldEF0dHJpYnV0ZSgnZWQ6dG9pZCcpOw0KICAgICAgICAgICAgaWYgKGV4dHJhUmVsYVtpbmRleGlkXSA9PT0gdW5kZWZpbmVkKSB7DQogICAgICAgICAgICAgICAgZXh0cmFSZWxhW2luZGV4aWRdID0gew0KICAgICAgICAgICAgICAgICAgICBpZDogaW5kZXhpZCwNCiAgICAgICAgICAgICAgICAgICAgZnJvbWlkOiBpZCwNCiAgICAgICAgICAgICAgICAgICAgdG9pZDogdG9pZCwNCiAgICAgICAgICAgICAgICAgICAgaXNDOiBmYWxzZQ0KICAgICAgICAgICAgICAgIH07DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnJlbGFmcm9tW2luZGV4aWRdID0ge307DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnJlbGFmcm9tLmRpc3BsYXkgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnID8gJ2Jsb2NrJyA6ICdub25lJzsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZiAocmVsYXRvLmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLnJlbGF0byA9IHt9Ow0KICAgICAgICBmb3IgKHZhciBpID0gMDsgaSA8IHJlbGF0by5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgdmFyIGluZGV4aWQgPSByZWxhdG9baV0uaWQ7DQogICAgICAgICAgICB2YXIgZnJvbWlkID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoaW5kZXhpZCkuZ2V0QXR0cmlidXRlKCdlZDpmcm9taWQnKTsNCiAgICAgICAgICAgIGlmIChleHRyYVJlbGFbaW5kZXhpZF0gPT09IHVuZGVmaW5lZCkgew0KICAgICAgICAgICAgICAgIGV4dHJhUmVsYVtpbmRleGlkXSA9IHsNCiAgICAgICAgICAgICAgICAgICAgaWQ6IGluZGV4aWQsDQogICAgICAgICAgICAgICAgICAgIGZyb21pZDogZnJvbWlkLA0KICAgICAgICAgICAgICAgICAgICB0b2lkOiBpZCwNCiAgICAgICAgICAgICAgICAgICAgaXNDOiBmYWxzZQ0KICAgICAgICAgICAgICAgIH07DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnJlbGF0b1tpbmRleGlkXSA9IHt9Ow0KICAgICAgICAgICAgb2JqWyJtIiArIGlkXS5yZWxhdG8uZGlzcGxheSA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGlkKS5zdHlsZS5kaXNwbGF5ICE9PSAnbm9uZScgPyAnYmxvY2snIDogJ25vbmUnOw0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChjaGlsZHMubGVuZ3RoICE9PSAwKSB7DQogICAgICAgIG9ialsibSIgKyBpZF0uY2hpbGQgPSB7fTsNCiAgICAgICAgaWYgKGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKSkgew0KICAgICAgICAgICAgLy8gY29uc29sZS5sb2coZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIgKyBpZCArICInXSIpLmNoaWxkTm9kZXNbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykpOw0KICAgICAgICAgICAgdmFyIHRvZyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDp0b2d0b3BpY2lkPSciICsgaWQgKyAiJ10iKS5nZXRFbGVtZW50c0J5VGFnTmFtZSgndXNlJylbMF0uZ2V0QXR0cmlidXRlKCd4bGluazpocmVmJykuc2xpY2UoMSk7DQogICAgICAgICAgICBvYmpbIm0iICsgaWRdLnRvZ3R5cGUgPSB0b2c7DQogICAgICAgIH0NCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjaGlsZHMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPSBjaGlsZHNbaV0uaWQ7DQogICAgICAgICAgICBpbml0KGNpZCwgb2JqWyJtIiArIGlkXS5jaGlsZCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGNhbGxzLmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmNhbGwgPSB7fTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjYWxscy5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgdmFyIGNpZCA9IGNhbGxzW2ldLmlkOw0KICAgICAgICAgICAgaW5pdChjaWQsIG9ialsibSIgKyBpZF0uY2FsbCk7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKGJvdW5kYXJ5Lmxlbmd0aCAhPT0gMCkgew0KICAgICAgICBvYmpbIm0iICsgaWRdLmJvdW5kYXJ5ID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgYm91bmRhcnkubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBjaWQgPSBib3VuZGFyeVtpXS5pZDsNCiAgICAgICAgICAgIGluaXQoY2lkLCBvYmpbIm0iICsgaWRdLmJvdW5kYXJ5KTsNCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZiAoc3VtbWFyeS5sZW5ndGggIT09IDApIHsNCiAgICAgICAgb2JqWyJtIiArIGlkXS5zdW1tYXJ5ID0ge307DQogICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgc3VtbWFyeS5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgdmFyIGNpZCA9IHN1bW1hcnlbaV0uaWQ7DQogICAgICAgICAgICBpbml0KGNpZCwgb2JqWyJtIiArIGlkXS5zdW1tYXJ5KTsNCiAgICAgICAgfQ0KICAgIH0NCn0NCi8vLS1pbml0aWFsaXplDQovL3RvZ2dsZWRpc3BsYXktLQ0KdmFyIGNoYWluQXJyID0gW107DQpmdW5jdGlvbiBnZXRjaGFpbihpZCkgew0KICAgIGNoYWluQXJyLnVuc2hpZnQoJ20nICsgaWQpOw0KICAgIHZhciBwYXJlbnQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuZ2V0QXR0cmlidXRlKCdlZDpwYXJlbnRpZCcpOw0KICAgIGlmICghcGFyZW50KSB7DQogICAgICAgIHJldHVybjsNCiAgICB9DQogICAgaWYgKHBhcmVudC5tYXRjaCgvXCwvKSkgew0KICAgICAgICBwYXJlbnQgPSBwYXJlbnQubWF0Y2goL1xkKyg/PVwsKS8pWzBdDQogICAgfQ0KICAgIGdldGNoYWluKHBhcmVudCk7DQp9DQpmdW5jdGlvbiBnZXRvYmooaWQpIHsNCiAgICBjaGFpbkFyciA9IFtdOw0KICAgIGdldGNoYWluKGlkKTsNCiAgICB2YXIgbWFpbiA9IGNoYWluQXJyWzBdOw0KICAgIGlmIChjaGFpbkFyci5sZW5ndGggPiAxKSB7DQogICAgICAgIHZhciBvYmogPSBkYXRhVHJlZVttYWluXTsNCiAgICAgICAgLy8gY29uc29sZS5sb2coY2hhaW5BcnIpOw0KICAgICAgICBmb3IgKHZhciBpID0gMTsgaSA8IGNoYWluQXJyLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICB2YXIgYSA9IGNoYWluQXJyW2ldOw0KICAgICAgICAgICAgZm9yICh2YXIgaiA9IDA7IGogPCBPYmplY3Qua2V5cyhvYmopLmxlbmd0aDsgaisrKSB7DQogICAgICAgICAgICAgICAgdmFyIGNvYmogPSBvYmpbT2JqZWN0LmtleXMob2JqKVtqXV1bYV07DQogICAgICAgICAgICAgICAgaWYgKGNvYmopIHsNCiAgICAgICAgICAgICAgICAgICAgb2JqID0gY29iajsNCiAgICAgICAgICAgICAgICAgICAgY29udGludWUNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgIH0NCiAgICAgICAgcmV0dXJuIG9iag0KICAgIH0gZWxzZSB7DQogICAgICAgIHZhciBvYmogPSBkYXRhVHJlZVttYWluXTsNCiAgICAgICAgcmV0dXJuIG9iag0KICAgIH0NCg0KfQ0KZm9yICh2YXIgaSA9IDA7IGkgPCBzaGFwZS5sZW5ndGg7IGkrKykgew0KICAgIHNoYXBlW2ldLm9uY2xpY2sgPSBmdW5jdGlvbiAoKSB7DQogICAgICAgIHZhciBpZCA9IE51bWJlcih0aGlzLmdldEF0dHJpYnV0ZSgnZWQ6dG9ndG9waWNpZCcpKTsNCiAgICAgICAgdmFyIG9iaiA9IGdldG9iaihpZCk7DQoNCiAgICAgICAgdmFyIHR5cGUgPSBvYmoudG9ndHlwZSA9PT0gJ21pbnVzJyA/ICdwbHVzJyA6ICdtaW51cyc7DQogICAgICAgIHZhciBkaXNwbGF5ID0gb2JqLnRvZ3R5cGUgPT09ICdtaW51cycgPyAnbm9uZScgOiAnYmxvY2snOw0KICAgICAgICB0aGlzLmdldEVsZW1lbnRzQnlUYWdOYW1lKCd1c2UnKVswXS5zZXRBdHRyaWJ1dGUoJ3hsaW5rOmhyZWYnLCAnIycgKyB0eXBlKTsNCiAgICAgICAgb2JqLnRvZ3R5cGUgPSB0eXBlOw0KICAgICAgICBjaGVja0lEID0gb2JqOw0KDQogICAgICAgIHV0ZChvYmosIGlkLCBkaXNwbGF5KTsNCiAgICAgICAgZXh0cmFSZWxhRmluKCk7DQogICAgfQ0KfQ0KZnVuY3Rpb24gdXRkKG9iaiwgaWQsIHNob3csIG9jKSB7DQoNCiAgICB2YXIgcHNob3cgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChpZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnID8gJ2Jsb2NrJyA6ICdub25lJzsNCiAgICBpZiAob2JqLnJlbGFmcm9tKSB7DQogICAgICAgIGlmIChvYmoucmVsYWZyb20uZGlzcGxheSAhPT0gcHNob3cpIHsNCiAgICAgICAgICAgIHZhciByZWxhZnJvbXMgPSBPYmplY3Qua2V5cyhvYmoucmVsYWZyb20pOw0KICAgICAgICAgICAgcmVsYWZyb21zLnNwbGljZShyZWxhZnJvbXMuaW5kZXhPZignZGlzcGxheScpLCAxKTsNCiAgICAgICAgICAgIGZvciAodmFyIGsgPSAwOyBrIDwgcmVsYWZyb21zLmxlbmd0aDsgaysrKSB7DQogICAgICAgICAgICAgICAgdmFyIGQgPSByZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQyA9IHRydWU7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBvYmoucmVsYWZyb20uZGlzcGxheSA9IHBzaG93Ow0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChvYmoucmVsYXRvKSB7DQogICAgICAgIGlmIChvYmoucmVsYXRvLmRpc3BsYXkgIT09IHBzaG93KSB7DQogICAgICAgICAgICB2YXIgcmVsYXRvcyA9IE9iamVjdC5rZXlzKG9iai5yZWxhdG8pOw0KICAgICAgICAgICAgcmVsYXRvcy5zcGxpY2UocmVsYXRvcy5pbmRleE9mKCdkaXNwbGF5JyksIDEpOw0KICAgICAgICAgICAgZm9yICh2YXIgayA9IDA7IGsgPCByZWxhdG9zLmxlbmd0aDsgaysrKSB7DQogICAgICAgICAgICAgICAgdmFyIGQgPSByZWxhdG9zW2tdOw0KICAgICAgICAgICAgICAgIGV4dHJhUmVsYVtkXS5pc0MgPSB0cnVlOw0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgb2JqLnJlbGF0by5kaXNwbGF5ID0gcHNob3c7DQogICAgICAgIH0NCiAgICB9DQogICAgaWYgKG9iai5jYWxsKSB7DQogICAgICAgIHZhciBjYWxscyA9IE9iamVjdC5rZXlzKG9iai5jYWxsKTsNCiAgICAgICAgaWYgKGNoZWNrSUQgIT09IG9iaikgew0KICAgICAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjYWxscy5sZW5ndGg7IGkrKykgew0KICAgICAgICAgICAgICAgIHZhciBhID0gY2FsbHNbaV0uc2xpY2UoMSk7DQogICAgICAgICAgICAgICAgdmFyIGIgPSBvYmouY2FsbFtjYWxsc1tpXV07DQogICAgICAgICAgICAgICAgdmFyIGMgPSBiLnRvZ3R5cGU7DQogICAgICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYSkuc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgaWYgKGIucmVsYWZyb20gJiYgIWMpIHsNCiAgICAgICAgICAgICAgICAgICAgaWYgKGIucmVsYWZyb20uZGlzcGxheSAhPT0gc2hvdykgew0KICAgICAgICAgICAgICAgICAgICAgICAgdmFyIHJlbGFmcm9tcyA9IE9iamVjdC5rZXlzKGIucmVsYWZyb20pOw0KICAgICAgICAgICAgICAgICAgICAgICAgcmVsYWZyb21zLnNwbGljZShyZWxhZnJvbXMuaW5kZXhPZignZGlzcGxheScpLCAxKTsNCiAgICAgICAgICAgICAgICAgICAgICAgIGZvciAodmFyIGsgPSAwOyBrIDwgcmVsYWZyb21zLmxlbmd0aDsgaysrKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFyIGQgPSByZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQyA9IHRydWU7DQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICBiLnJlbGFmcm9tLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLnJlbGF0byAmJiAhYykgew0KICAgICAgICAgICAgICAgICAgICBpZiAoYi5yZWxhdG8uZGlzcGxheSAhPT0gc2hvdykgew0KICAgICAgICAgICAgICAgICAgICAgICAgdmFyIHJlbGF0b3MgPSBPYmplY3Qua2V5cyhiLnJlbGF0byk7DQogICAgICAgICAgICAgICAgICAgICAgICByZWxhdG9zLnNwbGljZShyZWxhdG9zLmluZGV4T2YoJ2Rpc3BsYXknKSwgMSk7DQogICAgICAgICAgICAgICAgICAgICAgICBmb3IgKHZhciBrID0gMDsgayA8IHJlbGF0b3MubGVuZ3RoOyBrKyspIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB2YXIgZCA9IHJlbGF0b3Nba107DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQyA9IHRydWU7DQogICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICBiLnJlbGF0by5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoYykgew0KICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIiArIGEgKyAiJ10iKS5zdHlsZS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICAgICAgaWYgKGMgPT09ICdtaW51cycpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLCBhLCBzaG93KQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgIGlmICgoYi5jYWxsIHx8IGIuYm91bmRhcnkgfHwgYi5zdW1tYXJ5KSAmJiBjID09PSAncGx1cycpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLCBhLCBzaG93LCB0cnVlKQ0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLmNhbGwgJiYgIWMpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsIGEsIHNob3csIHRydWUpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLnN1bW1hcnkgJiYgIWMpIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsIGEsIHNob3cpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChiLmJvdW5kYXJ5ICYmICFjKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLCBhLCBzaG93KQ0KICAgICAgICAgICAgICAgIH0NCg0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChvYmouc3VtbWFyeSkgew0KICAgICAgICB2YXIgc3VtbWFyeXMgPSBPYmplY3Qua2V5cyhvYmouc3VtbWFyeSk7DQogICAgICAgIGlmICgoY2hlY2tJRCAhPT0gb2JqICYmIChvYmoudG9ndHlwZSA9PT0gJ21pbnVzJyB8fCAhb2JqLnRvZ3R5cGUpKSB8fCBjaGVja0lEID09PSBvYmopIHsNCiAgICAgICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgc3VtbWFyeXMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgICAgICB2YXIgYSA9IHN1bW1hcnlzW2ldLnNsaWNlKDEpOw0KICAgICAgICAgICAgICAgIHZhciBvc3AgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5nZXRBdHRyaWJ1dGUoJ2VkOnBhcmVudGlkJyk7DQogICAgICAgICAgICAgICAgaWYgKG9zcC5tYXRjaCgvXCwvKSkgew0KICAgICAgICAgICAgICAgICAgICB2YXIgb3NwYSA9IG9zcC5zcGxpdCgnLCcpOw0KICAgICAgICAgICAgICAgICAgICB2YXIgb3NwTCA9IDA7DQoNCiAgICAgICAgICAgICAgICAgICAgZm9yICh2YXIgaiA9IDA7IGogPCBvc3BhLmxlbmd0aDsgaisrKSB7DQogICAgICAgICAgICAgICAgICAgICAgICBpZiAoc2hvdyA9PSAnbm9uZScpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiAoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQob3NwYVtqXSkuc3R5bGUuZGlzcGxheSAhPSAnbm9uZScpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYnJlYWs7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgfSBlbHNlIHsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb3NwTCsrOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgKGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpLnN0eWxlLmRpc3BsYXkgIT0gJ25vbmUnKSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGJyZWFrOw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gZWxzZSB7DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9zcEwrKzsNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgICAgICAgICB9DQoNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICBpZiAob3NwTCAhPT0gb3NwYS5sZW5ndGgpIHsNCiAgICAgICAgICAgICAgICAgICAgICAgIGNvbnRpbnVlOw0KICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIHZhciBiID0gb2JqLnN1bW1hcnlbc3VtbWFyeXNbaV1dOw0KICAgICAgICAgICAgICAgIC8vIGNvbnNvbGUubG9nKGEpOw0KICAgICAgICAgICAgICAgIGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGEpLnN0eWxlLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgIGlmKGMpew0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIithKyInXSIpLnN0eWxlLmRpc3BsYXk9c2hvdzsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgaWYoYz09PSdtaW51cycpew0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdykNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICBpZiAoYi5jYWxsJiZjPT09J3BsdXMnKSB7DQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgaWYoYi5jYWxsJiYhYykgew0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICB1dGQoYixzaG93LHRydWUpDQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIGlmIChPYmplY3Qua2V5cyhiKS5sZW5ndGggIT09IDApIHsNCiAgICAgICAgICAgICAgICAgICAgdXRkKGIsIGEsIHNob3cpDQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgfQ0KICAgIGlmIChvYmouYm91bmRhcnkpIHsNCiAgICAgICAgdmFyIGJvdW5kYXJ5cyA9IE9iamVjdC5rZXlzKG9iai5ib3VuZGFyeSk7DQogICAgICAgIGlmIChjaGVja0lEICE9PSBvYmopIHsNCiAgICAgICAgICAgIGZvciAodmFyIGkgPSAwOyBpIDwgYm91bmRhcnlzLmxlbmd0aDsgaSsrKSB7DQogICAgICAgICAgICAgICAgdmFyIGEgPSBib3VuZGFyeXNbaV0uc2xpY2UoMSk7DQogICAgICAgICAgICAgICAgdmFyIGIgPSBvYmouYm91bmRhcnlbYm91bmRhcnlzW2ldXTsNCiAgICAgICAgICAgICAgICAvLyBjb25zb2xlLmxvZyhhKTsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5nZXRFbGVtZW50QnlJZChhKS5zdHlsZS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICBpZihjKXsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiZ1tlZFxcOnRvZ3RvcGljaWQ9JyIrYSsiJ10iKS5zdHlsZS5kaXNwbGF5PXNob3c7DQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgICAgIGlmKGM9PT0nbWludXMnKXsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgICAgIHV0ZChiLHNob3cpDQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgaWYgKGIuY2FsbCYmYz09PSdwbHVzJykgew0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgLy8gICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgIGlmKGIuY2FsbCYmIWMpIHsNCiAgICAgICAgICAgICAgICAvLyAgICAgICAgICAgICAgICAgICAgdXRkKGIsc2hvdyx0cnVlKQ0KICAgICAgICAgICAgICAgIC8vICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICBpZiAoT2JqZWN0LmtleXMoYikubGVuZ3RoICE9PSAwKSB7DQogICAgICAgICAgICAgICAgICAgIHV0ZChiLCBhLCBzaG93KQ0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgfQ0KICAgIH0NCiAgICBpZiAoIW9jICYmIG9iai5jaGlsZCkgew0KICAgICAgICB2YXIgY2hpbGRzID0gT2JqZWN0LmtleXMob2JqLmNoaWxkKTsNCiAgICAgICAgZm9yICh2YXIgaSA9IDA7IGkgPCBjaGlsZHMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgICAgIHZhciBhID0gY2hpbGRzW2ldLnNsaWNlKDEpOw0KICAgICAgICAgICAgdmFyIGIgPSBvYmouY2hpbGRbY2hpbGRzW2ldXTsNCiAgICAgICAgICAgIHZhciBjID0gYi50b2d0eXBlOw0KICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYSkuc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICB2YXIgdFNQYXRoID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigicGF0aFtlZFxcOnRvc3VwZXJpZD0nIiArIGEgKyAiJ10iKTsNCiAgICAgICAgICAgIGlmICh0U1BhdGgpIHsNCiAgICAgICAgICAgICAgICB0U1BhdGguc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICB9DQogICAgICAgICAgICB2YXIgbm90ZVRpcCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoImdbZWRcXDpub3RldG89JyIgKyBhICsgIiddIik7DQogICAgICAgICAgICBpZiAobm90ZVRpcCkgew0KICAgICAgICAgICAgICAgIG5vdGVUaXAuc3R5bGUuZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5yZWxhZnJvbSAmJiAhYykgew0KICAgICAgICAgICAgICAgIGlmIChiLnJlbGFmcm9tLmRpc3BsYXkgIT09IHNob3cpIHsNCiAgICAgICAgICAgICAgICAgICAgdmFyIHJlbGFmcm9tcyA9IE9iamVjdC5rZXlzKGIucmVsYWZyb20pOw0KICAgICAgICAgICAgICAgICAgICByZWxhZnJvbXMuc3BsaWNlKHJlbGFmcm9tcy5pbmRleE9mKCdkaXNwbGF5JyksIDEpOw0KICAgICAgICAgICAgICAgICAgICBmb3IgKHZhciBrID0gMDsgayA8IHJlbGFmcm9tcy5sZW5ndGg7IGsrKykgew0KICAgICAgICAgICAgICAgICAgICAgICAgdmFyIGQgPSByZWxhZnJvbXNba107DQogICAgICAgICAgICAgICAgICAgICAgICBleHRyYVJlbGFbZF0uaXNDID0gdHJ1ZTsNCiAgICAgICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgICAgICAgICBiLnJlbGFmcm9tLmRpc3BsYXkgPSBzaG93Ow0KICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgIH0NCiAgICAgICAgICAgIGlmIChiLnJlbGF0byAmJiAhYykgew0KICAgICAgICAgICAgICAgIGlmIChiLnJlbGF0by5kaXNwbGF5ICE9PSBzaG93KSB7DQogICAgICAgICAgICAgICAgICAgIHZhciByZWxhdG9zID0gT2JqZWN0LmtleXMoYi5yZWxhdG8pOw0KICAgICAgICAgICAgICAgICAgICByZWxhdG9zLnNwbGljZShyZWxhdG9zLmluZGV4T2YoJ2Rpc3BsYXknKSwgMSk7DQogICAgICAgICAgICAgICAgICAgIGZvciAodmFyIGsgPSAwOyBrIDwgcmVsYXRvcy5sZW5ndGg7IGsrKykgew0KICAgICAgICAgICAgICAgICAgICAgICAgdmFyIGQgPSByZWxhdG9zW2tdOw0KICAgICAgICAgICAgICAgICAgICAgICAgZXh0cmFSZWxhW2RdLmlzQyA9IHRydWU7DQogICAgICAgICAgICAgICAgICAgIH0NCiAgICAgICAgICAgICAgICAgICAgYi5yZWxhdG8uZGlzcGxheSA9IHNob3c7DQogICAgICAgICAgICAgICAgfQ0KICAgICAgICAgICAgfQ0KICAgICAgICAgICAgaWYgKGMpIHsNCiAgICAgICAgICAgICAgICBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCJnW2VkXFw6dG9ndG9waWNpZD0nIiArIGEgKyAiJ10iKS5zdHlsZS5kaXNwbGF5ID0gc2hvdzsNCiAgICAgICAgICAgICAgICBpZiAoYyA9PT0gJ21pbnVzJykgew0KICAgICAgICAgICAgICAgICAgICB1dGQoYiwgYSwgc2hvdykNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICAgICAgaWYgKChiLmNhbGwgfHwgYi5ib3VuZGFyeSB8fCBiLnN1bW1hcnkpICYmIGMgPT09ICdwbHVzJykgew0KICAgICAgICAgICAgICAgICAgICB1dGQoYiwgYSwgc2hvdywgdHJ1ZSkNCiAgICAgICAgICAgICAgICB9DQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5jYWxsICYmICFjKSB7DQogICAgICAgICAgICAgICAgdXRkKGIsIGEsIHNob3csIHRydWUpDQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5zdW1tYXJ5ICYmICFjKSB7DQogICAgICAgICAgICAgICAgdXRkKGIsIGEsIHNob3cpDQogICAgICAgICAgICB9DQogICAgICAgICAgICBpZiAoYi5ib3VuZGFyeSAmJiAhYykgew0KICAgICAgICAgICAgICAgIHV0ZChiLCBhLCBzaG93KQ0KICAgICAgICAgICAgfQ0KICAgICAgICB9DQogICAgfQ0KfQ0KDQpmdW5jdGlvbiBleHRyYVJlbGFGaW4oKSB7DQogICAgdmFyIGV4dHJha2V5cyA9IE9iamVjdC5rZXlzKGV4dHJhUmVsYSk7DQogICAgZm9yICh2YXIgaSA9IDA7IGkgPCBleHRyYWtleXMubGVuZ3RoOyBpKyspIHsNCiAgICAgICAgdmFyIGV4dHJhT2JqID0gZXh0cmFSZWxhW2V4dHJha2V5c1tpXV07DQogICAgICAgIGlmIChleHRyYU9iai5pc0MgPT09IHRydWUpIHsNCiAgICAgICAgICAgIHZhciBmc2hvdyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGV4dHJhT2JqLmZyb21pZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnID8gdHJ1ZSA6IGZhbHNlOw0KICAgICAgICAgICAgdmFyIHRzaG93ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZXh0cmFPYmoudG9pZCkuc3R5bGUuZGlzcGxheSAhPT0gJ25vbmUnID8gdHJ1ZSA6IGZhbHNlOw0KICAgICAgICAgICAgZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoZXh0cmFPYmouaWQpLnN0eWxlLmRpc3BsYXkgPSBmc2hvdyAmJiB0c2hvdyA/ICdibG9jaycgOiAnbm9uZSc7DQogICAgICAgICAgICBleHRyYVJlbGFbZXh0cmFrZXlzW2ldXS5pc0MgPSBmYWxzZTsNCiAgICAgICAgfQ0KICAgIH0NCn0='))&lt;/script>
-&lt;/body>
-&lt;/html></description></item><item><title>acme.sh 申请证书</title><link>https://xiaoxiano.github.io/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
+&lt;/details></description></item><item><title>acme.sh 申请证书</title><link>https://xiaoxiano.github.io/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
 >Internet Security Research Group（ISRG）&lt;/a>提供的服务。&lt;/p>
 &lt;p>acme.sh 则是实现了 acme 协议, 可以从 letsencrypt 生成免费的证书。&lt;/p>
 &lt;ul>
@@ -2574,17 +1965,24 @@ data-flex-basis="276px"
 &lt;p>国内quest2用户应该已经具备上外网的条件，不再赘述。&lt;/p>
 &lt;p>quest2需要&lt;strong>无线网络链接&lt;/strong>，解决网络问题一般有以下方式：&lt;/p>
 &lt;ol>
+&lt;li>软路由openwrt&lt;/li>
+&lt;/ol>
+&lt;ul>
 &lt;li>刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。&lt;/li>
+&lt;li>电脑开个VMware虚拟机安装OpenWrt,有点麻烦。&lt;a class="link" href="https://blog.51cto.com/linhong/5732213" target="_blank" rel="noopener"
+>参考文章&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
 &lt;li>电脑热点，下文介绍。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>下面介绍通用的sstap方法。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>sstap方法(推荐)&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>打开科学上网，允许局域网连接。&lt;/p>
+&lt;p>打开科学上网，注意用全局模式并且允许局域网连接。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://github.com/solikethis/SSTap-backup" target="_blank" rel="noopener"
->下载sstap&lt;/a>，我使用的1.1.0.1版本。&lt;/p>
+>下载sstap&lt;/a>，我使用的1.0.9.9版本。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>配置并打开sstap
@@ -2612,8 +2010,8 @@ data-flex-basis="355px"
 &lt;/li>
 &lt;/ol>
 &lt;hr>
-&lt;p>clash方法&lt;/p>
-&lt;p>如果你安装了clash，并且有&lt;strong>网线&lt;/strong>连接电脑，clash TUN模式开热点应该也可以。&lt;/p>
+&lt;p>&lt;strong>TUN模式方法&lt;/strong>&lt;/p>
+&lt;p>如果你的电脑同时&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
 &lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
 &lt;ol>
 &lt;li>
@@ -3007,29 +2405,31 @@ data-flex-basis="319px"
 &lt;/ul>
 &lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;ol>
-&lt;li>
-&lt;p>配置 JDK、安装配置Android Studio&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>flutter(windows)
+&lt;li>安装 JDK&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#java8-windows" target="_blank" rel="noopener"
+>下载地址&lt;/a>&lt;/p>
+&lt;ol start="2">
+&lt;li>安装配置Android Studio&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://docs.flutter.dev/release/archive?tab=windows#windows" target="_blank" rel="noopener"
+>下载地址&lt;/a>&lt;/p>
+&lt;ol start="3">
+&lt;li>flutter(windows)
 &lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/p>
-&lt;/li>
+>flutter安装&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>安装遇坑&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">//配置build.gradle(project:android)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="更新">更新&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>配置环境变量path&lt;/li>
+&lt;/ol>
+&lt;p>Dart: 无需配置，flutter现在自带dart。&lt;/p>
+&lt;p>Flutter: C:\flutter\bin&lt;/p>
+&lt;p>Java: C:\Program Files\Java\jdk1.8.0_281\bin&lt;/p>
+&lt;p>Android SDK Tools:C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
+&lt;p>Android SDK Platform-Tools:C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
+&lt;h1 id="更新">更新&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
@@ -3069,7 +2469,40 @@ class="gallery-image"
 data-flex-grow="178"
 data-flex-basis="427px"
 >&lt;/p>
-&lt;h1 id="dart">dart&lt;/h1>
+&lt;h1 id="故障排除">故障排除&lt;/h1>
+&lt;h2 id="配置">配置&lt;/h2>
+&lt;ul>
+&lt;li>配置build.gradle(project:android)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">allprojects {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;ul>
+&lt;li>更新flutter&lt;/li>
+&lt;li>更新Android Studio&lt;/li>
+&lt;li>重新建项目&lt;/li>
+&lt;li>\android\app\build.gradle&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">compileSdkVersion 33
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">minSdkVersion 21
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>\android\app\src\main\AndroidManifest.xml&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">manifest&lt;/span> &lt;span class="na">xmlns:android&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">xmlns:tools&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">package&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;com.example.flutter_ocr2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">application&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">tools:replace&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android:label&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;flutter_ocr2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;${applicationName}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@mipmap/ic_launcher&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">activity&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
@@ -3101,7 +2534,6 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String 字符串
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">bool 布尔类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">List 集合类型
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Set 无序集合
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Map 字典型
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="不常用类型">不常用类型&lt;/h3>
 &lt;ul>
@@ -3249,8 +2681,14 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;h2 id="类">类&lt;/h2>
 &lt;h3 id="方法">方法&lt;/h3>
-&lt;h4 id="实例方法">实例方法&lt;/h4>
-&lt;p>实例方法可以访问实例变量和 this&lt;/p>
+&lt;h4 id="实例变量和方法">实例变量和方法&lt;/h4>
+&lt;p>实例变量:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double? x; // Declare instance variable x, initially null.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double? y; // Declare y, initially null.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double z = 0; // Declare z, initially 0.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>实例方法可以访问实例变量和 this&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:math&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class Point {
@@ -3265,8 +2703,14 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return sqrt(dx * dx + dy * dy);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h5 id="get-和-set">get 和 set&lt;/h5>
-&lt;p>特殊方法:实例对象的每一个属性都有一个隐式的 Getter 方法，非 final 属性还会有一个 Setter 方法&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="静态变量和方法">静态变量和方法&lt;/h4>
+&lt;p>使用关键字 static 可以声明类变量或类方法。静态成员可以通过类名称直接访问（不需要实例化），提高性能。静态方法不能访问非静态成员，非静态方法可以访问静态成员，不能使用this关键字。&lt;/p>
+&lt;h4 id="get-和-set">get 和 set&lt;/h4>
+&lt;ul>
+&lt;li>特殊方法:实例对象的每一个属性都有一个隐式的 Getter 方法，非 final 属性还会有一个 Setter 方法。&lt;/li>
+&lt;li>通过get和set修饰的方法不带小括号，可以使访问方法像访问属性一样，简便我们的使用。访问&lt;/li>
+&lt;li>set：传入属性，get：访问属性。&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Rectangle {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> double left, top, width, height;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -3334,12 +2778,13 @@ data-flex-basis="427px"
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 命名构造函数
 &lt;/div>
+&lt;p>命名构造函数(类名.函数名)可以实现多个构造器。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Point {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> num x, y;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 命名构造函数，新增代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 命名构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point.origin() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x = 0;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y = 0;
@@ -3397,7 +2842,18 @@ data-flex-basis="427px"
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 初始化列表
 &lt;/div>
-&lt;p>初始化列表的执行顺序，在整个构造函数的最前面，它除了可以调用父类的构造函数，还可以在构造函数方法体之前，初始化一些成员变量。&lt;/p>
+&lt;p>在构造函数后加上&lt;code>: x = , y = &lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>可以在构造函数中设置属性的默认值&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在构造函数体执行之前执行&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>可以调用父类的构造函数&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// Initializer list sets instance variables before
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// the constructor body runs.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Point.fromJson(Map&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">num&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> json)
@@ -3454,9 +2910,20 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你的类，创建的对象永远不会改变，你可以在编译期就创建这个常量实例，并且定义一个常量构造函数，并且确保所有的成员变量都是final的。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
-工厂构造函数
+工厂构造函数/单例模式
 &lt;/div>
-&lt;p>有时候可能有一种需求，并不需要每次都创建新的类实例，而是每一种情况，只需要一个实例：&lt;/p>
+&lt;p>在构造函数前加上&lt;code>factory&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>只实例化一次，节省相同实例化带来的消耗&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>第一次调用命名构造函数进入工厂函数中实例化，后续调用就用缓存中现成的实例&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>工厂构造函数，没有权利访问this&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Logger {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final String name;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> bool mute = false;
@@ -3476,7 +2943,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name); # 定义构造函数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Logger._internal(this.name); # 定义命名构造函数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void log(String msg) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (!mute) print(msg);
@@ -3487,15 +2954,12 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var logger = Logger(&amp;#39;UI&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> logger.log(&amp;#39;Button clicked&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>工厂构造函数，没有权利访问this&lt;/p>
-&lt;/blockquote>
-&lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
 &lt;p>如此这般，我们可以创建名字为UI / SYS / API 等的实例，然后在debug的时候，如果设置名字为UI的Logger实例的mute为true，就不会打印UI相关的log，而不影响其它两个名字的log。&lt;/p>
 &lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -3509,12 +2973,12 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -6158,9 +5622,6 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">InfoTip=分类名称
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另存为，保存类型：所有文件，编码：ANSI&lt;/p>
 &lt;ol start="2">
-&lt;li>
-&lt;p>设置 desktop.ini属性为隐藏&lt;/p>
-&lt;/li>
 &lt;li>
 &lt;p>生效：文件夹属性 -&amp;gt; 自定义 -&amp;gt; 更改图标 -&amp;gt; 还原默认值&lt;/p>
 &lt;/li>
