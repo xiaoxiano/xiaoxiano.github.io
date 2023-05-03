@@ -2740,7 +2740,7 @@ data-flex-basis="427px"
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 特点：
 &lt;/div>
-&lt;ol>
+&lt;ul>
 &lt;li>
 &lt;p>实例化类时会被自动触发&lt;/p>
 &lt;/li>
@@ -2750,7 +2750,7 @@ data-flex-basis="427px"
 &lt;li>
 &lt;p>没有返回值&lt;/p>
 &lt;/li>
-&lt;/ol>
+&lt;/ul>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 普通构造函数
@@ -2837,7 +2837,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // in Person
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // in Employee
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>初始化列表就是构造函数名的冒号后面，打括号前面的部分。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 初始化列表
@@ -2851,7 +2851,7 @@ data-flex-basis="427px"
 &lt;p>在构造函数体执行之前执行&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>可以调用父类的构造函数&lt;/p>
+&lt;p>可以调用超类的构造函数&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// Initializer list sets instance variables before
@@ -2955,11 +2955,98 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> logger.log(&amp;#39;Button clicked&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上例的意思是，类中又一个静态缓存&lt;code>_cache&lt;/code>保存着一些Logger类实例，创建实例时，给工厂构造函数传递的name，如果在缓存中已经存在，就用缓存中现成的实例，如果没有，就新建一个实例，并且也放到缓存中。&lt;/p>
-&lt;p>如此这般，我们可以创建名字为UI / SYS / API 等的实例，然后在debug的时候，如果设置名字为UI的Logger实例的mute为true，就不会打印UI相关的log，而不影响其它两个名字的log。&lt;/p>
-&lt;h3 id="扩展">扩展&lt;/h3>
+&lt;p>如此，我们可以创建名字为UI / SYS / API 等的实例，然后在debug的时候，如果设置名字为UI的Logger实例的mute为true，就不会打印UI相关的log，而不影响其它两个名字的log。&lt;/p>
+&lt;h3 id="回调函数">回调函数&lt;/h3>
+&lt;p>回调函数本质上是把函数作为参数传递给小部件的函数，当按钮按下时调用此函数。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/material.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runApp(const MyApp());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyApp extends StatefulWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const MyApp({Key? key}) : super(key: key);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createState() =&amp;gt; _MyAppState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String topic = &amp;#34;Packages&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> callback(varTopic) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // setState:通知内部状态已更改从而重建UI
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> topic = varTopic;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return MaterialApp(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> home: Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: const Text(&amp;#34;Learning Flutter&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Container(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: double.maxFinite,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> height: 70,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin: const EdgeInsets.only(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> top: 50, left: 40, right: 40, bottom: 20),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> decoration: BoxDecoration(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: Colors.lightBlue,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> borderRadius: BorderRadius.circular(20)),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;We are learning Flutter $topic&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: const TextStyle(fontSize: 20, color: Colors.white),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MyButtons(topic: &amp;#34;Cubit&amp;#34;, callbackFunction: callback),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MyButtons(topic: &amp;#34;BLoc&amp;#34;, callbackFunction: callback),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MyButtons(topic: &amp;#34;GetX&amp;#34;, callbackFunction: callback)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyButtons extends StatelessWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final String topic;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final Function callbackFunction;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const MyButtons(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {Key? key, required this.topic, required this.callbackFunction})
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> : super(key: key);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return GestureDetector(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onTap: () {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> callbackFunction(topic);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Container(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: double.maxFinite,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> height: 70,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> margin: const EdgeInsets.only(top: 20, left: 40, right: 40, bottom: 20),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> decoration: BoxDecoration(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: Colors.lightBlue, borderRadius: BorderRadius.circular(20)),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> topic,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: const TextStyle(fontSize: 20, color: Colors.white),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -2973,12 +3060,12 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:Medium; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -4638,7 +4725,7 @@ data-flex-basis="426px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>常用命令</title><link>https://xiaoxiano.github.io/p/command/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/command/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
->官网git备忘表&lt;/a>比各种教程都易看&lt;/p>
+>官网git备忘表&lt;/a>&lt;/p>
 &lt;p>&lt;strong>submodule&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git submodule add [git@github.com:xxx/submodule.git] [directory] # 添加子模块
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone [git@github.com:xxx/submodule.git] [directory] --recurse-submodules # 克隆一个存储库,并自动更新仓库中所有子模块（更新可能不兼容，慎用）
