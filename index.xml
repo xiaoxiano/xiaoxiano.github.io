@@ -4116,7 +4116,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> useCases: [
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> WidgetbookUseCase.center(
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 组件用例名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: &amp;#34;红色背景&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: &amp;#34;SpinKitFadingCircle&amp;#34;,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: mySpinkit(),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
