@@ -2424,13 +2424,13 @@ data-flex-basis="319px"
 &lt;ol start="2">
 &lt;li>安装配置Android Studio&lt;/li>
 &lt;/ol>
-&lt;p>&lt;a class="link" href="https://docs.flutter.dev/release/archive?tab=windows#windows" target="_blank" rel="noopener"
+&lt;p>&lt;a class="link" href="https://developer.android.com/studio" target="_blank" rel="noopener"
 >下载地址&lt;/a>&lt;/p>
 &lt;ol start="3">
-&lt;li>flutter(windows)
-&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/li>
+&lt;li>flutter(windows)&lt;/li>
 &lt;/ol>
+&lt;p>&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
+>flutter安装&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
@@ -2441,10 +2441,7 @@ data-flex-basis="319px"
 &lt;p>Java: C:\Program Files\Java\jdk1.8.0_281\bin&lt;/p>
 &lt;p>Android SDK Tools:C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
 &lt;p>Android SDK Platform-Tools:C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
-&lt;h1 id="更新">更新&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
+&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/1.jpg"
 width="1317"
 height="897"
@@ -2493,9 +2490,21 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="更新">更新&lt;/h2>
 &lt;ul>
-&lt;li>更新flutter&lt;/li>
+&lt;li>flutter&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>gradle
+&lt;a class="link" href="https://gradle.org/install/" target="_blank" rel="noopener"
+>下载gradle&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>放入&lt;code>C:\gradle-8.x.x&lt;/code>,并配置系统环境变量path&lt;code>C:\gradle-8.x.x\bin&lt;/code>&lt;/p>
+&lt;p>Android Studio设置路径 -&amp;gt; Settings -&amp;gt; Build,Execution,Deployment -&amp;gt; Build Tools -&amp;gt; Gradle&lt;/p>
+&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;ul>
 &lt;li>更新Android Studio&lt;/li>
 &lt;li>重新建项目&lt;/li>
 &lt;li>\android\app\build.gradle&lt;/li>
@@ -2507,10 +2516,10 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">manifest&lt;/span> &lt;span class="na">xmlns:android&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">xmlns:tools&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">package&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;com.example.flutter_ocr2&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">package&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;com.example.model_dev&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">application&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">tools:replace&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android:label&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;flutter_ocr2&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:label&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;model_dev&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;${applicationName}&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@mipmap/ic_launcher&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">activity&lt;/span>
