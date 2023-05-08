@@ -2496,14 +2496,8 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>gradle
-&lt;a class="link" href="https://gradle.org/install/" target="_blank" rel="noopener"
->下载gradle&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>放入&lt;code>C:\gradle-8.x.x&lt;/code>,并配置系统环境变量path&lt;code>C:\gradle-8.x.x\bin&lt;/code>&lt;/p>
-&lt;p>Android Studio设置路径 -&amp;gt; Settings -&amp;gt; Build,Execution,Deployment -&amp;gt; Build Tools -&amp;gt; Gradle&lt;/p>
-&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;p>&lt;strong>常见错误&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>更新Android Studio&lt;/li>
 &lt;li>重新建项目&lt;/li>
@@ -2511,9 +2505,11 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">compileSdkVersion 33
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">minSdkVersion 21
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>\android\app\src\main\AndroidManifest.xml&lt;/li>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>其他错误&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Attribute application@label value=(Dormitory) from AndroidManifest.xml&lt;/li>
 &lt;/ul>
+&lt;p>解决：进入\android\app\src\main\AndroidManifest.xml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">manifest&lt;/span> &lt;span class="na">xmlns:android&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">xmlns:tools&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/tools&amp;#34;&lt;/span> &lt;span class="err">//&lt;/span> &lt;span class="err">添加此行&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">package&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;com.example.model_dev&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
@@ -2523,7 +2519,11 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;${applicationName}&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@mipmap/ic_launcher&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">activity&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="dart">dart&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Gradle threw an error while downloading artifacts from the network&lt;/li>
+&lt;/ul>
+&lt;p>解决：Gradle损坏，进入 C:\Users\username 删除 .gradle 文件夹&lt;/p>
+&lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var name = &amp;#39;Bob&amp;#39;;
