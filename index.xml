@@ -5,8 +5,8 @@
 &lt;li>Chromebook，折腾。&lt;/li>
 &lt;li>x-station？&lt;/li>
 &lt;/ul>
-&lt;p>Windows的二合一更偏向于移动式笔记本电脑，用于外出用电脑，易用性强，但很多Android应用不能用。&lt;/p>
-&lt;p>Chromebook duet5 二合一的形态是平板的升级，强于Android平板甚至是Ipad，但还Chrome OS不成熟，不适配的bug很多。&lt;/p>
+&lt;p>Windows的二合一更偏向于移动式笔记本电脑，用于外出用电脑，易用性强，但很多Android应用不好用。&lt;/p>
+&lt;p>Chromebook duet5 二合一像是平板的升级，强于Android平板甚至是Ipad，但Chrome OS还不成熟，不适配的bug很多。&lt;/p>
 &lt;h1 id="chromebook-duet5">Chromebook duet5&lt;/h1>
 &lt;h2 id="开启开发者模式">开启开发者模式&lt;/h2>
 &lt;ol>
@@ -494,27 +494,12 @@ data-flex-basis="735px"
 &lt;p>带宽只要搜一下商家的测评，注意共享带宽的实际速度、高峰速度就行了。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>线路却是一个相对复杂的问题。不仅海外各地区线路繁多，不同运营商、不同省市的情况也不同。所以，玩鸡第一步，首先测线路。&lt;/p>
+&lt;p>线路却是一个相对复杂的问题。不仅海外各地区线路繁多，不同运营商、不同省市的情况也不同，所以最好自己测试。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;h1 id="测试线路">测试线路&lt;/h1>
-&lt;h2 id="测试全国到vps的延迟">测试全国到VPS的延迟&lt;/h2>
-&lt;p>&lt;a class="link" href="https://tools.ipip.net/ping.php" target="_blank" rel="noopener"
->ipip.net的ping工具&lt;/a>输入ip，选择中国，然后ping。&lt;/p>
-&lt;h2 id="路由跟踪">路由跟踪&lt;/h2>
-&lt;h3 id="去程路由跟踪">去程路由跟踪&lt;/h3>
-&lt;p>方式一：下载&lt;a class="link" href="https://cdn.ipip.net/17mon/besttrace.exe" target="_blank" rel="noopener"
->BestTrace软件&lt;/a>，点路由跟踪，输入ip，开始。&lt;/p>
-&lt;p>方式二：&lt;a class="link" href="https://tools.ipip.net/traceroute.php" target="_blank" rel="noopener"
->ipip.net的traceroute工具&lt;/a>选地区，输入ip，查看。&lt;/p>
-&lt;h3 id="回程路由跟踪">回程路由跟踪&lt;/h3>
-&lt;p>回程跟踪需要连接到VPS，执行以下命令&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">yum install -y wget unzip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> wget https://cdn.ipip.net/17mon/besttrace4linux.zip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> unzip best
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./besttrace 你的本地ip -g cn
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="常见线路">常见线路&lt;/h1>
-&lt;h2 id="介绍">介绍&lt;/h2>
-&lt;p>IPLC国际私用出租线路&lt;/p>
+&lt;h1 id="常见线路">常见线路&lt;/h1>
+&lt;h2 id="国内运营商">国内运营商&lt;/h2>
+&lt;p>IPLC/IEPL国际私用出租线路&lt;/p>
 &lt;p>电信的163骨干网自治系统编号 AS4134&lt;/p>
 &lt;p>电信的CN2骨干网自治系统编号 AS4809&lt;/p>
 &lt;p>联通的169骨干网自治系统编号 AS4837&lt;/p>
@@ -523,19 +508,33 @@ data-flex-basis="735px"
 &lt;p>移动的CMI境外骨干网自治系统编号 AS58453&lt;/p>
 &lt;p>CERNET（教育网，主用于高校）骨干网自治系统编号 AS4538&lt;/p>
 &lt;p>CSTNET（科技网）骨干网自治系统编号 AS7497&lt;/p>
+&lt;p>BGP 边界网关协议，主要是用来连接网络上的独立系统的路由选择协议。主要功能是在传输过程中会选择最优的路由线路。比一般线路要好，但不使用cn2这种最优质线路。&lt;/p>
+&lt;h2 id="国外运营商">国外运营商&lt;/h2>
+&lt;p>&lt;strong>日本&lt;/strong>
+常见线路：NTT、KDDI、IIJ、SoftBank（软银）、Telstra、PCCW&lt;/p>
+&lt;p>&lt;strong>新加坡&lt;/strong>
+常见线路：NTT、Tata通信、Telstra、PCCW、sg.gs&lt;/p>
+&lt;p>&lt;strong>韩国&lt;/strong>
+常见线路：KT、SK、LG&lt;/p>
+&lt;p>&lt;strong>香港&lt;/strong>
+常用线路：PCCW、Telstra、HKBN、HKT、HGC、NTT（香港）、Azure、Google Cloud Platform、Gcorelabs、Tata通信&lt;/p>
+&lt;p>&lt;strong>俄罗斯&lt;/strong>
+常见线路：RosTelecom（俄罗斯电信）、TTK（俄罗斯铁通）、MTS、Megfon、RETN&lt;/p>
+&lt;p>&lt;strong>英国&lt;/strong>
+常见线路：Telia、Cogentco、Level3、Zayo、Tata通信&lt;/p>
 &lt;h2 id="实际体验以延迟排序">实际体验（以延迟排序）&lt;/h2>
 &lt;ol>
 &lt;li>最优：&lt;/li>
 &lt;/ol>
-&lt;p>香港IPLC、香港CN2 GIA：价格不在博主承担范围。&lt;/p>
+&lt;p>香港IPLC/IEPL、香港CN2 GIA。&lt;/p>
 &lt;ol start="2">
 &lt;li>次优：
-日本SoftBank（推荐）：价格较高，&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
+日本SoftBank（推荐）：&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
 >v.ps&lt;/a>约39、49欧元/年,搬瓦工$169/年。&lt;/li>
 &lt;/ol>
-&lt;p>新加坡CN2：价格太高。&lt;/p>
+&lt;p>新加坡CN2：价格高。&lt;/p>
 &lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
-&lt;p>香港CMI：超过200ms。移动网，有高峰期慎买。&lt;/p>
+&lt;p>香港CMI：超过200ms。移动网好用，有高峰期。&lt;/p>
 &lt;ol start="3">
 &lt;li>一般：&lt;/li>
 &lt;/ol>
@@ -562,7 +561,23 @@ data-flex-basis="735px"
 &lt;li>
 &lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
+&lt;/ul>
+&lt;h1 id="测试线路">测试线路&lt;/h1>
+&lt;h2 id="测试全国到vps的延迟">测试全国到VPS的延迟&lt;/h2>
+&lt;p>&lt;a class="link" href="https://tools.ipip.net/ping.php" target="_blank" rel="noopener"
+>ipip.net的ping工具&lt;/a>输入ip，选择中国，然后ping。&lt;/p>
+&lt;h2 id="路由跟踪">路由跟踪&lt;/h2>
+&lt;h3 id="去程路由跟踪">去程路由跟踪&lt;/h3>
+&lt;p>方式一：下载&lt;a class="link" href="https://cdn.ipip.net/17mon/besttrace.exe" target="_blank" rel="noopener"
+>BestTrace软件&lt;/a>，点路由跟踪，输入ip，开始。&lt;/p>
+&lt;p>方式二：&lt;a class="link" href="https://tools.ipip.net/traceroute.php" target="_blank" rel="noopener"
+>ipip.net的traceroute工具&lt;/a>选地区，输入ip，查看。&lt;/p>
+&lt;h3 id="回程路由跟踪">回程路由跟踪&lt;/h3>
+&lt;p>回程跟踪需要连接到VPS，执行以下命令&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">yum install -y wget unzip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> wget https://cdn.ipip.net/17mon/besttrace4linux.zip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> unzip best
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./besttrace 你的本地ip -g cn
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 1.特殊元素和特殊位置优先策略
@@ -2434,11 +2449,14 @@ data-flex-basis="319px"
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
-&lt;li>配置环境变量path&lt;/li>
+&lt;li>配置环境变量&lt;/li>
 &lt;/ol>
 &lt;p>&lt;strong>Dart:&lt;/strong> 无需配置，flutter现在自带dart。&lt;/p>
-&lt;p>&lt;strong>Flutter:&lt;/strong> C:\flutter\bin&lt;/p>
-&lt;p>&lt;strong>Java:&lt;/strong> C:\Program Files\Java\jdk1.8.0_281\bin&lt;/p>
+&lt;p>&lt;strong>Flutter:&lt;/strong> path:&lt;code>C:\flutter\bin&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
+JAVA_HOME:&lt;code>C:\Program Files\Java\jdk-1.8&lt;/code> &lt;br>
+path:&lt;code>C:\Program Files\Java\jdk-1.8\bin&lt;/code> &lt;br>
+path:&lt;code>C:\Program Files\Java\jdk-1.8\jre\bin&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Android SDK Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
 &lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
 &lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
@@ -3283,7 +3301,7 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -3297,12 +3315,12 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -3387,11 +3405,53 @@ data-flex-basis="443px"
 &lt;p>Flutter 中万物皆为Widget，&lt;code>widget&lt;/code>类继承自&lt;code>DiagnosticableTree&lt;/code>。&lt;/p>
 &lt;p>&lt;code>DiagnosticableTree&lt;/code>即“诊断树”，主要作用是提供调试信息。&lt;/p>
 &lt;p>&lt;code>Widget.createElement()&lt;/code> :创建一个Element实例，记为&lt;code>element&lt;/code>。&lt;/p>
-&lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。&lt;/p>
-&lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置，否则就会创建新的&lt;code>Element&lt;/code>。&lt;/p>
-&lt;p>&lt;code>createState()&lt;/code>:为每一个&lt;code>StatefulElement&lt;/code>创建一个State实例。&lt;/p>
+&lt;p>&lt;code>BuildContext&lt;/code>是一个定位器，用于跟踪树中的每个小部件并定位它们及其在树中的位置。每个小部件的&lt;code>BuildContext&lt;/code>都传递给它们的&lt;code>build&lt;/code>方法。&lt;code>build&lt;/code>方法返回小部件呈现的小部件树。&lt;/p>
+&lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。使用 &lt;code>GlobalKey&lt;/code>时，Flutter 不仅会在树中查找与特定级别匹配的键，还会在整个应用程序中查找,GlobalKey就像全局变量。&lt;/p>
+&lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置。如果 Type 相同但 Key 不同，则Element将被deactivated（释放，但它可能仍然存在）。如果 Type 不同，则Element将被disposed（永久删除）。&lt;/p>
 &lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
-&lt;p>StatefulWidget更为复杂，使用Getx接管更好用，不再详解。&lt;/p>
+&lt;h3 id="使用">使用&lt;/h3>
+&lt;p>&lt;strong>StatelessWidget&lt;/strong> 要求我们重写&lt;code>build&lt;/code>方法,它将&lt;code>state&lt;/code>作为输入并提供相应的 UI 显示在用户屏幕上：UI = build(state),当我们初始化一个StatelessWidget对象时会调用 build 方法。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class CounterWidget extends StatelessWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final bool isLoading;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final int counter;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const CounterWidget({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> required this.isLoading,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> required this.counter,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return isLoading ? CircularProgressIndicator() : Text(&amp;#39;$counter&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>StatefulWidget&lt;/strong> 要求我们重写&lt;code>createState&lt;/code>功能:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class MyHomePage extends StatefulWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final bool isLoading;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final int counter;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const MyHomePage({
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> required this.isLoading,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> required this.counter,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyHomePage&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createState() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return MyHomePageState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>createState()&lt;/code>会为每一个&lt;code>StatefulElement&lt;/code>创建一个State对象。示例中创建了&lt;code>MyHomePageState&lt;/code>对象，当&lt;code>MyHomePageState&lt;/code>初始化时，它会调用&lt;code>build&lt;/code>函数。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class MyHomePageState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyHomePage&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: CounterWidget(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> isLoading: widget.isLoading,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> counter: widget.counter,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>widget.isLoading&lt;/code>、&lt;code>widget.counter&lt;/code>属性用于表示当前配置信息，并且在父级更新小部件时会被自动更新。&lt;code>setState&lt;/code>是State的方法。当我们调用setState方法时，build方法将立即再次被调用。&lt;/p>
+&lt;p>当你的组件是静态的，不需要更新自身状态,使用StatelessWidget。当你的组件需要根据事件或交互来动态更新自身状态,使用StatefulWidget。&lt;/p>
 &lt;h2 id="getx">Getx&lt;/h2>
 &lt;h3 id="状态管理">状态管理&lt;/h3>
 &lt;h4 id="介绍">介绍&lt;/h4>
@@ -4169,7 +4229,7 @@ data-flex-basis="834px"
 >&lt;/p>
 &lt;p>从&lt;a class="link" href="https://www.nuget.org/downloads" target="_blank" rel="noopener"
 >https://www.nuget.org/downloads&lt;/a>下载最新的nuget.exe,并放入任意文件夹（我的在C:\Program Files\Microsoft Visual Studio），配置系统环境变量。&lt;/p>
-&lt;h3 id="使用">使用&lt;/h3>
+&lt;h3 id="使用-1">使用&lt;/h3>
 &lt;ul>
 &lt;li>在pubspec.yaml安装 widgetbook 组件&lt;/li>
 &lt;/ul>
