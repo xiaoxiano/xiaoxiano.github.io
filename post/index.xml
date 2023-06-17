@@ -3295,6 +3295,16 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="function-class">Function class&lt;/h4>
+&lt;p>Function是所有函数类型的超类。&lt;/p>
+&lt;p>Function有一些没有声明的特殊功能：&lt;/p>
+&lt;ul>
+&lt;li>Function 静态类型的值仍然Function 可以像函数一样被调用（这样的调用是动态调用,编译器无法在编译时检查类型的正确性,在运行时将执行检查以确保参数类型一致）。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Function f = (int x) =&amp;gt; &amp;#34;$x&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(f(1)); // Prints &amp;#34;1&amp;#34;.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">f(&amp;#34;not&amp;#34;, &amp;#34;one&amp;#34;, &amp;#34;int&amp;#34;); // Throws! No static warning.
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="widgets之间的通信">widgets之间的通信&lt;/h4>
 &lt;p>&lt;a class="link" href="https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e" target="_blank" rel="noopener"
 >https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e&lt;/a>&lt;/p>
@@ -3376,20 +3386,145 @@ data-flex-grow="177"
 data-flex-basis="427px"
 >&lt;/p>
 &lt;h2 id="异步">异步&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 示例：等待返回自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:http/http.dart&amp;#39;as http;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:convert&amp;#39;;
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Isolate
+&lt;/div>
+&lt;p>Isolate 是运行所有 Dart 代码的地方，在许多其他语言里（例如 C++），你可以让多个线程共享相同的内存，但是在 Dart 中，每个线程都有自己的 Isolate 和它自己的内存。&lt;/p>
+&lt;p>如果你要运行的计算量太过庞大，在 main Isolate 中运行可能会导致丢帧，如果处理可能需要几百毫秒，则考虑创建单独的Isolate，例如：&lt;/p>
+&lt;ul>
+&lt;li>解码 JSON，HttpRequest 的结果 =&amp;gt; compute&lt;/li>
+&lt;li>加密可能非常耗时 =&amp;gt;&lt;/li>
+&lt;li>处理图像（例如裁剪）&lt;/li>
+&lt;li>从 Web 加载图像&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>事件循环&lt;/strong>
+Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最旧的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Future
+&lt;/div>
+&lt;p>&lt;strong>定义&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myVoidFuture() {} // 不返回任何内容，但可以在最终完成时通知调用者。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myTypedFuture() {} // 返回一个值，那么你传递给它一个类型。
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有三种状态：&lt;/p>
+&lt;ul>
+&lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开
+首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，在这期间，Future 一直未能完成。
+&lt;ul>
+&lt;li>Completed with a value: 打开了，带有一个值
+如果想使用Future的返回值，则需要使用&lt;code>then&lt;/code>，否则 Future 不能完成。then是你可以用来在每个 Future 上注册回调的实例方法，你可以用它创建一个函数，传入一个匹配 Future 类型的参数。等到数据抵达时，Future 得到数据并打开它，如果Future 完成并带有一个值，此时会触发你的回调。&lt;/li>
+&lt;li>Completed with an error: 打开了，抛出一个异常
+如果Future 在完成时没有带一个值，你可以使用 &lt;code>catchError&lt;/code>注册另一个回调，catchError 的工作方式和 then 一样，唯一不同的是它捕获异常而不是值。你甚至可以给它一个&lt;code>test&lt;/code>方法，你可以通过这种方式使用多个 catchError 方法，每种方法都会检查错误返回值的类型。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart: async&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future getIPAddress() async {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final url =&amp;#39;https://httpbin.org/ip&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var response = await http.get(Uri.parse(url));
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String ip = json.decode(response.body)[&amp;#39;origin&amp;#39;];
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return ip;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">int&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.delayed (
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Duration (seconds: 3),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> () { return 100; },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ).then((value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(value);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }).catchError(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (err) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;Caught $err&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> test: (err) =&amp;gt; err.runtimeType == String,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ).whenComplete (() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;All finished!&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;waiting...&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() async {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final ip = await getIPAddress();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(ip);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Future方法&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Future.value
+如果你已经知道 Future 返回的值，你可以使用 Future.value 为构造函数命名，构建缓存服务时可以用这个&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Future.error
+它需要一个异常对象和一个可选的堆栈跟踪&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Future.delayed
+在运行函数和 Future 完成之前，指定等待时长，可以创建测试用的模拟网络服务&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Streams
+&lt;/div>
+&lt;p>每个 future 单一地传递错误，或者数据，Streams随着时间的推移，可以传送零个、多个值，或者是错误&lt;/p>
+&lt;p>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+async await
+&lt;/div>
+async 和 await 实际上只是 future 和 streams 的替代语法，可以帮助你编写更清晰、更易读的代码。在连续的Future中，每一处Future都需要定义、then、return，而await只需如下写：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ProcessedData&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createData() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> try {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final id = await _load FromDisk();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final data = await _fetchNetworkData(id);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return ProcessedData(data);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } on HttpException catch (err) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;Network error: $err&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Processed Data.empty();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } finally {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;All done!&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+Generator
+&lt;/div>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>Single value&lt;/th>
+&lt;th>Zero or more values&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Sync:&lt;/td>
+&lt;td>int&lt;/td>
+&lt;td>Iterable&lt;int>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Async:&lt;/td>
+&lt;td>Future&lt;int>&lt;/td>
+&lt;td>Stream&lt;int>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>当您需要延迟生成一系列值时，请考虑使用&lt;em>生成器函数&lt;/em>。Dart 内置支持两种生成器函数：&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>同步&lt;/strong>生成器：返回一个&lt;a class="link" href="https://api.dart.dev/stable/dart-core/Iterable-class.html" target="_blank" rel="noopener"
+>&lt;code>Iterable&lt;/code>&lt;/a>对象。&lt;/li>
+&lt;li>&lt;strong>异步&lt;/strong>生成器：返回一个&lt;a class="link" href="https://api.dart.dev/stable/dart-async/Stream-class.html" target="_blank" rel="noopener"
+>&lt;code>Stream&lt;/code>&lt;/a>对象。&lt;/li>
+&lt;/ul>
+&lt;p>实现一个&lt;strong>同步&lt;/strong>生成器函数，将函数体标记为&lt;code>sync*&lt;/code>，使用&lt;code>yield&lt;/code>语句传递值：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">naturalsTo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">sync&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">yield&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>实现&lt;strong>异步&lt;/strong>生成器函数，将函数体标记为&lt;code>async*&lt;/code>，使用&lt;code>yield&lt;/code>语句传递值：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Stream&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">asynchronousNaturalsTo&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">async&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kt">int&lt;/span> &lt;span class="n">k&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="m">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">k&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">yield&lt;/span> &lt;span class="n">k&lt;/span>&lt;span class="o">++&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果您的生成器是递归的，您可以使用以下方法提高其性能&lt;code>yield*&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-dart" data-lang="dart">&lt;span class="line">&lt;span class="cl">&lt;span class="n">Iterable&lt;/span>&lt;span class="o">&amp;lt;&lt;/span>&lt;span class="kt">int&lt;/span>&lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">naturalsDownFrom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kt">int&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="kd">sync&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="m">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">yield&lt;/span> &lt;span class="n">n&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">yield&lt;/span>&lt;span class="o">*&lt;/span> &lt;span class="n">naturalsDownFrom&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">n&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="m">1&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="flutter">flutter&lt;/h1>
 &lt;h2 id="widget生命周期">Widget生命周期&lt;/h2>
 &lt;p>&lt;strong>StatelessWidget生命周期源码图&lt;/strong>
@@ -3997,7 +4132,7 @@ data-flex-basis="443px"
 >Service Worker&lt;/a>：Service Worker 是 PWA 的基本组成部分。它们支持快速加载（无论网络如何）、离线访问、推送通知和其他功能。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-15">
+&lt;details class="spoiler " id="spoiler-20">
 &lt;summary>InAppWebView官方示例注释&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/foundation.dart&amp;#39;;
