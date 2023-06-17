@@ -2979,8 +2979,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="构造函数">构造函数&lt;/h3>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 特点：
 &lt;/div>
 &lt;ul>
@@ -2994,8 +2994,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;p>没有返回值&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 普通构造函数
 &lt;/div>
 &lt;p>构造函数方法名和类名相同&lt;/p>
@@ -3017,8 +3017,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 命名构造函数
 &lt;/div>
 &lt;p>命名构造函数(类名.函数名)可以实现多个构造器。&lt;/p>
@@ -3034,8 +3034,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>请记住，命名构造函数不可继承，如果子类想要有 和父类一样的命名构造函数，那就写个同名的（通常也会在子类的命名构造函数里，调用父类的同名命名构造函数）&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 调用父类构造函数
 &lt;/div>
 &lt;p>如果你的类，继承于父类，那么子类的构造函数，势必要调用父类的构造函数，这时候就要分两种情况：&lt;/p>
@@ -3081,8 +3081,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // in Employee
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 初始化列表
 &lt;/div>
 &lt;p>在构造函数后加上&lt;code>: x = , y = &lt;/code>&lt;/p>
@@ -3123,8 +3123,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(p.distanceFromOrigin);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 重定向构造函数
 &lt;/div>
 &lt;p>定义构造函数的时候，除了一个普通构造函数，还可以有若干命名构造函数，这些构造函数之间，有时候会有一些相同的逻辑，如果分别书写在各个构造函数中，会有些多余，所以构造函数可以传递。&lt;/p>
@@ -3138,8 +3138,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Point.alongXAxis(num x) : this(x, 0);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>传递构造函数，没有方法体，会在初始化列表中，调用另一个构造函数。&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 常量构造函数
 &lt;/div>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class ImmutablePoint {
@@ -3151,8 +3151,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const ImmutablePoint(this.x, this.y);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果你的类，创建的对象永远不会改变，你可以在编译期就创建这个常量实例，并且定义一个常量构造函数，并且确保所有的成员变量都是final的。&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 工厂构造函数/单例模式
 &lt;/div>
 &lt;p>在构造函数前加上&lt;code>factory&lt;/code>&lt;/p>
@@ -3310,8 +3310,8 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 >https://medium.com/flutter-community/flutter-communication-between-widgets-f5590230df1e&lt;/a>&lt;/p>
 &lt;h3 id="扩展">扩展&lt;/h3>
 &lt;h4 id="扩展类">扩展类&lt;/h4>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 extends
 &lt;/div>
 &lt;p>Extends是典型的OOP类继承。如果 a类 扩展了 b类，则 a类 可以使用或覆盖 b类 中实现的所有属性、变量、函数 。在 Dart 中，一个类只能扩展一个类。
@@ -3324,13 +3324,13 @@ class="gallery-image"
 data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:normal; color: black">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:normal; color: black">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 with
 &lt;/div>
 &lt;p>mixin使用with关键字，类似于继承，可以扩展多个类。mixins的类只能继承自Object，不能再继承其他类，且不能有构造函数。&lt;/p>
@@ -3386,8 +3386,8 @@ data-flex-grow="177"
 data-flex-basis="427px"
 >&lt;/p>
 &lt;h2 id="异步">异步&lt;/h2>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Isolate
 &lt;/div>
 &lt;p>Isolate 是运行所有 Dart 代码的地方，在许多其他语言里（例如 C++），你可以让多个线程共享相同的内存，但是在 Dart 中，每个线程都有自己的 Isolate 和它自己的内存。&lt;/p>
@@ -3400,8 +3400,8 @@ Isolate
 &lt;/ul>
 &lt;p>&lt;strong>事件循环&lt;/strong>
 Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最旧的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Future
 &lt;/div>
 &lt;p>&lt;strong>定义&lt;/strong>&lt;/p>
@@ -3452,8 +3452,8 @@ Future
 在运行函数和 Future 完成之前，指定等待时长，可以创建测试用的模拟网络服务&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Streams
 &lt;/div>
 &lt;p>每个 future 单一地传递错误，或者数据，Streams随着时间的推移，可以传送零个、多个值，或者是错误&lt;/p>
@@ -3476,8 +3476,8 @@ async 和 await 实际上只是 future 和 streams 的替代语法，可以帮�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Generator
 &lt;/div>
 &lt;table>
@@ -3621,8 +3621,8 @@ data-flex-basis="443px"
 &lt;td>在GetBuilder中插入一个Obx，既可以响应式更新、也可以手动更新&lt;/td>
 &lt;/tr>
 &lt;/table>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: black">
 使用场景：
 &lt;/div>
 &lt;p>&lt;strong>Obx&lt;/strong>&lt;/p>
@@ -3658,8 +3658,8 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── state.dart
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: black">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: black">
 生命周期
 &lt;/div>
 在 StatefulWidget 中，使用&lt;code>initState&lt;/code>或&lt;code>dispose()&lt;/code>，而在 Controller 中我们可以使用相对应的操作：&lt;/p>
@@ -6632,7 +6632,7 @@ code&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{{&amp;lt; typography font=&amp;quot;monoton&amp;quot; size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
+&lt;p>{{&amp;lt; typography font=default size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'font-family'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
 自定义字体

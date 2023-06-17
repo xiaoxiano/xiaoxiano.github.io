@@ -212,7 +212,7 @@ code&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>{{&amp;lt; typography font=&amp;quot;monoton&amp;quot; size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
+&lt;p>{{&amp;lt; typography font=default size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'font-family'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
 自定义字体
