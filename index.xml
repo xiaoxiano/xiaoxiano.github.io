@@ -3458,8 +3458,8 @@ Streams
 &lt;/div>
 &lt;p>每个 future 单一地传递错误，或者数据，Streams随着时间的推移，可以传送零个、多个值，或者是错误&lt;/p>
 &lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 async await
 &lt;/div>
 async 和 await 实际上只是 future 和 streams 的替代语法，可以帮助你编写更清晰、更易读的代码。在连续的Future中，每一处Future都需要定义、then、return，而await只需如下写：&lt;/p>
