@@ -3398,8 +3398,8 @@ Isolate
 &lt;li>处理图像（例如裁剪）&lt;/li>
 &lt;li>从 Web 加载图像&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>事件循环&lt;/strong>
-Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最旧的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
+&lt;p>&lt;strong>事件循环&lt;/strong>&lt;/p>
+&lt;p>Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最旧的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Future
@@ -3409,12 +3409,12 @@ Future
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myTypedFuture() {} // 返回一个值，那么你传递给它一个类型。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有三种状态：&lt;/p>
 &lt;ul>
-&lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开
+&lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开 &lt;br>
 首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，在这期间，Future 一直未能完成。
 &lt;ul>
-&lt;li>Completed with a value: 打开了，带有一个值
+&lt;li>Completed with a value: 打开了，带有一个值 &lt;br>
 如果想使用Future的返回值，则需要使用&lt;code>then&lt;/code>，否则 Future 不能完成。then是你可以用来在每个 Future 上注册回调的实例方法，你可以用它创建一个函数，传入一个匹配 Future 类型的参数。等到数据抵达时，Future 得到数据并打开它，如果Future 完成并带有一个值，此时会触发你的回调。&lt;/li>
-&lt;li>Completed with an error: 打开了，抛出一个异常
+&lt;li>Completed with an error: 打开了，抛出一个异常 &lt;br>
 如果Future 在完成时没有带一个值，你可以使用 &lt;code>catchError&lt;/code>注册另一个回调，catchError 的工作方式和 then 一样，唯一不同的是它捕获异常而不是值。你甚至可以给它一个&lt;code>test&lt;/code>方法，你可以通过这种方式使用多个 catchError 方法，每种方法都会检查错误返回值的类型。&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -3440,15 +3440,15 @@ Future
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Future方法&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>Future.value
+&lt;p>Future.value &lt;br>
 如果你已经知道 Future 返回的值，你可以使用 Future.value 为构造函数命名，构建缓存服务时可以用这个&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Future.error
+&lt;p>Future.error &lt;br>
 它需要一个异常对象和一个可选的堆栈跟踪&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Future.delayed
+&lt;p>Future.delayed &lt;br>
 在运行函数和 Future 完成之前，指定等待时长，可以创建测试用的模拟网络服务&lt;/p>
 &lt;/li>
 &lt;/ul>
