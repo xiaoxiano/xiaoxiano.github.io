@@ -2043,7 +2043,7 @@ Future
 &lt;/div>
 &lt;p>&lt;strong>定义&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myVoidFuture() {} // 不返回任何内容，但可以在最终完成时通知调用者。
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myTypedFuture() {} // 返回一个值，那么你传递给它一个类型。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myTypedFuture() {} // 如果需要返回一个值，那么你传递给它一个类型。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有三种状态：&lt;/p>
 &lt;ul>
 &lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开 &lt;br>
@@ -2986,7 +2986,143 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
-&lt;h2 id="widgetbook">Widgetbook&lt;/h2>
+&lt;h2 id="flexcolorpicker">FlexColorPicker&lt;/h2>
+&lt;p>FlexColorPicker 是 Fl​​utter 的可定制颜色选择器。可以使用 Material 2 和 Material 3。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ColorPicker(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: selectedColor,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 启用tab栏选择器:both, primary, accent, bw, custom, wheel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickersEnabled: const &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ColorPickerType&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.both: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.primary: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.accent: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.bw: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.custom: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.wheel: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 自定义颜色
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // customColorSwatchesAndNames: customSwatches,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 定制tab标签
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickerTypeLabels: &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ColorPickerType&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.both: &amp;#39;preset&amp;#39;.tr,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ColorPickerType.wheel: &amp;#39;custom&amp;#39;.tr,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 在选择主要颜色后，基于所选颜色为您提供一组它的深浅颜色,禁用时才需要此属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // enableShadesSelection:false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 生成所选颜色的 15 种色调的 Material 3 色调调色板
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enableTonalPalette: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 颜色不透明度滑块
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enableOpacity: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 显示所选颜色名称
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> showMaterialName: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> materialNameTextStyle: Theme.of(context).textTheme.bodySmall,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> showColorName: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> colorNameTextStyle: Theme.of(context).textTheme.bodySmall,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 显示所选颜色的 RGB 颜色值
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> showColorCode: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // colorCodeHasColor: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // showColorValue: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> colorCodeTextStyle: Theme.of(context).textTheme.bodyMedium,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> colorCodePrefixStyle: Theme.of(context).textTheme.bodySmall,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 显示最近选择的颜色
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // showRecentColors: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // maxRecentColors: 8,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // recentColors: ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // onRecentColorsChanged: ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 标题
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;ColorPicker&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline6,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> heading: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;Select color&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> subheading: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;Select color shade&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline1,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wheelSubheading: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;Selected color and its shades&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline1,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> opacitySubheading: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;Opacity&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline1,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> recentColorsSubheading: Text(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;Selected color and its color swatch&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> style: Theme.of(context).textTheme.headline1,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 各个颜色小部件的大小、形状和间距以及色轮和不透明度滑块大小的属性。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> width: 40,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> height: 40,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> borderRadius: 4,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> spacing: 5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runSpacing: 5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> hasBorder: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // borderColor: Theme.of(context).dividerColor,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> elevation: 0,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 轮盘直径、宽度和边框
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wheelDiameter: 155,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wheelWidth: 16,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wheelHasBorder: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // borderColor: Theme.of(context).dividerColor,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 颜色元素的间距、对齐方式和填充
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> crossAxisAlignment: CrossAxisAlignment.center,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding: const EdgeInsets.all(16),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> columnSpacing: 0,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 复制按钮,确定按钮,取消按钮,关闭按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> enableTooltips: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Dialog“确定”和“取消”操作按钮以及样式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> actionButtons: const ColorPickerActionButtons(...),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 颜色的复制粘贴行为
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> copyPasteBehavior: const ColorPickerCopyPasteBehavior(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 颜色代码后缀复制按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> editFieldCopyButton: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 键盘快捷键
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ctrlC: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ctrlV: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 工具栏按钮
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> copyButton: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> copyIcon: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> copyTooltip: MaterialLocalizations.of(context).copyButtonLabel,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pasteButton: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pasteIcon: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pasteTooltip: MaterialLocalizations.of(context).pasteButtonLabel,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 从选取器复制颜色并将颜色粘贴
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> longPressMenu: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> secondaryMenu: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> secondaryOnDesktopLongOnDevice: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 颜色代码格式和粘贴解析
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> copyFormat: ColorPickerCopyFormat.dartCode，
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> parseShortHexCode: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> editUsesParsedPaste: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> snackBarParseError: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> snackBarMessage: ture,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> snackBarDuration: const Duration(milliseconds: 1800),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> feedbackParseError: false,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 回调
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当选择具有所选新颜色值的新颜色时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onColorChanged: (Color color) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> selectedColor = color;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 开始颜色选择时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onColorChangeStart: ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 结束颜色选择时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onColorChangeEnd: ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 返回最近选择的颜色的当前列表
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onRecentColorsChanged: ,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 在对话框打开时跟踪 ColorPicker 的不同onChange回调
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ColorPicker(...).showPickerDialog;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 只需传入对话框的构建上下文以及所需的起始颜色值，并等待它在对话框关闭时返回选定的颜色
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ColorPicker(...).showColorPickerDialog;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="widgetbook">Widgetbook&lt;/h2>
 &lt;p>使用Widgetbook可以管理组件、使用不同设备尺寸测试组件、实时修改组件参数、协作共享。&lt;/p>
 &lt;h3 id="windows配置">Windows配置&lt;/h3>
 &lt;p>确保安装Visual Studio，及其应用：
