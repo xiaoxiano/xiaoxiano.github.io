@@ -496,6 +496,10 @@ data-flex-basis="735px"
 &lt;li>
 &lt;p>线路却是一个相对复杂的问题。不仅海外各地区线路繁多，不同运营商、不同省市的情况也不同，所以最好自己测试。&lt;/p>
 &lt;/li>
+&lt;li>
+&lt;p>使用机场最好用IPLC/IEPL线路，几乎不会断连，有名的telegram测评频道&lt;a class="link" href="https://t.me/s/gebaopiCloud" target="_blank" rel="noopener"
+>前女友们用过的机场&lt;/a>可以参考。用机场隐私泄露风险高&lt;/p>
+&lt;/li>
 &lt;/ul>
 &lt;h1 id="常见线路">常见线路&lt;/h1>
 &lt;h2 id="国内运营商">国内运营商&lt;/h2>
@@ -526,28 +530,126 @@ data-flex-basis="735px"
 &lt;ol>
 &lt;li>最优：&lt;/li>
 &lt;/ol>
-&lt;p>香港IPLC/IEPL、香港CN2 GIA。&lt;/p>
+&lt;p>香港IPLC/IEPL、日本IPLC/IEPL、香港CN2 GIA。&lt;/p>
+&lt;p>日本SoftBank（推荐）：&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
+>v.ps&lt;/a>约39、49欧元/年,搬瓦工$169/年。&lt;/p>
 &lt;ol start="2">
-&lt;li>次优：
-日本SoftBank（推荐）：&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
->v.ps&lt;/a>约39、49欧元/年,搬瓦工$169/年。&lt;/li>
+&lt;li>次优：&lt;/li>
 &lt;/ol>
 &lt;p>新加坡CN2：价格高。&lt;/p>
 &lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
 &lt;p>香港CMI：超过200ms。移动网好用，有高峰期。&lt;/p>
-&lt;ol start="3">
-&lt;li>一般：&lt;/li>
-&lt;/ol>
 &lt;p>新加坡NTT：超过300ms。慎买。&lt;/p>
 &lt;p>美国CN2 GIA（较为推荐）：超过500ms。平价大带宽，价格合理，网络审查宽松，且访问的大多服务器设在美国。&lt;/p>
 &lt;ol start="4">
 &lt;li>差线路：&lt;/li>
 &lt;/ol>
-&lt;p>racknerd、greencloud很廉价，适合测试用。&lt;/p>
-&lt;p>&lt;strong>防坑：&lt;/strong>&lt;/p>
+&lt;p>racknerd、greencloud等绕路线路很廉价，适合测试用。&lt;/p>
+&lt;p>&lt;strong>防坑：&lt;/strong>
+&lt;style type="text/css">
+.box {
+padding: 1.6em;
+padding-top: 1.4em;
+line-height: 1.4em;
+margin-top: 2em;
+margin-bottom: 4em;
+border-radius: 4px;
+color: #444;
+background: #f3ebe850;
+}
+.box-title {
+margin: -18px -18px 12px;
+padding: 4px 18px;
+border-radius: 4px 4px 0 0;
+font-weight: 700;
+color: #fff;
+background: #6ab0de;
+}
+.box.warning .box-title {
+background: #ff6b6b;
+}
+.box.warning {
+background: #ff6b6b4f;
+}
+.box.info .box-title {
+background: #0089e488;
+}
+.box.info {
+background: #0089e41c;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.box.important .box-title {
+background: #f7ec2c;
+}
+.box.important {
+background: #f7ec2c7d;
+}
+.box.tip .box-title {
+background: #a3ffa34d;
+}
+.box.tip {
+background: #a3ffa34d;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.icon-box {
+display: inline-flex;
+align-self: center;
+margin-right: 8px;
+}
+.icon-box img,
+.icon-box svg {
+height: 1em;
+width: 1em;
+fill: currentColor;
+}
+.icon-box img,
+.icon-box.baseline svg {
+top: 0.125em;
+position: relative;
+}
+.box p {
+margin-bottom: 0.6em;
+}
+.box p:first-of-type {
+display: inline;
+}
+.box p:nth-of-type(2) {
+margin-top: 0.6em;
+}
+.box p:last-child {
+margin-bottom: 0;
+}
+&lt;/style>
+&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+&lt;/symbol>
+&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
+&lt;/symbol>
+&lt;/svg>&lt;div class="box important" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#important-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>仅以我片面的实测&lt;/p>
+&lt;/div>
+&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>知名vps商家基本不跑路，但很多机场会跑路，用机场一定要月付。&lt;/p>
+&lt;p>知名vps商家基本不跑路，但机场可能跑路，用机场一定要月付。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>北方地区日本线路表现更好。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>有些商家线路会绕路欧美，至少要看测评，最好自测。&lt;/p>
@@ -2477,9 +2579,9 @@ path:&lt;code>C:\Program Files\Java\jdk-1.8\jre\bin&lt;/code>&lt;/p>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm list
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
-&lt;li>VS Code配置
-在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/li>
+&lt;li>VS Code配置&lt;/li>
 &lt;/ol>
+&lt;p>在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dart.flutterSdkPath&amp;#34;: &amp;#34;.fvm/flutter_sdk&amp;#34;,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove .fvm files from search
@@ -2496,7 +2598,7 @@ path:&lt;code>C:\Program Files\Java\jdk-1.8\jre\bin&lt;/code>&lt;/p>
 &lt;/ol>
 &lt;ul>
 &lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
-&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>&lt;/li>
+&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
 &lt;/ul>
 &lt;style type="text/css">
 .box {
@@ -3299,7 +3401,7 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;p>Function是所有函数类型的超类。&lt;/p>
 &lt;p>Function有一些没有声明的特殊功能：&lt;/p>
 &lt;ul>
-&lt;li>Function 静态类型的值仍然Function 可以像函数一样被调用（这样的调用是动态调用,编译器无法在编译时检查类型的正确性,在运行时将执行检查以确保参数类型一致）。&lt;/li>
+&lt;li>Function 静态类型的值仍然可以像函数一样被调用（这样的调用是动态调用,编译器无法在编译时检查类型的正确性,在运行时将执行检查以确保参数类型一致）。&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Function f = (int x) =&amp;gt; &amp;#34;$x&amp;#34;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">print(f(1)); // Prints &amp;#34;1&amp;#34;.
@@ -3399,7 +3501,7 @@ Isolate
 &lt;li>从 Web 加载图像&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>事件循环&lt;/strong>&lt;/p>
-&lt;p>Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最旧的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
+&lt;p>Dart使用永不阻塞的单线程来处理所有事件。因此，它运行一个事件循环，它从事件队列中取得最先发生的事件，处理它，返回下一个事件进行处理，依此类推，直到事件队列清空为止。&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Future
@@ -3539,8 +3641,10 @@ data-flex-basis="443px"
 >&lt;/p>
 &lt;p>Flutter 中万物皆为Widget，&lt;code>widget&lt;/code>类继承自&lt;code>DiagnosticableTree&lt;/code>。&lt;/p>
 &lt;p>&lt;code>DiagnosticableTree&lt;/code>即“诊断树”，主要作用是提供调试信息。&lt;/p>
+&lt;p>Flutter 中的 UI 或一堆小部件组成，通常称为小部件树，根据 Widget 树生成一个 Element 树，Widget 和 Element 是一一对应的，根据 Element 树生成 Render 树（渲染树），真正的布局和渲染逻辑在 Render 树中。&lt;/p>
 &lt;p>&lt;code>Widget.createElement()&lt;/code> :创建一个Element实例，记为&lt;code>element&lt;/code>。&lt;/p>
-&lt;p>&lt;code>BuildContext&lt;/code>是一个定位器，用于跟踪树中的每个小部件并定位它们及其在树中的位置。每个小部件的&lt;code>BuildContext&lt;/code>都传递给它们的&lt;code>build&lt;/code>方法。&lt;code>build&lt;/code>方法返回小部件呈现的小部件树。&lt;/p>
+&lt;p>&lt;code>BuildContext&lt;/code>是widget对应的Element，用于跟踪树中的每个小部件并定位它们及其在树中的位置。每个小部件的&lt;code>BuildContext&lt;/code>都传递给它们的&lt;code>build&lt;/code>方法。&lt;code>build&lt;/code>方法返回小部件呈现的小部件树。&lt;/p>
+&lt;p>&lt;code>context&lt;/code>参数是BuildContext类的一个实例，表示当前 widget 在 widget 树中的上下文，每一个 widget 都会对应一个 context 对象。在很多时候我们都需要使用context，比如获取主题：&lt;code>Theme.of(context).colorScheme.primary&lt;/code>。&lt;/p>
 &lt;p>&lt;code>Key&lt;/code>: [Key]是[Widget]、[Element]和[SemanticsNode]的标识符。Key可以保持组件之前的状态，比如在用户滑动时或者修改集合时，决定的条件在&lt;code>canUpdate()&lt;/code>方法中。使用 &lt;code>GlobalKey&lt;/code>时，Flutter 不仅会在树中查找与特定级别匹配的键，还会在整个应用程序中查找,GlobalKey就像全局变量。&lt;/p>
 &lt;p>&lt;code>canUpdate(...)&lt;/code>: &lt;code>newWidget&lt;/code>与&lt;code>oldWidget&lt;/code>的&lt;code>runtimeType&lt;/code>和&lt;code>key&lt;/code>同时相等时就会用&lt;code>new widget&lt;/code>去更新&lt;code>Element&lt;/code>对象的配置。如果 Type 相同但 Key 不同，则Element将被deactivated（释放，但它可能仍然存在）。如果 Type 不同，则Element将被disposed（永久删除）。&lt;/p>
 &lt;p>&lt;code>element.mount()&lt;/code> :调用&lt;code>createRenderObject&lt;/code>创建RenderObject，并使用&lt;code>attachRenderObject&lt;/code>将RenderObject关联到Element上。&lt;/p>
@@ -3598,15 +3702,21 @@ data-flex-basis="443px"
 &lt;td>结论&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>简单的状态管理&lt;/td>
-&lt;td>GetBuilder&lt;/td>
+&lt;td>无状态页面&lt;/td>
+&lt;td>GetView&lt;/td>
 &lt;td>最少&lt;/td>
-&lt;td>性能最好，最常用&lt;/td>
+&lt;td>相当于StatelessWidget,性能最好，最常用&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td rowspan="2">反应式状态管理&lt;/td>
-&lt;td>Obx&lt;/td>
+&lt;td>简单的状态管理（一个页面的状态管理）&lt;/td>
+&lt;td>GetBuilder&lt;/td>
 &lt;td>较少&lt;/td>
+&lt;td>相当于StatefulWidget,性能较好&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="2">反应式状态管理（全局的状态管理）&lt;/td>
+&lt;td>Obx&lt;/td>
+&lt;td>稍多&lt;/td>
 &lt;td>反应式的基础层，较Getx简洁&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3621,41 +3731,11 @@ data-flex-basis="443px"
 &lt;td>在GetBuilder中插入一个Obx，既可以响应式更新、也可以手动更新&lt;/td>
 &lt;/tr>
 &lt;/table>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: black">
-使用场景：
-&lt;/div>
-&lt;p>&lt;strong>Obx&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>当我的控制器&lt;strong>已经&lt;/strong>在其他地方注册&lt;/li>
-&lt;li>最少的代码/噪音&lt;/li>
-&lt;li>反应式小部件，自动刷新，不用&lt;code>update()&lt;/code>&lt;/li>
-&lt;li>监听&lt;strong>多个&lt;/strong>GetXController的状态改变&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>GetX&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>当我的控制器&lt;strong>尚未&lt;/strong>注册&lt;/li>
-&lt;li>我想非常明确/明显地使用哪个控制器&lt;/li>
-&lt;li>我需要&lt;code>initState&lt;/code>在创建过程中进行一些调用&lt;/li>
-&lt;li>反应式小部件，自动刷新，不用&lt;code>update()&lt;/code>&lt;/li>
-&lt;li>只更新某个小组件的状态，只重建特定组件，性能更好&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>GetBuilder&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>我想手动决定何时重建小部件&lt;/li>
-&lt;li>我有几个状态变量，可以作为一个组一起刷新&lt;/li>
-&lt;li>需要update()手动刷新&lt;/li>
-&lt;li>更新几乎整个页面或几乎所有的变量，性能更好&lt;/li>
-&lt;/ul>
 &lt;h4 id="controller">Controller&lt;/h4>
 &lt;p>Getx状态管理的代码结构都可以分为GetXController（控制器层）和view（界面层），GetXController 可以进一步分为state（状态层/变量层），logic（逻辑层）。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">└── sinup
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── controller.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">└── login
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── logic.dart
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── state.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── controller.dart ──┤─ ─ logic.dart
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ │─ ─ state.dart
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── view.dart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
@@ -4056,7 +4136,12 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Get.create()：&lt;/strong> 每次使用都会创建一个新的实例&lt;/p>
 &lt;p>&lt;strong>Get.find()：&lt;/strong> 你可以实例化100万个控制器，Get总会找到你所需的控制器&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.find&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">CountController&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他高级-api">其他高级 API&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他">其他&lt;/h3>
+&lt;h4 id="getview">GetView&lt;/h4>
+&lt;p>一个已注册Controller的&lt;code>const Stateless&lt;/code>Widget。&lt;/p>
+&lt;h4 id="getxservice">GetxService&lt;/h4>
+&lt;p>这个类就像一个GetxController，需要在应用程序的生命周期绝对持久化类实例，使用GetxService。&lt;/p>
+&lt;h4 id="其他高级-api">其他高级 API&lt;/h4>
 &lt;p>&lt;a class="link" href="https://github.com/jonataslaw/getx#other-advanced-apis" target="_blank" rel="noopener"
 >https://github.com/jonataslaw/getx#other-advanced-apis&lt;/a>&lt;/p>
 &lt;h2 id="dio">dio&lt;/h2>
@@ -4132,7 +4217,7 @@ data-flex-basis="443px"
 >Service Worker&lt;/a>：Service Worker 是 PWA 的基本组成部分。它们支持快速加载（无论网络如何）、离线访问、推送通知和其他功能。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-20">
+&lt;details class="spoiler " id="spoiler-19">
 &lt;summary>InAppWebView官方示例注释&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/foundation.dart&amp;#39;;
@@ -4617,7 +4702,7 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;p>lottie需要用到Ae，rive是在线编辑。&lt;/p>
-&lt;h2 id="其他">其他&lt;/h2>
+&lt;h2 id="其他-1">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
 &lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是只能root。
