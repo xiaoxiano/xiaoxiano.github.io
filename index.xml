@@ -2791,22 +2791,34 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 指定类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">String name = &amp;#39;Bob&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果对象(name)不局限于单一的类型(String),可以将其指定为 Object（或 dynamic）类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果对象(name)不局限于单一的类型(例如String),可以将其指定为 Object（或 dynamic）类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Object name = &amp;#39;Bob&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">? 可空类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int? a=123; // int? 表示a是一个可空类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">int? a; // 未初始化变量的初始值为null
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">! 类型断言
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">a! // a不为空
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="常量">常量&lt;/h2>
-&lt;ul>
-&lt;li>final 和 const&lt;/li>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>late
+&lt;a class="link" href="https://dart.dev/null-safety/understanding-null-safety#lazy-initialization" target="_blank" rel="noopener"
+>延迟初始化&lt;/a>:字段被第一次访问时延迟运行，而不是在实例化后立即运行。&lt;/li>
 &lt;/ul>
-&lt;p>final在被使用到的时候才会进行初始化, 如果只是被定义, 而没有被使用到, 那么这个变量一直没有被初始化 (&amp;lsquo;懒加载&amp;rsquo;); 而const修饰的变量, 一经定义就会在编译期间对其进行初始化&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;; // Without a type annotation
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class Weather {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> late int _temperature = _readThermometer();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>final
+已经实例化的final对象不能指向另一个不同的对象，但其字段可以更改。&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">final name = &amp;#39;Bob&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">final String nickname = &amp;#39;Bobby&amp;#39;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="类型">类型&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>const
+编译时常量：一经定义就会在编译期间对其进行初始化，const对象及其字段无法更改。&lt;/li>
+&lt;/ul>
+&lt;h2 id="类型">类型&lt;/h2>
 &lt;h3 id="内置类型">内置类型&lt;/h3>
 &lt;div class="box info" >
 &lt;span class="icon-box baseline">
@@ -3080,7 +3092,11 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Provide an implementation, so the method is not abstract here...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="构造函数">构造函数&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="call">call()&lt;/h4>
+&lt;p>在别人项目经常看到此方法，看其解释感觉可以省略不写。&lt;/p>
+&lt;p>所有 Dart函数（具有函数类型而不是类/接口类型的对象）都有一个call方法。&lt;/p>
+&lt;p>该call方法与函数本身具有相同的函数类型，并且在调用它时它的行为完全相同。您甚至可以说调用函数就是隐式调用其call方法。如果您编写函数调用e1(e2, e3)，那么编译器会检查是否e1有call方法，如果有，则将其转换为方法调用e1.call(e2, e3)。&lt;/p>
+&lt;h3 id="构造函数">构造函数&lt;/h3>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 特点：
@@ -4565,11 +4581,13 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onRecentColorsChanged: ,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// dialog方法：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 在对话框打开时跟踪 ColorPicker 的不同onChange回调
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ColorPicker(...).showPickerDialog;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// dialog函数：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 只需传入对话框的构建上下文以及所需的起始颜色值，并等待它在对话框关闭时返回选定的颜色
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ColorPicker(...).showColorPickerDialog;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">showColorPickerDialog(...)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="widgetbook">Widgetbook&lt;/h2>
 &lt;p>使用Widgetbook可以管理组件、使用不同设备尺寸测试组件、实时修改组件参数、协作共享。&lt;/p>
 &lt;h3 id="windows配置">Windows配置&lt;/h3>
