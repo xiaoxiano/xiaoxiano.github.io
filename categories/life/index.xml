@@ -497,19 +497,33 @@ data-flex-basis="319px"
 &lt;ol>
 &lt;li>解bl锁&lt;/li>
 &lt;/ol>
-&lt;p>各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。\&lt;/p>
+&lt;p>各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。&lt;/p>
 &lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
 >短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
 &lt;ol start="2">
-&lt;li>刷rom（系统）、刷入 TWRP recovery&lt;/li>
+&lt;li>刷入 TWRP (recovery)、刷rom（系统）&lt;/li>
 &lt;/ol>
-&lt;p>建议不要刷机软件一键刷机，都是垃圾系统，一般就用原系统刷适合你手机的TWRP。新手机找不到官方TWRP去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
->https://unofficialtwrp.com/&lt;/a>，点图片左下角手机品牌可以进入分类，收录了全面的非官方TWRP。 \&lt;/p>
-&lt;p>小米为例：在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
->https://xiaomirom.com/&lt;/a>下载刷机工具，刷酷安ID乌堆小透明的ROM（另外欧版eu社区版ROM不错，但我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联网，小米手机已被我拉黑）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
->此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。\&lt;/p>
-&lt;p>华为为例：我在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
->https://m.huaweirom.com/rom/&lt;/a>找到华为有TWRP的rom，我当时看到网站干净无广告就刷了，是可以用的，此网站应该靠谱。Fastboot模式运行run脚本就行了。&lt;/p>
+&lt;p>TWRP 类似于 windows PE，是修改系统的程序。&lt;/p>
+&lt;p>建议不要刷机软件一键刷机，都是垃圾系统，一般就使用原系统，刷适合你手机的TWRP。&lt;/p>
+&lt;p>新手机找不到官方TWRP去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
+>https://unofficialtwrp.com/&lt;/a>，点图片左下角手机品牌可以进入分类，收录了全面的非官方TWRP。&lt;/p>
+&lt;p>**三星为例：**进入刷机模式，下载三星手机刷机的软件&lt;a class="link" href="https://odindownloader.com/category/download" target="_blank" rel="noopener"
+>Odin&lt;/a>和对应机型的TWRP（tar格式），然后用Odin选AP刷进手机。在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
+>https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm。&lt;/p>
+&lt;p>SamFirm使用方法：&lt;/p>
+&lt;ul>
+&lt;li>Model：填入设备型号&lt;/li>
+&lt;li>Region：填入想要下载的固件的地区代码，例如港版TGY&lt;/li>
+&lt;li>勾选 Binary Nature&lt;/li>
+&lt;li>点击 Check Update 会在 Version 显示最新版本代码&lt;/li>
+&lt;li>点击 Download
+最后用TWRP刷入rom。&lt;/li>
+&lt;/ul>
+&lt;p>**小米为例：**在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
+>https://xiaomirom.com/&lt;/a>下载刷机工具，刷酷安ID乌堆小透明的ROM，另外欧版eu社区版ROM不错，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
+>此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。&lt;/p>
+&lt;p>**华为为例：**在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
+>https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广告就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
