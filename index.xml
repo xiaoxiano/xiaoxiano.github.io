@@ -1,4 +1,76 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
+&lt;h2 id="哈希算法">哈希算法&lt;/h2>
+&lt;p>哈希算法：将一段（通常是较大的）数据映射为较短小的数据。这段小数据就是大数据的哈希值，它是唯一的，一旦大数据发生变化，他的哈希值也会发生变化。&lt;/p>
+&lt;p>&lt;strong>哈希碰撞&lt;/strong>&lt;/p>
+&lt;p>哈希碰撞是指，两个不同的输入得到了相同的输出：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&amp;#34;AaAaAa&amp;#34;.hashCode(); // 0x7460e8c0
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;BBAaBB&amp;#34;.hashCode(); // 0x7460e8c0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>碰撞能不能避免，哈希算法的输出长度越长，碰撞概率越小。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">算法&lt;/th>
+&lt;th style="text-align:left">输出长度（位）&lt;/th>
+&lt;th style="text-align:left">输出长度（字节）&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">MD5&lt;/td>
+&lt;td style="text-align:left">128 bits&lt;/td>
+&lt;td style="text-align:left">16 bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">SHA-1&lt;/td>
+&lt;td style="text-align:left">160 bits&lt;/td>
+&lt;td style="text-align:left">20 bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">RipeMD-160&lt;/td>
+&lt;td style="text-align:left">160 bits&lt;/td>
+&lt;td style="text-align:left">20 bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">SHA-256&lt;/td>
+&lt;td style="text-align:left">256 bits&lt;/td>
+&lt;td style="text-align:left">32 bytes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">SHA-512&lt;/td>
+&lt;td style="text-align:left">512 bits&lt;/td>
+&lt;td style="text-align:left">64 bytes&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>应用：&lt;/p>
+&lt;ul>
+&lt;li>用于密码管理 - 把用户的密码以MD5值（或类似的其它算法）的方式保存起来，用户注册的时候，系统是把用户输入的密码计算成 MD5 值，然后再去和系统中保存的 MD5 值进行比较，如果密文相同，就可以认定密码是正确的，否则密码错误。通过这样的步骤，系统在并不知道用户密码明码的情况下就可以确定用户登录系统的合法性。如果数据库泄漏，黑客也无法拿到用户的原始口令，如果黑客有一个预先计算好的常用口令和它们的MD5的对照表（彩虹表），就能反查到原始口令，我们可以采取措施来抵御，方法是对每个口令额外添加随机数，这个方法称之为加盐。&lt;/li>
+&lt;li>电子签名 - 使用 MD5算法就可以为任何文件（不管其大小、格式、数量）产生一个独一无二的&lt;code>数字指纹&lt;/code>，借助这个&lt;code>数字指纹&lt;/code>，通过检查文件前后 MD5 值是否发生了改变，就可以知道源文件是否被改动。&lt;/li>
+&lt;/ul>
+&lt;h2 id="基于密钥的哈希算法">基于密钥的哈希算法&lt;/h2>
+&lt;p>HMAC:类似“加盐”的MD5，Hmac本质上就是把安全key混入摘要的算法。&lt;/p>
+&lt;h1 id="可逆算法">可逆算法&lt;/h1>
+&lt;h2 id="对称加密">对称加密&lt;/h2>
+&lt;p>加密：明文 -&amp;gt; 密钥加密 -&amp;gt; 密文。&lt;/p>
+&lt;p>解密：密文 -&amp;gt; 密钥解密 -&amp;gt; 明文。&lt;/p>
+&lt;p>&lt;strong>经典加密算法有三种&lt;/strong> ：&lt;/p>
+&lt;ul>
+&lt;li>DES(Data Encryption Standard)：数据加密标准(现在用的比较少，因为它的加密强度不够，能够暴力破解)&lt;/li>
+&lt;li>3DES：原理和DES几乎是一样的，只是使用3个密钥，对相同的数据执行三次加密，增强加密强度。(缺点：要维护3个密钥，大大增加了维护成本)&lt;/li>
+&lt;li>AES(Advanced Encryption Standard)：高级加密标准，目前美国国家安全局使用的，苹果的钥匙串访问采用的就AES加密。是现在公认的最安全的加密方式，是对称密钥加密中最流行的算法。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>加密模式&lt;/strong> ：&lt;/p>
+&lt;ul>
+&lt;li>ECB模式（默认）：电码本模式 Electronic Codebook Book，就是每个块都是独立加密&lt;/li>
+&lt;li>CBC模式：密码分组链接模式 Cipher Block Chaining，使用一个密钥和一个初始化向量(IV)对数据执行加密转换&lt;/li>
+&lt;li>CTR模式：计算器模式 Counter&lt;/li>
+&lt;li>CFB模式：密码反馈模式 Cipher FeedBack&lt;/li>
+&lt;li>OFB模式：输出反馈模式 Output FeedBack&lt;/li>
+&lt;/ul>
+&lt;p>加密模式是加密过程对独立数据块的处理。对于较长的明文进行加密需要进行分块加密，在实际开发中，推荐使用CBC的，ECB的要少用。&lt;/p>
+&lt;h2 id="非对称加密rsa">非对称加密RSA&lt;/h2>
+&lt;p>发送公钥 -&amp;gt; 对方用公钥加密 -&amp;gt; 收到密文 私钥解密&lt;/p>
+&lt;p>广泛应用的非对称加密算法有&lt;code>RSA&lt;/code>算法和美国国家标准局提出的&lt;code>DSA&lt;/code>。&lt;/p></description></item><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
 &lt;ul>
 &lt;li>surface pro系不错，可是高价买低配&lt;/li>
 &lt;li>ROG 幻X，高配显卡反而拉低续航，二合一的屏幕尺寸也不适合打游戏&lt;/li>
@@ -4734,33 +4806,40 @@ data-flex-basis="426px"
 &lt;ol start="2">
 &lt;li>刷入 TWRP (recovery)、刷rom（系统）&lt;/li>
 &lt;/ol>
-&lt;p>建议不要刷机软件一键刷机，都是垃圾系统，一般就使用原系统，刷适合你手机的TWRP。TWRP 类似于 windows PE，是修改系统的程序。&lt;/p>
-&lt;p>首先，去手机品牌官网下载对应机型的驱动，并在windows设备管理器确认连接，&lt;a class="link" href="https://twrp.me" target="_blank" rel="noopener"
->twrp官网&lt;/a>下载TWRP。（也可以去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
->https://unofficialtwrp.com&lt;/a>，收录了全面的非官方TWRP，点图片左下角手机品牌可以进入分类，如果有广告拦截检测可以用ublock插件。）&lt;/p>
-&lt;p>然后，下载刷机软件和rom：&lt;/p>
+&lt;p>建议不要刷机软件一键刷机，都是垃圾系统。&lt;/p>
+&lt;ul>
+&lt;li>手机品牌官网下载对应机型的驱动，并在windows设备管理器确认连接。&lt;/li>
+&lt;li>&lt;a class="link" href="https://twrp.me" target="_blank" rel="noopener"
+>twrp官网&lt;/a>下载TWRP。（TWRP 类似于 windows PE，是修改系统的程序。也可以去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
+>https://unofficialtwrp.com&lt;/a>，收录了全面的非官方TWRP，如果有广告拦截检测可以用ublock插件。）&lt;/li>
+&lt;li>下载刷机软件和rom：&lt;/li>
+&lt;/ul>
 &lt;p>&lt;strong>三星为例：&lt;/strong> 进入刷机模式，下载三星手机刷机的软件&lt;a class="link" href="https://odindownloader.com/category/download" target="_blank" rel="noopener"
 >Odin&lt;/a>和 &lt;strong>tar格式&lt;/strong>的TWRP，然后用Odin（选AP）刷进手机。可参考&lt;a class="link" href="https://www.youtube.com/@SebastianSNRL/featured" target="_blank" rel="noopener"
->此人视频&lt;/a>。&lt;/p>
-&lt;p>如需刷入rom，在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
->https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm。&lt;/p>
+>youtube视频&lt;/a>。&lt;/p>
+&lt;p>有了TWRP可选择卡刷，在&lt;a class="link" href="https://samfw.com/" target="_blank" rel="noopener"
+>https://samfw.com/&lt;/a>下载，放入手机存储，双清后安装即可。&lt;/p>
+&lt;p>如果线刷rom，在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
+>https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm，然后使用Odin。&lt;/p>
 &lt;p>SamFirm使用方法：&lt;/p>
-&lt;ul>
-&lt;li>Model：填入设备型号&lt;/li>
-&lt;li>Region：填入想要下载的固件的地区代码，例如港版TGY&lt;/li>
-&lt;li>勾选 Binary Nature&lt;/li>
-&lt;li>点击 Check Update 会在 Version 显示最新版本代码&lt;/li>
-&lt;li>点击 Download&lt;/li>
-&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/phone-root/1.png"
+width="1014"
+height="508"
+srcset="https://xiaoxiano.github.io/p/phone-root/1_hu96ffff342c1be3f3219efbedfb09d5a4_45403_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/phone-root/1_hu96ffff342c1be3f3219efbedfb09d5a4_45403_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="479px"
+>&lt;/p>
 &lt;p>&lt;strong>小米为例：&lt;/strong> 在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
->https://xiaomirom.com/&lt;/a>下载刷机工具，刷酷安ID乌堆小透明的ROM，另外欧版eu社区版ROM不错，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
+>https://xiaomirom.com/&lt;/a>下载刷机工具，下载酷安ID乌堆小透明的ROM，或者欧版eu社区版ROM，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
 >此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。&lt;/p>
 &lt;p>&lt;strong>华为旧机为例：&lt;/strong> 在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
 >https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广告就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
-&lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
+&lt;p>像卡刷一样操作，github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
@@ -6587,7 +6666,7 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;/ol>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
-&lt;p>本文软件均为自用，本人无意推广任何软件，所以下载地址请自行查找，一般在google可找到官方，或者在52论坛搜搜看&lt;/p>
+&lt;p>一般在google就能找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -6634,13 +6713,13 @@ data-flex-basis="436px"
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、Kiwi、三星浏览器、x浏览器&lt;/p>
+&lt;p>浏览器：Chrome、Kiwi、x浏览器&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>影视：&lt;/p>
 &lt;ul>
 &lt;li>论坛haopanyou.net&lt;/li>
-&lt;li>zd01.tv下载 + AdGuard　　# AdGuard设置复杂请自行研究，去除视频开头广告可在日志中找到广告，把这几个广告网站地址添加到自定义过滤&lt;/li>
+&lt;li>App：whg6.com搜影视&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -6670,7 +6749,7 @@ data-flex-basis="436px"
 &lt;li>zarchiver　　　　　　　# 文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
 &lt;li>Sendapp # 提取apk&lt;/li>
-&lt;li>ES文件浏览器 # 访问局域网文件&lt;/li>
+&lt;li>Solid Explorer # 访问局域网文件&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://xiaoxiano.github.io/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>

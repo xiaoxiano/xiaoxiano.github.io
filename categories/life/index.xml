@@ -503,33 +503,40 @@ data-flex-basis="319px"
 &lt;ol start="2">
 &lt;li>刷入 TWRP (recovery)、刷rom（系统）&lt;/li>
 &lt;/ol>
-&lt;p>建议不要刷机软件一键刷机，都是垃圾系统，一般就使用原系统，刷适合你手机的TWRP。TWRP 类似于 windows PE，是修改系统的程序。&lt;/p>
-&lt;p>首先，去手机品牌官网下载对应机型的驱动，并在windows设备管理器确认连接，&lt;a class="link" href="https://twrp.me" target="_blank" rel="noopener"
->twrp官网&lt;/a>下载TWRP。（也可以去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
->https://unofficialtwrp.com&lt;/a>，收录了全面的非官方TWRP，点图片左下角手机品牌可以进入分类，如果有广告拦截检测可以用ublock插件。）&lt;/p>
-&lt;p>然后，下载刷机软件和rom：&lt;/p>
+&lt;p>建议不要刷机软件一键刷机，都是垃圾系统。&lt;/p>
+&lt;ul>
+&lt;li>手机品牌官网下载对应机型的驱动，并在windows设备管理器确认连接。&lt;/li>
+&lt;li>&lt;a class="link" href="https://twrp.me" target="_blank" rel="noopener"
+>twrp官网&lt;/a>下载TWRP。（TWRP 类似于 windows PE，是修改系统的程序。也可以去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
+>https://unofficialtwrp.com&lt;/a>，收录了全面的非官方TWRP，如果有广告拦截检测可以用ublock插件。）&lt;/li>
+&lt;li>下载刷机软件和rom：&lt;/li>
+&lt;/ul>
 &lt;p>&lt;strong>三星为例：&lt;/strong> 进入刷机模式，下载三星手机刷机的软件&lt;a class="link" href="https://odindownloader.com/category/download" target="_blank" rel="noopener"
 >Odin&lt;/a>和 &lt;strong>tar格式&lt;/strong>的TWRP，然后用Odin（选AP）刷进手机。可参考&lt;a class="link" href="https://www.youtube.com/@SebastianSNRL/featured" target="_blank" rel="noopener"
->此人视频&lt;/a>。&lt;/p>
-&lt;p>如需刷入rom，在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
->https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm。&lt;/p>
+>youtube视频&lt;/a>。&lt;/p>
+&lt;p>有了TWRP可选择卡刷，在&lt;a class="link" href="https://samfw.com/" target="_blank" rel="noopener"
+>https://samfw.com/&lt;/a>下载，放入手机存储，双清后安装即可。&lt;/p>
+&lt;p>如果线刷rom，在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
+>https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm，然后使用Odin。&lt;/p>
 &lt;p>SamFirm使用方法：&lt;/p>
-&lt;ul>
-&lt;li>Model：填入设备型号&lt;/li>
-&lt;li>Region：填入想要下载的固件的地区代码，例如港版TGY&lt;/li>
-&lt;li>勾选 Binary Nature&lt;/li>
-&lt;li>点击 Check Update 会在 Version 显示最新版本代码&lt;/li>
-&lt;li>点击 Download&lt;/li>
-&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/phone-root/1.png"
+width="1014"
+height="508"
+srcset="https://xiaoxiano.github.io/p/phone-root/1_hu96ffff342c1be3f3219efbedfb09d5a4_45403_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/phone-root/1_hu96ffff342c1be3f3219efbedfb09d5a4_45403_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="199"
+data-flex-basis="479px"
+>&lt;/p>
 &lt;p>&lt;strong>小米为例：&lt;/strong> 在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
->https://xiaomirom.com/&lt;/a>下载刷机工具，刷酷安ID乌堆小透明的ROM，另外欧版eu社区版ROM不错，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
+>https://xiaomirom.com/&lt;/a>下载刷机工具，下载酷安ID乌堆小透明的ROM，或者欧版eu社区版ROM，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
 >此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。&lt;/p>
 &lt;p>&lt;strong>华为旧机为例：&lt;/strong> 在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
 >https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广告就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
-&lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
+&lt;p>像卡刷一样操作，github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
