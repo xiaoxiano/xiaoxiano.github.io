@@ -2608,7 +2608,7 @@ data-flex-basis="319px"
 &lt;ol>
 &lt;li>安装 JDK&lt;/li>
 &lt;/ol>
-&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#java8-windows" target="_blank" rel="noopener"
+&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" target="_blank" rel="noopener"
 >下载地址&lt;/a>&lt;/p>
 &lt;ol start="2">
 &lt;li>安装配置Android Studio&lt;/li>
@@ -2628,9 +2628,8 @@ data-flex-basis="319px"
 &lt;p>&lt;strong>Dart:&lt;/strong> 无需配置，flutter现在自带dart。&lt;/p>
 &lt;p>&lt;strong>Flutter:&lt;/strong> path:&lt;code>C:\flutter\bin&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
-JAVA_HOME:&lt;code>C:\Program Files\Java\jdk-1.8&lt;/code> &lt;br>
-path:&lt;code>C:\Program Files\Java\jdk-1.8\bin&lt;/code> &lt;br>
-path:&lt;code>C:\Program Files\Java\jdk-1.8\jre\bin&lt;/code>&lt;/p>
+JAVA_HOME:&lt;code>C:\Program Files\Java\jdk-17&lt;/code> &lt;br>
+path:&lt;code>C:\Program Files\Java\jdk-17\bin&lt;/code>&lt;/p>
 &lt;p>&lt;strong>Android SDK Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
 &lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
 &lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
@@ -4792,6 +4791,152 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;p>lottie需要用到Ae，rive是在线编辑。&lt;/p>
+&lt;h2 id="安卓">安卓&lt;/h2>
+&lt;h3 id="签名">签名&lt;/h3>
+&lt;ol>
+&lt;li>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>android studio方法：&lt;/li>
+&lt;/ul>
+&lt;p>以管理员身份运行 android studio -&amp;gt; 打开项目下的Android文件夹 -&amp;gt; Build -&amp;gt; Generate Signed Bundle / APK -&amp;gt; 选择 APK 点击 Next -&amp;gt; Create new&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/keystore.png"
+width="658"
+height="669"
+srcset="https://xiaoxiano.github.io/p/flutter/keystore_hu9e11625d68bcb57a0089d116b2122c43_27301_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/keystore_hu9e11625d68bcb57a0089d116b2122c43_27301_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="98"
+data-flex-basis="236px"
+>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>命令行ketool方法（推荐）：&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>ketool容易修改密钥，参考&lt;a class="link" href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/keytool.html#keytool_option_gencert" target="_blank" rel="noopener"
+>Java8版官方文档&lt;/a>或&lt;a class="link" href="https://docs.oracle.com/en/java/javase/index.html" target="_blank" rel="noopener"
+>更多版本&lt;/a>。&lt;/p>
+&lt;p>&lt;strong>使用&lt;/strong>&lt;/p>
+&lt;p>项目下的Android/app文件夹打开cmd&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 创建keystore和密钥对
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -genkeypair -alias key -keyalg RSA -keysize 2048 -validity 10000 -keystore ./release.keystore.jks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 列出所有可用的证书别名（指定路径）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -list -v -keystore ./release.keystore.jks
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//删除的证书（指定别名、路径，手动删除文件）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -delete -alias key -keystore ./release.keystore.jks
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-21">
+&lt;summary>详细参数&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">-genkeypair 生成密钥对（公钥和关联的私钥）。将该证书链和私钥存储在由alias标识的新密钥库条目中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 别名，每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keystore 密钥库位置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keyalg 指定密钥的算法 (默认值：DSA)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keysize 指定密钥长度 （默认值取决于keyalg：RSA为2048，DSA为1024）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-validity 指定创建的证书有效期多少天(默认 90)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepass 指定密钥库的密码(获取keystore信息所需的密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypass 指定别名条目的密码(私钥的密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-dname 指定证书发行者信息 其中： “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名 称,ST=州或省份名称,C=单位的两字母国家代码”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-list 显示密钥库中的证书信息 keytool -list -v -keystore 指定keystore -storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v 显示密钥库中的证书详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-export 将别名指定的证书导出到文件 keytool -export -alias 需要导出的别名 -keystore 指定keystore -file 指定导出的证书位置及证书名称 -storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-file 参数指定导出到文件的文件名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-delete 删除密钥库中某条目 keytool -delete -alias 指定需删除的别 -keystore 指定keystore – storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-printcert 查看导出的证书信息 keytool -printcert -file g:\sso\michael.crt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypasswd 修改密钥库中指定条目口令 keytool -keypasswd -alias 需修改的别名 -keypass 旧密码 -new 新密码 -storepass keystore密码 -keystore sage
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepasswd 修改keystore口令 keytool -storepasswd -keystore g:\sso\michael.keystore(需修改口令的keystore) -storepass pwdold(原始密码) -new pwdnew(新密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-import 将已签名数字证书导入密钥库 keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">中创建一个默认文件”.keystore”,还会产生一个mykey的别名，mykey中包含用户的公钥、私钥和证书(在没有指定生成位置的情况下,keystore会存在用户系统默认目录)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 产生别名 每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keystore 指定密钥库的名称(产生的各类信息将不在.keystore文件中)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keyalg 指定密钥的算法 (如 RSA DSA，默认值为：DSA)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-validity 指定创建的证书有效期多少天(默认 90)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keysize 指定密钥长度 （默认 1024）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepass 指定密钥库的密码(获取keystore信息所需的密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypass 指定别名条目的密码(私钥的密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-dname 指定证书发行者信息 其中： “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名 称,ST=州或省份名称,C=单位的两字母国家代码”
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-list 显示密钥库中的证书信息 keytool -list -v -keystore 指定keystore -storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v 显示密钥库中的证书详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-export 将别名指定的证书导出到文件 keytool -export -alias 需要导出的别名 -keystore 指定keystore -file 指定导出的证书位置及证书名称 -storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-file 参数指定导出到文件的文件名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-delete 删除密钥库中某条目 keytool -delete -alias 指定需删除的别 -keystore 指定keystore – storepass 密码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-printcert 查看导出的证书信息 keytool -printcert -file g:\sso\michael.crt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypasswd 修改密钥库中指定条目口令 keytool -keypasswd -alias 需修改的别名 -keypass 旧密码 -new 新密码 -storepass keystore密码 -keystore sage
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepasswd 修改keystore口令 keytool -storepasswd -keystore g:\sso\michael.keystore(需修改口令的keystore) -storepass pwdold(原始密码) -new pwdnew(新密码)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-import 将已签名数字证书导入密钥库 keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;ol start="2">
+&lt;li>&lt;strong>配置&lt;/strong>&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>为防止 build.gradle 协作时被修改、上线后反编译泄露，把密钥信息保存到 android/local.properties：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">storePassword=12345678
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keyPassword=12345678
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keyAlias=key
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">storeFile=./release.keystore.jks
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>local.properties默认不会被添加到Git提交到远程仓库。&lt;/p>
+&lt;ul>
+&lt;li>在android/app/build.gradle添加：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 读取 local.properties
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def mystoreFile = file(localProperties.getProperty(&amp;#39;storeFile&amp;#39;))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def mystorePassword = localProperties.getProperty(&amp;#39;storePassword&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def mykeyAlias = localProperties.getProperty(&amp;#39;keyAlias&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def mykeyPassword = localProperties.getProperty(&amp;#39;keyPassword&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> // 签名配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfigs {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias mykeyAlias
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword mykeyPassword
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile mystoreFile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword mystorePassword
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // debug模式使用默认的 C:\Users&lt;span class="err">&amp;lt;&lt;/span>用户名&amp;gt;.Android\debug.keystore 进行签名，密码是 android
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // debug {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // keyAlias &amp;#39;androiddebugkey&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // keyPassword &amp;#39;android&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // storeFile file(&amp;#39;C:\\Users\\90487\\.android\\debug.keystore&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // storePassword &amp;#39;android&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildTypes {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // TODO: Add your own signing config for the release build.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Signing with the debug keys for now, so `flutter run --release` works.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.release
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // 混淆
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // minifyEnabled false
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // 混淆文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // proguardFiles getDefaultProguardFile(&amp;#39;proguard-android-optimize.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // debug {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // signingConfig signingConfigs.debug
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // // 包名后添加.debug，可以同时安装多个应用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // applicationIdSuffix &amp;#39;.debug&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>android studio验证配置：File -&amp;gt; Project Structure -&amp;gt; Modules -&amp;gt; Signing Configs&lt;/p>
+&lt;p>参考：&lt;a class="link" href="https://developer.android.com/studio/publish/app-signing#generate-key" target="_blank" rel="noopener"
+>官方文档&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903942007029773#heading-5" target="_blank" rel="noopener"
+>buildTypes&lt;/a>
+3. &lt;strong>生成签名报告（可以获得md5）&lt;/strong>&lt;/p>
+&lt;p>点击右侧Gradle选项卡，android -&amp;gt; app -&amp;gt; Tasks -&amp;gt; android -&amp;gt; signingReport。&lt;/p>
+&lt;p>如果 Gradle 面板目录中没有 signingReport 文件，进入设置项：File -&amp;gt; Settings -&amp;gt; Experimental -&amp;gt; 取消选中 Only include&amp;hellip;during Gradle Sync。然后同步一下：File -&amp;gt; Sync Project with Gradle Files。&lt;/p>
+&lt;h3 id="编译">编译&lt;/h3>
+&lt;ul>
+&lt;li>apk&lt;/li>
+&lt;/ul>
+&lt;p>项目根目录下执行&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter build apk --split-per-abi
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>bundles（google 平台需要 bundle 文件格式）&lt;/li>
+&lt;/ul>
+&lt;p>项目根目录下执行&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter build appbundle
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出 build/app/outputs/bundle/release/app-release.aab&lt;/p>
 &lt;h2 id="其他-1">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
