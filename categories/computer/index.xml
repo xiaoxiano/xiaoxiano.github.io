@@ -3296,7 +3296,7 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// dialog函数：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 只需传入对话框的构建上下文以及所需的起始颜色值，并等待它在对话框关闭时返回选定的颜色
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">showColorPickerDialog(...)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="widgetbook">Widgetbook&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="widgetbook仅作了解">Widgetbook(仅作了解)&lt;/h2>
 &lt;p>使用Widgetbook可以管理组件、使用不同设备尺寸测试组件、实时修改组件参数、协作共享。&lt;/p>
 &lt;h3 id="windows配置">Windows配置&lt;/h3>
 &lt;p>确保安装Visual Studio，及其应用：
@@ -3431,11 +3431,12 @@ data-flex-basis="426px"
 &lt;h2 id="安卓">安卓&lt;/h2>
 &lt;h3 id="签名">签名&lt;/h3>
 &lt;ol>
-&lt;li>&lt;/li>
-&lt;/ol>
+&lt;li>
 &lt;ul>
 &lt;li>android studio方法：&lt;/li>
 &lt;/ul>
+&lt;/li>
+&lt;/ol>
 &lt;p>以管理员身份运行 android studio -&amp;gt; 打开项目下的Android文件夹 -&amp;gt; Build -&amp;gt; Generate Signed Bundle / APK -&amp;gt; 选择 APK 点击 Next -&amp;gt; Create new&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/keystore.png"
 width="658"
@@ -3556,10 +3557,11 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>android studio验证配置：File -&amp;gt; Project Structure -&amp;gt; Modules -&amp;gt; Signing Configs&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://developer.android.com/studio/publish/app-signing#generate-key" target="_blank" rel="noopener"
->官方文档&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://juejin.cn/post/6844903942007029773#heading-5" target="_blank" rel="noopener"
->buildTypes&lt;/a>
-3. &lt;strong>生成签名报告（可以获得md5）&lt;/strong>&lt;/p>
+>官方文档&lt;/a> &lt;a class="link" href="https://juejin.cn/post/6844903942007029773#heading-5" target="_blank" rel="noopener"
+>buildTypes&lt;/a>&lt;/p>
+&lt;ol start="3">
+&lt;li>&lt;strong>生成签名报告（可以获得md5）&lt;/strong>&lt;/li>
+&lt;/ol>
 &lt;p>点击右侧Gradle选项卡，android -&amp;gt; app -&amp;gt; Tasks -&amp;gt; android -&amp;gt; signingReport。&lt;/p>
 &lt;p>如果 Gradle 面板目录中没有 signingReport 文件，进入设置项：File -&amp;gt; Settings -&amp;gt; Experimental -&amp;gt; 取消选中 Only include&amp;hellip;during Gradle Sync。然后同步一下：File -&amp;gt; Sync Project with Gradle Files。&lt;/p>
 &lt;h3 id="编译">编译&lt;/h3>
