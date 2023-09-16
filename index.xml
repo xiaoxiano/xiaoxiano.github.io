@@ -1,4 +1,214 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>投资港美A股</title><link>https://xiaoxiano.github.io/p/stocks/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/stocks/</guid><description>&lt;h1 id="a股">A股&lt;/h1>
+&lt;h2 id="政策底市场底业绩底">政策底、市场底、业绩底&lt;/h2>
+&lt;p>回顾历史，时间维度上政策底、市场底、业绩底依次出现。&lt;/p>
+&lt;p>参考：&lt;a class="link" href="https://redian.news/wxnews/565548" target="_blank" rel="noopener"
+>复盘A股历次政策底、市场底、业绩底&lt;/a>&lt;/p>
+&lt;h3 id="流动性">流动性&lt;/h3>
+&lt;p>流动性，是股市的领先指标，也是影响股价最重要的因素之一。衡量过剩的流动性有以下两个参考方法。&lt;/p>
+&lt;ul>
+&lt;li>方法1：看M2同比与名义GDP同比的差值，其逻辑在于央行说的“货币供应量要与名义GDP增速相一致”，如果两者缺口大，那就是出现了过剩的流动性。&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>日期&lt;/th>
+&lt;th>&lt;a class="link" href="https://data.eastmoney.com/cjsj/hbgyl.html" target="_blank" rel="noopener"
+>货币供应量-货币和准货币(M2)&lt;/a>&lt;/th>
+&lt;th>同比&lt;/th>
+&lt;th>国内生产总值&lt;/th>
+&lt;th>同比&lt;/th>
+&lt;th>同比差值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年6月&lt;/td>
+&lt;td>2873023.83&lt;/td>
+&lt;td>11.30%&lt;/td>
+&lt;td>593034.2&lt;/td>
+&lt;td>5.50%&lt;/td>
+&lt;td>0.058&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年3月&lt;/td>
+&lt;td>2814566.31&lt;/td>
+&lt;td>12.70%&lt;/td>
+&lt;td>284996.6&lt;/td>
+&lt;td>4.50%&lt;/td>
+&lt;td>0.082&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2022年12月&lt;/td>
+&lt;td>2664320.84&lt;/td>
+&lt;td>11.80%&lt;/td>
+&lt;td>1210207.2&lt;/td>
+&lt;td>3.00%&lt;/td>
+&lt;td>0.088&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2021年12月&lt;/td>
+&lt;td>2382899.56&lt;/td>
+&lt;td>9.00%&lt;/td>
+&lt;td>1149237&lt;/td>
+&lt;td>8.10%&lt;/td>
+&lt;td>0.009&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2020年12月&lt;/td>
+&lt;td>2186795.89&lt;/td>
+&lt;td>10.10%&lt;/td>
+&lt;td>1013567&lt;/td>
+&lt;td>2.30%&lt;/td>
+&lt;td>0.078&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2019年12月&lt;/td>
+&lt;td>1986488.82&lt;/td>
+&lt;td>8.70%&lt;/td>
+&lt;td>986515.2&lt;/td>
+&lt;td>6.10%&lt;/td>
+&lt;td>0.026&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2018年12月&lt;/td>
+&lt;td>1826744.22&lt;/td>
+&lt;td>8.10%&lt;/td>
+&lt;td>919281.1&lt;/td>
+&lt;td>6.60%&lt;/td>
+&lt;td>0.015&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2017年12月&lt;/td>
+&lt;td>1690235.31&lt;/td>
+&lt;td>8.07%&lt;/td>
+&lt;td>832035.9&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>0.0117&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2016年12月&lt;/td>
+&lt;td>1550066.67&lt;/td>
+&lt;td>11.30%&lt;/td>
+&lt;td>746395.1&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>0.046&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2015年12月&lt;/td>
+&lt;td>1392278.11&lt;/td>
+&lt;td>13.30%&lt;/td>
+&lt;td>688858.2&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>0.064&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2014年12月&lt;/td>
+&lt;td>1228374.81&lt;/td>
+&lt;td>12.20%&lt;/td>
+&lt;td>643563.1&lt;/td>
+&lt;td>7.30%&lt;/td>
+&lt;td>0.049&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2013年12月&lt;/td>
+&lt;td>1106524.98&lt;/td>
+&lt;td>13.60%&lt;/td>
+&lt;td>592963.2&lt;/td>
+&lt;td>7.80%&lt;/td>
+&lt;td>0.058&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2012年12月&lt;/td>
+&lt;td>974148.8&lt;/td>
+&lt;td>13.80%&lt;/td>
+&lt;td>538580&lt;/td>
+&lt;td>7.90%&lt;/td>
+&lt;td>0.059&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2011年12月&lt;/td>
+&lt;td>787406.2&lt;/td>
+&lt;td>13.04%&lt;/td>
+&lt;td>487940.2&lt;/td>
+&lt;td>9.50%&lt;/td>
+&lt;td>0.0354&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2010年12月&lt;/td>
+&lt;td>725851.79&lt;/td>
+&lt;td>19.70%&lt;/td>
+&lt;td>412119.3&lt;/td>
+&lt;td>10.60%&lt;/td>
+&lt;td>0.091&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2009年12月&lt;/td>
+&lt;td>610224.52&lt;/td>
+&lt;td>27.68%&lt;/td>
+&lt;td>348517.7&lt;/td>
+&lt;td>9.40%&lt;/td>
+&lt;td>0.1828&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2008年12月&lt;/td>
+&lt;td>475166.6&lt;/td>
+&lt;td>17.82%&lt;/td>
+&lt;td>319244.6&lt;/td>
+&lt;td>9.70%&lt;/td>
+&lt;td>0.0812&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2007年12月&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>270092.3&lt;/td>
+&lt;td>14.20%&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2006年12月&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>219438.5&lt;/td>
+&lt;td>12.70%&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield" target="_blank" rel="noopener"
+>看国债收益率&lt;/a>，低于3.3%时被认为是流动性过剩，4%以上则意味着流动性的收紧。&lt;/li>
+&lt;/ul>
+&lt;h3 id="业绩底">业绩底&lt;/h3>
+&lt;p>A股上市公司利润增速、工业增加值同比、制造业PMI等指标见底反转标志着业绩底到来。&lt;/p>
+&lt;h1 id="美股">美股&lt;/h1>
+&lt;h2 id="开户">开户&lt;/h2>
+&lt;p>美国银行开户需要准备的资料：&lt;/p>
+&lt;ul>
+&lt;li>美国实体手机卡：Paygo美国手机卡（月租三美元，目前最便宜的卡）&lt;/li>
+&lt;li>美国私人地址（用来申请银行账号/信用卡、美国税号TIN）：AnytimeMailbox&lt;/li>
+&lt;li>ITIN（作为身份验证、银行要求提供的地址证明）&lt;/li>
+&lt;li>美国独立IP&lt;/li>
+&lt;/ul>
+&lt;p>券商：推荐德美利&lt;/p>
+&lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
+>course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
 &lt;h2 id="哈希算法">哈希算法&lt;/h2>
 &lt;p>哈希算法：将一段（通常是较大的）数据映射为较短小的数据。这段小数据就是大数据的哈希值，它是唯一的，一旦大数据发生变化，他的哈希值也会发生变化。&lt;/p>
 &lt;p>&lt;strong>哈希碰撞&lt;/strong>&lt;/p>
@@ -4791,8 +5001,28 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;p>lottie需要用到Ae，rive是在线编辑。&lt;/p>
-&lt;h2 id="安卓">安卓&lt;/h2>
-&lt;h3 id="签名">签名&lt;/h3>
+&lt;h2 id="上架">上架&lt;/h2>
+&lt;h3 id="包名">包名&lt;/h3>
+&lt;ul>
+&lt;li>Android 是在 &lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>main&lt;/code> ▸ &lt;code>AndroidManifest.xml&lt;/code>&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Info.plist&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="应用名称">应用名称&lt;/h3>
+&lt;ul>
+&lt;li>Android 是在 &lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>main&lt;/code> ▸ &lt;code>AndroidManifest.xml&lt;/code> 中修改&lt;code>android:label=&amp;quot;XXX&amp;quot;&lt;/code>;&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Info.plist&lt;/code> 中修改&lt;code>CFBundleName&lt;/code>对应的Value&lt;/li>
+&lt;/ul>
+&lt;h3 id="图标">图标&lt;/h3>
+&lt;ul>
+&lt;li>Android 在&lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>res&lt;/code> ▸ &lt;code>mipmap-...&lt;/code> 文件夹中替换相应图片&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Assets.xcassets&lt;/code> ▸ &lt;code>AppIcon.appiconset&lt;/code>文件夹中替换相应尺寸的图片， 如果使用不同的文件名，那还必须更新同一目录中的&lt;code>Contents.json&lt;/code>文件。&lt;/li>
+&lt;/ul>
+&lt;h3 id="启动图片">启动图片&lt;/h3>
+&lt;ul>
+&lt;li>Android 在&lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>res&lt;/code> ▸ &lt;code>drawable&lt;/code> ▸ &lt;code>launch_background.xml&lt;/code> 通过自定义drawable来实现自定义启动界面。&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Assets.xcassets&lt;/code> ▸ &lt;code>LaunchImage.imageset&lt;/code>文件夹中替换相应尺寸的图片， 如果使用不同的文件名，那还必须更新同一目录中的&lt;code>Contents.json&lt;/code>文件。&lt;/li>
+&lt;/ul>
+&lt;h3 id="签名安卓">签名（安卓）&lt;/h3>
 &lt;ol>
 &lt;li>
 &lt;ul>

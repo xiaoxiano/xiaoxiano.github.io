@@ -3428,8 +3428,28 @@ data-flex-grow="177"
 data-flex-basis="426px"
 >&lt;/p>
 &lt;p>lottie需要用到Ae，rive是在线编辑。&lt;/p>
-&lt;h2 id="安卓">安卓&lt;/h2>
-&lt;h3 id="签名">签名&lt;/h3>
+&lt;h2 id="上架">上架&lt;/h2>
+&lt;h3 id="包名">包名&lt;/h3>
+&lt;ul>
+&lt;li>Android 是在 &lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>main&lt;/code> ▸ &lt;code>AndroidManifest.xml&lt;/code>&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Info.plist&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="应用名称">应用名称&lt;/h3>
+&lt;ul>
+&lt;li>Android 是在 &lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>main&lt;/code> ▸ &lt;code>AndroidManifest.xml&lt;/code> 中修改&lt;code>android:label=&amp;quot;XXX&amp;quot;&lt;/code>;&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Info.plist&lt;/code> 中修改&lt;code>CFBundleName&lt;/code>对应的Value&lt;/li>
+&lt;/ul>
+&lt;h3 id="图标">图标&lt;/h3>
+&lt;ul>
+&lt;li>Android 在&lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>res&lt;/code> ▸ &lt;code>mipmap-...&lt;/code> 文件夹中替换相应图片&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Assets.xcassets&lt;/code> ▸ &lt;code>AppIcon.appiconset&lt;/code>文件夹中替换相应尺寸的图片， 如果使用不同的文件名，那还必须更新同一目录中的&lt;code>Contents.json&lt;/code>文件。&lt;/li>
+&lt;/ul>
+&lt;h3 id="启动图片">启动图片&lt;/h3>
+&lt;ul>
+&lt;li>Android 在&lt;code>android&lt;/code> ▸ &lt;code>app&lt;/code> ▸ &lt;code>src&lt;/code> ▸ &lt;code>res&lt;/code> ▸ &lt;code>drawable&lt;/code> ▸ &lt;code>launch_background.xml&lt;/code> 通过自定义drawable来实现自定义启动界面。&lt;/li>
+&lt;li>iOS 在 &lt;code>ios&lt;/code> ▸ &lt;code>Runner&lt;/code> ▸ &lt;code>Assets.xcassets&lt;/code> ▸ &lt;code>LaunchImage.imageset&lt;/code>文件夹中替换相应尺寸的图片， 如果使用不同的文件名，那还必须更新同一目录中的&lt;code>Contents.json&lt;/code>文件。&lt;/li>
+&lt;/ul>
+&lt;h3 id="签名安卓">签名（安卓）&lt;/h3>
 &lt;ol>
 &lt;li>
 &lt;ul>
