@@ -2850,6 +2850,20 @@ data-flex-basis="443px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offAllNamed(&amp;#34;/NextScreen&amp;#34;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 动态URL
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offAllNamed(&amp;#34;/NextScreen?device=phone&lt;span class="ni">&amp;amp;id=354&amp;amp;name=Enzo&amp;#34;);&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>示例 1&lt;/strong>&lt;/p>
+&lt;p>注册时跳到到Pin页面，路由传参：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// RegisterController
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Get.offNamed(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> RouteNames.systemRegisterPin,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> arguments: UserRegisterReq(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: userNameController.text,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> email: emailController.text,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: password,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>从路由接收参数：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// RegisterPinController
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">UserRegisterReq? req = Get.arguments;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="依赖注入">依赖注入&lt;/h3>
 &lt;p>&lt;strong>Get.put()：&lt;/strong> 不使用控制器实例也会被创建&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Get.put(CountController());

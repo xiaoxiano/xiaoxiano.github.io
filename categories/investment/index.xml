@@ -527,14 +527,101 @@
 &lt;p>A股上市公司利润增速、工业增加值同比、制造业PMI等指标见底反转标志着业绩底到来。&lt;/p>
 &lt;h1 id="美股">美股&lt;/h1>
 &lt;h2 id="开户">开户&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">主要账户类型&lt;/th>
+&lt;th style="text-align:left">账户用途&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Checking Account 支票账户&lt;/td>
+&lt;td style="text-align:left">平时开支消费专用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Savings Account 储蓄账户&lt;/td>
+&lt;td style="text-align:left">活期账户，通常用来保持资金流动。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Certificates of Deposits 定期存款账户&lt;/td>
+&lt;td style="text-align:left">用于存定期存款的账户。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;p>美国银行开户需要准备的资料：&lt;/p>
 &lt;ul>
-&lt;li>美国实体手机卡：Paygo美国手机卡（月租三美元，目前最便宜的卡）&lt;/li>
+&lt;li>美国实体手机卡：Paygo、redpacket&lt;/li>
 &lt;li>美国私人地址（用来申请银行账号/信用卡、美国税号TIN）：AnytimeMailbox&lt;/li>
 &lt;li>ITIN（作为身份验证、银行要求提供的地址证明）&lt;/li>
 &lt;li>美国独立IP&lt;/li>
 &lt;/ul>
-&lt;p>券商：推荐德美利&lt;/p>
+&lt;p>&lt;strong>转账&lt;/strong>&lt;/p>
+&lt;p>一般转到 Checking Account，频繁转账容易风控&lt;/p>
+&lt;p>转账方式：&lt;/p>
+&lt;ul>
+&lt;li>Zelle　美国银行间的即时转账系统，限额$1500～$2500/天, $5000～$10000/月，免费&lt;/li>
+&lt;li>ACH　　自动清算系统，1～3个工作日到帐，限额取决于转出行（比Zelle大一些），大部分银行免费（BOA等银行转出需$3）&lt;/li>
+&lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
+&lt;/ul>
+&lt;h2 id="券商">券商&lt;/h2>
+&lt;p>互联网券商富途证券、老虎证券被禁止之后，美国本土券商的选择有嘉信理财（Chales Schwab）、富达证券（fidelity）、Etrade、美林证券、TradeKing、盈透（Interactive Broker）、德美利（TD Ameritrade）、第一证券等。较好的选择有盈透证券、嘉信理财、富达证券。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>嘉信理财&lt;/th>
+&lt;th>盈透证券&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>储蓄&lt;/td>
+&lt;td>0.45%&lt;/td>
+&lt;td>4.58%（资金大于1万美元）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>固定收益产品（国债、企业债）&lt;/td>
+&lt;td>三个月约5%&lt;/td>
+&lt;td>\&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>佣金&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1美元~交易价值的1%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>客户端&lt;/td>
+&lt;td>网页（交易价格劣势）&lt;/td>
+&lt;td>专业APP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>银行卡&lt;/td>
+&lt;td>2023-08后大陆不给开（全球免费取款）&lt;/td>
+&lt;td>大陆不给开&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>中文客服&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>\&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>全球交易需求&lt;/td>
+&lt;td>\&lt;/td>
+&lt;td>免费多币种转换，且无汇率差额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>融资/杠杆&lt;/td>
+&lt;td>13%&lt;/td>
+&lt;td>6.570%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>出金&lt;/td>
+&lt;td>免费&lt;/td>
+&lt;td>每个月第一笔免费（如果有中转银行可能收费）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
 >course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;h1 id="电池">电池&lt;/h1>
 &lt;table align="tablePos" bgcolor="#c6c6c6" border="0" cellpadding="5" cellspacing="1"
