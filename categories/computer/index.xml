@@ -1267,8 +1267,8 @@ data-flex-basis="276px"
 &lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
 JAVA_HOME:&lt;code>C:\Program Files\Java\jdk-17&lt;/code> &lt;br>
 path:&lt;code>C:\Program Files\Java\jdk-17\bin&lt;/code>&lt;/p>
-&lt;p>&lt;strong>Android SDK Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\tools&lt;/p>
-&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong> C:\Users{username}\AppData\Local\Android\sdk\platform-tools&lt;/p>
+&lt;p>&lt;strong>Android SDK Tools:&lt;/strong> path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\tools&lt;/code>&lt;/p>
+&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong> path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/p>
 &lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
 &lt;ol>
 &lt;li>安装 fvm，命令行运行以下命令：&lt;/li>
@@ -1643,27 +1643,14 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// true
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="类型转换">类型转换&lt;/h3>
-&lt;ul>
-&lt;li>String -&amp;gt; int&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myint = int.parse(myString);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>String -&amp;gt; double&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mydouble = double.parse(myString);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>String -&amp;gt; enum&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mynum.member = mynum.values.byName(myString);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>int -&amp;gt; String&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = myint.toString();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>double -&amp;gt; String&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myString = 3.14159.toStringAsFixed(2);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// myString = &amp;#39;3.14&amp;#39;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">myint = int.parse(myString); // String -&amp;gt; int
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">myString = myint.toString(); // int -&amp;gt; String
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mydouble = double.parse(myString); // String -&amp;gt; double
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">myString = 3.14159.toStringAsFixed(2); // double -&amp;gt; String (myString = &amp;#39;3.14&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mynum.member = mynum.values.byName(myString); // String -&amp;gt; enum
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">myString = mynum.member.name; // enum -&amp;gt; String
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数">函数&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">bool isNoble(int atomicNumber) { // bool:返回类型
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return _nobleGases[atomicNumber] != null;
@@ -2151,7 +2138,7 @@ data-flex-grow="192"
 data-flex-basis="461px"
 >&lt;/p>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:normal; color: black">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:normal; color: blue">
 implements
 &lt;/div>
 &lt;p>创建另一个类或接口的实现。当 a类 实现 b类 时，&lt;strong>必须实现&lt;/strong> b类 中定义的所有功能(所有属性、变量、函数)。一个类可以实现多个接口。&lt;/p>
@@ -2220,7 +2207,7 @@ Isolate
 &lt;p>如果你要运行的计算量太过庞大，在 main Isolate 中运行可能会导致丢帧，如果处理可能需要几百毫秒，则考虑创建单独的Isolate，例如：&lt;/p>
 &lt;ul>
 &lt;li>解码 JSON，HttpRequest 的结果 =&amp;gt; compute&lt;/li>
-&lt;li>加密可能非常耗时 =&amp;gt;&lt;/li>
+&lt;li>加密可能非常耗时&lt;/li>
 &lt;li>处理图像（例如裁剪）&lt;/li>
 &lt;li>从 Web 加载图像&lt;/li>
 &lt;/ul>
@@ -2236,18 +2223,16 @@ Future
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有三种状态：&lt;/p>
 &lt;ul>
 &lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开 &lt;br>
-首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，在这期间，Future 一直未能完成。
+首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，此时 Future 未能完成，事件循环继续执行其他事件。
 &lt;ul>
 &lt;li>Completed with a value: 打开了，带有一个值 &lt;br>
-如果想使用Future的返回值，则需要使用&lt;code>then&lt;/code>，否则 Future 不能完成。then是你可以用来在每个 Future 上注册回调的实例方法，你可以用它创建一个函数，传入一个匹配 Future 类型的参数。等到数据抵达时，Future 得到数据并打开它，如果Future 完成并带有一个值，此时会触发你的回调。&lt;/li>
+等到数据抵达时，Future 得到数据并打开它，如果Future 完成并带有一个值，此时会触发你的 &lt;code>then&lt;/code> 回调。&lt;code>then&lt;/code> 是你可以用来在每个 Future 上注册回调的实例方法，你可以用它创建一个函数，传入一个匹配 Future 类型的参数。&lt;/li>
 &lt;li>Completed with an error: 打开了，抛出一个异常 &lt;br>
 如果Future 在完成时没有带一个值，你可以使用 &lt;code>catchError&lt;/code>注册另一个回调，catchError 的工作方式和 then 一样，唯一不同的是它捕获异常而不是值。你甚至可以给它一个&lt;code>test&lt;/code>方法，你可以通过这种方式使用多个 catchError 方法，每种方法都会检查错误返回值的类型。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart: async&amp;#39;;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">int&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.delayed (
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Duration (seconds: 3),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> () { return 100; },
@@ -2256,7 +2241,7 @@ Future
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }).catchError(
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (err) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;Caught $err&amp;#39;);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> test: (err) =&amp;gt; err.runtimeType == String,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ).whenComplete (() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;All finished!&amp;#39;);
@@ -2282,24 +2267,69 @@ Future
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Streams
 &lt;/div>
-&lt;p>每个 future 单一地传递错误，或者数据，Streams随着时间的推移，可以传送零个、多个值，或者是错误&lt;/p>
+&lt;p>每个 future 单一地传递错误，或者数据，Streams随着时间的推移，可以传送零个、多个值，或者是错误。&lt;/p>
 &lt;p>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 async await
 &lt;/div>
 async 和 await 实际上只是 future 和 streams 的替代语法，可以帮助你编写更清晰、更易读的代码。在连续的Future中，每一处Future都需要定义、then、return，而await只需如下写：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ProcessedData&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createData() async {
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:io&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> createData();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ProcessedData&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createData() async {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> try {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final id = await _load FromDisk();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final id = await _loadFromDisk();
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final data = await _fetchNetworkData(id);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return ProcessedData(data);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } on HttpException catch (err) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;Network error: $err&amp;#39;);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return Processed Data.empty();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return ProcessedData.empty();
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } finally {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;All done!&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">int&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> _loadFromDisk() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;loadFromDisk&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return 0;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> _fetchNetworkData(int id) async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;NetworkData&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#39;NetworkData&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class ProcessedData {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProcessedData(this.data);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> final String data;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ProcessedData&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> empty() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var empty = ProcessedData(&amp;#39;empty&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(empty);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return empty;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面官方示例介绍了连续的 await，这是更清晰的使用示例：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(getMeSomeFood()); // output: Instance of ‘_Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>’
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(await getMeSomethingBetter());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maybeSomethingSweet().then((String value) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(value);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getMeSomeFood() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;an apple&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getMeSomethingBetter() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;a burger?&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> maybeSomethingSweet() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;a chocolate cake!!&amp;#34;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
