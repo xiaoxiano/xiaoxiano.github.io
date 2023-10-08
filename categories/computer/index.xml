@@ -1527,7 +1527,7 @@ data-flex-basis="427px"
 编译时常量：一经定义就会在编译期间对其进行初始化，const对象及其字段无法更改。&lt;/li>
 &lt;/ul>
 &lt;h2 id="类型">类型&lt;/h2>
-&lt;h3 id="内置类型">内置类型&lt;/h3>
+&lt;h3 id="常规类型">常规类型&lt;/h3>
 &lt;div class="box info" >
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
@@ -1594,7 +1594,7 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;h3 id="不常用类型">不常用类型&lt;/h3>
+&lt;h3 id="其它类型">其它类型&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;a class="link" href="https://dart.dev/guides/language/language-tour#enumerated-types" target="_blank" rel="noopener"
@@ -1629,10 +1629,22 @@ map()可以传入List或Map的每项数据，toList()转换成List，List&lt;Wid
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(s.toList());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="几乎不用的类型">几乎不用的类型&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Future　用于&lt;a class="link" href="https://dart.dev/language/async" target="_blank" rel="noopener"
+>异步支持&lt;/a>。&lt;/li>
+&lt;li>Stream　用于异步支持。&lt;/li>
+&lt;li>Iterable　用在&lt;a class="link" href="https://dart.dev/guides/libraries/library-tour#iteration" target="_blank" rel="noopener"
+>for-in 循环&lt;/a>和同步&lt;a class="link" href="https://dart.dev/language/functions#generators" target="_blank" rel="noopener"
+>生成器函数&lt;/a>中。&lt;/li>
+&lt;li>Never　表示表达式永远无法成功完成计算。最常用于总是抛出异常的函数。&lt;/li>
+&lt;li>void　表示从未使用过某个值。通常用作返回类型。&lt;/li>
+&lt;li>(value1, value2)　记录（需dart3）&lt;/li>
+&lt;li>Null　空值&lt;/li>
+&lt;/ul>
+&lt;h3 id="不常用的类型">不常用的类型&lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>runes 暴露了字符串的 Unicode 代码点（Unicode 为每个字母、数字和符号定义了一个唯一的数值）。例如，用于表情符号，(😆) 是&lt;code>\u{1f606}&lt;/code>。&lt;/p>
+&lt;p>runes 暴露了字符串的 Unicode 代码点（Unicode 为每个字母、数字和符号定义了一个唯一的数值）。例如，用于表情符号，(😆) 是&lt;code>\u{1f606}&lt;/code>。经常被 &amp;ldquo;characters&amp;rdquo; API 取代。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Symbol 表示标识符，例如&lt;code>#&lt;/code>。&lt;/p>
@@ -2316,11 +2328,12 @@ async 和 await 实际上只是 future 和 streams 的替代语法，可以帮�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面官方示例介绍了连续的 await，这是更清晰的使用示例：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void main() async {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(getMeSomeFood()); // output: Instance of ‘_Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>’
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(getMeSomeFood());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(await getMeSomethingBetter());
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maybeSomethingSweet().then((String value) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(value);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> print(&amp;#39;done&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getMeSomeFood() async {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;an apple&amp;#34;;
@@ -2331,6 +2344,12 @@ async 和 await 实际上只是 future 和 streams 的替代语法，可以帮�
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> maybeSomethingSweet() async {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return &amp;#34;a chocolate cake!!&amp;#34;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// output:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// Instance of ‘_Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">String&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>’ 不等待，返回一个future
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// a burger? 等待future完成
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// done
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// a chocolate cake!! 不等待，先继续执行print(&amp;#39;done&amp;#39;)，future完成后再调用then
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
