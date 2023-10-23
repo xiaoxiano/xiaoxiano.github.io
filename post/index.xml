@@ -3235,6 +3235,7 @@ data-flex-basis="319px"
 &lt;/ol>
 &lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" target="_blank" rel="noopener"
 >下载地址&lt;/a>&lt;/p>
+&lt;p>　&lt;/p>
 &lt;ol start="2">
 &lt;li>安装配置Android Studio&lt;/li>
 &lt;/ol>
@@ -3251,50 +3252,30 @@ data-flex-basis="319px"
 &lt;li>配置环境变量&lt;/li>
 &lt;/ol>
 &lt;p>&lt;strong>Dart:&lt;/strong> 无需配置，flutter现在自带dart。&lt;/p>
-&lt;p>&lt;strong>Flutter:&lt;/strong> path:&lt;code>C:\flutter\bin&lt;/code>&lt;/p>
-&lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
-JAVA_HOME:&lt;code>C:\Program Files\Java\jdk-17&lt;/code> &lt;br>
-path:&lt;code>C:\Program Files\Java\jdk-17\bin&lt;/code>&lt;/p>
-&lt;p>&lt;strong>Android SDK Tools:&lt;/strong> path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\tools&lt;/code>&lt;/p>
-&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong> path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/p>
-&lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
-&lt;ol>
-&lt;li>安装 fvm，命令行运行以下命令：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">choco install fvm
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>查看当前有哪些版本可用&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm releases
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>安装指定版本&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install stable
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
-&lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
-&lt;li>VS Code配置&lt;/li>
-&lt;/ol>
-&lt;p>在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dart.flutterSdkPath&amp;#34;: &amp;#34;.fvm/flutter_sdk&amp;#34;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove .fvm files from search
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;search.exclude&amp;#34;: {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove from file watching
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;files.watcherExclude&amp;#34;: {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
-&lt;li>切换版本&lt;/li>
-&lt;/ol>
+&lt;p>&lt;strong>Flutter:&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
-&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
+&lt;li>path:&lt;code>C:\flutter\bin&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
+我们可能需要多个java版本，主要是为了&lt;a class="link" href="https://docs.gradle.org/current/userguide/compatibility.html#compatibility" target="_blank" rel="noopener"
+>兼容Gradle版本&lt;/a>。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>JAVA_HOME&lt;/code>:&lt;code>C:\Program Files\Java\jdk-1.8&lt;/code>(切换版本：&lt;code>C:\Program Files\Java\jdk-17&lt;/code>)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>path:&lt;code>%JAVA_HOME%\bin&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>path:&lt;code>%JAVA_HOME%\jre\bin&lt;/code> (如果只有jdk-17则不需要配置jre)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>删除自动配置的环境变量path：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>C:\Program Files\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
+&lt;li>&lt;code>C:\Program Files (x86)\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;style type="text/css">
 .box {
@@ -3388,6 +3369,59 @@ d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.9
 d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
 &lt;/symbol>
 &lt;/svg>&lt;div class="box info" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>不推荐设置系统环境变量&lt;code>classpath&lt;/code>，始终建议通过&lt;code>-cp&lt;/code>命令传入，JVM默认的&lt;code>classpath&lt;/code>为&lt;code>.&lt;/code>，即当前目录。&lt;/p>
+&lt;/div>
+&lt;p>&lt;strong>Android SDK Tools:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\tools&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
+&lt;ol>
+&lt;li>安装 fvm，命令行运行以下命令：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">choco install fvm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>查看当前有哪些版本可用&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm releases
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>安装指定版本&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install stable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>VS Code配置&lt;/li>
+&lt;/ol>
+&lt;p>在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dart.flutterSdkPath&amp;#34;: &amp;#34;.fvm/flutter_sdk&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove .fvm files from search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;search.exclude&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove from file watching
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;files.watcherExclude&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
+&lt;li>切换版本&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
+&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
+&lt;/ul>
+&lt;div class="box info" >
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
@@ -4992,7 +5026,7 @@ data-flex-basis="443px"
 >Service Worker&lt;/a>：Service Worker 是 PWA 的基本组成部分。它们支持快速加载（无论网络如何）、离线访问、推送通知和其他功能。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-19">
+&lt;details class="spoiler " id="spoiler-20">
 &lt;summary>InAppWebView官方示例注释&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/foundation.dart&amp;#39;;
@@ -5452,7 +5486,281 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="调试">调试&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="plugin">Plugin&lt;/h2>
+&lt;p>Flutter Plugin可以实现许多原生平台的功能，但是需要学习一些基础知识。&lt;/p>
+&lt;h3 id="flutter-1">Flutter&lt;/h3>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
+width="580"
+height="647"
+srcset="https://xiaoxiano.github.io/p/flutter/PlatformChannels_hu9187f560825b219b5824e0b76846e06f_23082_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/PlatformChannels_hu9187f560825b219b5824e0b76846e06f_23082_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="89"
+data-flex-basis="215px"
+>&lt;/p>
+&lt;p>&lt;strong>Flutter有三种类型的Channel:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>BasicMessageChannel:用于传递字符串和半结构化的信息。持续通信，收到消息后可以回复此次消息，如：Native将遍历到的文件信息陆续传递到Dart。&lt;/li>
+&lt;li>MethodChannel:用于传递方法调用(method invocation)。一次性通信：如Flutteri调用Native拍照；&lt;/li>
+&lt;li>EventChannel:用于数据流(event streams)的通信。持续通信，收到消息后无法回复此次消息，通过长用于Native向Dat的通信，如：手机电量变化，网络连接变化，陀螺仪，传感器等；&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Channel支持的数据类型：&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Dart&lt;/th>
+&lt;th>Android&lt;/th>
+&lt;th>ios&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>null&lt;/td>
+&lt;td>null&lt;/td>
+&lt;td>nil (NSNull when nested)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bool&lt;/td>
+&lt;td>java.lang.Boolean&lt;/td>
+&lt;td>NSNumber numberWithBool:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>int&lt;/td>
+&lt;td>java.lang.Integer&lt;/td>
+&lt;td>NSNumber numberWithInt:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>int, if 32 bits notenough&lt;/td>
+&lt;td>java.lang.Long&lt;/td>
+&lt;td>NSNumber numberWithLong:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>double&lt;/td>
+&lt;td>java.lang.Double&lt;/td>
+&lt;td>NSNumber numberWithDouble:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>String&lt;/td>
+&lt;td>java.lang.String&lt;/td>
+&lt;td>NSString&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Uint8List&lt;/td>
+&lt;td>byte[]&lt;/td>
+&lt;td>FlutterStandardTypedData typedDataWithBytes:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Int32List&lt;/td>
+&lt;td>int][]&lt;/td>
+&lt;td>FlutterStandardTypedData typedDataWithInt32:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Int64List&lt;/td>
+&lt;td>long[]&lt;/td>
+&lt;td>FlutterStandardTypedData typedDataWithInt64:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Float64List&lt;/td>
+&lt;td>double[]&lt;/td>
+&lt;td>FlutterStandardTypedData typedDataWithFloat64:&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>List&lt;/td>
+&lt;td>java.util.ArrayList&lt;/td>
+&lt;td>NSArray&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Map&lt;/td>
+&lt;td>java.util.HashMap&lt;/td>
+&lt;td>NSDictionary&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="android">Android&lt;/h3>
+&lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。&lt;/p>
+&lt;h4 id="依赖">依赖&lt;/h4>
+&lt;p>plugin 根目录的 android 由于无需构建，所以缺少一些依赖和文件，打开项目的正确目录是 example/android 。&lt;/p>
+&lt;p>如果是clone的项目缺少依赖：&lt;/p>
+&lt;p>在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。&lt;/p>
+&lt;p>如果使用IDEA：&lt;/p>
+&lt;p>Android Studio 中跳转依赖，复制找到的 jar，在 Project\android 目录下新建 libs 文件夹，粘贴 jar，然后在 build.gradle 末尾处添加：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">dependencies {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用 IDEA 打开 Project\android 目录。&lt;/p>
+&lt;h4 id="java">Java&lt;/h4>
+&lt;p>Java 和 Dart 的区别不大，简单了解还是可以实现简单的功能的。&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/10.jpg"
+width="757"
+height="292"
+srcset="https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="259"
+data-flex-basis="622px"
+>&lt;/p>
+&lt;ul>
+&lt;li>访问修饰符&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>访问范围&lt;/th>
+&lt;th>private&lt;/th>
+&lt;th>default&lt;/th>
+&lt;th>protected&lt;/th>
+&lt;th>public&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>同一类中&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>同一包中(子类和非子类)&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>不同包中的子类&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>不同包中的非子类&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>类型&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>boolean&lt;/th>
+&lt;th>布尔型&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>byte&lt;/td>
+&lt;td>字节型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>char&lt;/td>
+&lt;td>字符型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>double&lt;/td>
+&lt;td>双精度浮点&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>float&lt;/td>
+&lt;td>单精度浮点&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>int&lt;/td>
+&lt;td>整型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>long&lt;/td>
+&lt;td>长整型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>short&lt;/td>
+&lt;td>短整型&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="channel">Channel&lt;/h4>
+&lt;ol>
+&lt;li>
+&lt;p>创建Channel&lt;/p>
+&lt;p>三种Channel 的构造十分相似：&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">BasicMessageChannel(BinaryMessenger messenger,String name,MessageCodec&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> codec)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MethodChannel(BinaryMessenger messenger,String name,MethodCodec codec)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EventChannel(BinaryMessenger messenger,String name,MethodCodec codec)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>BinaryMessenger messenger&lt;/code> 消息的发送与接收的工具；&lt;/li>
+&lt;li>&lt;code>String name&lt;/code> Channel的名字；&lt;/li>
+&lt;li>&lt;code>MessageCodec&amp;lt;T&amp;gt; codec&lt;/code> 消息的编解码器，它有几种不同类型的实现：
+&lt;ul>
+&lt;li>&lt;code>BinaryCodec&lt;/code> 最为简单的一种Codec,因为其返回值类型和入参的类型相同，均为二进制格式(Android中为ByteBuffer,.iS中为NSData)。实际上，BinaryCodec在编解码过程中什么都没做，只是原封不动将二进制数据消息返回而已。或许你会因此觉得BinaryCodec没有意义，但是在某些情况下它非常有用，比如使用BinaryCodec可以使传递内存数据块时在编解码阶段免于内存拷贝；&lt;/li>
+&lt;li>&lt;code>StringCodec&lt;/code> 用于字符串与二进制数据之间的编解码，其编码格式为UTF-8;&lt;/li>
+&lt;li>&lt;code>JSONMessageCodec&lt;/code> 用于基础数据与二进制数据之间的编解码，其支持基础数据类型以及列表、字典。其在iOS端使用了NSJSONSerialization作为序列化的工具，而在Android端则使用了其自定义的JSONUtil.与StringCodec作为序列化工具；&lt;/li>
+&lt;li>&lt;code>StandardMessageCodec&lt;/code> 是BasicMessageChannel的默认编解码器，其支持基础数据类型、二进制数据、列表、字典；&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>接收/发送消息&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>接收Dart发来的消息：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// BasicMessageChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setMessageHandler(MessageHandler&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> handler)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// MethodChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">setMethodCallHandler(MethodCallHandler handler)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// EventChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void setstreamHandler(EventChannel.StreamHandler handler)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>其参数：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// BasicMessageChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// var1 是消息内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// var2 是回复此消息的回调函数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public interface MessageHandler&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onMessage(T var1, BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> var2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// MethodChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// var1.methed 表示 var1方法名的String
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// var1.arguments 表示 var1方法的参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// var2：提供 var2.success、 var2.error、 var2.notImplemented 三种回复
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public interface MethodCallHandler {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onMethodCall(MethodCall var1,Result var2);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// EventChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// args 是传递的参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// eventSink 提供 success、error、endOfStream 三个回调方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// onCancel 取消监听时调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public interface StreamHandler {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onListen(Object args,EventChannel.Eventsink eventsink);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onCancel(Object o);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>向dart发送消息：&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> callback) //dart回复
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常用-api">常用 API：&lt;/h3>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/FlutterPlugin.FlutterPluginBinding.html" target="_blank" rel="noopener"
+>FlutterPluginBinding&lt;/a>: 向所有 FlutterEngine 注册的插件提供可用的资源。&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityPluginBinding.html" target="_blank" rel="noopener"
+>ActivityPluginBinding&lt;/a> : 绑定使ActivityAware插件可以访问关联的Activity和Activity的生命周期方法。&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityAware.html" target="_blank" rel="noopener"
+>ActivityAware&lt;/a>: FlutterPlugin 把 Activity生命周期事件 关联到 FlutterEngine中运行的Activity&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter-io.cn/javadoc/io/flutter/embedding/android/FlutterView.html" target="_blank" rel="noopener"
+>FlutterView&lt;/a>: 在 Android 设备上显示 Flutter UI&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/app/NotificationManager" target="_blank" rel="noopener"
+>NotificationManager&lt;/a>：用于通知用户发生的事件&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/content/res/Resources" target="_blank" rel="noopener"
+>Resources&lt;/a>: 用于访问应用程序资源的类。&lt;/p>
+&lt;h2 id="调试">调试&lt;/h2>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/8.png"
 width="1988"
 height="1660"
@@ -5534,7 +5842,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//删除的证书（指定别名、路径，手动删除文件）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -delete -alias key -keystore ./release.keystore.jks
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-21">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-22">
 &lt;summary>详细参数&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">-genkeypair 生成密钥对（公钥和关联的私钥）。将该证书链和私钥存储在由alias标识的新密钥库条目中
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 别名，每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
@@ -5971,7 +6279,7 @@ data-flex-basis="479px"
 >容器注册平台对比&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>准备好你的dockerfile，如无docker和docker-compose基础请先看文档和&lt;a class="link" href="https://jiangdaoli.cf/p/docker-compose/" target="_blank" rel="noopener"
+&lt;p>准备好你的dockerfile，如无docker和docker-compose基础请先看文档和&lt;a class="link" href="https://xiaoxiano.github.io/p/docker-compose/" target="_blank" rel="noopener"
 >前文&lt;/a>。&lt;/p>
 &lt;/li>
 &lt;li>
