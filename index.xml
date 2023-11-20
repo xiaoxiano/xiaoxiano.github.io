@@ -1210,9 +1210,9 @@ data-flex-basis="735px"
 &lt;h2 id="国内运营商">国内运营商&lt;/h2>
 &lt;p>IPLC/IEPL国际私用出租线路&lt;/p>
 &lt;p>电信的163骨干网自治系统编号 AS4134&lt;/p>
-&lt;p>电信的CN2骨干网自治系统编号 AS4809&lt;/p>
+&lt;p>电信的CN2骨干网自治系统编号 AS4809 （优秀）&lt;/p>
 &lt;p>联通的169骨干网自治系统编号 AS4837&lt;/p>
-&lt;p>联通的A网骨干网自治系统编号 AS9929&lt;/p>
+&lt;p>联通的A网骨干网自治系统编号 AS9929 （优秀）&lt;/p>
 &lt;p>移动的CMNET境内骨干网自治系统编号 AS9808&lt;/p>
 &lt;p>移动的CMI境外骨干网自治系统编号 AS58453&lt;/p>
 &lt;p>CERNET（教育网，主用于高校）骨干网自治系统编号 AS4538&lt;/p>
@@ -1237,121 +1237,25 @@ data-flex-basis="735px"
 &lt;/ol>
 &lt;p>香港IPLC/IEPL、日本IPLC/IEPL、香港CN2 GIA。&lt;/p>
 &lt;p>日本SoftBank（推荐）：&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
->v.ps&lt;/a>约39、49欧元/年,搬瓦工$169/年。&lt;/p>
+>v.ps&lt;/a>(需实名)约39、49欧元/年,搬瓦工$169/年。&lt;/p>
 &lt;ol start="2">
 &lt;li>次优：&lt;/li>
 &lt;/ol>
 &lt;p>新加坡CN2：价格高。&lt;/p>
-&lt;p>日本IIJ：超过200ms。vmiss有平价大带宽产品。&lt;/p>
+&lt;p>日本IIJ：超过200ms。&lt;/p>
 &lt;p>香港CMI：超过200ms。移动网好用，有高峰期。&lt;/p>
 &lt;p>新加坡NTT：超过300ms。慎买。&lt;/p>
 &lt;p>美国CN2 GIA（较为推荐）：超过500ms。平价大带宽，价格合理，网络审查宽松，且访问的大多服务器设在美国。&lt;/p>
+&lt;p>&lt;strong>商家推荐&lt;/strong>&lt;/p>
+&lt;p>vmiss：有日本IIJ， 美国CN2、9929的平价大带宽产品。需要注意他家ip虽然可以解锁大多服务，但使用的是广播ip。&lt;/p>
 &lt;ol start="4">
 &lt;li>差线路：&lt;/li>
 &lt;/ol>
 &lt;p>racknerd、greencloud等绕路线路很廉价，适合测试用。&lt;/p>
-&lt;p>&lt;strong>防坑：&lt;/strong>
-&lt;style type="text/css">
-.box {
-padding: 1.6em;
-padding-top: 1.4em;
-line-height: 1.4em;
-margin-top: 2em;
-margin-bottom: 4em;
-border-radius: 4px;
-color: #444;
-background: #f3ebe850;
-}
-.box-title {
-margin: -18px -18px 12px;
-padding: 4px 18px;
-border-radius: 4px 4px 0 0;
-font-weight: 700;
-color: #fff;
-background: #6ab0de;
-}
-.box.warning .box-title {
-background: #ff6b6b;
-}
-.box.warning {
-background: #ff6b6b4f;
-}
-.box.info .box-title {
-background: #0089e488;
-}
-.box.info {
-background: #0089e41c;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.box.important .box-title {
-background: #f7ec2c;
-}
-.box.important {
-background: #f7ec2c7d;
-}
-.box.tip .box-title {
-background: #a3ffa34d;
-}
-.box.tip {
-background: #a3ffa34d;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.icon-box {
-display: inline-flex;
-align-self: center;
-margin-right: 8px;
-}
-.icon-box img,
-.icon-box svg {
-height: 1em;
-width: 1em;
-fill: currentColor;
-}
-.icon-box img,
-.icon-box.baseline svg {
-top: 0.125em;
-position: relative;
-}
-.box p {
-margin-bottom: 0.6em;
-}
-.box p:first-of-type {
-display: inline;
-}
-.box p:nth-of-type(2) {
-margin-top: 0.6em;
-}
-.box p:last-child {
-margin-bottom: 0;
-}
-&lt;/style>
-&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
-&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
-&lt;/symbol>
-&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
-&lt;/symbol>
-&lt;/svg>&lt;div class="box important" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#important-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>仅以我片面的实测&lt;/p>
-&lt;/div>
-&lt;/p>
+&lt;p>&lt;strong>防坑：&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>知名vps商家基本不跑路，但机场可能跑路，用机场一定要月付。&lt;/p>
+&lt;p>机场很可能跑路，用机场一定要月付。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>北方地区日本线路表现更好。&lt;/p>
@@ -1363,10 +1267,10 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>韩国vps：会要求实名，即使你购买了可以使用，也会在一个月内要求实名，需自备韩国身份。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>日本vps：极少数涉及日本版权的网站和图片打不开，可能是日本的网络审查，几乎不影响使用。&lt;/p>
+&lt;p>日本vps：极少数连接不畅，几乎不影响使用。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>香港vps：高峰期可能爆炸，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p>
+&lt;p>香港vps：很可能有高峰期，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="测试线路">测试线路&lt;/h1>
@@ -5650,6 +5554,7 @@ data-flex-basis="622px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>java与dart相似，不多学习也容易读懂，而 android 有很多内容，由于篇幅过大，且已有很多教程，只摘录了四大组件的简介，不再详写。&lt;/p>
 &lt;h4 id="android四大组件">android四大组件&lt;/h4>
 &lt;p>1、activity
 （1）一个Activity通常就是一个单独的屏幕（窗口）。&lt;/p>
@@ -7848,6 +7753,19 @@ data-flex-basis="436px"
 &lt;ul>
 &lt;li>typora　　　　　　　　　　　# markdown记事本&lt;/li>
 &lt;li>joplin # markdown多端同步&lt;/li>
+&lt;li>sourcetree # Git 界面&lt;/li>
+&lt;li>DBeaver # 连接数据库&lt;/li>
+&lt;li>Postman # 接口测试&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>其它工具&lt;/p>
+&lt;ul>
+&lt;li>GIMP # 图像处理
+&lt;ul>
+&lt;li>例：转换pdf，文件-&amp;gt;打开，导入分辨率填300,文件-&amp;gt;导出为&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>Pr # 视频剪辑&lt;/li>
 &lt;li>Ae # 动画特效&lt;/li>
 &lt;li>Ps # 图片处理&lt;/li>
@@ -7872,7 +7790,7 @@ data-flex-basis="436px"
 &lt;p>影视：&lt;/p>
 &lt;ul>
 &lt;li>论坛haopanyou.net&lt;/li>
-&lt;li>App：whg6.com搜影视&lt;/li>
+&lt;li>App：tg破解软件中文频道，搜#影视&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
