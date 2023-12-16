@@ -702,8 +702,9 @@
 &lt;/ul>
 &lt;p>加密模式是加密过程对独立数据块的处理。对于较长的明文进行加密需要进行分块加密，在实际开发中，推荐使用CBC的，ECB的要少用。&lt;/p>
 &lt;h2 id="非对称加密rsa">非对称加密RSA&lt;/h2>
-&lt;p>发送公钥 -&amp;gt; 对方用公钥加密 -&amp;gt; 收到密文 私钥解密&lt;/p>
-&lt;p>广泛应用的非对称加密算法有&lt;code>RSA&lt;/code>算法和美国国家标准局提出的&lt;code>DSA&lt;/code>。&lt;/p></description></item><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
+&lt;p>发送公钥 -&amp;gt; 对方用公钥加密 -&amp;gt; 收到密文、私钥解密&lt;/p>
+&lt;p>常见的非对称加密算法有：RSA、DSA(美国国家标准局提出)、ECC(椭圆曲线密码学)、DH等。&lt;/p>
+&lt;p>ECC 算法比 RSA、DSA 速度更快，基于 ECC 的签名算法主要有两种：ECDSA 与 EdDSA， EdDSA 比 ECDSA 更简洁更快一点，因此现在通常更推荐使用 EdDSA 算法。目前 EdDSA 有两个方案：Ed25519 和 Ed448。&lt;/p></description></item><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
 &lt;ul>
 &lt;li>surface pro系不错，可是高价买低配&lt;/li>
 &lt;li>ROG 幻X，高配显卡反而拉低续航，二合一的屏幕尺寸也不适合打游戏&lt;/li>

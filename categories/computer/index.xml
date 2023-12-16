@@ -69,8 +69,9 @@
 &lt;/ul>
 &lt;p>加密模式是加密过程对独立数据块的处理。对于较长的明文进行加密需要进行分块加密，在实际开发中，推荐使用CBC的，ECB的要少用。&lt;/p>
 &lt;h2 id="非对称加密rsa">非对称加密RSA&lt;/h2>
-&lt;p>发送公钥 -&amp;gt; 对方用公钥加密 -&amp;gt; 收到密文 私钥解密&lt;/p>
-&lt;p>广泛应用的非对称加密算法有&lt;code>RSA&lt;/code>算法和美国国家标准局提出的&lt;code>DSA&lt;/code>。&lt;/p></description></item><item><title>VPS 选购</title><link>https://xiaoxiano.github.io/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
+&lt;p>发送公钥 -&amp;gt; 对方用公钥加密 -&amp;gt; 收到密文、私钥解密&lt;/p>
+&lt;p>常见的非对称加密算法有：RSA、DSA(美国国家标准局提出)、ECC(椭圆曲线密码学)、DH等。&lt;/p>
+&lt;p>ECC 算法比 RSA、DSA 速度更快，基于 ECC 的签名算法主要有两种：ECDSA 与 EdDSA， EdDSA 比 ECDSA 更简洁更快一点，因此现在通常更推荐使用 EdDSA 算法。目前 EdDSA 有两个方案：Ed25519 和 Ed448。&lt;/p></description></item><item><title>VPS 选购</title><link>https://xiaoxiano.github.io/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>性能是根据自身需要的，一般需要看内存，跑代理512M足够了，跑业务最好在2G以上。&lt;/p>
