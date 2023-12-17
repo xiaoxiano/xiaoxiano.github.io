@@ -74,13 +74,14 @@
 &lt;p>ECC 算法比 RSA、DSA 速度更快，基于 ECC 的签名算法主要有两种：ECDSA 与 EdDSA， EdDSA 比 ECDSA 更简洁更快一点，因此现在通常更推荐使用 EdDSA 算法。目前 EdDSA 有两个方案：Ed25519 和 Ed448。&lt;/p></description></item><item><title>VPS 选购</title><link>https://xiaoxiano.github.io/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>性能是根据自身需要的，一般需要看内存，跑代理512M足够了（考虑到有邻居还是建议1G），跑业务最好在2G以上。&lt;/p>
+&lt;p>性能是根据自身需要的，一般只需要看内存，跑代理512M足够了（考虑到有邻居还是建议1G），跑业务最好在2G以上。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>带宽只要搜一下商家的测评，注意共享带宽的实际速度、高峰速度就行了。&lt;/p>
+&lt;p>带宽只要搜一下商家的测评，注意共享带宽的实际速度、晚高峰速度就行了。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>线路却是一个相对复杂的问题。不仅海内外线路繁多，不同运营商、不同省市的情况也不同，所以最好自己测试。如果不测，电信用CN2、联通用AS9929、移动用CMI。&lt;/p>
+&lt;p>线路却是一个相对复杂的问题。不仅海内外线路繁多，不同运营商、不同省市的情况也不同，所以最好自己测试（测试方法见下文）。如果不想测，可以去&lt;a class="link" href="https://www.zhujiceping.com/" target="_blank" rel="noopener"
+>主机测评网&lt;/a>等网站看测评，或者电信用CN2、联通用AS9929、移动用CMI。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>使用机场最好用IPLC/IEPL线路，几乎不会断连，有名的telegram测评频道&lt;a class="link" href="https://t.me/s/gebaopiCloud" target="_blank" rel="noopener"
@@ -147,7 +148,7 @@ BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA
 &lt;p>北方地区日本线路表现更好。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>有些商家线路会绕路欧美，至少要看测评，最好自测。&lt;/p>
+&lt;p>有些商家线路会绕路欧美，最好自测。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>韩国vps：会要求实名，即使购买了可以使用，也会在一个月内要求实名，需自备韩国身份。&lt;/p>
