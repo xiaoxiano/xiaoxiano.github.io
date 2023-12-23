@@ -117,29 +117,29 @@
 &lt;ol>
 &lt;li>最优：&lt;/li>
 &lt;/ol>
-&lt;p>香港IPLC/IEPL、日本IPLC/IEPL、香港CN2 GIA。&lt;/p>
-&lt;p>日本SoftBank（推荐）。&lt;/p>
+&lt;p>香港IPLC/IEPL、日本IPLC/IEPL、香港CN2 GIA：价格高。&lt;/p>
+&lt;p>日本SoftBank（推荐）：约100+ms。&lt;/p>
 &lt;ol start="2">
 &lt;li>次优：&lt;/li>
 &lt;/ol>
-&lt;p>新加坡CN2：价格高。&lt;/p>
-&lt;p>日本IIJ：超过200ms。&lt;/p>
-&lt;p>香港CMI：超过200ms。移动网好用，有高峰期。&lt;/p>
-&lt;p>新加坡NTT：超过300ms。慎买。&lt;/p>
-&lt;p>美国CN2\美国AS9929（推荐）：超过500ms。性价比高，网络审查宽松，且访问的大多服务器设在美国。&lt;/p>
+&lt;p>新加坡CN2：约200ms，价格稍高。&lt;/p>
+&lt;p>日本IIJ：约200+ms。&lt;/p>
+&lt;p>香港CMI：约200+ms。移动网可能好用（我不是），有高峰期。&lt;/p>
+&lt;p>新加坡NTT：约300+ms。慎买。&lt;/p>
+&lt;p>美国CN2\美国AS9929（推荐）：约500ms。性价比高，网络审查宽松，且访问的大多服务器设在美国。&lt;/p>
 &lt;ol start="3">
 &lt;li>差线路：&lt;/li>
 &lt;/ol>
-&lt;p>racknerd、greencloud等很廉价，绕路线路还断流，但适合测试用。&lt;/p>
+&lt;p>racknerd等很廉价，绕路线路，但适合测试用。&lt;/p>
 &lt;p>&lt;strong>优质VPS推荐&lt;/strong>
 BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA最低$899.99/年。&lt;/p>
 &lt;p>&lt;a class="link" href="https://vps.hosting/cart/tokyo-mini-kvm-vps/" target="_blank" rel="noopener"
 >v.ps&lt;/a>(需实名):日本软银特价款约39、49欧元/年（经常缺货）。&lt;/p>
 &lt;p>DMIT：美国CN2特价款$36.90/年（经常缺货）。&lt;/p>
-&lt;p>ZgoCloud（2021年新商家，目前性价比高）：美国AS9929特价款$38.90/年。&lt;/p>
-&lt;p>vmiss（2022年新商家，目前性价比高）：有日本IIJ， 美国CN2、9929的平价大带宽产品。需要注意，他家IP虽然可以解锁大多服务，但使用的是广播ip。&lt;/p>
+&lt;p>ZgoCloud（2021年新商家）：美国AS9929特价款$38.90/年。&lt;/p>
+&lt;p>vmiss（2022年新商家）：有日本IIJ， 美国CN2、9929的平价大带宽产品。需要注意，他家IP虽然可以解锁大多服务，但使用的是广播ip。&lt;/p>
 &lt;p>其它卖优质VPS的商家还有Vultr、Linode、digitalocean等。&lt;/p>
-&lt;p>&lt;strong>防坑：&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>提示：&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>机场很可能跑路，用机场一定要月付。&lt;/p>
@@ -151,13 +151,13 @@ BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA
 &lt;p>有些商家线路会绕路欧美，最好自测。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>韩国vps：会要求实名，即使购买了可以使用，也会在一个月内要求实名，需自备韩国身份。&lt;/p>
+&lt;p>香港vps：很可能有高峰期，便宜商家的机房容易受到攻击。认准口碑商家，否则不要买。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>香港vps：很可能有高峰期，便宜商家的机房容易受到攻击。认准线路和口碑商家，否则不要买。&lt;/p>
+&lt;p>韩国vps：用过1次，一个月后要求韩国身份实名，不知道是不是都这样。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>推荐：美国、新加坡vps没有问题。日本vps极少数小问题，不影响使用。&lt;/p>
+&lt;p>推荐：美国、新加坡vps表现好价格合适。日本vps极少数小问题，不影响使用。&lt;/p>
 &lt;h1 id="测试线路">测试线路&lt;/h1>
 &lt;h2 id="测试全国到vps的延迟">测试全国到VPS的延迟&lt;/h2>
 &lt;p>&lt;a class="link" href="https://tools.ipip.net/ping.php" target="_blank" rel="noopener"
