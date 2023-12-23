@@ -6,9 +6,11 @@
 &lt;h3 id="流动性">流动性&lt;/h3>
 &lt;p>流动性，是股市的领先指标，也是影响股价最重要的因素之一。衡量过剩的流动性有以下两个参考方法。&lt;/p>
 &lt;ul>
-&lt;li>方法1：看M2同比与名义GDP同比的差值，其逻辑在于央行说的“货币供应量要与名义GDP增速相一致”，如果两者缺口大，那就是出现了过剩的流动性。&lt;/li>
-&lt;/ul>
-&lt;table>
+&lt;li>
+&lt;p>方法1：看M2同比与名义GDP同比的差值，其逻辑在于央行说的“货币供应量要与名义GDP增速相一致”，如果两者缺口大，那就是出现了过剩的流动性。
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>点击展开和折叠&lt;/summary>
+&lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>日期&lt;/th>
@@ -527,9 +529,13 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield" target="_blank" rel="noopener"
->看国债收益率&lt;/a>，低于3.3%时被认为是流动性过剩，4%以上则意味着流动性的收紧。&lt;/li>
+&lt;/p>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield" target="_blank" rel="noopener"
+>看国债收益率&lt;/a>，低于3.3%时被认为是流动性过剩，4%以上则意味着流动性的收紧。&lt;/p>
+&lt;/li>
 &lt;/ul>
 &lt;h3 id="业绩底">业绩底&lt;/h3>
 &lt;p>A股上市公司利润增速、工业增加值同比、制造业PMI等指标见底反转标志着业绩底到来。&lt;/p>
@@ -563,14 +569,6 @@
 &lt;li>美国私人地址（用来申请银行账号/信用卡、美国税号TIN）：AnytimeMailbox&lt;/li>
 &lt;li>ITIN（作为身份验证、银行要求提供的地址证明）&lt;/li>
 &lt;li>美国独立IP&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>转账&lt;/strong>&lt;/p>
-&lt;p>一般转到 Checking Account，频繁转账容易风控&lt;/p>
-&lt;p>转账方式：&lt;/p>
-&lt;ul>
-&lt;li>Zelle　美国银行间的即时转账系统，限额$1500～$2500/天, $5000～$10000/月，免费&lt;/li>
-&lt;li>ACH　　自动清算系统，1～3个工作日到帐，限额取决于转出行（比Zelle大一些），大部分银行免费（BOA等银行转出需$3）&lt;/li>
-&lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
 &lt;/ul>
 &lt;h2 id="券商">券商&lt;/h2>
 &lt;p>互联网券商富途证券、老虎证券被禁止之后，美国本土券商的选择有嘉信理财（Chales Schwab）、富达证券（fidelity）、Etrade、美林证券、TradeKing、盈透（Interactive Broker）、德美利（TD Ameritrade）、第一证券等。较好的选择有盈透证券、嘉信理财、富达证券。&lt;/p>
@@ -630,6 +628,14 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h2 id="转账">转账&lt;/h2>
+&lt;p>一般转到 Checking Account，频繁转账容易风控&lt;/p>
+&lt;p>转账方式：&lt;/p>
+&lt;ul>
+&lt;li>Zelle　美国银行间的即时转账系统，限额$1500～$2500/天, $5000～$10000/月，免费&lt;/li>
+&lt;li>ACH　　自动清算系统，1～3个工作日到帐，限额取决于转出行（比Zelle多一些），大部分银行免费（BOA等银行转出需$3）&lt;/li>
+&lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
+&lt;/ul>
 &lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
 >course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
 &lt;h2 id="哈希算法">哈希算法&lt;/h2>
