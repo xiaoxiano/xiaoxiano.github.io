@@ -130,7 +130,7 @@ myblog下执行&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3.覆盖主题样式&lt;/p>
 &lt;p>直接在~/myblog下复制&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
->rmdhnreza&lt;/a>的assets和layouts/shortcodes文件夹。&lt;/p>
+>rmdhnreza&lt;/a>的assets和layouts文件夹。&lt;/p>
 &lt;p>另外修改：&lt;/p>
 &lt;ul>
 &lt;li>
