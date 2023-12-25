@@ -225,12 +225,11 @@ data-flex-basis="355px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;stats&amp;#34;: {}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 配置文件详解
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;details class="spoiler " id="spoiler-1">
+&lt;summary>“配置文件详解”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 配置文件详解
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;api&amp;#34;: { // api: 提供了一些 API 接口供远程调用

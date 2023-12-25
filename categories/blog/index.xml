@@ -130,7 +130,7 @@ myblog下执行&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">2 title: &amp;#39;关于&amp;#39; #中文左侧菜单about，后同
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>3.覆盖主题样式&lt;/p>
 &lt;p>直接在~/myblog下复制&lt;a class="link" href="https://github.com/rmdhnreza/rmdhnreza.my.id" target="_blank" rel="noopener"
->rmdhnreza&lt;/a>的assets、layouts/shortcodes文件夹。&lt;/p>
+>rmdhnreza&lt;/a>的assets和layouts/shortcodes文件夹。&lt;/p>
 &lt;p>另外修改：&lt;/p>
 &lt;ul>
 &lt;li>
@@ -377,6 +377,4 @@ Hello there, and have a nice day
 &lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: www.example.com&lt;/code>&lt;/p>
 &lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
->参考链接&lt;/a>&lt;/p>
-&lt;p>没有域名？为了白嫖可在freenom和cloudflare进行申请域名和解析，这可能花费一些时间，如对此没有了解建议暂时跳过自定义域名。&lt;/p>
-&lt;p>&lt;a class="link" href="URL" >freenom脚本自动续期参考后续文章&lt;/a>&lt;/p></description></item></channel></rss>
+>参考链接&lt;/a>&lt;/p></description></item></channel></rss>
