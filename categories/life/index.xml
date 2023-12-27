@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>生活 on Janus</title><link>https://xiaoxiano.github.io/categories/life/</link><description>Recent content in 生活 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/life/index.xml" rel="self" type="application/rss+xml"/><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
 &lt;ul>
-&lt;li>surface pro系不错，可是高价买低配&lt;/li>
+&lt;li>surface pro，高价买低配&lt;/li>
 &lt;li>ROG 幻X，高配显卡反而拉低续航，二合一的屏幕尺寸也不适合打游戏&lt;/li>
 &lt;li>Chromebook，折腾。&lt;/li>
 &lt;li>x-station？&lt;/li>
 &lt;/ul>
-&lt;p>Windows的二合一更偏向于移动式笔记本电脑，用于外出用电脑，易用性强，但很多Android应用不好用。&lt;/p>
-&lt;p>Chromebook duet5 二合一像是平板的升级，强于Android平板甚至是Ipad，但Chrome OS还不成熟，不适配的bug很多。&lt;/p>
+&lt;p>目前结论：&lt;/p>
+&lt;p>Chromebook duet5 硬件尚可，续航高，但Chrome OS还不成熟，不适配的bug很多，体验不佳。不过使用Android平板甚至是Ipad体验也很一般，只轻度使用（电子书、视频等）可以试试Chromebook duet5。&lt;/p>
+&lt;p>surface pro 偏向于轻便式笔记本电脑，续航高，用于外出用电脑，兼容性、易用性强，而且使用BlueStacks5 等虚拟机可以用Android，需要触屏和Windows就买surface pro。但这个价格大多数人会考虑买性能强大、也算轻便的Mac（只少了触屏）。&lt;/p>
 &lt;h1 id="chromebook-duet5">Chromebook duet5&lt;/h1>
 &lt;h2 id="开启开发者模式">开启开发者模式&lt;/h2>
 &lt;ol>
 &lt;li>
-&lt;p>首先SSTap分享网络登录进去。&lt;/p>
+&lt;p>首先SSTap分享网络登录进去（&lt;a class="link" href="https://xiaoxiano.github.io/p/quest2/" target="_blank" rel="noopener"
+>参考前文&lt;/a>）。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>从主机上取下可拆卸键盘，按住[提高音量]+[降低音量]+[电源按钮]约 10 秒钟，然后松开，您应该看到恢复模式屏幕。（Chromebook duet5和其他机型的方法有所不同）&lt;/p>
