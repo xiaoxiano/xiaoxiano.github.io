@@ -637,7 +637,8 @@
 &lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
 &lt;/ul>
 &lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
->course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;h1 id="电池">电池&lt;/h1>
+>course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;p>&lt;strong>本文不构成任何投资建议&lt;/strong>&lt;/p>
+&lt;h1 id="电池">电池&lt;/h1>
 &lt;table align="tablePos" bgcolor="#c6c6c6" border="0" cellpadding="5" cellspacing="1"
 class="fs12 priceTable priceTableA tabB10" isselfdefine="1" width="800">
 &lt;tbody>
@@ -1096,4 +1097,71 @@ data-flex-basis="735px"
 &lt;p>&lt;strong>碱性电池&lt;/strong>&lt;/p>
 &lt;p>碱性电池是一种一次电池，电量约1800~2000mAh。碱性电池适用在高电流的电器上，如数码相机、玩具、剃须刀、无线鼠标等。&lt;/p>
 &lt;p>&lt;strong>锂铁电池&lt;/strong>&lt;/p>
-&lt;p>锂铁电池是一种一次电池，属于锂电池，电量约3000mAh。锂铁电池寿命长，尤其适用鼠标等，目前厂家仅有耐时电池和小米超级电池。&lt;/p></description></item></channel></rss>
+&lt;p>锂铁电池是一种一次电池，属于锂电池，电量约3000mAh。锂铁电池寿命长，尤其适用鼠标等，目前厂家仅有耐时电池和小米超级电池。&lt;/p>
+&lt;h1 id="航空">航空&lt;/h1>
+&lt;p>常见指标：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>ASK（available seat kilometer）
+可用座位公里、可提供客公里 公式：ASK=∑{可供销售的座位数×航段距离（公里）}
+ASK反映的是航空公司的产能，是其可产生的最大经济效益。ASK值越大，说明航空公司拥有越多的航线与运力资源。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RPK（revenue passenger kilometer）
+收入客公里 公式：RPK（人公里）=∑{航段旅客运输量（人）×航段距离（公里）}
+是一种衡量旅客运输量的综合性指标。其中“收入客”代表花钱买票乘坐飞机的人（也包含那些通过积分兑换里程的乘客）。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>CASK（cost per ASK）
+单位可用座位公里成本, 表示航空公司为每一ASK上付出的成本，计算方法是其所投入的所有运营成本total operating expense/ASK。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RASK（revenue per ASK）
+单位可用座位公里收入,与CASK对应，是收益的一个替代指标，计算方法是所有的运营收入Total Operating Revenue/ASK。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/11.png"
+width="447"
+height="379"
+srcset="https://xiaoxiano.github.io/p/research/11_hu08053d95b458af90f04c050e57e9929c_39834_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/11_hu08053d95b458af90f04c050e57e9929c_39834_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="117"
+data-flex-basis="283px"
+>
+&lt;img src="https://xiaoxiano.github.io/p/research/12.png"
+width="436"
+height="393"
+srcset="https://xiaoxiano.github.io/p/research/12_hu7c4af4032cf64a4d198392631f5e8b73_41246_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/12_hu7c4af4032cf64a4d198392631f5e8b73_41246_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="110"
+data-flex-basis="266px"
+>
+&lt;img src="https://xiaoxiano.github.io/p/research/13.png"
+width="429"
+height="373"
+srcset="https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="115"
+data-flex-basis="276px"
+>
+&lt;img src="https://xiaoxiano.github.io/p/research/14.png"
+width="442"
+height="378"
+srcset="https://xiaoxiano.github.io/p/research/14_hu0f902e266a3fda260a48c9cad5f062af_40213_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/14_hu0f902e266a3fda260a48c9cad5f062af_40213_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="116"
+data-flex-basis="280px"
+>
+&lt;img src="https://xiaoxiano.github.io/p/research/15.jpeg"
+width="1170"
+height="955"
+srcset="https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_480x0_resize_q75_box.jpeg 480w, https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_1024x0_resize_q75_box.jpeg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="122"
+data-flex-basis="294px"
+>&lt;/p></description></item></channel></rss>
