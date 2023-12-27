@@ -1137,8 +1137,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="110"
 data-flex-basis="266px"
->
-&lt;img src="https://xiaoxiano.github.io/p/research/13.png"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/13.png"
 width="429"
 height="373"
 srcset="https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_1024x0_resize_box_3.png 1024w"
@@ -1155,8 +1155,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="116"
 data-flex-basis="280px"
->
-&lt;img src="https://xiaoxiano.github.io/p/research/15.jpeg"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/15.jpeg"
 width="1170"
 height="955"
 srcset="https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_480x0_resize_q75_box.jpeg 480w, https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_1024x0_resize_q75_box.jpeg 1024w"
