@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>学术 on Janus</title><link>https://xiaoxiano.github.io/categories/academic/</link><description>Recent content in 学术 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/academic/index.xml" rel="self" type="application/rss+xml"/><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description>&lt;p>挖坑&lt;/p></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 1.特殊元素和特殊位置优先策略
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 由 0,1,2,3,4,5 可以组成多少个没有重复数字五位奇数？&lt;/p>
@@ -10,8 +10,8 @@
 由分步计数原理得 $C_4^1 C_3^1 A_4^3=288$ 。&lt;/p>
 &lt;/details>
 &lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 2.相邻问题捆绑法:
 &lt;/div>
 &lt;style type="text/css">
@@ -125,8 +125,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>可先将甲乙两元素捆绑成整体并看成一个复合元素，同时丙丁也看成一个复合元素，再与其它元素进行排列，同时对相邻元素内部进行自排。由分步计数原理可得共有 $A_5^5$$A_2^2$$A_2^2$= 480种不同的排法&lt;/p>
 &lt;/details>
 &lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 3.相离问题插空策略:
 &lt;/div>
 &lt;div class="box info" >
@@ -149,8 +149,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;summary>解析&lt;/summary>
 &lt;p>把连续命中的三枪看做一个整体a,剩下命中的一枪看做一个整体b,用插空法,把a,b两个元素按一定顺序插到剩下四枪形成的5个空隙里,是$A_5^2$=20&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 4.定序问题:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 7 人排队，其中甲乙丙 3 人顺序一定（可以不相邻），共有多少不同的排法?&lt;/p>
@@ -161,8 +161,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/p>
 &lt;/details>
 &lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 5.有序分配问题逐分法:
 &lt;/div>
 &lt;div class="box info" >
@@ -180,8 +180,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/details>
 &lt;p>&lt;strong>例 2.&lt;/strong> 12 名同学分别到三个不同的路口进行流量的调查，若每个路口 4 人，则不同的分配方案有（ A）&lt;/p>
 &lt;p>A、$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　B、3$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　C、$C_{12}^{4}$$C_8^4$$A_3^3$ 种 　D、$\frac{C_{12}^{4}C_8^4C_4^4}{A_3^3}$ 种&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 6.元素不同的分配问题先选后排:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 4 名优秀学生全部保送到 3 所学校去，每所学校至少去一名，则不同的保送方案有多少种？&lt;/p>
@@ -195,8 +195,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;summary>解析&lt;/summary>
 &lt;p>B. $C_5^3$$A_4^4$=240&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 7.元素相同的分配问题隔板法:
 &lt;/div>
 &lt;p>&lt;strong>例 1：&lt;/strong> 10 个三好学生名额分到 7 个班级，每个班级至少一个名额，有多少种不同分配方案？&lt;/p>
@@ -211,8 +211,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 个数应为104个，即3个 0和100个1，这104个元素间有103个空位，中间插入
 4个隔板，就会把这104个元素分成4堆，每堆对应 x,y,x,w,而挡板的放置方法有$C_{103}^{3}$&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 8.限制条件的分配问题分类法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 某高校从某系的 10 名优秀毕业生中选 4 人分别到西部四城市参加中国西部经济开发建设，其中甲同学不到银川，乙不到西宁，共有多少种不同派遣方案？&lt;/p>
@@ -221,8 +221,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>因为甲乙有限制条件，所以按照是否含有甲乙来分类，有以下四种情况：
 ①若甲乙都不参加，则有派遣方案 $A_8^4$ 种；②若甲参加而乙不参加，先安排甲有 3 种方法，然后安排其余学生有 $A_8^3$方法，所以共有 3$A_8^3$；③若乙参加而甲不参加同理也有 3$A_8^3$种；④若甲乙都参加，则先安排甲乙，有 7 种方法， 然 后 再 安 排 其 余 8 人 到 另 外 两 个 城 市 有 $A_8^2$种 ， 共 有 7$A_8^2$方 法 . 所 以 共 有 不 同 的 派 遣 方 法 总 数 为 $A_8^4$ + 3$A_8^3$ + 3$A_8^3$ + 7$A_8^2$=4088 种.&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 9.多元问题分类法：
 &lt;/div>
 &lt;p>&lt;strong>例 1&lt;/strong> （1）由数字 0，1，2，3，4，5 组成没有重复数字的六位数，其中个位数字小于十位数字的共有（ ）&lt;/p>
@@ -236,8 +236,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>（3）将 I = { 1,2,3,$\cdots$，100 } 分成四个不相交的子集，能被 4 整除的数集 A = { 4,8,12,$\cdots$，100 }；能被 4 除余 1 的数集B = { 1,5,9,$\cdots$，97 } ，能被 4 除余 2 的数集 C = { 2,6,$\cdots$，98 } ，能被 4 除余 3 的数集 D = { 3,7,11,$\cdots$，99 } ，易见这四个集合中每一个有 25 个元素；从 A中任取两个数符合要；从B,D 中各取一个数也符合要求；从 C中任取两个数也符合要求；此外其它取法都不符合要求；所以符合要求的取法共有 $C_{25}^{2}$ + $C_{25}^{1}$$C_{25}^{1}$ + $C_{25}^{2}$ 种.&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 10.交 叉 问 题 集 合 法 ：
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 6 名运动员中选出 4 人参加 4×100 米接力赛，如果甲不跑第一棒，乙不跑第四棒，共有多少种不同的参赛方案？&lt;/p>
@@ -246,8 +246,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>设全集= {6 人中任取 4 人参赛的排列} ，A={甲跑第一棒的排列} ，B={乙跑第四棒的排列} ，根据求集合元素个数的公式得参赛方法共有：
 n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 11.配对问题：
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 5双相异的鞋共10只,现随机地取出6只,恰好能配成2双鞋的取法是多少?&lt;/p>
@@ -255,8 +255,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;summary>解析&lt;/summary>
 &lt;p>$C_{5}^{2} C_{6}^{1} C_{4}^{1}$=240&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 12.多排问题单排法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8人排成前后两排，每排4人，其中甲乙在前排，丙在后排，共有多少排法？&lt;/p>
@@ -264,8 +264,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;summary>解析&lt;/summary>
 &lt;p>看成一排，某 2 个元素在前半段四个位置中选排 2 个，有 $A_4^2$种，某 1 个元素排在后半段的四个位置中选一个有 $A_4^1$种，其余 5 个元素任排 5 个位置上有 $A_5^5$种，故共有 $A_4^2$$A_4^1$$A_5^5$=5760 种排法.&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 13.“至少”“至多”问题用间接排除法或分类法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 4 台甲型和 5 台乙型电视机中任取 3 台，其中至少要甲型和乙 型电视机各一台，则不同的取法共有（ ）&lt;/p>
@@ -274,8 +274,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;summary>解析&lt;/summary>
 &lt;p>至少要甲型和乙 型电视机各一台可分两种情况：甲型 1 台乙型 2 台；甲型 2 台乙型 1 台；故不同的取法有 $C_5^2$$C_4^1$ + $C_5^1$$C_4^2$ =70 台,选 C.&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 14.部分合条件问题排除法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> （1）以正方体的顶点为顶点的四面体共有（ ）&lt;/p>
@@ -288,8 +288,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;p>（2）10 个点中任取 4 个点共有 $C_{10}^{4}$种，其中四点共面的有三种情况：①在四面体的四个面上，每面内四点共面的情况为 $C_6^4$，四个面共有 4$C_6^4$个；②过空间四边形各边中点的平行四边形共 3 个；③过棱上三点与对棱中点的三角形共 6 个.所以四点不共面的情况的种数是 $C_{10}^{4}$ - 4$C_6^4$ -3-6=141 种.&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 15.可重复的排列求幂法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 把 6 名实习生分配到 7 个车间实习共有多少种不同方法？&lt;/p>
@@ -297,8 +297,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;summary>解析&lt;/summary>
 &lt;p>完成此事共分 6 步，第一步；将第一名实习生分配到车间有 7 种不同方案，第二步：将第二名实习生分配到车间也有 7 种不同方案，依次类推，由分步计数原理知共有 $A_{7}^{6}$种不同方案.&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 16.上楼梯问题:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 10级台阶，某人可一步跨一级，也可跨两级，也可跨三级。
@@ -310,8 +310,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;p>（2）上楼梯问题是典型的斐波那契数列，设爬n级台阶的解法总数为f(n)，因为规定每一步只能跨一级或两级或三级，则f(n)=f(n-1)+f(n-2)+f(n-3)。易知f(1)=1，f(2)=2，f(3)=4,递推可得f(4)=7,f(5)=13,f(6)=24,f(7)=44,f(8)=81,f(9)=149,f10)=274&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 17.元素个数较少的排列组合问题可以考虑枚举法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 设有编号为 1，2，3，4，5 的五个球和编号为 1，2，3，4，5 的盒子现将这 5 个球投入 5 个盒子要求每个盒子放一个球，并且恰好有两个球的号码与盒子号码相同，问有多少种不同的方法？&lt;/p>
@@ -319,8 +319,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;summary>解析&lt;/summary>
 &lt;p>从 5 个球中取出 2 个与盒子对号有 $C_5^2$种，还剩下 3 个球与 3 个盒子序号不能对应，利用枚举法分析，如果剩下 3，4，5 号球与 3，4，5 号盒子时，3 号球不能装入 3 号盒子，当 3 号球装入 4 号盒子时，4，5 号球只有1 种装法，3 号球装入 5 号盒子时，4，5 号球也只有 1 种装法，所以剩下三球只有 2 种装法，因此总共装法数为2$C_5^2$= 20 种.&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 28.复杂的排列组合问题也可用分解与合成法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong>（1）30030 能被多少个不同偶数整除？&lt;/p>
@@ -331,8 +331,8 @@ n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
 &lt;p>（2）因为四面体中仅有 3 对异面直线，可将问题分解成正方体的 8 个顶点可构成多少个不同的四面体，从正方体 8 个顶点中任取四个顶点构成的四面体有$C_8^4$-12= 58 个，所以 8 个顶点可连成的异面直线有 3×58=174 对.&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 19.利用对应思想转化法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> （1）圆周上有 10 点，以这些点为端点的弦相交于圆内的交点有多少个？&lt;/p>
@@ -352,8 +352,8 @@ data-flex-basis="526px"
 &lt;p>（2）可将图中矩形的一边叫一小段，从 A到 B最短路线必须走 7 小段，其中：向东 4 段，向北 3 段；而且前一段的尾接后一段的首，所以只要确定向东走过 4 段的走法，便能确定路径，因此不同走法有 $C_{7}^{4}$种.&lt;/p>
 &lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 20.全错位排列问题公式法:
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 分别编有 1，2，3，4，5 号码的人与椅，其中i 号人不坐i 号椅（i = 1,2,3,4,5）的不同坐法有多少种？&lt;/p>
@@ -365,8 +365,8 @@ D(n)=(n-1) \cdot[D(n-1)+D(n-2)] .
 $$
 又易知, $D(1)=0, D(2)=1$. 由递推公式可得: $D(3)=2, D(4)=9，D(5)=44$&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 21.环排问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 8 人围桌而坐,共有多少种坐法?&lt;/p>
@@ -375,8 +375,8 @@ $$
 &lt;p>$\mathrm{n}$ 个不同元素作圆形排列,共有 $(\mathrm{n}-1)$!种排法.即7!
 如果从 $\mathrm{n}$ 个不同元素中取出 $\mathrm{m}$ 个元素作圆形排列共有 $\frac{1}{n} A_n^m$ 。&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 22.正难则反策略
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 从 0,1,2,3,4,5,6,7,8,9 这十个数字中取出三个数，使其和为不小于 10 的
@@ -385,8 +385,8 @@ $$
 &lt;summary>解析&lt;/summary>
 &lt;p>这问题中如果直接求不小于 10 的偶数很困难, 可用总体淘汰法。这十个数字 中有 5 个偶数 5 个奇数, 所取的三个数含有 3 个偶数的取法有 $C_5^3$, 只含有 1 个偶数 的取法有 $C_5^1 C_5^2$, 和为偶数的取法共有 $C_5^1 C_5^2+C_5^3$ 。再淘汰和小于 10 的偶数共 9 种, 符合条件的取法共有 $C_5^1 C_5^2+C_5^3-9$&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 23.平均分组问题
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 6 本不同的书平均分成 3 堆,每堆 2 本共有多少分法？&lt;/p>
@@ -394,8 +394,8 @@ $$
 &lt;summary>解析&lt;/summary>
 &lt;p>分三步取书得 $C_6^2 C_4^2 C_2^2$ 种方法, 但这里出现重复计数的现象, 不妨记 6 本书为 $A B C D E F$, 若第一步取 $A B$, 第二步取 $C D$, 第三步取 $E F$ 该分法记为 (AB, $C D, E F)$, 则 $C_6^2 C_4^2 C_2^2$ 中还有 (AB, $\left.\mathrm{EF}, \mathrm{CD}\right)$, (CD, AB, $\mathrm{EF}$ ), (CD, EF, AB) (EF, CD, AB), (EF, AB, CD) 共有 $A_3^3$ 种取法, 而这些分法仅是 ( $\left.\mathrm{AB}, \mathrm{CD}, \mathrm{EF}\right)$ 一种分法, 故共有 $C_6^2 C_4^2 C_2^2 / A_3^3$ 种分法。&lt;/p>
 &lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: green">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 24.分类与分步策略
 &lt;/div>
 &lt;p>&lt;strong>例 1.&lt;/strong> 有红、黄、兰色的球各 5 只,分别标有 A、B、C、D、E 五个字母,现从中取

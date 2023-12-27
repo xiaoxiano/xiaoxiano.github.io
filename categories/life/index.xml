@@ -492,9 +492,10 @@ data-flex-basis="319px"
 &lt;ul>
 &lt;li>截图&lt;/li>
 &lt;/ul>
-&lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root不同手机不同操作刷机有变砖风险">root（不同手机不同操作，刷机有变砖风险！）&lt;/h1>
-&lt;p>以前手机都是用虚拟机 VMOS Pro，应用权限是有了，但现手机不能自动开屏幕锁自动执行任务，于是只能root。
-大概分为以下步骤：&lt;/p>
+&lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root">root&lt;/h1>
+&lt;p>&lt;strong>前言：&lt;/strong>&lt;/p>
+&lt;p>使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。我这里需要手机自动开屏幕锁自动执行任务，于是只能root。不同手机不同操作，刷机有变砖风险！&lt;/p>
+&lt;p>&lt;strong>步骤：&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>解bl锁&lt;/li>
 &lt;/ol>

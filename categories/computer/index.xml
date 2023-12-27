@@ -326,13 +326,13 @@ BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA
 &lt;p>目前我在使用的云存储是Backblaze B2（兼容S3 API），价格仅为 Amazon S3、Microsoft Azure 和 Google Cloud 的1/4。&lt;/p>
 &lt;p>我们同样需要一个CDN缓存加速（cloudflare 与传统 CDN 不同，CloudFlare 处理对网站的所有请求，能够阻止针对网站的攻击，可以再加到传统CDN前作为防护），CDN在用户第一次请求后，会在接近用户的区域缓存源服务器的静态资源（没人请求不缓存，不主动和服务器保持同步），后续访问就更加快速，并降低服务器压力，可以使用cloudfront免费套餐，如果每月传出超过 1T 数据，可以考虑使用 bunny CDN。&lt;/p>
 &lt;h1 id="s3">S3&lt;/h1>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Bucket桶
 &lt;/div>
 &lt;p>桶就类似于根文件夹，其命名必须全局性唯一。也就是说，如果别人已经创建了命为X的Bucket，你就不能再用X作为桶的名字了。&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Events事件
 &lt;/div>
 &lt;p>在S3中，可以定义很多事件及其处理函数。比如当文件被创建，修改，删除，复制时，触发Lambda。这样就可以构建Event Driven Architecture，比如：新文件到S3 -&amp;gt; 触发Lambda处理函数 -&amp;gt; 处理结束后通知AppSync/GraphQL API -&amp;gt; 通知用户文件已经处理完毕。&lt;/p>
@@ -358,8 +358,8 @@ Events事件
 &lt;p>支持长期保留和数字化保存一年可能访问一到两次的数据，数据检索时间为 12 小时以内。&lt;/p>
 &lt;h1 id="cloudfront">cloudfront&lt;/h1>
 &lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=monoton" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'monoton'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
+&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
+&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Origin domain
 &lt;/div>
 ：源域，选S3 存储桶需配置Alternate Domain Names作为加速站点，写自己解析过的域名即为加速的站点&lt;/p>
@@ -497,8 +497,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="393"
 data-flex-basis="944px"
->&lt;/p></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
->主要参考文章&lt;/a>&lt;/p>
+>&lt;/p></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>本文建议只阅读前4小节。主要参考文章&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
+>https://kalacloud.com/blog/postman-tutorial&lt;/a>。&lt;/p>
 &lt;h1 id="api">API&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
 &lt;p>&lt;strong>chrome浏览器开发者工具&lt;/strong>&lt;/p>
@@ -4084,150 +4084,14 @@ data-flex-basis="236px"
 &lt;p>运行 github action。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>相互唤醒，再次在目标 repo 的工作流程中执行上述步骤，并添加所需 Github Action step（此步骤已标注请回看）。&lt;/p>
+&lt;p>相互唤醒，再次在目标 repo 的工作流程中执行上述步骤，并添加所需 step（已在代码中注释）。&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h1 id="附">附&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
 >github workflow 语法文档&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
->修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker自动化部署</title><link>https://xiaoxiano.github.io/p/auto-deploy/</link><pubDate>Mon, 15 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/auto-deploy/</guid><description>&lt;h1 id="actions部署前后端分离项目">actions部署前后端分离项目&lt;/h1>
-&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
->参考文章&lt;/a>&lt;/p>
-&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
->容器注册平台对比&lt;/a>&lt;/p>
-&lt;ol>
-&lt;li>
-&lt;p>准备好你的dockerfile，如无docker和docker-compose基础请先看文档和&lt;a class="link" href="https://xiaoxiano.github.io/p/docker-compose/" target="_blank" rel="noopener"
->前文&lt;/a>。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>使用github actions
-&lt;details class="spoiler " id="spoiler-0">
-&lt;summary>“点击展开示例actions”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REGISTRY: ghcr.io
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> IMAGE_NAME: ${{ github.repository }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> build-and-push-image:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> permissions:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> contents: read
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packages: write
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> strategy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> matrix:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node: [ &amp;#39;14&amp;#39; ]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout repository
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup node
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/setup-node@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node-version: ${{ matrix.node }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: npm install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cd web #进入前端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> npm install
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Set up QEMU
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/setup-qemu-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Log in to the Container registry
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/login-action@v1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> registry: ${{ env.REGISTRY }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: ${{ github.actor }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.GITHUB_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 用于消毒标签，tag是此动作的重要功能之一，本示例没使用，请见文档
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/server # images地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/web # images地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder1.outputs.name }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./server # 服务端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./server/Dockerfile # 服务端dockerfile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta1.outputs.tags }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta1.outputs.labels }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder2.outputs.name }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./web # 前端dockerfile目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./web/Dockerfile # 前端dockerfile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta2.outputs.tags }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta2.outputs.labels }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> needs: build-and-push-image
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: appleboy/ssh-action@master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> host: ${{ secrets.host }} #仓库设置中添加Secrets：HOST
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: root
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.PASSWORD }} #仓库设置中添加Secrets：PASSWORD
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 22
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> script: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin # 用户名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml pull # docker-compose名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml up -d # docker-compose名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 此actions许多参数由github自动提供，无需添加，需修改的均已注释
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
-&lt;/details>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>在服务器上完成&lt;a class="link" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-container-registry#" target="_blank" rel="noopener"
->向 Container registry 验证&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;p>具体操作：打开/etc/profile&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export CR_PAT=YOUR_TOKEN
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source /etc/profile
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
-&lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
->示例文档&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
->acme-companion&lt;/a>和示例文档。最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
->Issues中的实例&lt;/a>可能会有帮助。&lt;/li>
-&lt;/ol></description></item><item><title>docker和docker-compose</title><link>https://xiaoxiano.github.io/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
+>修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://xiaoxiano.github.io/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#更新apt包索引
@@ -4585,7 +4449,142 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose exec --index=1 [serviceName] sh # 进入某服务的第1个容器执行命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose --help # 帮助
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>常用命令</title><link>https://xiaoxiano.github.io/p/command/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/command/</guid><description>&lt;h1 id="git">git&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions自动化部署前后端分离项目">actions自动化部署前后端分离项目&lt;/h1>
+&lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
+>参考文章&lt;/a>&lt;/p>
+&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
+>容器注册平台对比&lt;/a>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>准备好你的dockerfile&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用github actions
+&lt;details class="spoiler " id="spoiler-3">
+&lt;summary>“点击展开示例actions”&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">on:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">env:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REGISTRY: ghcr.io
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> IMAGE_NAME: ${{ github.repository }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> build-and-push-image:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> permissions:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> contents: read
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packages: write
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> strategy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> matrix:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node: [ &amp;#39;14&amp;#39; ]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout repository
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup node
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/setup-node@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> node-version: ${{ matrix.node }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: npm install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cd web #进入前端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> npm install
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Set up QEMU
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/setup-qemu-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: docker/setup-buildx-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: builder2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Log in to the Container registry
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/login-action@v1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> registry: ${{ env.REGISTRY }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: ${{ github.actor }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.GITHUB_TOKEN }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 用于消毒标签，tag是此动作的重要功能之一，本示例没使用，请见文档
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/server # images地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Extract metadata (tags, labels) for Docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: meta2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/metadata-action@v3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> images: ghcr.io/username/web # images地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder1.outputs.name }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./server # 服务端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./server/Dockerfile # 服务端dockerfile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta1.outputs.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta1.outputs.labels }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Build and push Docker image 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: docker/build-push-action@v2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> builder: ${{ steps.builder2.outputs.name }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context: ./web # 前端dockerfile目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> file: ./web/Dockerfile # 前端dockerfile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> tags: ${{ steps.meta2.outputs.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> labels: ${{ steps.meta2.outputs.labels }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-from: type=gha
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cache-to: type=gha,mode=max
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> needs: build-and-push-image
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: appleboy/ssh-action@master
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> host: ${{ secrets.host }} #仓库设置中添加Secrets：HOST
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> username: root
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> password: ${{ secrets.PASSWORD }} #仓库设置中添加Secrets：PASSWORD
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> port: 22
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> script: |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin # 用户名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml pull # docker-compose名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose-nginx.yaml -f docker-compose-app.yaml up -d # docker-compose名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 此actions许多参数由github自动提供，无需添加，需修改的均已注释
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在服务器上完成&lt;a class="link" href="https://docs.github.com/cn/packages/working-with-a-github-packages-registry/working-with-the-container-registry#" target="_blank" rel="noopener"
+>向 Container registry 验证&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>具体操作：打开/etc/profile&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export CR_PAT=YOUR_TOKEN
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source /etc/profile
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
+>示例文档&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
+>acme-companion&lt;/a>和示例文档。最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
+>Issues中的实例&lt;/a>可能会有帮助。&lt;/li>
+&lt;/ol></description></item><item><title>常用命令</title><link>https://xiaoxiano.github.io/p/command/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/command/</guid><description>&lt;h1 id="git">git&lt;/h1>
 &lt;h2 id="git命令">git命令&lt;/h2>
 &lt;p>&lt;a class="link" href="https://training.github.com/downloads/zh_CN/github-git-cheat-sheet/" target="_blank" rel="noopener"
 >官网git备忘表&lt;/a>&lt;/p>
@@ -5676,24 +5675,24 @@ data-flex-basis="436px"
 &lt;p>开发者实用工具&lt;/p>
 &lt;ul>
 &lt;li>typora　　　　　　　　　　　# markdown记事本&lt;/li>
-&lt;li>joplin # markdown多端同步&lt;/li>
-&lt;li>sourcetree # Git 界面&lt;/li>
-&lt;li>DBeaver # 连接数据库&lt;/li>
-&lt;li>Postman # 接口测试&lt;/li>
+&lt;li>joplin　　　　　　　　　　　# markdown多端同步&lt;/li>
+&lt;li>sourcetree　　　　　　　　　# Git 界面&lt;/li>
+&lt;li>DBeaver　　　　　　　　　　　# 连接数据库&lt;/li>
+&lt;li>Postman　　　　　　　　　　　# 接口测试&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>其它工具&lt;/p>
 &lt;ul>
-&lt;li>GIMP # 图像处理
+&lt;li>GIMP　　　　　　　　　　　　# 图像处理
 &lt;ul>
-&lt;li>例：转换pdf，文件-&amp;gt;打开，导入分辨率填300,文件-&amp;gt;导出为&lt;/li>
+&lt;li>例：转换pdf，文件-&amp;gt;打开，导入分辨率填300,文件-&amp;gt;导出&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>Pr # 视频剪辑&lt;/li>
-&lt;li>Ae # 动画特效&lt;/li>
-&lt;li>Ps # 图片处理&lt;/li>
-&lt;li>Ai # 插图&lt;/li>
+&lt;li>Pr　　　　　　　　　　　　　# 视频剪辑&lt;/li>
+&lt;li>Ae　　　　　　　　　　　　　# 动画特效&lt;/li>
+&lt;li>Ps　　　　　　　　　　　　　# 图片处理&lt;/li>
+&lt;li>Ai　　　　　　　　　　　　　# 插图&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -5713,8 +5712,8 @@ data-flex-basis="436px"
 &lt;li>
 &lt;p>影视：&lt;/p>
 &lt;ul>
-&lt;li>论坛haopanyou.net&lt;/li>
-&lt;li>App：tg破解软件中文频道，搜#影视&lt;/li>
+&lt;li>论坛：haopanyou.net&lt;/li>
+&lt;li>App：tg破解软件中文频道搜#影视&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
@@ -5727,24 +5726,24 @@ data-flex-basis="436px"
 &lt;p>阅读：ReadEra、福昕PDF阅读器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：跳过广告&lt;/p>
+&lt;p>去除启动广告：跳过广告等&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
 &lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
 &lt;li>Moonlight　　　　　　　　# 局域网流畅投屏&lt;/li>
-&lt;li>AirDroid和AirMirror　　　# 手机远程控制手机&lt;/li>
+&lt;li>AirDroid和AirMirror　　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>其他&lt;/p>
 &lt;ul>
-&lt;li>zarchiver　　　　　　　# 文件管理和解压&lt;/li>
+&lt;li>zarchiver　　　　　　　　# 文件管理和解压&lt;/li>
 &lt;li>星空视频壁纸&lt;/li>
-&lt;li>Sendapp # 提取apk&lt;/li>
-&lt;li>Solid Explorer # 访问局域网文件&lt;/li>
+&lt;li>Skit　　　　　　　　　　　# 提取apk&lt;/li>
+&lt;li>猫头鹰文件　　　　　　　　# 访问局域网文件&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item></channel></rss>
