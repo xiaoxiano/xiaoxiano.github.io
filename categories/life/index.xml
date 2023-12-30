@@ -422,7 +422,7 @@ data-flex-grow="100"
 data-flex-basis="240px"
 >&lt;/p>
 &lt;h1 id="skybox">SKYBOX&lt;/h1>
-&lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用本地网络播放电脑上的影片。&lt;/p>
+&lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用电脑的本地网络播放电脑上的影片。&lt;/p>
 &lt;p>vr影片体积超过10G的很常见，quest2装不了多少，所以放在pc，局域网共享。&lt;/p>
 &lt;ol>
 &lt;li>电脑设置开启共享。
@@ -436,6 +436,8 @@ data-flex-grow="281"
 data-flex-basis="676px"
 >&lt;/li>
 &lt;/ol>
+&lt;ul>
+&lt;li>
 &lt;p>无密码的共享
 &lt;img src="https://xiaoxiano.github.io/p/quest2/13.jpg"
 width="1255"
@@ -446,12 +448,22 @@ class="gallery-image"
 data-flex-grow="170"
 data-flex-basis="409px"
 >&lt;/p>
+&lt;/li>
+&lt;li>
 &lt;p>有密码的共享，找到用户名和改密码
-&lt;img src="https://xiaoxiano.github.io/15.jpg"
+&lt;img src="https://xiaoxiano.github.io/p/quest2/15.png"
+width="1280"
+height="359"
+srcset="https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_1024x0_resize_box_3.png 1024w"
 loading="lazy"
+class="gallery-image"
+data-flex-grow="356"
+data-flex-basis="855px"
 >&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;ol start="2">
-&lt;li>共享存放影片的文件夹。(以后删除共享点击图一的“删除访问”)&lt;/li>
+&lt;li>共享存放影片的文件夹。(如果以后删除共享点击图1的“删除访问”)&lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/10.jpg"
 width="1260"
