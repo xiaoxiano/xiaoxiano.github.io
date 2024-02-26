@@ -5994,7 +5994,7 @@ data-flex-basis="479px"
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
-&lt;p>和卡刷操作相似，github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
+&lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后安装magisk manager app即可。&lt;/p>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
