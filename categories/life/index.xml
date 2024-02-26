@@ -58,14 +58,16 @@
 &lt;li>软路由openwrt&lt;/li>
 &lt;/ol>
 &lt;ul>
-&lt;li>刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以我没用。&lt;/li>
+&lt;li>刷路由器，这个方式比较直接，我认为日常不适用的场景较多，所以没有用。&lt;/li>
 &lt;li>电脑开个VMware虚拟机安装OpenWrt,有点麻烦。&lt;a class="link" href="https://blog.51cto.com/linhong/5732213" target="_blank" rel="noopener"
 >参考文章&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;ol start="2">
-&lt;li>电脑热点，下文介绍。&lt;/li>
+&lt;li>电脑热点&lt;/li>
 &lt;/ol>
-&lt;p>&lt;strong>sstap方法(推荐)&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>sstap方法(推荐)&lt;/strong>&lt;/li>
+&lt;/ul>
 &lt;ol>
 &lt;li>
 &lt;p>打开科学上网，注意用全局模式并且允许局域网连接。&lt;/p>
@@ -100,8 +102,10 @@ data-flex-basis="355px"
 &lt;/li>
 &lt;/ol>
 &lt;hr>
-&lt;p>&lt;strong>TUN模式方法&lt;/strong>&lt;/p>
-&lt;p>如果你的电脑同时&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>TUN模式方法&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>如果你的电脑同时有&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
 &lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
 &lt;ol>
 &lt;li>
@@ -517,20 +521,20 @@ data-flex-basis="319px"
 &lt;ol start="2">
 &lt;li>刷入 TWRP (recovery)、刷rom（系统）&lt;/li>
 &lt;/ol>
-&lt;p>建议不要刷机软件一键刷机，都是垃圾系统。&lt;/p>
+&lt;p>建议不要刷机软件一键刷机，都是一堆广告的系统。&lt;/p>
 &lt;ul>
 &lt;li>手机品牌官网下载对应机型的驱动，并在windows设备管理器确认连接。&lt;/li>
 &lt;li>&lt;a class="link" href="https://twrp.me" target="_blank" rel="noopener"
 >twrp官网&lt;/a>下载TWRP。（TWRP 类似于 windows PE，是修改系统的程序。也可以去&lt;a class="link" href="https://unofficialtwrp.com/" target="_blank" rel="noopener"
->https://unofficialtwrp.com&lt;/a>，收录了全面的非官方TWRP，如果有广告拦截检测可以用ublock插件。）&lt;/li>
+>https://unofficialtwrp.com&lt;/a>下载，收录了全面的非官方TWRP，如果有广告拦截检测可以安装ublock插件。）&lt;/li>
 &lt;li>下载刷机软件和rom：&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>三星为例：&lt;/strong> 进入刷机模式，下载三星手机刷机的软件&lt;a class="link" href="https://odindownloader.com/category/download" target="_blank" rel="noopener"
->Odin&lt;/a>和 &lt;strong>tar格式&lt;/strong>的TWRP，然后用Odin（选AP）刷进手机。可参考&lt;a class="link" href="https://www.youtube.com/@SebastianSNRL/featured" target="_blank" rel="noopener"
+>Odin&lt;/a>和 &lt;strong>tar格式&lt;/strong>的TWRP，然后用Odin（选择AP）刷进手机。可参考&lt;a class="link" href="https://www.youtube.com/@SebastianSNRL/featured" target="_blank" rel="noopener"
 >youtube视频&lt;/a>。&lt;/p>
-&lt;p>有了TWRP可选择卡刷，在&lt;a class="link" href="https://samfw.com/" target="_blank" rel="noopener"
+&lt;p>卡刷：在&lt;a class="link" href="https://samfw.com/" target="_blank" rel="noopener"
 >https://samfw.com/&lt;/a>下载，放入手机存储，双清后安装即可。&lt;/p>
-&lt;p>如果线刷rom，在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
+&lt;p>线刷：在&lt;a class="link" href="https://samfirmtool.com/" target="_blank" rel="noopener"
 >https://samfirmtool.com/&lt;/a>下载三星手机官方系统下载器SamFirm，然后使用Odin。&lt;/p>
 &lt;p>SamFirm使用方法：&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/phone-root/1.png"
@@ -543,14 +547,14 @@ data-flex-grow="199"
 data-flex-basis="479px"
 >&lt;/p>
 &lt;p>&lt;strong>小米为例：&lt;/strong> 在&lt;a class="link" href="https://xiaomirom.com/" target="_blank" rel="noopener"
->https://xiaomirom.com/&lt;/a>下载刷机工具，下载酷安ID乌堆小透明的ROM，或者欧版eu社区版ROM，（我的k50至尊版无论刷欧版还是刷gsi均不能使用chrome联外网，似乎k50、k60系列手机底层被禁止，其他小米手机仍然正常）。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
+>https://xiaomirom.com/&lt;/a>下载刷机工具，下载酷安大神（例如：乌堆小透明）的ROM，或者欧版eu社区版ROM。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
 >此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。&lt;/p>
 &lt;p>&lt;strong>华为旧机为例：&lt;/strong> 在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
 >https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广告就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
-&lt;p>像卡刷一样操作，github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
+&lt;p>和卡刷操作相似，github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后酷安安装magisk app即可。&lt;/p>
 &lt;h1 id="macrodroid">MacroDroid&lt;/h1>
 &lt;h2 id="基础">基础&lt;/h2>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
