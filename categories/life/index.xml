@@ -6,8 +6,8 @@
 &lt;li>x-station？&lt;/li>
 &lt;/ul>
 &lt;p>目前结论：&lt;/p>
-&lt;p>Chromebook duet5 硬件尚可，续航高，但Chrome OS还不成熟，不适配的bug很多，体验不佳。不过使用Android平板甚至是Ipad体验也很一般，只轻度使用（电子书、视频等）可以试试Chromebook duet5。&lt;/p>
-&lt;p>surface pro 偏向于轻便式笔记本电脑，续航高，用于外出用电脑，兼容性、易用性强，而且使用BlueStacks5 等虚拟机可以用Android，需要触屏和Windows就买surface pro。但这个价格大多数人会考虑买性能强大、也算轻便的Mac（只少了触屏）。&lt;/p>
+&lt;p>Chromebook duet5 硬件尚可，续航高，但Chrome OS还不成熟，不适配的bug很多，体验不佳。不过使用其它Android平板或Ipad体验也很一般，只轻度使用（电子书、视频等）可以尝试。&lt;/p>
+&lt;p>surface pro 偏向于轻便式笔记本电脑，续航高，用于外出用电脑，兼容性、易用性强，而且使用BlueStacks5 等虚拟机可以用Android，需要触屏和Windows就买surface pro。但这个价格大多数人会考虑买性能强大、也算轻便的Mac（少了触屏）。&lt;/p>
 &lt;h1 id="chromebook-duet5">Chromebook duet5&lt;/h1>
 &lt;h2 id="开启开发者模式">开启开发者模式&lt;/h2>
 &lt;ol>
@@ -28,7 +28,7 @@
 &lt;p>谷歌插件商店，先安装&lt;a class="link" href="https://chrome.google.com/webstore/detail/%e5%8f%8c%e6%8b%bc/enmcjlgogceppnhfkaimbjlcmcnmihbo" target="_blank" rel="noopener"
 >IME UI控件&lt;/a> ，然后再安装&lt;a class="link" href="https://chrome.google.com/webstore/detail/ime-decoderbackground-new/fifkgdfgcgfejffmmmnmmkhckkojpdom" target="_blank" rel="noopener"
 >IME Decoder(chrome &amp;gt; 102)&lt;/a> 。&lt;/p>
-&lt;p>系统设置-&amp;gt;语言与输入法-&amp;gt;添加输入法,找到&amp;quot;中文双拼输入法&amp;quot;添加并选择启用输入。&lt;/p></description></item><item><title>quest2入门使用汇总</title><link>https://xiaoxiano.github.io/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+&lt;p>系统设置-&amp;gt;语言与输入法-&amp;gt;添加输入法,找到&amp;quot;中文双拼输入法&amp;quot;添加并选择启用输入。&lt;/p></description></item><item><title>quest2入门使用</title><link>https://xiaoxiano.github.io/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -107,16 +107,21 @@ data-flex-basis="355px"
 &lt;/ul>
 &lt;p>如果你的电脑同时有&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
 &lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
-&lt;ol>
+&lt;ol start="0">
+&lt;li>
+&lt;p>只玩破解版无需受邀，无需此步骤！&lt;/p>
+&lt;/li>
 &lt;li>
 &lt;p>使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>接受邀请比较麻烦（实际上大多玩家只玩破解版，无需受邀，无需此步骤！），有需要直接去找别人代操作受邀！！以下方式成本过高，作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
+&lt;p>接受邀请比较麻烦，有需要直接去找别人代操作受邀！&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>以下方式成本过高，仅作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;em>注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号&lt;/em>&lt;/p>
-&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type是hosting），会被识别屏蔽。所以要用住宅代理（type是isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
+&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type为hosting），会被识别屏蔽。所以要用住宅代理（type为isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>

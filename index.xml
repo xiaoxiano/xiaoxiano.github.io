@@ -1,643 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>投资港美A股</title><link>https://xiaoxiano.github.io/p/stocks/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/stocks/</guid><description>&lt;h1 id="a股">A股&lt;/h1>
-&lt;h2 id="政策底市场底业绩底">政策底、市场底、业绩底&lt;/h2>
-&lt;p>回顾历史，时间维度上政策底、市场底、业绩底依次出现。&lt;/p>
-&lt;p>参考：&lt;a class="link" href="https://redian.news/wxnews/565548" target="_blank" rel="noopener"
->复盘A股历次政策底、市场底、业绩底&lt;/a>&lt;/p>
-&lt;h3 id="流动性">流动性&lt;/h3>
-&lt;p>流动性，是股市的领先指标，也是影响股价最重要的因素之一。衡量过剩的流动性有以下两个参考方法。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>方法1：看M2同比与名义GDP同比的差值，其逻辑在于央行说的“货币供应量要与名义GDP增速相一致”，如果两者缺口大，那就是出现了过剩的流动性。
-&lt;details class="spoiler " id="spoiler-0">
-&lt;summary>点击展开和折叠&lt;/summary>
-&lt;p>&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>日期&lt;/th>
-&lt;th>&lt;a class="link" href="https://data.eastmoney.com/cjsj/hbgyl.html" target="_blank" rel="noopener"
->货币供应量-货币和准货币(M2)&lt;/a>&lt;/th>
-&lt;th>同比(季合计)&lt;/th>
-&lt;th>国内生产总值(GDP)&lt;/th>
-&lt;th>同比&lt;/th>
-&lt;th>同比差值&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>2023年9月&lt;/td>
-&lt;td>2896659.11&lt;/td>
-&lt;td>31.60%&lt;/td>
-&lt;td>913027&lt;/td>
-&lt;td>5.20%&lt;/td>
-&lt;td>26.40%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2023年6月&lt;/td>
-&lt;td>2873023.83&lt;/td>
-&lt;td>35.30%&lt;/td>
-&lt;td>593034.2&lt;/td>
-&lt;td>5.50%&lt;/td>
-&lt;td>29.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2023年3月&lt;/td>
-&lt;td>2814566.31&lt;/td>
-&lt;td>38.20%&lt;/td>
-&lt;td>284996.6&lt;/td>
-&lt;td>4.50%&lt;/td>
-&lt;td>33.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2022年12月&lt;/td>
-&lt;td>2664320.84&lt;/td>
-&lt;td>36.00%&lt;/td>
-&lt;td>1210207.2&lt;/td>
-&lt;td>3.00%&lt;/td>
-&lt;td>33.00%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2022年9月&lt;/td>
-&lt;td>2626600.92&lt;/td>
-&lt;td>36.30%&lt;/td>
-&lt;td>874699.3&lt;/td>
-&lt;td>3.00%&lt;/td>
-&lt;td>33.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2022年6月&lt;/td>
-&lt;td>2581451.2&lt;/td>
-&lt;td>33.00%&lt;/td>
-&lt;td>565428.7&lt;/td>
-&lt;td>2.50%&lt;/td>
-&lt;td>30.50%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2022年3月&lt;/td>
-&lt;td>2497688.34&lt;/td>
-&lt;td>28.70%&lt;/td>
-&lt;td>271509.2&lt;/td>
-&lt;td>4.80%&lt;/td>
-&lt;td>23.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2021年12月&lt;/td>
-&lt;td>2382899.56&lt;/td>
-&lt;td>26.20%&lt;/td>
-&lt;td>1149237&lt;/td>
-&lt;td>8.10%&lt;/td>
-&lt;td>18.10%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2021年9月&lt;/td>
-&lt;td>2342829.7&lt;/td>
-&lt;td>24.80%&lt;/td>
-&lt;td>823337.5&lt;/td>
-&lt;td>9.80%&lt;/td>
-&lt;td>15.00%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2021年6月&lt;/td>
-&lt;td>2317788.36&lt;/td>
-&lt;td>25.00%&lt;/td>
-&lt;td>532049.4&lt;/td>
-&lt;td>12.70%&lt;/td>
-&lt;td>12.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2021年3月&lt;/td>
-&lt;td>2276488.45&lt;/td>
-&lt;td>28.90%&lt;/td>
-&lt;td>249200.2&lt;/td>
-&lt;td>18.30%&lt;/td>
-&lt;td>10.60%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2020年12月&lt;/td>
-&lt;td>2186795.89&lt;/td>
-&lt;td>31.30%&lt;/td>
-&lt;td>1013567&lt;/td>
-&lt;td>2.30%&lt;/td>
-&lt;td>29.00%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2020年9月&lt;/td>
-&lt;td>2164084.8&lt;/td>
-&lt;td>32.00%&lt;/td>
-&lt;td>717948.2&lt;/td>
-&lt;td>0.70%&lt;/td>
-&lt;td>31.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2020年6月&lt;/td>
-&lt;td>2134948.66&lt;/td>
-&lt;td>33.30%&lt;/td>
-&lt;td>453592.5&lt;/td>
-&lt;td>-1.60%&lt;/td>
-&lt;td>34.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2020年3月&lt;/td>
-&lt;td>2080923.41&lt;/td>
-&lt;td>27.30%&lt;/td>
-&lt;td>205244.8&lt;/td>
-&lt;td>-6.80%&lt;/td>
-&lt;td>34.10%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2019年12月&lt;/td>
-&lt;td>1986488.82&lt;/td>
-&lt;td>25.30%&lt;/td>
-&lt;td>986515.2&lt;/td>
-&lt;td>6.10%&lt;/td>
-&lt;td>19.20%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2019年9月&lt;/td>
-&lt;td>1952250.49&lt;/td>
-&lt;td>24.70%&lt;/td>
-&lt;td>709717.2&lt;/td>
-&lt;td>6.20%&lt;/td>
-&lt;td>18.50%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2019年6月&lt;/td>
-&lt;td>1921360.19&lt;/td>
-&lt;td>25.50%&lt;/td>
-&lt;td>458670.9&lt;/td>
-&lt;td>6.30%&lt;/td>
-&lt;td>19.20%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2019年3月&lt;/td>
-&lt;td>1889412.14&lt;/td>
-&lt;td>25.00%&lt;/td>
-&lt;td>217168.3&lt;/td>
-&lt;td>6.40%&lt;/td>
-&lt;td>18.60%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2018年12月&lt;/td>
-&lt;td>1826744.22&lt;/td>
-&lt;td>24.10%&lt;/td>
-&lt;td>919281.1&lt;/td>
-&lt;td>6.60%&lt;/td>
-&lt;td>17.50%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2018年9月&lt;/td>
-&lt;td>1801665.58&lt;/td>
-&lt;td>25.00%&lt;/td>
-&lt;td>660472.2&lt;/td>
-&lt;td>6.70%&lt;/td>
-&lt;td>18.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2018年6月&lt;/td>
-&lt;td>1770178.37&lt;/td>
-&lt;td>24.60%&lt;/td>
-&lt;td>425997.9&lt;/td>
-&lt;td>6.80%&lt;/td>
-&lt;td>17.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2018年3月&lt;/td>
-&lt;td>1739859.48&lt;/td>
-&lt;td>25.60%&lt;/td>
-&lt;td>202035.7&lt;/td>
-&lt;td>6.80%&lt;/td>
-&lt;td>18.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2017年12月&lt;/td>
-&lt;td>1690235.31&lt;/td>
-&lt;td>26.06%&lt;/td>
-&lt;td>832035.9&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>19.16%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2017年9月&lt;/td>
-&lt;td>1663666.05&lt;/td>
-&lt;td>26.43%&lt;/td>
-&lt;td>596607.3&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>19.53%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2017年6月&lt;/td>
-&lt;td>1639497.05&lt;/td>
-&lt;td>28.07%&lt;/td>
-&lt;td>383818&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>21.17%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2017年3月&lt;/td>
-&lt;td>1607938.98&lt;/td>
-&lt;td>31.27%&lt;/td>
-&lt;td>181867.7&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>24.37%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2016年12月&lt;/td>
-&lt;td>1550066.67&lt;/td>
-&lt;td>34.30%&lt;/td>
-&lt;td>746395.1&lt;/td>
-&lt;td>6.70%&lt;/td>
-&lt;td>27.60%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2016年9月&lt;/td>
-&lt;td>1516360.5&lt;/td>
-&lt;td>33.10%&lt;/td>
-&lt;td>534828.9&lt;/td>
-&lt;td>6.70%&lt;/td>
-&lt;td>26.40%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2016年6月&lt;/td>
-&lt;td>1490491.83&lt;/td>
-&lt;td>36.40%&lt;/td>
-&lt;td>343818.2&lt;/td>
-&lt;td>6.70%&lt;/td>
-&lt;td>29.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2016年3月&lt;/td>
-&lt;td>1446198.03&lt;/td>
-&lt;td>40.70%&lt;/td>
-&lt;td>162410&lt;/td>
-&lt;td>6.70%&lt;/td>
-&lt;td>34.00%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2015年12月&lt;/td>
-&lt;td>1392278.11&lt;/td>
-&lt;td>40.50%&lt;/td>
-&lt;td>688858.2&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>33.60%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2015年9月&lt;/td>
-&lt;td>1359824.06&lt;/td>
-&lt;td>39.70%&lt;/td>
-&lt;td>496285.3&lt;/td>
-&lt;td>6.90%&lt;/td>
-&lt;td>32.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2015年6月&lt;/td>
-&lt;td>1333375.36&lt;/td>
-&lt;td>32.70%&lt;/td>
-&lt;td>319687.6&lt;/td>
-&lt;td>7.00%&lt;/td>
-&lt;td>25.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2015年3月&lt;/td>
-&lt;td>1275332.78&lt;/td>
-&lt;td>34.90%&lt;/td>
-&lt;td>151137.9&lt;/td>
-&lt;td>7.00%&lt;/td>
-&lt;td>27.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2014年12月&lt;/td>
-&lt;td>1228374.81&lt;/td>
-&lt;td>37.10%&lt;/td>
-&lt;td>643563.1&lt;/td>
-&lt;td>7.30%&lt;/td>
-&lt;td>29.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2014年9月&lt;/td>
-&lt;td>1202051.41&lt;/td>
-&lt;td>39.20%&lt;/td>
-&lt;td>462734.2&lt;/td>
-&lt;td>7.30%&lt;/td>
-&lt;td>31.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2014年6月&lt;/td>
-&lt;td>1209587.2&lt;/td>
-&lt;td>41.30%&lt;/td>
-&lt;td>297249.5&lt;/td>
-&lt;td>7.40%&lt;/td>
-&lt;td>33.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2014年3月&lt;/td>
-&lt;td>1160687.38&lt;/td>
-&lt;td>38.60%&lt;/td>
-&lt;td>140759.8&lt;/td>
-&lt;td>7.40%&lt;/td>
-&lt;td>31.20%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2013年12月&lt;/td>
-&lt;td>1106524.98&lt;/td>
-&lt;td>42.10%&lt;/td>
-&lt;td>592963.2&lt;/td>
-&lt;td>7.80%&lt;/td>
-&lt;td>34.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2013年9月&lt;/td>
-&lt;td>1077379.16&lt;/td>
-&lt;td>43.40%&lt;/td>
-&lt;td>425190.9&lt;/td>
-&lt;td>7.80%&lt;/td>
-&lt;td>35.60%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2013年6月&lt;/td>
-&lt;td>1054403.69&lt;/td>
-&lt;td>45.90%&lt;/td>
-&lt;td>272968.2&lt;/td>
-&lt;td>7.70%&lt;/td>
-&lt;td>38.20%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2013年3月&lt;/td>
-&lt;td>1035858.37&lt;/td>
-&lt;td>46.80%&lt;/td>
-&lt;td>129449.6&lt;/td>
-&lt;td>7.90%&lt;/td>
-&lt;td>38.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2012年12月&lt;/td>
-&lt;td>974148.8&lt;/td>
-&lt;td>41.80%&lt;/td>
-&lt;td>538580&lt;/td>
-&lt;td>7.90%&lt;/td>
-&lt;td>33.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2012年9月&lt;/td>
-&lt;td>943688.75&lt;/td>
-&lt;td>42.20%&lt;/td>
-&lt;td>386767.9&lt;/td>
-&lt;td>7.80%&lt;/td>
-&lt;td>34.40%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2012年6月&lt;/td>
-&lt;td>924991.2&lt;/td>
-&lt;td>39.60%&lt;/td>
-&lt;td>248678.3&lt;/td>
-&lt;td>7.90%&lt;/td>
-&lt;td>31.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2012年3月&lt;/td>
-&lt;td>895565.5&lt;/td>
-&lt;td>38.80%&lt;/td>
-&lt;td>117357.6&lt;/td>
-&lt;td>8.10%&lt;/td>
-&lt;td>30.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2011年12月&lt;/td>
-&lt;td>787406.2&lt;/td>
-&lt;td>39.20%&lt;/td>
-&lt;td>487940.2&lt;/td>
-&lt;td>9.50%&lt;/td>
-&lt;td>29.70%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2011年9月&lt;/td>
-&lt;td>787406.2&lt;/td>
-&lt;td>41.24%&lt;/td>
-&lt;td>349928&lt;/td>
-&lt;td>9.80%&lt;/td>
-&lt;td>31.44%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2011年6月&lt;/td>
-&lt;td>780820.85&lt;/td>
-&lt;td>46.30%&lt;/td>
-&lt;td>223365.8&lt;/td>
-&lt;td>10.10%&lt;/td>
-&lt;td>36.20%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2011年3月&lt;/td>
-&lt;td>758130.88&lt;/td>
-&lt;td>49.50%&lt;/td>
-&lt;td>104469.9&lt;/td>
-&lt;td>10.20%&lt;/td>
-&lt;td>39.30%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2010年12月&lt;/td>
-&lt;td>725851.79&lt;/td>
-&lt;td>58.50%&lt;/td>
-&lt;td>412119.3&lt;/td>
-&lt;td>10.60%&lt;/td>
-&lt;td>47.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2010年9月&lt;/td>
-&lt;td>696471.5&lt;/td>
-&lt;td>55.80%&lt;/td>
-&lt;td>292812.4&lt;/td>
-&lt;td>10.90%&lt;/td>
-&lt;td>44.90%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2010年6月&lt;/td>
-&lt;td>673921.72&lt;/td>
-&lt;td>60.98%&lt;/td>
-&lt;td>186848.7&lt;/td>
-&lt;td>11.40%&lt;/td>
-&lt;td>49.58%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2010年3月&lt;/td>
-&lt;td>649947.46&lt;/td>
-&lt;td>74.00%&lt;/td>
-&lt;td>87501.3&lt;/td>
-&lt;td>12.20%&lt;/td>
-&lt;td>61.80%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2009年12月&lt;/td>
-&lt;td>610224.52&lt;/td>
-&lt;td>86.84%&lt;/td>
-&lt;td>348517.7&lt;/td>
-&lt;td>9.40%&lt;/td>
-&lt;td>77.44%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2009年9月&lt;/td>
-&lt;td>585405.34&lt;/td>
-&lt;td>86.26%&lt;/td>
-&lt;td>247691.9&lt;/td>
-&lt;td>8.50%&lt;/td>
-&lt;td>77.76%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2009年6月&lt;/td>
-&lt;td>568916.2&lt;/td>
-&lt;td>80.15%&lt;/td>
-&lt;td>157845&lt;/td>
-&lt;td>7.30%&lt;/td>
-&lt;td>72.85%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2009年3月&lt;/td>
-&lt;td>530626.71&lt;/td>
-&lt;td>64.78%&lt;/td>
-&lt;td>73979.2&lt;/td>
-&lt;td>6.40%&lt;/td>
-&lt;td>58.38%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2008年12月&lt;/td>
-&lt;td>475166.6&lt;/td>
-&lt;td>47.64%&lt;/td>
-&lt;td>319244.6&lt;/td>
-&lt;td>9.70%&lt;/td>
-&lt;td>37.94%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2008年9月&lt;/td>
-&lt;td>452898.71&lt;/td>
-&lt;td>47.64%&lt;/td>
-&lt;td>230545.6&lt;/td>
-&lt;td>10.60%&lt;/td>
-&lt;td>37.04%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2008年6月&lt;/td>
-&lt;td>443141.02&lt;/td>
-&lt;td>52.38%&lt;/td>
-&lt;td>148085.5&lt;/td>
-&lt;td>11.20%&lt;/td>
-&lt;td>41.18%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>2008年3月&lt;/td>
-&lt;td>423054.53&lt;/td>
-&lt;td>52.46%&lt;/td>
-&lt;td>69373.6&lt;/td>
-&lt;td>11.50%&lt;/td>
-&lt;td>40.96%&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/p>
-&lt;/details>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a class="link" href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield" target="_blank" rel="noopener"
->看国债收益率&lt;/a>，低于3.3%时被认为是流动性过剩，4%以上则意味着流动性的收紧。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h3 id="业绩底">业绩底&lt;/h3>
-&lt;p>A股上市公司利润增速、工业增加值同比、制造业PMI等指标见底反转标志着业绩底到来。&lt;/p>
-&lt;h1 id="美股">美股&lt;/h1>
-&lt;h2 id="开户">开户&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:left">主要账户类型&lt;/th>
-&lt;th style="text-align:left">账户用途&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:left">Checking Account 支票账户&lt;/td>
-&lt;td style="text-align:left">平时开支消费专用。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">Savings Account 储蓄账户&lt;/td>
-&lt;td style="text-align:left">活期账户，通常用来保持资金流动。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">Certificates of Deposits 定期存款账户&lt;/td>
-&lt;td style="text-align:left">用于存定期存款的账户。&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>美国银行开户需要准备的资料：&lt;/p>
-&lt;ul>
-&lt;li>美国实体手机卡：Paygo、redpacket&lt;/li>
-&lt;li>美国私人地址（用来申请银行账号/信用卡、美国税号TIN）：AnytimeMailbox&lt;/li>
-&lt;li>ITIN（作为身份验证、银行要求提供的地址证明）&lt;/li>
-&lt;li>美国独立IP&lt;/li>
-&lt;/ul>
-&lt;h2 id="券商">券商&lt;/h2>
-&lt;p>互联网券商富途证券、老虎证券被禁止之后，美国本土券商的选择有嘉信理财（Chales Schwab）、富达证券（fidelity）、Etrade、美林证券、TradeKing、盈透（Interactive Broker）、德美利（TD Ameritrade）、第一证券等。较好的选择有盈透证券、嘉信理财、富达证券。&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>&lt;/th>
-&lt;th>嘉信理财&lt;/th>
-&lt;th>盈透证券&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>储蓄&lt;/td>
-&lt;td>0.45%&lt;/td>
-&lt;td>4.58%（资金大于1万美元）&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>固定收益产品（国债、企业债）&lt;/td>
-&lt;td>三个月约5%&lt;/td>
-&lt;td>\&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>佣金&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1美元~交易价值的1%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>客户端&lt;/td>
-&lt;td>网页（交易价格劣势）&lt;/td>
-&lt;td>专业APP&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>银行卡&lt;/td>
-&lt;td>2023-08后大陆不给开（全球免费取款）&lt;/td>
-&lt;td>大陆不给开&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>中文客服&lt;/td>
-&lt;td>有&lt;/td>
-&lt;td>\&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>全球交易需求&lt;/td>
-&lt;td>\&lt;/td>
-&lt;td>免费多币种转换，且无汇率差额&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>融资/杠杆&lt;/td>
-&lt;td>13%&lt;/td>
-&lt;td>6.570%&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>出金&lt;/td>
-&lt;td>免费&lt;/td>
-&lt;td>每个月第一笔免费（如果有中转银行可能收费）&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="转账">转账&lt;/h2>
-&lt;p>一般转到 Checking Account，频繁转账容易风控&lt;/p>
-&lt;p>转账方式：&lt;/p>
-&lt;ul>
-&lt;li>Zelle　美国银行间的即时转账系统，限额$1500～$2500/天, $5000～$10000/月，免费&lt;/li>
-&lt;li>ACH　　自动清算系统，1～3个工作日到帐，限额取决于转出行（比Zelle多一些），大部分银行免费（BOA等银行转出需$3）&lt;/li>
-&lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
-&lt;/ul>
-&lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
->course.yiwiz.com&lt;/a>&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Janus</title><link>https://xiaoxiano.github.io/</link><description>Recent content on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
 &lt;h2 id="哈希算法">哈希算法&lt;/h2>
 &lt;p>哈希算法：将一段（通常是较大的）数据映射为较短小的数据。这段小数据就是大数据的哈希值，它是唯一的，一旦大数据发生变化，他的哈希值也会发生变化。&lt;/p>
 &lt;p>&lt;strong>哈希碰撞&lt;/strong>&lt;/p>
@@ -718,8 +79,8 @@
 &lt;li>x-station？&lt;/li>
 &lt;/ul>
 &lt;p>目前结论：&lt;/p>
-&lt;p>Chromebook duet5 硬件尚可，续航高，但Chrome OS还不成熟，不适配的bug很多，体验不佳。不过使用Android平板甚至是Ipad体验也很一般，只轻度使用（电子书、视频等）可以试试Chromebook duet5。&lt;/p>
-&lt;p>surface pro 偏向于轻便式笔记本电脑，续航高，用于外出用电脑，兼容性、易用性强，而且使用BlueStacks5 等虚拟机可以用Android，需要触屏和Windows就买surface pro。但这个价格大多数人会考虑买性能强大、也算轻便的Mac（只少了触屏）。&lt;/p>
+&lt;p>Chromebook duet5 硬件尚可，续航高，但Chrome OS还不成熟，不适配的bug很多，体验不佳。不过使用其它Android平板或Ipad体验也很一般，只轻度使用（电子书、视频等）可以尝试。&lt;/p>
+&lt;p>surface pro 偏向于轻便式笔记本电脑，续航高，用于外出用电脑，兼容性、易用性强，而且使用BlueStacks5 等虚拟机可以用Android，需要触屏和Windows就买surface pro。但这个价格大多数人会考虑买性能强大、也算轻便的Mac（少了触屏）。&lt;/p>
 &lt;h1 id="chromebook-duet5">Chromebook duet5&lt;/h1>
 &lt;h2 id="开启开发者模式">开启开发者模式&lt;/h2>
 &lt;ol>
@@ -740,534 +101,7 @@
 &lt;p>谷歌插件商店，先安装&lt;a class="link" href="https://chrome.google.com/webstore/detail/%e5%8f%8c%e6%8b%bc/enmcjlgogceppnhfkaimbjlcmcnmihbo" target="_blank" rel="noopener"
 >IME UI控件&lt;/a> ，然后再安装&lt;a class="link" href="https://chrome.google.com/webstore/detail/ime-decoderbackground-new/fifkgdfgcgfejffmmmnmmkhckkojpdom" target="_blank" rel="noopener"
 >IME Decoder(chrome &amp;gt; 102)&lt;/a> 。&lt;/p>
-&lt;p>系统设置-&amp;gt;语言与输入法-&amp;gt;添加输入法,找到&amp;quot;中文双拼输入法&amp;quot;添加并选择启用输入。&lt;/p></description></item><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description>&lt;p>挖坑&lt;/p></description></item><item><title>行业研究</title><link>https://xiaoxiano.github.io/p/research/</link><pubDate>Fri, 17 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/research/</guid><description>&lt;p>&lt;strong>本文不构成任何投资建议&lt;/strong>&lt;/p>
-&lt;h1 id="电池">电池&lt;/h1>
-&lt;table align="tablePos" bgcolor="#c6c6c6" border="0" cellpadding="5" cellspacing="1"
-class="fs12 priceTable priceTableA tabB10" isselfdefine="1" width="800">
-&lt;tbody>
-&lt;tr>
-&lt;td bgcolor="#d9d2e9" rowspan="25" height="35"
-style="text-align: center; vertical-align: middle; padding: 0px; margin: 0px; font-weight: bold;">
-&lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">一次性电池&lt;/span>&lt;/font>
-&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
-style="font-size: 12px;">&lt;b>命名&lt;/b>&lt;/span>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
-style="font-size: 12px;">&lt;b>负极&lt;/b>&lt;/span>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
-style="font-size: 12px;">电解质&lt;/span>&lt;/strong>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
-style="font-size: 12px;">正极&lt;/span>&lt;/strong>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;span
-style="font-size: 12px;">&lt;b>标称电压(V)&lt;/b>&lt;/span>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&lt;strong>&lt;span
-style="font-size: 12px;">特点&lt;/span>&lt;/strong>&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">
-&lt;p>　　Alkaline battery&lt;br>碱性电池&lt;/p>
-&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">容量大&lt;br>自放电率低&lt;br>价格便宜&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Aluminium–air batteries&lt;br>铝空气电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铝&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;br>氢氧化钠&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">军事用途&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Atomic battery&lt;br>原子能电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">放射性同位素&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">航天器&lt;br>登月车&lt;br>水下仪器&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Bunsen's cell&lt;br>本生电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.9&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1841发明&lt;br>以本生命名&lt;br>有毒&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Earth battery&lt;br>接地电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜/铁/锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">土壤&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜/铁/锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">防强电冲击&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Frog battery&lt;br>青蛙电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">青蛙腿&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">生物电试验&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Galvanic cell&lt;br>Voltaic cell&lt;br>原电池
-&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硫酸锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">伽伐尼VS伏打&lt;br>最终两人同登&lt;br>名人堂&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Grove cell&lt;br>格罗夫电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铂&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">浓硝酸&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">还记得武汉&lt;br>格罗夫汽车&lt;br>吗？&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Leclanché cell&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;br>碳&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳锌电池雏形&lt;br>目前Leclanché是&lt;br>电池企业品牌&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lemon/potato battery&lt;br>柠檬/马铃薯电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">柠檬/马铃薯&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铜&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">教学电池&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium battery&lt;br>锂电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锂化合物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.7&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">21世纪&lt;br>电池之王&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium–air battery&lt;br>锂空气电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">酸性水溶液&lt;br>等&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锂&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">2.91&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Magnesium battery&lt;br>镁电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二硫化锆&lt;br>氧化钴&lt;br>二硒化钨&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.1&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Mercury battery&lt;br>汞电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化汞&lt;br>二氧化锰&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.4&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">纽扣电池&lt;br>记得放&lt;br>“有害垃圾”桶&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Molten-salt battery&lt;br>熔盐电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">盐类熔融体&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>储能成本低&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel oxyhydroxide
-battery&lt;br>羟基氧化镍电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;br>羟基氧化镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Organic radical
-battery&lt;br>有机自由基电池&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">塑料电池？&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Paper battery&lt;br>纸电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">PPT产物？&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver-oxide battery&lt;br>银锌电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.55&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Solid-state battery&lt;br>固态电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sugar battery&lt;br>糖电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">麦芽糖糊精&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">PPT产物？&lt;br>索尼率先发表&lt;br>论文的喔……&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Zinc–carbon battery&lt;br>锌碳电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;br>氯化锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Zinc–air battery&lt;br>锌氧电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氯化铵&lt;br>氯化锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.4&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">也叫&lt;br>“锌空气电池”&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td bgcolor="#c9daf8" rowspan="25" height="35"
-style="text-align: center; vertical-align: middle; padding: 0px; margin: 0px; font-weight: bold;">
-&lt;font color="#000000">&lt;span style="Writing-mode:tb-rl;font-size: 16px;">可充电电池&lt;/span>&lt;/font>
-&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">
-&lt;p>　　Aluminium-ion battery&lt;br>铝离子电池&lt;/p>
-&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铝&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">2.0(?)&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">理想很丰满&lt;br>现实很骨感&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Dual carbon battery&lt;br>双碳电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钾离子电解液&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">耐高温&lt;br>充电超快&lt;br>当超级电容吧&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Flow battery&lt;br>液流电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">需要建设&lt;br>全产业链&lt;br>才能运作&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lead–acid battery&lt;br>铅酸电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铅&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硫酸溶液&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化铅&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">12&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">电压稳定&lt;br>产业成熟&lt;br>能量密度低&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Glass battery&lt;br>玻璃电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">可能是下&lt;br>一个突破口&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Lithium-ion battery&lt;br>锂离子电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">石墨&lt;br>等&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无数种&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无数种&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">3.2&lt;br>3.7&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">21世纪&lt;br>电池之王&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Magnesium-ion battery&lt;br>镁离子电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;br>2.0&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高能量密度&lt;br>循环寿命长&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Metal–air electrochemical
-cells&lt;br>金属-空气电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镁&lt;br>铝&lt;br>锌&lt;br>等&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱性溶液&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">细分种类&lt;br>非常多&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Molten-salt battery&lt;br>熔盐电池&lt;span
-style="white-space:pre"> &lt;/span>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">盐类熔融体&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>电网级储能&lt;br>储能成本低&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Microbial fuel cell&lt;br>微生物燃料电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">微生物电极&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">微生物电极&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">利用污水&lt;br>或光合作用&lt;br>发电&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–cadmium battery&lt;br>镍镉电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镉&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">老式手机电池&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel hydrogen battery&lt;br>镍氢气电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;br>氢气&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">催化剂&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.25&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">使用气态氢&lt;br>高压电池&lt;br>循环寿命长&lt;br>用在卫星上&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel metal hydride battery&lt;br>镍氢电池
-&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">金属氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍镉进化版&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–iron battery&lt;br>镍铁电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">铁&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">爱迪生发明&lt;br>价格高&lt;br>可靠性极高&lt;br>铁道车辆使用&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Nickel–zinc battery&lt;br>镍锌电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镍&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.65&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">历史悠久&lt;br>一致性差&lt;br>不能过充&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Organic radical battery&lt;br>有机自由基电池
-&lt;span style="white-space:pre"> &lt;/span>&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">塑料电池？&lt;br>不含重金属&lt;br>可制薄膜电池&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Solid-state battery&lt;br>固态电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态电解质&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">能量密度高&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Potassium-ion battery&lt;br>钾离子电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">金属氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">固态聚合物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碳类&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钾便宜&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Rechargeable alkaline
-battery&lt;br>可充电碱性电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">二氧化锰&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.5&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">循环寿命短&lt;br>20个深度循环&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silicon–air battery&lt;br>硅空气电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">硅&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.2&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">材料便宜环保&lt;br>能量密度高&lt;br>暂未实用化&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver zinc battery&lt;br>银锌电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锌&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">碱金属氢氧化物&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.55&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">笔记本电脑&lt;br>助听器&lt;br>人造卫星&lt;br>潜艇与鱼雷&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Silver-cadmium battery&lt;br>银镉电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">镉&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氢氧化钾&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">氧化银&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">1.1&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">有毒&lt;br>电压太低&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sodium-ion battery&lt;br>钠离子电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">无烟煤基&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">锰基&lt;br>铜基&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">钠丰度高&lt;br>替代铅酸&lt;br>低速电动车&lt;/td>
-&lt;/tr>
-&lt;tr bgcolor="#ffffff" iscontent="1">
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">Sodium–sulfur battery&lt;br>钠硫电池&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">熔融金属钠&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">液态硫&lt;br>多硫化钠熔盐&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">&amp;nbsp;&lt;/td>
-&lt;td height="35" style="text-align: center; padding: 0px; margin: 0px;">高温电池&lt;br>制造简单&lt;br>电网储能&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>&lt;a class="link" href="https://www.pcauto.com.cn/tech/2368/23689092.html#commentPlaceHolder" target="_blank" rel="noopener"
->原文地址&lt;/a>&lt;/p>
-&lt;h2 id="动力电池">动力电池&lt;/h2>
-&lt;p>新能源车的动力电池类型主要分为磷酸铁锂和三元锂电池，两者基本上瓜分了新能源市场的动力电池份额。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/1.png"
-width="1884"
-height="642"
-srcset="https://xiaoxiano.github.io/p/research/1_hu2db551834465226518e15fae87fc2e4b_890652_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/1_hu2db551834465226518e15fae87fc2e4b_890652_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="293"
-data-flex-basis="704px"
->&lt;/p>
-&lt;p>&lt;strong>固态电池&lt;/strong>&lt;/p>
-&lt;p>全固态电池规模化量产尚需5-10 年，半固态成过渡期优选。出于对高能量密度和高安全性电池的追求，各国企业进入军备竞赛阶段，加注研发固态电池。但全固态电池还有离子电导率低导致性能变差、成本高昂等缺点有待解决，而半固态电池由于高安全性、长寿命与良好的经济性，成为液态电池向全固态电池过渡的产品。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/2.png"
-width="794"
-height="804"
-srcset="https://xiaoxiano.github.io/p/research/2_hu89acafa183fb31acf85639f040b25613_199393_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/2_hu89acafa183fb31acf85639f040b25613_199393_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="98"
-data-flex-basis="237px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/3.png"
-width="775"
-height="253"
-srcset="https://xiaoxiano.github.io/p/research/3_hu9a69dbfd7006638e708d8e8e2faf3d02_59979_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/3_hu9a69dbfd7006638e708d8e8e2faf3d02_59979_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="306"
-data-flex-basis="735px"
->&lt;/p>
-&lt;h2 id="生活电池">生活电池&lt;/h2>
-&lt;p>&lt;strong>碳性电池&lt;/strong>&lt;/p>
-&lt;p>碳性电池是一种一次电池，属于原电池，它以二氧化锰为正极，电量约700mAh。碳性电池适合用在低电流的电器上，如石英钟、遥控器等。&lt;/p>
-&lt;p>&lt;strong>碱性电池&lt;/strong>&lt;/p>
-&lt;p>碱性电池是一种一次电池，电量约1800~2000mAh。碱性电池适用在高电流的电器上，如数码相机、玩具、剃须刀、无线鼠标等。&lt;/p>
-&lt;p>&lt;strong>锂铁电池&lt;/strong>&lt;/p>
-&lt;p>锂铁电池是一种一次电池，属于锂电池，电量约3000mAh。锂铁电池寿命长，尤其适用鼠标等，目前厂家仅有耐时电池和小米超级电池。&lt;/p>
-&lt;h1 id="航空">航空&lt;/h1>
-&lt;p>常见指标：&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>ASK（available seat kilometer）
-可用座位公里、可提供客公里 公式：ASK=∑{可供销售的座位数×航段距离（公里）}
-ASK反映的是航空公司的产能，是其可产生的最大经济效益。ASK值越大，说明航空公司拥有越多的航线与运力资源。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RPK（revenue passenger kilometer）
-收入客公里 公式：RPK（人公里）=∑{航段旅客运输量（人）×航段距离（公里）}
-是一种衡量旅客运输量的综合性指标。其中“收入客”代表花钱买票乘坐飞机的人（也包含那些通过积分兑换里程的乘客）。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>CASK（cost per ASK）
-单位可用座位公里成本, 表示航空公司为每一ASK上付出的成本，计算方法是其所投入的所有运营成本total operating expense/ASK。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>RASK（revenue per ASK）
-单位可用座位公里收入,与CASK对应，是收益的一个替代指标，计算方法是所有的运营收入Total Operating Revenue/ASK。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/13.png"
-width="429"
-height="373"
-srcset="https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/13_hud8068a4eea57ec02d9305a57b547e317_38379_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="115"
-data-flex-basis="276px"
->
-&lt;img src="https://xiaoxiano.github.io/p/research/14.png"
-width="442"
-height="378"
-srcset="https://xiaoxiano.github.io/p/research/14_hu0f902e266a3fda260a48c9cad5f062af_40213_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/14_hu0f902e266a3fda260a48c9cad5f062af_40213_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="116"
-data-flex-basis="280px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/11.png"
-width="447"
-height="379"
-srcset="https://xiaoxiano.github.io/p/research/11_hu08053d95b458af90f04c050e57e9929c_39834_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/11_hu08053d95b458af90f04c050e57e9929c_39834_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="117"
-data-flex-basis="283px"
->
-&lt;img src="https://xiaoxiano.github.io/p/research/12.png"
-width="436"
-height="393"
-srcset="https://xiaoxiano.github.io/p/research/12_hu7c4af4032cf64a4d198392631f5e8b73_41246_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/research/12_hu7c4af4032cf64a4d198392631f5e8b73_41246_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="110"
-data-flex-basis="266px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/research/15.jpeg"
-width="1170"
-height="955"
-srcset="https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_480x0_resize_q75_box.jpeg 480w, https://xiaoxiano.github.io/p/research/15_hu17f61674874088ba1ee214b007da4ec9_137755_1024x0_resize_q75_box.jpeg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="122"
-data-flex-basis="294px"
->&lt;/p></description></item><item><title>VPS 选购</title><link>https://xiaoxiano.github.io/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
+&lt;p>系统设置-&amp;gt;语言与输入法-&amp;gt;添加输入法,找到&amp;quot;中文双拼输入法&amp;quot;添加并选择启用输入。&lt;/p></description></item><item><title>VPS 选购</title><link>https://xiaoxiano.github.io/p/vps/</link><pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/vps/</guid><description>&lt;p>购买vps一般需要注意性能、带宽和线路。&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>性能是根据自身需要的，一般只需要看内存，跑代理512M足够了（考虑到有邻居还是建议1G），跑业务最好在2G以上。&lt;/p>
@@ -2757,7 +1591,7 @@ class="gallery-image"
 data-flex-grow="115"
 data-flex-basis="276px"
 >&lt;/p>
-&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>quest2入门使用汇总</title><link>https://xiaoxiano.github.io/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
+&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>quest2入门使用</title><link>https://xiaoxiano.github.io/p/quest2/</link><pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/quest2/</guid><description>&lt;h1 id="购买配件">购买配件&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -2836,16 +1670,21 @@ data-flex-basis="355px"
 &lt;/ul>
 &lt;p>如果你的电脑同时有&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
 &lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
-&lt;ol>
+&lt;ol start="0">
+&lt;li>
+&lt;p>只玩破解版无需受邀，无需此步骤！&lt;/p>
+&lt;/li>
 &lt;li>
 &lt;p>使用outlook、gmail等邮箱和原生ip至少提前1天注册facebook账号。&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>接受邀请比较麻烦（实际上大多玩家只玩破解版，无需受邀，无需此步骤！），有需要直接去找别人代操作受邀！！以下方式成本过高，作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
+&lt;p>接受邀请比较麻烦，有需要直接去找别人代操作受邀！&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>以下方式成本过高，仅作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;em>注意：接受邀请也是高风险的操作，由于变换ip和账号资料不完善，依然有可能封号&lt;/em>&lt;/p>
-&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type是hosting），会被识别屏蔽。所以要用住宅代理（type是isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
+&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type为hosting），会被识别屏蔽。所以要用住宅代理（type为isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -7613,7 +6452,7 @@ sed
 &lt;ul>
 &lt;li>代理&lt;/li>
 &lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入查到的ip地址&lt;/p>
 &lt;ul>
 &lt;li>git config
 默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
@@ -7716,21 +6555,14 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">go version #验证
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GO111MODULE=on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="idea">IDEA&lt;/h1>
 &lt;h2 id="使用">使用&lt;/h2>
-&lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
-&lt;li>安装插件：IDE Eval Reset&lt;/li>
-&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
->下载&lt;/a>&lt;/li>
-&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
-&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
->原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.exception.site/essay/idea-reset-eval" target="_blank" rel="noopener"
+>教程1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.lupf.cn/articles/2023/12/01/1701405135406.html#toc_h2_6" target="_blank" rel="noopener"
+>教程2&lt;/a>&lt;/p>
 &lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
-&lt;p>在goland.sh注释之后的首行添加&lt;/p>
+&lt;p>在idea.sh注释之后的首行添加&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
@@ -7790,11 +6622,20 @@ data-flex-basis="436px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@=&amp;#34;cmd.exe /c takeown /f \&amp;#34;%1\&amp;#34; /r /d y &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> icacls \&amp;#34;%1\&amp;#34; /grant administrators:F /t&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;IsolatedCommand&amp;#34;=&amp;#34;cmd.exe /c takeown /f \&amp;#34;%1\&amp;#34; /r /d y &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> icacls \&amp;#34;%1\&amp;#34; /grant administrators:F /t&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭win10防火墙通知">关闭Win10防火墙通知&lt;/h2>
-&lt;p>控制面板-&amp;gt;安全与维护-&amp;gt;更改用户账户控制设置-&amp;gt;从不通知&lt;/p>
-&lt;p>搜索&amp;quot;编辑组策略&amp;rdquo;-&amp;gt;管理模板-&amp;gt;windows组件-&amp;gt;windows安全中心-&amp;gt;通知-&amp;gt;打开隐藏所有通知-&amp;gt;已启用&lt;/p>
-&lt;h2 id="从注册表彻底关闭-windows安全中心">从注册表彻底关闭 Windows安全中心&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭安全通知">关闭安全通知&lt;/h2>
+&lt;ol>
+&lt;li>关闭Win10防火墙通知&lt;/li>
+&lt;/ol>
+&lt;p>控制面板 -&amp;gt; 安全与维护 -&amp;gt; 更改用户账户控制设置 -&amp;gt; 从不通知&lt;/p>
+&lt;p>搜索&amp;quot;编辑组策略&amp;rdquo; -&amp;gt; 管理模板 -&amp;gt; windows组件 -&amp;gt; windows安全中心 -&amp;gt; 通知 -&amp;gt; 打开隐藏所有通知 -&amp;gt; 已启用&lt;/p>
+&lt;ol start="2">
+&lt;li>从注册表彻底关闭 Windows安全中心&lt;/li>
+&lt;/ol>
 &lt;p>win+R输入regedit，定位到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService，找到Start，修改数值数据3为4。&lt;/p>
+&lt;ol start="3">
+&lt;li>关闭&amp;quot;打开文件-安全警告&amp;quot;弹框&lt;/li>
+&lt;/ol>
+&lt;p>控制面板-&amp;gt; internet选项 -&amp;gt; 安全 -&amp;gt; 自定义级别 -&amp;gt; 启用(不安全)&lt;/p>
 &lt;h2 id="win10-资源管理器无限重启闪屏">Win10 资源管理器无限重启闪屏&lt;/h2>
 &lt;ol>
 &lt;li>
@@ -7845,6 +6686,14 @@ data-flex-basis="436px"
 &lt;p>火绒　　　　　　　　　　　　# 屏蔽弹窗&lt;/p>
 &lt;/li>
 &lt;li>
+&lt;p>win10 microsoft store工具&lt;/p>
+&lt;ul>
+&lt;li>Windows Terminal　　　　　#命令行&lt;/li>
+&lt;li>TranslucentTB　　　　　　　#任务栏透明&lt;/li>
+&lt;li>EarTrumpet　　　　　　　　#音频管理&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
 &lt;p>开发者实用工具&lt;/p>
 &lt;ul>
 &lt;li>typora　　　　　　　　　　　# markdown记事本&lt;/li>
@@ -7855,7 +6704,7 @@ data-flex-basis="436px"
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>其它工具&lt;/p>
+&lt;p>素材工具&lt;/p>
 &lt;ul>
 &lt;li>GIMP　　　　　　　　　　　　# 图像处理
 &lt;ul>
@@ -7868,29 +6717,25 @@ data-flex-basis="436px"
 &lt;li>Ai　　　　　　　　　　　　　# 插图&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>win10 microsoft store工具&lt;/p>
-&lt;ul>
-&lt;li>Windows Terminal　　　　　#命令行&lt;/li>
-&lt;li>TranslucentTB　　　　　　　#任务栏透明&lt;/li>
-&lt;li>EarTrumpet　　　　　　　　#音频管理&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、Kiwi、x浏览器&lt;/p>
+&lt;p>浏览器：Chrome、小米浏览器、Edge&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>影视：&lt;/p>
 &lt;ul>
 &lt;li>论坛：haopanyou.net&lt;/li>
-&lt;li>App：tg破解软件中文频道搜#影视&lt;/li>
+&lt;li>App：tg&amp;rsquo;&amp;lsquo;破解软件中文频道&amp;rsquo;&amp;lsquo;搜#影视&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：lx-music　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
+&lt;p>播放器：&lt;/p>
+&lt;ul>
+&lt;li>VLC　　　　　　　　# 局域网视频播放器&lt;/li>
+&lt;li>椒盐音乐　　　　　　　# 本地音乐播放器&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>小说：阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/p>
@@ -7899,24 +6744,26 @@ data-flex-basis="436px"
 &lt;p>阅读：ReadEra、福昕PDF阅读器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：跳过广告等&lt;/p>
+&lt;p>去除启动广告：跳过广告&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>动态壁纸：星空视频壁纸&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
 &lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
-&lt;li>Moonlight　　　　　　　　# 局域网流畅投屏&lt;/li>
+&lt;li>Moonlight　　　　　　　　# 局域网投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>其他&lt;/p>
+&lt;p>文件管理&lt;/p>
 &lt;ul>
 &lt;li>zarchiver　　　　　　　　# 文件管理和解压&lt;/li>
-&lt;li>星空视频壁纸&lt;/li>
-&lt;li>Skit　　　　　　　　　　　# 提取apk&lt;/li>
 &lt;li>猫头鹰文件　　　　　　　　# 访问局域网文件&lt;/li>
+&lt;li>APK Extractor　　　　　　　# 提取apk&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item><item><title>hugo使用stack主题搭建博客及部署</title><link>https://xiaoxiano.github.io/p/hugo-blog/</link><pubDate>Sat, 03 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/hugo-blog/</guid><description>&lt;h1 id="准备">准备&lt;/h1>

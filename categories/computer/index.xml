@@ -5440,7 +5440,7 @@ sed
 &lt;ul>
 &lt;li>代理&lt;/li>
 &lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>VMware Network Adapter VMnet8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入之前查到的&lt;strong>ip&lt;/strong>地址&lt;/p>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入查到的ip地址&lt;/p>
 &lt;ul>
 &lt;li>git config
 默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
@@ -5543,21 +5543,14 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">go version #验证
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GO111MODULE=on
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="goland">Goland&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="idea">IDEA&lt;/h1>
 &lt;h2 id="使用">使用&lt;/h2>
-&lt;p>goland无限试用，方法适用&lt;strong>IDEA系列&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>goland中添加第三方插件仓库地址：https://plugins.zhile.io&lt;/li>
-&lt;li>安装插件：IDE Eval Reset&lt;/li>
-&lt;li>&lt;a class="link" href="https://plugins.zhile.io/files/ide-eval-resetter-2.1.14-d2fedb86.zip" target="_blank" rel="noopener"
->下载&lt;/a>&lt;/li>
-&lt;li>直接把zip包拖进IDE的窗口来进行插件的安装&lt;/li>
-&lt;li>Help -&amp;gt; Eval Reset 勾选Auto reset before per restart&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://zhile.io/2020/11/18/jetbrains-eval-reset-da33a93d.html" target="_blank" rel="noopener"
->原文地址&lt;/a>，本段仅进行简述，使操作简明&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.exception.site/essay/idea-reset-eval" target="_blank" rel="noopener"
+>教程1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.lupf.cn/articles/2023/12/01/1701405135406.html#toc_h2_6" target="_blank" rel="noopener"
+>教程2&lt;/a>&lt;/p>
 &lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
-&lt;p>在goland.sh注释之后的首行添加&lt;/p>
+&lt;p>在idea.sh注释之后的首行添加&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
@@ -5617,11 +5610,20 @@ data-flex-basis="436px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@=&amp;#34;cmd.exe /c takeown /f \&amp;#34;%1\&amp;#34; /r /d y &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> icacls \&amp;#34;%1\&amp;#34; /grant administrators:F /t&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;IsolatedCommand&amp;#34;=&amp;#34;cmd.exe /c takeown /f \&amp;#34;%1\&amp;#34; /r /d y &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> icacls \&amp;#34;%1\&amp;#34; /grant administrators:F /t&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭win10防火墙通知">关闭Win10防火墙通知&lt;/h2>
-&lt;p>控制面板-&amp;gt;安全与维护-&amp;gt;更改用户账户控制设置-&amp;gt;从不通知&lt;/p>
-&lt;p>搜索&amp;quot;编辑组策略&amp;rdquo;-&amp;gt;管理模板-&amp;gt;windows组件-&amp;gt;windows安全中心-&amp;gt;通知-&amp;gt;打开隐藏所有通知-&amp;gt;已启用&lt;/p>
-&lt;h2 id="从注册表彻底关闭-windows安全中心">从注册表彻底关闭 Windows安全中心&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="关闭安全通知">关闭安全通知&lt;/h2>
+&lt;ol>
+&lt;li>关闭Win10防火墙通知&lt;/li>
+&lt;/ol>
+&lt;p>控制面板 -&amp;gt; 安全与维护 -&amp;gt; 更改用户账户控制设置 -&amp;gt; 从不通知&lt;/p>
+&lt;p>搜索&amp;quot;编辑组策略&amp;rdquo; -&amp;gt; 管理模板 -&amp;gt; windows组件 -&amp;gt; windows安全中心 -&amp;gt; 通知 -&amp;gt; 打开隐藏所有通知 -&amp;gt; 已启用&lt;/p>
+&lt;ol start="2">
+&lt;li>从注册表彻底关闭 Windows安全中心&lt;/li>
+&lt;/ol>
 &lt;p>win+R输入regedit，定位到HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SecurityHealthService，找到Start，修改数值数据3为4。&lt;/p>
+&lt;ol start="3">
+&lt;li>关闭&amp;quot;打开文件-安全警告&amp;quot;弹框&lt;/li>
+&lt;/ol>
+&lt;p>控制面板-&amp;gt; internet选项 -&amp;gt; 安全 -&amp;gt; 自定义级别 -&amp;gt; 启用(不安全)&lt;/p>
 &lt;h2 id="win10-资源管理器无限重启闪屏">Win10 资源管理器无限重启闪屏&lt;/h2>
 &lt;ol>
 &lt;li>
@@ -5672,6 +5674,14 @@ data-flex-basis="436px"
 &lt;p>火绒　　　　　　　　　　　　# 屏蔽弹窗&lt;/p>
 &lt;/li>
 &lt;li>
+&lt;p>win10 microsoft store工具&lt;/p>
+&lt;ul>
+&lt;li>Windows Terminal　　　　　#命令行&lt;/li>
+&lt;li>TranslucentTB　　　　　　　#任务栏透明&lt;/li>
+&lt;li>EarTrumpet　　　　　　　　#音频管理&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
 &lt;p>开发者实用工具&lt;/p>
 &lt;ul>
 &lt;li>typora　　　　　　　　　　　# markdown记事本&lt;/li>
@@ -5682,7 +5692,7 @@ data-flex-basis="436px"
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>其它工具&lt;/p>
+&lt;p>素材工具&lt;/p>
 &lt;ul>
 &lt;li>GIMP　　　　　　　　　　　　# 图像处理
 &lt;ul>
@@ -5695,29 +5705,25 @@ data-flex-basis="436px"
 &lt;li>Ai　　　　　　　　　　　　　# 插图&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>win10 microsoft store工具&lt;/p>
-&lt;ul>
-&lt;li>Windows Terminal　　　　　#命令行&lt;/li>
-&lt;li>TranslucentTB　　　　　　　#任务栏透明&lt;/li>
-&lt;li>EarTrumpet　　　　　　　　#音频管理&lt;/li>
-&lt;/ul>
-&lt;/li>
 &lt;/ul>
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、Kiwi、x浏览器&lt;/p>
+&lt;p>浏览器：Chrome、小米浏览器、Edge&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>影视：&lt;/p>
 &lt;ul>
 &lt;li>论坛：haopanyou.net&lt;/li>
-&lt;li>App：tg破解软件中文频道搜#影视&lt;/li>
+&lt;li>App：tg&amp;rsquo;&amp;lsquo;破解软件中文频道&amp;rsquo;&amp;lsquo;搜#影视&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>音乐：lx-music　　　　　　　# 并不完美，希望找到更好用的&lt;/p>
+&lt;p>播放器：&lt;/p>
+&lt;ul>
+&lt;li>VLC　　　　　　　　# 局域网视频播放器&lt;/li>
+&lt;li>椒盐音乐　　　　　　　# 本地音乐播放器&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>小说：阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/p>
@@ -5726,24 +5732,26 @@ data-flex-basis="436px"
 &lt;p>阅读：ReadEra、福昕PDF阅读器&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>去除启动广告：跳过广告等&lt;/p>
+&lt;p>去除启动广告：跳过广告&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>动态壁纸：星空视频壁纸&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
 &lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
-&lt;li>Moonlight　　　　　　　　# 局域网流畅投屏&lt;/li>
+&lt;li>Moonlight　　　　　　　　# 局域网投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>其他&lt;/p>
+&lt;p>文件管理&lt;/p>
 &lt;ul>
 &lt;li>zarchiver　　　　　　　　# 文件管理和解压&lt;/li>
-&lt;li>星空视频壁纸&lt;/li>
-&lt;li>Skit　　　　　　　　　　　# 提取apk&lt;/li>
 &lt;li>猫头鹰文件　　　　　　　　# 访问局域网文件&lt;/li>
+&lt;li>APK Extractor　　　　　　　# 提取apk&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul></description></item></channel></rss>
