@@ -94,9 +94,18 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#important-box">&lt;/use>&lt;/svg>
 &lt;/span>
-&lt;p>中国大陆执业医师考试专用，精简了大量理论细节，不作为诊疗建议&lt;/p>
+&lt;p>中国大陆执业医师考试专用，精简了大量内容，不作为诊疗建议&lt;/p>
 &lt;/div>
-&lt;p>挖坑&lt;/p></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
+&lt;h1 id="技能">技能&lt;/h1>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/medical/%E6%89%A7%E5%8C%BB%E6%8A%80%E8%83%BD2024.png"
+width="2549"
+height="33017"
+srcset="https://xiaoxiano.github.io/p/medical/%E6%89%A7%E5%8C%BB%E6%8A%80%E8%83%BD2024_hu807ceb5f0ed59d57dfb9d0bb626e6f83_4929079_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/medical/%E6%89%A7%E5%8C%BB%E6%8A%80%E8%83%BD2024_hu807ceb5f0ed59d57dfb9d0bb626e6f83_4929079_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="7"
+data-flex-basis="18px"
+>&lt;/p></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
 1.特殊元素和特殊位置优先策略
