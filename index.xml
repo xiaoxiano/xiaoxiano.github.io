@@ -96,9 +96,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>
 &lt;p>执业医师考试(中国大陆)专用，精简了大量内容，不作为诊疗建议&lt;/p>
 &lt;/div>
-&lt;h1 id="技能">技能&lt;/h1>
 &lt;p>&lt;a class="link" href="https://xiaoxiano.github.io/medicalSkill" target="_blank" rel="noopener"
->&lt;/a>&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
+>技能&lt;/a>&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
 &lt;h2 id="哈希算法">哈希算法&lt;/h2>
 &lt;p>哈希算法：将一段（通常是较大的）数据映射为较短小的数据。这段小数据就是大数据的哈希值，它是唯一的，一旦大数据发生变化，他的哈希值也会发生变化。&lt;/p>
 &lt;p>&lt;strong>哈希碰撞&lt;/strong>&lt;/p>
