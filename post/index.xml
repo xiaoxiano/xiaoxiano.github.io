@@ -10,7 +10,7 @@ class="gallery-image"
 data-flex-grow="172"
 data-flex-basis="414px"
 >&lt;/p>
-&lt;p>&lt;strong>证书&lt;/strong>：&lt;code>fiddler&lt;/code>默认只抓取&lt;code>http&lt;/code>协议，要抓取&lt;code>https&lt;/code>协议需要在设置中&lt;code>rust Fiddler CA&lt;/code>，勾选&lt;code>Capture HTTPS traffic&lt;/code>和&lt;code>Ignore server certificate errors&lt;/code>，点&lt;code>Export Fiddler CA&lt;/code>导出CA到桌面安装（如果你只捕获远程Android流量，就不需要在 Fiddler 主机上安装 Fiddler CA，如有可以点 Remove Fiddler CA，只在远程设备上下载并安装 Fiddler CA ）&lt;/p>
+&lt;p>&lt;strong>证书&lt;/strong>：&lt;code>fiddler&lt;/code>默认只抓取&lt;code>http&lt;/code>协议，要抓取&lt;code>https&lt;/code>协议需要在设置中&lt;code>rust Fiddler CA&lt;/code>，勾选&lt;code>Capture HTTPS traffic&lt;/code>和&lt;code>Ignore server certificate errors&lt;/code>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/2.png"
 width="1173"
 height="745"
