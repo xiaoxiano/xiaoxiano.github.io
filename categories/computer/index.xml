@@ -1,4 +1,265 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on Janus</title><link>https://xiaoxiano.github.io/categories/computer/</link><description>Recent content in 计算机 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>计算机 on Janus</title><link>https://xiaoxiano.github.io/categories/computer/</link><description>Recent content in 计算机 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 30 Aug 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/computer/index.xml" rel="self" type="application/rss+xml"/><item><title>Fiddler5抓包APP数据</title><link>https://xiaoxiano.github.io/p/capture/</link><pubDate>Fri, 30 Aug 2024 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/capture/</guid><description>&lt;h2 id="fiddler">fiddler&lt;/h2>
+&lt;p>fiddler的缺点是不支持中文，也可以使用另一款针对安卓的抓包软件reqable（前身HttpCanary）。&lt;/p>
+&lt;p>&lt;strong>System Proxy&lt;/strong>：Fiddler通过系统代理的形式来进行监听请求和响应&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/1.png"
+width="1368"
+height="792"
+srcset="https://xiaoxiano.github.io/p/capture/1_huc866ea27aa0a2b84e03b09120160d563_87095_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/1_huc866ea27aa0a2b84e03b09120160d563_87095_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="172"
+data-flex-basis="414px"
+>&lt;/p>
+&lt;p>&lt;strong>证书&lt;/strong>：&lt;code>fiddler&lt;/code>默认只抓取&lt;code>http&lt;/code>协议，要抓取&lt;code>https&lt;/code>协议需要在设置中&lt;code>rust Fiddler CA&lt;/code>，勾选&lt;code>Capture HTTPS traffic&lt;/code>和&lt;code>Ignore server certificate errors&lt;/code>，点&lt;code>Export Fiddler CA&lt;/code>导出CA到桌面安装（如果你只捕获远程Android流量，就不需要在 Fiddler 主机上安装 Fiddler CA，如有可以点 Remove Fiddler CA，只在远程设备上下载并安装 Fiddler CA ）&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/2.png"
+width="1173"
+height="745"
+srcset="https://xiaoxiano.github.io/p/capture/2_hue247de5764cebb25218d628a1922addb_85527_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/2_hue247de5764cebb25218d628a1922addb_85527_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="157"
+data-flex-basis="377px"
+>&lt;/p>
+&lt;p>&lt;strong>允许远程连接&lt;/strong>：&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/3.png"
+width="1119"
+height="738"
+srcset="https://xiaoxiano.github.io/p/capture/3_hu6c1041c7b2e12e9763009b14998c600b_69207_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/3_hu6c1041c7b2e12e9763009b14998c600b_69207_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="151"
+data-flex-basis="363px"
+>&lt;/p>
+&lt;p>&lt;strong>Filters&lt;/strong>：过滤器，匹配想要的请求&lt;/p>
+&lt;p>更多内容参考&lt;a class="link" href="https://docs.telerik.com/fiddler-everywhere/introduction" target="_blank" rel="noopener"
+>官方文档&lt;/a>&lt;/p>
+&lt;h2 id="android">Android&lt;/h2>
+&lt;h3 id="雷电模拟器">雷电模拟器&lt;/h3>
+&lt;p>模拟器中，BlueStacks5 兼容性最强但不支持代理，夜神的性能较差，以雷电模拟器为例。&lt;/p>
+&lt;style type="text/css">
+.box {
+padding: 1.6em;
+padding-top: 1.4em;
+line-height: 1.4em;
+margin-top: 2em;
+margin-bottom: 4em;
+border-radius: 4px;
+color: #444;
+background: #f3ebe850;
+}
+.box-title {
+margin: -18px -18px 12px;
+padding: 4px 18px;
+border-radius: 4px 4px 0 0;
+font-weight: 700;
+color: #fff;
+background: #6ab0de;
+}
+.box.warning .box-title {
+background: #ff6b6b;
+}
+.box.warning {
+background: #ff6b6b4f;
+}
+.box.info .box-title {
+background: #0089e488;
+}
+.box.info {
+background: #0089e41c;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.box.important .box-title {
+background: #f7ec2c;
+}
+.box.important {
+background: #f7ec2c7d;
+}
+.box.tip .box-title {
+background: #a3ffa34d;
+}
+.box.tip {
+background: #a3ffa34d;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.icon-box {
+display: inline-flex;
+align-self: center;
+margin-right: 8px;
+}
+.icon-box img,
+.icon-box svg {
+height: 1em;
+width: 1em;
+fill: currentColor;
+}
+.icon-box img,
+.icon-box.baseline svg {
+top: 0.125em;
+position: relative;
+}
+.box p {
+margin-bottom: 0.6em;
+}
+.box p:first-of-type {
+display: inline;
+}
+.box p:nth-of-type(2) {
+margin-top: 0.6em;
+}
+.box p:last-child {
+margin-bottom: 0;
+}
+&lt;/style>
+&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+&lt;/symbol>
+&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
+&lt;/symbol>
+&lt;/svg>&lt;div class="box info" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>别的文章说要网络桥接，这样模拟器会断连，无需使用&lt;/p>
+&lt;/div>
+&lt;ol>
+&lt;li>打开root权限&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/5.png"
+width="721"
+height="569"
+srcset="https://xiaoxiano.github.io/p/capture/5_hu5ea6521ee6726bbc8036e9891ed6ead0_36795_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/5_hu5ea6521ee6726bbc8036e9891ed6ead0_36795_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="304px"
+>&lt;/p>
+&lt;ol start="2">
+&lt;li>打开写入权限(可能会自动关闭，使用时检查)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/6.png"
+width="721"
+height="570"
+srcset="https://xiaoxiano.github.io/p/capture/6_hu8f08178c0a0aa84b0d26eb72ff24eff3_42402_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/6_hu8f08178c0a0aa84b0d26eb72ff24eff3_42402_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="126"
+data-flex-basis="303px"
+>&lt;/p>
+&lt;ol start="3">
+&lt;li>查看电脑ip，打开WLAN设置填写代理&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/4.png"
+width="596"
+height="1020"
+srcset="https://xiaoxiano.github.io/p/capture/4_hu20618113a3b37ffeb5a5a9691884a191_68106_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/4_hu20618113a3b37ffeb5a5a9691884a191_68106_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="58"
+data-flex-basis="140px"
+>&lt;/p>
+&lt;ol start="4">
+&lt;li>
+&lt;p>打开浏览器，输入IP:8888，&lt;code>DOWNLOAD CERTIFICATE&lt;/code>，在状态栏点击安装&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>移动证书，因为部分应用使用系统证书，需要把证书移动至系统证书目录（以下方法适用于Android 7 到 Android 13）&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>在windows窗口运行adb：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 查看设备连接
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb devices
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获得权限
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb root &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> adb remount
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 进入shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 切换root用户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 查看用户证书的名称
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls /data/misc/user/0/cacerts-added/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 将用户证书挪至系统证书目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv /data/misc/user/0/cacerts-added/[证书] /system/etc/security/cacerts/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果查看证书可以下载MT管理器
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="真机">真机&lt;/h3>
+&lt;p>用真机肯定麻烦点，但有些app不支持使用模拟器打开。&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>root，Magisk&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Windows放行端口&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>控制面板 -&amp;gt; Windows Defender 防火墙 -&amp;gt; 高级设置 -&amp;gt; 入站规则 -&amp;gt; 新建规则&amp;hellip; -&amp;gt; 端口8888&lt;/p>
+&lt;ol start="3">
+&lt;li>查看电脑ip，打开WLAN设置填写代理&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/capture/4.png"
+width="596"
+height="1020"
+srcset="https://xiaoxiano.github.io/p/capture/4_hu20618113a3b37ffeb5a5a9691884a191_68106_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/capture/4_hu20618113a3b37ffeb5a5a9691884a191_68106_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="58"
+data-flex-basis="140px"
+>&lt;/p>
+&lt;ol start="4">
+&lt;li>
+&lt;p>打开浏览器，输入IP:8888，&lt;code>DOWNLOAD CERTIFICATE&lt;/code>，在状态栏点击安装&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Magisk安装模块（允许真机启用 adb root）&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://github.com/evdenis/adb_root" target="_blank" rel="noopener"
+>适用于 Android 9/10&lt;/a>、&lt;a class="link" href="https://github.com/tiann/adb_root" target="_blank" rel="noopener"
+>适用于 Android 11+&lt;/a>&lt;/p>
+&lt;ol start="6">
+&lt;li>adb移动证书&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 查看设备连接
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb devices
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获得权限
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb root &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> adb remount
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 进入shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">adb shell
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 切换root用户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">su
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 重新挂载具有读写权限的根（/）分区
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mount -o rw,remount /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 查看用户证书
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ls /data/misc/user/0/cacerts-added/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 将用户证书挪至系统证书目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mv /data/misc/user/0/cacerts-added/[证书] /system/etc/security/cacerts/
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 恢复只读状态
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mount -o ro,remount /
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果查看证书可以下载MT管理器
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以抓包了。如果看到二进制加密数据，就需要破解apk，以后再详细研究。&lt;/p></description></item><item><title>加密算法</title><link>https://xiaoxiano.github.io/p/encrypt/</link><pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/encrypt/</guid><description>&lt;h1 id="不可逆算法哈希hash">不可逆算法（哈希HASH）&lt;/h1>
 &lt;h2 id="哈希算法">哈希算法&lt;/h2>
 &lt;p>哈希算法：将一段（通常是较大的）数据映射为较短小的数据。这段小数据就是大数据的哈希值，它是唯一的，一旦大数据发生变化，他的哈希值也会发生变化。&lt;/p>
 &lt;p>&lt;strong>哈希碰撞&lt;/strong>&lt;/p>
