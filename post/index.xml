@@ -5151,7 +5151,7 @@ data-flex-basis="236px"
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root">root&lt;/h1>
 &lt;p>&lt;strong>前言：&lt;/strong>&lt;/p>
-&lt;p>使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。我这里需要手机自动开屏幕锁自动执行任务，于是只能root。不同手机不同操作，刷机有变砖风险！&lt;/p>
+&lt;p>使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
 &lt;p>&lt;strong>步骤：&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>解bl锁&lt;/li>
@@ -5196,8 +5196,124 @@ data-flex-basis="479px"
 &lt;li>root&lt;/li>
 &lt;/ol>
 &lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后安装magisk manager app即可。&lt;/p>
-&lt;h1 id="macrodroid">MacroDroid&lt;/h1>
-&lt;h2 id="基础">基础&lt;/h2>
+&lt;h1 id="安卓自动化">安卓自动化&lt;/h1>
+&lt;h2 id="工具">工具&lt;/h2>
+&lt;p>控件查找：可兼容所有机型，但是不能定位非原生安卓的对象（如 Unity3D 的游戏），或随机变化的控件（如安全键盘）
+图像识别：可查找所有显示内容，且难以被检测。但有识别慢、识别结果不准确、多分辨率不兼容的问题，但是使用airtest可以缓解&lt;/p>
+&lt;p>自动化工具有：&lt;/p>
+&lt;ul>
+&lt;li>Yyds.Auto：使用root深度掌控，内置yolo等ai模型，堪称最强方案，但部分app可能会对root设备监控&lt;/li>
+&lt;li>airtest：基于图像识别，几乎不会被app检测&lt;/li>
+&lt;li>appium：图像识别需自己实现&lt;/li>
+&lt;li>EasyClick：支持打包apk，收费&lt;/li>
+&lt;li>AutoX.js：支持打包apk，图像识别需自己实现&lt;/li>
+&lt;li>Hamibot：支持打包apk，可以浏览器远程控制&lt;/li>
+&lt;li>AiBote：办公自动化&lt;/li>
+&lt;li>Tasker、MacroDroid：单独app即可简单使用，收费&lt;/li>
+&lt;li>按键精灵：单独app即可简单使用，以坐标为基础容易出现分辨率问题，而且MQ语言我是不会&lt;/li>
+&lt;/ul>
+&lt;h2 id="airtest需用pc">airtest（需用PC）&lt;/h2>
+&lt;p>对于简单任务，推荐使用airtest，支持Android/Windows/iOS，使用简单，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
+>官网&lt;/a>&lt;/p>
+&lt;h2 id="tasker">Tasker&lt;/h2>
+&lt;h3 id="基础">基础&lt;/h3>
+&lt;style type="text/css">
+.box {
+padding: 1.6em;
+padding-top: 1.4em;
+line-height: 1.4em;
+margin-top: 2em;
+margin-bottom: 4em;
+border-radius: 4px;
+color: #444;
+background: #f3ebe850;
+}
+.box-title {
+margin: -18px -18px 12px;
+padding: 4px 18px;
+border-radius: 4px 4px 0 0;
+font-weight: 700;
+color: #fff;
+background: #6ab0de;
+}
+.box.warning .box-title {
+background: #ff6b6b;
+}
+.box.warning {
+background: #ff6b6b4f;
+}
+.box.info .box-title {
+background: #0089e488;
+}
+.box.info {
+background: #0089e41c;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.box.important .box-title {
+background: #f7ec2c;
+}
+.box.important {
+background: #f7ec2c7d;
+}
+.box.tip .box-title {
+background: #a3ffa34d;
+}
+.box.tip {
+background: #a3ffa34d;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.icon-box {
+display: inline-flex;
+align-self: center;
+margin-right: 8px;
+}
+.icon-box img,
+.icon-box svg {
+height: 1em;
+width: 1em;
+fill: currentColor;
+}
+.icon-box img,
+.icon-box.baseline svg {
+top: 0.125em;
+position: relative;
+}
+.box p {
+margin-bottom: 0.6em;
+}
+.box p:first-of-type {
+display: inline;
+}
+.box p:nth-of-type(2) {
+margin-top: 0.6em;
+}
+.box p:last-child {
+margin-bottom: 0;
+}
+&lt;/style>
+&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+&lt;/symbol>
+&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
+&lt;/symbol>
+&lt;/svg>&lt;div class="box info" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>Tasker终身许可$3.49，需root才顺畅使用，否则锁屏都不能解决，不是很推荐&lt;/p>
+&lt;/div>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理&lt;/li>
@@ -5205,7 +5321,7 @@ data-flex-basis="479px"
 &lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
 &lt;li>权限全部打开&lt;/li>
 &lt;/ul>
-&lt;h2 id="shell">shell&lt;/h2>
+&lt;h3 id="shell">shell&lt;/h3>
 &lt;p>shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
 >shell命令摘录网站&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#按键事件
