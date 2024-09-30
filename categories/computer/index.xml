@@ -5910,7 +5910,6 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;/ol>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
-&lt;p>一般在google就能找到官方，或者在52论坛搜搜看&lt;/p>
 &lt;h2 id="win10优雅必备">win10优雅必备&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -5924,6 +5923,12 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;li>
 &lt;p>DeskGo　　　　　　　　　　# 腾讯出品的桌面软件格子&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>IDM　　　　　　　　　　　　　# 下载&lt;/p>
+&lt;ul>
+&lt;li>更新时Chrome插件残留：删掉&lt;code>C:\Users\[UserName]\AppData\Local\Google\Chrome\User Data\Default\Preferences&lt;/code>文件中&lt;code>cookie_controls_metadata&lt;/code>标签下&lt;code>&amp;quot;https://[*.]internetdownloadmanager.com,*&amp;quot;:{&amp;quot;last_modified&amp;quot;:,&amp;quot;setting&amp;quot;:{}},&lt;/code>这行，打开IDM安装位置将&lt;code>IDMGCExt.crx&lt;/code>拖入Chrome插件中安装&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>Geek Uninstaller　　　　　　# 卸载无残留&lt;/p>
@@ -5970,24 +5975,29 @@ data-flex-basis="436px"
 &lt;h2 id="安卓app">安卓app&lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>浏览器：Chrome、小米浏览器、Edge&lt;/p>
+&lt;p>浏览器：Chrome、Edge&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>影视：&lt;/p>
 &lt;ul>
-&lt;li>论坛：haopanyou.net&lt;/li>
-&lt;li>App：tg&amp;rsquo;&amp;lsquo;破解软件中文频道&amp;rsquo;&amp;lsquo;搜#影视&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>播放器：&lt;/p>
-&lt;ul>
+&lt;li>论坛：haopanyou.net（已失效）&lt;/li>
+&lt;li>App：tg破解软件中文频道，搜#影视&lt;/li>
+&lt;li>网盘搜索：pan.qianfan.app&lt;/li>
 &lt;li>VLC　　　　　　　　# 局域网视频播放器&lt;/li>
-&lt;li>椒盐音乐　　　　　　　# 本地音乐播放器&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>
-&lt;p>小说：阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/p>
+&lt;p>椒盐音乐　　　　　　　# 本地音乐播放器&lt;/p>
+&lt;ul>
+&lt;li>音乐标签　　　　　　　# 歌词&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>小说：&lt;/p>
+&lt;ul>
+&lt;li>阅读　　　　　　　　　# 酷安评论区可以找书源&lt;/li>
+&lt;li>笔趣阁&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>阅读：ReadEra、福昕PDF阅读器&lt;/p>
