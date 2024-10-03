@@ -34,8 +34,8 @@ data-flex-basis="363px"
 &lt;p>更多内容参考&lt;a class="link" href="https://docs.telerik.com/fiddler-everywhere/introduction" target="_blank" rel="noopener"
 >官方文档&lt;/a>&lt;/p>
 &lt;h2 id="android">Android&lt;/h2>
-&lt;h3 id="雷电模拟器">雷电模拟器&lt;/h3>
-&lt;p>模拟器中，BlueStacks5 兼容性最强但不支持代理，夜神的性能较差，以雷电模拟器为例。&lt;/p>
+&lt;h3 id="模拟器">模拟器&lt;/h3>
+&lt;p>模拟器中，mumu支持android12兼容性最强，雷电模拟器也可以用，而BlueStacks5 不支持代理，夜神的性能较差。&lt;/p>
 &lt;style type="text/css">
 .box {
 padding: 1.6em;
@@ -1411,7 +1411,7 @@ class="gallery-image"
 data-flex-grow="115"
 data-flex-basis="276px"
 >&lt;/p>
-&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>flutter基础备忘录</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
+&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>flutter基础</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;ol>
 &lt;li>安装 JDK&lt;/li>
 &lt;/ol>

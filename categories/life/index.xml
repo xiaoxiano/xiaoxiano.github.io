@@ -562,12 +562,13 @@ data-flex-basis="479px"
 &lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后安装magisk manager app即可。&lt;/p>
 &lt;h1 id="安卓自动化">安卓自动化&lt;/h1>
 &lt;h2 id="工具">工具&lt;/h2>
-&lt;p>控件查找：可兼容所有机型，但是不能定位非原生安卓的对象（如 Unity3D 的游戏），或随机变化的控件（如安全键盘）
-图像识别：可查找所有显示内容，且难以被检测。但有识别慢、识别结果不准确、多分辨率不兼容的问题，但是使用airtest可以缓解&lt;/p>
-&lt;p>自动化工具有：&lt;/p>
+&lt;p>&lt;strong>识别方式&lt;/strong>
+控件查找：可兼容所有机型，但是不能定位非原生安卓的对象（如 Unity3D 的游戏），或随机变化的控件（如安全键盘）。显然图像识别时必备的&lt;/p>
+&lt;p>图像识别：可查找所有显示内容，且难以被检测。但可能有识别慢、识别结果不准确、多分辨率不兼容的问题，不过使用airtest可以缓解&lt;/p>
+&lt;p>&lt;strong>自动化工具有&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>Yyds.Auto：使用root深度掌控，内置yolo等ai模型，堪称最强方案，但部分app可能会对root设备监控&lt;/li>
-&lt;li>airtest：基于图像识别，几乎不会被app检测&lt;/li>
+&lt;li>airtest：基于图像识别&lt;/li>
 &lt;li>appium：图像识别需自己实现&lt;/li>
 &lt;li>EasyClick：支持打包apk，收费&lt;/li>
 &lt;li>AutoX.js：支持打包apk，图像识别需自己实现&lt;/li>
@@ -577,10 +578,107 @@ data-flex-basis="479px"
 &lt;li>按键精灵：单独app即可简单使用，以坐标为基础容易出现分辨率问题，而且MQ语言我是不会&lt;/li>
 &lt;/ul>
 &lt;h2 id="airtest需用pc">airtest（需用PC）&lt;/h2>
-&lt;p>对于简单任务，推荐使用airtest，支持Android/Windows/iOS，使用简单，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
+&lt;p>对于简单任务，推荐使用airtest，支持Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
 >官网&lt;/a>&lt;/p>
-&lt;h2 id="tasker">Tasker&lt;/h2>
+&lt;h3 id="算法">算法&lt;/h3>
+&lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/cGFvU9C7mBpsmnWgDLPW5A" target="_blank" rel="noopener"
+>Airtest算法介绍&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>模板匹配
+&lt;ul>
+&lt;li>速度快&lt;/li>
+&lt;li>无法跨分辨率识别&lt;/li>
+&lt;li>屏幕没有结果也会匹配出不准确的结果&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>特征点匹配
+&lt;ul>
+&lt;li>跨分辨率识别（可跨设备）&lt;/li>
+&lt;li>不能识别纯文字、空白截图&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="技巧">技巧&lt;/h3>
+&lt;ol>
+&lt;li>截有特征的小图（多截空白背景图会使准确度下降）&lt;/li>
+&lt;li>有相同按钮时，把按钮全部截图再定位&lt;/li>
+&lt;/ol>
 &lt;h3 id="基础">基础&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a class="link" href="https://airtest-refactor.doc.io.netease.com/airtest-project-docs/IDEdocs/3.2device_connection/2_emulator_connection/#2-mumu" target="_blank" rel="noopener"
+>mumu模拟器连接示例&lt;/a>&lt;/li>
+&lt;li>文件&amp;ndash;&amp;gt;新建脚本&amp;ndash;&amp;gt;.py纯Python(高级用户)
+&lt;ul>
+&lt;li>Save Path： 文件保存路径&lt;/li>
+&lt;li>Log Directory： log保存路径&lt;/li>
+&lt;li>Devices：使用当前已连接的手机设备进行初始化&lt;/li>
+&lt;li>Project Root： 项目的父目录&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>坐标
+&lt;ul>
+&lt;li>相对坐标：打开IDE的选项&amp;ndash;&amp;gt;设置&amp;ndash;&amp;gt;Device，勾选&lt;strong>实时坐标&lt;/strong>选项，可以实时显示出鼠标位置的坐标，再勾选相对坐标会显示出相对坐标，点击鼠标右键复制坐标信息&lt;/li>
+&lt;li>坐标切换&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 获取横屏电脑分辨率
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">height = G.DEVICE.display_info[&amp;#39;width&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">width = G.DEVICE.display_info[&amp;#39;height&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 已知相对坐标[0.3,0.55]，转换成绝对坐标
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">x2 = 0.3*width
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">y2 = 0.55*height
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 已知绝对坐标[311,1065]，转换成相对坐标
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">x1 = 311/width
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">y1 = 1065/height
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>图像识别&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">touch(Template(r&amp;#34;tpl1598948415043.png&amp;#34;, target_pos=6))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 参数
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">filename：截图路径
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">threshold：可信度，默认0.7
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">target_pos：点击位置，默认5（图像中心），1（左上角）~9（右下角）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">rgb：使用彩色识别
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>局部截图&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">from airtest.aircv import *
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">screen = G.DEVICE.snapshot()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 局部截图，左上（0,160）右下（1067,551）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">part_screen = aircv.crop_image(screen,(0,160,1067,551))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;a class="link" href="https://airtest.readthedocs.io/zh-cn/latest/all_module/airtest.core.api.html#" target="_blank" rel="noopener"
+>API&lt;/a>
+&lt;ul>
+&lt;li>点击：&lt;code>touch&lt;/code>&lt;/li>
+&lt;li>滑动：&lt;code>swipe&lt;/code>&lt;/li>
+&lt;li>等待截图出现：&lt;code>wait&lt;/code>&lt;/li>
+&lt;li>存在某个截图：&lt;code>exists&lt;/code>&lt;/li>
+&lt;li>文本输入：&lt;code>text&lt;/code>&lt;/li>
+&lt;li>关键词操作：&lt;code>keyevent&lt;/code>&lt;/li>
+&lt;li>截图：&lt;code>snapshot&lt;/code>&lt;/li>
+&lt;li>等待：&lt;code>sleep&lt;/code>&lt;/li>
+&lt;li>断言：&lt;code>assert_exists&lt;/code>、&lt;code>assert_not_exists&lt;/code>、&lt;code>assert_equal&lt;/code>、&lt;code>assert_not_equal&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://mp.weixin.qq.com/s/mrx2fndE9t_477yViZrpRA" target="_blank" rel="noopener"
+>文字识别&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">from PIL import Image
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 打开图片
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">image = Image.open(r&amp;#39;D:/test/score0.png&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 识别
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">text = pytesseract.image_to_string(image)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 识别中文
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">text3 = pytesseract.image_to_string(image3,lang=&amp;#39;chi_sim&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker">Tasker&lt;/h2>
+&lt;h3 id="基础-1">基础&lt;/h3>
 &lt;style type="text/css">
 .box {
 padding: 1.6em;
@@ -676,7 +774,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
-&lt;p>Tasker终身许可$3.49，需root才顺畅使用，否则锁屏都不能解决，不是很推荐&lt;/p>
+&lt;p>Tasker终身许可$3.49，需root才顺畅使用，否则锁屏都不能解决，可app单独使用&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
 &lt;ul>
