@@ -652,6 +652,8 @@ data-flex-basis="479px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 局部截图，左上（0,160）右下（1067,551）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">part_screen = aircv.crop_image(screen,(0,160,1067,551))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 保存局部截图到log文件夹中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">try_log_screen(part_screen)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;a class="link" href="https://airtest.readthedocs.io/zh-cn/latest/all_module/airtest.core.api.html#" target="_blank" rel="noopener"
 >API&lt;/a>
@@ -670,13 +672,33 @@ data-flex-basis="479px"
 &lt;li>&lt;a class="link" href="https://mp.weixin.qq.com/s/mrx2fndE9t_477yViZrpRA" target="_blank" rel="noopener"
 >文字识别&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">from PIL import Image
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import pytesseract
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from PIL import Image
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 打开图片
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">image = Image.open(r&amp;#39;D:/test/score0.png&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 识别
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">text = pytesseract.image_to_string(image)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 识别中文
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">text3 = pytesseract.image_to_string(image3,lang=&amp;#39;chi_sim&amp;#39;)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 点击ocr文字
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def touch_ocr(target_text):
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 已知相对坐标[0.13,0.01][0.27,0.04],局部截图
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x1 = 0.13*height
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y1 = 0.01*width
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x2 = 0.27*height
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y2 = 0.04*width
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> part_screen = aircv.crop_image(screen,(x1,y1,x2,y2))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># try_log_screen(part_screen)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 识别
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> text = pytesseract.image_to_string(part_screen,lang=&amp;#39;chi_sim&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># print(text)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if target_text == text:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x_center=(x1+x2)//2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y_center=(y1+y2)//2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch(x_center,y_center)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker">Tasker&lt;/h2>
 &lt;h3 id="基础-1">基础&lt;/h3>
 &lt;style type="text/css">
