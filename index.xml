@@ -5308,8 +5308,11 @@ data-flex-basis="479px"
 &lt;li>&lt;a class="link" href="https://mp.weixin.qq.com/s/mrx2fndE9t_477yViZrpRA" target="_blank" rel="noopener"
 >文字识别&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import pytesseract
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 尽量不用，建议尝试Poco控件识别
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 实际使用中，单纯文字识别准确率尚可，数字符号识别不准（使用相应匹配规则也不行，需借助另外专业的库）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pytesseract
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from PIL import Image
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 打开图片
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">image = Image.open(r&amp;#39;D:/test/score0.png&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 识别
@@ -5432,7 +5435,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
-&lt;p>Tasker终身许可$3.49，需root才顺畅使用，否则锁屏都不能解决，可app单独使用&lt;/p>
+&lt;p>Tasker终身许可$3.49，可app单独使用，需root才顺畅使用，否则锁屏都不能解决&lt;/p>
 &lt;/div>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
 &lt;ul>
@@ -7275,9 +7278,6 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;li>
 &lt;p>IDM　　　　　　　　　　　　　# 下载&lt;/p>
-&lt;ul>
-&lt;li>更新时Chrome插件残留：删掉&lt;code>C:\Users\[UserName]\AppData\Local\Google\Chrome\User Data\Default\Preferences&lt;/code>文件中&lt;code>cookie_controls_metadata&lt;/code>标签下&lt;code>&amp;quot;https://[*.]internetdownloadmanager.com,*&amp;quot;:{&amp;quot;last_modified&amp;quot;:,&amp;quot;setting&amp;quot;:{}},&lt;/code>这行，打开IDM安装位置将&lt;code>IDMGCExt.crx&lt;/code>拖入Chrome插件中安装&lt;/li>
-&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>Geek Uninstaller　　　　　　# 卸载无残留&lt;/p>
@@ -7360,7 +7360,7 @@ data-flex-basis="436px"
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
+&lt;li>tasker、hamibot　　　# 手机自动化&lt;/li>
 &lt;li>Moonlight　　　　　　　　# 局域网投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>

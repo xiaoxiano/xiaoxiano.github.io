@@ -5926,9 +5926,6 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;li>
 &lt;p>IDM　　　　　　　　　　　　　# 下载&lt;/p>
-&lt;ul>
-&lt;li>更新时Chrome插件残留：删掉&lt;code>C:\Users\[UserName]\AppData\Local\Google\Chrome\User Data\Default\Preferences&lt;/code>文件中&lt;code>cookie_controls_metadata&lt;/code>标签下&lt;code>&amp;quot;https://[*.]internetdownloadmanager.com,*&amp;quot;:{&amp;quot;last_modified&amp;quot;:,&amp;quot;setting&amp;quot;:{}},&lt;/code>这行，打开IDM安装位置将&lt;code>IDMGCExt.crx&lt;/code>拖入Chrome插件中安装&lt;/li>
-&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>Geek Uninstaller　　　　　　# 卸载无残留&lt;/p>
@@ -6011,7 +6008,7 @@ data-flex-basis="436px"
 &lt;li>
 &lt;p>手机控制&lt;/p>
 &lt;ul>
-&lt;li>MacroDroid、hamibot　　　# 手机自动化&lt;/li>
+&lt;li>tasker、hamibot　　　# 手机自动化&lt;/li>
 &lt;li>Moonlight　　　　　　　　# 局域网投屏&lt;/li>
 &lt;li>AirDroid和AirMirror　　　　# 手机远程控制手机&lt;/li>
 &lt;li>向日葵远程控制&lt;/li>
