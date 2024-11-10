@@ -5926,6 +5926,9 @@ data-flex-basis="436px"
 &lt;/li>
 &lt;li>
 &lt;p>IDM　　　　　　　　　　　　　# 下载&lt;/p>
+&lt;ul>
+&lt;li>PowerShell：&lt;code>irm https://massgrave.dev/ias | iex&lt;/code>&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>Geek Uninstaller　　　　　　# 卸载无残留&lt;/p>
