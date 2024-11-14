@@ -3669,7 +3669,7 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="plugin">Plugin&lt;/h2>
-&lt;p>Flutter Plugin可以实现许多原生平台的功能，但是需要学习一些基础知识。&lt;/p>
+&lt;p>Flutter Plugin是可以插入到主程序中，扩展功能的独立组件，我们实现许多原生平台的功能就需要用到。&lt;/p>
 &lt;h3 id="flutter-1">Flutter&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
 width="580"
@@ -5819,11 +5819,11 @@ sed
 &lt;h1 id="win10-系统问题">Win10 系统问题&lt;/h1>
 &lt;h2 id="文件夹分类管理">文件夹分类管理&lt;/h2>
 &lt;ol>
-&lt;li>在要分类的文件夹下新建desktop.ini文件&lt;/li>
+&lt;li>在要分类的文件夹下新建desktop.txt文件&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">[.ShellClassInfo]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">InfoTip=分类名称
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另存为，保存类型：所有文件，编码：ANSI&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另存为desktop.ini，保存类型：所有文件，编码：ANSI&lt;/p>
 &lt;ol start="2">
 &lt;li>
 &lt;p>生效：文件夹属性 -&amp;gt; 自定义 -&amp;gt; 更改图标 -&amp;gt; 还原默认值&lt;/p>
