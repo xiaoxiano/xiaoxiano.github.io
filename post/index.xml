@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Janus</title><link>https://xiaoxiano.github.io/post/</link><description>Recent content in Posts on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>运动装备测评</title><link>https://xiaoxiano.github.io/p/sports/</link><pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/sports/</guid><description>&lt;h1 id="跑步">跑步&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Janus</title><link>https://xiaoxiano.github.io/post/</link><description>Recent content in Posts on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 10 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>运动装备推荐</title><link>https://xiaoxiano.github.io/p/sports/</link><pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/sports/</guid><description>&lt;h1 id="跑步">跑步&lt;/h1>
 &lt;h2 id="手表">手表&lt;/h2>
 &lt;p>专业跑表推荐佳明，数据专业，用于参加马拉松及越野&lt;/p>
 &lt;p>日常的跑表可以选自己手机品牌的（例如OPPO Watch X），不仅准确，而且使用esim完全不用带手机&lt;/p>
@@ -96,7 +96,7 @@ data-flex-basis="360px"
 &lt;/li>
 &lt;li>3000以内选购
 &lt;ul>
-&lt;li>美利达公爵600：长途旅行，考虑耐用及维修&lt;/li>
+&lt;li>美利达公爵600：长途旅行，考虑耐用及维修，虽然传奇500刹车配置更高，公爵300s价低几乎不减配，但综合体验非公爵600莫属&lt;/li>
 &lt;li>千里达 X7Elite&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -2541,52 +2541,70 @@ data-flex-basis="319px"
 &lt;li>截图&lt;/li>
 &lt;/ul>
 &lt;p>按住右手柄Oculus Home键（椭圆键） + 扳机按键（食指键）&lt;/p></description></item><item><title>flutter基础</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
-&lt;ol>
-&lt;li>安装 JDK&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" target="_blank" rel="noopener"
->下载地址&lt;/a>&lt;/p>
-&lt;p>　&lt;/p>
-&lt;ol start="2">
-&lt;li>安装配置Android Studio&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://developer.android.com/studio" target="_blank" rel="noopener"
->下载地址&lt;/a>&lt;/p>
-&lt;ol start="3">
-&lt;li>flutter(windows)&lt;/li>
-&lt;/ol>
-&lt;p>&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
->flutter安装&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
-&lt;li>配置环境变量&lt;/li>
-&lt;/ol>
-&lt;p>&lt;strong>Dart:&lt;/strong> 无需配置，flutter现在自带dart。&lt;/p>
-&lt;p>&lt;strong>Flutter:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>path:&lt;code>C:\flutter\bin&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Java:&lt;/strong> &lt;br>
-我们可能需要多个java版本，主要是为了&lt;a class="link" href="https://docs.gradle.org/current/userguide/compatibility.html#compatibility" target="_blank" rel="noopener"
+&lt;h2 id="java版本控制jvms">java版本控制（jvms）&lt;/h2>
+&lt;p>我们可能需要多个java版本，主要是为了&lt;a class="link" href="https://docs.gradle.org/current/userguide/compatibility.html#compatibility" target="_blank" rel="noopener"
 >兼容Gradle版本&lt;/a>。&lt;/p>
+&lt;ol>
+&lt;li>&lt;a class="link" href="https://github.com/ystyle/jvms/releases" target="_blank" rel="noopener"
+>下载&lt;/a>，解压到想要的路径&lt;/li>
+&lt;li>管理员身份打开cmd，cd到在jvms.exe所在的目录下，执行&lt;code>jvms init&lt;/code>&lt;/li>
+&lt;li>&lt;code>jvms.exe rls&lt;/code>可列出java版本，如果失败，打开&lt;code>https://site.ip138.com/raw.Githubusercontent.com/&lt;/code>查看ip，在&lt;code>C:\Windows\System32\drivers\etc\hosts&lt;/code>末尾添加一行&lt;code>[ip] raw.githubusercontent.com&lt;/code>&lt;/li>
+&lt;li>安装&lt;code>jvms install [version]&lt;/code>&lt;/li>
+&lt;li>&lt;code>jvms.exe ls&lt;/code>列出已安装JDK版本&lt;/li>
+&lt;li>&lt;code>jvms.exe switch [version]&lt;/code>切换版本&lt;/li>
+&lt;li>&lt;code>java -version&lt;/code>&lt;/li>
+&lt;li>&lt;code>jvms.exe remove [version]&lt;/code>删除某个版本&lt;/li>
+&lt;/ol>
+&lt;h2 id="android-studio">Android Studio&lt;/h2>
+&lt;p>&lt;strong>安装配置Android Studio&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/studio" target="_blank" rel="noopener"
+>下载地址&lt;/a>
+&lt;strong>Android SDK Tools:&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;code>JAVA_HOME&lt;/code>:&lt;code>C:\Program Files\Java\jdk-1.8&lt;/code>(切换版本：&lt;code>C:\Program Files\Java\jdk-17&lt;/code>)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>path:&lt;code>%JAVA_HOME%\bin&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>path:&lt;code>%JAVA_HOME%\jre\bin&lt;/code> (如果只有jdk-17则不需要配置jre)&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>删除自动配置的环境变量path：&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>C:\Program Files\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
-&lt;li>&lt;code>C:\Program Files (x86)\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
+&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\sdk\tools&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;/li>
+&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="flutter版本控制fvm">flutter版本控制（fvm）&lt;/h2>
+&lt;ol>
+&lt;li>安装 fvm，命令行运行以下命令：&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">choco install fvm
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>查看当前有哪些版本可用&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm releases
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>安装指定版本&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install stable
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
+&lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm list
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>VS Code配置&lt;/li>
+&lt;/ol>
+&lt;p>在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dart.flutterSdkPath&amp;#34;: &amp;#34;.fvm/flutter_sdk&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove .fvm files from search
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;search.exclude&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove from file watching
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;files.watcherExclude&amp;#34;: {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
+&lt;li>切换版本&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
+&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
 &lt;/ul>
 &lt;style type="text/css">
 .box {
@@ -2683,66 +2701,59 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
-&lt;p>不推荐设置系统环境变量&lt;code>classpath&lt;/code>，始终建议通过&lt;code>-cp&lt;/code>命令传入，JVM默认的&lt;code>classpath&lt;/code>为&lt;code>.&lt;/code>，即当前目录。&lt;/p>
-&lt;/div>
-&lt;p>&lt;strong>Android SDK Tools:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\tools&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>path:&lt;code>C:\Users\{username}\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h2 id="fvm版本控制">fvm版本控制&lt;/h2>
-&lt;ol>
-&lt;li>安装 fvm，命令行运行以下命令：&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">choco install fvm
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>查看当前有哪些版本可用&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm releases
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>安装指定版本&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install stable
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
-&lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm list
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
-&lt;li>VS Code配置&lt;/li>
-&lt;/ol>
-&lt;p>在项目中创建一个.vscode文件夹，然后创建一个名为settings.json的文件并添加：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;dart.flutterSdkPath&amp;#34;: &amp;#34;.fvm/flutter_sdk&amp;#34;,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove .fvm files from search
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;search.exclude&amp;#34;: {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Remove from file watching
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;files.watcherExclude&amp;#34;: {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;**/.fvm&amp;#34;: true
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="6">
-&lt;li>切换版本&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
-&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
-&lt;/ul>
-&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
 &lt;p>运行上述命令后，项目中创建了一个名为.fvm 的文件夹，文件夹中有 flutter SDK，我们不希望提交此文件夹,所以在.gitignore文件中添加&lt;code>.fvm/flutter_sdk&lt;/code>&lt;/p>
 &lt;/div>
 &lt;ol start="7">
 &lt;li>删除某个版本&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm remove [version]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="直接安装不推荐">直接安装（不推荐）&lt;/h2>
+&lt;ol>
+&lt;li>安装 JDK&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://www.oracle.com/java/technologies/downloads/#jdk17-windows" target="_blank" rel="noopener"
+>下载地址&lt;/a>&lt;/p>
+&lt;ol start="2">
+&lt;li>安装flutter(windows)&lt;/li>
+&lt;/ol>
+&lt;p>&lt;a class="link" href="https://docs.flutter.dev/get-started/install/windows" target="_blank" rel="noopener"
+>flutter安装&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set PUB_HOSTED_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/dart-pub&amp;#34; #配置国内镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set FLUTTER_STORAGE_BASE_URL=&amp;#34;https://mirrors.tuna.tsinghua.edu.cn/flutter&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>配置环境变量&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Dart:&lt;/strong> 无需配置，flutter现在自带dart。&lt;/p>
+&lt;p>&lt;strong>Flutter:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>path:&lt;code>C:\flutter\bin&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Java:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>JAVA_HOME&lt;/code>:&lt;code>C:\Program Files\Java\jdk-1.8&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>path:&lt;code>%JAVA_HOME%\bin&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>path:&lt;code>%JAVA_HOME%\jre\bin&lt;/code> (如果是jdk-17则不需要配置jre)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>删除自动配置的环境变量path：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>C:\Program Files\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
+&lt;li>&lt;code>C:\Program Files (x86)\Common Files\Oracle\Java\javapath&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="box info" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>不推荐设置系统环境变量&lt;code>classpath&lt;/code>，始终建议通过&lt;code>-cp&lt;/code>命令传入，JVM默认的&lt;code>classpath&lt;/code>为&lt;code>.&lt;/code>，即当前目录。&lt;/p>
+&lt;/div>
+&lt;h1 id="创建-flutter-项目">创建 Flutter 项目&lt;/h1>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/1.jpg"
 width="1317"
 height="897"
@@ -7143,14 +7154,14 @@ sed
 &lt;ul>
 &lt;li>git&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global http.proxy http://127.0.0.1:port.http
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global https.proxy https://127.0.0.1:port.http
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\90487\.gitconfig&lt;/code>，90487是我的用户名&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global http.proxy http://127.0.0.1:[port.http]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global https.proxy https://127.0.0.1:[port.http]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\[Username]\.gitconfig&lt;/code>&lt;/p>
 &lt;ul>
 &lt;li>Terminal（临时使用）&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set http_proxy=http://127.0.0.1:port.http #临时命令行代理
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:port.http #临时命令行代理
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set http_proxy=http://127.0.0.1:[port.http] #临时命令行代理
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:[port.http] #临时命令行代理
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
 &lt;li>代理&lt;/li>
