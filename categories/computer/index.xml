@@ -3944,7 +3944,8 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-22">
 &lt;summary>其他配置&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">signingConfigs { // 自动化打包配置
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfigs { // 自动化打包配置
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 线上环境
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
@@ -3957,14 +3958,14 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sourceSets { //目录指向配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceSets { //目录指向配置
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] //指定lib库目录
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">packagingOptions{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packagingOptions{
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当有重复文件时 ,使用第一个匹配的文件打包进apk
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickFirsts = [&amp;#39;META-INF/LICENSE&amp;#39;]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -3973,9 +3974,8 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 同时使用butterknife、dagger2框架处理 （常用）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> exclude &amp;#39;META-INF/services/javax.annotation.processing.Processor&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> productFlavors {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wandoujia { // 豌豆荚渠道包配置
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;wandoujia&amp;#34;]
@@ -3990,12 +3990,11 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //...
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lintOptions { // 关闭检查lint（有错误会停止build）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lintOptions { // 关闭检查lint（有错误会停止build）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abortOnError false // 即使报错也不会停止打包
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> checkReleaseBuilds false // 打包release版本的时候进行检测
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>

@@ -1453,38 +1453,38 @@
 </span></span><span class=line><span class=cl>    implementation &#39;com.android.support:appcompat-v7:26.1.0&#39;    //远程依赖
 </span></span><span class=line><span class=cl>    implementation project(&#39;:library&#39;)
 </span></span><span class=line><span class=cl>}
-</span></span></code></pre></div><details class=spoiler id=spoiler-22><summary>其他配置</summary><p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>signingConfigs {                        // 自动化打包配置
-</span></span><span class=line><span class=cl>        release {                       // 线上环境
-</span></span><span class=line><span class=cl>            keyAlias &#39;test&#39;
-</span></span><span class=line><span class=cl>            keyPassword &#39;123456&#39;
-</span></span><span class=line><span class=cl>            storeFile file(&#39;test.keystore&#39;)
-</span></span><span class=line><span class=cl>            storePassword &#39;123456&#39;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        debug {                         // 开发环境
-</span></span><span class=line><span class=cl>            keyAlias &#39;test&#39;
-</span></span><span class=line><span class=cl>            keyPassword &#39;123456&#39;
-</span></span><span class=line><span class=cl>            storeFile file(&#39;test.keystore&#39;)
-</span></span><span class=line><span class=cl>            storePassword &#39;123456&#39;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>}
-</span></span><span class=line><span class=cl>sourceSets {                             //目录指向配置
-</span></span><span class=line><span class=cl>        main {
-</span></span><span class=line><span class=cl>            jniLibs.srcDirs = [&#39;libs&#39;]   //指定lib库目录
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>}
-</span></span><span class=line><span class=cl>    
-</span></span><span class=line><span class=cl>packagingOptions{
-</span></span><span class=line><span class=cl>        // 当有重复文件时 ,使用第一个匹配的文件打包进apk
-</span></span><span class=line><span class=cl>        pickFirsts = [&#39;META-INF/LICENSE&#39;]
+</span></span></code></pre></div><details class=spoiler id=spoiler-22><summary>其他配置</summary><p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>android {
+</span></span><span class=line><span class=cl>    signingConfigs {                        // 自动化打包配置
+</span></span><span class=line><span class=cl>            release {                       // 线上环境
+</span></span><span class=line><span class=cl>                keyAlias &#39;test&#39;
+</span></span><span class=line><span class=cl>                keyPassword &#39;123456&#39;
+</span></span><span class=line><span class=cl>                storeFile file(&#39;test.keystore&#39;)
+</span></span><span class=line><span class=cl>                storePassword &#39;123456&#39;
+</span></span><span class=line><span class=cl>            }
+</span></span><span class=line><span class=cl>            debug {                         // 开发环境
+</span></span><span class=line><span class=cl>                keyAlias &#39;test&#39;
+</span></span><span class=line><span class=cl>                keyPassword &#39;123456&#39;
+</span></span><span class=line><span class=cl>                storeFile file(&#39;test.keystore&#39;)
+</span></span><span class=line><span class=cl>                storePassword &#39;123456&#39;
+</span></span><span class=line><span class=cl>            }
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    sourceSets {                             //目录指向配置
+</span></span><span class=line><span class=cl>            main {
+</span></span><span class=line><span class=cl>                jniLibs.srcDirs = [&#39;libs&#39;]   //指定lib库目录
+</span></span><span class=line><span class=cl>            }
+</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>        
+</span></span><span class=line><span class=cl>    packagingOptions{
+</span></span><span class=line><span class=cl>            // 当有重复文件时 ,使用第一个匹配的文件打包进apk
+</span></span><span class=line><span class=cl>            pickFirsts = [&#39;META-INF/LICENSE&#39;]
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // 当出现重复文件时 合并重复的文件打包进apk
-</span></span><span class=line><span class=cl>        merge &#39;META-INF/LICENSE&#39;
+</span></span><span class=line><span class=cl>            // 当出现重复文件时 合并重复的文件打包进apk
+</span></span><span class=line><span class=cl>            merge &#39;META-INF/LICENSE&#39;
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // 同时使用butterknife、dagger2框架处理 （常用）
-</span></span><span class=line><span class=cl>        exclude &#39;META-INF/services/javax.annotation.processing.Processor&#39;
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>            // 同时使用butterknife、dagger2框架处理 （常用）
+</span></span><span class=line><span class=cl>            exclude &#39;META-INF/services/javax.annotation.processing.Processor&#39;
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>android { 
 </span></span><span class=line><span class=cl>    productFlavors {
 </span></span><span class=line><span class=cl>        wandoujia {     // 豌豆荚渠道包配置
 </span></span><span class=line><span class=cl>            manifestPlaceholders = [UMENG_CHANNEL_VALUE: &#34;wandoujia&#34;]
@@ -1499,12 +1499,11 @@
 </span></span><span class=line><span class=cl>        }
 </span></span><span class=line><span class=cl>        //...
 </span></span><span class=line><span class=cl>    } 
-</span></span><span class=line><span class=cl>}
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>lintOptions {                     // 关闭检查lint（有错误会停止build）
-</span></span><span class=line><span class=cl>        abortOnError false        // 即使报错也不会停止打包
-</span></span><span class=line><span class=cl>        checkReleaseBuilds false  // 打包release版本的时候进行检测
+</span></span><span class=line><span class=cl>    lintOptions {                     // 关闭检查lint（有错误会停止build）
+</span></span><span class=line><span class=cl>            abortOnError false        // 即使报错也不会停止打包
+</span></span><span class=line><span class=cl>            checkReleaseBuilds false  // 打包release版本的时候进行检测
+</span></span><span class=line><span class=cl>    }
 </span></span><span class=line><span class=cl>}
 </span></span></code></pre></div></p></details><ul><li>gradle-wrapper-properties：配置 Gradle Wrapper</li><li>gradle-properties：配置 Gradle</li><li>setting.gradle：配置 Gradle 的多项目管理</li><li>local.properties：存放 Android 项目的私有属性配置，如 SDK 路径</li><li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类</li></ul><h4 id=channel>Channel</h4><ol><li><p>创建Channel</p><p>三种Channel 的构造十分相似：</p></li></ol><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>BasicMessageChannel(BinaryMessenger messenger,String name,MessageCodec<span class=p>&lt;</span><span class=nt>T</span><span class=p>&gt;</span> codec)
 </span></span><span class=line><span class=cl>
