@@ -4989,6 +4989,151 @@ data-flex-basis="622px"
 （1）你的应用可以使用它对外部事件进行过滤，只对感兴趣的外部事件(如当电话呼入时，或者数据网络可用时)进行接收并做出响应。广播接收器没有用户界面。然而，它们可以启动一个activity或serice来响应它们收到的信息，或者用NotificationManager来通知用户。通知可以用很多种方式来吸引用户的注意力，例如闪动背灯、震动、播放声音等。一般来说是在状态栏上放一个持久的图标，用户可以打开它并获取消息。&lt;/p>
 &lt;p>（2）广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。&lt;/p>
 &lt;p>（3）动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。&lt;/p>
+&lt;h4 id="gradle">Gradle&lt;/h4>
+&lt;ul>
+&lt;li>项目 build.gradle：配置项目整体属性，比如指定的代码仓库、依赖的 Gradle 版本等&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">buildscript {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories { // gradle脚本执行需要的依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google() // 引用google上的开源项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter() // 引用 jcenter上的开源项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies { //依赖的jar包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> classpath &amp;#39;com.android.tools.build:gradle:3.0.0&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects { // 项目本身需要的依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">task clean(type: Delete) { // 执行task任务：删除根目录中的build目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> delete rootProject.buildDir
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>模块 build.gradle：配置当前模块的编译参数&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 使用插件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apply plugin: &amp;#39;com.android.application&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 //设置编译时用的Android版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minSdkVersion 15 // 最低兼容的版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> targetSdkVersion 34 // 目标版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionCode 1 // 版本号
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionName &amp;#34;1.0&amp;#34; // 版本名称
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testInstrumentationRunner &amp;#34;android.support.test.runner.AndroidJUnitRunner&amp;#34; // 使用AndroidJUnitRunner进行单元测试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildTypes {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 生产环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;false&amp;#34;) //配置Log日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://release.cn/&amp;#34;&amp;#34;) // 配置URL前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false //是否对代码进行混淆
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39; //指定混淆的规则文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.release //设置签名信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false //是否在APK中生成伪语言环境，帮助国际化的东西，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true //是否对APK包执行ZIP对齐优化，减小zip体积，增加运行效率
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 测试环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;true&amp;#34;) //配置Log日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://test.com/&amp;#34;&amp;#34;) // 配置URL前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false //是否对代码进行混淆
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39; //指定混淆的规则文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.debug //设置签名信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debuggable false //是否支持断点调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniDebuggable false //是否可以调试NDK代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> renderscriptDebuggable false //是否开启渲染脚本就是一些c写的渲染方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true //是否对APK包执行ZIP对齐优化，减小zip体积，增加运行效率
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false //是否在APK中生成伪语言环境，帮助国际化的东西，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dependencies { //项目的依赖关系
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;) //本地jar包依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; //声明测试用例库
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; //远程依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation project(&amp;#39;:library&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-22">
+&lt;summary>其他配置&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">signingConfigs { // 自动化打包配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 线上环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 开发环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sourceSets { //目录指向配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] //指定lib库目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">packagingOptions{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当有重复文件时 ,使用第一个匹配的文件打包进apk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickFirsts = [&amp;#39;META-INF/LICENSE&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当出现重复文件时 合并重复的文件打包进apk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> merge &amp;#39;META-INF/LICENSE&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 同时使用butterknife、dagger2框架处理 （常用）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> exclude &amp;#39;META-INF/services/javax.annotation.processing.Processor&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> productFlavors {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wandoujia {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //豌豆荚渠道包配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;wandoujia&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //manifestPlaceholders的使用在后续章节（AndroidManifest里的占位符）中介绍
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> xiaomi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;xiaomi&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.wiky.gradle.xiaomi&amp;#34; //配置包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _360 {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;_360&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lintOptions { // 关闭检查lint（有错误会停止build）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abortOnError false // 即使报错也不会停止打包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> checkReleaseBuilds false // 打包release版本的时候进行检测
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;ul>
+&lt;li>gradle-wrapper-properties：配置 Gradle Wrapper&lt;/li>
+&lt;li>gradle-properties：配置 Gradle&lt;/li>
+&lt;li>setting.gradle：配置 Gradle 的多项目管理&lt;/li>
+&lt;li>local.properties：存放 Android 项目的私有属性配置，如 SDK 路径&lt;/li>
+&lt;li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类&lt;/li>
+&lt;/ul>
 &lt;h4 id="channel">Channel&lt;/h4>
 &lt;ol>
 &lt;li>
@@ -5115,12 +5260,11 @@ data-flex-basis="426px"
 &lt;/ul>
 &lt;h3 id="签名安卓">签名（安卓）&lt;/h3>
 &lt;ol>
-&lt;li>
-&lt;ul>
-&lt;li>android studio方法：&lt;/li>
-&lt;/ul>
-&lt;/li>
+&lt;li>创建&lt;/li>
 &lt;/ol>
+&lt;ul>
+&lt;li>android studio方法&lt;/li>
+&lt;/ul>
 &lt;p>以管理员身份运行 android studio -&amp;gt; 打开项目下的Android文件夹 -&amp;gt; Build -&amp;gt; Generate Signed Bundle / APK -&amp;gt; 选择 APK 点击 Next -&amp;gt; Create new&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/keystore.png"
 width="658"
@@ -5132,22 +5276,22 @@ data-flex-grow="98"
 data-flex-basis="236px"
 >&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>命令行ketool方法（推荐）：&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>命令行ketool方法（推荐）&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;p>ketool容易修改密钥，参考&lt;a class="link" href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/keytool.html#keytool_option_gencert" target="_blank" rel="noopener"
 >Java8版官方文档&lt;/a>或&lt;a class="link" href="https://docs.oracle.com/en/java/javase/index.html" target="_blank" rel="noopener"
 >更多版本&lt;/a>。&lt;/p>
-&lt;p>&lt;strong>使用&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>使用：&lt;/strong>&lt;/p>
 &lt;p>项目下的Android/app文件夹打开cmd&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 创建keystore和密钥对
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -genkeypair -alias key -keyalg RSA -keysize 2048 -validity 10000 -keystore ./release.keystore.jks
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 列出所有可用的证书别名（指定路径）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 列出可用的证书别名（指定路径）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -list -v -keystore ./release.keystore.jks
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//删除的证书（指定别名、路径，手动删除文件）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 删除证书（指定别名、路径）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -delete -alias key -keystore ./release.keystore.jks
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-22">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-23">
 &lt;summary>详细参数&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">-genkeypair 生成密钥对（公钥和关联的私钥）。将该证书链和私钥存储在由alias标识的新密钥库条目中
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 别名，每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
@@ -5158,8 +5302,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepass 指定密钥库的密码(获取keystore信息所需的密码)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypass 指定别名条目的密码(私钥的密码)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-dname 指定证书发行者信息 其中： “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名 称,ST=州或省份名称,C=单位的两字母国家代码”
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-list 显示密钥库中的证书信息 keytool -list -v -keystore 指定keystore -storepass 密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v 显示密钥库中的证书详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-list 显示密钥库中的证书信息
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-export 将别名指定的证书导出到文件 keytool -export -alias 需要导出的别名 -keystore 指定keystore -file 指定导出的证书位置及证书名称 -storepass 密码
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-file 参数指定导出到文件的文件名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-delete 删除密钥库中某条目 keytool -delete -alias 指定需删除的别 -keystore 指定keystore – storepass 密码
@@ -5168,23 +5311,6 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepasswd 修改keystore口令 keytool -storepasswd -keystore g:\sso\michael.keystore(需修改口令的keystore) -storepass pwdold(原始密码) -new pwdnew(新密码)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-import 将已签名数字证书导入密钥库 keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">中创建一个默认文件”.keystore”,还会产生一个mykey的别名，mykey中包含用户的公钥、私钥和证书(在没有指定生成位置的情况下,keystore会存在用户系统默认目录)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 产生别名 每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keystore 指定密钥库的名称(产生的各类信息将不在.keystore文件中)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keyalg 指定密钥的算法 (如 RSA DSA，默认值为：DSA)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-validity 指定创建的证书有效期多少天(默认 90)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keysize 指定密钥长度 （默认 1024）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepass 指定密钥库的密码(获取keystore信息所需的密码)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypass 指定别名条目的密码(私钥的密码)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-dname 指定证书发行者信息 其中： “CN=名字与姓氏,OU=组织单位名称,O=组织名称,L=城市或区域名 称,ST=州或省份名称,C=单位的两字母国家代码”
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-list 显示密钥库中的证书信息 keytool -list -v -keystore 指定keystore -storepass 密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-v 显示密钥库中的证书详细信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-export 将别名指定的证书导出到文件 keytool -export -alias 需要导出的别名 -keystore 指定keystore -file 指定导出的证书位置及证书名称 -storepass 密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-file 参数指定导出到文件的文件名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-delete 删除密钥库中某条目 keytool -delete -alias 指定需删除的别 -keystore 指定keystore – storepass 密码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-printcert 查看导出的证书信息 keytool -printcert -file g:\sso\michael.crt
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-keypasswd 修改密钥库中指定条目口令 keytool -keypasswd -alias 需修改的别名 -keypass 旧密码 -new 新密码 -storepass keystore密码 -keystore sage
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-storepasswd 修改keystore口令 keytool -storepasswd -keystore g:\sso\michael.keystore(需修改口令的keystore) -storepass pwdold(原始密码) -new pwdnew(新密码)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-import 将已签名数字证书导入密钥库 keytool -import -alias 指定导入条目的别名 -keystore 指定keystore -file 需导入的证书
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;ol start="2">
