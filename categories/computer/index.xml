@@ -1661,8 +1661,155 @@ class="gallery-image"
 data-flex-grow="178"
 data-flex-basis="427px"
 >&lt;/p>
-&lt;h1 id="故障排除">故障排除&lt;/h1>
-&lt;h2 id="配置">配置&lt;/h2>
+&lt;h1 id="gradle">Gradle&lt;/h1>
+&lt;p>指定Gradle的版本：File &amp;gt; Project Structure &amp;gt; Project&lt;/p>
+&lt;ul>
+&lt;li>项目 build.gradle：配置项目整体属性，比如指定的代码仓库、依赖的 Gradle 版本等&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">buildscript {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories { // gradle脚本执行需要的依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google() // 引用google上的开源项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter() // 引用 jcenter上的开源项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies { //依赖的jar包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> classpath &amp;#39;com.android.tools.build:gradle:3.0.0&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects { // 项目本身需要的依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">task clean(type: Delete) { // 执行task任务：删除根目录中的build目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> delete rootProject.buildDir
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>模块 build.gradle：配置当前模块的编译参数&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 使用插件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apply plugin: &amp;#39;com.android.application&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 //设置编译时用的Android版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minSdkVersion 15 // 最低兼容的版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> targetSdkVersion 34 // 目标版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionCode 1 // 版本号
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionName &amp;#34;1.0&amp;#34; // 版本名称
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 使用AndroidJUnitRunner进行单元测试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testInstrumentationRunner &amp;#34;android.support.test.runner.AndroidJUnitRunner&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildTypes {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 生产环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;false&amp;#34;) // 配置Log日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://release.cn/&amp;#34;&amp;#34;) // 配置URL前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false // 是否对代码进行混淆
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定混淆的规则文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.release // 设置签名信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false // 是否在APK中生成伪语言环境，帮助国际化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true // 是否对APK包进行ZIP对齐优化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 测试环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;true&amp;#34;) //配置Log日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://test.com/&amp;#34;&amp;#34;) // 配置URL前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false //是否对代码进行混淆
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定混淆的规则文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.debug //设置签名信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debuggable false //是否支持断点调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniDebuggable false //是否可以调试NDK代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> renderscriptDebuggable false //是否开启渲染脚本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true //是否对APK包执行ZIP对齐优化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false //是否在APK中生成伪语言环境，帮助国际化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dependencies { //项目的依赖关系
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">style&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;background-color: default; color: blue;&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> // 本地jar包依赖：在 Project\android 目录下新建 libs 文件夹，粘贴 jar&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; // 声明测试用例库
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; // 远程依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation project(&amp;#39;:library&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>其他配置&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfigs { // 自动化打包配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 线上环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 开发环境
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceSets { //目录指向配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] //指定lib库目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packagingOptions{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当有重复文件时 ,使用第一个匹配的文件打包进apk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickFirsts = [&amp;#39;META-INF/LICENSE&amp;#39;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当出现重复文件时 合并重复的文件打包进apk
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> merge &amp;#39;META-INF/LICENSE&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 同时使用butterknife、dagger2框架处理 （常用）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> exclude &amp;#39;META-INF/services/javax.annotation.processing.Processor&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> productFlavors {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wandoujia { // 豌豆荚渠道包配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;wandoujia&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> xiaomi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;xiaomi&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.wiky.gradle.xiaomi&amp;#34; // 配置包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _360 {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;_360&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lintOptions { // 关闭检查lint（有错误会停止build）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abortOnError false // 即使报错也不会停止打包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> checkReleaseBuilds false // 打包release版本的时候进行检测
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;ul>
+&lt;li>gradle-wrapper-properties：配置 Gradle Wrapper&lt;/li>
+&lt;li>gradle-properties：配置 Gradle&lt;/li>
+&lt;li>setting.gradle：配置 Gradle 的多项目管理&lt;/li>
+&lt;li>local.properties：存放 Android 项目的私有属性配置，如 SDK 路径&lt;/li>
+&lt;li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类&lt;/li>
+&lt;/ul>
+&lt;h2 id="故障排除">故障排除&lt;/h2>
+&lt;h3 id="配置">配置&lt;/h3>
 &lt;ul>
 &lt;li>配置build.gradle(project:android)&lt;/li>
 &lt;/ul>
@@ -1673,13 +1820,13 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> maven { url &amp;#34;https://storage.googleapis.com/download.flutter.io&amp;#34; }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="更新">更新&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="更新">更新&lt;/h3>
 &lt;ul>
 &lt;li>flutter&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">flutter upgrade
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">flutter doctor
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="运行项目报错">运行项目报错&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="运行项目报错">运行项目报错&lt;/h3>
 &lt;p>&lt;strong>常见错误&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>更新Android Studio&lt;/li>
@@ -3219,7 +3366,7 @@ data-flex-basis="443px"
 >Service Worker&lt;/a>：Service Worker 是 PWA 的基本组成部分。它们支持快速加载（无论网络如何）、离线访问、推送通知和其他功能。&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-20">
+&lt;details class="spoiler " id="spoiler-21">
 &lt;summary>InAppWebView官方示例注释&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/foundation.dart&amp;#39;;
@@ -3771,16 +3918,10 @@ data-flex-basis="215px"
 &lt;/table>
 &lt;h3 id="android">Android&lt;/h3>
 &lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。&lt;/p>
-&lt;h4 id="依赖">依赖&lt;/h4>
+&lt;h4 id="plugin依赖">plugin依赖&lt;/h4>
 &lt;p>plugin 根目录的 android 由于无需构建，所以缺少一些依赖和文件，打开项目的正确目录是 example/android 。&lt;/p>
 &lt;p>如果是clone的项目缺少依赖：&lt;/p>
 &lt;p>在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。&lt;/p>
-&lt;p>如果使用IDEA：&lt;/p>
-&lt;p>Android Studio 中跳转依赖，复制找到的 jar，在 Project\android 目录下新建 libs 文件夹，粘贴 jar，然后在 build.gradle 末尾处添加：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">dependencies {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;])
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用 IDEA 打开 Project\android 目录。&lt;/p>
 &lt;h4 id="java">Java&lt;/h4>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/10.jpg"
 width="757"
@@ -3860,151 +4001,6 @@ data-flex-basis="622px"
 （1）你的应用可以使用它对外部事件进行过滤，只对感兴趣的外部事件(如当电话呼入时，或者数据网络可用时)进行接收并做出响应。广播接收器没有用户界面。然而，它们可以启动一个activity或serice来响应它们收到的信息，或者用NotificationManager来通知用户。通知可以用很多种方式来吸引用户的注意力，例如闪动背灯、震动、播放声音等。一般来说是在状态栏上放一个持久的图标，用户可以打开它并获取消息。&lt;/p>
 &lt;p>（2）广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。&lt;/p>
 &lt;p>（3）动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。&lt;/p>
-&lt;h4 id="gradle">Gradle&lt;/h4>
-&lt;ul>
-&lt;li>项目 build.gradle：配置项目整体属性，比如指定的代码仓库、依赖的 Gradle 版本等&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">buildscript {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories { // gradle脚本执行需要的依赖
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google() // 引用google上的开源项目
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter() // 引用 jcenter上的开源项目
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies { //依赖的jar包
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> classpath &amp;#39;com.android.tools.build:gradle:3.0.0&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">allprojects { // 项目本身需要的依赖
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> repositories {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">task clean(type: Delete) { // 执行task任务：删除根目录中的build目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> delete rootProject.buildDir
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>模块 build.gradle：配置当前模块的编译参数&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 使用插件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">apply plugin: &amp;#39;com.android.application&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 //设置编译时用的Android版本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minSdkVersion 15 // 最低兼容的版本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> targetSdkVersion 34 // 目标版本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionCode 1 // 版本号
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionName &amp;#34;1.0&amp;#34; // 版本名称
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 使用AndroidJUnitRunner进行单元测试
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testInstrumentationRunner &amp;#34;android.support.test.runner.AndroidJUnitRunner&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildTypes {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 生产环境
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;false&amp;#34;) // 配置Log日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://release.cn/&amp;#34;&amp;#34;) // 配置URL前缀
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false // 是否对代码进行混淆
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定混淆的规则文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.release // 设置签名信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false // 是否在APK中生成伪语言环境，帮助国际化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true // 是否对APK包进行ZIP对齐优化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 测试环境
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;true&amp;#34;) //配置Log日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://test.com/&amp;#34;&amp;#34;) // 配置URL前缀
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false //是否对代码进行混淆
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定混淆的规则文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.debug //设置签名信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debuggable false //是否支持断点调试
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniDebuggable false //是否可以调试NDK代码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> renderscriptDebuggable false //是否开启渲染脚本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true //是否对APK包执行ZIP对齐优化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false //是否在APK中生成伪语言环境，帮助国际化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dependencies { //项目的依赖关系
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;) //本地jar包依赖
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; //声明测试用例库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; //远程依赖
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation project(&amp;#39;:library&amp;#39;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-22">
-&lt;summary>其他配置&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">android {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfigs { // 自动化打包配置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> release { // 线上环境
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 开发环境
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyAlias &amp;#39;test&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> keyPassword &amp;#39;123456&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storeFile file(&amp;#39;test.keystore&amp;#39;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceSets { //目录指向配置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] //指定lib库目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> packagingOptions{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当有重复文件时 ,使用第一个匹配的文件打包进apk
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pickFirsts = [&amp;#39;META-INF/LICENSE&amp;#39;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 当出现重复文件时 合并重复的文件打包进apk
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> merge &amp;#39;META-INF/LICENSE&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 同时使用butterknife、dagger2框架处理 （常用）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> exclude &amp;#39;META-INF/services/javax.annotation.processing.Processor&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> productFlavors {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wandoujia { // 豌豆荚渠道包配置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;wandoujia&amp;#34;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> xiaomi {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;xiaomi&amp;#34;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.wiky.gradle.xiaomi&amp;#34; // 配置包名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _360 {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> manifestPlaceholders = [UMENG_CHANNEL_VALUE: &amp;#34;_360&amp;#34;]
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //...
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> lintOptions { // 关闭检查lint（有错误会停止build）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> abortOnError false // 即使报错也不会停止打包
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> checkReleaseBuilds false // 打包release版本的时候进行检测
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
-&lt;/details>
-&lt;ul>
-&lt;li>gradle-wrapper-properties：配置 Gradle Wrapper&lt;/li>
-&lt;li>gradle-properties：配置 Gradle&lt;/li>
-&lt;li>setting.gradle：配置 Gradle 的多项目管理&lt;/li>
-&lt;li>local.properties：存放 Android 项目的私有属性配置，如 SDK 路径&lt;/li>
-&lt;li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类&lt;/li>
-&lt;/ul>
 &lt;h4 id="channel">Channel&lt;/h4>
 &lt;ol>
 &lt;li>
