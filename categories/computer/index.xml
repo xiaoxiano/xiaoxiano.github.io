@@ -1739,7 +1739,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dependencies { //项目的依赖关系
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mark&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>// 本地jar包依赖：在 Project\android 目录下新建 libs 文件夹，粘贴 jar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 👉// 本地jar包依赖：在 Project\android 目录下新建 libs 文件夹，粘贴 jar
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; // 声明测试用例库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; // 远程依赖
