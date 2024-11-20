@@ -43,7 +43,7 @@ nimbus26：又厚！又磨脚！鞋底很软也很泄力，我感觉完全脱离
 &lt;li>一些鹅绒马甲&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>腰包裤（我不穿压缩裤）：马孔多&lt;/li>
+&lt;li>腰包裤（不穿压缩）：马孔多&lt;/li>
 &lt;li>袜子：悍将、feetures、乔丹&lt;/li>
 &lt;li>薄上衣：速干即可&lt;/li>
 &lt;/ul>
@@ -88,15 +88,15 @@ data-flex-basis="360px"
 &lt;/li>
 &lt;li>品牌
 &lt;ul>
-&lt;li>首选线下：捷安特、美利达、喜德盛&lt;/li>
-&lt;li>品控好：千里达、福玛特&lt;/li>
-&lt;li>性价比：邦德富士达、迪卡侬&lt;/li>
-&lt;li>高端：崔克、Specialized&lt;/li>
+&lt;li>首选线下：捷安特、美利达、喜德盛(性价比)&lt;/li>
+&lt;li>品控好：千里达(性价比)、福玛特&lt;/li>
+&lt;li>其它：邦德富士达、迪卡侬&lt;/li>
+&lt;li>高端：崔克、闪电&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>3000以内选购
 &lt;ul>
-&lt;li>美利达公爵600：长途旅行，考虑耐用及维修，虽然传奇500刹车配置更高，公爵300s价低几乎不减配，但综合体验非公爵600莫属&lt;/li>
+&lt;li>美利达公爵600：长途旅行，考虑耐用及维修，综合体验更好（即使传奇500刹车配置更高，公爵300s几乎不减配）&lt;/li>
 &lt;li>千里达 X7Elite&lt;/li>
 &lt;/ul>
 &lt;/li>
@@ -662,7 +662,7 @@ data-flex-basis="479px"
 &lt;li>root&lt;/li>
 &lt;/ol>
 &lt;p>github下载magisk放进手机储存卡（有人建议低版安卓用20.4版本），进入TWRP recovery安装，开机后安装magisk manager app即可。&lt;/p>
-&lt;h1 id="安卓自动化">安卓自动化&lt;/h1>
+&lt;h1 id="自动化">自动化&lt;/h1>
 &lt;h2 id="工具">工具&lt;/h2>
 &lt;p>&lt;strong>识别方式&lt;/strong>
 控件查找：可兼容所有机型，但是不能定位非原生安卓的对象（如 Unity3D 的游戏），或随机变化的控件（如安全键盘）。显然图像识别时必备的&lt;/p>
@@ -677,11 +677,11 @@ data-flex-basis="479px"
 &lt;li>Hamibot：支持打包apk，可以浏览器远程控制&lt;/li>
 &lt;li>AiBote：办公自动化&lt;/li>
 &lt;li>Tasker、MacroDroid：单独app即可简单使用，收费&lt;/li>
-&lt;li>按键精灵：单独app即可简单使用，以坐标为基础容易出现分辨率问题，而且MQ语言我是不会&lt;/li>
 &lt;/ul>
-&lt;h2 id="airtest需用pc">airtest（需用PC）&lt;/h2>
-&lt;p>对于简单任务，推荐使用airtest，支持Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
->官网&lt;/a>&lt;/p>
+&lt;h2 id="airtest使用pc">airtest（使用PC）&lt;/h2>
+&lt;p>对于非专业任务，推荐使用airtest，支持自动化测试Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
+>官网&lt;/a>及&lt;a class="link" href="https://airtest.doc.io.netease.com/summary/summary/" target="_blank" rel="noopener"
+>官方教程&lt;/a>&lt;/p>
 &lt;h3 id="算法">算法&lt;/h3>
 &lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/cGFvU9C7mBpsmnWgDLPW5A" target="_blank" rel="noopener"
 >Airtest算法介绍&lt;/a>&lt;/p>
@@ -774,8 +774,8 @@ data-flex-basis="479px"
 &lt;li>&lt;a class="link" href="https://mp.weixin.qq.com/s/mrx2fndE9t_477yViZrpRA" target="_blank" rel="noopener"
 >文字识别&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 尽量不用，建议尝试Poco控件识别
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 实际使用中，单纯文字识别准确率尚可，数字符号识别不准（使用相应匹配规则也不行，需借助另外专业的库）
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 建议尝试Poco控件识别，小概率识别不准，就会影响程序运行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 实际使用中，单纯文字识别准确率尚可，数字/符号识别不准（使用相应匹配规则也不行，需借助另外专业的库）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import pytesseract
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">from PIL import Image
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -804,7 +804,7 @@ data-flex-basis="479px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x_center=(x1+x2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y_center=(y1+y2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch(x_center,y_center)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker">Tasker&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker使用andriod">Tasker（使用andriod）&lt;/h2>
 &lt;h3 id="基础-1">基础&lt;/h3>
 &lt;style type="text/css">
 .box {
