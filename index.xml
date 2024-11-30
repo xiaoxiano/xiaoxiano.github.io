@@ -2944,6 +2944,8 @@ data-flex-basis="427px"
 &lt;li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类&lt;/li>
 &lt;/ul>
 &lt;h3 id="插件">插件&lt;/h3>
+&lt;p>&lt;a class="link" href="https://juejin.cn/post/7098383560746696718?searchId=20241129193310F29515280AF1035FC168#heading-9" target="_blank" rel="noopener"
+>参考&lt;/a>&lt;/p>
 &lt;p>&lt;strong>简介&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>Android App：APK文件&lt;/li>
@@ -2996,10 +2998,10 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def group=&amp;#39;com.hh.cus_plugin&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def artifactId=&amp;#39;myGradlePlugin&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def artifactId=&amp;#39;myplugin&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def version=&amp;#39;1.0.0&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 指定本地maven的路径，在项目根目录下
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def uploadRepo = new File(System.getProperty(&amp;#34;user.home&amp;#34;) + &amp;#34;/.hhrepo&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 指定本地maven的路径，在插件目录下
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def uploadRepo = &amp;#39;../customplugin&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 打包到本地maven仓库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">uploadArchives {
