@@ -2807,7 +2807,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> google() // 引用google上的开源项目
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jcenter() // 引用 jcenter上的开源项目
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies { //依赖的jar包
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies { // 依赖的jar包
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> classpath &amp;#39;com.android.tools.build:gradle:3.0.0&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
@@ -2830,7 +2830,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 //设置编译时用的Android版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 // 设置编译时用的Android版本
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名
@@ -2856,19 +2856,19 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debug { // 测试环境
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;true&amp;#34;) //配置Log日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;boolean&amp;#34;, &amp;#34;LOG_DEBUG&amp;#34;, &amp;#34;true&amp;#34;) // 配置Log日志
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> buildConfigField(&amp;#34;String&amp;#34;, &amp;#34;URL_PERFIX&amp;#34;, &amp;#34;&amp;#34;https://test.com/&amp;#34;&amp;#34;) // 配置URL前缀
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minifyEnabled false //是否对代码进行混淆
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> //指定混淆的规则文件
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proguardFiles getDefaultProguardFile(&amp;#39;proguard-android.txt&amp;#39;), &amp;#39;proguard-rules.pro&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.debug //设置签名信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debuggable false //是否支持断点调试
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniDebuggable false //是否可以调试NDK代码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> renderscriptDebuggable false //是否开启渲染脚本
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true //是否对APK包执行ZIP对齐优化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false //是否在APK中生成伪语言环境，帮助国际化
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; //在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> signingConfig signingConfigs.debug // 设置签名信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> debuggable false // 是否支持断点调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniDebuggable false // 是否可以调试NDK代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> renderscriptDebuggable false // 是否开启渲染脚本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> zipAlignEnabled true // 是否对APK包执行ZIP对齐优化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pseudoLocalesEnabled false // 是否在APK中生成伪语言环境，帮助国际化
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationIdSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionNameSuffix &amp;#39;test&amp;#39; // 在applicationId 中添加了一个后缀，一般使用的不多
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
@@ -2878,7 +2878,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; // 声明测试用例库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; // 远程依赖
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation project(&amp;#39;:library&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation project(&amp;#39;:library&amp;#39;) // 项目本地的Library模块
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-2">
 &lt;summary>其他配置&lt;/summary>
@@ -2897,9 +2897,9 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> storePassword &amp;#39;123456&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceSets { //目录指向配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sourceSets { // 目录指向配置
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> main {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] //指定lib库目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> jniLibs.srcDirs = [&amp;#39;libs&amp;#39;] // 指定lib库目录
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -2948,7 +2948,7 @@ data-flex-basis="427px"
 >参考&lt;/a>&lt;/p>
 &lt;p>&lt;strong>简介&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>Android App：APK文件&lt;/li>
+&lt;li>Android App：APK文件，新建时选择Empty Views Activity&lt;/li>
 &lt;li>Android Library：ARR文件，在目录结构上与Android App相同，包含构建APP所需的一切。当你需要构建不同的APK时，具有通用的模块（如账户管理），可以将library添加为每个APP模块的依赖项&lt;/li>
 &lt;li>Java or Kotlin Library（插件）：JAR文件，打包可重用的代码&lt;/li>
 &lt;/ul>
@@ -2997,11 +2997,11 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def group=&amp;#39;com.hh.cus_plugin&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def group=&amp;#39;com.group.myplugin&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def artifactId=&amp;#39;myplugin&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def version=&amp;#39;1.0.0&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 指定本地maven的路径，在插件目录下
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def uploadRepo = &amp;#39;../customplugin&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">def uploadRepo = &amp;#39;../myplugin&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 打包到本地maven仓库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">uploadArchives {
@@ -3015,13 +3015,13 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>写插件：实现Plugin接口&lt;/li>
+&lt;li>新建CustomPlugin.groovy文件写插件：实现Plugin接口&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">package com.learn.plugin
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">package com.group.myplugin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import org.gradle.api.Plugin
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import org.gradle.api.Project
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyPlugin implements Plugin&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Project&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class CustomPlugin implements Plugin&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Project&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void apply(Project project) {
