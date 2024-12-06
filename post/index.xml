@@ -2794,9 +2794,9 @@ data-flex-basis="427px"
 &lt;p>构建项目工具是必学内容，也是项目容易报错的部分，所以放在前面。&lt;/p>
 &lt;p>Gradle是Android官方工具，比Maven更灵活高效，它具有高度可定制性，以适应不同的项目。&lt;/p>
 &lt;h2 id="gradle">Gradle&lt;/h2>
-&lt;p>注意不同版本存在差异，指定项目Gradle的版本：File -&amp;gt; Project Structure -&amp;gt; Project&lt;/p>
+&lt;p>注意不同版本的Gradle存在差异，一般情况下使用Android Gradle Plugin (AGP)的版本(保持Android Studio版本和Gradle版本最新)。如果需要更改版本：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>，或者指定项目Gradle的版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
->文档&lt;/a>、示例&lt;code>https://docs.gradle.org/[version]/samples/index.html#java&lt;/code>&lt;/p>
+>文档&lt;/a>、示例：https://docs.gradle.org/[version]/samples/index.html#java&lt;/p>
 &lt;h3 id="基础目录">基础目录&lt;/h3>
 &lt;ul>
 &lt;li>项目 build.gradle：配置项目整体属性，比如指定的代码仓库、依赖&lt;/li>
@@ -2833,7 +2833,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileSdkVersion 34 // 设置编译时用的Android版本
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> applicationId &amp;#34;com.example.myapplication&amp;#34; // 项目的包名（子模块不能指定）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> minSdkVersion 15 // 最低兼容的版本
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> targetSdkVersion 34 // 目标版本
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> versionCode 1 // 版本号
@@ -5059,6 +5059,16 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="plugin">Plugin&lt;/h2>
 &lt;p>Flutter Plugin是可以插入到主程序中，扩展功能的独立组件，我们实现许多原生平台的功能就需要用到。&lt;/p>
+&lt;p>&lt;strong>创建&lt;/strong>&lt;/p>
+&lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。目录如下&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">project
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── android // 原生
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── example // 运行调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── android // 创建插件后用Android Studio运行此目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── ios // 原生
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── lib //
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>依赖：&lt;/strong>
+由于该项目作为 Flutter 插件加载，不能识别Android依赖，在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。缺java本地依赖请回看本文gradle小节。&lt;/p>
 &lt;h3 id="flutter-1">Flutter&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
 width="580"
@@ -5148,11 +5158,6 @@ data-flex-basis="215px"
 &lt;/tbody>
 &lt;/table>
 &lt;h3 id="android">Android&lt;/h3>
-&lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。&lt;/p>
-&lt;h4 id="plugin依赖">plugin依赖&lt;/h4>
-&lt;p>plugin 根目录的 android 由于无需构建，所以缺少一些依赖和文件，打开项目的正确目录是 example/android 。&lt;/p>
-&lt;p>如果是clone的项目缺少依赖：&lt;/p>
-&lt;p>在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。&lt;/p>
 &lt;h4 id="java">Java&lt;/h4>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/10.jpg"
 width="757"
@@ -5309,6 +5314,53 @@ data-flex-basis="622px"
 &lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/content/res/Resources" target="_blank" rel="noopener"
 >Resources&lt;/a>: 用于访问应用程序资源的类。&lt;/p>
 &lt;h2 id="调试">调试&lt;/h2>
+&lt;h3 id="vs-code-debug">VS Code debug&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1Jf4y1S7Bw/?spm%5C_id%5C_from=333.788.videocard.0&amp;amp;vd_source=e3bb7819c2465f903aea3ffaa2d0773b" target="_blank" rel="noopener"
+>参考&lt;/a>&lt;/p>
+&lt;p>&lt;strong>运行前提&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>当前编程语言环境&lt;/li>
+&lt;li>当前编程语言用于调试的扩展，例如Java Extension Pack&lt;/li>
+&lt;li>配置文件launch.json&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>按钮介绍&lt;/strong>&lt;/p>
+&lt;p>！&lt;a class="link" href="toolbar.png" >&lt;/a>&lt;/p>
+&lt;p>继续：跳到下一个断点
+单步跳过：跳过当前语句（调用其他文件夹的所有语句），运行下一行
+单步调试：进入当前函数内，运行下一行
+单步跳出：当debug陷入某个循环时，跳出循环并执行循环外的语句
+重启&lt;/p>
+&lt;p>&lt;strong>配置文件&lt;/strong>
+launch.json是用于调试的配置文件，位于&lt;code>.vscode&lt;/code>文件夹，大多数情况下会自动创建，也可以在左侧边栏&lt;code>Run and Debug&lt;/code>点击&lt;code>create a launch.json file&lt;/code>
+&lt;details class="spoiler " id="spoiler-23">
+&lt;summary>launch.json注释（无需了解）&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> &amp;#34;configurations&amp;#34;: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 正在调试的项目名称（左侧边栏下拉菜单）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;name&amp;#34;: &amp;#34;flutter_project&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 指定调试模式
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // launch模式：支持断点调试
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // attach模式：支持对运行中的程序（多为远程服务器)断点调试，点击Add Configuration，选择Attach to Process
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;request&amp;#34;: &amp;#34;launch&amp;#34;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 编程语言
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#34;type&amp;#34;: &amp;#34;dart&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> },
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ]
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>&lt;/p>
+&lt;p>&lt;strong>断点类型&lt;/strong>&lt;/p>
+&lt;p>在代码行左侧断点出右键看到3种类型：&lt;/p>
+&lt;ul>
+&lt;li>Add Breakpoint：在断点处阻塞程序&lt;/li>
+&lt;li>Add Conditional Breakpoint：在条件为true时断点生效&lt;/li>
+&lt;li>Add Logpoint：程序运行中，以非阻塞的方式，记录调试日志&lt;/li>
+&lt;li>Inline Breakpoint：当一行代码中有多个函数，光标定位在函数前，Run -&amp;gt; New Breakpoint -&amp;gt; Inline Breakpoint，断点在当前函数之前生效，点击单步调试可以进入当前函数&lt;/li>
+&lt;/ul>
+&lt;h3 id="布局调试">布局调试&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1qN4y1M7nR/?spm_id_from=888.80997.embed_other.whitelist&amp;amp;t=48.359897&amp;amp;bvid=BV1qN4y1M7nR&amp;amp;vd_source=e3bb7819c2465f903aea3ffaa2d0773b" target="_blank" rel="noopener"
+>参考&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/8.png"
 width="1988"
 height="1660"
@@ -5389,7 +5441,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 删除证书（指定别名、路径）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">keytool -delete -alias key -keystore ./release.keystore.jks
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-23">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-24">
 &lt;summary>详细参数&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">-genkeypair 生成密钥对（公钥和关联的私钥）。将该证书链和私钥存储在由alias标识的新密钥库条目中
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">-alias 别名，每个keystore都关联这一个独一无二的alias，这个alias通常不区分大小写
