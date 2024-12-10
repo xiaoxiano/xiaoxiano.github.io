@@ -2579,7 +2579,7 @@ data-flex-basis="319px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
 &lt;li>安装指定版本&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install stable
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm install [version]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
 &lt;/ol>
@@ -2701,7 +2701,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;span class="icon-box baseline">
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
-&lt;p>运行上述命令后，项目中创建了一个名为.fvm 的文件夹，文件夹中有 flutter SDK，我们不希望提交此文件夹,所以在.gitignore文件中添加&lt;code>.fvm/flutter_sdk&lt;/code>&lt;/p>
+&lt;p>运行上述命令后，项目中创建了一个名为.fvm 的文件夹，文件夹中有 flutter SDK，如果不希望提交此文件夹，在.gitignore文件中添加&lt;code>.fvm/flutter_sdk&lt;/code>&lt;/p>
 &lt;/div>
 &lt;ol start="7">
 &lt;li>删除某个版本&lt;/li>
@@ -2794,7 +2794,7 @@ data-flex-basis="427px"
 &lt;p>构建项目工具是必学内容，也是项目容易报错的部分，所以放在前面。&lt;/p>
 &lt;p>Gradle是Android官方工具，比Maven更灵活高效，它具有高度可定制性，以适应不同的项目。&lt;/p>
 &lt;h2 id="gradle">Gradle&lt;/h2>
-&lt;p>注意不同版本的Gradle存在差异，一般情况下使用Android Gradle Plugin (AGP)的版本(保持Android Studio版本和Gradle版本最新)。如果需要更改版本：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>，或者指定项目Gradle的版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
+&lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。flutter SDK有它自己对应的gradle版本，落后于AGP。更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>，如果需要更改项目gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
 >文档&lt;/a>、示例：https://docs.gradle.org/[version]/samples/index.html#java&lt;/p>
 &lt;h3 id="基础目录">基础目录&lt;/h3>
