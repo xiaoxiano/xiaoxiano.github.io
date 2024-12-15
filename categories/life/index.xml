@@ -561,8 +561,10 @@ data-flex-basis="409px"
 >&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>有密码的共享，找到用户名和改密码
-&lt;img src="https://xiaoxiano.github.io/p/quest2/15.png"
+&lt;p>有密码的共享（选择有密码保护的共享），找到用户名和改密码&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/15.png"
 width="1280"
 height="359"
 srcset="https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_1024x0_resize_box_3.png 1024w"
@@ -571,38 +573,11 @@ class="gallery-image"
 data-flex-grow="356"
 data-flex-basis="855px"
 >&lt;/p>
-&lt;/li>
-&lt;/ul>
 &lt;ol start="2">
-&lt;li>共享存放影片的文件夹。(如果以后删除共享点击图1的“删除访问”)&lt;/li>
+&lt;li>共享存放影片的文件夹&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/10.jpg"
-width="1260"
-height="740"
-srcset="https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="170"
-data-flex-basis="408px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/11.jpg"
-width="790"
-height="594"
-srcset="https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="319px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/12.jpg"
-width="788"
-height="592"
-srcset="https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="319px"
->&lt;/p>
+&lt;p>右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 选择用户或新建用户&lt;code>everyone&lt;/code>&lt;/p>
+&lt;p>删除共享：右键文件夹 -&amp;gt; 授予访问权限 -&amp;gt; 删除访问&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>

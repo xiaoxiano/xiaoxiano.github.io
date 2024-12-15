@@ -2486,8 +2486,10 @@ data-flex-basis="409px"
 >&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>有密码的共享，找到用户名和改密码
-&lt;img src="https://xiaoxiano.github.io/p/quest2/15.png"
+&lt;p>有密码的共享（选择有密码保护的共享），找到用户名和改密码&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/15.png"
 width="1280"
 height="359"
 srcset="https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/quest2/15_hue9c2a1128c93d6d96a247fef2d62c3f6_158850_1024x0_resize_box_3.png 1024w"
@@ -2496,38 +2498,11 @@ class="gallery-image"
 data-flex-grow="356"
 data-flex-basis="855px"
 >&lt;/p>
-&lt;/li>
-&lt;/ul>
 &lt;ol start="2">
-&lt;li>共享存放影片的文件夹。(如果以后删除共享点击图1的“删除访问”)&lt;/li>
+&lt;li>共享存放影片的文件夹&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/10.jpg"
-width="1260"
-height="740"
-srcset="https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/10_hu11a64eb9b07c120b476d52fb96549d0a_295934_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="170"
-data-flex-basis="408px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/11.jpg"
-width="790"
-height="594"
-srcset="https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/11_hu8ca54fd52756d9c34f9c7d786d6a94e7_87368_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="319px"
->&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/12.jpg"
-width="788"
-height="592"
-srcset="https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/quest2/12_huc6e504a639f1a5897b4522affb660796_93482_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="319px"
->&lt;/p>
+&lt;p>右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 选择用户或新建用户&lt;code>everyone&lt;/code>&lt;/p>
+&lt;p>删除共享：右键文件夹 -&amp;gt; 授予访问权限 -&amp;gt; 删除访问&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>
@@ -2558,14 +2533,14 @@ data-flex-basis="319px"
 &lt;h2 id="android-studio">Android Studio&lt;/h2>
 &lt;p>&lt;strong>安装配置Android Studio&lt;/strong>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.android.com/studio" target="_blank" rel="noopener"
->下载地址&lt;/a>
-&lt;strong>Android SDK Tools:&lt;/strong>&lt;/p>
+>下载地址&lt;/a>&lt;/p>
+&lt;p>&lt;strong>Android SDK Tools:&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\sdk\tools&lt;/code>&lt;/li>
+&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\Sdk\tools&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>Android SDK Platform-Tools:&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\sdk\platform-tools&lt;/code>&lt;/li>
+&lt;li>path:&lt;code>C:\Users\[username]\AppData\Local\Android\Sdk\platform-tools&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="flutter版本控制fvm">flutter版本控制（fvm）&lt;/h2>
 &lt;ol>
@@ -2604,7 +2579,7 @@ data-flex-basis="319px"
 &lt;/ol>
 &lt;ul>
 &lt;li>全局切换：&lt;code>fvm global [version]&lt;/code>&lt;/li>
-&lt;li>项目中切换：项目终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
+&lt;li>项目中切换（每次都要）：项目目录下，终端运行&lt;code>fvm use [version]&lt;/code>，重启vscode&lt;/li>
 &lt;/ul>
 &lt;style type="text/css">
 .box {
@@ -2794,7 +2769,9 @@ data-flex-basis="427px"
 &lt;p>构建项目工具是必学内容，也是项目容易报错的部分，所以放在前面。&lt;/p>
 &lt;p>Gradle是Android官方工具，比Maven更灵活高效，它具有高度可定制性，以适应不同的项目。&lt;/p>
 &lt;h2 id="gradle">Gradle&lt;/h2>
-&lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。flutter SDK有它自己对应的gradle版本，落后于AGP。更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>，如果需要更改项目gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
+&lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。AGP会更新默认gradle版本，flutter SDK也有它自己对应的gradle版本，新项目务必检查gradle版本。&lt;/p>
+&lt;p>更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>
+更改项目gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
 >文档&lt;/a>、示例：https://docs.gradle.org/[version]/samples/index.html#java&lt;/p>
 &lt;h3 id="基础目录">基础目录&lt;/h3>
@@ -5058,7 +5035,7 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="plugin">Plugin&lt;/h2>
-&lt;p>Flutter Plugin是可以插入到主程序中，扩展功能的独立组件，我们实现许多原生平台的功能就需要用到。&lt;/p>
+&lt;p>Flutter Plugin是可以插入到主程序中，扩展功能的独立组件，我们实现原生平台的功能就需要用到。&lt;/p>
 &lt;p>&lt;strong>创建&lt;/strong>&lt;/p>
 &lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。目录如下&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">project
@@ -5324,14 +5301,22 @@ data-flex-basis="622px"
 &lt;li>配置文件launch.json&lt;/li>
 &lt;/ul>
 &lt;p>&lt;strong>按钮介绍&lt;/strong>&lt;/p>
-&lt;p>！&lt;a class="link" href="toolbar.png" >&lt;/a>&lt;/p>
-&lt;p>继续：跳到下一个断点
-单步跳过：跳过当前语句（调用其他文件夹的所有语句），运行下一行
-单步调试：进入当前函数内，运行下一行
-单步跳出：当debug陷入某个循环时，跳出循环并执行循环外的语句
-重启&lt;/p>
-&lt;p>&lt;strong>配置文件&lt;/strong>
-launch.json是用于调试的配置文件，位于&lt;code>.vscode&lt;/code>文件夹，大多数情况下会自动创建，也可以在左侧边栏&lt;code>Run and Debug&lt;/code>点击&lt;code>create a launch.json file&lt;/code>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/toolbar.png"
+width="216"
+height="32"
+srcset="https://xiaoxiano.github.io/p/flutter/toolbar_hu7580616d3674f764d0b734204110ef29_439_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/toolbar_hu7580616d3674f764d0b734204110ef29_439_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="675"
+data-flex-basis="1620px"
+>&lt;/p>
+&lt;p>继续：跳到下一个断点&lt;/p>
+&lt;p>单步跳过：跳过当前语句（调用其他文件夹的所有语句），运行下一行&lt;/p>
+&lt;p>单步调试：进入当前函数内，运行下一行&lt;/p>
+&lt;p>单步跳出：当debug陷入某个循环时，跳出循环并执行循环外的语句&lt;/p>
+&lt;p>重启&lt;/p>
+&lt;p>&lt;strong>配置文件&lt;/strong>&lt;/p>
+&lt;p>launch.json是用于调试的配置文件，位于&lt;code>.vscode&lt;/code>文件夹，大多数情况下会自动创建，也可以在左侧边栏&lt;code>Run and Debug&lt;/code>点击&lt;code>create a launch.json file&lt;/code>
 &lt;details class="spoiler " id="spoiler-23">
 &lt;summary>launch.json注释（无需了解）&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> &amp;#34;configurations&amp;#34;: [
