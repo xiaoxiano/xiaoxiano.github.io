@@ -2783,7 +2783,7 @@ data-flex-basis="427px"
 &lt;p>Gradle是Android官方工具，比Maven更灵活高效，它具有高度可定制性，以适应不同的项目。&lt;/p>
 &lt;h2 id="gradle">Gradle&lt;/h2>
 &lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。AGP会更新默认gradle版本，flutter SDK也有它自己对应的gradle版本，新项目务必检查gradle版本。clone的java项目&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
->下载相应gradle&lt;/a>到项目目录，在&lt;code>Settings -&amp;gt; Build Tools -&amp;gt; Distribution:Local installation&lt;/code>使用&lt;/p>
+>下载相应gradle&lt;/a>到项目目录，在&lt;code>Settings -&amp;gt; Build Tools -&amp;gt; Distribution:Local installation&lt;/code>使用。&lt;/p>
 &lt;p>更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>&lt;/p>
 &lt;p>更改项目gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
