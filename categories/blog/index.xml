@@ -374,7 +374,7 @@ Hello there, and have a nice day
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh push.sh即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
 &lt;p>在~/myblog/config.yaml修改baseurl: &lt;code>https://username.github.io&lt;/code>&lt;/p>
-&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: www.example.com&lt;/code>&lt;/p>
+&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: https://example.com&lt;/code>&lt;/p>
 &lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p></description></item></channel></rss>

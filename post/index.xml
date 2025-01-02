@@ -2785,7 +2785,7 @@ data-flex-basis="427px"
 &lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。AGP会更新默认gradle版本，flutter SDK也有它自己对应的gradle版本，新项目务必检查gradle版本。clone的java项目&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
 >下载相应gradle&lt;/a>到项目目录，在&lt;code>Settings -&amp;gt; Build Tools -&amp;gt; Distribution:Local installation&lt;/code>使用。&lt;/p>
 &lt;p>更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>&lt;/p>
-&lt;p>更改项目gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project&lt;/code>&lt;/p>
+&lt;p>更改项目/模块gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project/Modules&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
 >文档&lt;/a>、示例：https://docs.gradle.org/[version]/samples/index.html#java&lt;/p>
 &lt;h3 id="基础目录">基础目录&lt;/h3>
@@ -5203,7 +5203,6 @@ data-flex-basis="622px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>java与dart相似，不多学习也容易读懂，而 android 有很多内容，由于篇幅过大，且已有很多教程，只摘录了四大组件的简介，不再详写。&lt;/p>
 &lt;h4 id="android四大组件">android四大组件&lt;/h4>
 &lt;p>1、activity
 （1）一个Activity通常就是一个单独的屏幕（窗口）。&lt;/p>
@@ -5291,7 +5290,17 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>向dart发送消息：&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> callback) //dart回复
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常用-api">常用 API：&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="xml视图">XML视图&lt;/h4>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/layout-editor.png"
+width="3788"
+height="2182"
+srcset="https://xiaoxiano.github.io/p/flutter/layout-editor_hu7509936c93e21b6fdf351cf9effaac61_485398_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/layout-editor_hu7509936c93e21b6fdf351cf9effaac61_485398_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="173"
+data-flex-basis="416px"
+>&lt;/p>
+&lt;h3 id="常用-api">常用 API：&lt;/h3>
 &lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/FlutterPlugin.FlutterPluginBinding.html" target="_blank" rel="noopener"
 >FlutterPluginBinding&lt;/a>: 向所有 FlutterEngine 注册的插件提供可用的资源。&lt;/p>
 &lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityPluginBinding.html" target="_blank" rel="noopener"
@@ -8151,7 +8160,7 @@ Hello there, and have a nice day
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh push.sh即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
 &lt;p>在~/myblog/config.yaml修改baseurl: &lt;code>https://username.github.io&lt;/code>&lt;/p>
-&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: www.example.com&lt;/code>&lt;/p>
+&lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: https://example.com&lt;/code>&lt;/p>
 &lt;p>执行sh push.sh即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p></description></item></channel></rss>
