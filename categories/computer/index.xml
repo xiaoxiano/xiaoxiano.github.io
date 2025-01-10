@@ -1684,7 +1684,7 @@ data-flex-basis="427px"
 &lt;p>更改项目/模块gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project/Modules&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
 >文档&lt;/a>、示例：https://docs.gradle.org/[version]/samples/index.html#java&lt;/p>
-&lt;h3 id="基础目录">基础目录&lt;/h3>
+&lt;h3 id="基础">基础&lt;/h3>
 &lt;ul>
 &lt;li>项目 build.gradle：配置项目整体属性，比如指定的代码仓库、依赖&lt;/li>
 &lt;/ul>
@@ -1761,7 +1761,7 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">dependencies { //项目的依赖关系
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 👉// 本地jar包依赖：在 Project\android 目录下新建 libs 文件夹，粘贴 jar
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> 👉// 本地jar包依赖：新建 Project\app\libs 文件夹，粘贴 jar
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation fileTree(include: [&amp;#39;*.jar&amp;#39;], dir: &amp;#39;libs&amp;#39;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> testImplementation &amp;#39;junit:junit:4.12&amp;#39; // 声明测试用例库
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> implementation &amp;#39;com.android.support:appcompat-v7:26.1.0&amp;#39; // 远程依赖
@@ -1830,22 +1830,37 @@ data-flex-basis="427px"
 &lt;li>local.properties：存放 Android 项目的私有属性配置，如 SDK 路径&lt;/li>
 &lt;li>multiDexKeep.pro、proguard-rules.pro：可选的混淆文件，用于配置放置在主 Dex 的类、声明避免混淆的类&lt;/li>
 &lt;/ul>
-&lt;h3 id="插件">插件&lt;/h3>
+&lt;h3 id="java插件">java插件&lt;/h3>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/7098383560746696718?searchId=20241129193310F29515280AF1035FC168#heading-9" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
 &lt;p>&lt;strong>简介&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>Android App：APK文件，新建时选择Empty Views Activity&lt;/li>
 &lt;li>Android Library：ARR文件，在目录结构上与Android App相同，包含构建APP所需的一切。当你需要构建不同的APK时，具有通用的模块（如账户管理），可以将library添加为每个APP模块的依赖项&lt;/li>
-&lt;li>Java or Kotlin Library（插件）：JAR文件，打包可重用的代码&lt;/li>
+&lt;li>Java or Kotlin Library（插件）：JAR文件，打包可重用的代码，不含资源文件，如res中的图片&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>自定义插件三种方式&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>使用&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>生成jar\arr&lt;/li>
+&lt;/ol>
+&lt;p>Android Studio 打开右侧的 Gradle，选择需要打包的module —&amp;gt; Tasks —&amp;gt; build, 双击 assemble&lt;/p>
+&lt;ol start="2">
+&lt;li>
+&lt;p>生成jar\arr到Project\build\library\libs或outputs\aar，移到Project\app\libs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在模块gradle添加&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.aar&amp;#39;])
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">implementation fileTree(dir: &amp;#39;libs&amp;#39;, include: [&amp;#39;*.jar&amp;#39;])
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>自定义插件的三种方式&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>build script：在&lt;code>build.gradle&lt;/code>脚本中直接编写，只能在本文件内使用&lt;/li>
 &lt;li>buildSrc项目：新建一个名为&lt;code>buildSrc&lt;/code>的Module，Gradle会自动编译和测试，只能在本项目中使用&lt;/li>
 &lt;li>独立项目：在独立的项目中编写插件，发布到本地或者远程jcenter、maven仓库供其他项目使用&lt;/li>
 &lt;/ul>
-&lt;p>&lt;strong>我们常用的是独立项目打包为jar：&lt;/strong>&lt;/p>
+&lt;p>独立项目打包jar到maven：&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>在项目中新建File -&amp;gt; New -&amp;gt; New Module -&amp;gt; Java or Kotlin Library&lt;/p>
@@ -5212,9 +5227,12 @@ data-flex-basis="236px"
 >导入功能&lt;/a>，写fork仓库的地址，并创建私有仓库&lt;/li>
 &lt;li>本地操作&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #克隆到本地
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git #添加上游(源)仓库用于更新
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote set-url --push upstream DISABLE #禁用推送到上游(源)仓库
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git clone git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_username&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">your_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git # 克隆到本地
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add upstream git@github.com:&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_owner&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>/&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">original_repo&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>.git # 添加上游(源)仓库用于更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote set-url --push upstream DISABLE # 禁用推送到上游(源)仓库
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果上游(源)仓库有更新&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git fetch upstream # 获取主分支的最新修改到本地
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git merge upstream/master # 将upstream分支修改内容合并到本地master
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>&lt;code>git remote -v&lt;/code>可以看到：&lt;/li>
 &lt;/ol>
