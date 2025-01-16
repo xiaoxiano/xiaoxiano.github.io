@@ -4312,6 +4312,8 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--收发短信--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.RECEIVE_SMS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SEND_SMS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--悬浮窗--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_ALERT_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://www.ecjson.com/android/" target="_blank" rel="noopener"
 >权限大全&lt;/a>&lt;/p>
 &lt;p>&lt;strong>存储权限&lt;/strong>&lt;/p>
