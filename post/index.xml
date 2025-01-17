@@ -5310,8 +5310,8 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void onCancel(Object o);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>向dart发送消息：&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-xml" data-lang="xml">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="nt">&amp;lt;T&amp;gt;&lt;/span> callback) //dart回复
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> callback) //dart回复
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="androidmanifestxml">AndroidManifest.xml&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -5324,7 +5324,7 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 权限设置 ---&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.INTERNET&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span> &lt;span class="c">&amp;lt;!---访问网络&amp;gt;
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;uses-permission android:name=&amp;#34;android.permission.ACCESS_NETWORK_STATE&amp;#34;/&amp;gt; &amp;lt;!---网络连接是否有效&amp;gt;
-&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;uses-permission android:name=&amp;#34;android.permission.WRITE_EXTERNAL_STORAGE&amp;#34;/&amp;gt; &amp;lt;!--允许app写外部存储器&amp;gt;
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;uses-permission android:name=&amp;#34;android.permission.WRITE_EXTERNAL_STORAGE&amp;#34;/&amp;gt; &amp;lt;!--读写外部存储器&amp;gt;
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;application
 &lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c"> &amp;lt;!---参考：https://juejin.cn/post/7006296858494500877--&amp;gt;&lt;/span>
@@ -5370,7 +5370,8 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">application&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">manifest&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>常用权限&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>常用权限（&lt;a class="link" href="https://www.ecjson.com/android/" target="_blank" rel="noopener"
+>查看权限大全&lt;/a>）&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--网络--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.INTERNET&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.ACCESS_NETWORK_STATE&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
@@ -5416,11 +5417,10 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--收发短信--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.RECEIVE_SMS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SEND_SMS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--悬浮窗--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--悬浮窗、在其他应用上显示--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_ALERT_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;a class="link" href="https://www.ecjson.com/android/" target="_blank" rel="noopener"
->权限大全&lt;/a>&lt;/p>
-&lt;p>&lt;strong>存储权限&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_OVERLAY_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>存储权限&lt;/strong>&lt;/p>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/7306815404562137128?from=search-suggest#heading-6" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/11.png"
