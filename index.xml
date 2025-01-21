@@ -5225,6 +5225,80 @@ data-flex-basis="622px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;h4 id="进程和线程">进程和线程&lt;/h4>
+&lt;p>&lt;strong>进程&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Android系统会为每个应用程序创建一个进程&lt;/li>
+&lt;li>如果该应用程序的进程已经存在（已有组件已经在运行），那么刚启动的组件会在已有的进程和线程中启动运行&lt;/li>
+&lt;li>组件可以运行在指定的其他线程，在AndroidManifest文件中的每种组件标签都支持设置 android:process 属性&lt;/li>
+&lt;li>系统会依据进程的“importance hierarchy”等级清除进程，这是为了回收系统资源和新建进程&lt;/li>
+&lt;li>Binder/Socket用于进程间通信&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>线程&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>系统会为应用程序创建一个名为“main”的主线程，不会为每个组件的实例创建单独的线程&lt;/li>
+&lt;li>通常实现Runnable接口来定义线程的执行逻辑，然后将其传递给Thread类来启动线程&lt;/li>
+&lt;li>Handler用于同进程的线程间通信，子线程运行并生成Message，Looper获取message并传递给Handler，Handler逐个获取子线程中的Message&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>概念&lt;/th>
+&lt;th>定义&lt;/th>
+&lt;th>作用&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>主线程 (UI线程、Main Thread)&lt;/td>
+&lt;td>当应用程序启动时，会自动开启1条主线程&lt;/td>
+&lt;td>处理与UI相关的事件(如更新、操作等)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>子线程 (工作线程)&lt;/td>
+&lt;td>人为手动开启的线程&lt;/td>
+&lt;td>执行耗时操作(如网络请求、数据加载等)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>消息 (Message)&lt;/td>
+&lt;td>线程间通讯的数据单元 (即Handler接受&amp;amp;处理的消息对象)&lt;/td>
+&lt;td>存储需操作的通信信息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>消息队列 (Message Queue)&lt;/td>
+&lt;td>一种数据结构(存储特点：先进先出)&lt;/td>
+&lt;td>存储Handler发送过来的消息(Message)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>处理者 (Handler)&lt;/td>
+&lt;td>主线程与子线程的通信媒介线程消息的主要处理者&lt;/td>
+&lt;td>* 添加消息(Message)到消息队列(Message Queue) &lt;br />*处理循环器(Looper)分派过来的消息(Message)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>循环器 (Looper)&lt;/td>
+&lt;td>消息队列(Message Queue)与处理者(Handler)的通信媒介 &lt;br />每个线程中只能拥有1个Looper，多个线程可往1个Looper所持有的MessageQueue 中发送消息，提供了线程间通信的可能&lt;/td>
+&lt;td>* 消息获取：循环取出消息队列(Message Queue)的消息(Message) &lt;br />* 消息分发：将取出的消息(Message)发送给对应的处理者(Handler)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>View.post()&lt;/td>
+&lt;td>View类中的方法，适用于任何View对象&lt;/td>
+&lt;td>* 将Runnable对象添加到View的事件队列中 &lt;br />* 获取View的宽高等属性值&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ThreadLocal&lt;/td>
+&lt;td>提供线程本地变量&lt;/td>
+&lt;td>ThreadLocal为每一个线程开辟了一个独立的存储器，只有对应的线程才能够访问其数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>runOnUiThread()&lt;/td>
+&lt;td>Activity类中的方法，仅适用于Activity&lt;/td>
+&lt;td>将Runnable对象添加到Activity的事件队列中，确保其在UI线程中执行&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>参考：&lt;a class="link" href="https://blog.csdn.net/qq_32907491/article/details/132645806" target="_blank" rel="noopener"
+>Handler&lt;/a>、&lt;a class="link" href="https://www.cnblogs.com/andy-songwei/category/1609976.html" target="_blank" rel="noopener"
+>Android多线程&lt;/a>&lt;/p>
 &lt;h4 id="android四大组件">android四大组件&lt;/h4>
 &lt;p>1、activity
 （1）一个Activity通常就是一个单独的屏幕（窗口）。&lt;/p>
