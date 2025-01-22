@@ -4188,7 +4188,7 @@ data-flex-basis="622px"
 &lt;tr>
 &lt;td>runOnUiThread()&lt;/td>
 &lt;td>Activity类中的方法，仅适用于Activity&lt;/td>
-&lt;td>将Runnable对象添加到Activity的事件队列中，确保其在UI线程中执行&lt;/td>
+&lt;td>将Runnable对象添加到Activity的事件队列中，可以确保其在当前主线程中执行&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
