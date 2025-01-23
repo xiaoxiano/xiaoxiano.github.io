@@ -5524,6 +5524,74 @@ class="gallery-image"
 data-flex-grow="173"
 data-flex-basis="416px"
 >&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/12.png"
+width="980"
+height="1881"
+srcset="https://xiaoxiano.github.io/p/flutter/12_hue237523be3f464234383965a561bdf14_119818_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/12_hue237523be3f464234383965a561bdf14_119818_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="52"
+data-flex-basis="125px"
+>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>gravity属性值&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>top&lt;/td>
+&lt;td>不改变控件大小，对齐到容器顶部&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bottom&lt;/td>
+&lt;td>不改变控件大小，对齐到容器底部&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>left&lt;/td>
+&lt;td>不改变控件大小，对齐到容器左侧&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>right&lt;/td>
+&lt;td>不改变控件大小，对齐到容器右侧&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>center_vertical&lt;/td>
+&lt;td>不改变控件大小，对齐到容器纵向中央位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>center_horizontal&lt;/td>
+&lt;td>不改变控件大小，对齐到容器横向中央位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>center&lt;/td>
+&lt;td>不改变控件大小，对齐到容器中央位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fill_vertical&lt;/td>
+&lt;td>若有可能，纵向拉伸以填满容器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fill_horizontal&lt;/td>
+&lt;td>若有可能，横向拉伸以填满容器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>fill&lt;/td>
+&lt;td>若有可能，纵向横向同时拉伸填满容器&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/13.png"
+width="1220"
+height="950"
+srcset="https://xiaoxiano.github.io/p/flutter/13_hu92ff4c80d80fef0ba3551a77eba7b327_183074_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/13_hu92ff4c80d80fef0ba3551a77eba7b327_183074_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="128"
+data-flex-basis="308px"
+>&lt;/p>
 &lt;h3 id="常用-api">常用 API：&lt;/h3>
 &lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/FlutterPlugin.FlutterPluginBinding.html" target="_blank" rel="noopener"
 >FlutterPluginBinding&lt;/a>: 向所有 FlutterEngine 注册的插件提供可用的资源。&lt;/p>
