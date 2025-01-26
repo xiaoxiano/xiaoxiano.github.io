@@ -5385,6 +5385,16 @@ data-flex-basis="622px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>&lt;/body>&lt;/html>
+&lt;p>&lt;strong>Activity生命周期&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/14.png"
+width="1030"
+height="1250"
+srcset="https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="82"
+data-flex-basis="197px"
+>&lt;/p>
 &lt;p>&lt;strong>Activity的启动&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onCreate&lt;/strong>方法，将资源 ID &lt;code>R.layout.main_activity&lt;/code> 更改为 &lt;code>setContentView()&lt;/code>&lt;/li>
