@@ -4203,76 +4203,75 @@ data-flex-basis="622px"
 &lt;thead>
 &lt;tr>&lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">类别&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">方法&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">描述&lt;/font>&lt;/font>&lt;/th>&lt;/tr>
 &lt;/thead>
-&lt;pre>&lt;code> &amp;lt;tbody&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td rowspan=&amp;quot;2&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;创建&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;构造函数&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;构造函数有两种形式，一种是在通过代码创建视图时调用的，另一种是在通过布局文件填充视图时调用的。第二种形式解析并应用布局文件中定义的属性。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onFinishInflate()&amp;quot;&amp;gt;onFinishInflate()&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;在视图及其所有子视图都从 XML 中映射后调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td rowspan=&amp;quot;3&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;布局&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onMeasure(int,%20int)&amp;quot;&amp;gt;onMeasure(&amp;lt;wbr&amp;gt;int,&amp;lt;wbr&amp;gt; int)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;调用来确定此视图及其所有子视图的尺寸要求。
-&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onLayout(boolean,%20int,%20int,%20int,%20int)&amp;quot;&amp;gt;onLayout(&amp;lt;wbr&amp;gt;boolean,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; int)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当此视图必须为其所有子视图分配大小和位置时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onSizeChanged(int,%20int,%20int,%20int)&amp;quot;&amp;gt;onSizeChanged(&amp;lt;wbr&amp;gt;int,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; int)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当此视图的大小改变时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;绘画&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onDraw(android.graphics.Canvas)&amp;quot;&amp;gt;onDraw(&amp;lt;wbr&amp;gt;Canvas)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当视图必须呈现其内容时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td rowspan=&amp;quot;4&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;事件处理&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onKeyDown(int,%20android.view.KeyEvent)&amp;quot;&amp;gt;onKeyDown(&amp;lt;wbr&amp;gt;int,&amp;lt;wbr&amp;gt; KeyEvent)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当发生按键事件时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onKeyUp(int,%20android.view.KeyEvent)&amp;quot;&amp;gt;onKeyUp(&amp;lt;wbr&amp;gt;int,&amp;lt;wbr&amp;gt; KeyEvent)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当发生按键释放事件时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onTrackballEvent(android.view.MotionEvent)&amp;quot;&amp;gt;onTrackballEvent(&amp;lt;wbr&amp;gt;MotionEvent)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当轨迹球运动事件发生时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onTouchEvent(android.view.MotionEvent)&amp;quot;&amp;gt;onTouchEvent(&amp;lt;wbr&amp;gt;MotionEvent)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当发生触摸屏运动事件时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td rowspan=&amp;quot;2&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;焦点&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onFocusChanged(boolean,%20int,%20android.graphics.Rect)&amp;quot;&amp;gt;onFocusChanged(&amp;lt;wbr&amp;gt;boolean,&amp;lt;wbr&amp;gt; int,&amp;lt;wbr&amp;gt; Rect)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当视图获得或失去焦点时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onWindowFocusChanged(boolean)&amp;quot;&amp;gt;onWindowFocusChanged(&amp;lt;wbr&amp;gt;boolean)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当包含视图的窗口获得或失去焦点时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td rowspan=&amp;quot;3&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;附加&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onAttachedToWindow()&amp;quot;&amp;gt;onAttachedToWindow()&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当视图附加到窗口时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onDetachedFromWindow()&amp;quot;&amp;gt;onDetachedFromWindow()&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当视图与其窗口分离时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;tr&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;code translate=&amp;quot;no&amp;quot; dir=&amp;quot;ltr&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;file:///C:/reference/android/view/View#onWindowVisibilityChanged(int)&amp;quot;&amp;gt;onWindowVisibilityChanged(&amp;lt;wbr&amp;gt;int)&amp;lt;/a&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;td&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;vertical-align: inherit;&amp;quot;&amp;gt;当包含视图的窗口的可见性发生改变时调用。&amp;lt;/font&amp;gt;&amp;lt;/font&amp;gt;&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/tbody&amp;gt;
-&lt;/code>&lt;/pre>
+&lt;tbody>
+&lt;tr>
+&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">创建&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数有两种形式，一种是在通过代码创建视图时调用的，另一种是在通过布局文件填充视图时调用的。第二种形式解析并应用布局文件中定义的属性。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFinishInflate()">onFinishInflate()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">在视图及其所有子视图都从 XML 中映射后调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">布局&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onMeasure(int,%20int)">onMeasure(&lt;wbr>int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">调用来确定此视图及其所有子视图的尺寸要求。
+&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onLayout(boolean,%20int,%20int,%20int,%20int)">onLayout(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图必须为其所有子视图分配大小和位置时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onSizeChanged(int,%20int,%20int,%20int)">onSizeChanged(&lt;wbr>int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图的大小改变时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">绘画&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDraw(android.graphics.Canvas)">onDraw(&lt;wbr>Canvas)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图必须呈现其内容时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="4">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">事件处理&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyDown(int,%20android.view.KeyEvent)">onKeyDown(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyUp(int,%20android.view.KeyEvent)">onKeyUp(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键释放事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTrackballEvent(android.view.MotionEvent)">onTrackballEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当轨迹球运动事件发生时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTouchEvent(android.view.MotionEvent)">onTouchEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生触摸屏运动事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">焦点&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFocusChanged(boolean,%20int,%20android.graphics.Rect)">onFocusChanged(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> Rect)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowFocusChanged(boolean)">onWindowFocusChanged(&lt;wbr>boolean)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">附加&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onAttachedToWindow()">onAttachedToWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图附加到窗口时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDetachedFromWindow()">onDetachedFromWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图与其窗口分离时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowVisibilityChanged(int)">onWindowVisibilityChanged(&lt;wbr>int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口的可见性发生改变时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
 &lt;/table>&lt;/body>&lt;/html>
 &lt;p>&lt;strong>Activity的启动&lt;/strong>&lt;/p>
 &lt;ol>
@@ -4499,7 +4498,7 @@ data-flex-basis="622px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--悬浮窗、在其他应用上显示--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_ALERT_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_OVERLAY_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>存储权限&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>存储权限&lt;/strong>（Android 10 版本引入了分区存储机制）&lt;/p>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/7306815404562137128?from=search-suggest#heading-6" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/11.png"
@@ -4521,6 +4520,7 @@ class="gallery-image"
 data-flex-grow="173"
 data-flex-basis="416px"
 >&lt;/p>
+&lt;p>&lt;strong>常见属性&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/12.png"
 width="980"
 height="1881"
@@ -4580,6 +4580,7 @@ data-flex-basis="125px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>&lt;strong>特殊属性&lt;/strong>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/13.png"
 width="1220"
 height="950"
