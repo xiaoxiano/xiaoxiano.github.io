@@ -4344,10 +4344,11 @@ data-flex-basis="197px"
 &lt;p>三种Channel 的构造十分相似：&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">BasicMessageChannel(BinaryMessenger messenger,String name,MessageCodec&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> codec)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 传递字符串、JSON
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">BasicMessageChannel(BinaryMessenger messenger,String name,MessageCodec&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> codec)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 方法调用
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MethodChannel(BinaryMessenger messenger,String name,MethodCodec codec)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 事件流监听，包括用户事件监听，电量变化，网络连接变化，陀螺仪，传感器等
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EventChannel(BinaryMessenger messenger,String name,MethodCodec codec)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>BinaryMessenger messenger&lt;/code> 消息的发送与接收的工具；&lt;/li>
