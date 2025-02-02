@@ -2538,7 +2538,14 @@ data-flex-basis="855px"
 &lt;li>&lt;code>java -version&lt;/code>&lt;/li>
 &lt;li>&lt;code>jvms.exe remove [version]&lt;/code>删除某个版本&lt;/li>
 &lt;/ol>
-&lt;h2 id="android-studio">Android Studio&lt;/h2>
+&lt;p>&lt;strong>更多命令&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 创建新项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fvm flutter create
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 更新项目依赖
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fvm flutter pub get
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 清除缓存
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fvm flutter clean
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="android-studio">Android Studio&lt;/h2>
 &lt;p>&lt;strong>安装配置Android Studio&lt;/strong>&lt;/p>
 &lt;p>&lt;a class="link" href="https://developer.android.com/studio" target="_blank" rel="noopener"
 >下载地址&lt;/a>&lt;/p>
@@ -3844,12 +3851,14 @@ Isolate
 Future
 &lt;/div>
 &lt;p>&lt;strong>定义&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myVoidFuture() {} // 不返回任何内容，但可以在最终完成时通知调用者。
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>是一种类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myVoidFuture() {} // 不返回任何内容，但可以在最终完成时通知调用者。
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">bool&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> myTypedFuture() {} // 如果需要返回一个值，那么你传递给它一个类型。
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有三种状态：&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Future 有两种状态：&lt;/p>
 &lt;ul>
-&lt;li>Uncompleted: 你刚刚得到一个 Future，还未打开 &lt;br>
-首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，此时 Future 未能完成，事件循环继续执行其他事件。
+&lt;li>未完成(Uncompleted): 你刚刚得到一个 Future，还未打开 &lt;br>
+首先，事件发生，事件循环获取事件，并调用你写的处理程序，得到一个返回的 Future，此时Future是关着的，此时 Future 未能完成，事件循环继续执行其他事件。&lt;/li>
+&lt;li>已完成
 &lt;ul>
 &lt;li>Completed with a value: 打开了，带有一个值 &lt;br>
 等到数据抵达时，Future 得到数据并打开它，如果Future 完成并带有一个值，此时会触发你的 &lt;code>then&lt;/code> 回调。&lt;code>then&lt;/code> 是你可以用来在每个 Future 上注册回调的实例方法，你可以用它创建一个函数，传入一个匹配 Future 类型的参数。&lt;/li>
@@ -3899,7 +3908,7 @@ Streams
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 async await
 &lt;/div>
-async 和 await 实际上只是 future 和 streams 的替代语法，可以帮助你编写更清晰、更易读的代码。在连续的Future中，每一处Future都需要定义、then、return，而await只需如下写：&lt;/p>
+async 和 await 实际上只是 future 和 streams 的替代语法，在连续的Future中，每一处Future都需要定义、then、return，而且所有内容添加到then下不易阅读，而await只需如下写：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:io&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
@@ -5470,7 +5479,7 @@ data-flex-basis="197px"
 &lt;li>&lt;code>BinaryCodec&lt;/code> 最为简单的一种Codec,因为其返回值类型和入参的类型相同，均为二进制格式(Android中为ByteBuffer,.iS中为NSData)。实际上，BinaryCodec在编解码过程中什么都没做，只是原封不动将二进制数据消息返回而已。或许你会因此觉得BinaryCodec没有意义，但是在某些情况下它非常有用，比如使用BinaryCodec可以使传递内存数据块时在编解码阶段免于内存拷贝；&lt;/li>
 &lt;li>&lt;code>StringCodec&lt;/code> 用于字符串与二进制数据之间的编解码，其编码格式为UTF-8;&lt;/li>
 &lt;li>&lt;code>JSONMessageCodec&lt;/code> 用于基础数据与二进制数据之间的编解码，其支持基础数据类型以及列表、字典。其在iOS端使用了NSJSONSerialization作为序列化的工具，而在Android端则使用了其自定义的JSONUtil.与StringCodec作为序列化工具；&lt;/li>
-&lt;li>&lt;code>StandardMessageCodec&lt;/code> 是BasicMessageChannel的默认编解码器，其支持基础数据类型、二进制数据、列表、字典；&lt;/li>
+&lt;li>&lt;code>StandardMessageCodec&lt;/code> 是BasicMessageChannel的默认编解码器，其支持基础数据类型、二进制数据、列表、字典。比JSONMessageCodec更通用。&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
