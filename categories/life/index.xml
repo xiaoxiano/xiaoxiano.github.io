@@ -42,7 +42,7 @@ nimbus26：又厚！又磨脚！鞋底很软也很泄力，我感觉完全脱离
 甘油max：待测&lt;/li>
 &lt;/ul>
 &lt;h2 id="衣服">衣服&lt;/h2>
-&lt;p>根据喜好随便买就可以，没穿出好坏，列举些常见品牌&lt;/p>
+&lt;p>根据喜好买就好，列举常见&lt;/p>
 &lt;ul>
 &lt;li>厚衣服
 &lt;ul>
@@ -56,6 +56,7 @@ nimbus26：又厚！又磨脚！鞋底很软也很泄力，我感觉完全脱离
 &lt;li>薄上衣：速干即可&lt;/li>
 &lt;/ul>
 &lt;h1 id="山地车">山地车&lt;/h1>
+&lt;h2 id="选车">选车&lt;/h2>
 &lt;p>参考：&lt;a class="link" href="https://zhuanlan.zhihu.com/p/612246771" target="_blank" rel="noopener"
 >2024山地车选购指南&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/sports/03.jpg"
@@ -98,17 +99,345 @@ data-flex-basis="360px"
 &lt;ul>
 &lt;li>首选线下：捷安特、美利达、喜德盛(性价比)&lt;/li>
 &lt;li>品控好：千里达(性价比)、福玛特&lt;/li>
-&lt;li>其它：邦德富士达、迪卡侬&lt;/li>
-&lt;li>高端：崔克、闪电&lt;/li>
+&lt;li>其它：邦德富士达、迪卡侬、崔克、闪电&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>3000以内选购
+&lt;li>3000左右山地车选购
 &lt;ul>
-&lt;li>美利达公爵600：长途旅行，考虑耐用及维修，综合体验更好（即使传奇500刹车配置更高，公爵300s几乎不减配）&lt;/li>
+&lt;li>美利达公爵600&lt;/li>
 &lt;li>千里达 X7Elite&lt;/li>
+&lt;li>喜德盛传奇500plus&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
+&lt;/ul>
+&lt;h2 id="调试">调试&lt;/h2>
+&lt;ul>
+&lt;li>前变速器
+&lt;ul>
+&lt;li>前拨：前轮盘移动链条的装置&lt;/li>
+&lt;li>导链板：链条上方的一个罩子，将链条引导至对应轮盘
+&lt;img src="https://xiaoxiano.github.io/p/sports/04.png"
+width="1165"
+height="739"
+srcset="https://xiaoxiano.github.io/p/sports/04_huc241c83c19bc7d04c0c90651eec79a00_648247_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/04_huc241c83c19bc7d04c0c90651eec79a00_648247_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="157"
+data-flex-basis="378px"
+>&lt;/li>
+&lt;li>H限位螺丝：限制前拨最外侧，顺时针旋转限位移向外侧&lt;/li>
+&lt;li>L限位螺丝：限制前拨最内侧，逆时针旋转限位移向内侧
+&lt;img src="https://xiaoxiano.github.io/p/sports/05.jpg"
+width="1100"
+height="953"
+srcset="https://xiaoxiano.github.io/p/sports/05_hu6a2bb1d05fe951368a2676435cd660b6_139827_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/sports/05_hu6a2bb1d05fe951368a2676435cd660b6_139827_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="115"
+data-flex-basis="277px"
+>&lt;/li>
+&lt;li>变速线：改变档位到对应的轮盘位置的缆线&lt;/li>
+&lt;li>筒式调节器（线束调节纽）：缆线末端旋钮，用于调节缆线长度，逆时针旋转缩短缆线，将导链板向外侧移动
+&lt;img src="https://xiaoxiano.github.io/p/sports/06.png"
+width="1436"
+height="589"
+srcset="https://xiaoxiano.github.io/p/sports/06_hu3a2b704ca216cdd38fd8878b947c11f6_678751_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/06_hu3a2b704ca216cdd38fd8878b947c11f6_678751_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="243"
+data-flex-basis="585px"
+>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a class="link" href="https://www.parktool.com/en-us/blog/repair-help/front-derailleur-adjustment" target="_blank" rel="noopener"
+>调试前变速器&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>确定导链板位置正确&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>导链板和轮齿之间的间隙应为2-3毫米&lt;/li>
+&lt;li>导链板应与轮盘平行
+&lt;img src="https://xiaoxiano.github.io/p/sports/11.png"
+width="1629"
+height="789"
+srcset="https://xiaoxiano.github.io/p/sports/11_hu5e1f20e3e82454bc48e1d60ab6df65f6_1275418_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/11_hu5e1f20e3e82454bc48e1d60ab6df65f6_1275418_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="206"
+data-flex-basis="495px"
+>&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>L螺钉调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>将前拨链器换至最小轮，后拨链器换至最大轮。 旋转L螺钉不与链板产生摩擦。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>检查变速线&lt;/p>
+&lt;p>变速线张力应为松弛状态。&lt;/p>
+&lt;p>如果变速线绷紧，则顺时针1-2圈筒式调节器将其松弛。&lt;/p>
+&lt;p>如果筒式调节器已完全转入，则松开变速线螺栓，松开变速线，重新拧紧螺栓。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>检查链条和内链板之间的间隙（约1mm）&lt;/p>
+&lt;p>如果链条与内链板摩擦，则将 L螺钉逆时针旋转1/4圈。再次检查间隙并重复，直到出现微小间隙。（我们可以有意将 L螺钉顺时针旋转再如此调整）&lt;/p>
+&lt;p>如果间隙大于1毫米，则将 L螺钉顺时针旋转，直到间隙缩小。&lt;/p>
+&lt;p>逆时针1-2圈回调筒式调节器。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>测试变速
+手动拉动变速线线来换档（不要使用变速杆，避免混淆电缆张力问题），向外移动一个轮盘并回到最小轮盘。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果链条向内移动得足够快，则L形螺丝设置已完成。&lt;/p>
+&lt;p>如果链条向内出现明显延迟，L形螺钉逆时针旋转1/4圈，再次测试。&lt;/p>
+&lt;ol start="3">
+&lt;li>H螺钉调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>将后拨链器换至最小轮，前拨链器换至最大轮。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>检查变速线&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果链条不移动至最大轮，则缆线太松，逆时针转动筒式调节器。&lt;/p>
+&lt;p>如果筒式调节器的旋转次数不够，将其完全旋入，然后再旋出2圈，变速器调回最小档使链条位于最内轮盘，松开变速线螺栓，拉紧变速线，重新拧紧螺栓。&lt;/p>
+&lt;p>如果仍然不能移动至最大轮，逆时针转动H螺丝。&lt;/p>
+&lt;p>当移动至最大轮时，我们可以再逆时针转动H螺丝2圈，有意将H螺丝设置得太松。&lt;/p>
+&lt;ul>
+&lt;li>检查链条和外链板之间的间隙（1mm）&lt;/li>
+&lt;/ul>
+&lt;p>压住变速杆，保持变速线最大的压力，链条和外链板之间的间隙应为1mm。&lt;/p>
+&lt;p>如果间隙太大，松开变速杆，顺时针拧紧H型螺钉1/4圈，直到链条间隙约1毫米。&lt;/p>
+&lt;ul>
+&lt;li>测试变速&lt;/li>
+&lt;/ul>
+&lt;p>压住变速杆，向内移动一个轮盘并回到最大轮盘。&lt;/p>
+&lt;p>如果换档很慢，逆时针松开H型螺钉不超过1/4圈。&lt;/p>
+&lt;p>如果链条从大齿圈外侧移出，则顺时针拧紧H螺钉1/4圈并再次测试。&lt;/p>
+&lt;ol start="4">
+&lt;li>变速线调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>将后拨链器换至最小轮，前拨链器换至最大轮。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>查看外笼板和链条之间的间隙
+压住变速杆，如果导链板没有移动，顺时针转动筒形调节器以延长变速线。重复操作，直到导链板有轻微的移动。当移动时，将筒式调节器逆时针旋转半圈，重复操作，直到导链板不会向外移动，此时设置完成。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>后变速器&lt;/p>
+&lt;ul>
+&lt;li>后拨：后轮盘移动链条的装置
+&lt;img src="https://xiaoxiano.github.io/p/sports/07.png"
+width="1734"
+height="747"
+srcset="https://xiaoxiano.github.io/p/sports/07_hubd423b4d638c0223b1c9a0f7db401668_1399071_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/07_hubd423b4d638c0223b1c9a0f7db401668_1399071_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="232"
+data-flex-basis="557px"
+>&lt;/li>
+&lt;li>T滑轮（齿轮）：下部滑轮，为链条下部提供张力
+&lt;img src="https://xiaoxiano.github.io/p/sports/08.png"
+width="1605"
+height="742"
+srcset="https://xiaoxiano.github.io/p/sports/08_hud6ece7841aabd1437a7a47751e891784_1239508_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/08_hud6ece7841aabd1437a7a47751e891784_1239508_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="216"
+data-flex-basis="519px"
+>&lt;/li>
+&lt;li>G滑轮（导轮）：上部滑轮，将链条引导至对应轮盘
+&lt;img src="https://xiaoxiano.github.io/p/sports/09.png"
+width="1378"
+height="610"
+srcset="https://xiaoxiano.github.io/p/sports/09_hu437f3dd11f11691ce4974a8b056a3de5_857655_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/09_hu437f3dd11f11691ce4974a8b056a3de5_857655_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="225"
+data-flex-basis="542px"
+>&lt;/li>
+&lt;li>筒式调节器（线束调节纽）：逆时针旋转缩短缆线，将G滑轮向内移动&lt;/li>
+&lt;li>H限位螺丝：限制后拨最外侧，顺时针旋转限位移向外侧&lt;/li>
+&lt;li>L限位螺丝：限制后拨最内侧，逆时针旋转限位移向内侧&lt;/li>
+&lt;li>B螺丝：控制导轮和轮盘之间的间隙大小
+&lt;img src="https://xiaoxiano.github.io/p/sports/10.png"
+width="1337"
+height="596"
+srcset="https://xiaoxiano.github.io/p/sports/10_hu836578f5efac1ce466cd4f72a2f7834f_716476_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/sports/10_hu836578f5efac1ce466cd4f72a2f7834f_716476_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="224"
+data-flex-basis="538px"
+>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>H螺钉调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>将前拨链器换至最大轮，后拨链器换至最小轮（变速杆也要处于最外档）。&lt;/li>
+&lt;/ul>
+&lt;p>如果链条没有换到最小的齿轮，逆时针旋转H螺丝几圈。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>将筒式调节器顺时针旋转几圈，放松变速线，防止混淆换挡位置和限位螺丝。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>我们要有意把H螺钉顺时针拧紧半圈，直到听到链条摩擦内侧齿轮的噪音。此时将H螺钉拧松1/4圈，直到噪音停止，这样选择较紧的H螺钉位置比较准确。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="2">
+&lt;li>变速线调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>将调节器逆时针旋转几圈，大致恢复到之前的位置。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>如果有两个前链轮，换至最大的链轮上，如果有三个前链轮，则换到中间的链轮。后拨链器换至最小轮。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>转动踏板，将变速器换档，只换一个档位。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果链条没有换到下一个档位，则将变速杆返回最外档，逆时针旋转圆筒调节器一整圈。再次换档并重复，直到换档成功。&lt;/p>
+&lt;p>如果圆筒调节器松脱，则完全拧回，然后拧出一两圈。&lt;/p>
+&lt;ul>
+&lt;li>确保后拨链器换至最小轮（变速杆也要处于最外档），然后松开变速线螺栓，拉紧变速线，重新拧紧螺栓&lt;/li>
+&lt;/ul>
+&lt;p>如果变速器换档一次会移动两个链轮，换至最小轮，将调节器顺时针旋转一圈，再次测试，现在应该换档正常。&lt;/p>
+&lt;ul>
+&lt;li>我们有意逆时针转动筒式调节器，直到听到链条摩擦内侧齿轮的噪音。将筒式调节器顺时针旋转1/4圈
+，直到噪音停止。&lt;/li>
+&lt;/ul>
+&lt;p>向内逐个换档，检查（除最大轮盘外）其他轮盘，如果听到有噪音，将筒式调节器顺时针旋转1/4圈。&lt;/p>
+&lt;p>向外逐个换档，检查（除最大轮盘外）其他轮盘，如果向外换档的速度很慢，顺时针旋转1/4圈。&lt;/p>
+&lt;ol start="3">
+&lt;li>L螺钉调节&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>将前、后拨链器均换到第二大轮。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>尝试后拨链器移到最大轮。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果链条没有移动，那么 L那么螺丝太紧了。&lt;/p>
+&lt;p>如果链条缓慢地移到最大轮，也是 L螺丝太紧了。&lt;/p>
+&lt;p>如果链条在最大轮上时有噪音，也是 L螺丝太紧了。&lt;/p>
+&lt;p>如果链条没有噪音、也没有缓慢的移动，那么 L螺钉没有太紧。将变速器向外移动一次，顺时针拧紧L螺钉一圈，再次检查，直到 L螺钉太紧。&lt;/p>
+&lt;p>一旦L螺钉过紧，将 L螺钉逆时针旋出1/4圈，并检查换档至最大齿轮，直到过度噪音和换档缓慢的症状消失。 L螺钉设置已完成。&lt;/p>
+&lt;ul>
+&lt;li>检查
+压住变速杆，后拨链器不应向内移动。&lt;/li>
+&lt;/ul>
+&lt;ol start="4">
+&lt;li>B螺钉（可跳过）
+B螺钉用于调节导轮与齿轮之间的间距。大多数公路和山地自行车变速器需要5-6毫米的间隙，否则请查阅制造商的规格，不要太纠结于此。&lt;/li>
+&lt;/ol>
+&lt;p>如果自行车变速良好，B螺钉可能在正常范围。&lt;/p>
+&lt;p>如果您确实对B螺钉进行了重大更改，请仔细检查变速线调节，否则变速器已正确调整。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>将链条换到前面最小轮，后面最大轮上。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>要增加间隙，拧紧B螺钉。要减少间隙，松开B螺钉。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;ol start="5">
+&lt;li>结语&lt;/li>
+&lt;/ol>
+&lt;p>因为骑行的压力与在维修时的压力不同，您可能需要将筒式调节器或限位螺丝再旋转1/4圈。&lt;/p>
+&lt;p>如果还有问题，请查看下列高级故障排除表。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">&lt;strong>检查项目&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>问题描述&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>检查方法&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>解决方案&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">变速线系统&lt;/td>
+&lt;td style="text-align:left">线缆摩擦或生锈导致变速不良。&lt;/td>
+&lt;td style="text-align:left">- 检查外壳和止动件是否有裂缝。 &lt;br>- 滑动外壳检查活动度。灰尘和砂砾可能会进入外壳内部。&lt;/td>
+&lt;td style="text-align:left">- 润滑线缆。 \ - 更换电缆和外壳。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">吊架&lt;/td>
+&lt;td style="text-align:left">撞击或摔倒导致吊架弯曲。&lt;/td>
+&lt;td style="text-align:left">从车后观察吊架是否与车轮和链轮平行。&lt;/td>
+&lt;td style="text-align:left">使用吊架校准工具（如 DAG-2.2 或 DAG-3）修复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">不兼容的设备&lt;/td>
+&lt;td style="text-align:left">部件之间的不兼容可能导致变速问题。&lt;/td>
+&lt;td style="text-align:left">- 检查变速器、壳体和链条的兼容性。&lt;/td>
+&lt;td style="text-align:left">- 更换为兼容的部件。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">链条问题&lt;/td>
+&lt;td style="text-align:left">链条磨损或润滑不足导致变速迟缓。&lt;/td>
+&lt;td style="text-align:left">- 检查链条磨损程度。 &lt;br>- 检查链条润滑情况。&lt;/td>
+&lt;td style="text-align:left">- 更换链条。 &lt;br>- 润滑链条。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">变速器磨损&lt;/td>
+&lt;td style="text-align:left">变速器的枢轴和连杆松动。&lt;/td>
+&lt;td style="text-align:left">横向活动下部支架检查磨损情况。&lt;/td>
+&lt;td style="text-align:left">更换新的变速器。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">变速杆磨损&lt;/td>
+&lt;td style="text-align:left">变速杆齿轮磨损或污染导致线缆移动不顺畅。&lt;/td>
+&lt;td style="text-align:left">检查磨损情况。&lt;/td>
+&lt;td style="text-align:left">冲洗齿轮，最好更换变速杆。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>常见问题&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">跳链&lt;/td>
+&lt;td style="text-align:left">变速线设置不佳&lt;/td>
+&lt;td style="text-align:left">调整变速线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">换档缓慢&lt;/td>
+&lt;td style="text-align:left">变速线系统摩擦&lt;/td>
+&lt;td style="text-align:left">润滑或更换变速线和外壳&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">向内换档缓慢&lt;/td>
+&lt;td style="text-align:left">电缆松弛过多&lt;/td>
+&lt;td style="text-align:left">逆时针旋转筒式调节器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">向外换档缓慢&lt;/td>
+&lt;td style="text-align:left">变速位置太靠内&lt;/td>
+&lt;td style="text-align:left">顺时针旋转筒式调节器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">链条在变速杆压力下跳动&lt;/td>
+&lt;td style="text-align:left">链轮和链条可能磨损&lt;/td>
+&lt;td style="text-align:left">更换链轮和链条&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>二合一笔记本</title><link>https://xiaoxiano.github.io/p/chromebook/</link><pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/chromebook/</guid><description>&lt;p>想要体验二合一笔记本，大约有这些选择：&lt;/p>
 &lt;ul>
 &lt;li>surface pro&lt;/li>
 &lt;li>ROG 幻X，高配显卡反而拉低续航，二合一的屏幕尺寸也不适合打游戏&lt;/li>
@@ -662,9 +991,11 @@ data-flex-basis="479px"
 &lt;li>Tasker、MacroDroid：单独app即可简单使用，收费&lt;/li>
 &lt;/ul>
 &lt;h2 id="airtest使用pc">airtest（使用PC）&lt;/h2>
-&lt;p>对于非专业任务，推荐使用airtest，支持自动化测试Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
+&lt;p>可支持自动化测试Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
 >官网&lt;/a>及&lt;a class="link" href="https://airtest.doc.io.netease.com/summary/summary/" target="_blank" rel="noopener"
 >官方教程&lt;/a>&lt;/p>
+&lt;p>优点：图像识别+控件识别满足绝大部分自动化任务&lt;/p>
+&lt;p>缺点：windows运行手机模拟器略卡，再映射到airtest IDE中更卡&lt;/p>
 &lt;h3 id="算法">算法&lt;/h3>
 &lt;p>&lt;a class="link" href="https://mp.weixin.qq.com/s/cGFvU9C7mBpsmnWgDLPW5A" target="_blank" rel="noopener"
 >Airtest算法介绍&lt;/a>&lt;/p>
@@ -702,8 +1033,8 @@ data-flex-basis="479px"
 &lt;/li>
 &lt;li>坐标
 &lt;ul>
-&lt;li>相对坐标：打开IDE的选项&amp;ndash;&amp;gt;设置&amp;ndash;&amp;gt;Device，勾选&lt;strong>实时坐标&lt;/strong>选项，可以实时显示出鼠标位置的坐标，再勾选相对坐标会显示出相对坐标，点击鼠标右键复制坐标信息&lt;/li>
-&lt;li>坐标切换&lt;/li>
+&lt;li>绝对坐标：打开IDE的选项&amp;ndash;&amp;gt;设置&amp;ndash;&amp;gt;Device，勾选&lt;strong>实时坐标显示&lt;/strong>显示鼠标在手机中的坐标&lt;/li>
+&lt;li>相对坐标：勾选实时坐标选项，再勾选相对坐标，显示鼠标在手机中的相对坐标（可跨分辨率），相对坐标*电脑分辨率=绝对坐标，点击鼠标右键可复制坐标信息&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -788,6 +1119,8 @@ data-flex-basis="479px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y_center=(y1+y2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch(x_center,y_center)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker使用andriod">Tasker（使用andriod）&lt;/h2>
+&lt;p>优点：性能好，无需电脑&lt;/p>
+&lt;p>缺点：需root，只能处理简单任务&lt;/p>
 &lt;h3 id="基础-1">基础&lt;/h3>
 &lt;style type="text/css">
 .box {
