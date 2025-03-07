@@ -3986,8 +3986,13 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── ios // 原生代码
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── lib //
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>依赖：&lt;/strong>
-由于该项目作为 Flutter 插件加载，不能识别Android依赖，在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。缺java本地依赖请回看本文gradle小节。&lt;/p>
-&lt;h3 id="flutter-1">Flutter&lt;/h3>
+由于该项目作为 Flutter 插件加载，不能识别Android依赖，在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。如果打开Android目录请在build.gradle添加以下依赖。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> def flutterRoot = &amp;#34;C:\\flutter&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly files(&amp;#34;$flutterRoot/bin/cache/artifacts/engine/android-arm/flutter.jar&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly &amp;#39;androidx.annotation:annotation:1.9.1&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="flutter-1">Flutter&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
 width="580"
 height="647"
@@ -4689,7 +4694,7 @@ data-flex-grow="119"
 data-flex-basis="287px"
 >&lt;/p>
 &lt;h3 id="模拟器">模拟器&lt;/h3>
-&lt;p>&lt;strong>开启hyper-v&lt;/strong>()&lt;/p>
+&lt;p>&lt;strong>开启hyper-v&lt;/strong>&lt;/p>
 &lt;p>Windows搜索 -&amp;gt; 启用与关闭Windows功能 -&amp;gt; hyper-v&lt;/p>
 &lt;p>模拟器报错：找不到libandroid-emu-metrics.dll，重启hyper-v&lt;/p>
 &lt;p>&lt;strong>vscode连接第三方模拟器&lt;/strong>&lt;/p>
