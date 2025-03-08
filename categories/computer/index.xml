@@ -4351,7 +4351,68 @@ data-flex-basis="197px"
 （1）你的应用可以使用它对外部事件进行过滤，只对感兴趣的外部事件(如当电话呼入时，或者数据网络可用时)进行接收并做出响应。广播接收器没有用户界面。然而，它们可以启动一个activity或serice来响应它们收到的信息，或者用NotificationManager来通知用户。通知可以用很多种方式来吸引用户的注意力，例如闪动背灯、震动、播放声音等。一般来说是在状态栏上放一个持久的图标，用户可以打开它并获取消息。&lt;/p>
 &lt;p>（2）广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。&lt;/p>
 &lt;p>（3）动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。&lt;/p>
-&lt;h4 id="channel">Channel&lt;/h4>
+&lt;h4 id="builder模式">builder模式&lt;/h4>
+&lt;p>当一个对象有很多属性，比如用户对象有很多属性：用户名、ID、性别、地址、工作类型、联系方式等等，写多个构造方法和set、get将难以阅读维护，我们可以采用java链式调用这种更优雅的方式。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public class User {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private User(Builder builder) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 初始化变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = builder.name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = builder.age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = builder.address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static class Builder {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 与外部User类属性一致
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 必填属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder(String name) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Age(int age) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Address(String address) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 提供外部类实例对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public User build() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 合理性做判断
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (age &lt;span class="err">&amp;lt;&lt;/span>= 0) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> throw new RuntimeException(&amp;#34;年龄不合法&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return new User(this);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//使用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User user = new User.Builder(&amp;#34;UserName&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Age(18)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Address(&amp;#34;China&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .build();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外，可以使用IDE中的插件InnerBuilder生成代码。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 在类中右键Generate选择Builder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class User {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="channel">Channel&lt;/h4>
 &lt;ol>
 &lt;li>
 &lt;p>创建Channel&lt;/p>
@@ -4415,6 +4476,182 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>向dart发送消息：&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> callback) //dart回复
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>pigeon生成代码&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>新建flutter plugin项目&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>pubspec.yaml添加依赖&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">dev_dependencies:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pigeon: ^16.0.5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>编写pigeon配置文件，定义通信接口&lt;/li>
+&lt;/ol>
+&lt;p>lib同级目录创建一个pigeons文件夹，新建&lt;code>input_message.dart&lt;/code>文件&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// ignore_for_file: public_member_api_docs, sort_constructors_first
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:pigeon/pigeon.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 输出配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// https://github.com/flutter/packages/blob/main/packages/pigeon/example/README.md
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@ConfigurePigeon(PigeonOptions(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // dart输出位置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dartOut: &amp;#39;./lib/pigeon/message.dart&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // Android输出位置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> javaOut:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;android/src/main/java/com/example/flutter_plugin/pigeon/Messages.java&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> javaOptions: JavaOptions(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 包名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> package: &amp;#39;com.example.flutter_plugin&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // ios输出位置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // ios/flutter_pigeon_plugin.podspec -&amp;gt; s.source_files = &amp;#39;Classes/**/*&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // objcHeaderOut: &amp;#39;ios/Classes/Pigeon.h&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // objcSourceOut: &amp;#39;ios/Classes/Pigeon.m&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // objcOptions: ObjcOptions(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // 默认前缀
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // prefix: &amp;#39;FLT&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 请求参数类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class SearchRequest {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchRequest({required this.query});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String query;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 返回参数类型
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class SearchReply {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply({required this.result});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String result;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// flutter 调用 native
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@HostApi()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">abstract class FlutterCallNativeApi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply search(SearchRequest request);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// native 调用 flutter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@FlutterApi()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">abstract class NativeCallFlutterApi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply query(SearchRequest request);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成代码：项目目录下运行&lt;code>flutter pub run pigeon --input pigeons/input_message.dart&lt;/code>&lt;/p>
+&lt;ol start="4">
+&lt;li>Android端具体实现&lt;/li>
+&lt;/ol>
+&lt;p>编辑Android目录下flutterplugin.java&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">package com.example.flutterplugin;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import android.content.Context;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import android.widget.Toast;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import androidx.annotation.NonNull;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import com.example.flutterplugin.pigeon.Messages;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import io.flutter.embedding.engine.plugins.FlutterPlugin;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import io.flutter.plugin.common.MethodCall;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import io.flutter.plugin.common.MethodChannel;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import io.flutter.plugin.common.MethodChannel.MethodCallHandler;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import io.flutter.plugin.common.MethodChannel.Result;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 1. 继承FlutterCallNativeApi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/** FlutterPigeonPlugin */
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class FlutterpluginPlugin implements FlutterPlugin, Messages.FlutterCallNativeApi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private Messages.NativeCallFlutterApi nativeApi;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private Context context;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void onAttachedToEngine(@NonNull FlutterPlugin.FlutterPluginBinding flutterPluginBinding) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> context = flutterPluginBinding.getApplicationContext();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 2. setup初始化FlutterCallNativeApi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Messages.FlutterCallNativeApi.setUp(flutterPluginBinding.getBinaryMessenger(), this);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nativeApi = new Messages.NativeCallFlutterApi(flutterPluginBinding.getBinaryMessenger());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void onDetachedFromEngine(@NonNull FlutterPlugin.FlutterPluginBinding binding) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Messages.FlutterCallNativeApi.setUp(binding.getBinaryMessenger(), null);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 3. 自定义具体search方法
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // flutter调用native
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Messages.SearchReply search(Messages.SearchRequest arg) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Messages.SearchReply reply = new Messages.SearchReply.Builder()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .setResult(arg.getQuery() + &amp;#34;-nativeResult&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .build();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // ------ native call flutter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nativeApi.query(arg, new Messages.Result&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Messages.SearchReply&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void success(Messages.SearchReply result) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Toast.makeText(context, result.getResult(), Toast.LENGTH_SHORT).show();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void error(Throwable error) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 处理错误
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return reply;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
+&lt;li>flutter调用channel&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String _platformVersion = &amp;#39;Unknown&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getNativeResult() async{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FlutterCallNativeApi api = FlutterCallNativeApi();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchRequest request = SearchRequest()..query = &amp;#34;Zero&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply reply = await api.search(request);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _platformVersion = reply.result;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Widget build(BuildContext context) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return MaterialApp(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> home: Scaffold(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> appBar: AppBar(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: const Text(&amp;#39;Plugin example app&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Text(&amp;#39;Running on: $_platformVersion\n&amp;#39;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MaterialButton(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> height: 40,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> color: Colors.blue,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> textColor: Colors.white,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> elevation: 5,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> splashColor: Colors.teal,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding: EdgeInsets.all(8),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#34;点击调用 native&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: ()=&amp;gt;{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> getNativeResult()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="androidmanifestxml">AndroidManifest.xml&lt;/h4>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
