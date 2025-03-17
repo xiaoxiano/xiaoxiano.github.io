@@ -1598,7 +1598,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;li>删除某个版本&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">fvm remove [version]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="直接安装不推荐">直接安装（不推荐）&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="直接安装">直接安装&lt;/h2>
 &lt;ol>
 &lt;li>安装 JDK&lt;/li>
 &lt;/ol>
@@ -1685,9 +1685,14 @@ data-flex-basis="427px"
 &lt;p>构建项目工具是必学内容，也是项目容易报错的部分，所以放在前面。&lt;/p>
 &lt;p>Gradle是Android官方工具，比Maven更灵活高效，它具有高度可定制性，以适应不同的项目。&lt;/p>
 &lt;h2 id="gradle">Gradle&lt;/h2>
-&lt;p>注意不同版本的Gradle存在差异，一般情况下Android项目使用Android Gradle Plugin(AGP)的版本。新项目请&lt;a class="link" href="https://developer.android.com/build/releases/gradle-plugin?hl=zh-cn#updating-gradle" target="_blank" rel="noopener"
->检查AGP对应gradle版本&lt;/a>，flutter SDK也有它自己对应的gradle版本。clone的java项目&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
->下载相应gradle&lt;/a>到项目目录，在&lt;code>Settings -&amp;gt; Build Tools -&amp;gt; Distribution:Local installation&lt;/code>使用。&lt;/p>
+&lt;p>&lt;strong>注意不同版本的Gradle存在差异&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>一般情况下Android项目使用Android Gradle Plugin(AGP)的版本，新项目请&lt;a class="link" href="https://developer.android.com/build/releases/gradle-plugin?hl=zh-cn#updating-gradle" target="_blank" rel="noopener"
+>检查AGP对应gradle版本&lt;/a>&lt;/li>
+&lt;li>flutter SDK有它自己对应的gradle版本&lt;/li>
+&lt;li>clone的java项目&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
+>下载相应gradle&lt;/a>到项目目录，在&lt;code>Settings -&amp;gt; Build Tools -&amp;gt; Distribution:Local installation&lt;/code>使用。&lt;/li>
+&lt;/ul>
 &lt;p>更新AGP：&lt;code>Tools -&amp;gt; AGP upgrade assistant&lt;/code>&lt;/p>
 &lt;p>更改项目/模块gradle版本：&lt;code>File -&amp;gt; Project Structure -&amp;gt; Project/Modules&lt;/code>&lt;/p>
 &lt;p>参考：&lt;a class="link" href="https://gradle.org/releases/" target="_blank" rel="noopener"
@@ -2000,6 +2005,10 @@ data-flex-basis="427px"
 &lt;li>Gradle threw an error while downloading artifacts from the network&lt;/li>
 &lt;/ul>
 &lt;p>解决：Gradle损坏，进入 C:\Users\username 删除 .gradle 文件夹&lt;/p>
+&lt;ul>
+&lt;li>Execution failed for task:generateDebugRFile
+Android Studio -&amp;gt; Analyze -&amp;gt; Code Inspect&lt;/li>
+&lt;/ul>
 &lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
@@ -3980,18 +3989,10 @@ data-flex-basis="834px"
 &lt;p>&lt;strong>创建&lt;/strong>&lt;/p>
 &lt;p>使用 Android Studio 创建 Flutter 项目，项目类型选 plugin 。目录如下&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">project
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── android // 原生代码
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── android // 原生
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── example // 运行调试
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├── android // 创建插件后用Android Studio运行此目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── ios // 原生代码
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── lib //
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>依赖：&lt;/strong>
-由于该项目作为 Flutter 插件加载，不能识别Android依赖，在 Android Studio 中打开 Tools -&amp;gt; Flutter -&amp;gt; Open For Editing In Android Studio 可以看到依赖。如果打开Android目录请在build.gradle添加以下依赖。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> def flutterRoot = &amp;#34;C:\\flutter&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly files(&amp;#34;$flutterRoot/bin/cache/artifacts/engine/android-arm/flutter.jar&amp;#34;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly &amp;#39;androidx.annotation:annotation:1.9.1&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── ios // 原生
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── lib
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="flutter-1">Flutter&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
 width="580"
@@ -4505,7 +4506,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;#39;android/src/main/java/com/example/flutter_plugin/pigeon/Messages.java&amp;#39;,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> javaOptions: JavaOptions(
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 包名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> package: &amp;#39;com.example.flutter_plugin&amp;#39;,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> package: &amp;#39;com.example.flutter_plugin.pigeon&amp;#39;,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // // ios输出位置
@@ -4541,11 +4542,19 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">abstract class NativeCallFlutterApi {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply query(SearchRequest request);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>生成代码：项目目录下运行&lt;code>flutter pub run pigeon --input pigeons/input_message.dart&lt;/code>&lt;/p>
-&lt;ol start="4">
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>生成代码：&lt;/strong>&lt;/p>
+&lt;p>项目目录下运行&lt;code>dart run pigeon --input pigeons/input_message.dart&lt;/code>&lt;/p>
+&lt;p>&lt;strong>依赖：&lt;/strong>
+由于该项目作为 Flutter 插件加载，不能识别Android依赖，如果打开Android目录请在build.gradle添加以下依赖。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> def flutterRoot = &amp;#34;C:\\flutter&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly files(&amp;#34;$flutterRoot/bin/cache/artifacts/engine/android-arm/flutter.jar&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly &amp;#39;androidx.annotation:annotation:1.9.1&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>Android端具体实现&lt;/li>
 &lt;/ol>
-&lt;p>编辑Android目录下flutterplugin.java&lt;/p>
+&lt;p>编辑Android目录下flutterpluginPlugin.java&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">package com.example.flutterplugin;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import android.content.Context;
@@ -4589,7 +4598,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .setResult(arg.getQuery() + &amp;#34;-nativeResult&amp;#34;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .build();
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // ------ native call flutter
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // native调用flutter
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> nativeApi.query(arg, new Messages.Result&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Messages.SearchReply&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void success(Messages.SearchReply result) {
@@ -4614,7 +4623,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 调用
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getNativeResult() async{
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FlutterCallNativeApi api = FlutterCallNativeApi();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchRequest request = SearchRequest()..query = &amp;#34;Zero&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchRequest request = SearchRequest(query: &amp;#34;Zero&amp;#34;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply reply = await api.search(request);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _platformVersion = reply.result;
