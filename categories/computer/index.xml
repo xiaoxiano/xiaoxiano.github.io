@@ -1469,7 +1469,7 @@ data-flex-basis="276px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
 &lt;li>安装指定版本&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 有可能缺失，建议手动下载
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 有可能缺失文件，建议手动下载
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fvm install [version]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>列出所有已安装的 Flutter SDK 版本。&lt;/li>
@@ -2002,13 +2002,17 @@ data-flex-basis="427px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:icon&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@mipmap/ic_launcher&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">activity&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>SDK XML versions up to 3 but an SDK XML file of version 4 was encountered&lt;/li>
+&lt;/ul>
+&lt;p>解决：local.properties添加转义符&lt;code>C\:\\Users&lt;/code>&lt;/p>
+&lt;ul>
 &lt;li>Gradle threw an error while downloading artifacts from the network&lt;/li>
 &lt;/ul>
 &lt;p>解决：Gradle损坏，进入 C:\Users\username 删除 .gradle 文件夹&lt;/p>
 &lt;ul>
-&lt;li>Execution failed for task:generateDebugRFile
-Android Studio -&amp;gt; Analyze -&amp;gt; Code Inspect&lt;/li>
+&lt;li>Execution failed for task:generateDebugRFile&lt;/li>
 &lt;/ul>
+&lt;p>解决：Android Studio -&amp;gt; Analyze -&amp;gt; Code Inspect&lt;/p>
 &lt;h1 id="dart">dart&lt;/h1>
 &lt;h2 id="变量">变量&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建一个变量并将其初始化
@@ -4480,7 +4484,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>pigeon生成代码&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>新建flutter plugin项目&lt;/p>
+&lt;p>新建flutter_plugin项目，删除flutter_plugin/lib下所有自带代码&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>pubspec.yaml添加依赖&lt;/p>
@@ -4544,17 +4548,19 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>生成代码：&lt;/strong>&lt;/p>
 &lt;p>项目目录下运行&lt;code>dart run pigeon --input pigeons/input_message.dart&lt;/code>&lt;/p>
-&lt;p>&lt;strong>依赖：&lt;/strong>
-由于该项目作为 Flutter 插件加载，不能识别Android依赖，如果打开Android目录请在build.gradle添加以下依赖。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> def flutterRoot = &amp;#34;C:\\flutter&amp;#34;
+&lt;p>&lt;strong>依赖：(不应添加)&lt;/strong>&lt;/p>
+&lt;p>由于该项目作为 Flutter plugin加载，不能识别Android依赖，如果打开Android目录请在build.gradle添加以下依赖（仅作开发使用，妨碍构建）。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> def flutterRoot = &amp;#34;C:\\flutter&amp;#34;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dependencies {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly files(&amp;#34;$flutterRoot/bin/cache/artifacts/engine/android-arm/flutter.jar&amp;#34;)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> compileOnly &amp;#39;androidx.annotation:annotation:1.9.1&amp;#39;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>Android端具体实现&lt;/li>
 &lt;/ol>
-&lt;p>编辑Android目录下flutterpluginPlugin.java&lt;/p>
+&lt;p>编辑Android目录下flutterPlugin.java&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">package com.example.flutterplugin;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import android.content.Context;
@@ -4571,7 +4577,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 1. 继承FlutterCallNativeApi
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">/** FlutterPigeonPlugin */
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class FlutterpluginPlugin implements FlutterPlugin, Messages.FlutterCallNativeApi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class FlutterPlugin implements FlutterPlugin, Messages.FlutterCallNativeApi {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private Messages.NativeCallFlutterApi nativeApi;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private Context context;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -4615,8 +4621,26 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="5">
-&lt;li>flutter调用channel&lt;/li>
+&lt;li>flutter example&lt;/li>
 &lt;/ol>
+&lt;p>&lt;strong>添加pubspec.yaml&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"> plugin:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> platforms:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> android:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> package: com.example.flutter_flutterplugin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginPlugin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ios:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginPlugin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> linux:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginPlugin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> macos:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginPlugin
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> windows:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginPluginCApi
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> web:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginWeb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fileName: flutter_plugin_web.dart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>flutter调用channel&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String _platformVersion = &amp;#39;Unknown&amp;#39;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
