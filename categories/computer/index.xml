@@ -4641,17 +4641,67 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pluginClass: FlutterPluginWeb
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> fileName: flutter_plugin_web.dart
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>flutter调用channel&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String _platformVersion = &amp;#39;Unknown&amp;#39;;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter_plugin/pigeon/message.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;package:flutter/material.dart&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:async&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">import &amp;#39;dart:developer&amp;#39; as developer;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 调用
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getNativeResult() async{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FlutterCallNativeApi api = FlutterCallNativeApi();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void main() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runApp(const MyApp());
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyApp extends StatefulWidget {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> const MyApp({super.key});
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> createState() =&amp;gt; _MyAppState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class _MyAppState extends State&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">MyApp&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> String _platformVersion = &amp;#39;Unknown&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> FlutterCallNativeApi? _api;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void initState() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> super.initState();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _initApi();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> void _initApi() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> try {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _api = FlutterCallNativeApi();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;API initialized successfully&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } catch (e) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;Error initializing API: $e&amp;#39;, error: e);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Future&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">void&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> getNativeResult() async {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (_api == null) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;API not initialized&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> try {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;Calling native search method&amp;#39;);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchRequest request = SearchRequest(query: &amp;#34;Zero&amp;#34;);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply reply = await api.search(request);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply reply = await _api!.search(request);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;Received reply: ${reply.result}&amp;#39;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (mounted) {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _platformVersion = reply.result;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> } catch (e) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> developer.log(&amp;#39;Error calling native method: $e&amp;#39;, error: e);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (mounted) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> setState(() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> _platformVersion = &amp;#39;Error: $e&amp;#39;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> });
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @override
@@ -4662,9 +4712,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> title: const Text(&amp;#39;Plugin example app&amp;#39;),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> body: Center(
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Column(
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> children: [
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> Text(&amp;#39;Running on: $_platformVersion\n&amp;#39;),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MaterialButton(
@@ -4673,11 +4721,9 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> textColor: Colors.white,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> elevation: 5,
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> splashColor: Colors.teal,
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding: EdgeInsets.all(8),
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: Text(&amp;#34;点击调用 native&amp;#34;),
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: ()=&amp;gt;{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> getNativeResult()
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> })
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> padding: const EdgeInsets.all(8),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> child: const Text(&amp;#34;点击调用 native&amp;#34;),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> onPressed: () =&amp;gt; getNativeResult())
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ],
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ),
