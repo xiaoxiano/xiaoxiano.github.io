@@ -1858,10 +1858,48 @@ data-flex-basis="427px"
 &lt;/ul>
 &lt;p>&lt;strong>使用&lt;/strong>&lt;/p>
 &lt;ol>
+&lt;li>app/build.gradle使用library插件（项目下的Android Library已默认使用library插件）&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 更改为library
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">plugins {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // id &amp;#39;com.android.application&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id &amp;#39;com.android.library&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 注释掉applicationId
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">android {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> defaultConfig {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // applicationId &amp;#34;com.example.myapp&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>
+&lt;p>AndroidManifest注释掉application配置&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>处理本地aar&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>在项目根目录中创建一个新文件夹，例如spotify-app-remote，把spotify-app-remote.arr放入，并创建新的build.gradle，添加&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">configurations.maybeCreate(&amp;#34;default&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">artifacts.add(&amp;#34;default&amp;#34;, file(&amp;#39;spotify-app-remote-release-0.7.1.aar&amp;#39;))
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>settings.gradle 添加文件夹&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">include &amp;#39;:spotify-app-remote&amp;#39;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>build.gradle 添加文件夹（使用此arr的模块如app）&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">dependencies{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> api project(&amp;#39;:spotify-app-remote&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>生成jar\arr&lt;/li>
 &lt;/ol>
 &lt;p>Android Studio 打开右侧的 Gradle，选择需要打包的module —&amp;gt; Tasks —&amp;gt; build, 双击 assemble&lt;/p>
-&lt;ol start="2">
+&lt;ol start="5">
 &lt;li>
 &lt;p>生成jar\arr到Project\build\library\libs或outputs\aar，移到Project\app\libs&lt;/p>
 &lt;/li>
@@ -4333,29 +4371,58 @@ data-flex-basis="197px"
 &lt;li>View即将被销毁，可以在 &lt;code>onDetachedFromWindow&lt;/code> 方法中做一些资源释放，防止内存泄漏&lt;/li>
 &lt;/ol>
 &lt;h4 id="android四大组件">android四大组件&lt;/h4>
-&lt;p>1、activity
-（1）一个Activity通常就是一个单独的屏幕（窗口）。&lt;/p>
-&lt;p>（2）Activity之间通过Intent进行通信。&lt;/p>
-&lt;p>（3）android应用中每一个Activity都必须要在AndroidManifest.xml配置文件中声明，否则系统将不识别也不执行该Activity。&lt;/p>
-&lt;p>2、service
-（1）service用于在后台完成用户指定的操作。service分为两种：&lt;/p>
-&lt;p>（a）started（启动）：当应用程序组件（如activity）调用startService()方法启动服务时，服务处于started状态。&lt;/p>
-&lt;p>（b）bound（绑定）：当应用程序组件调用bindService()方法绑定到服务时，服务处于bound状态。&lt;/p>
-&lt;p>（2）startService()与bindService()区别：&lt;/p>
-&lt;p>（a）started service（启动服务）是由其他组件调用startService()方法启动的，这导致服务的onStartCommand()方法被调用。当服务是started状态时，其生命周期与启动它的组件无关，并且可以在后台无限期运行，即使启动服务的组件已经被销毁。因此，服务需要在完成任务后调用stopSelf()方法停止，或者由其他组件调用stopService()方法停止。&lt;/p>
-&lt;p>（b）使用bindService()方法启用服务，调用者与服务绑定在了一起，调用者一旦退出，服务也就终止，大有“不求同时生，必须同时死”的特点。&lt;/p>
-&lt;p>（3）开发人员需要在应用程序配置文件中声明全部的service，使用&lt;service>&lt;/service>标签。&lt;/p>
-&lt;p>（4）Service通常位于后台运行，它一般不需要与用户交互，因此Service组件没有图形用户界面。Service组件需要继承Service基类。Service组件通常用于为其他组件提供后台服务或监控其他组件的运行状态。&lt;/p>
-&lt;p>3、content provider
-（1）android平台提供了Content Provider使一个应用程序的指定数据集提供给其他应用程序。其他应用可以通过ContentResolver类从该内容提供者中获取或存入数据。&lt;/p>
-&lt;p>（2）只有需要在多个应用程序间共享数据是才需要内容提供者。例如，通讯录数据被多个应用程序使用，且必须存储在一个内容提供者中。它的好处是统一数据访问方式。&lt;/p>
-&lt;p>（3）ContentProvider实现数据共享。ContentProvider用于保存和获取数据，并使其对所有应用程序可见。这是不同应用程序间共享数据的唯一方式，因为android没有提供所有应用共同访问的公共存储区。&lt;/p>
-&lt;p>（4）开发人员不会直接使用ContentProvider类的对象，大多数是通过ContentResolver对象实现对ContentProvider的操作。&lt;/p>
-&lt;p>（5）ContentProvider使用URI来唯一标识其数据集，这里的URI以content://作为前缀，表示该数据由ContentProvider来管理。&lt;/p>
-&lt;p>4、broadcast receiver
-（1）你的应用可以使用它对外部事件进行过滤，只对感兴趣的外部事件(如当电话呼入时，或者数据网络可用时)进行接收并做出响应。广播接收器没有用户界面。然而，它们可以启动一个activity或serice来响应它们收到的信息，或者用NotificationManager来通知用户。通知可以用很多种方式来吸引用户的注意力，例如闪动背灯、震动、播放声音等。一般来说是在状态栏上放一个持久的图标，用户可以打开它并获取消息。&lt;/p>
-&lt;p>（2）广播接收者的注册有两种方法，分别是程序动态注册和AndroidManifest文件中进行静态注册。&lt;/p>
-&lt;p>（3）动态注册广播接收器特点是当用来注册的Activity关掉后，广播也就失效了。静态注册无需担忧广播接收器是否被关闭，只要设备是开启状态，广播接收器也是打开着的。也就是说哪怕app本身未启动，该app订阅的广播在触发时也会对它起作用。&lt;/p>
+&lt;p>&lt;strong>activity&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>每个 Activity 提供一个用户界面窗口，一个app 由多个Activity 组成，其中一个主 Activity为程序入口。&lt;/p>
+&lt;ul>
+&lt;li>应用窗口（&lt;code>TYPE_APPLICATION&lt;/code>）：Activity 的默认窗口，层级最低。&lt;/li>
+&lt;li>子窗口（&lt;code>TYPE_APPLICATION_PANEL&lt;/code>）：依附于应用窗口（如 Dialog）。&lt;/li>
+&lt;li>系统窗口（&lt;code>TYPE_TOAST&lt;/code>）：无需 Activity 承载，直接由系统管理（如 Toast、悬浮窗）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Activity通过 &lt;code>Intent&lt;/code> 和 &lt;code>Bundle&lt;/code> 实现数据传递。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>每一个Activity都必须要在AndroidManifest.xml配置。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>service&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Service通常位于后台运行，没有UI。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>service分为两种&lt;/p>
+&lt;ul>
+&lt;li>started（启动）：由其他组件调用startService()方法启动，可以在后台无限期运行，调用stopSelf()或由其他组件调用stopService()方法才会停止。&lt;/li>
+&lt;li>bound（绑定）：调用bindService()者与服务绑定在了一起，调用者一旦退出，服务也就终止。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>必须在AndroidManifest.xml配置&lt;code>&amp;lt;service android:name=&amp;quot;.ExampleService&amp;quot;/&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>content provider&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Android 系统为常见数据类型（如视频、音频、图像、电话簿等）提供了 ContentProvider 接口，用于应用程序之间共享数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>通过 URI 标识数据资源，并通过 ContentResolver 提供对数据的 CRUD 操作。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>broadcast receiver&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>事件触发：当特定事件发生时（如来电、短信、电池电量变化等），Android系统会生成特定的Intent对象并自动进行广播。&lt;/li>
+&lt;li>接收处理：针对特定事件注册的BroadcastReceiver会接收到这些广播，并获取Intent对象中的数据进行处理。
+&lt;ul>
+&lt;li>动态注册&lt;/li>
+&lt;li>静态注册：AndroidManifest文件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
 &lt;h4 id="builder模式">builder模式&lt;/h4>
 &lt;p>当一个对象有很多属性，比如用户对象有很多属性：用户名、ID、性别、地址、工作类型、联系方式等等，写多个构造方法和set、get将难以阅读维护，我们可以采用java链式调用这种更优雅的方式。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public class User {
@@ -4426,8 +4493,11 @@ data-flex-basis="197px"
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 传递字符串、JSON
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">BasicMessageChannel(BinaryMessenger messenger,String name,MessageCodec&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> codec)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 方法调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// MethodChannel只是对 BasicMessageChannel封装，方便直接获取函数名和参数
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MethodChannel(BinaryMessenger messenger,String name,MethodCodec codec)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 事件流监听，包括用户事件监听，电量变化，网络连接变化，陀螺仪，传感器等
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EventChannel(BinaryMessenger messenger,String name,MethodCodec codec)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -4536,8 +4606,11 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// flutter 调用 native
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// @HostApi()：BasicMessageChannel、MethodChannel
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// @EventChannelApi()：EventChannel
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">@HostApi()
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">abstract class FlutterCallNativeApi {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // @async：处理长时间运行的任务或从native异步接收数据
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> SearchReply search(SearchRequest request);
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -4819,6 +4892,9 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--精确位置、粗略位置--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.ACCESS_FINE_LOCATION&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.ACCESS_COARSE_LOCATION&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--通知，Android13以上--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.POST_NOTIFICATIONS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--以下不太常用--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--读写日历--&amp;gt;&lt;/span>
@@ -4827,9 +4903,10 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--读写通讯录--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.READ_CONTACTS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.WRITE_CONTACTS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--读取电话号码，Android11及以上使用READ_PHONE_NUMBERS--&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--读取电话号码--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.READ_PHONE_STATE&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:maxSdkVersion&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;29&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--Android11以上--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.READ_PHONE_NUMBERS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--获取传感器（心率等）信息--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.BODY_SENSORS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
@@ -4838,7 +4915,6 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SEND_SMS&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!--悬浮窗、在其他应用上显示--&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_ALERT_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">uses-permission&lt;/span> &lt;span class="na">android:name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;android.permission.SYSTEM_OVERLAY_WINDOW&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>存储权限&lt;/strong>（Android 10 版本引入了分区存储机制）&lt;/p>
 &lt;p>&lt;a class="link" href="https://juejin.cn/post/7306815404562137128?from=search-suggest#heading-6" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
