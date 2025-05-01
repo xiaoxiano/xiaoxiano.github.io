@@ -1495,8 +1495,11 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">A:UPNDAY(CLOSE,N);{返回是否CLOSE连涨N个周期}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>A&lt;/code> 指标名称&lt;/li>
-&lt;li>&lt;code>:&lt;/code> 衔接符&lt;/li>
+&lt;li>&lt;code>:&lt;/code> 衔接符
+&lt;ul>
 &lt;li>&lt;code>:=&lt;/code> 赋值，该函数输出值可在后续公式中（作为参数）被引用&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>&lt;code>UPNDAY(CLOSE,N)&lt;/code> 输出值&lt;/li>
 &lt;li>&lt;code>;&lt;/code> 结束符&lt;/li>
 &lt;li>&lt;code>{返回是否CLOSE连涨N个周期}&lt;/code> 注释&lt;/li>
@@ -1504,7 +1507,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;h3 id="函数">函数&lt;/h3>
 &lt;p>&lt;a class="link" href="https://www.agudashi.cn/doc.html" target="_blank" rel="noopener"
 >参考公式大师&lt;/a>&lt;/p>
-&lt;p>&lt;strong>函数类型&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>函数类型&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1561,7 +1566,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/tbody>
 &lt;/table>
 &lt;h4 id="行情函数">行情函数&lt;/h4>
-&lt;p>&lt;strong>即时行情&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>即时行情&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1691,7 +1698,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/table>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;strong>资金流向&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>资金流向&lt;/li>
+&lt;/ul>
 &lt;details class="spoiler " id="spoiler-2">
 &lt;summary>限制版本&lt;/summary>
 &lt;p>&lt;table>
@@ -1849,7 +1858,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/table>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;strong>序列行情&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>序列行情&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -1962,14 +1973,24 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/table>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;strong>形态函数&lt;/strong>
+&lt;ul>
+&lt;li>
+&lt;p>形态函数
 待写&lt;/p>
-&lt;p>&lt;strong>板块函数&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;p>板块函数
 待写&lt;/p>
-&lt;p>&lt;strong>指数标的&lt;/strong>
+&lt;/li>
+&lt;li>
+&lt;p>指数标的
 待写&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h4 id="财务函数">财务函数&lt;/h4>
-&lt;p>&lt;strong>专业财务&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>专业财务&lt;/li>
+&lt;/ul>
 &lt;p>专业财务数据需要每天及时下载更新：通达信软件 -&amp;gt; 选项 -&amp;gt; 专业财务数据&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3357,7 +3378,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;strong>关联财务函数&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>关联财务函数&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3415,7 +3438,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/p>
 &lt;/details>
 &lt;h4 id="计算函数">计算函数&lt;/h4>
-&lt;p>&lt;strong>逻辑函数&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>逻辑函数&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3472,7 +3497,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;strong>选择函数&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>选择函数&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3545,7 +3572,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/table>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;strong>数学函数&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>数学函数&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3702,7 +3731,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;strong>统计函数&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>统计函数&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3819,7 +3850,9 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/table>
 &lt;/p>
 &lt;/details>
-&lt;p>&lt;strong>操作符&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>操作符&lt;/li>
+&lt;/ul>
 &lt;table>
 &lt;thead>
 &lt;tr>
