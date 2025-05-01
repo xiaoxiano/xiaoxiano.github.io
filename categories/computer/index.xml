@@ -758,8 +758,8 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="393"
 data-flex-basis="944px"
->&lt;/p></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>本文建议只阅读前4小节。主要参考文章&lt;a class="link" href="https://kalacloud.com/blog/postman-tutorial" target="_blank" rel="noopener"
->https://kalacloud.com/blog/postman-tutorial&lt;/a>。&lt;/p>
+>&lt;/p></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://postman.xiniushu.com/" target="_blank" rel="noopener"
+>postman中文文档&lt;/a>&lt;/p>
 &lt;h1 id="api">API&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
 &lt;p>&lt;strong>chrome浏览器开发者工具&lt;/strong>&lt;/p>
@@ -984,434 +984,7 @@ data-flex-basis="318px"
 &lt;ul>
 &lt;li>如上图所示，可以看到红4位置 响应代码返回 200 ，这说明 PUT 请求已经执行成功。&lt;/li>
 &lt;li>返回的 Body 信息中，email 字段已经更新为 &lt;code>Hi@kalacloud.com&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;h1 id="用-postman-发送第一个-patch-更新请求">用 Postman 发送第一个 PATCH 更新请求&lt;/h1>
-&lt;p>PATCH 请求一般用于服务器资源的部分更新，它相对于 PUT 提交的数据更少，不用提整个数据，只需要提交需要修改的字段即可。有关 PUT 和 PATCH 的更多区别，可查看本文第9节。&lt;/p>
-&lt;p>打开你的 Postman 我们来创建一个 PATCH 请求。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>点击「+」号，新建一个请求页&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>请求类型选择「PATCH」&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>根据第6节我们使用 POST 请求创建的资源 ID 为 &lt;code>1475&lt;/code> ，又根据 GoRest API 的文档得知，修改资源的 API 地址为&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 PATCH 修改 ID 为 1475 资源的请求地址应该写，到这里都和 PUT 请求修改资源的方法一样。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>选择在 &lt;code>Body&lt;/code> 标签中填写 JSON 格式的资源修改信息。上一节我们已经将 ID 为 &lt;code>1475&lt;/code> 资源的邮箱改为 &lt;code>Hi@kalacloud.com&lt;/code> ，接着我们用 PATCH 请求把这个邮箱改为&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HelloWord@kalacloud.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;email&amp;#34;:&amp;#34;HelloWord@kalacloud.com&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第6节《使用 Postman 对 API 鉴权》&lt;/li>
-&lt;li>点击 「Send」发送 PATCH 请求&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/18.jpg"
-width="780"
-height="588"
-srcset="https://xiaoxiano.github.io/p/test/18_hueafacd55cb3e243dcca7f16297d3cd9e_27788_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/18_hueafacd55cb3e243dcca7f16297d3cd9e_27788_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="132"
-data-flex-basis="318px"
->&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>如上图所示，可以看到红4位置 响应代码返回 200 ，这说明 PATCH 请求已经执行成功。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>返回的 Body 信息中，email 字段已经更新为&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">HelloWord@kalacloud.com
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ul>
-&lt;h1 id="put-和-patch-的区别">PUT 和 PATCH 的区别&lt;/h1>
-&lt;p>在 HTTP 协议中，PUT 和 PATCH 都是用于更新服务器资源的命令，但他们有着不同的格式和用途。&lt;/p>
-&lt;p>PUT 请求：一般用于更新服务器已有资源，如果服务器中没有对应的资源，那么 PUT 会创建相应的资源（特别提醒：虽然 PUT 有创建新资源的功能，但是否能创建最终取决于你调用的 API 是否支持此功能）&lt;/p>
-&lt;p>PATCH 请求：用于局部更新服务器现有资源，它不用像 PUT 更新资源中的一点点也要提交所有字段信息，PATCH 更新哪个字段就提交哪个字段的更新信息即可。&lt;/p>
-&lt;p>&lt;code>举例说明PUT 和 PATCH 的区别：&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/19.jpg"
-width="780"
-height="263"
-srcset="https://xiaoxiano.github.io/p/test/19_huda2a1c0ebe4bcfb14216027fe2f1ab79_13723_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/19_huda2a1c0ebe4bcfb14216027fe2f1ab79_13723_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="296"
-data-flex-basis="711px"
->&lt;/p>
-&lt;p>同样是更新资源中的 Email 信息，PUT 需要带上资源中的所有信息，然后在更新&lt;code>（上图）&lt;/code>&lt;/p>
-&lt;p>而 PATCH 则仅需要提交更新部分，即仅提交邮箱信息即可&lt;code>（下图）&lt;/code>&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/20.jpg"
-width="780"
-height="269"
-srcset="https://xiaoxiano.github.io/p/test/20_hu4966b7454a7afa23a140f0b93ed970ed_13804_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/20_hu4966b7454a7afa23a140f0b93ed970ed_13804_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="289"
-data-flex-basis="695px"
->&lt;/p>
-&lt;p>那么，如果 PUT 像 PATCH 一样仅提交资源的局部信息会发生什么呢？会 400 报错。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/21.jpg"
-width="780"
-height="491"
-srcset="https://xiaoxiano.github.io/p/test/21_huf83142ee0bab4f71dc642b8adcfa23ad_24623_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/21_huf83142ee0bab4f71dc642b8adcfa23ad_24623_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="158"
-data-flex-basis="381px"
->&lt;/p>
-&lt;p>PUT 不论修改多少，必须把修改资源的全部字段写全，否则会 400 报错。&lt;/p>
-&lt;h1 id="用-postman-发送第一个-delete-删除请求">用 Postman 发送第一个 DELETE 删除请求&lt;/h1>
-&lt;p>我们在上文讲了获取(GET)，创建(POST)，更新(PUT / PATCH) 请求，接着我们来说说删除(DELETE) 请求。顾名思义，DELETE 请求执行可删除整个资源。我们来直接实践一次你就明白了。&lt;/p>
-&lt;p>打开你的 Postman ，跟随本教程一起创建一个 DELETE 请求。&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>点击「+」号，新建一个请求页&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>请求类型选择「DELETE」&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>我们来把上文刚刚创建的 ID 为 &lt;code>1475&lt;/code> 的资源彻底删掉。根据 GoRest API 的文档得知，删除资源的 API 请求地址为&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/{{ID}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>，所以我们要使用 &lt;code>PATCH&lt;/code> 删除 ID 为 1475 资源的请求地址应该写：&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">https://gorest.co.in/public/v1/users/1475
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>选择 Auth 标签，进行 API 鉴权，鉴权方法详见本文第6节《使用 Postman 对 API 鉴权》&lt;/li>
-&lt;li>点击 「Send」发送 DELETE 请求，删除对应的资源。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/22.jpg"
-width="780"
-height="393"
-srcset="https://xiaoxiano.github.io/p/test/22_hua865477ba4d92d0fcb103f74bff262bd_20907_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/22_hua865477ba4d92d0fcb103f74bff262bd_20907_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="198"
-data-flex-basis="476px"
->&lt;/p>
-&lt;p>如上图所示，提交 DELETE 请求后，响应代码为 204 ，返回的 body 为空，删除成功。&lt;/p>
-&lt;p>特别提示：在 GoRest 的文档说明中，特别说了 DELETE 删除返回值的状态。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/23.jpg"
-width="780"
-height="107"
-srcset="https://xiaoxiano.github.io/p/test/23_hu5a444ecc2cd619d231b5e2d91f409217_12916_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/23_hu5a444ecc2cd619d231b5e2d91f409217_12916_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="728"
-data-flex-basis="1749px"
->&lt;/p>
-&lt;p>API 返回状态具体是怎么样的，还要看 API 的开发者是如何约定的，并非只有返回 200 才是成功的。&lt;/p>
-&lt;h1 id="postman-中的全局变量环境变量集合变量的设置">Postman 中的全局变量、环境变量、集合变量的设置&lt;/h1>
-&lt;ol>
-&lt;li>Postman 设置变量的意义&lt;/li>
-&lt;/ol>
-&lt;p>Postman 里有多种变量，我们可以把某些重要的值抽象出来变成变量，方便我们做场景 / 条件切换。比如，我们可以把 baseURL 抽出来，在环境变量里设置「生产环境变量」和「测试环境变量」，之后，我们只需要切换标签即可快速将数据从一个环境切换到另一个环境中，非常方便。&lt;/p>
-&lt;ol start="2">
-&lt;li>Postman 常用的三种变量形式&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>全局变量：全局变量一旦声明，即可应用到 Postman 中所有测试的 API 中。任何请求都可以直接使用全局变量，它的作用域是全局的。&lt;/li>
-&lt;li>环境变量：Postman 的环境变量可以理解为一组选项，当这组环境变量选项被选中时，才会生效，特别适合「生产环境」和「测试环境」之间的切换等应用场景。&lt;/li>
-&lt;li>集合变量：集合变量是针对集合（Collections）生效的，一个集合下可能有 N 条 API 请求，集合变量可以一次修改集合下的所有变量数值。&lt;/li>
-&lt;/ul>
-&lt;p>以上三种变量的作用域从大到小为 全局 集合 环境，当三个变量形式同时作用于一个 API 测试条时，Postman 会优先使用最小作用域变量。&lt;/p>
-&lt;ol start="3">
-&lt;li>如何在 Postman 设置全局变量与环境变量&lt;/li>
-&lt;/ol>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/24.jpg"
-width="780"
-height="339"
-srcset="https://xiaoxiano.github.io/p/test/24_hu3f46bdba652759e817d03a30c2f3c0fe_20545_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/24_hu3f46bdba652759e817d03a30c2f3c0fe_20545_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="230"
-data-flex-basis="552px"
->&lt;/p>
-&lt;ul>
-&lt;li>新建一个请求页，点击右上角的「小眼睛」进入变量设置页。&lt;/li>
-&lt;li>页面上方为「环境变量」，我们点击编辑设置环境变量名为「卡拉云_API 测试环境」&lt;/li>
-&lt;li>VARIABLE 设置为 &lt;code>baseURL&lt;/code>，INITIAL VALUE 设置为 &lt;code>https://gorest.co.in&lt;/code> ，保存之后我们就可以使用 &lt;code>{{baseURL}}&lt;/code> 变量来替代 API URL 了。&lt;/li>
-&lt;li>页面下方为「全局变量」，VARIABLE 设置为 &lt;code>kalacloud_id&lt;/code>，INITIAL VALUE 设置为 &lt;code>2312&lt;/code> (2312 为 GoRest 中的一个已存在的用户信息 ID)，保存后我们就可以使用 &lt;code>{{kalacloud_id}}&lt;/code> 变量来替代 ID 值了。&lt;/li>
-&lt;/ul>
-&lt;p>我们来一起测一下刚刚设置好的「全局变量」和「环境变量」是否生效。&lt;/p>
-&lt;ul>
-&lt;li>新建一个 GET 请求页，地址栏填入：&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{baseURL}}/public/v1/users?id={{kalacloud_id}}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>点击「Send」&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/25.jpg"
-width="780"
-height="802"
-srcset="https://xiaoxiano.github.io/p/test/25_hu532d10b5292918f32cc50bde7cdeca2c_37000_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/25_hu532d10b5292918f32cc50bde7cdeca2c_37000_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="97"
-data-flex-basis="233px"
->&lt;/p>
-&lt;p>返回响应代码为 200 说明请求成功，返回的 Body 信息是 ID 为 &lt;code>2312&lt;/code> 的用户信息，说明全局和环境变量已生效。&lt;/p>
-&lt;ol start="4">
-&lt;li>如何在 Postman 设置集合变量&lt;/li>
-&lt;/ol>
-&lt;p>集合变量是指应用在整个集合所有请求中的变量，集合变量优先与其他变量应用与请求，也就是说如果有集合变量，那么其他变量与集合变量相冲突的化，优先执行集合变量。&lt;/p>
-&lt;p>集合变量很适合临时修改整个集合中的变量，来针对集合进行测试。&lt;/p>
-&lt;p>打开你的 Postman，我们一起操作一遍。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/26.jpg"
-width="780"
-height="275"
-srcset="https://xiaoxiano.github.io/p/test/26_hu79d68642b788fbbc24059bc3291e54c3_19910_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/26_hu79d68642b788fbbc24059bc3291e54c3_19910_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="283"
-data-flex-basis="680px"
->&lt;/p>
-&lt;ul>
-&lt;li>选中一个集合，点击集合标题右侧「&amp;hellip;」选择编辑。&lt;/li>
-&lt;li>进入集合设置页，选择 Variables 设置集合变量&lt;/li>
-&lt;li>此时，整个集合下所有请求页，都应用了此集合变量。&lt;/li>
-&lt;/ul>
-&lt;h1 id="如何使用-postman-pre-request-scripts-预请求脚本">如何使用 Postman &lt;code>Pre-request scripts&lt;/code> 预请求脚本&lt;/h1>
-&lt;p>Pre-request scripts 预请求脚本是在 API 请求之前执行的脚本，我们可以临时更改请求的某些变量。一般预请求脚本有这么两种常见的应用场景。(1)设置动态请求头信息。 (2)设置动态请求参数信息。比如，当我们要请求一个与时间有关的资源时，我们可以在预请求脚本中添加 &lt;code>timestamp&lt;/code> 字段，这是一个动态值，我们可以通过前置请求脚本来实现。&lt;/p>
-&lt;p>&lt;code>举例说明：&lt;/code>比如我们要在 header 中包含一个时间戳，我们可以这样操作&lt;/p>
-&lt;ul>
-&lt;li>在 Pre-request scripts 中添加获取时间戳的代码&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.environment.set(&amp;#34;TimeStampHeader&amp;#34;,new Date());
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/27.jpg"
-width="780"
-height="331"
-srcset="https://xiaoxiano.github.io/p/test/27_hu8d24557a50ac1abeee8fc4533f535bdb_18505_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/27_hu8d24557a50ac1abeee8fc4533f535bdb_18505_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="235"
-data-flex-basis="565px"
->&lt;/p>
-&lt;ul>
-&lt;li>在 header 中添加预脚本中的变量 &lt;code>TimeStampHeader&lt;/code> 当请求时，Postman 会先执行预脚本获取时间戳，然后再将时间戳赋予到 header 中 timestamp 值中。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/28.jpg"
-width="780"
-height="312"
-srcset="https://xiaoxiano.github.io/p/test/28_huc7645f22b2c0495ea5ca0e9d9f854f5c_15945_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/28_huc7645f22b2c0495ea5ca0e9d9f854f5c_15945_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="250"
-data-flex-basis="600px"
->&lt;/p>
-&lt;ul>
-&lt;li>接着我们来执行这条 GET 请求，打开控制控制台，在控制台中，可以看到 Request Headers 中包含我们刚刚设置的时间戳 「timestamp」特别提示：有关控制台的讲解，在本教程第14节。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/29.jpg"
-width="780"
-height="583"
-srcset="https://xiaoxiano.github.io/p/test/29_huae5b01fcbe01a7531db07d1193bc4403_30930_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/29_huae5b01fcbe01a7531db07d1193bc4403_30930_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="133"
-data-flex-basis="321px"
->&lt;/p>
-&lt;p>&lt;code>附：常用的 Pre-request scripts ：&lt;/code>&lt;/p>
-&lt;p>&lt;code>获取变量&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.getGlobalVariable(&amp;#34;key&amp;#34;); //获取全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.getEnvironmentVariable(&amp;#34;key&amp;#34;); //获取环境变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.get(&amp;#34;key&amp;#34;); //获取全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.get(&amp;#34;key&amp;#34;); //获取环境变量
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>设置变量&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setGlobalVariable(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置环境变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.get(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.get(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;); //设置环境变量
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>清除变量&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//通用语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.clearGlobalVariable(&amp;#34;key&amp;#34;); //清除全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.clearEnvironmentVariable(&amp;#34;key&amp;#34;); //清除环境变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//postman native app 特有语法
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.globals.unset(&amp;#34;key&amp;#34;); //清除全局变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.environment.unset(&amp;#34;key&amp;#34;); //清除环境变量
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>将数组、嵌套对象存储到全局&amp;amp;环境变量中&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">//将数组储存到环境变量中
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var array = [1, 2, 3, 4];
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;array&amp;#34;, JSON.stringify(array));
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//将嵌套对象储存到环境变量中
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var obj = { a: [1, 2, 3, 4], b: { c: &amp;#39;val&amp;#39; } };
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">postman.setEnvironmentVariable(&amp;#34;obj&amp;#34;, JSON.stringify(obj));
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//从环境变量中获取数组对象
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var array = JSON.parse(postman.getEnvironmentVariable(&amp;#34;array&amp;#34;));
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//从环境变量中获取嵌套对象/json对象
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">var obj = JSON.parse(postman.getEnvironmentVariable(&amp;#34;obj&amp;#34;));
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="如何创建-postman-tests-测试脚本---postman-断言功能">如何创建 Postman Tests 测试脚本 - Postman 断言功能&lt;/h1>
-&lt;p>在 Postman 中 Pre-request 和 Tests 是两兄弟，一个是在调用前执行（Pre-request），一个是在调用后执行（Tests），我们可以在 Tests 中使用 JavaScript 校验代码协助我们验证结果，可以说 Tests 是 Postman 的断言功能&lt;/p>
-&lt;ol>
-&lt;li>&lt;code>Postman Tests 断言的实际应用&lt;/code>&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>&lt;code>Postman 状态类断言&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/30.jpg"
-width="780"
-height="425"
-srcset="https://xiaoxiano.github.io/p/test/30_hu6d4c59ad85bc4762a1650b211ae988f8_25225_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/30_hu6d4c59ad85bc4762a1650b211ae988f8_25225_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="183"
-data-flex-basis="440px"
->&lt;/p>
-&lt;p>1.我们首先创建一个 GET 请求，然后点击 Postman 中 Tests 标签，进入断言设置。&lt;/p>
-&lt;p>2.我们可以在右侧已经预设好的断言代码，我们先点击「Status code: Code is 200」，可以看到预设的代码直接写入编辑框。这段代码的意思是，如果执行调用，服务器返回响应代码为 &lt;code>200&lt;/code> 时，判断为 &lt;code>PASS&lt;/code> 即调用成功。&lt;/p>
-&lt;p>3.点击「Send」执行 GET 请求，返回的断言可以在 Test Results 中看到结果。&lt;/p>
-&lt;p>4.绿色的 PASS，说明服务器返回的响应代码为 200 ，调用成功。&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>Postman 结果比较类断言&lt;/code>&lt;/li>
-&lt;/ul>
-&lt;p>我们再添加一条带有变量的 JavaScript 断言设置，比较预期结果和实际返回结果之间是否一致。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/31.jpg"
-width="780"
-height="389"
-srcset="https://xiaoxiano.github.io/p/test/31_hubc556dbf787462ceaff1b4aa65111ce5_18017_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/31_hubc556dbf787462ceaff1b4aa65111ce5_18017_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="200"
-data-flex-basis="481px"
->&lt;/p>
-&lt;p>我们刚刚 GET 请求了 ID 2312 的用户信息，其中 &lt;code>name&lt;/code> 的值为 &lt;code>kalacloud&lt;/code>&lt;/p>
-&lt;p>那么我们接下来写一个 JS 判断预期与返回结果是否一致。即预期为 &lt;code>name&lt;/code> 的值为「kalacloud」，写断言自动判断返回结果的&lt;code>name&lt;/code>值是否也是「kalacloud」&lt;/p>
-&lt;p>1.在 Tests 选项卡右侧选择「Response body:JSON value check」，我们来检测 &lt;code>ID&lt;/code> 为 &lt;code>2312&lt;/code> 的返回值中，&lt;code>name&lt;/code> 的值是否为 &lt;code>kalacloud&lt;/code>&lt;/p>
-&lt;p>2.我们将「Your Test Name」替换为「检查 ID 为 2312 的 name 返回值为 kalacloud」让这条测试的名字直接反应出我们想测试的内容。&lt;/p>
-&lt;p>3.使用&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">jsonData.data[0].name
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>代替&lt;code>jsonData.value&lt;/code> ，即检测第一个返回值中的 &lt;code>name&lt;/code> 的 &lt;code>value&lt;/code>&lt;/p>
-&lt;p>4.检测返回值：在 &lt;code>to.eql()&lt;/code> 中输入待检测值 &lt;code>&amp;quot;kalacloud&amp;quot;&lt;/code>，即需要检测的 text。&lt;/p>
-&lt;p>5.代码如下，你可以复制并根据你的情况简单修改，然后在 Postman 中，跟随教程一起测试。&lt;/p>
-&lt;p>&lt;code>特别注意：&lt;/code>这里的 &lt;code>ID = 2312&lt;/code> 是我这里的情况，你需要根据你的情况进行相应修改。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;Status code is 200&amp;#34;, function () {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.response.to.have.status(200);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;检查 ID 为 2312 的 name 返回值为 kalacloud&amp;#34;, function () {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> var jsonData = pm.response.json();
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.expect(jsonData.data[0].name).to.eql(&amp;#34;kalacloud&amp;#34;);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/32.jpg"
-width="780"
-height="436"
-srcset="https://xiaoxiano.github.io/p/test/32_hu47217341b9871beaf84079c07f12c825_29010_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/32_hu47217341b9871beaf84079c07f12c825_29010_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="178"
-data-flex-basis="429px"
->&lt;/p>
-&lt;h1 id="如何在-postman-中使用控制台">如何在 Postman 中使用控制台&lt;/h1>
-&lt;p>控制台可以非常直观的显示当前调用的一系列信息，我们可以在「菜单 → view → Show Postman Console」或者点击 Postman 左下角的「Console」图标，打开控制台。&lt;/p>
-&lt;p>我们可以在 Tests 测试脚本中加入 &lt;code>console.log&lt;/code> 来显示我们需要在控制台显示的调用信息。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/33.jpg"
-width="780"
-height="806"
-srcset="https://xiaoxiano.github.io/p/test/33_hu3eb35c9a910b1043d5774817ccd70a83_40816_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/33_hu3eb35c9a910b1043d5774817ccd70a83_40816_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="96"
-data-flex-basis="232px"
->&lt;/p>
-&lt;p>如上图，我们在 Test 脚本中加入以下代码&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">console.log(&amp;#34;本次测试 id 值为&amp;#34;,pm.variables.get(&amp;#34;kalacloud_id&amp;#34;));
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以显示隐藏在变量下面的具体变量值，方便我们测试时，进行相应的判断。&lt;/p>
-&lt;h1 id="如何使用-runner-批量执行测试批量更换变量测试">如何使用 Runner 批量执行测试，批量更换变量测试&lt;/h1>
-&lt;p>当我们有一组 API 且这一组之间相互关联的关系，使用手动测试效率非常低。这时，我们就要用到 Postman 的批量执行（Runner）功能，Runner 不仅可以批量执行 API 调用，还可以批量更换变量。掌握此方法，大幅度提升 API 测试效率。&lt;/p>
-&lt;p>打开你的 Postman ，跟随本教程一起操作一遍吧。&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/34.jpg"
-width="774"
-height="440"
-srcset="https://xiaoxiano.github.io/p/test/34_huc68b28d4dd28a1b9f68975346c2e3229_24137_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/34_huc68b28d4dd28a1b9f68975346c2e3229_24137_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="175"
-data-flex-basis="422px"
->&lt;/p>
-&lt;ul>
-&lt;li>本次批量 API 测试，我们先导入一个 CSV 文件，文件中包含四组等待新建的用户信息，将 CSV 文件导入 Runner 中待用。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/35.jpg"
-width="780"
-height="289"
-srcset="https://xiaoxiano.github.io/p/test/35_hu6db0e7d82d4a94829a1ccc5dcf1f991c_18048_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/35_hu6db0e7d82d4a94829a1ccc5dcf1f991c_18048_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="269"
-data-flex-basis="647px"
->&lt;/p>
-&lt;ul>
-&lt;li>新建 POST 调用页，在 Body 里写上创建用户所需信息，所有值使用变量替代，这些变量将从 CSV 中读取。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/36.jpg"
-width="780"
-height="259"
-srcset="https://xiaoxiano.github.io/p/test/36_hu2f772fbf6a2081459114be20dbd25c84_17021_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/36_hu2f772fbf6a2081459114be20dbd25c84_17021_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="301"
-data-flex-basis="722px"
->&lt;/p>
-&lt;ul>
-&lt;li>新建 GET 调用页，使用 &lt;code>email&lt;/code> 作为查询 KEY 进行查询，如果上一步 POST 执行成功，那么 GET 就能成功查询到新建用户对应的 email，查询到表示 POST 创建成功。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/37.jpg"
-width="780"
-height="266"
-srcset="https://xiaoxiano.github.io/p/test/37_hu0865bc58493d116029bf159eebe8e135_19034_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/37_hu0865bc58493d116029bf159eebe8e135_19034_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="293"
-data-flex-basis="703px"
->&lt;/p>
-&lt;ul>
-&lt;li>在「卡拉云_kalacloud.com_批量测试」这个集合中设置 Tests 中设置全局断言，每当一个调用执行完毕时，进行 Tests 一次判断。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">pm.test(&amp;#34;Status code is 200&amp;#34;, function () {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> pm.response.to.have.status(200);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/38.jpg"
-width="780"
-height="376"
-srcset="https://xiaoxiano.github.io/p/test/38_hu3bcce46d83762d09643fbe1c6435ef67_21759_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/38_hu3bcce46d83762d09643fbe1c6435ef67_21759_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="207"
-data-flex-basis="497px"
->&lt;/p>
-&lt;ul>
-&lt;li>打开「卡拉云_kalacloud.com_批量测试」合集的「Run Collection」的设置页&lt;/li>
-&lt;li>Iterations：这是测试组，我们 CSV 文件中有 4 组测试条目&lt;/li>
-&lt;li>Delay：延迟，一般填 2000 毫秒，太密集的请求，容易被服务器拒绝&lt;/li>
-&lt;li>Data：这里选择我们刚刚的 CSV 文件：kalacloud_users.csv 导入测试数据&lt;/li>
-&lt;li>点击 RUN 蓝色按钮开始执行批量测试&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/test/39.jpg"
-width="780"
-height="677"
-srcset="https://xiaoxiano.github.io/p/test/39_hu55767ebc7fa9a347e2a26860b454c923_28108_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/test/39_hu55767ebc7fa9a347e2a26860b454c923_28108_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="115"
-data-flex-basis="276px"
->&lt;/p>
-&lt;p>从上图可以看到，Postman 按顺序提交了 POST 请求和 GET 请求，并连续测试了从 CSV 文件导入的 4 组数据。一键批量测试，相当高效。&lt;/p></description></item><item><title>flutter基础</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
+&lt;/ul></description></item><item><title>flutter基础</title><link>https://xiaoxiano.github.io/p/flutter/</link><pubDate>Sat, 30 Apr 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/flutter/</guid><description>&lt;h1 id="安装">安装&lt;/h1>
 &lt;h2 id="java版本控制jvms">java版本控制（jvms）&lt;/h2>
 &lt;p>我们可能需要多个java版本，主要是为了&lt;a class="link" href="https://docs.gradle.org/current/userguide/compatibility.html#compatibility" target="_blank" rel="noopener"
 >兼容Gradle版本&lt;/a>。&lt;/p>
@@ -4035,7 +3608,7 @@ data-flex-basis="834px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── example // 运行调试
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── ios // 原生
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">├── lib
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="flutter-1">Flutter&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="flutter-channel">Flutter Channel&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/PlatformChannels.png"
 width="580"
 height="647"
@@ -4123,368 +3696,7 @@ data-flex-basis="215px"
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h3 id="android">Android&lt;/h3>
-&lt;h4 id="java">Java&lt;/h4>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/10.jpg"
-width="757"
-height="292"
-srcset="https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="259"
-data-flex-basis="622px"
->&lt;/p>
-&lt;ul>
-&lt;li>访问修饰符&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>访问范围&lt;/th>
-&lt;th>private&lt;/th>
-&lt;th>default&lt;/th>
-&lt;th>protected&lt;/th>
-&lt;th>public&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>同一类中&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>同一包中(子类和非子类)&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>不同包中的子类&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>√&lt;/td>
-&lt;td>√&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>不同包中的非子类&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>×&lt;/td>
-&lt;td>√&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h4 id="进程和线程">进程和线程&lt;/h4>
-&lt;p>&lt;strong>进程&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Android系统会为每个应用程序创建一个进程&lt;/li>
-&lt;li>如果该应用程序的进程已经存在（已有组件已经在运行），那么刚启动的组件会在已有的进程和线程中启动运行&lt;/li>
-&lt;li>组件可以运行在指定的其他线程，在AndroidManifest文件中的每种组件标签都支持设置 android:process 属性&lt;/li>
-&lt;li>系统会依据进程的“importance hierarchy”等级清除进程，这是为了回收系统资源和新建进程&lt;/li>
-&lt;li>Binder/Socket用于进程间通信&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>线程&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>系统会为应用程序创建一个名为“main”的主线程，不会为每个组件的实例创建单独的线程&lt;/li>
-&lt;li>通常实现Runnable接口来定义线程的执行逻辑，然后将其传递给Thread类来启动线程&lt;/li>
-&lt;li>Handler用于同进程的线程间通信，子线程运行并生成Message，Looper获取message并传递给Handler，Handler逐个获取子线程中的Message&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>概念&lt;/th>
-&lt;th>定义&lt;/th>
-&lt;th>作用&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>主线程 (UI线程、Main Thread)&lt;/td>
-&lt;td>当应用程序启动时，会自动开启1条主线程&lt;/td>
-&lt;td>处理与UI相关的事件(如更新、操作等)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>子线程 (工作线程)&lt;/td>
-&lt;td>人为手动开启的线程&lt;/td>
-&lt;td>执行耗时操作(如网络请求、数据加载等)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>消息 (Message)&lt;/td>
-&lt;td>线程间通讯的数据单元 (即Handler接受&amp;amp;处理的消息对象)&lt;/td>
-&lt;td>存储需操作的通信信息&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>消息队列 (Message Queue)&lt;/td>
-&lt;td>一种数据结构(存储特点：先进先出)&lt;/td>
-&lt;td>存储Handler发送过来的消息(Message)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>处理者 (Handler)&lt;/td>
-&lt;td>主线程与子线程的通信媒介线程消息的主要处理者&lt;/td>
-&lt;td>* 添加消息(Message)到消息队列(Message Queue) &lt;br />*处理循环器(Looper)分派过来的消息(Message)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>循环器 (Looper)&lt;/td>
-&lt;td>消息队列(Message Queue)与处理者(Handler)的通信媒介 &lt;br />每个线程中只能拥有1个Looper，多个线程可往1个Looper所持有的MessageQueue 中发送消息，提供了线程间通信的可能&lt;/td>
-&lt;td>* 消息获取：循环取出消息队列(Message Queue)的消息(Message) &lt;br />* 消息分发：将取出的消息(Message)发送给对应的处理者(Handler)&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>View.post()&lt;/td>
-&lt;td>View类中的方法，适用于任何View对象&lt;/td>
-&lt;td>* 将Runnable对象添加到View的事件队列中 &lt;br />* 获取View的宽高等属性值&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>ThreadLocal&lt;/td>
-&lt;td>提供线程本地变量&lt;/td>
-&lt;td>ThreadLocal为每一个线程开辟了一个独立的存储器，只有对应的线程才能够访问其数据&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>runOnUiThread()&lt;/td>
-&lt;td>Activity类中的方法，仅适用于Activity&lt;/td>
-&lt;td>将Runnable对象添加到Activity的事件队列中，可以确保其在当前主线程中执行&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;p>参考：&lt;a class="link" href="https://blog.csdn.net/qq_32907491/article/details/132645806" target="_blank" rel="noopener"
->Handler&lt;/a>、&lt;a class="link" href="https://www.cnblogs.com/andy-songwei/category/1609976.html" target="_blank" rel="noopener"
->Android多线程&lt;/a>&lt;/p>
-&lt;h4 id="生命周期">生命周期&lt;/h4>
-&lt;p>&lt;strong>View的生命周期方法&lt;/strong>&lt;/p>
-&lt;p>&lt;a class="link" href="https://developer.android.com/develop/ui/views/layout/custom-views/custom-components#extend-ondraw-and-onmeasure" target="_blank" rel="noopener"
->英文原表&lt;/a>&lt;/p>
-&lt;html>&lt;head>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8">&lt;/head>&lt;body>&lt;table border="2" width="85%" align="center" cellpadding="5">
-&lt;thead>
-&lt;tr>&lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">类别&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">方法&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">描述&lt;/font>&lt;/font>&lt;/th>&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">创建&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数有两种形式，一种是在通过代码创建视图时调用的，另一种是在通过布局文件填充视图时调用的。第二种形式解析并应用布局文件中定义的属性。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFinishInflate()">onFinishInflate()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">在视图及其所有子视图都从 XML 中映射后调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">布局&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onMeasure(int,%20int)">onMeasure(&lt;wbr>int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">调用来确定此视图及其所有子视图的尺寸要求。
-&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onLayout(boolean,%20int,%20int,%20int,%20int)">onLayout(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图必须为其所有子视图分配大小和位置时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onSizeChanged(int,%20int,%20int,%20int)">onSizeChanged(&lt;wbr>int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图的大小改变时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">绘画&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDraw(android.graphics.Canvas)">onDraw(&lt;wbr>Canvas)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图必须呈现其内容时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td rowspan="4">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">事件处理&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyDown(int,%20android.view.KeyEvent)">onKeyDown(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键事件时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyUp(int,%20android.view.KeyEvent)">onKeyUp(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键释放事件时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTrackballEvent(android.view.MotionEvent)">onTrackballEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当轨迹球运动事件发生时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTouchEvent(android.view.MotionEvent)">onTouchEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生触摸屏运动事件时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">焦点&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFocusChanged(boolean,%20int,%20android.graphics.Rect)">onFocusChanged(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> Rect)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowFocusChanged(boolean)">onWindowFocusChanged(&lt;wbr>boolean)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">附加&lt;/font>&lt;/font>&lt;/td>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onAttachedToWindow()">onAttachedToWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图附加到窗口时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDetachedFromWindow()">onDetachedFromWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图与其窗口分离时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowVisibilityChanged(int)">onWindowVisibilityChanged(&lt;wbr>int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
-&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口的可见性发生改变时调用。&lt;/font>&lt;/font>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>&lt;/body>&lt;/html>
-&lt;p>&lt;strong>Activity生命周期&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/14.png"
-width="1030"
-height="1250"
-srcset="https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="82"
-data-flex-basis="197px"
->&lt;/p>
-&lt;p>&lt;strong>Activity的启动&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onCreate&lt;/strong>方法，将资源 ID &lt;code>R.layout.main_activity&lt;/code> 更改为 &lt;code>setContentView()&lt;/code>&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowAttributesChanged 方法，而且这个方法连续调用多次&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用构造方法&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用onFinishInflate方法，说明这个时候View已经填充完毕，但是还没开始触发绘制过程&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onstart&lt;/strong>方法， 进入“已启动”状态&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 再次调用 onWindowAttributesChanged 方法&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onResume&lt;/strong>，“已恢复”状态，进行后面初始化步骤，并进入与用户互动的状态&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用onAttachedToWindow，Activity跟Window进行绑定&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用onAttachedToWindow，View跟Window进行绑定&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用 onWindowVisibilityChanged(int visibility)，参数变为 &lt;code>View.VISIABLE&lt;/code>&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用onMeasure，开始测量&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用onSizeChanged，表示测量完成，尺寸发生了变化&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用onLayout，开始摆放位置&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用 onDraw，开始绘制&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowFocusChanged(boolean hasFocus)，此时为true，代表窗体已经获取了焦点&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用 onWindowFocusChanged(boolean hasWindowFocus)，此时为true，代表当前的控件获取了Window焦点，当调用这个方法后说明当前Activity中的View才是真正的可见了&lt;/li>
-&lt;/ol>
-&lt;p>&lt;strong>Activity的退出&lt;/strong>&lt;/p>
-&lt;ol>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用 &lt;strong>onPause&lt;/strong>，中断时的暂停状态&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用 onWindowVisibilityChanged(int visibility)，参数变为 &lt;code>View.GONE&lt;/code>，View中对应的Window隐藏&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowFocusChanged(boolean hasFocus)，此时为false，说明Actvity所在的Window已经失去焦点&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用 onStop，此时Activity已经切换到后台&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用 onDestory，此时Activity开始准备销毁，实际上并不代表Activity已经销毁&lt;/li>
-&lt;li>&lt;code>View&lt;/code> 调用 onDetachedFromWindow，此时View 与Window解除绑定&lt;/li>
-&lt;li>&lt;strong>Activity&lt;/strong> 调用 onDetathedFromWindow ，此时Activity 与Window 解除绑定&lt;/li>
-&lt;li>View即将被销毁，可以在 &lt;code>onDetachedFromWindow&lt;/code> 方法中做一些资源释放，防止内存泄漏&lt;/li>
-&lt;/ol>
-&lt;h4 id="android四大组件">android四大组件&lt;/h4>
-&lt;p>&lt;strong>activity&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>每个 Activity 提供一个用户界面窗口，一个app 由多个Activity 组成，其中一个主 Activity为程序入口。&lt;/p>
-&lt;ul>
-&lt;li>应用窗口（&lt;code>TYPE_APPLICATION&lt;/code>）：Activity 的默认窗口，层级最低。&lt;/li>
-&lt;li>子窗口（&lt;code>TYPE_APPLICATION_PANEL&lt;/code>）：依附于应用窗口（如 Dialog）。&lt;/li>
-&lt;li>系统窗口（&lt;code>TYPE_TOAST&lt;/code>）：无需 Activity 承载，直接由系统管理（如 Toast、悬浮窗）。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Activity通过 &lt;code>Intent&lt;/code> 和 &lt;code>Bundle&lt;/code> 实现数据传递。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>每一个Activity都必须要在AndroidManifest.xml配置。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>service&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Service通常位于后台运行，没有UI。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>service分为两种&lt;/p>
-&lt;ul>
-&lt;li>started（启动）：由其他组件调用startService()方法启动，可以在后台无限期运行，调用stopSelf()或由其他组件调用stopService()方法才会停止。&lt;/li>
-&lt;li>bound（绑定）：调用bindService()者与服务绑定在了一起，调用者一旦退出，服务也就终止。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>必须在AndroidManifest.xml配置&lt;code>&amp;lt;service android:name=&amp;quot;.ExampleService&amp;quot;/&amp;gt;&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>content provider&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>Android 系统为常见数据类型（如视频、音频、图像、电话簿等）提供了 ContentProvider 接口，用于应用程序之间共享数据。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>通过 URI 标识数据资源，并通过 ContentResolver 提供对数据的 CRUD 操作。&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>broadcast receiver&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>事件触发：当特定事件发生时（如来电、短信、电池电量变化等），Android系统会生成特定的Intent对象并自动进行广播。&lt;/li>
-&lt;li>接收处理：针对特定事件注册的BroadcastReceiver会接收到这些广播，并获取Intent对象中的数据进行处理。
-&lt;ul>
-&lt;li>动态注册&lt;/li>
-&lt;li>静态注册：AndroidManifest文件&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h4 id="builder模式">builder模式&lt;/h4>
-&lt;p>当一个对象有很多属性，比如用户对象有很多属性：用户名、ID、性别、地址、工作类型、联系方式等等，写多个构造方法和set、get将难以阅读维护，我们可以采用java链式调用这种更优雅的方式。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public class User {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private User(Builder builder) {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 初始化变量
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = builder.name;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = builder.age;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = builder.address;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static class Builder {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 与外部User类属性一致
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 必填属性
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder(String name) {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = name;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Age(int age) {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = age;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Address(String address) {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = address;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 提供外部类实例对象
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public User build() {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 合理性做判断
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (age &lt;span class="err">&amp;lt;&lt;/span>= 0) {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> throw new RuntimeException(&amp;#34;年龄不合法&amp;#34;);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return new User(this);
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//使用
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User user = new User.Builder(&amp;#34;UserName&amp;#34;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Age(18)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Address(&amp;#34;China&amp;#34;)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .build();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外，可以使用IDE中的插件InnerBuilder生成代码。&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 在类中右键Generate选择Builder
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class User {
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="channel">Channel&lt;/h4>
+&lt;h3 id="手动创建channel">手动创建Channel&lt;/h3>
 &lt;ol>
 &lt;li>
 &lt;p>创建Channel&lt;/p>
@@ -4551,7 +3763,7 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>向dart发送消息：&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">void send(T message) // dart不回复
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">void send(T message,BasicMessageChannel.Reply&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">T&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> callback) //dart回复
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>pigeon生成代码&lt;/strong>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="pigeon生成channel">pigeon生成channel&lt;/h3>
 &lt;ol>
 &lt;li>
 &lt;p>新建flutter_plugin项目，删除flutter_plugin/lib下所有自带代码&lt;/p>
@@ -4804,7 +4016,498 @@ data-flex-basis="197px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> );
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="androidmanifestxml">AndroidManifest.xml&lt;/h4>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="常用-api">常用 API：&lt;/h3>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/FlutterPlugin.FlutterPluginBinding.html" target="_blank" rel="noopener"
+>FlutterPluginBinding&lt;/a>: 向所有 FlutterEngine 注册的插件提供可用的资源。&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityPluginBinding.html" target="_blank" rel="noopener"
+>ActivityPluginBinding&lt;/a> : 绑定使ActivityAware插件可以访问关联的Activity和Activity的生命周期方法。&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityAware.html" target="_blank" rel="noopener"
+>ActivityAware&lt;/a>: FlutterPlugin 把 Activity生命周期事件 关联到 FlutterEngine中运行的Activity&lt;/p>
+&lt;p>&lt;a class="link" href="https://api.flutter-io.cn/javadoc/io/flutter/embedding/android/FlutterView.html" target="_blank" rel="noopener"
+>FlutterView&lt;/a>: 在 Android 设备上显示 Flutter UI&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/app/NotificationManager" target="_blank" rel="noopener"
+>NotificationManager&lt;/a>：用于通知用户发生的事件&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/content/res/Resources" target="_blank" rel="noopener"
+>Resources&lt;/a>: 用于访问应用程序资源的类。&lt;/p>
+&lt;h2 id="android">Android&lt;/h2>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/10.jpg"
+width="757"
+height="292"
+srcset="https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/flutter/10_hu9850a35ccc7cfd8280aafa0e3eada853_24691_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="259"
+data-flex-basis="622px"
+>&lt;/p>
+&lt;ul>
+&lt;li>访问修饰符&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>访问范围&lt;/th>
+&lt;th>private&lt;/th>
+&lt;th>default&lt;/th>
+&lt;th>protected&lt;/th>
+&lt;th>public&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>同一类中&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>同一包中(子类和非子类)&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>不同包中的子类&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>不同包中的非子类&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>×&lt;/td>
+&lt;td>√&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="多线程">多线程&lt;/h3>
+&lt;h4 id="进程和线程">进程和线程&lt;/h4>
+&lt;p>&lt;strong>进程&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>进程就是运行的程序，是受操作系统管理的独立单元。例如Windows任务管理器中的exe&lt;/li>
+&lt;li>Binder/Socket用于进程间通信&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>线程&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>线程是操作系统调度的最小单元，在一个进程中可以创建多个线程，有的加载网页，有的处理缓存，有的进行下载&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>概念&lt;/th>
+&lt;th>定义&lt;/th>
+&lt;th>作用&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>主线程(UI thread)&lt;/td>
+&lt;td>当应用程序启动时，会自动开启1条主线程&lt;/td>
+&lt;td>处理与UI相关的事件(如更新、操作等)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>子线程 (工作线程)&lt;/td>
+&lt;td>人为手动开启的线程&lt;/td>
+&lt;td>执行耗时操作(如网络请求、数据加载等)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>消息 (Message)&lt;/td>
+&lt;td>线程间通讯的数据单元 (即Handler接受&amp;amp;处理的消息对象)&lt;/td>
+&lt;td>存储需操作的通信信息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>消息队列 (Message Queue)&lt;/td>
+&lt;td>一种数据结构(存储特点：先进先出)&lt;/td>
+&lt;td>存储Handler发送过来的消息(Message)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>处理者 (Handler)&lt;/td>
+&lt;td>主线程与子线程的通信媒介线程消息的主要处理者&lt;/td>
+&lt;td>* 添加消息(Message)到消息队列(Message Queue) &lt;br />* 处理循环器(Looper)分派过来的消息(Message)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>循环器 (Looper)&lt;/td>
+&lt;td>消息队列(Message Queue)与处理者(Handler)的通信媒介 &lt;br />每个线程中只能拥有1个Looper，多个线程可往1个Looper所持有的MessageQueue 中发送消息，提供了线程间通信的可能&lt;/td>
+&lt;td>* 消息获取：循环取出消息队列(Message Queue)的消息(Message) &lt;br />* 消息分发：将取出的消息(Message)发送给对应的处理者(Handler)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>View.post()&lt;/td>
+&lt;td>View类中的方法，适用于任何View对象&lt;/td>
+&lt;td>* 将Runnable对象添加到View的事件队列中 &lt;br />* 获取View的宽高等属性值&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ThreadLocal&lt;/td>
+&lt;td>提供线程本地变量&lt;/td>
+&lt;td>ThreadLocal为每一个线程开辟了一个独立的存储器，只有对应的线程才能够访问其数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>runOnUiThread()&lt;/td>
+&lt;td>Activity类中的方法，仅适用于Activity&lt;/td>
+&lt;td>将Runnable对象添加到Activity的事件队列中，可以确保其在当前主线程中执行&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="线程的状态">线程的状态&lt;/h4>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/15.png"
+width="1321"
+height="808"
+srcset="https://xiaoxiano.github.io/p/flutter/15_hu1667289932fc3323197a8f8c7b5d5e95_113884_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/15_hu1667289932fc3323197a8f8c7b5d5e95_113884_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+>&lt;/p>
+&lt;h4 id="使用-2">使用&lt;/h4>
+&lt;ul>
+&lt;li>继承 Thread 类&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 1.继承Thread类
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">class MyThread extends Thread{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 2.复写run
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void run(){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 线程具体任务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(＂Hello World＂)；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 3.实例化线程
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MyThread mt=new MyThread(“线程名称”);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 4.启动线程
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mt.start();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>实现 Runnable 接口&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 1.实现 Runnable 接口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class TestRunnable implements Runnable {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 2.复写run
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public void run() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 线程具体任务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> System.out.println(＂Hello World＂)；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 3.创建Runnable对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">MyThread mt=new MyThread();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 4.Runnable作为参数实例化线程
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Thread td=new Thread(mt);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">// 5.启动线程
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">td.start();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="同步">同步&lt;/h4>
+&lt;p>多个线程需要共享同一个数据的存取，但同时使用同一个资源会造成冲突。&lt;/p>
+&lt;p>synchronized 关键字自动提供了锁,如果一个方法用 synchronized 关键字声明，那么对象的锁将保护整个方法。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public synchronized void method(){
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>例：支付宝转账&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public synchronized void transfer(int from,int to,int amount) throws InterruptedException{
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 锁中的条件管理其它调用的线程。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> while (accounts[from]＜amount) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> wait()；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 转账的操作
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> accounts[from]=accounts[from]-amount；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> accounts[to]=accounts[to]+amount；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> notifyAll()；
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="线程通信">线程通信&lt;/h4>
+&lt;p>&lt;strong>Handler&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Handler用于同进程的线程间通信&lt;/li>
+&lt;li>子线程运行并生成Message，Looper获取message并传递给Handler，Handler逐个获取子线程中的Message&lt;/li>
+&lt;li>有Handler.sendMessage()、Handler.post()两种使用方法&lt;/li>
+&lt;li>如果有多个任务同时执行时则会显得代码臃肿。Android 提供了 AsyncTask，使异步任务更简洁&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>AsyncTask&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 1.继承AsyncTask类。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 为3个泛型参数指定类型；若不使用，可用java.lang.Void类型代替
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private class MyTask extends AsyncTask&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">Params&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">Progress&lt;/span>&lt;span class="err">,&lt;/span> &lt;span class="na">Result&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 执行线程任务前的操作（可选）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> protected void onPreExecute() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 执行任务中的耗时操作（必须）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> protected String doInBackground(String... params) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 自定义的线程任务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可调用publishProgress（）显示进度, 之后将执行onProgressUpdate（）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> publishProgress(count);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 在主线程 显示线程任务执行的进度（可选）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> protected void onProgressUpdate(Integer... progresses) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 将执行结果显示到UI组件（必须）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> protected void onPostExecute(String result) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // UI操作
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 将异步任务设置为：取消状态
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> @Override
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> protected void onCancelled() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 2.创建AsyncTask子类的实例对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> MyTask mTask = new MyTask();
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 3.手动调用execute(Params... params) 执行异步线程任务
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> mTask.execute()；
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="生命周期">生命周期&lt;/h3>
+&lt;p>&lt;strong>View的生命周期方法&lt;/strong>&lt;/p>
+&lt;p>&lt;a class="link" href="https://developer.android.com/develop/ui/views/layout/custom-views/custom-components#extend-ondraw-and-onmeasure" target="_blank" rel="noopener"
+>英文原表&lt;/a>&lt;/p>
+&lt;html>&lt;head>&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8">&lt;/head>&lt;body>&lt;table border="2" width="85%" align="center" cellpadding="5">
+&lt;thead>
+&lt;tr>&lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">类别&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">方法&lt;/font>&lt;/font>&lt;/th> &lt;th>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">描述&lt;/font>&lt;/font>&lt;/th>&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">创建&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">构造函数有两种形式，一种是在通过代码创建视图时调用的，另一种是在通过布局文件填充视图时调用的。第二种形式解析并应用布局文件中定义的属性。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFinishInflate()">onFinishInflate()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">在视图及其所有子视图都从 XML 中映射后调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">布局&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onMeasure(int,%20int)">onMeasure(&lt;wbr>int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">调用来确定此视图及其所有子视图的尺寸要求。
+&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onLayout(boolean,%20int,%20int,%20int,%20int)">onLayout(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图必须为其所有子视图分配大小和位置时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onSizeChanged(int,%20int,%20int,%20int)">onSizeChanged(&lt;wbr>int,&lt;wbr> int,&lt;wbr> int,&lt;wbr> int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当此视图的大小改变时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">绘画&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDraw(android.graphics.Canvas)">onDraw(&lt;wbr>Canvas)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图必须呈现其内容时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="4">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">事件处理&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyDown(int,%20android.view.KeyEvent)">onKeyDown(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onKeyUp(int,%20android.view.KeyEvent)">onKeyUp(&lt;wbr>int,&lt;wbr> KeyEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生按键释放事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTrackballEvent(android.view.MotionEvent)">onTrackballEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当轨迹球运动事件发生时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onTouchEvent(android.view.MotionEvent)">onTouchEvent(&lt;wbr>MotionEvent)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当发生触摸屏运动事件时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="2">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">焦点&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onFocusChanged(boolean,%20int,%20android.graphics.Rect)">onFocusChanged(&lt;wbr>boolean,&lt;wbr> int,&lt;wbr> Rect)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowFocusChanged(boolean)">onWindowFocusChanged(&lt;wbr>boolean)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口获得或失去焦点时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td rowspan="3">&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">附加&lt;/font>&lt;/font>&lt;/td>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onAttachedToWindow()">onAttachedToWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图附加到窗口时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onDetachedFromWindow()">onDetachedFromWindow()&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当视图与其窗口分离时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code translate="no" dir="ltr">&lt;code translate="no" dir="ltr">&lt;a href="file:///C:/reference/android/view/View#onWindowVisibilityChanged(int)">onWindowVisibilityChanged(&lt;wbr>int)&lt;/a>&lt;/code>&lt;/code>&lt;/td>
+&lt;td>&lt;font style="vertical-align: inherit;">&lt;font style="vertical-align: inherit;">当包含视图的窗口的可见性发生改变时调用。&lt;/font>&lt;/font>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>&lt;/body>&lt;/html>
+&lt;p>&lt;strong>Activity生命周期&lt;/strong>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/14.png"
+width="1030"
+height="1250"
+srcset="https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/flutter/14_huc8ed9721ed893a209efda528a311345b_26410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="82"
+data-flex-basis="197px"
+>&lt;/p>
+&lt;p>&lt;strong>Activity的启动&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onCreate&lt;/strong>方法，将资源 ID &lt;code>R.layout.main_activity&lt;/code> 更改为 &lt;code>setContentView()&lt;/code>&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowAttributesChanged 方法，而且这个方法连续调用多次&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用构造方法&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用onFinishInflate方法，说明这个时候View已经填充完毕，但是还没开始触发绘制过程&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onstart&lt;/strong>方法， 进入“已启动”状态&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 再次调用 onWindowAttributesChanged 方法&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用&lt;strong>onResume&lt;/strong>，“已恢复”状态，进行后面初始化步骤，并进入与用户互动的状态&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用onAttachedToWindow，Activity跟Window进行绑定&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用onAttachedToWindow，View跟Window进行绑定&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用 onWindowVisibilityChanged(int visibility)，参数变为 &lt;code>View.VISIABLE&lt;/code>&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用onMeasure，开始测量&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用onSizeChanged，表示测量完成，尺寸发生了变化&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用onLayout，开始摆放位置&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用 onDraw，开始绘制&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowFocusChanged(boolean hasFocus)，此时为true，代表窗体已经获取了焦点&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用 onWindowFocusChanged(boolean hasWindowFocus)，此时为true，代表当前的控件获取了Window焦点，当调用这个方法后说明当前Activity中的View才是真正的可见了&lt;/li>
+&lt;/ol>
+&lt;p>&lt;strong>Activity的退出&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用 &lt;strong>onPause&lt;/strong>，中断时的暂停状态&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用 onWindowVisibilityChanged(int visibility)，参数变为 &lt;code>View.GONE&lt;/code>，View中对应的Window隐藏&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用onWindowFocusChanged(boolean hasFocus)，此时为false，说明Actvity所在的Window已经失去焦点&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用 onStop，此时Activity已经切换到后台&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用 onDestory，此时Activity开始准备销毁，实际上并不代表Activity已经销毁&lt;/li>
+&lt;li>&lt;code>View&lt;/code> 调用 onDetachedFromWindow，此时View 与Window解除绑定&lt;/li>
+&lt;li>&lt;strong>Activity&lt;/strong> 调用 onDetathedFromWindow ，此时Activity 与Window 解除绑定&lt;/li>
+&lt;li>View即将被销毁，可以在 &lt;code>onDetachedFromWindow&lt;/code> 方法中做一些资源释放，防止内存泄漏&lt;/li>
+&lt;/ol>
+&lt;h3 id="android四大组件">android四大组件&lt;/h3>
+&lt;p>&lt;strong>activity&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>每个 Activity 提供一个用户界面窗口，一个app 由多个Activity 组成，其中一个主 Activity为程序入口。&lt;/p>
+&lt;ul>
+&lt;li>应用窗口（&lt;code>TYPE_APPLICATION&lt;/code>）：Activity 的默认窗口，层级最低。&lt;/li>
+&lt;li>子窗口（&lt;code>TYPE_APPLICATION_PANEL&lt;/code>）：依附于应用窗口（如 Dialog）。&lt;/li>
+&lt;li>系统窗口（&lt;code>TYPE_TOAST&lt;/code>）：无需 Activity 承载，直接由系统管理（如 Toast、悬浮窗）。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Activity通过 &lt;code>Intent&lt;/code> 和 &lt;code>Bundle&lt;/code> 实现数据传递。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>每一个Activity都必须要在AndroidManifest.xml配置。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>service&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Service通常位于后台运行，没有UI。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>service分为两种&lt;/p>
+&lt;ul>
+&lt;li>started（启动）：由其他组件调用startService()方法启动，可以在后台无限期运行，调用stopSelf()或由其他组件调用stopService()方法才会停止。&lt;/li>
+&lt;li>bound（绑定）：调用bindService()者与服务绑定在了一起，调用者一旦退出，服务也就终止。&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>必须在AndroidManifest.xml配置&lt;code>&amp;lt;service android:name=&amp;quot;.ExampleService&amp;quot;/&amp;gt;&lt;/code>&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>content provider&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Android 系统为常见数据类型（如视频、音频、图像、电话簿等）提供了 ContentProvider 接口，用于应用程序之间共享数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>通过 URI 标识数据资源，并通过 ContentResolver 提供对数据的 CRUD 操作。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>broadcast receiver&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>事件触发：当特定事件发生时（如来电、短信、电池电量变化等），Android系统会生成特定的Intent对象并自动进行广播。&lt;/li>
+&lt;li>接收处理：针对特定事件注册的BroadcastReceiver会接收到这些广播，并获取Intent对象中的数据进行处理。
+&lt;ul>
+&lt;li>动态注册&lt;/li>
+&lt;li>静态注册：AndroidManifest文件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="builder模式">builder模式&lt;/h3>
+&lt;p>当一个对象有很多属性，比如用户对象有很多属性：用户名、ID、性别、地址、工作类型、联系方式等等，写多个构造方法和set、get将难以阅读维护，我们可以采用java链式调用这种更优雅的方式。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">public class User {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private User(Builder builder) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 初始化变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = builder.name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = builder.age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = builder.address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> static class Builder {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 与外部User类属性一致
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 必填属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder(String name) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.name = name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Age(int age) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.age = age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 可选属性
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public Builder Address(String address) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> this.address = address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return this;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 提供外部类实例对象
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> public User build() {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> // 合理性做判断
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if (age &lt;span class="err">&amp;lt;&lt;/span>= 0) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> throw new RuntimeException(&amp;#34;年龄不合法&amp;#34;);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> return new User(this);
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">//使用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">User user = new User.Builder(&amp;#34;UserName&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Age(18)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .Address(&amp;#34;China&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> .build();
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>另外，可以使用IDE中的插件InnerBuilder生成代码。&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 在类中右键Generate选择Builder
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">public class User {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private final String name;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private int age;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> private String address;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="androidmanifestxml">AndroidManifest.xml&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">manifest&lt;/span> &lt;span class="na">xmlns:android&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://schemas.android.com/apk/res/android&amp;#34;&lt;/span>
@@ -4927,7 +4630,7 @@ class="gallery-image"
 data-flex-grow="307"
 data-flex-basis="737px"
 >&lt;/p>
-&lt;h4 id="xml视图">XML视图&lt;/h4>
+&lt;h3 id="xml视图">XML视图&lt;/h3>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/layout-editor.png"
 width="3788"
 height="2182"
@@ -5007,20 +4710,40 @@ class="gallery-image"
 data-flex-grow="128"
 data-flex-basis="308px"
 >&lt;/p>
-&lt;h3 id="常用-api">常用 API：&lt;/h3>
-&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/FlutterPlugin.FlutterPluginBinding.html" target="_blank" rel="noopener"
->FlutterPluginBinding&lt;/a>: 向所有 FlutterEngine 注册的插件提供可用的资源。&lt;/p>
-&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityPluginBinding.html" target="_blank" rel="noopener"
->ActivityPluginBinding&lt;/a> : 绑定使ActivityAware插件可以访问关联的Activity和Activity的生命周期方法。&lt;/p>
-&lt;p>&lt;a class="link" href="https://api.flutter.dev/javadoc/io/flutter/embedding/engine/plugins/activity/ActivityAware.html" target="_blank" rel="noopener"
->ActivityAware&lt;/a>: FlutterPlugin 把 Activity生命周期事件 关联到 FlutterEngine中运行的Activity&lt;/p>
-&lt;p>&lt;a class="link" href="https://api.flutter-io.cn/javadoc/io/flutter/embedding/android/FlutterView.html" target="_blank" rel="noopener"
->FlutterView&lt;/a>: 在 Android 设备上显示 Flutter UI&lt;/p>
-&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/app/NotificationManager" target="_blank" rel="noopener"
->NotificationManager&lt;/a>：用于通知用户发生的事件&lt;/p>
-&lt;p>&lt;a class="link" href="https://developer.android.com/reference/android/content/res/Resources" target="_blank" rel="noopener"
->Resources&lt;/a>: 用于访问应用程序资源的类。&lt;/p>
-&lt;h2 id="调试">调试&lt;/h2>
+&lt;h3 id="使用svg">使用SVG&lt;/h3>
+&lt;p>图片转SVG：AI打开图片 -&amp;gt; 点击图片 -&amp;gt; 右侧栏图像描摹 -&amp;gt; 下拉框素描图稿 -&amp;gt; 导出为SVG&lt;/p>
+&lt;p>SVG转Android xml：右键drawable -&amp;gt; New -&amp;gt; Vector Asset -&amp;gt; Local file&lt;/p>
+&lt;p>用在 ImageView ：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">ImageView&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:layout_width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100dp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:layout_height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100dp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@drawable/ic_arrow&amp;#34;&lt;/span>&lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>作为背景：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">View&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:layout_width&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100dp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:layout_height&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;100dp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">android:background&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;@drawable/ic_arrow&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>作为自定义 View 使用&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">override fun onDraw(canvas: Canvas?) {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> super.onDraw(canvas)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ArrowSvgObject.getDrawable(
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> canvas,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> viewRect.width(),
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> viewRect.height()
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> )
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>作为 Drawable 使用&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">val icon = ArrowSvgObject.getDrawable(size)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">imageView.setImageDrawable(icon)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>作为 Icon Tinting 使用&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">val blueTintedIcon = ArrowSvgObject.getTintedDrawable(size, Color.BLUE)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="调试">调试&lt;/h2>
 &lt;h3 id="vs-code-debug">VS Code debug&lt;/h3>
 &lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1Jf4y1S7Bw/?spm%5C_id%5C_from=333.788.videocard.0&amp;amp;vd_source=e3bb7819c2465f903aea3ffaa2d0773b" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
@@ -5091,11 +4814,11 @@ data-flex-basis="287px"
 &lt;p>模拟器报错：找不到libandroid-emu-metrics.dll，重启hyper-v&lt;/p>
 &lt;p>&lt;strong>vscode连接第三方模拟器&lt;/strong>&lt;/p>
 &lt;p>项目目录下执行：&lt;code>adb connect 127.0.0.1:[port]&lt;/code>&lt;/p>
-&lt;h2 id="ai画图">AI画图&lt;/h2>
-&lt;p>Ai 设置：视图-&amp;gt;显示网格&lt;/p>
-&lt;p>多边形变换：多边形工具-&amp;gt;自定义变换工具&lt;/p>
+&lt;h2 id="illustratorai画图">illustrator(AI)画图&lt;/h2>
+&lt;p>Ai 设置：视图 -&amp;gt; 显示网格&lt;/p>
+&lt;p>多边形变换：多边形工具 -&amp;gt; 自定义变换工具&lt;/p>
 &lt;p>缩放：鼠标左键向右划放大、向左划缩小&lt;/p>
-&lt;p>形状合成：选中区域-&amp;gt;形状生成器工具-&amp;gt;穿过需要的区域-&amp;gt;按住Alt穿过不要的区域&lt;/p>
+&lt;p>形状合成：选中区域 -&amp;gt; 形状生成器工具 -&amp;gt; 穿过需要的区域 -&amp;gt; 按住Alt穿过不要的区域&lt;/p>
 &lt;p>渐变：双击圆圈弹出调色板&lt;/p>
 &lt;h2 id="动画">动画&lt;/h2>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/flutter/donghua.png"
@@ -5259,7 +4982,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>输出 build/app/outputs/bundle/release/app-release.aab&lt;/p>
 &lt;h2 id="其他-1">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
-&lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>freenom自动续期（废弃）</title><link>https://xiaoxiano.github.io/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15完全被封请去仓库看文档">本github actions方法已于2022-07-15完全被封，请去仓库看文档&lt;/h1>
+&lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>freenom自动续期（废弃）</title><link>https://xiaoxiano.github.io/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15被封详情请去仓库看文档">本github actions方法已于2022-07-15被封，详情请去仓库看文档&lt;/h1>
 &lt;h1 id="freenom自动续期">freenom自动续期&lt;/h1>
 &lt;ol>
 &lt;li>
@@ -5850,7 +5573,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="actions自动化部署前后端分离项目">actions自动化部署前后端分离项目&lt;/h1>
 &lt;p>&lt;a class="link" href="https://dev.to/2nit/rails-cd-with-docker-github-actions-and-vps-4hi4" target="_blank" rel="noopener"
 >参考文章&lt;/a>&lt;/p>
-&lt;p>本文使用github actions + docker compose部署到github container registry（这适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
+&lt;p>本文使用github actions + docker compose部署到github container registry（适用于中小型项目） 附：&lt;a class="link" href="https://cloudonaut.io/amazon-ecr-vs-docker-hub-vs-github-container-registry/" target="_blank" rel="noopener"
 >容器注册平台对比&lt;/a>&lt;/p>
 &lt;ol>
 &lt;li>
@@ -5979,7 +5702,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="4">
 &lt;li>新建docker-compose-app.yaml和代理容器docker-compose-nginx.yaml,&lt;a class="link" href="https://github.com/buchdag/letsencrypt-nginx-proxy-companion-compose" target="_blank" rel="noopener"
->示例文档&lt;/a>。如有不懂，请多看几遍&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
+>示例文档&lt;/a>。如有不懂，请查看&lt;a class="link" href="https://github.com/nginx-proxy/acme-companion/tree/main/docs" target="_blank" rel="noopener"
 >acme-companion&lt;/a>和示例文档。最后，&lt;a class="link" href="https://github.com/nginx-proxy/nginx-proxy/discussions/1755" target="_blank" rel="noopener"
 >Issues中的实例&lt;/a>可能会有帮助。&lt;/li>
 &lt;/ol></description></item><item><title>常用命令</title><link>https://xiaoxiano.github.io/p/command/</link><pubDate>Thu, 22 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/command/</guid><description>&lt;h1 id="git">git&lt;/h1>

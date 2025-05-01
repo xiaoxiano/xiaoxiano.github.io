@@ -1,1 +1,3201 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投资 on Janus</title><link>https://xiaoxiano.github.io/categories/investment/</link><description>Recent content in 投资 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/investment/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>投资 on Janus</title><link>https://xiaoxiano.github.io/categories/investment/</link><description>Recent content in 投资 on Janus</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://xiaoxiano.github.io/categories/investment/index.xml" rel="self" type="application/rss+xml"/><item><title>投资港美A股</title><link>https://xiaoxiano.github.io/p/stocks/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/stocks/</guid><description>&lt;h1 id="经济">经济&lt;/h1>
+&lt;h2 id="流动性">流动性&lt;/h2>
+&lt;p>流动性，是股市的领先指标，也是影响股价最重要的因素之一。&lt;/p>
+&lt;h3 id="中国市场">中国市场&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>方法1：看M2同比与名义GDP同比的差值，其逻辑在于央行说的“货币供应量要与名义GDP增速相一致”，如果两者缺口大，那就是出现了过剩的流动性。
+&lt;details class="spoiler " id="spoiler-0">
+&lt;summary>点击展开和折叠&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>日期&lt;/th>
+&lt;th>&lt;a class="link" href="https://data.eastmoney.com/cjsj/hbgyl.html" target="_blank" rel="noopener"
+>货币供应量-货币和准货币(M2)&lt;/a>&lt;/th>
+&lt;th>同比(季合计)&lt;/th>
+&lt;th>国内生产总值(GDP)&lt;/th>
+&lt;th>同比&lt;/th>
+&lt;th>同比差值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>2024年06月份&lt;/td>
+&lt;td>3050161.54&lt;/td>
+&lt;td>20.40%&lt;/td>
+&lt;td>616836&lt;/td>
+&lt;td>5.00%&lt;/td>
+&lt;td>15.40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2024年03月份&lt;/td>
+&lt;td>3047952.16&lt;/td>
+&lt;td>25.70%&lt;/td>
+&lt;td>296299.5&lt;/td>
+&lt;td>5.30%&lt;/td>
+&lt;td>20.40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年12月份&lt;/td>
+&lt;td>2922713.33&lt;/td>
+&lt;td>30.00%&lt;/td>
+&lt;td>1260582.1&lt;/td>
+&lt;td>5.20%&lt;/td>
+&lt;td>24.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年9月&lt;/td>
+&lt;td>2896659.11&lt;/td>
+&lt;td>31.60%&lt;/td>
+&lt;td>913027&lt;/td>
+&lt;td>5.20%&lt;/td>
+&lt;td>26.40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年6月&lt;/td>
+&lt;td>2873023.83&lt;/td>
+&lt;td>35.30%&lt;/td>
+&lt;td>593034.2&lt;/td>
+&lt;td>5.50%&lt;/td>
+&lt;td>29.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2023年3月&lt;/td>
+&lt;td>2814566.31&lt;/td>
+&lt;td>38.20%&lt;/td>
+&lt;td>284996.6&lt;/td>
+&lt;td>4.50%&lt;/td>
+&lt;td>33.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2022年12月&lt;/td>
+&lt;td>2664320.84&lt;/td>
+&lt;td>36.00%&lt;/td>
+&lt;td>1210207.2&lt;/td>
+&lt;td>3.00%&lt;/td>
+&lt;td>33.00%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2022年9月&lt;/td>
+&lt;td>2626600.92&lt;/td>
+&lt;td>36.30%&lt;/td>
+&lt;td>874699.3&lt;/td>
+&lt;td>3.00%&lt;/td>
+&lt;td>33.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2022年6月&lt;/td>
+&lt;td>2581451.2&lt;/td>
+&lt;td>33.00%&lt;/td>
+&lt;td>565428.7&lt;/td>
+&lt;td>2.50%&lt;/td>
+&lt;td>30.50%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2022年3月&lt;/td>
+&lt;td>2497688.34&lt;/td>
+&lt;td>28.70%&lt;/td>
+&lt;td>271509.2&lt;/td>
+&lt;td>4.80%&lt;/td>
+&lt;td>23.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2021年12月&lt;/td>
+&lt;td>2382899.56&lt;/td>
+&lt;td>26.20%&lt;/td>
+&lt;td>1149237&lt;/td>
+&lt;td>8.10%&lt;/td>
+&lt;td>18.10%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2021年9月&lt;/td>
+&lt;td>2342829.7&lt;/td>
+&lt;td>24.80%&lt;/td>
+&lt;td>823337.5&lt;/td>
+&lt;td>9.80%&lt;/td>
+&lt;td>15.00%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2021年6月&lt;/td>
+&lt;td>2317788.36&lt;/td>
+&lt;td>25.00%&lt;/td>
+&lt;td>532049.4&lt;/td>
+&lt;td>12.70%&lt;/td>
+&lt;td>12.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2021年3月&lt;/td>
+&lt;td>2276488.45&lt;/td>
+&lt;td>28.90%&lt;/td>
+&lt;td>249200.2&lt;/td>
+&lt;td>18.30%&lt;/td>
+&lt;td>10.60%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2020年12月&lt;/td>
+&lt;td>2186795.89&lt;/td>
+&lt;td>31.30%&lt;/td>
+&lt;td>1013567&lt;/td>
+&lt;td>2.30%&lt;/td>
+&lt;td>29.00%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2020年9月&lt;/td>
+&lt;td>2164084.8&lt;/td>
+&lt;td>32.00%&lt;/td>
+&lt;td>717948.2&lt;/td>
+&lt;td>0.70%&lt;/td>
+&lt;td>31.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2020年6月&lt;/td>
+&lt;td>2134948.66&lt;/td>
+&lt;td>33.30%&lt;/td>
+&lt;td>453592.5&lt;/td>
+&lt;td>-1.60%&lt;/td>
+&lt;td>34.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2020年3月&lt;/td>
+&lt;td>2080923.41&lt;/td>
+&lt;td>27.30%&lt;/td>
+&lt;td>205244.8&lt;/td>
+&lt;td>-6.80%&lt;/td>
+&lt;td>34.10%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2019年12月&lt;/td>
+&lt;td>1986488.82&lt;/td>
+&lt;td>25.30%&lt;/td>
+&lt;td>986515.2&lt;/td>
+&lt;td>6.10%&lt;/td>
+&lt;td>19.20%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2019年9月&lt;/td>
+&lt;td>1952250.49&lt;/td>
+&lt;td>24.70%&lt;/td>
+&lt;td>709717.2&lt;/td>
+&lt;td>6.20%&lt;/td>
+&lt;td>18.50%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2019年6月&lt;/td>
+&lt;td>1921360.19&lt;/td>
+&lt;td>25.50%&lt;/td>
+&lt;td>458670.9&lt;/td>
+&lt;td>6.30%&lt;/td>
+&lt;td>19.20%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2019年3月&lt;/td>
+&lt;td>1889412.14&lt;/td>
+&lt;td>25.00%&lt;/td>
+&lt;td>217168.3&lt;/td>
+&lt;td>6.40%&lt;/td>
+&lt;td>18.60%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2018年12月&lt;/td>
+&lt;td>1826744.22&lt;/td>
+&lt;td>24.10%&lt;/td>
+&lt;td>919281.1&lt;/td>
+&lt;td>6.60%&lt;/td>
+&lt;td>17.50%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2018年9月&lt;/td>
+&lt;td>1801665.58&lt;/td>
+&lt;td>25.00%&lt;/td>
+&lt;td>660472.2&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>18.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2018年6月&lt;/td>
+&lt;td>1770178.37&lt;/td>
+&lt;td>24.60%&lt;/td>
+&lt;td>425997.9&lt;/td>
+&lt;td>6.80%&lt;/td>
+&lt;td>17.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2018年3月&lt;/td>
+&lt;td>1739859.48&lt;/td>
+&lt;td>25.60%&lt;/td>
+&lt;td>202035.7&lt;/td>
+&lt;td>6.80%&lt;/td>
+&lt;td>18.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2017年12月&lt;/td>
+&lt;td>1690235.31&lt;/td>
+&lt;td>26.06%&lt;/td>
+&lt;td>832035.9&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>19.16%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2017年9月&lt;/td>
+&lt;td>1663666.05&lt;/td>
+&lt;td>26.43%&lt;/td>
+&lt;td>596607.3&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>19.53%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2017年6月&lt;/td>
+&lt;td>1639497.05&lt;/td>
+&lt;td>28.07%&lt;/td>
+&lt;td>383818&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>21.17%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2017年3月&lt;/td>
+&lt;td>1607938.98&lt;/td>
+&lt;td>31.27%&lt;/td>
+&lt;td>181867.7&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>24.37%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2016年12月&lt;/td>
+&lt;td>1550066.67&lt;/td>
+&lt;td>34.30%&lt;/td>
+&lt;td>746395.1&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>27.60%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2016年9月&lt;/td>
+&lt;td>1516360.5&lt;/td>
+&lt;td>33.10%&lt;/td>
+&lt;td>534828.9&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>26.40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2016年6月&lt;/td>
+&lt;td>1490491.83&lt;/td>
+&lt;td>36.40%&lt;/td>
+&lt;td>343818.2&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>29.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2016年3月&lt;/td>
+&lt;td>1446198.03&lt;/td>
+&lt;td>40.70%&lt;/td>
+&lt;td>162410&lt;/td>
+&lt;td>6.70%&lt;/td>
+&lt;td>34.00%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2015年12月&lt;/td>
+&lt;td>1392278.11&lt;/td>
+&lt;td>40.50%&lt;/td>
+&lt;td>688858.2&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>33.60%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2015年9月&lt;/td>
+&lt;td>1359824.06&lt;/td>
+&lt;td>39.70%&lt;/td>
+&lt;td>496285.3&lt;/td>
+&lt;td>6.90%&lt;/td>
+&lt;td>32.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2015年6月&lt;/td>
+&lt;td>1333375.36&lt;/td>
+&lt;td>32.70%&lt;/td>
+&lt;td>319687.6&lt;/td>
+&lt;td>7.00%&lt;/td>
+&lt;td>25.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2015年3月&lt;/td>
+&lt;td>1275332.78&lt;/td>
+&lt;td>34.90%&lt;/td>
+&lt;td>151137.9&lt;/td>
+&lt;td>7.00%&lt;/td>
+&lt;td>27.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2014年12月&lt;/td>
+&lt;td>1228374.81&lt;/td>
+&lt;td>37.10%&lt;/td>
+&lt;td>643563.1&lt;/td>
+&lt;td>7.30%&lt;/td>
+&lt;td>29.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2014年9月&lt;/td>
+&lt;td>1202051.41&lt;/td>
+&lt;td>39.20%&lt;/td>
+&lt;td>462734.2&lt;/td>
+&lt;td>7.30%&lt;/td>
+&lt;td>31.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2014年6月&lt;/td>
+&lt;td>1209587.2&lt;/td>
+&lt;td>41.30%&lt;/td>
+&lt;td>297249.5&lt;/td>
+&lt;td>7.40%&lt;/td>
+&lt;td>33.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2014年3月&lt;/td>
+&lt;td>1160687.38&lt;/td>
+&lt;td>38.60%&lt;/td>
+&lt;td>140759.8&lt;/td>
+&lt;td>7.40%&lt;/td>
+&lt;td>31.20%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2013年12月&lt;/td>
+&lt;td>1106524.98&lt;/td>
+&lt;td>42.10%&lt;/td>
+&lt;td>592963.2&lt;/td>
+&lt;td>7.80%&lt;/td>
+&lt;td>34.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2013年9月&lt;/td>
+&lt;td>1077379.16&lt;/td>
+&lt;td>43.40%&lt;/td>
+&lt;td>425190.9&lt;/td>
+&lt;td>7.80%&lt;/td>
+&lt;td>35.60%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2013年6月&lt;/td>
+&lt;td>1054403.69&lt;/td>
+&lt;td>45.90%&lt;/td>
+&lt;td>272968.2&lt;/td>
+&lt;td>7.70%&lt;/td>
+&lt;td>38.20%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2013年3月&lt;/td>
+&lt;td>1035858.37&lt;/td>
+&lt;td>46.80%&lt;/td>
+&lt;td>129449.6&lt;/td>
+&lt;td>7.90%&lt;/td>
+&lt;td>38.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2012年12月&lt;/td>
+&lt;td>974148.8&lt;/td>
+&lt;td>41.80%&lt;/td>
+&lt;td>538580&lt;/td>
+&lt;td>7.90%&lt;/td>
+&lt;td>33.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2012年9月&lt;/td>
+&lt;td>943688.75&lt;/td>
+&lt;td>42.20%&lt;/td>
+&lt;td>386767.9&lt;/td>
+&lt;td>7.80%&lt;/td>
+&lt;td>34.40%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2012年6月&lt;/td>
+&lt;td>924991.2&lt;/td>
+&lt;td>39.60%&lt;/td>
+&lt;td>248678.3&lt;/td>
+&lt;td>7.90%&lt;/td>
+&lt;td>31.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2012年3月&lt;/td>
+&lt;td>895565.5&lt;/td>
+&lt;td>38.80%&lt;/td>
+&lt;td>117357.6&lt;/td>
+&lt;td>8.10%&lt;/td>
+&lt;td>30.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2011年12月&lt;/td>
+&lt;td>787406.2&lt;/td>
+&lt;td>39.20%&lt;/td>
+&lt;td>487940.2&lt;/td>
+&lt;td>9.50%&lt;/td>
+&lt;td>29.70%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2011年9月&lt;/td>
+&lt;td>787406.2&lt;/td>
+&lt;td>41.24%&lt;/td>
+&lt;td>349928&lt;/td>
+&lt;td>9.80%&lt;/td>
+&lt;td>31.44%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2011年6月&lt;/td>
+&lt;td>780820.85&lt;/td>
+&lt;td>46.30%&lt;/td>
+&lt;td>223365.8&lt;/td>
+&lt;td>10.10%&lt;/td>
+&lt;td>36.20%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2011年3月&lt;/td>
+&lt;td>758130.88&lt;/td>
+&lt;td>49.50%&lt;/td>
+&lt;td>104469.9&lt;/td>
+&lt;td>10.20%&lt;/td>
+&lt;td>39.30%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2010年12月&lt;/td>
+&lt;td>725851.79&lt;/td>
+&lt;td>58.50%&lt;/td>
+&lt;td>412119.3&lt;/td>
+&lt;td>10.60%&lt;/td>
+&lt;td>47.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2010年9月&lt;/td>
+&lt;td>696471.5&lt;/td>
+&lt;td>55.80%&lt;/td>
+&lt;td>292812.4&lt;/td>
+&lt;td>10.90%&lt;/td>
+&lt;td>44.90%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2010年6月&lt;/td>
+&lt;td>673921.72&lt;/td>
+&lt;td>60.98%&lt;/td>
+&lt;td>186848.7&lt;/td>
+&lt;td>11.40%&lt;/td>
+&lt;td>49.58%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2010年3月&lt;/td>
+&lt;td>649947.46&lt;/td>
+&lt;td>74.00%&lt;/td>
+&lt;td>87501.3&lt;/td>
+&lt;td>12.20%&lt;/td>
+&lt;td>61.80%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2009年12月&lt;/td>
+&lt;td>610224.52&lt;/td>
+&lt;td>86.84%&lt;/td>
+&lt;td>348517.7&lt;/td>
+&lt;td>9.40%&lt;/td>
+&lt;td>77.44%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2009年9月&lt;/td>
+&lt;td>585405.34&lt;/td>
+&lt;td>86.26%&lt;/td>
+&lt;td>247691.9&lt;/td>
+&lt;td>8.50%&lt;/td>
+&lt;td>77.76%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2009年6月&lt;/td>
+&lt;td>568916.2&lt;/td>
+&lt;td>80.15%&lt;/td>
+&lt;td>157845&lt;/td>
+&lt;td>7.30%&lt;/td>
+&lt;td>72.85%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2009年3月&lt;/td>
+&lt;td>530626.71&lt;/td>
+&lt;td>64.78%&lt;/td>
+&lt;td>73979.2&lt;/td>
+&lt;td>6.40%&lt;/td>
+&lt;td>58.38%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2008年12月&lt;/td>
+&lt;td>475166.6&lt;/td>
+&lt;td>47.64%&lt;/td>
+&lt;td>319244.6&lt;/td>
+&lt;td>9.70%&lt;/td>
+&lt;td>37.94%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2008年9月&lt;/td>
+&lt;td>452898.71&lt;/td>
+&lt;td>47.64%&lt;/td>
+&lt;td>230545.6&lt;/td>
+&lt;td>10.60%&lt;/td>
+&lt;td>37.04%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2008年6月&lt;/td>
+&lt;td>443141.02&lt;/td>
+&lt;td>52.38%&lt;/td>
+&lt;td>148085.5&lt;/td>
+&lt;td>11.20%&lt;/td>
+&lt;td>41.18%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2008年3月&lt;/td>
+&lt;td>423054.53&lt;/td>
+&lt;td>52.46%&lt;/td>
+&lt;td>69373.6&lt;/td>
+&lt;td>11.50%&lt;/td>
+&lt;td>40.96%&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a class="link" href="https://cn.investing.com/rates-bonds/china-10-year-bond-yield" target="_blank" rel="noopener"
+>看国债收益率&lt;/a>，低于3.3%时被认为是流动性过剩，4%以上则意味着流动性的收紧。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="美国市场">美国市场&lt;/h3>
+&lt;p>&lt;a class="link" href="https://sc.macromicro.me/charts/80362/mei-guo-shi-chang-jing-liu-dong-xing" target="_blank" rel="noopener"
+>净流动性 = 美联储资产负债表 - 财政部一般账户 - 反向回购&lt;/a>&lt;/p>
+&lt;h1 id="a股">A股&lt;/h1>
+&lt;h2 id="通达信公式系统">通达信公式系统&lt;/h2>
+&lt;h3 id="公式">公式&lt;/h3>
+&lt;p>&lt;strong>公式类型&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>公式类型&lt;/th>
+&lt;th>用途&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>技术指标公式&lt;/td>
+&lt;td>编写指标在界面上形成曲线，以寻找有意义的技术图形&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>条件选股公式&lt;/td>
+&lt;td>选出符合条件的股票&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>专家系统公式&lt;/td>
+&lt;td>用于买卖信号指示&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>五彩K线公式&lt;/td>
+&lt;td>将满足条件的连续K线形态赋予颜色，区别于其它的K线&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>公式说明&lt;/strong>（条件公式为例）&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">A:UPNDAY(CLOSE,N);{返回是否CLOSE连涨N个周期}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>A&lt;/code> 指标名称&lt;/li>
+&lt;li>&lt;code>:&lt;/code> 衔接符&lt;/li>
+&lt;li>&lt;code>:=&lt;/code> 赋值，该函数输出值可在后续公式中（作为参数）被引用&lt;/li>
+&lt;li>&lt;code>UPNDAY(CLOSE,N)&lt;/code> 输出值&lt;/li>
+&lt;li>&lt;code>;&lt;/code> 结束符&lt;/li>
+&lt;li>&lt;code>{返回是否CLOSE连涨N个周期}&lt;/code> 注释&lt;/li>
+&lt;/ul>
+&lt;h3 id="函数">函数&lt;/h3>
+&lt;p>&lt;a class="link" href="https://www.agudashi.cn/doc.html" target="_blank" rel="noopener"
+>参考公式大师&lt;/a>&lt;/p>
+&lt;p>&lt;strong>函数类型&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>行情函数&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>财务函数&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>计算函数&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>交易函数&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>其他函数&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>即时行情&lt;/td>
+&lt;td>专业财务&lt;/td>
+&lt;td>逻辑函数&lt;/td>
+&lt;td>交易信号&lt;/td>
+&lt;td>时间函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>资金流向&lt;/td>
+&lt;td>关联财务&lt;/td>
+&lt;td>选择函数&lt;/td>
+&lt;td>账号函数&lt;/td>
+&lt;td>引用函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>序列行情&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>数学函数&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>线形和资源&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>形态函数&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>统计函数&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>绘图函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>板块函数&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>操作符&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>指数标的&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="行情函数">行情函数&lt;/h4>
+&lt;p>&lt;strong>即时行情&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>INDEXA&lt;/td>
+&lt;td>返回大盘的成交额&lt;/td>
+&lt;td>&lt;code>INDEXA&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXC&lt;/td>
+&lt;td>返回大盘的收盘价&lt;/td>
+&lt;td>&lt;code>INDEXC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的收盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXH&lt;/td>
+&lt;td>返回大盘的最高价&lt;/td>
+&lt;td>&lt;code>INDEXH&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最高价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXL&lt;/td>
+&lt;td>返回大盘的最低价&lt;/td>
+&lt;td>&lt;code>INDEXL&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最低价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXO&lt;/td>
+&lt;td>返回大盘的开盘价&lt;/td>
+&lt;td>&lt;code>INDEXO&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的开盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXV&lt;/td>
+&lt;td>返回大盘的成交量&lt;/td>
+&lt;td>&lt;code>INDEXV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交量&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-1">
+&lt;summary>供券商用&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持情况&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>INDEXADV&lt;/td>
+&lt;td>返回大盘的上涨家数&lt;/td>
+&lt;td>&lt;code>INDEXADV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的上涨家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXDEC&lt;/td>
+&lt;td>返回大盘的下跌家数&lt;/td>
+&lt;td>&lt;code>INDEXDEC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的下跌家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXA&lt;/td>
+&lt;td>返回行业指数的成交额&lt;/td>
+&lt;td>&lt;code>HY_INDEXA&lt;/code>&lt;br>返回对应行业指数的成交额&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXADV&lt;/td>
+&lt;td>返回行业指数的上涨家数&lt;/td>
+&lt;td>&lt;code>HY_INDEXADV&lt;/code>&lt;br>返回对应行业指数的上涨家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXC&lt;/td>
+&lt;td>返回行业指数的收盘价&lt;/td>
+&lt;td>&lt;code>HY_INDEXC&lt;/code>&lt;br>返回对应行业指数的收盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXDEC&lt;/td>
+&lt;td>返回行业指数的下跌家数&lt;/td>
+&lt;td>&lt;code>HY_INDEXDEC&lt;/code>&lt;br>返回对应行业指数的下跌家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXH&lt;/td>
+&lt;td>返回行业指数的最高价&lt;/td>
+&lt;td>&lt;code>HY_INDEXH&lt;/code>&lt;br>返回对应行业指数的最高价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXL&lt;/td>
+&lt;td>返回行业指数的最低价&lt;/td>
+&lt;td>&lt;code>HY_INDEXL&lt;/code>&lt;br>返回对应行业指数的最低价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXO&lt;/td>
+&lt;td>返回行业指数的开盘价&lt;/td>
+&lt;td>&lt;code>HY_INDEXO&lt;/code>&lt;br>返回对应行业指数的开盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXV&lt;/td>
+&lt;td>返回行业指数的成交量&lt;/td>
+&lt;td>&lt;code>HY_INDEXV&lt;/code>&lt;br>返回对应行业指数的成交量&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DPZSCODE&lt;/td>
+&lt;td>返回所属大盘指数的代码&lt;/td>
+&lt;td>&lt;code>CALCSTOCKINDEX(DPZSCODE,'KDJ',3)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>UNDERLYC&lt;/td>
+&lt;td>返回对应标的的收盘价&lt;/td>
+&lt;td>&lt;code>UNDERLYC&lt;/code>&lt;br>返回对应标的的收盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>资金流向&lt;/strong>&lt;/p>
+&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>限制版本&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>函数名称&lt;/th>
+&lt;th>功能描述&lt;/th>
+&lt;th>详细说明&lt;/th>
+&lt;th>参数说明&lt;/th>
+&lt;th>使用限制&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;strong>ACTINVOL&lt;/strong>&lt;/td>
+&lt;td>主动买成交量&lt;/td>
+&lt;td>相当于&lt;code>L2_VOL(0,2) + L2_VOL(1,2) + L2_VOL(2,2) + L2_VOL(3,2)&lt;/code>，用于沪深品种的资金流向功能。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>ACTOUTVOL&lt;/strong>&lt;/td>
+&lt;td>主动卖成交量&lt;/td>
+&lt;td>相当于&lt;code>L2_VOL(0,3) + L2_VOL(1,3) + L2_VOL(2,3) + L2_VOL(3,3)&lt;/code>，用于沪深品种的资金流向功能。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>AVGBIDPX&lt;/strong>&lt;/td>
+&lt;td>最新委买均价&lt;/td>
+&lt;td>专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>AVGOFFERPX&lt;/strong>&lt;/td>
+&lt;td>最新委卖均价&lt;/td>
+&lt;td>专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>BIDCANCELVOL&lt;/strong>&lt;/td>
+&lt;td>累计总有效撤买量&lt;/td>
+&lt;td>累计总有效委买量 - 累计总有效撤买量 = 总买 + 总成交量，专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>BIDORDERVOL&lt;/strong>&lt;/td>
+&lt;td>累计总有效委买量&lt;/td>
+&lt;td>累计总有效委买量 - 累计总有效撤买量 = 总买 + 总成交量，专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>CUR_BUYORDER&lt;/strong>&lt;/td>
+&lt;td>当前总委买量&lt;/td>
+&lt;td>专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>CUR_SELLORDER&lt;/strong>&lt;/td>
+&lt;td>当前总委卖量&lt;/td>
+&lt;td>专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>L2_AMO(N,M)&lt;/strong>&lt;/td>
+&lt;td>成交额分档&lt;/td>
+&lt;td>单数分档，按：&lt;code>N(0--3)&lt;/code>：超大/大/中/小四档处理，&lt;code>M(0--3)&lt;/code>：买入/卖出/主买/主卖四类。&lt;/td>
+&lt;td>N: 0-3, M: 0-3&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>L2_VOL(N,M)&lt;/strong>&lt;/td>
+&lt;td>成交量分档&lt;/td>
+&lt;td>单数分档，按：&lt;code>N(0--3)&lt;/code>：超大/大/中/小四档处理，&lt;code>M(0--3)&lt;/code>：买入/卖出/主买/主卖四类。&lt;/td>
+&lt;td>N: 0-3, M: 0-3&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>L2_VOLNUM(N,M)&lt;/strong>&lt;/td>
+&lt;td>单数分档&lt;/td>
+&lt;td>单数分档，按：&lt;code>N(0--1)&lt;/code>：(超大+大)/(中+小)，&lt;code>M(0--1)&lt;/code>：买/卖二类。&lt;/td>
+&lt;td>N: 0-1, M: 0-1&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>LARGEINTRDVOL&lt;/strong>&lt;/td>
+&lt;td>逐笔买入大单成交量&lt;/td>
+&lt;td>相当于&lt;code>L2_VOL(0,0) + L2_VOL(1,0)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>LARGEOUTTRDVOL&lt;/strong>&lt;/td>
+&lt;td>逐笔卖出大单成交量&lt;/td>
+&lt;td>相当于&lt;code>L2_VOL(0,1) + L2_VOL(1,1)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>LARGETRDINNUM&lt;/strong>&lt;/td>
+&lt;td>逐笔买入大单成交单数&lt;/td>
+&lt;td>相当于&lt;code>L2_VOLNUM(0,0)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>LARGETRDOUTNUM&lt;/strong>&lt;/td>
+&lt;td>逐笔卖出大单成交单数&lt;/td>
+&lt;td>相当于&lt;code>L2_VOLNUM(0,1)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OFFERCANCELVOL&lt;/strong>&lt;/td>
+&lt;td>累计总有效撤卖量&lt;/td>
+&lt;td>累计总有效委卖量 - 累计总有效撤卖量 = 总卖 + 总成交量，专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>OFFERORDERVOL&lt;/strong>&lt;/td>
+&lt;td>累计总有效委卖量&lt;/td>
+&lt;td>累计总有效委卖量 - 累计总有效撤卖量 = 总卖 + 总成交量，专业版（资金流向功能）沪深品种行情专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>TRADEINNUM&lt;/strong>&lt;/td>
+&lt;td>逐笔买入成交单数&lt;/td>
+&lt;td>相当于&lt;code>L2_VOLNUM(0,0) + L2_VOLNUM(1,0)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>TRADENUM&lt;/strong>&lt;/td>
+&lt;td>总成交单数&lt;/td>
+&lt;td>逐笔成交总单数，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>TRADEOUTNUM&lt;/strong>&lt;/td>
+&lt;td>逐笔卖出成交单数&lt;/td>
+&lt;td>相当于&lt;code>L2_VOLNUM(0,1) + L2_VOLNUM(1,1)&lt;/code>，沪深品种的资金流向功能专用。&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>仅支持日线级别计算&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>序列行情&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>C（CLOSE）&lt;/td>
+&lt;td>返回该周期的收盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>O（OPEN）&lt;/td>
+&lt;td>返回该周期的开盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>H（HIGH）&lt;/td>
+&lt;td>返回该周期的最高价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>L（LOW）&lt;/td>
+&lt;td>返回该周期的最低价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AMO（AMOUNT）&lt;/td>
+&lt;td>返回该周期的成交额，单位为元&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>V（VOL）&lt;/td>
+&lt;td>返回该周期的成交量，单位为手&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ADVANCE&lt;/td>
+&lt;td>返回该周期的上涨家数，仅对沪深指数有效&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DECLINE&lt;/td>
+&lt;td>返回该周期的下跌家数，仅对沪深指数有效&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-3">
+&lt;summary>特殊周期函数&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>备注&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>DCLOSE&lt;/td>
+&lt;td>返回不定周期的收盘价&lt;/td>
+&lt;td>未来函数（紫色标记）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DHIGH&lt;/td>
+&lt;td>返回不定周期的最高价&lt;/td>
+&lt;td>未来函数（紫色标记）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DLOW&lt;/td>
+&lt;td>返回不定周期的最低价&lt;/td>
+&lt;td>未来函数（紫色标记）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DOPEN&lt;/td>
+&lt;td>返回不定周期的开盘价&lt;/td>
+&lt;td>未来函数（紫色标记）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DVOL&lt;/td>
+&lt;td>返回不定周期的成交量&lt;/td>
+&lt;td>未来函数（紫色标记）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HKSHORTVOL&lt;/td>
+&lt;td>返回该周期的抛空量&lt;/td>
+&lt;td>仅对港股有意义&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>QHJSJ&lt;/td>
+&lt;td>返回该周期的结算价&lt;/td>
+&lt;td>仅对期货和期权有意义&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VOLINSTK&lt;/td>
+&lt;td>返回该周期的持仓量&lt;/td>
+&lt;td>仅对期货和期权有意义&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZSTJJ&lt;/td>
+&lt;td>返回该周期的分时图均价线&lt;/td>
+&lt;td>仅对分时图周期指标有效&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SECTOTIME&lt;/td>
+&lt;td>求0时后若干秒是什么时间，有效秒数为0~86399&lt;/td>
+&lt;td>仅支持日线级别&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TIMETOSEC&lt;/td>
+&lt;td>求指定时间距0时有多长时间，单位为秒，有效时间为0~235959&lt;/td>
+&lt;td>仅支持日线级别&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>形态函数&lt;/strong>
+待写&lt;/p>
+&lt;p>&lt;strong>板块函数&lt;/strong>
+待写&lt;/p>
+&lt;p>&lt;strong>指数标的&lt;/strong>
+待写&lt;/p>
+&lt;h4 id="财务函数">财务函数&lt;/h4>
+&lt;p>&lt;strong>专业财务&lt;/strong>&lt;/p>
+&lt;p>专业财务数据需要每天及时下载更新：通达信软件 -&amp;gt; 选项 -&amp;gt; 专业财务数据&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>FINVALUE(ID)&lt;/td>
+&lt;td>引用专业财务数据。如果当期没有出来，引用最近一期的数据。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FINONE(ID,Y,MMDD)&lt;/td>
+&lt;td>引用指定年和月日的某类型的财务数据。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>参数：ID为数据编号&lt;/p>
+&lt;details class="spoiler " id="spoiler-4">
+&lt;summary>ID详情&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">&lt;strong>分类&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>编号&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>指标名称&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">0&lt;/td>
+&lt;td style="text-align:left">返回报告期(YYMMDD格式),150930表示为2015年第三季&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>每股指标&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">1&lt;/td>
+&lt;td style="text-align:left">基本每股收益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">2&lt;/td>
+&lt;td style="text-align:left">扣除非经常性损益每股收益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">3&lt;/td>
+&lt;td style="text-align:left">每股未分配利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">4&lt;/td>
+&lt;td style="text-align:left">每股净资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">5&lt;/td>
+&lt;td style="text-align:left">每股资本公积金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">6&lt;/td>
+&lt;td style="text-align:left">净资产收益率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">7&lt;/td>
+&lt;td style="text-align:left">每股经营现金流量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>资产负债表&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">8&lt;/td>
+&lt;td style="text-align:left">货币资金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">9&lt;/td>
+&lt;td style="text-align:left">交易性金融资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">10&lt;/td>
+&lt;td style="text-align:left">应收票据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">11&lt;/td>
+&lt;td style="text-align:left">应收账款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">12&lt;/td>
+&lt;td style="text-align:left">预付款项&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">13&lt;/td>
+&lt;td style="text-align:left">其他应收款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">14&lt;/td>
+&lt;td style="text-align:left">应收关联公司款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">15&lt;/td>
+&lt;td style="text-align:left">应收利息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">16&lt;/td>
+&lt;td style="text-align:left">应收股利&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">17&lt;/td>
+&lt;td style="text-align:left">存货&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">18&lt;/td>
+&lt;td style="text-align:left">其中：消耗性生物资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">19&lt;/td>
+&lt;td style="text-align:left">一年内到期的非流动资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">20&lt;/td>
+&lt;td style="text-align:left">其他流动资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">21&lt;/td>
+&lt;td style="text-align:left">流动资产合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">22&lt;/td>
+&lt;td style="text-align:left">可供出售金融资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">23&lt;/td>
+&lt;td style="text-align:left">持有至到期投资&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">24&lt;/td>
+&lt;td style="text-align:left">长期应收款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">25&lt;/td>
+&lt;td style="text-align:left">长期股权投资&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">26&lt;/td>
+&lt;td style="text-align:left">投资性房地产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">27&lt;/td>
+&lt;td style="text-align:left">固定资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">28&lt;/td>
+&lt;td style="text-align:left">在建工程&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">29&lt;/td>
+&lt;td style="text-align:left">工程物资&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">30&lt;/td>
+&lt;td style="text-align:left">固定资产清理&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">31&lt;/td>
+&lt;td style="text-align:left">生产性生物资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">32&lt;/td>
+&lt;td style="text-align:left">油气资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">33&lt;/td>
+&lt;td style="text-align:left">无形资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">34&lt;/td>
+&lt;td style="text-align:left">开发支出&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">35&lt;/td>
+&lt;td style="text-align:left">商誉&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">36&lt;/td>
+&lt;td style="text-align:left">长期待摊费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">37&lt;/td>
+&lt;td style="text-align:left">递延所得税资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">38&lt;/td>
+&lt;td style="text-align:left">其他非流动资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">39&lt;/td>
+&lt;td style="text-align:left">非流动资产合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">40&lt;/td>
+&lt;td style="text-align:left">资产总计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">41&lt;/td>
+&lt;td style="text-align:left">短期借款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">42&lt;/td>
+&lt;td style="text-align:left">交易性金融负债&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">43&lt;/td>
+&lt;td style="text-align:left">应付票据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">44&lt;/td>
+&lt;td style="text-align:left">应付账款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">45&lt;/td>
+&lt;td style="text-align:left">预收款项&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">46&lt;/td>
+&lt;td style="text-align:left">应付职工薪酬&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">47&lt;/td>
+&lt;td style="text-align:left">应交税费&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">48&lt;/td>
+&lt;td style="text-align:left">应付利息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">49&lt;/td>
+&lt;td style="text-align:left">应付股利&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">50&lt;/td>
+&lt;td style="text-align:left">其他应付款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">51&lt;/td>
+&lt;td style="text-align:left">应付关联公司款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">52&lt;/td>
+&lt;td style="text-align:left">一年内到期的非流动负债&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">53&lt;/td>
+&lt;td style="text-align:left">其他流动负债&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">54&lt;/td>
+&lt;td style="text-align:left">流动负债合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">55&lt;/td>
+&lt;td style="text-align:left">长期借款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">56&lt;/td>
+&lt;td style="text-align:left">应付债券&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">57&lt;/td>
+&lt;td style="text-align:left">长期应付款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">58&lt;/td>
+&lt;td style="text-align:left">专项应付款&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">59&lt;/td>
+&lt;td style="text-align:left">预计负债（非流动负债）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">60&lt;/td>
+&lt;td style="text-align:left">递延所得税负债&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">61&lt;/td>
+&lt;td style="text-align:left">其他非流动负债&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">62&lt;/td>
+&lt;td style="text-align:left">非流动负债合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">63&lt;/td>
+&lt;td style="text-align:left">负债合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">64&lt;/td>
+&lt;td style="text-align:left">实收资本（或股本）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">65&lt;/td>
+&lt;td style="text-align:left">资本公积&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">66&lt;/td>
+&lt;td style="text-align:left">盈余公积&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">67&lt;/td>
+&lt;td style="text-align:left">减：库存股&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">68&lt;/td>
+&lt;td style="text-align:left">未分配利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">69&lt;/td>
+&lt;td style="text-align:left">少数股东权益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">70&lt;/td>
+&lt;td style="text-align:left">外币报表折算价差&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">71&lt;/td>
+&lt;td style="text-align:left">非正常经营项目收益调整&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">72&lt;/td>
+&lt;td style="text-align:left">所有者权益（或股东权益）合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">73&lt;/td>
+&lt;td style="text-align:left">负债和所有者（或股东权益）合计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>利润表&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">74&lt;/td>
+&lt;td style="text-align:left">其中：营业收入&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">75&lt;/td>
+&lt;td style="text-align:left">其中：营业成本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">76&lt;/td>
+&lt;td style="text-align:left">营业税金及附加&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">77&lt;/td>
+&lt;td style="text-align:left">销售费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">78&lt;/td>
+&lt;td style="text-align:left">管理费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">79&lt;/td>
+&lt;td style="text-align:left">勘探费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">80&lt;/td>
+&lt;td style="text-align:left">财务费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">81&lt;/td>
+&lt;td style="text-align:left">资产减值损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">82&lt;/td>
+&lt;td style="text-align:left">加：公允价值变动净收益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">83&lt;/td>
+&lt;td style="text-align:left">投资收益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">84&lt;/td>
+&lt;td style="text-align:left">其中：对联营企业和合营企业的投资收益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">85&lt;/td>
+&lt;td style="text-align:left">影响营业利润的其他科目&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">86&lt;/td>
+&lt;td style="text-align:left">三、营业利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">87&lt;/td>
+&lt;td style="text-align:left">加：补贴收入&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">88&lt;/td>
+&lt;td style="text-align:left">营业外收入&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">89&lt;/td>
+&lt;td style="text-align:left">减：营业外支出&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">90&lt;/td>
+&lt;td style="text-align:left">其中：非流动资产处置净损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">91&lt;/td>
+&lt;td style="text-align:left">加：影响利润总额的其他科目&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">92&lt;/td>
+&lt;td style="text-align:left">四、利润总额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">93&lt;/td>
+&lt;td style="text-align:left">减：所得税&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">94&lt;/td>
+&lt;td style="text-align:left">加：影响净利润的其他科目&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">95&lt;/td>
+&lt;td style="text-align:left">五、净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">96&lt;/td>
+&lt;td style="text-align:left">归属于母公司所有者的净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">97&lt;/td>
+&lt;td style="text-align:left">少数股东损益&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>现金流量表&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">98&lt;/td>
+&lt;td style="text-align:left">销售商品、提供劳务收到的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">99&lt;/td>
+&lt;td style="text-align:left">收到的税费返还&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">100&lt;/td>
+&lt;td style="text-align:left">收到其他与经营活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">101&lt;/td>
+&lt;td style="text-align:left">经营活动现金流入小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">102&lt;/td>
+&lt;td style="text-align:left">购买商品、接受劳务支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">103&lt;/td>
+&lt;td style="text-align:left">支付给职工以及为职工支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">104&lt;/td>
+&lt;td style="text-align:left">支付的各项税费&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">105&lt;/td>
+&lt;td style="text-align:left">支付其他与经营活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">106&lt;/td>
+&lt;td style="text-align:left">经营活动现金流出小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">107&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">108&lt;/td>
+&lt;td style="text-align:left">收回投资收到的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">109&lt;/td>
+&lt;td style="text-align:left">取得投资收益收到的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">110&lt;/td>
+&lt;td style="text-align:left">处置固定资产、无形资产和其他长期资产收回的现金净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">111&lt;/td>
+&lt;td style="text-align:left">处置子公司及其他营业单位收到的现金净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">112&lt;/td>
+&lt;td style="text-align:left">收到其他与投资活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">113&lt;/td>
+&lt;td style="text-align:left">投资活动现金流入小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">114&lt;/td>
+&lt;td style="text-align:left">购建固定资产、无形资产和其他长期资产支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">115&lt;/td>
+&lt;td style="text-align:left">投资支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">116&lt;/td>
+&lt;td style="text-align:left">取得子公司及其他营业单位支付的现金净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">117&lt;/td>
+&lt;td style="text-align:left">支付其他与投资活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">118&lt;/td>
+&lt;td style="text-align:left">投资活动现金流出小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">119&lt;/td>
+&lt;td style="text-align:left">投资活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">120&lt;/td>
+&lt;td style="text-align:left">吸收投资收到的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">121&lt;/td>
+&lt;td style="text-align:left">取得借款收到的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">122&lt;/td>
+&lt;td style="text-align:left">收到其他与筹资活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">123&lt;/td>
+&lt;td style="text-align:left">筹资活动现金流入小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">124&lt;/td>
+&lt;td style="text-align:left">偿还债务支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">125&lt;/td>
+&lt;td style="text-align:left">分配股利、利润或偿付利息支付的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">126&lt;/td>
+&lt;td style="text-align:left">支付其他与筹资活动有关的现金&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">127&lt;/td>
+&lt;td style="text-align:left">筹资活动现金流出小计&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">128&lt;/td>
+&lt;td style="text-align:left">筹资活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">129&lt;/td>
+&lt;td style="text-align:left">四、汇率变动对现金的影响&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">130&lt;/td>
+&lt;td style="text-align:left">四(2)、其他原因对现金的影响&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">131&lt;/td>
+&lt;td style="text-align:left">五、现金及现金等价物净增加额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">132&lt;/td>
+&lt;td style="text-align:left">期初现金及现金等价物余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">133&lt;/td>
+&lt;td style="text-align:left">期末现金及现金等价物余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>现金流量表补充资料&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">134&lt;/td>
+&lt;td style="text-align:left">净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">135&lt;/td>
+&lt;td style="text-align:left">加：资产减值准备&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">136&lt;/td>
+&lt;td style="text-align:left">固定资产折旧、油气资产折耗、生产性生物资产折旧&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">137&lt;/td>
+&lt;td style="text-align:left">无形资产摊销&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">138&lt;/td>
+&lt;td style="text-align:left">长期待摊费用摊销&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">139&lt;/td>
+&lt;td style="text-align:left">处置固定资产、无形资产和其他长期资产的损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">140&lt;/td>
+&lt;td style="text-align:left">固定资产报废损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">141&lt;/td>
+&lt;td style="text-align:left">公允价值变动损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">142&lt;/td>
+&lt;td style="text-align:left">财务费用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">143&lt;/td>
+&lt;td style="text-align:left">投资损失&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">144&lt;/td>
+&lt;td style="text-align:left">递延所得税资产减少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">145&lt;/td>
+&lt;td style="text-align:left">递延所得税负债增加&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">146&lt;/td>
+&lt;td style="text-align:left">存货的减少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">147&lt;/td>
+&lt;td style="text-align:left">经营性应收项目的减少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">148&lt;/td>
+&lt;td style="text-align:left">经营性应付项目的增加&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">149&lt;/td>
+&lt;td style="text-align:left">其他&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">150&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">151&lt;/td>
+&lt;td style="text-align:left">债务转为资本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">152&lt;/td>
+&lt;td style="text-align:left">一年内到期的可转换公司债券&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">153&lt;/td>
+&lt;td style="text-align:left">融资租入固定资产&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">154&lt;/td>
+&lt;td style="text-align:left">现金的期末余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">155&lt;/td>
+&lt;td style="text-align:left">减：现金的期初余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">156&lt;/td>
+&lt;td style="text-align:left">加：现金等价物的期末余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">157&lt;/td>
+&lt;td style="text-align:left">减：现金等价物的期初余额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">158&lt;/td>
+&lt;td style="text-align:left">现金及现金等价物净增加额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>偿债能力分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">159&lt;/td>
+&lt;td style="text-align:left">流动比率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">160&lt;/td>
+&lt;td style="text-align:left">速动比率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">161&lt;/td>
+&lt;td style="text-align:left">现金比率（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">162&lt;/td>
+&lt;td style="text-align:left">利息保障倍数（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">163&lt;/td>
+&lt;td style="text-align:left">非流动负债比率（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">164&lt;/td>
+&lt;td style="text-align:left">流动负债比率（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">166&lt;/td>
+&lt;td style="text-align:left">有形资产净值债务率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">167&lt;/td>
+&lt;td style="text-align:left">权益乘数（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">168&lt;/td>
+&lt;td style="text-align:left">股东的权益/负债合计（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">169&lt;/td>
+&lt;td style="text-align:left">有形资产/负债合计（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">170&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额/负债合计（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">171&lt;/td>
+&lt;td style="text-align:left">EBITDA/负债合计（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>经营效率分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">172&lt;/td>
+&lt;td style="text-align:left">应收账款周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">173&lt;/td>
+&lt;td style="text-align:left">存货周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">174&lt;/td>
+&lt;td style="text-align:left">运营资金周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">175&lt;/td>
+&lt;td style="text-align:left">总资产周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">176&lt;/td>
+&lt;td style="text-align:left">固定资产周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">177&lt;/td>
+&lt;td style="text-align:left">应收账款周转天数（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">178&lt;/td>
+&lt;td style="text-align:left">存货周转天数（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">179&lt;/td>
+&lt;td style="text-align:left">流动资产周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">180&lt;/td>
+&lt;td style="text-align:left">流动资产周转天数（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">181&lt;/td>
+&lt;td style="text-align:left">总资产周转天数（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">182&lt;/td>
+&lt;td style="text-align:left">股东权益周转率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>发展能力分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">183&lt;/td>
+&lt;td style="text-align:left">营业收入增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">184&lt;/td>
+&lt;td style="text-align:left">净利润增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">185&lt;/td>
+&lt;td style="text-align:left">净资产增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">186&lt;/td>
+&lt;td style="text-align:left">固定资产增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">187&lt;/td>
+&lt;td style="text-align:left">总资产增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">188&lt;/td>
+&lt;td style="text-align:left">投资收益增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">189&lt;/td>
+&lt;td style="text-align:left">营业利润增长率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">190&lt;/td>
+&lt;td style="text-align:left">扣非每股收益同比（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">191&lt;/td>
+&lt;td style="text-align:left">扣非净利润同比（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">192&lt;/td>
+&lt;td style="text-align:left">暂无&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>获利能力分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">193&lt;/td>
+&lt;td style="text-align:left">成本费用利润率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">194&lt;/td>
+&lt;td style="text-align:left">营业利润率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">195&lt;/td>
+&lt;td style="text-align:left">营业税金率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">196&lt;/td>
+&lt;td style="text-align:left">营业成本率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">197&lt;/td>
+&lt;td style="text-align:left">净资产收益率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">198&lt;/td>
+&lt;td style="text-align:left">投资收益率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">199&lt;/td>
+&lt;td style="text-align:left">销售净利率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">200&lt;/td>
+&lt;td style="text-align:left">总资产净利率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">201&lt;/td>
+&lt;td style="text-align:left">净利润率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">202&lt;/td>
+&lt;td style="text-align:left">销售毛利率（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">203&lt;/td>
+&lt;td style="text-align:left">三费比重（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">204&lt;/td>
+&lt;td style="text-align:left">管理费用率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">205&lt;/td>
+&lt;td style="text-align:left">财务费用率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">206&lt;/td>
+&lt;td style="text-align:left">扣除非经常性损益后的净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">207&lt;/td>
+&lt;td style="text-align:left">息税前利润（EBIT）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">208&lt;/td>
+&lt;td style="text-align:left">息税折旧摊销前利润（EBITDA）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">209&lt;/td>
+&lt;td style="text-align:left">EBITDA/营业总收入（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>资本结构分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">210&lt;/td>
+&lt;td style="text-align:left">资产负债率（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">211&lt;/td>
+&lt;td style="text-align:left">流动资产比率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">212&lt;/td>
+&lt;td style="text-align:left">货币资金比率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">213&lt;/td>
+&lt;td style="text-align:left">存货比率（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">214&lt;/td>
+&lt;td style="text-align:left">固定资产比率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">215&lt;/td>
+&lt;td style="text-align:left">负债结构比（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">216&lt;/td>
+&lt;td style="text-align:left">归属于母公司股东权益/全部投入资本（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">217&lt;/td>
+&lt;td style="text-align:left">股东的权益/带息债务（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">218&lt;/td>
+&lt;td style="text-align:left">有形资产/净债务（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>现金流量分析&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">219&lt;/td>
+&lt;td style="text-align:left">每股经营性现金流（元）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">220&lt;/td>
+&lt;td style="text-align:left">营业收入现金含量（%）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">221&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额/经营活动净收益（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">222&lt;/td>
+&lt;td style="text-align:left">销售商品提供劳务收到的现金/营业收入（%）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">223&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额/营业收入&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">224&lt;/td>
+&lt;td style="text-align:left">资本支出/折旧和摊销&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">225&lt;/td>
+&lt;td style="text-align:left">每股现金流量净额（元）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">226&lt;/td>
+&lt;td style="text-align:left">经营净现金比率（短期债务）（非金融类指标）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">227&lt;/td>
+&lt;td style="text-align:left">经营净现金比率（全部债务）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">228&lt;/td>
+&lt;td style="text-align:left">经营活动现金净流量与净利润比率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">229&lt;/td>
+&lt;td style="text-align:left">全部资产现金回收率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>单季度财务指标&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">230&lt;/td>
+&lt;td style="text-align:left">营业收入&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">231&lt;/td>
+&lt;td style="text-align:left">营业利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">232&lt;/td>
+&lt;td style="text-align:left">归属于母公司所有者的净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">233&lt;/td>
+&lt;td style="text-align:left">扣除非经常性损益后的净利润&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">234&lt;/td>
+&lt;td style="text-align:left">经营活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">235&lt;/td>
+&lt;td style="text-align:left">投资活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">236&lt;/td>
+&lt;td style="text-align:left">筹资活动产生的现金流量净额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">237&lt;/td>
+&lt;td style="text-align:left">现金及现金等价物净增加额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>股本股东&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">238&lt;/td>
+&lt;td style="text-align:left">总股本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">239&lt;/td>
+&lt;td style="text-align:left">已上市流通A股&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">240&lt;/td>
+&lt;td style="text-align:left">已上市流通B股&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">241&lt;/td>
+&lt;td style="text-align:left">已上市流通H股&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">242&lt;/td>
+&lt;td style="text-align:left">股东人数（户）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">243&lt;/td>
+&lt;td style="text-align:left">第一大股东的持股数量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">244&lt;/td>
+&lt;td style="text-align:left">十大流通股东持股数量合计（股）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">245&lt;/td>
+&lt;td style="text-align:left">十大股东持股数量合计（股）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>机构持股&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">246&lt;/td>
+&lt;td style="text-align:left">机构总量（家）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">247&lt;/td>
+&lt;td style="text-align:left">机构持股总量（股）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">248&lt;/td>
+&lt;td style="text-align:left">QFII机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">249&lt;/td>
+&lt;td style="text-align:left">QFII持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">250&lt;/td>
+&lt;td style="text-align:left">券商机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">251&lt;/td>
+&lt;td style="text-align:left">券商持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">252&lt;/td>
+&lt;td style="text-align:left">保险机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">253&lt;/td>
+&lt;td style="text-align:left">保险持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">254&lt;/td>
+&lt;td style="text-align:left">基金机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">255&lt;/td>
+&lt;td style="text-align:left">基金持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">256&lt;/td>
+&lt;td style="text-align:left">社保机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">257&lt;/td>
+&lt;td style="text-align:left">社保持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">258&lt;/td>
+&lt;td style="text-align:left">私募机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">259&lt;/td>
+&lt;td style="text-align:left">私募持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">260&lt;/td>
+&lt;td style="text-align:left">财务公司机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">261&lt;/td>
+&lt;td style="text-align:left">财务公司持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">262&lt;/td>
+&lt;td style="text-align:left">年金机构数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">263&lt;/td>
+&lt;td style="text-align:left">年金持股量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;strong>更多新增指标&lt;/strong>&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">软件内参见函数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>参数：Y、MMDD表示年、月日&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>Y&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>MMDD&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>解释&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>最新财报数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>1-300&lt;/td>
+&lt;td>前推 MMDD 期的数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>0&lt;/td>
+&lt;td>0331、0630、0930、1231&lt;/td>
+&lt;td>0331最近一季报、0630最近二季报、0930最近三季报、1231最近四季报&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>n&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>最近一期向前推 n 年的同期数据&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>关联财务函数&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>CAPITAL&lt;/td>
+&lt;td>获取当前流通股本的数量（以手为单位）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FINANCE(ID)&lt;/td>
+&lt;td>引用财务数据。如果当期数据尚未发布，则引用最近一期的数据。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TOTALCAPITAL&lt;/td>
+&lt;td>返回当前总股本的数量（以手为单位）。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-5">
+&lt;summary>特殊关联财务函数&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>MINDIFF&lt;/td>
+&lt;td>返回某品种的最小变动价位（即交易价格的最小间隔单位）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MULTIPLIER&lt;/td>
+&lt;td>返回期货每手的乘数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SETCODE&lt;/td>
+&lt;td>返回市场类型的代码，例如：0（深圳）、1（上海）、47（中金所期货）等。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TQFLAG&lt;/td>
+&lt;td>返回当前的复权状态：0（无复权）、1（前复权）、2（后复权）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>USEDDATANUM&lt;/td>
+&lt;td>返回当前使用的数据个数。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;h4 id="计算函数">计算函数&lt;/h4>
+&lt;p>&lt;strong>逻辑函数&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例/用法&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>CROSS&lt;/td>
+&lt;td>判断两条线是否交叉&lt;/td>
+&lt;td>&lt;code>CROSS(A, B)&lt;/code>: 当A从下方向上穿过B时返回1，否则返回0。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DOWNNDAY&lt;/td>
+&lt;td>判断是否连续下跌&lt;/td>
+&lt;td>&lt;code>DOWNNDAY(CLOSE, M)&lt;/code>: 连续M个周期下跌，M为常量。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>EVERY&lt;/td>
+&lt;td>判断条件是否一直成立&lt;/td>
+&lt;td>&lt;code>EVERY(CLOSE &amp;gt; OPEN, 10)&lt;/code>: 前10日内一直为阳线。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>EXIST&lt;/td>
+&lt;td>判断条件是否存在&lt;/td>
+&lt;td>&lt;code>EXIST(CLOSE &amp;gt; OPEN, 10)&lt;/code>: 前10日内存在阳线。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LAST&lt;/td>
+&lt;td>判断条件是否持续存在&lt;/td>
+&lt;td>&lt;code>LAST(CLOSE &amp;gt; OPEN, 10, 5)&lt;/code>: 前10日到前5日内一直为阳线。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LONGCROSS&lt;/td>
+&lt;td>判断两条线在维持周期后交叉&lt;/td>
+&lt;td>&lt;code>LONGCROSS(A, B, N)&lt;/code>: A在N周期内都小于B，本周期从下方向上穿过B时返回1。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NDAY&lt;/td>
+&lt;td>判断条件是否连续成立&lt;/td>
+&lt;td>&lt;code>NDAY(CLOSE, OPEN, 3)&lt;/code>: 连续3日收阳线。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NOT&lt;/td>
+&lt;td>逻辑取反&lt;/td>
+&lt;td>&lt;code>NOT(ISUP)&lt;/code>: 表示平盘或收阴。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>UPNDAY&lt;/td>
+&lt;td>判断是否连续上涨&lt;/td>
+&lt;td>&lt;code>UPNDAY(CLOSE, M)&lt;/code>: 连续M个周期上涨，M为常量。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>选择函数&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>用法&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>IF&lt;/td>
+&lt;td>条件判断&lt;/td>
+&lt;td>根据条件求不同的值。&lt;/td>
+&lt;td>&lt;code>IF(X,A,B)&lt;/code>&lt;/td>
+&lt;td>&lt;code>IF(CLOSE&amp;gt;OPEN,HIGH,LOW)&lt;/code>，表示该周期收阳则返回最高值，否则返回最低值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IFF&lt;/td>
+&lt;td>条件判断&lt;/td>
+&lt;td>根据条件求不同的值。&lt;/td>
+&lt;td>&lt;code>IFF(X,A,B)&lt;/code>&lt;/td>
+&lt;td>&lt;code>IFF(CLOSE&amp;gt;OPEN,HIGH,LOW)&lt;/code>，表示该周期收阳则返回最高值，否则返回最低值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IFN&lt;/td>
+&lt;td>条件反判断&lt;/td>
+&lt;td>根据条件求不同的值，同&lt;code>IF&lt;/code>判断相反。&lt;/td>
+&lt;td>&lt;code>IFN(X,A,B)&lt;/code>&lt;/td>
+&lt;td>&lt;code>IFN(CLOSE&amp;gt;OPEN,HIGH,LOW)&lt;/code>，表示该周期收阴则返回最高值，否则返回最低值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VALUEWHEN&lt;/td>
+&lt;td>条件跟随&lt;/td>
+&lt;td>当&lt;code>COND&lt;/code>条件成立时，取&lt;code>X&lt;/code>的当前值，否则取&lt;code>VALUEWHEN&lt;/code>的上个值。&lt;/td>
+&lt;td>&lt;code>VALUEWHEN(COND,X)&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-6">
+&lt;summary>特殊选择函数&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>用法&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>IFC&lt;/td>
+&lt;td>条件判断，可中止&lt;/td>
+&lt;td>根据条件求不同的值，可中止。&lt;/td>
+&lt;td>&lt;code>IFC(X,A,B)&lt;/code>&lt;/td>
+&lt;td>&lt;code>IFC(CLOSE&amp;gt;OPEN,HIGH,TESTSKIP(1))&lt;/code>，表示当日收阳则返回最高值，并执行下一句代码，否则退出公式计算。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TESTSKIP&lt;/td>
+&lt;td>是否就此返回&lt;/td>
+&lt;td>满足&lt;code>A&lt;/code>则直接返回。表示如果满足条件&lt;code>A&lt;/code>则该公式直接返回，不再计算接下来的表达式。&lt;/td>
+&lt;td>&lt;code>TESTSKIP(A)&lt;/code>&lt;/td>
+&lt;td>&lt;code>TESTSKIP(1)&lt;/code>，满足条件则直接返回，不再计算后续表达式。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>数学函数&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>用法示例&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>详细描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>ABS&lt;/td>
+&lt;td>绝对值&lt;/td>
+&lt;td>&lt;code>ABS(-34)&lt;/code> 返回 &lt;code>34&lt;/code>&lt;/td>
+&lt;td>返回输入值的绝对值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ACOS&lt;/td>
+&lt;td>反余弦&lt;/td>
+&lt;td>&lt;code>ACOS(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的反余弦值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ASIN&lt;/td>
+&lt;td>反正弦&lt;/td>
+&lt;td>&lt;code>ASIN(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的反正弦值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ATAN&lt;/td>
+&lt;td>反正切&lt;/td>
+&lt;td>&lt;code>ATAN(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的反正切值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CEILING&lt;/td>
+&lt;td>向上舍入&lt;/td>
+&lt;td>&lt;code>CEILING(12.3)&lt;/code> 返回 &lt;code>13&lt;/code>&lt;/td>
+&lt;td>返回沿数值增大方向最接近的整数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>COS&lt;/td>
+&lt;td>余弦&lt;/td>
+&lt;td>&lt;code>COS(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的余弦值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>EXP&lt;/td>
+&lt;td>指数&lt;/td>
+&lt;td>&lt;code>EXP(CLOSE)&lt;/code>&lt;/td>
+&lt;td>返回 e 的输入值次幂。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FLOOR&lt;/td>
+&lt;td>向下舍入&lt;/td>
+&lt;td>&lt;code>FLOOR(12.3)&lt;/code> 返回 &lt;code>12&lt;/code>&lt;/td>
+&lt;td>返回沿数值减小方向最接近的整数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FRACPART&lt;/td>
+&lt;td>小数部分&lt;/td>
+&lt;td>&lt;code>FRACPART(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的小数部分。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IINTPART&lt;/td>
+&lt;td>整数部分&lt;/td>
+&lt;td>&lt;code>INTPART(12.3)&lt;/code> 返回 &lt;code>12&lt;/code>&lt;/td>
+&lt;td>返回输入值的整数部分。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LN&lt;/td>
+&lt;td>自然对数&lt;/td>
+&lt;td>&lt;code>LN(CLOSE)&lt;/code>&lt;/td>
+&lt;td>返回输入值的自然对数（以 e 为底）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LOG&lt;/td>
+&lt;td>对数&lt;/td>
+&lt;td>&lt;code>LOG(100)&lt;/code> 返回 &lt;code>2&lt;/code>&lt;/td>
+&lt;td>返回输入值的常用对数（以 10 为底）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MAX&lt;/td>
+&lt;td>较大值&lt;/td>
+&lt;td>&lt;code>MAX(CLOSE-OPEN, 0)&lt;/code>&lt;/td>
+&lt;td>返回两个输入值中的较大值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MIN&lt;/td>
+&lt;td>较小值&lt;/td>
+&lt;td>&lt;code>MIN(CLOSE, OPEN)&lt;/code>&lt;/td>
+&lt;td>返回两个输入值中的较小值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MOD&lt;/td>
+&lt;td>余数&lt;/td>
+&lt;td>&lt;code>MOD(5,3)&lt;/code> 返回 &lt;code>2&lt;/code>&lt;/td>
+&lt;td>返回输入值的模（余数）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>POW&lt;/td>
+&lt;td>乘幂&lt;/td>
+&lt;td>&lt;code>POW(CLOSE,3)&lt;/code>&lt;/td>
+&lt;td>返回第一个输入值的第二个输入值次幂。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>RAND&lt;/td>
+&lt;td>随机正整数&lt;/td>
+&lt;td>&lt;code>RAND(N)&lt;/code>&lt;/td>
+&lt;td>返回范围在 1 到 N 之间的随机整数。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ROUND&lt;/td>
+&lt;td>四舍五入&lt;/td>
+&lt;td>&lt;code>ROUND(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值四舍五入到个位的数值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ROUND2&lt;/td>
+&lt;td>四舍五入&lt;/td>
+&lt;td>&lt;code>ROUND2(X, N)&lt;/code>&lt;/td>
+&lt;td>返回输入值四舍五入到 N 位小数的数值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SIGN&lt;/td>
+&lt;td>符号&lt;/td>
+&lt;td>&lt;code>SIGN(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的符号。当 X&amp;gt;0，X=0，X&amp;lt;0 时，分别返回 1，0，-1。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SIN&lt;/td>
+&lt;td>正弦&lt;/td>
+&lt;td>&lt;code>SIN(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的正弦值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SQRT&lt;/td>
+&lt;td>开方&lt;/td>
+&lt;td>&lt;code>SQRT(CLOSE)&lt;/code>&lt;/td>
+&lt;td>返回输入值的平方根。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TAN&lt;/td>
+&lt;td>正切&lt;/td>
+&lt;td>&lt;code>TAN(X)&lt;/code>&lt;/td>
+&lt;td>返回输入值的正切值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>BETWEEN&lt;/td>
+&lt;td>介于&lt;/td>
+&lt;td>&lt;code>BETWEEN(CLOSE, MA(CLOSE,10), MA(CLOSE,5))&lt;/code>&lt;/td>
+&lt;td>判断输入值是否介于两个指定值之间。如果介于其中，则返回 1，否则返回 0。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>统计函数&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>用法示例&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>AVEDEV&lt;/td>
+&lt;td>平均绝对偏差&lt;/td>
+&lt;td>&lt;code>AVEDEV(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>COVAR&lt;/td>
+&lt;td>协方差&lt;/td>
+&lt;td>&lt;code>COVAR(X,Y,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DEVSQ&lt;/td>
+&lt;td>数据偏差平方和&lt;/td>
+&lt;td>&lt;code>DEVSQ(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>RELATE&lt;/td>
+&lt;td>相关系数&lt;/td>
+&lt;td>&lt;code>RELATE(X,Y,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SLOPE&lt;/td>
+&lt;td>线性回归斜率&lt;/td>
+&lt;td>&lt;code>SLOPE(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STD&lt;/td>
+&lt;td>估算标准差&lt;/td>
+&lt;td>&lt;code>STD(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STDP&lt;/td>
+&lt;td>总体标准差&lt;/td>
+&lt;td>&lt;code>STDP(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VAR&lt;/td>
+&lt;td>估算样本方差&lt;/td>
+&lt;td>&lt;code>VAR(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VARP&lt;/td>
+&lt;td>总体样本方差&lt;/td>
+&lt;td>&lt;code>VARP(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-7">
+&lt;summary>特殊统计函数&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>用法示例&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>BETA&lt;/td>
+&lt;td>β系数&lt;/td>
+&lt;td>&lt;code>BETA(N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>BETAEX&lt;/td>
+&lt;td>相关放大系数&lt;/td>
+&lt;td>&lt;code>BETAEX(X,Y,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>BLOCKSETNUM&lt;/td>
+&lt;td>板块股个数&lt;/td>
+&lt;td>&lt;code>BLOCKSETNUM(板块名称)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FORCAST&lt;/td>
+&lt;td>线性回归预测值&lt;/td>
+&lt;td>&lt;code>FORCAST(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HORCALC&lt;/td>
+&lt;td>板块统计&lt;/td>
+&lt;td>&lt;code>HORCALC(板块名称,数据项,计算方式,权重)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INSORT&lt;/td>
+&lt;td>板块指标排序&lt;/td>
+&lt;td>&lt;code>INSORT(板块名称,指标名称,指标线,升降序)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INSUM&lt;/td>
+&lt;td>板块指标统计&lt;/td>
+&lt;td>&lt;code>INSUM(板块名称,指标名称,指标线,计算类型)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>IVOLAT&lt;/td>
+&lt;td>期权波动率&lt;/td>
+&lt;td>&lt;code>IVOLAT(N,M)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STDDEV&lt;/td>
+&lt;td>标准偏差&lt;/td>
+&lt;td>&lt;code>STDDEV(X,N)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;p>&lt;strong>操作符&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>操作符&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>!=&lt;/td>
+&lt;td>不等于&lt;/td>
+&lt;td>用于判断两个值是否不相等。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;quot;&lt;/td>
+&lt;td>双引号&lt;/td>
+&lt;td>用于引用特定数据。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>#&lt;/td>
+&lt;td>跨周期引用符号&lt;/td>
+&lt;td>用于引用不同周期的数据。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$&lt;/td>
+&lt;td>引用特定数据&lt;/td>
+&lt;td>用于引用特定股票代码的数据。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;amp;&amp;amp;&lt;/td>
+&lt;td>逻辑“与”&lt;/td>
+&lt;td>用于组合多个条件，只有所有条件都为真时结果才为真。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>'&lt;/td>
+&lt;td>单引号&lt;/td>
+&lt;td>用于字符串或文本内容。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>()&lt;/td>
+&lt;td>括号&lt;/td>
+&lt;td>用于改变运算优先级或组合表达式。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>*&lt;/td>
+&lt;td>乘法&lt;/td>
+&lt;td>用于数值相乘。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>+&lt;/td>
+&lt;td>加法&lt;/td>
+&lt;td>用于数值相加。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>,&lt;/td>
+&lt;td>逗号&lt;/td>
+&lt;td>用于分隔函数参数或多个表达式。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>-&lt;/td>
+&lt;td>减法&lt;/td>
+&lt;td>用于数值相减。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>.&lt;/td>
+&lt;td>引用指标输出&lt;/td>
+&lt;td>用于引用指标的输出值。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>/&lt;/td>
+&lt;td>除法&lt;/td>
+&lt;td>用于数值相除。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>:&lt;/td>
+&lt;td>输出操作符&lt;/td>
+&lt;td>用于输出结果。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>:=&lt;/td>
+&lt;td>赋值操作符&lt;/td>
+&lt;td>将值赋给变量。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>;&lt;/td>
+&lt;td>分号&lt;/td>
+&lt;td>用于分隔语句或结束语句。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;lt;&lt;/td>
+&lt;td>小于&lt;/td>
+&lt;td>用于判断 X 是否小于 Y。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;lt;=&lt;/td>
+&lt;td>小于等于&lt;/td>
+&lt;td>用于判断 X 是否小于等于 Y。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;lt;&amp;gt;&lt;/td>
+&lt;td>不等于&lt;/td>
+&lt;td>与 &lt;code>!=&lt;/code> 用法相同。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;gt;&lt;/td>
+&lt;td>大于&lt;/td>
+&lt;td>用于判断 X 是否大于 Y。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;gt;=&lt;/td>
+&lt;td>大于等于&lt;/td>
+&lt;td>用于判断 X 是否大于等于 Y。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>AND&lt;/td>
+&lt;td>逻辑“与”&lt;/td>
+&lt;td>用于组合多个条件，只有所有条件都为真时结果才为真。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>OR&lt;/td>
+&lt;td>逻辑“或”&lt;/td>
+&lt;td>用于组合多个条件，只要其中一个条件为真，结果即为真。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>{}&lt;/td>
+&lt;td>注释&lt;/td>
+&lt;td>用于添加注释内容。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>||&lt;/td>
+&lt;td>逻辑“或”&lt;/td>
+&lt;td>与OR相同。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>=&lt;/td>
+&lt;td>等于&lt;/td>
+&lt;td>用于判断两个值是否相等。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-8">
+&lt;summary>特殊操作符&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>操作符&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&amp;quot;&lt;/td>
+&lt;td>双引号&lt;/td>
+&lt;td>用于引用特定数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>#&lt;/td>
+&lt;td>跨周期引用符号&lt;/td>
+&lt;td>用于引用不同周期的数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>$&lt;/td>
+&lt;td>引用特定数据&lt;/td>
+&lt;td>用于引用特定股票代码的数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>.&lt;/td>
+&lt;td>引用指标输出&lt;/td>
+&lt;td>用于引用指标的输出值&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;h4 id="交易函数">交易函数&lt;/h4>
+&lt;p>待写&lt;/p>
+&lt;h4 id="其他函数">其他函数&lt;/h4>
+&lt;p>待写&lt;/p>
+&lt;h1 id="美股">美股&lt;/h1>
+&lt;h2 id="开户">开户&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">主要账户类型&lt;/th>
+&lt;th style="text-align:left">账户用途&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Checking Account 支票账户&lt;/td>
+&lt;td style="text-align:left">平时开支消费专用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Savings Account 储蓄账户&lt;/td>
+&lt;td style="text-align:left">活期账户，通常用来保持资金流动。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Certificates of Deposits 定期存款账户&lt;/td>
+&lt;td style="text-align:left">用于存定期存款的账户。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>美国银行开户需要准备的资料：&lt;/p>
+&lt;ul>
+&lt;li>美国实体手机卡：Paygo、redpacket&lt;/li>
+&lt;li>美国私人地址（用来申请银行账号/信用卡、美国税号TIN）：AnytimeMailbox&lt;/li>
+&lt;li>ITIN（作为身份验证、银行要求提供的地址证明）&lt;/li>
+&lt;li>美国独立IP&lt;/li>
+&lt;/ul>
+&lt;h2 id="券商">券商&lt;/h2>
+&lt;p>互联网券商富途证券、老虎证券，不被允许面向境内投资者开展跨境证券业务之后，美国本土券商的选择有嘉信理财（Chales Schwab）、富达证券（fidelity）、Etrade、美林证券、TradeKing、盈透（Interactive Broker）、德美利（TD Ameritrade）、第一证券等。较好的选择有盈透证券、嘉信理财、富达证券。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;/th>
+&lt;th>嘉信理财&lt;/th>
+&lt;th>盈透证券&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>储蓄&lt;/td>
+&lt;td>0.45%&lt;/td>
+&lt;td>4.58%（资金大于1万美元）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>固定收益产品（国债、企业债）&lt;/td>
+&lt;td>三个月约5%&lt;/td>
+&lt;td>\&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>佣金&lt;/td>
+&lt;td>0&lt;/td>
+&lt;td>1美元~交易价值的1%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>客户端&lt;/td>
+&lt;td>网页（交易价格劣势）&lt;/td>
+&lt;td>专业APP&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>银行卡&lt;/td>
+&lt;td>2023-08后大陆不给（全球免费取款）&lt;/td>
+&lt;td>大陆不给开&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>中文客服&lt;/td>
+&lt;td>有&lt;/td>
+&lt;td>\&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>全球交易需求&lt;/td>
+&lt;td>\&lt;/td>
+&lt;td>免费多币种转换，且无汇率差额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>融资/杠杆&lt;/td>
+&lt;td>13%&lt;/td>
+&lt;td>6.570%&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>出金&lt;/td>
+&lt;td>免费&lt;/td>
+&lt;td>每个月第一笔免费（如果有中转银行可能收费）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="转账">转账&lt;/h2>
+&lt;p>一般转到 Checking Account，频繁转账容易风控&lt;/p>
+&lt;p>转账方式：&lt;/p>
+&lt;ul>
+&lt;li>Zelle　美国银行间的即时转账系统，限额$1500～$2500/天, $5000～$10000/月，免费&lt;/li>
+&lt;li>ACH　　自动清算系统，1～3个工作日到帐，限额取决于转出行（比Zelle多一些），大部分银行免费（BOA等银行转出需$3）&lt;/li>
+&lt;li>电汇　　可大额、跨境，手续费高&lt;/li>
+&lt;/ul>
+&lt;p>参考资料：&lt;a class="link" href="https://course.yiwiz.com/zh/us_investment/usstock_brokers_introduction.html#_1-%E7%BE%8E%E8%82%A1%E5%88%B8%E5%95%86%E9%80%89%E6%8B%A9" target="_blank" rel="noopener"
+>course.yiwiz.com&lt;/a>&lt;/p></description></item></channel></rss>
