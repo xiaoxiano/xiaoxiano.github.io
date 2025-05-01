@@ -711,7 +711,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-1">
-&lt;summary>供券商用&lt;/summary>
+&lt;summary>暂不能用（供券商用）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -802,7 +802,7 @@
 &lt;li>资金流向&lt;/li>
 &lt;/ul>
 &lt;details class="spoiler " id="spoiler-2">
-&lt;summary>限制版本&lt;/summary>
+&lt;summary>暂不能用（限制版本）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -1004,7 +1004,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-3">
-&lt;summary>特殊周期函数&lt;/summary>
+&lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -2504,7 +2504,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-5">
-&lt;summary>特殊关联财务函数&lt;/summary>
+&lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -2642,7 +2642,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-6">
-&lt;summary>特殊选择函数&lt;/summary>
+&lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -2891,7 +2891,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-7">
-&lt;summary>特殊统计函数&lt;/summary>
+&lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -2968,21 +2968,6 @@
 &lt;td>用于判断两个值是否不相等。&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>&amp;quot;&lt;/td>
-&lt;td>双引号&lt;/td>
-&lt;td>用于引用特定数据。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>#&lt;/td>
-&lt;td>跨周期引用符号&lt;/td>
-&lt;td>用于引用不同周期的数据。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>$&lt;/td>
-&lt;td>引用特定数据&lt;/td>
-&lt;td>用于引用特定股票代码的数据。&lt;/td>
-&lt;/tr>
-&lt;tr>
 &lt;td>&amp;amp;&amp;amp;&lt;/td>
 &lt;td>逻辑“与”&lt;/td>
 &lt;td>用于组合多个条件，只有所有条件都为真时结果才为真。&lt;/td>
@@ -3016,11 +3001,6 @@
 &lt;td>-&lt;/td>
 &lt;td>减法&lt;/td>
 &lt;td>用于数值相减。&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>.&lt;/td>
-&lt;td>引用指标输出&lt;/td>
-&lt;td>用于引用指标的输出值。&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>/&lt;/td>
@@ -3095,7 +3075,7 @@
 &lt;/tbody>
 &lt;/table>
 &lt;details class="spoiler " id="spoiler-8">
-&lt;summary>特殊操作符&lt;/summary>
+&lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
