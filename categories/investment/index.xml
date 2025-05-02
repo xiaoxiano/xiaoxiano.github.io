@@ -665,6 +665,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>其中&lt;strong>即时行情&lt;/strong>、&lt;strong>专业财务&lt;/strong>较为常用&lt;/p>
 &lt;h4 id="行情函数">行情函数&lt;/h4>
 &lt;ul>
 &lt;li>即时行情&lt;/li>
@@ -672,127 +673,170 @@
 &lt;table>
 &lt;thead>
 &lt;tr>
-&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
+&lt;th>函数名称&lt;/th>
+&lt;th>功能描述&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>INDEXA&lt;/td>
-&lt;td>返回大盘的成交额&lt;/td>
-&lt;td>&lt;code>INDEXA&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交额&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INDEXC&lt;/td>
-&lt;td>返回大盘的收盘价&lt;/td>
-&lt;td>&lt;code>INDEXC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的收盘价&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INDEXH&lt;/td>
-&lt;td>返回大盘的最高价&lt;/td>
-&lt;td>&lt;code>INDEXH&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最高价&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INDEXL&lt;/td>
-&lt;td>返回大盘的最低价&lt;/td>
-&lt;td>&lt;code>INDEXL&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最低价&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INDEXO&lt;/td>
-&lt;td>返回大盘的开盘价&lt;/td>
-&lt;td>&lt;code>INDEXO&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的开盘价&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>INDEXV&lt;/td>
-&lt;td>返回大盘的成交量&lt;/td>
-&lt;td>&lt;code>INDEXV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交量&lt;/td>
+&lt;td>&lt;code>DYNAINFO(ID)&lt;/code>&lt;/td>
+&lt;td>获取当日即时行情数据&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
+&lt;p>参数：ID为数据编号&lt;/p>
 &lt;details class="spoiler " id="spoiler-1">
-&lt;summary>暂不能用（供券商用）&lt;/summary>
+&lt;summary>ID详情&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">&lt;strong>ID&lt;/strong>&lt;/th>
+&lt;th style="text-align:left">&lt;strong>功能&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(3)&lt;/td>
+&lt;td style="text-align:left">昨收盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(4)&lt;/td>
+&lt;td style="text-align:left">开盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(5)&lt;/td>
+&lt;td style="text-align:left">最高价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(6)&lt;/td>
+&lt;td style="text-align:left">最低价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(7)&lt;/td>
+&lt;td style="text-align:left">现价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(8)&lt;/td>
+&lt;td style="text-align:left">总量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(9)&lt;/td>
+&lt;td style="text-align:left">现量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(10)&lt;/td>
+&lt;td style="text-align:left">总金额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(11)&lt;/td>
+&lt;td style="text-align:left">均价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(12)&lt;/td>
+&lt;td style="text-align:left">日涨跌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(13)&lt;/td>
+&lt;td style="text-align:left">振幅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(14)&lt;/td>
+&lt;td style="text-align:left">涨幅&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(15)&lt;/td>
+&lt;td style="text-align:left">开盘金额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(16)&lt;/td>
+&lt;td style="text-align:left">前5日每分钟均量&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(17)&lt;/td>
+&lt;td style="text-align:left">量比&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(18)&lt;/td>
+&lt;td style="text-align:left">上涨家数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(19)&lt;/td>
+&lt;td style="text-align:left">下跌家数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(20)&lt;/td>
+&lt;td style="text-align:left">买价（即买一价）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(21)&lt;/td>
+&lt;td style="text-align:left">卖价（即卖一价）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(22)&lt;/td>
+&lt;td style="text-align:left">内盘/板块指数跌停数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(23)&lt;/td>
+&lt;td style="text-align:left">外盘/板块指数涨停数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(24)&lt;/td>
+&lt;td style="text-align:left">涨速&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(25)&lt;/td>
+&lt;td style="text-align:left">几分钟前的价格&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(37)&lt;/td>
+&lt;td style="text-align:left">换手率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(38)&lt;/td>
+&lt;td style="text-align:left">市盈（静）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(39)&lt;/td>
+&lt;td style="text-align:left">市盈（动）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DYNAINFO(40)&lt;/td>
+&lt;td style="text-align:left">市盈(TTM)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>最好不用（限制）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
 &lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
-&lt;th>&lt;strong>支持情况&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>限制条件&lt;/strong>&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>INDEXADV&lt;/td>
-&lt;td>返回大盘的上涨家数&lt;/td>
-&lt;td>&lt;code>INDEXADV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的上涨家数&lt;/td>
-&lt;td>尚未支持&lt;/td>
+&lt;td>&lt;code>BETAVALUE&lt;/code>&lt;/td>
+&lt;td>返回当前品种的贝塔系数&lt;/td>
+&lt;td>仅支持日线级别的计算&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>INDEXDEC&lt;/td>
-&lt;td>返回大盘的下跌家数&lt;/td>
-&lt;td>&lt;code>INDEXDEC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的下跌家数&lt;/td>
-&lt;td>尚未支持&lt;/td>
+&lt;td>&lt;code>BUYVOL&lt;/code>&lt;/td>
+&lt;td>外盘（即时行情数据）&lt;/td>
+&lt;td>仅支持日线级别的计算&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>HY_INDEXA&lt;/td>
-&lt;td>返回行业指数的成交额&lt;/td>
-&lt;td>&lt;code>HY_INDEXA&lt;/code>&lt;br>返回对应行业指数的成交额&lt;/td>
-&lt;td>尚未支持&lt;/td>
+&lt;td>&lt;code>ISBUYORDER&lt;/code>&lt;/td>
+&lt;td>主动性买单&lt;/td>
+&lt;td>仅支持日线级别的计算&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>HY_INDEXADV&lt;/td>
-&lt;td>返回行业指数的上涨家数&lt;/td>
-&lt;td>&lt;code>HY_INDEXADV&lt;/code>&lt;br>返回对应行业指数的上涨家数&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXC&lt;/td>
-&lt;td>返回行业指数的收盘价&lt;/td>
-&lt;td>&lt;code>HY_INDEXC&lt;/code>&lt;br>返回对应行业指数的收盘价&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXDEC&lt;/td>
-&lt;td>返回行业指数的下跌家数&lt;/td>
-&lt;td>&lt;code>HY_INDEXDEC&lt;/code>&lt;br>返回对应行业指数的下跌家数&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXH&lt;/td>
-&lt;td>返回行业指数的最高价&lt;/td>
-&lt;td>&lt;code>HY_INDEXH&lt;/code>&lt;br>返回对应行业指数的最高价&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXL&lt;/td>
-&lt;td>返回行业指数的最低价&lt;/td>
-&lt;td>&lt;code>HY_INDEXL&lt;/code>&lt;br>返回对应行业指数的最低价&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXO&lt;/td>
-&lt;td>返回行业指数的开盘价&lt;/td>
-&lt;td>&lt;code>HY_INDEXO&lt;/code>&lt;br>返回对应行业指数的开盘价&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>HY_INDEXV&lt;/td>
-&lt;td>返回行业指数的成交量&lt;/td>
-&lt;td>&lt;code>HY_INDEXV&lt;/code>&lt;br>返回对应行业指数的成交量&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>DPZSCODE&lt;/td>
-&lt;td>返回所属大盘指数的代码&lt;/td>
-&lt;td>&lt;code>CALCSTOCKINDEX(DPZSCODE,'KDJ',3)&lt;/code>&lt;/td>
-&lt;td>尚未支持&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>UNDERLYC&lt;/td>
-&lt;td>返回对应标的的收盘价&lt;/td>
-&lt;td>&lt;code>UNDERLYC&lt;/code>&lt;br>返回对应标的的收盘价&lt;/td>
-&lt;td>尚未支持&lt;/td>
+&lt;td>&lt;code>SELLVOL&lt;/code>&lt;/td>
+&lt;td>内盘（即时行情数据）&lt;/td>
+&lt;td>仅支持日线级别的计算&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -801,8 +845,8 @@
 &lt;ul>
 &lt;li>资金流向&lt;/li>
 &lt;/ul>
-&lt;details class="spoiler " id="spoiler-2">
-&lt;summary>暂不能用（限制版本）&lt;/summary>
+&lt;details class="spoiler " id="spoiler-3">
+&lt;summary>最好不用（限制版本）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
 &lt;tr>
@@ -1003,7 +1047,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;details class="spoiler " id="spoiler-3">
+&lt;details class="spoiler " id="spoiler-4">
 &lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
@@ -1074,19 +1118,394 @@
 &lt;/p>
 &lt;/details>
 &lt;ul>
-&lt;li>
-&lt;p>形态函数
-待写&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>板块函数
-待写&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>指数标的
-待写&lt;/p>
+&lt;li>形态函数
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>使用示例&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>COST&lt;/td>
+&lt;td>成本分布&lt;/td>
+&lt;td>&lt;code>COST(10)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>COSTEX&lt;/td>
+&lt;td>区间成本&lt;/td>
+&lt;td>&lt;code>COSTEX(CLOSE, REF(CLOSE))&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>LWINNER&lt;/td>
+&lt;td>近期获利盘比例&lt;/td>
+&lt;td>&lt;code>LWINNER(5, CLOSE)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NEWSAR&lt;/td>
+&lt;td>新抛物转向&lt;/td>
+&lt;td>&lt;code>NEWSAR(10, 2)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PEAK&lt;/td>
+&lt;td>波峰值&lt;/td>
+&lt;td>&lt;code>PEAK(1, 5, 1)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PEAKBARS&lt;/td>
+&lt;td>波峰位置&lt;/td>
+&lt;td>&lt;code>PEAKBARS(1, 5, 1)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>WINNER&lt;/td>
+&lt;td>获利盘比例&lt;/td>
+&lt;td>&lt;code>WINNER(CLOSE)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZIG&lt;/td>
+&lt;td>之字转向&lt;/td>
+&lt;td>&lt;code>ZIG(3, 5)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZIGA&lt;/td>
+&lt;td>之字转向&lt;/td>
+&lt;td>&lt;code>ZIGA(3, 1.5)&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;/li>
 &lt;/ul>
+&lt;details class="spoiler " id="spoiler-5">
+&lt;summary>最好不用（特殊）&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>使用示例&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>不支持原因&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>LFS&lt;/td>
+&lt;td>锁定因子&lt;/td>
+&lt;td>无&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PPART&lt;/td>
+&lt;td>远期成本分布比例&lt;/td>
+&lt;td>&lt;code>PPART(10)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PWINNER&lt;/td>
+&lt;td>远期获利盘比例&lt;/td>
+&lt;td>&lt;code>PWINNER(5, CLOSE)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SAR&lt;/td>
+&lt;td>抛物转向&lt;/td>
+&lt;td>&lt;code>SAR(10, 2, 20)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>SARTURN&lt;/td>
+&lt;td>抛物转向点&lt;/td>
+&lt;td>&lt;code>SARTURN(10, 2, 20)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TROUGH&lt;/td>
+&lt;td>波谷值&lt;/td>
+&lt;td>&lt;code>TROUGH(2, 5, 2)&lt;/code>&lt;/td>
+&lt;td>尚未支持：属于未来函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>TROUGHBARS&lt;/td>
+&lt;td>波谷位置&lt;/td>
+&lt;td>&lt;code>TROUGHBARS(2, 5, 2)&lt;/code>&lt;/td>
+&lt;td>尚未支持：属于未来函数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;ul>
+&lt;li>板块函数&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>STRCAT&lt;/td>
+&lt;td>字符串相加&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INBLOCK&lt;/td>
+&lt;td>判断股票是否属于某个板块&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-6">
+&lt;summary>最好不用（特殊）&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>CODE&lt;/td>
+&lt;td>返回品种代码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CODELIKE&lt;/td>
+&lt;td>模糊匹配品种代码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CON2STR&lt;/td>
+&lt;td>取值转为字符串&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DYBLOCK&lt;/td>
+&lt;td>返回品种所属地域&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FGBLOCK&lt;/td>
+&lt;td>返回股票所属风格板块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FGBLOCKNUM&lt;/td>
+&lt;td>返回所属风格板块的个数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>FINDSTR&lt;/td>
+&lt;td>字符串查找&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GNBLOCK&lt;/td>
+&lt;td>返回所属概念板块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GNBLOCKNUM&lt;/td>
+&lt;td>返回所属概念板块的个数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HYBLOCK&lt;/td>
+&lt;td>返回品种所属行业&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HYSYL&lt;/td>
+&lt;td>返回品种所属行业的市盈率&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HYZSCODE&lt;/td>
+&lt;td>返回品种所属行业的板块指数代码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NAMEINCLUDE&lt;/td>
+&lt;td>品种名称中是否包含参数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>NAMELIKE&lt;/td>
+&lt;td>模糊匹配品种名称&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STKNAME&lt;/td>
+&lt;td>返回品种名称&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STR2CON&lt;/td>
+&lt;td>字符串转为数字&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STRCMP&lt;/td>
+&lt;td>字符串比较&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>STRSPACE&lt;/td>
+&lt;td>字符串加一空格&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VAR2STR&lt;/td>
+&lt;td>取值转为字符串（序列）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>VARCAT&lt;/td>
+&lt;td>字符串相加（序列）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZDBLOCK&lt;/td>
+&lt;td>返回股票所属自定义板块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZDBLOCKNUM&lt;/td>
+&lt;td>返回所属自定义板块的个数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZHBLOCK&lt;/td>
+&lt;td>返回股票所属组合板块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZHBLOCKNUM&lt;/td>
+&lt;td>返回所属组合板块的个数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZSBLOCK&lt;/td>
+&lt;td>返回股票所属指数板块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>ZSBLOCKNUM&lt;/td>
+&lt;td>返回所属指数板块的个数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
+&lt;ul>
+&lt;li>指数标的&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>INDEXA&lt;/td>
+&lt;td>返回大盘的成交额&lt;/td>
+&lt;td>&lt;code>INDEXA&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交额&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXC&lt;/td>
+&lt;td>返回大盘的收盘价&lt;/td>
+&lt;td>&lt;code>INDEXC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的收盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXH&lt;/td>
+&lt;td>返回大盘的最高价&lt;/td>
+&lt;td>&lt;code>INDEXH&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最高价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXL&lt;/td>
+&lt;td>返回大盘的最低价&lt;/td>
+&lt;td>&lt;code>INDEXL&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的最低价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXO&lt;/td>
+&lt;td>返回大盘的开盘价&lt;/td>
+&lt;td>&lt;code>INDEXO&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的开盘价&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXV&lt;/td>
+&lt;td>返回大盘的成交量&lt;/td>
+&lt;td>&lt;code>INDEXV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的成交量&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;details class="spoiler " id="spoiler-7">
+&lt;summary>最好不用（供券商用）&lt;/summary>
+&lt;p>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>函数名称&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>功能描述&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>示例用法&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持情况&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>INDEXADV&lt;/td>
+&lt;td>返回大盘的上涨家数&lt;/td>
+&lt;td>&lt;code>INDEXADV&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的上涨家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>INDEXDEC&lt;/td>
+&lt;td>返回大盘的下跌家数&lt;/td>
+&lt;td>&lt;code>INDEXDEC&lt;/code>&lt;br>返回上证指数、深证成指、中小板指和创业板指的下跌家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXA&lt;/td>
+&lt;td>返回行业指数的成交额&lt;/td>
+&lt;td>&lt;code>HY_INDEXA&lt;/code>&lt;br>返回对应行业指数的成交额&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXADV&lt;/td>
+&lt;td>返回行业指数的上涨家数&lt;/td>
+&lt;td>&lt;code>HY_INDEXADV&lt;/code>&lt;br>返回对应行业指数的上涨家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXC&lt;/td>
+&lt;td>返回行业指数的收盘价&lt;/td>
+&lt;td>&lt;code>HY_INDEXC&lt;/code>&lt;br>返回对应行业指数的收盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXDEC&lt;/td>
+&lt;td>返回行业指数的下跌家数&lt;/td>
+&lt;td>&lt;code>HY_INDEXDEC&lt;/code>&lt;br>返回对应行业指数的下跌家数&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXH&lt;/td>
+&lt;td>返回行业指数的最高价&lt;/td>
+&lt;td>&lt;code>HY_INDEXH&lt;/code>&lt;br>返回对应行业指数的最高价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXL&lt;/td>
+&lt;td>返回行业指数的最低价&lt;/td>
+&lt;td>&lt;code>HY_INDEXL&lt;/code>&lt;br>返回对应行业指数的最低价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXO&lt;/td>
+&lt;td>返回行业指数的开盘价&lt;/td>
+&lt;td>&lt;code>HY_INDEXO&lt;/code>&lt;br>返回对应行业指数的开盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>HY_INDEXV&lt;/td>
+&lt;td>返回行业指数的成交量&lt;/td>
+&lt;td>&lt;code>HY_INDEXV&lt;/code>&lt;br>返回对应行业指数的成交量&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DPZSCODE&lt;/td>
+&lt;td>返回所属大盘指数的代码&lt;/td>
+&lt;td>&lt;code>CALCSTOCKINDEX(DPZSCODE,'KDJ',3)&lt;/code>&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>UNDERLYC&lt;/td>
+&lt;td>返回对应标的的收盘价&lt;/td>
+&lt;td>&lt;code>UNDERLYC&lt;/code>&lt;br>返回对应标的的收盘价&lt;/td>
+&lt;td>尚未支持&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;/p>
+&lt;/details>
 &lt;h4 id="财务函数">财务函数&lt;/h4>
 &lt;ul>
 &lt;li>专业财务&lt;/li>
@@ -1106,12 +1525,12 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>FINONE(ID,Y,MMDD)&lt;/td>
-&lt;td>引用指定年和月日的某类型的财务数据。&lt;/td>
+&lt;td>引用指定年和月日的某类型的财务数据。该函数只适用于沪深京市场。&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;p>参数：ID为数据编号&lt;/p>
-&lt;details class="spoiler " id="spoiler-4">
+&lt;details class="spoiler " id="spoiler-8">
 &lt;summary>ID详情&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
@@ -2469,12 +2888,17 @@
 &lt;tr>
 &lt;td>0&lt;/td>
 &lt;td>0331、0630、0930、1231&lt;/td>
-&lt;td>0331最近一季报、0630最近二季报、0930最近三季报、1231最近四季报&lt;/td>
+&lt;td>0331最近一季报、0630最近中报、0930最近三季报、1231最近年报&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>n&lt;/td>
 &lt;td>0&lt;/td>
 &lt;td>最近一期向前推 n 年的同期数据&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>某年&lt;/td>
+&lt;td>0331、0630、0930、1231&lt;/td>
+&lt;td>某年一季报、中报、三季报、年报&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -2495,7 +2919,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>FINANCE(ID)&lt;/td>
-&lt;td>引用财务数据。如果当期数据尚未发布，则引用最近一期的数据。&lt;/td>
+&lt;td>引用财务数据（使用FINONE更好）。如果当期数据尚未发布，则引用最近一期的数据。&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>TOTALCAPITAL&lt;/td>
@@ -2503,7 +2927,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;details class="spoiler " id="spoiler-5">
+&lt;details class="spoiler " id="spoiler-9">
 &lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
@@ -2641,7 +3065,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;details class="spoiler " id="spoiler-6">
+&lt;details class="spoiler " id="spoiler-10">
 &lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
@@ -2890,7 +3314,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;details class="spoiler " id="spoiler-7">
+&lt;details class="spoiler " id="spoiler-11">
 &lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
@@ -3074,7 +3498,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;details class="spoiler " id="spoiler-8">
+&lt;details class="spoiler " id="spoiler-12">
 &lt;summary>最好不用（特殊）&lt;/summary>
 &lt;p>&lt;table>
 &lt;thead>
