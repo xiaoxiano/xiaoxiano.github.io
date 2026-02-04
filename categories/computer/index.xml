@@ -6548,10 +6548,18 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">20. 文件扩展名效验:^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?”&lt;span class="err">&amp;lt;&lt;/span>&amp;gt;|]+\\.txt(l)?$
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">21. 判断IE版本：^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>环境配置和软件</title><link>https://xiaoxiano.github.io/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
-&lt;p>&lt;strong>架构&lt;/strong>
-windows-386 ：这些是针对 32 位 Windows 系统编译的
-&lt;strong>windows-amd64&lt;/strong> ：这些是针对具有 AMD 或 Intel x86-64 架构的 64 位 Windows 系统编译的
-windows-arm64 ：这些是针对具有 ARM 架构的 64 位 Windows 系统编译的&lt;/p>
+&lt;p>&lt;strong>架构&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>windows-386 ：这些是针对 32 位 Windows 系统编译的&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>windows-amd64&lt;/strong> ：这些是针对具有 AMD 或 Intel x86-64 架构的 64 位 Windows 系统编译的&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>windows-arm64 ：这些是针对具有 ARM 架构的 64 位 Windows 系统编译的&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
 &lt;li>git&lt;/li>
@@ -6619,8 +6627,17 @@ windows-arm64 ：这些是针对具有 ARM 架构的 64 位 Windows 系统编译
 &lt;p>备份您的来源列表 &lt;code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>打开&lt;code>/etc/apt/sources.list&lt;/code>粘贴&lt;a class="link" href="https://launchpad.net/ubuntu/&amp;#43;archivemirrors" target="_blank" rel="noopener"
->这里&lt;/a>对应地区和版本的sources.list条目&lt;/p>
+&lt;p>修改apt源：打开&lt;code>/etc/apt/sources.list&lt;/code>粘贴&lt;a class="link" href="https://launchpad.net/ubuntu/&amp;#43;archivemirrors" target="_blank" rel="noopener"
+>这里&lt;/a>对应地区和版本的sources.list条目，例如
+&lt;img src="https://xiaoxiano.github.io/p/config/2.png"
+width="1314"
+height="272"
+srcset="https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="483"
+data-flex-basis="1159px"
+>&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># DNS 设置
@@ -6628,6 +6645,29 @@ windows-arm64 ：这些是针对具有 ARM 架构的 64 位 Windows 系统编译
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使用Google DNS作为首选 DNS 服务器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.8.8
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.4.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu共享文件夹">VM Ubuntu共享文件夹&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>设置
+&lt;img src="https://xiaoxiano.github.io/p/config/3.png"
+width="859"
+height="1002"
+srcset="https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="85"
+data-flex-basis="205px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>每次启动自动挂载，在/etc/fstab文件添加&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>已挂在到/mnt/hgfs目录&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ls -l /mnt/hgfs
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu克隆">VM Ubuntu克隆&lt;/h2>
 &lt;p>&lt;strong>1. 概念&lt;/strong>&lt;/p>
 &lt;ul>

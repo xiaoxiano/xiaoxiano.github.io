@@ -46,7 +46,7 @@ data-flex-basis="448px"
 &lt;td>索康尼&lt;/td>
 &lt;td>胜利21&lt;/td>
 &lt;td>韧弹&lt;/td>
-&lt;td>舒适度拉满，小体重脚感硬，有的人穿过就不再考虑其他品牌&lt;/td>
+&lt;td>舒适度拉满，小体重脚感稍硬，有的人穿过就不再考虑其他品牌&lt;/td>
 &lt;td>长距离或大体重&lt;/td>
 &lt;td>设计、材质满分，脚感硬，训练量大时容易震伤跟腱，鞋底泡沫材质，和普通鞋完全不同，不耐磨&lt;/td>
 &lt;/tr>
@@ -1066,9 +1066,10 @@ data-flex-basis="855px"
 &lt;p>使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
 &lt;p>&lt;strong>步骤：&lt;/strong>&lt;/p>
 &lt;ol>
-&lt;li>解bl锁&lt;/li>
+&lt;li>解bl锁
+2025年后大部分手机不支持解锁，
+各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。&lt;/li>
 &lt;/ol>
-&lt;p>各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。&lt;/p>
 &lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
 >短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
 &lt;ol start="2">
@@ -1103,7 +1104,7 @@ data-flex-basis="479px"
 >https://xiaomirom.com/&lt;/a>下载刷机工具，下载酷安大神（例如：乌堆小透明）的ROM，或者欧版eu社区版ROM。然后按照&lt;a class="link" href="https://miuiver.com/how-to-flash-twrp/" target="_blank" rel="noopener"
 >此教程&lt;/a>操作，安装选择默认即可，开机后卸载重装magisk。&lt;/p>
 &lt;p>&lt;strong>华为旧机为例：&lt;/strong> 在&lt;a class="link" href="https://m.huaweirom.com/rom/" target="_blank" rel="noopener"
->https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广告就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
+>https://m.huaweirom.com/rom/&lt;/a>找到对应机型的rom，我当时看到网站干净无广就刷了，是可以用的。Fastboot模式运行run脚本就行了。&lt;/p>
 &lt;ol start="3">
 &lt;li>root&lt;/li>
 &lt;/ol>
@@ -1252,7 +1253,7 @@ data-flex-basis="479px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x_center=(x1+x2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y_center=(y1+y2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch(x_center,y_center)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="tasker使用andriod">Tasker（使用andriod）&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="taskerandriod">Tasker（andriod）&lt;/h2>
 &lt;p>优点：性能好，无需电脑&lt;/p>
 &lt;p>缺点：需root，只能处理简单任务&lt;/p>
 &lt;h3 id="基础-1">基础&lt;/h3>
