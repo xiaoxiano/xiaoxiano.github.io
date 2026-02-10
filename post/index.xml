@@ -10219,14 +10219,109 @@ data-flex-basis="236px"
 &lt;h2 id="其他-1">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root">root&lt;/h1>
-&lt;p>&lt;strong>前言：&lt;/strong>&lt;/p>
-&lt;p>使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
+&lt;style type="text/css">
+.box {
+padding: 1.6em;
+padding-top: 1.4em;
+line-height: 1.4em;
+margin-top: 2em;
+margin-bottom: 4em;
+border-radius: 4px;
+color: #444;
+background: #f3ebe850;
+}
+.box-title {
+margin: -18px -18px 12px;
+padding: 4px 18px;
+border-radius: 4px 4px 0 0;
+font-weight: 700;
+color: #fff;
+background: #6ab0de;
+}
+.box.warning .box-title {
+background: #ff6b6b;
+}
+.box.warning {
+background: #ff6b6b4f;
+}
+.box.info .box-title {
+background: #0089e488;
+}
+.box.info {
+background: #0089e41c;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.box.important .box-title {
+background: #f7ec2c;
+}
+.box.important {
+background: #f7ec2c7d;
+}
+.box.tip .box-title {
+background: #a3ffa34d;
+}
+.box.tip {
+background: #a3ffa34d;
+box-shadow: 3px 3px 5px #0089e410;
+}
+.icon-box {
+display: inline-flex;
+align-self: center;
+margin-right: 8px;
+}
+.icon-box img,
+.icon-box svg {
+height: 1em;
+width: 1em;
+fill: currentColor;
+}
+.icon-box img,
+.icon-box.baseline svg {
+top: 0.125em;
+position: relative;
+}
+.box p {
+margin-bottom: 0.6em;
+}
+.box p:first-of-type {
+display: inline;
+}
+.box p:nth-of-type(2) {
+margin-top: 0.6em;
+}
+.box p:last-child {
+margin-bottom: 0;
+}
+&lt;/style>
+&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
+&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
+&lt;/symbol>
+&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
+&lt;/symbol>
+&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+&lt;path
+d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
+&lt;/symbol>
+&lt;/svg>&lt;div class="box info" >
+&lt;span class="icon-box baseline">
+&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
+&lt;/span>
+&lt;p>&lt;strong>前言：&lt;/strong> 2025年后大部分手机不支持解锁，&lt;a class="link" href="https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame" target="_blank" rel="noopener"
+>查看详情&lt;/a>。使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
+&lt;/div>
 &lt;p>&lt;strong>步骤：&lt;/strong>&lt;/p>
 &lt;ol>
-&lt;li>解bl锁
-2025年后大部分手机不支持解锁，
-各品牌手机解锁有所不同，三星、小米、一加、Google pixel等部分厂商官方给解锁。&lt;/li>
+&lt;li>解bl锁&lt;/li>
 &lt;/ol>
+&lt;p>各品牌手机解锁有所不同。&lt;/p>
 &lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
 >短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
 &lt;ol start="2">
@@ -10280,7 +10375,8 @@ data-flex-basis="479px"
 &lt;li>AutoX.js：支持打包apk，图像识别需自己实现&lt;/li>
 &lt;li>Hamibot：支持打包apk，可以浏览器远程控制&lt;/li>
 &lt;li>AiBote：办公自动化&lt;/li>
-&lt;li>Tasker、MacroDroid：单独app即可简单使用，收费&lt;/li>
+&lt;li>Tasker：单独app即可简单使用，收费&lt;/li>
+&lt;li>MacroDroid：单独app即可简单使用，免费5个宏&lt;/li>
 &lt;/ul>
 &lt;h2 id="airtest使用pc">airtest（使用PC）&lt;/h2>
 &lt;p>可支持自动化测试Android/Windows/iOS，详见&lt;a class="link" href="https://airtest.netease.com/" target="_blank" rel="noopener"
@@ -10410,107 +10506,35 @@ data-flex-basis="479px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> x_center=(x1+x2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> y_center=(y1+y2)//2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> touch(x_center,y_center)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="taskerandriod">Tasker（andriod）&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="macrodroidandriod推荐">MacroDroid（andriod推荐）&lt;/h2>
+&lt;p>优点：性能好，无需电脑，比tasker更易用，大部分功能无需root&lt;/p>
+&lt;p>缺点：极少功能数支持不如tasker&lt;/p>
+&lt;p>&lt;strong>概念&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>宏&lt;/p>
+&lt;ul>
+&lt;li>触发器：触发宏的事件&lt;/li>
+&lt;li>操作：执行的任务&lt;/li>
+&lt;li>约束(可选)：宏运行前必须满足的条件&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>常见操作&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/phone-root/2.png"
+width="1632"
+height="1211"
+srcset="https://xiaoxiano.github.io/p/phone-root/2_hu6c282e31f5c66f4cb0918c433dc58630_105410_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/phone-root/2_hu6c282e31f5c66f4cb0918c433dc58630_105410_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="134"
+data-flex-basis="323px"
+>&lt;/p>
+&lt;h2 id="taskerandriod">Tasker（andriod）&lt;/h2>
 &lt;p>优点：性能好，无需电脑&lt;/p>
-&lt;p>缺点：需root，只能处理简单任务&lt;/p>
-&lt;h3 id="基础-1">基础&lt;/h3>
-&lt;style type="text/css">
-.box {
-padding: 1.6em;
-padding-top: 1.4em;
-line-height: 1.4em;
-margin-top: 2em;
-margin-bottom: 4em;
-border-radius: 4px;
-color: #444;
-background: #f3ebe850;
-}
-.box-title {
-margin: -18px -18px 12px;
-padding: 4px 18px;
-border-radius: 4px 4px 0 0;
-font-weight: 700;
-color: #fff;
-background: #6ab0de;
-}
-.box.warning .box-title {
-background: #ff6b6b;
-}
-.box.warning {
-background: #ff6b6b4f;
-}
-.box.info .box-title {
-background: #0089e488;
-}
-.box.info {
-background: #0089e41c;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.box.important .box-title {
-background: #f7ec2c;
-}
-.box.important {
-background: #f7ec2c7d;
-}
-.box.tip .box-title {
-background: #a3ffa34d;
-}
-.box.tip {
-background: #a3ffa34d;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.icon-box {
-display: inline-flex;
-align-self: center;
-margin-right: 8px;
-}
-.icon-box img,
-.icon-box svg {
-height: 1em;
-width: 1em;
-fill: currentColor;
-}
-.icon-box img,
-.icon-box.baseline svg {
-top: 0.125em;
-position: relative;
-}
-.box p {
-margin-bottom: 0.6em;
-}
-.box p:first-of-type {
-display: inline;
-}
-.box p:nth-of-type(2) {
-margin-top: 0.6em;
-}
-.box p:last-child {
-margin-bottom: 0;
-}
-&lt;/style>
-&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
-&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
-&lt;/symbol>
-&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
-&lt;/symbol>
-&lt;/svg>&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>Tasker终身许可$3.49，可app单独使用，需root才顺畅使用，否则锁屏都不能解决&lt;/p>
-&lt;/div>
+&lt;p>缺点：需root，Tasker终身许可$4.49&lt;/p>
 &lt;p>&lt;strong>设置：&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>防止系统清理：进入系统最近任务界面，点击应用旁边的小锁，锁定应用不被系统清理&lt;/li>
@@ -10518,7 +10542,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;li>设置启动管理：依次打开系统设置，电池，启动管理，关闭应用自动管理后弹出的对话框中选中：允许自启动，允许关联启动，允许后台活动&lt;/li>
 &lt;li>权限全部打开&lt;/li>
 &lt;/ul>
-&lt;h3 id="shell">shell&lt;/h3>
+&lt;h2 id="shell">shell&lt;/h2>
 &lt;p>shell命令很方便定义操作（点击的坐标可以在手机开发者选项中打开指针位置）。&lt;a class="link" href="https://commandnotfound.cn/android/4/439/%E5%B8%B8%E7%94%A8-adb-shell-%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8" target="_blank" rel="noopener"
 >shell命令摘录网站&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#按键事件
@@ -10548,237 +10572,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#长按
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">input swipe 100 100 100 100 1000 //在 100 100 位置长按 1000毫秒
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>freenom自动续期（废弃）</title><link>https://xiaoxiano.github.io/p/freenom/</link><pubDate>Fri, 19 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/freenom/</guid><description>&lt;h1 id="本github-actions方法已于2022-07-15被封详情请去仓库看文档">本github actions方法已于2022-07-15被封，详情请去仓库看文档&lt;/h1>
-&lt;h1 id="freenom自动续期">freenom自动续期&lt;/h1>
-&lt;ol>
-&lt;li>
-&lt;p>Fork &lt;a class="link" href="https://github.com/luolongfei/freenom" target="_blank" rel="noopener"
->luolongfei大佬的freenom库&lt;/a>，再添加以下workflow：
-&lt;details class="spoiler " id="spoiler-0">
-&lt;summary>“点击展开完整代码”&lt;/summary>
-&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 1、Fork 本仓库
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2、在你 Fork 的本仓库下的 Settings &amp;gt; Secrets 画面追加以下几个 secret 变量：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># FREENOM_USERNAME、FREENOM_PASSWORD、MULTIPLE_ACCOUNTS、MAIL_USERNAME、MAIL_PASSWORD、TO、MAIL_ENABLE、TELEGRAM_CHAT_ID、
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># TELEGRAM_BOT_TOKEN、TELEGRAM_BOT_ENABLE、NOTICE_FREQ
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># （注：此处列出了所有可用变量，你只用追加你需要用到的变量，变量的具体含义请参考本项目的 .env 文件中的说明，一般情况下，.env 文件中的某些
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 项存在默认值，如果默认值满足你的需求则可不追加到 Secrets，它们会保持默认）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 下面定时任务中的时间是世界时间，每天 10:00（本示例已改为2:00） 执行，由于创建虚拟环境会消耗时间，故任务会延迟 30 秒左右执行
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># @Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">###### end 说明 ######
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">on:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> push:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> branches:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - main
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> schedule:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - cron: 00 02 * * *
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> workflow_dispatch:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run-it:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-18.04
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: Run it on action
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Checkout master
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: actions/checkout@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setup PHP
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> uses: shivammathur/setup-php@v2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php-version: &amp;#39;7.2&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Setting
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;Renew freenom domain name automatically.&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Author of yml configuration file: RouRouX &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">https:&lt;/span>&lt;span class="err">//&lt;/span>&lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">RouRouX&lt;/span>&lt;span class="p">&amp;gt;&lt;/span> &lt;span class="err">&amp;amp;&lt;/span> mybsdc &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">mybsdc&lt;/span>&lt;span class="err">@&lt;/span>&lt;span class="na">gmail&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#39;@Url: https://github.com/luolongfei/freenom&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cp .env.example .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [[ (&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; == &amp;#39;&amp;#39; || &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; == &amp;#39;&amp;#39;) &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; == &amp;#39;&amp;#39; ]]; then echo &amp;#39;你在 Github 的当前项目的 Settings &amp;gt; Secrets 画面没有设置任何与账户信息相关的 secret 值，无法正常运行，请添加新的 secret 值，设置 FREENOM_USERNAME 与 FREENOM_PASSWORD，或者设置 MULTIPLE_ACCOUNTS，以及 .env 文件中其它必要项，各项的具体含义与格式参考本项目 .env 文件中的说明。&amp;#39;; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_USERNAME=.*$/FREENOM_USERNAME=&amp;#39;${{ secrets.FREENOM_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^FREENOM_PASSWORD=.*$/FREENOM_PASSWORD=&amp;#39;${{ secrets.FREENOM_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MULTIPLE_ACCOUNTS=.*$/MULTIPLE_ACCOUNTS=&amp;#39;${{ secrets.MULTIPLE_ACCOUNTS }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_USERNAME=.*$/MAIL_USERNAME=&amp;#39;${{ secrets.MAIL_USERNAME }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_PASSWORD=.*$/MAIL_PASSWORD=&amp;#39;${{ secrets.MAIL_PASSWORD }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TO }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TO=.*$/TO=&amp;#39;${{ secrets.TO }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^MAIL_ENABLE=.*$/MAIL_ENABLE=&amp;#39;${{ secrets.MAIL_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_CHAT_ID=.*$/TELEGRAM_CHAT_ID=&amp;#39;${{ secrets.TELEGRAM_CHAT_ID }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_TOKEN=.*$/TELEGRAM_BOT_TOKEN=&amp;#39;${{ secrets.TELEGRAM_BOT_TOKEN }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^TELEGRAM_BOT_ENABLE=.*$/TELEGRAM_BOT_ENABLE=&amp;#39;${{ secrets.TELEGRAM_BOT_ENABLE }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> if [ &amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39; != &amp;#39;&amp;#39; ]; then sed -i &amp;#34;s/^NOTICE_FREQ=.*$/NOTICE_FREQ=&amp;#39;${{ secrets.NOTICE_FREQ }}&amp;#39;/&amp;#34; .env; fi
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> sed -i &amp;#34;s/^ON_GITHUB_ACTIONS=.*$/ON_GITHUB_ACTIONS=true/&amp;#34; .env
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: Run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> php run
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 以下为保活所需step
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - name: curl
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> id: enable_workflow
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> env:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> REST_TOKEN: ${{ secrets.REST_TOKEN }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> API_ADDRESS: ${{ secrets.API_ADDRESS }}
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> run: |
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Enable Workflow Start...&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> curl -X PUT -H &amp;#34;Authorization: token $REST_TOKEN&amp;#34; &amp;#34;$API_ADDRESS&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> echo &amp;#34;Finished&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
-&lt;/details>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>在你 Fork 的本仓库下的 &lt;code>Settings&lt;/code> -&amp;gt; &lt;code>Secrets&lt;/code> 页面追加以下几个&lt;code>secret&lt;/code>秘密环境变量&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:center">变量名&lt;/th>
-&lt;th style="text-align:center">含义&lt;/th>
-&lt;th style="text-align:center">默认值&lt;/th>
-&lt;th style="text-align:center">是否必须&lt;/th>
-&lt;th style="text-align:center">备注&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:center">FREENOM_USERNAME&lt;/td>
-&lt;td style="text-align:center">freenom 账户&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">只支持邮箱账户，不支持也不打算支持第三方社交账户登录&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">FREENOM_PASSWORD&lt;/td>
-&lt;td style="text-align:center">freenom 密码&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">某些特殊字符可能需要转义，在&lt;code>Github actions&lt;/code>环境，请在除字母数字以外的字符前加上“\”，否则可能无法正确读取密码，此举是防止某些字符在&lt;code>shell&lt;/code>命令行被解析，举个例子，比如我密码是&lt;code>fei.,:!~@#$%^&amp;amp;*?233-_abcd^$$&lt;/code>，那么写到秘密变量时就应写为&lt;code>fei\.\,\:\!\~\@\#\$\%\^\&amp;amp;\*\?233\-\_abcd\^\$\$&lt;/code>。而在普通&lt;code>VPS&lt;/code>环境，则只用在密码中的“#”或单双引号前加“\”，请参考&lt;code>.env.example&lt;/code>文件内的注释，应该没人会设置那么变态的密码吧&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">MULTIPLE_ACCOUNTS&lt;/td>
-&lt;td style="text-align:center">多账户支持&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">多个账户和密码的格式必须是“&lt;code>&amp;lt;账户1&amp;gt;@&amp;lt;密码1&amp;gt;|&amp;lt;账户2&amp;gt;@&amp;lt;密码2&amp;gt;|&amp;lt;账户3&amp;gt;@&amp;lt;密码3&amp;gt;&lt;/code>”，如果设置了多账户，上面的&lt;code>FREENOM_USERNAME&lt;/code>和&lt;code>FREENOM_PASSWORD&lt;/code>可不设置&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">MAIL_USERNAME&lt;/td>
-&lt;td style="text-align:center">机器人邮箱账户&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">支持&lt;code>Gmail&lt;/code>、&lt;code>QQ邮箱&lt;/code>以及&lt;code>163邮箱&lt;/code>，尽可能使用&lt;code>163邮箱&lt;/code>或者&lt;code>QQ邮箱&lt;/code>，而非之前推荐的&lt;code>Gmail&lt;/code>。因为谷歌的安全机制，每次在新设备登录 &lt;code>Gmail&lt;/code> 都会先被限制，需要手动解除限制才行，而&lt;code>Github Actions&lt;/code>每次创建的虚拟环境都会分配一个新的设备&lt;code>IP&lt;/code>，相当于每次都是从新设备登录&lt;code>Gmail&lt;/code>，而我们不可能每次都去手动为&lt;code>Gmail&lt;/code>解除登录限制，所以这种机制会导致无法发出通知邮件。具体的配置方法参考「 &lt;a class="link" href="#--%e9%85%8d%e7%bd%ae%e5%8f%91%e4%bf%a1%e9%82%ae%e7%ae%b1" >配置发信邮箱&lt;/a> 」&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">MAIL_PASSWORD&lt;/td>
-&lt;td style="text-align:center">机器人邮箱密码&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">&lt;code>Gmail&lt;/code>填密码，&lt;code>QQ邮箱&lt;/code>或&lt;code>163邮箱&lt;/code>填授权码&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">TO&lt;/td>
-&lt;td style="text-align:center">接收通知的邮箱&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">是&lt;/td>
-&lt;td style="text-align:center">你自己最常用的邮箱，推荐使用&lt;code>QQ邮箱&lt;/code>，用来接收机器人邮箱发出的域名相关邮件&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">MAIL_ENABLE&lt;/td>
-&lt;td style="text-align:center">是否启用邮件推送功能&lt;/td>
-&lt;td style="text-align:center">true&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;br>&lt;code>false&lt;/code>：不启用&lt;br>默认启用，如果设为&lt;code>false&lt;/code>，不启用邮件推送功能，则上面的&lt;code>MAIL_USERNAME&lt;/code>、&lt;code>MAIL_PASSWORD&lt;/code>、&lt;code>TO&lt;/code>变量变为非必须，可不设置&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">TELEGRAM_CHAT_ID&lt;/td>
-&lt;td style="text-align:center">你的&lt;code>chat_id&lt;/code>&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">通过发送&lt;code>/start&lt;/code>给&lt;code>@userinfobot&lt;/code>可以获取自己的&lt;code>id&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">TELEGRAM_BOT_TOKEN&lt;/td>
-&lt;td style="text-align:center">你的&lt;code>Telegram bot&lt;/code>的&lt;code>token&lt;/code>&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">TELEGRAM_BOT_ENABLE&lt;/td>
-&lt;td style="text-align:center">是否启用&lt;code>Telegram Bot&lt;/code>推送功能&lt;/td>
-&lt;td style="text-align:center">false&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>true&lt;/code>：启用&lt;br>&lt;code>false&lt;/code>：不启用&lt;br>默认不启用，如果设为&lt;code>true&lt;/code>，则必须设置上面的&lt;code>TELEGRAM_CHAT_ID&lt;/code>和&lt;code>TELEGRAM_BOT_TOKEN&lt;/code>变量&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">NOTICE_FREQ&lt;/td>
-&lt;td style="text-align:center">通知频率&lt;/td>
-&lt;td style="text-align:center">1&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">&lt;code>0&lt;/code>：仅当有续期操作的时候&lt;br>&lt;code>1&lt;/code>：每次执行&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">REST_TOKEN&lt;/td>
-&lt;td style="text-align:center">如后文所示&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">保活所需&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">API_ADDRESS&lt;/td>
-&lt;td style="text-align:center">如后文所示&lt;/td>
-&lt;td style="text-align:center">-&lt;/td>
-&lt;td style="text-align:center">否&lt;/td>
-&lt;td style="text-align:center">保活所需&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/li>
-&lt;/ol>
-&lt;p>（注：你只用关注上面表格中的必须项，非必须项可不设置，将保持默认值。更多相关变量的含义、格式以及默认值，请参考本项目的&lt;code>.env.example&lt;/code>文件内的注释）&lt;/p>
-&lt;ol start="3">
-&lt;li>启用 Actions ，完成。&lt;/li>
-&lt;/ol>
-&lt;h1 id="保活">保活&lt;/h1>
-&lt;ol>
-&lt;li>
-&lt;p>Fork &lt;a class="link" href="https://github.com/zhzhzhy/Workflow-Keep-Alive" target="_blank" rel="noopener"
->zhzhzhy/Workflow-Keep-Alive库&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>创建 sercets ：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:center">变量名&lt;/th>
-&lt;th style="text-align:center">值&lt;/th>
-&lt;th style="text-align:center">备注&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:center">REST_TOKEN&lt;/td>
-&lt;td style="text-align:center">个人访问令牌（Personal access tokens）&lt;/td>
-&lt;td style="text-align:center">个人资料照片-&amp;gt;设置-&amp;gt;Developer settings&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:center">API_ADDRESS&lt;/td>
-&lt;td style="text-align:center">&lt;code>https://api.github.com/repos/{owner}/{target-repo}/actions/workflows/enable_workflow/enable&lt;/code>&lt;/td>
-&lt;td style="text-align:center">修改{owner}/{target-repo}&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;/li>
-&lt;li>
-&lt;p>运行 github action。&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>相互唤醒，再次在目标 repo 的工作流程中执行上述步骤，并添加所需 step（已在代码中注释）。&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;h1 id="附">附&lt;/h1>
-&lt;p>&lt;a class="link" href="https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions" target="_blank" rel="noopener"
->github workflow 语法文档&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://crontab.guru/examples.html" target="_blank" rel="noopener"
->修改定时任务 —— Cron示例&lt;/a>&lt;/p></description></item><item><title>docker和docker-compose</title><link>https://xiaoxiano.github.io/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>docker和docker-compose</title><link>https://xiaoxiano.github.io/p/docker-compose/</link><pubDate>Wed, 27 Oct 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/docker-compose/</guid><description>&lt;h1 id="docker">docker&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/engine/install/debian/" target="_blank" rel="noopener"
 >安装docker&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#更新apt包索引
