@@ -10219,6 +10219,7 @@ data-flex-basis="236px"
 &lt;h2 id="其他-1">其他&lt;/h2>
 &lt;p>double width = MediaQuery.of(context).size.width; 屏幕宽度&lt;/p>
 &lt;p>double height = MediaQuery.of(context).size.height; 屏幕高度&lt;/p></description></item><item><title>root手机和自动化</title><link>https://xiaoxiano.github.io/p/phone-root/</link><pubDate>Wed, 24 Nov 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/phone-root/</guid><description>&lt;h1 id="root">root&lt;/h1>
+&lt;p>
 &lt;style type="text/css">
 .box {
 padding: 1.6em;
@@ -10315,14 +10316,24 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
 &lt;/span>
 &lt;p>&lt;strong>前言：&lt;/strong> 2025年后大部分手机不支持解锁，&lt;a class="link" href="https://github.com/zenfyrdev/bootloader-unlock-wall-of-shame" target="_blank" rel="noopener"
->查看详情&lt;/a>。使用虚拟机 VMOS Pro，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
+>查看详情&lt;/a>。使用虚拟机 VMOS Pro 或 光速虚拟机，可以拥有大多应用权限，不必刷机。不同手机不同操作，刷机有变砖风险！&lt;/p>
 &lt;/div>
-&lt;p>&lt;strong>步骤：&lt;/strong>&lt;/p>
+&lt;strong>步骤：&lt;/strong>&lt;/p>
 &lt;ol>
 &lt;li>解bl锁&lt;/li>
 &lt;/ol>
 &lt;p>各品牌手机解锁有所不同。&lt;/p>
-&lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
+&lt;p>大部分手机：电脑下载&lt;a class="link" href="https://www.xda-developers.com/google-releases-separate-adb-and-fastboot-binary-downloads/" target="_blank" rel="noopener"
+>fastboot&lt;/a>，进入Bootloader 模式，运行命令&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 列出已连接的 Fastboot 设备
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fastboot devices
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 解锁
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fastboot flash unlock
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 重启
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">fastboot reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>解锁困难的华为旧机：我用的是github的potatoNV短接解锁，如果其中没有你的手机，直接淘宝不要浪费时间。作者在youtube有教程，照做就好了（视频简介的USB com 1.0连接教程也要看，他的点击DriverSetup操作很快，不要漏了），&lt;a class="link" href="http://www.shuajibang.net/news/detail/39124/" target="_blank" rel="noopener"
 >短接点可以参考这里&lt;/a>。获得解锁码搜华为工具箱即可解锁。&lt;/p>
 &lt;ol start="2">
 &lt;li>刷入 TWRP (recovery)、刷rom（系统）&lt;/li>
