@@ -48,7 +48,7 @@ data-flex-basis="448px"
 &lt;td>韧弹&lt;/td>
 &lt;td>舒适度拉满，小体重脚感稍硬，有的人穿过就不再考虑其他品牌&lt;/td>
 &lt;td>长距离或大体重&lt;/td>
-&lt;td>设计、材质满分，脚感硬，训练量大时容易震伤跟腱，鞋底泡沫材质，和普通鞋完全不同，不耐磨&lt;/td>
+&lt;td>设计满分，脚感硬弹，长跑训练量大时容易震伤跟腱，鞋底泡沫材质不耐磨，长距离首选，不泻力不磨脚&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>新百伦&lt;/td>
@@ -56,7 +56,7 @@ data-flex-basis="448px"
 &lt;td>软弹&lt;/td>
 &lt;td>鞋底软，压缩变形大，后程有泄力&lt;/td>
 &lt;td>慢跑&lt;/td>
-&lt;td>设计不错，内侧材质差，鞋底变形大，长期可能导致脚部不适&lt;/td>
+&lt;td>设计不错，内侧材质差，鞋底变形大，长跑导致脚部不适&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>亚瑟士&lt;/td>
@@ -72,7 +72,7 @@ data-flex-basis="448px"
 &lt;td>软弹&lt;/td>
 &lt;td>鞋底软，压缩变形小，契合度高&lt;/td>
 &lt;td>日常主力&lt;/td>
-&lt;td>设计、材质不错，几乎没有缺点，推荐&lt;/td>
+&lt;td>设计、材质不错，几乎没有缺点，可跑中距离&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
@@ -832,108 +832,7 @@ data-flex-basis="140px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">mount -o ro,remount /
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 如果查看证书可以下载MT管理器
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以抓包了。如果看到二进制加密数据，就需要破解apk，以后再详细研究。&lt;/p></description></item><item><title>医学</title><link>https://xiaoxiano.github.io/p/medical/</link><pubDate>Sun, 26 May 2024 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/medical/</guid><description>
-&lt;style type="text/css">
-.box {
-padding: 1.6em;
-padding-top: 1.4em;
-line-height: 1.4em;
-margin-top: 2em;
-margin-bottom: 4em;
-border-radius: 4px;
-color: #444;
-background: #f3ebe850;
-}
-.box-title {
-margin: -18px -18px 12px;
-padding: 4px 18px;
-border-radius: 4px 4px 0 0;
-font-weight: 700;
-color: #fff;
-background: #6ab0de;
-}
-.box.warning .box-title {
-background: #ff6b6b;
-}
-.box.warning {
-background: #ff6b6b4f;
-}
-.box.info .box-title {
-background: #0089e488;
-}
-.box.info {
-background: #0089e41c;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.box.important .box-title {
-background: #f7ec2c;
-}
-.box.important {
-background: #f7ec2c7d;
-}
-.box.tip .box-title {
-background: #a3ffa34d;
-}
-.box.tip {
-background: #a3ffa34d;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.icon-box {
-display: inline-flex;
-align-self: center;
-margin-right: 8px;
-}
-.icon-box img,
-.icon-box svg {
-height: 1em;
-width: 1em;
-fill: currentColor;
-}
-.icon-box img,
-.icon-box.baseline svg {
-top: 0.125em;
-position: relative;
-}
-.box p {
-margin-bottom: 0.6em;
-}
-.box p:first-of-type {
-display: inline;
-}
-.box p:nth-of-type(2) {
-margin-top: 0.6em;
-}
-.box p:last-child {
-margin-bottom: 0;
-}
-&lt;/style>
-&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
-&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
-&lt;/symbol>
-&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
-&lt;/symbol>
-&lt;/svg>&lt;div class="box important" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#important-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>执业医师考试(中国大陆)专用，精简了大量内容，不作为诊疗建议&lt;/p>
-&lt;/div>
-&lt;ul>
-&lt;li>&lt;a class="link" href="https://xiaoxiano.github.io/medicalSkill" target="_blank" rel="noopener"
->执医技能2024&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>投资港美A股</title><link>https://xiaoxiano.github.io/p/stocks/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/stocks/</guid><description>&lt;h1 id="经济">经济&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可以抓包了。如果看到二进制加密数据，就需要破解apk，以后再详细研究。&lt;/p></description></item><item><title>投资港美A股</title><link>https://xiaoxiano.github.io/p/stocks/</link><pubDate>Sat, 16 Sep 2023 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/stocks/</guid><description>&lt;h1 id="经济">经济&lt;/h1>
 &lt;h2 id="流动性">流动性&lt;/h2>
 &lt;p>流动性，是股市的领先指标，也是影响股价最重要的因素之一。&lt;/p>
 &lt;h3 id="中国市场">中国市场&lt;/h3>
@@ -4799,418 +4698,7 @@ BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">yum install -y wget unzip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> wget https://cdn.ipip.net/17mon/besttrace4linux.zip &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> unzip best
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./besttrace [你的本地ip] -g cn
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>数学</title><link>https://xiaoxiano.github.io/p/math/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/math/</guid><description>&lt;h1 id="排列组合">排列组合&lt;/h1>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-1.特殊元素和特殊位置优先策略
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 由 0,1,2,3,4,5 可以组成多少个没有重复数字五位奇数？&lt;/p>
-&lt;details class="spoiler " id="spoiler-1">
-&lt;summary>解析&lt;/summary>
-&lt;p>先排末位共有 $C_3^1$, 然后排首位共有 $C_4^1$, 最后排其它位置共有 $A_4^3$,
-由分步计数原理得 $C_4^1 C_3^1 A_4^3=288$ 。&lt;/p>
-&lt;/details>
-&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-2.相邻问题捆绑法:
-&lt;/div>
-&lt;style type="text/css">
-.box {
-padding: 1.6em;
-padding-top: 1.4em;
-line-height: 1.4em;
-margin-top: 2em;
-margin-bottom: 4em;
-border-radius: 4px;
-color: #444;
-background: #f3ebe850;
-}
-.box-title {
-margin: -18px -18px 12px;
-padding: 4px 18px;
-border-radius: 4px 4px 0 0;
-font-weight: 700;
-color: #fff;
-background: #6ab0de;
-}
-.box.warning .box-title {
-background: #ff6b6b;
-}
-.box.warning {
-background: #ff6b6b4f;
-}
-.box.info .box-title {
-background: #0089e488;
-}
-.box.info {
-background: #0089e41c;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.box.important .box-title {
-background: #f7ec2c;
-}
-.box.important {
-background: #f7ec2c7d;
-}
-.box.tip .box-title {
-background: #a3ffa34d;
-}
-.box.tip {
-background: #a3ffa34d;
-box-shadow: 3px 3px 5px #0089e410;
-}
-.icon-box {
-display: inline-flex;
-align-self: center;
-margin-right: 8px;
-}
-.icon-box img,
-.icon-box svg {
-height: 1em;
-width: 1em;
-fill: currentColor;
-}
-.icon-box img,
-.icon-box.baseline svg {
-top: 0.125em;
-position: relative;
-}
-.box p {
-margin-bottom: 0.6em;
-}
-.box p:first-of-type {
-display: inline;
-}
-.box p:nth-of-type(2) {
-margin-top: 0.6em;
-}
-.box p:last-child {
-margin-bottom: 0;
-}
-&lt;/style>
-&lt;svg width="0" height="0" display="none" xmlns="http://www.w3.org/2000/svg">
-&lt;symbol id="tip-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/>
-&lt;/symbol>
-&lt;symbol id="important-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M504 256c0 136.997-111.043 248-248 248S8 392.997 8 256C8 119.083 119.043 8 256 8s248 111.083 248 248zm-248 50c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="warning-box" viewBox="0 0 576 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/>
-&lt;/symbol>
-&lt;symbol id="info-box" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
-&lt;path
-d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"/>
-&lt;/symbol>
-&lt;/svg>&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>题目中规定相邻的几个元素捆绑成一个组，当作一个大元素参与排列.&lt;/p>
-&lt;/div>
-&lt;/p>
-&lt;p>&lt;strong>例 1.&lt;/strong> A,B,C,D,E 五人并排站成一排，如果 A,B必须相邻且 B在 A的右边，则不同的排法有（ ）&lt;/p>
-&lt;p>A、60 种 　B、48 种 　C、36 种 　D、24 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-4">
-&lt;summary>解析&lt;/summary>
-&lt;p>把 A,B 视为一人，且 B 固定在 A 的右边，则本题相当于 4 人的全排列，$A_4^4$=24 种，
-答案： D .&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2.&lt;/strong> 7 人站成一排 ,其中甲乙相邻且丙丁相邻,共有多少种不同的排法.&lt;/p>
-&lt;details class="spoiler " id="spoiler-5">
-&lt;summary>解析&lt;/summary>
-&lt;p>可先将甲乙两元素捆绑成整体并看成一个复合元素，同时丙丁也看成一个复合元素，再与其它元素进行排列，同时对相邻元素内部进行自排。由分步计数原理可得共有 $A_5^5$$A_2^2$$A_2^2$= 480种不同的排法&lt;/p>
-&lt;/details>
-&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-3.相离问题插空策略:
-&lt;/div>
-&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>元素相离（即不相邻）问题，可先把无位置要求的几个元素全排列，再把规定的相离的几个
-元素插入上述几个元素的空位和两端.&lt;/p>
-&lt;/div>
-&lt;/p>
-&lt;p>&lt;strong>例 1.&lt;/strong> 七人并排站成一行，如果甲乙两个必须不相邻，那么不同的排法种数是（ ）&lt;/p>
-&lt;p>A、1440 种 　B、3600 种 　C、4820 种 　D、4800 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-8">
-&lt;summary>解析&lt;/summary>
-&lt;p>除甲乙外，其余 5 个排列数为$A_5^5$种，再用甲乙去插 6 个空位有$A_6^2$种，不同的排法种数是$A_5^5$$A_6^2$=3600 种，
-选 B.&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2.&lt;/strong> 某人射击八枪,命中四枪,四枪中恰好有三枪连在一起的情形的不同种数为?&lt;/p>
-&lt;details class="spoiler " id="spoiler-9">
-&lt;summary>解析&lt;/summary>
-&lt;p>把连续命中的三枪看做一个整体a,剩下命中的一枪看做一个整体b,用插空法,把a,b两个元素按一定顺序插到剩下四枪形成的5个空隙里,是$A_5^2$=20&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-4.定序问题:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 7 人排队，其中甲乙丙 3 人顺序一定（可以不相邻），共有多少不同的排法?&lt;/p>
-&lt;details class="spoiler " id="spoiler-11">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>(倍缩法) 对于某几个元素顺序一定的排列问题，可先把这几个元素与其他元素一起进行排列，然后用总排列数除以这几个元素之间的全排列数，则共有不 同排法种数是: $A_7^7 / A_3^3$&lt;/p>
-&lt;p>(空位法) 设想有7把椅子让除甲乙丙以外的四人就坐共有$A_7^4$ 种方法，其余的三个位置甲乙丙共有（1）种坐法，则共有$A_7^4$ 种方法。&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-5.有序分配问题逐分法:
-&lt;/div>
-&lt;div class="box info" >
-&lt;span class="icon-box baseline">
-&lt;svg>&lt;use href="#info-box">&lt;/use>&lt;/svg>
-&lt;/span>
-&lt;p>有序分配问题指把元素分成若干组，可用逐步下量分组法.&lt;/p>
-&lt;/div>
-&lt;/p>
-&lt;p>&lt;strong>例 1.&lt;/strong> 有甲乙丙三项任务，甲需 2 人承担，乙丙各需一人承担，从 10 人中选出 4 人承担这三项任务，不同的选法种数是（ ）&lt;/p>
-&lt;p>A、1260 种 　B、2025 种 　C、2520 种 　D、5040 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-14">
-&lt;summary>解析&lt;/summary>
-&lt;p>先从 10 人中选出 2 人承担甲项任务，再从剩下的 8 人中选 1 人承担乙项任务，第三步从另外的 7 人中选1 人承担丙项任务，不同的选法共有 $C_{10}^{2}$$C_8^1$$C_7^1$=2520 种，选 C.&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2.&lt;/strong> 12 名同学分别到三个不同的路口进行流量的调查，若每个路口 4 人，则不同的分配方案有（ A）&lt;/p>
-&lt;p>A、$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　B、3$C_{12}^{4}$$C_8^4$$C_4^4$ 种 　C、$C_{12}^{4}$$C_8^4$$A_3^3$ 种 　D、$\frac{C_{12}^{4}C_8^4C_4^4}{A_3^3}$ 种&lt;/p>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-6.元素不同的分配问题先选后排:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 4 名优秀学生全部保送到 3 所学校去，每所学校至少去一名，则不同的保送方案有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-16">
-&lt;summary>解析&lt;/summary>
-&lt;p>把四名学生分成 3 组有 $C_4^2$ 种方法，再把三组学生分配到三所学校有 $A_3^3$ 种，故共有 $C_4^2$$A_3^3$=36 种方法.&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2.&lt;/strong> 5 本不同的书，全部分给 4 个学生，每个学生至少一本，不同的分法种数为（ ）&lt;/p>
-&lt;p>A、480 种　B、240 种 　C、120 种 　D、96 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-17">
-&lt;summary>解析&lt;/summary>
-&lt;p>B. $C_5^3$$A_4^4$=240&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-7.元素相同的分配问题隔板法:
-&lt;/div>
-&lt;p>&lt;strong>例 1：&lt;/strong> 10 个三好学生名额分到 7 个班级，每个班级至少一个名额，有多少种不同分配方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-19">
-&lt;summary>解析&lt;/summary>
-&lt;p>10 个名额分到 7 个班级，就是把 10 个名额看成 10 个相同的小球分成 7 堆，每堆至少一个，可以在 10 个小球的 9 个空位中插入 6 块木板，每一种插法对应着一种分配方案，故共有不同的分配方案为$C_9^6$=84 种.&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2：&lt;/strong> 若x+y+z+w=100,求这个方程组的自然数解的组数.&lt;/p>
-&lt;details class="spoiler " id="spoiler-20">
-&lt;summary>解析&lt;/summary>
-&lt;p>我们认为0是自然数，所有存在0+0+0+100=100的情况，所以这里的元素
-个数应为104个，即3个 0和100个1，这104个元素间有103个空位，中间插入
-4个隔板，就会把这104个元素分成4堆，每堆对应 x,y,x,w,而挡板的放置方法有$C_{103}^{3}$&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-8.限制条件的分配问题分类法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 某高校从某系的 10 名优秀毕业生中选 4 人分别到西部四城市参加中国西部经济开发建设，其中甲同学不到银川，乙不到西宁，共有多少种不同派遣方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-22">
-&lt;summary>解析&lt;/summary>
-&lt;p>因为甲乙有限制条件，所以按照是否含有甲乙来分类，有以下四种情况：
-①若甲乙都不参加，则有派遣方案 $A_8^4$ 种；②若甲参加而乙不参加，先安排甲有 3 种方法，然后安排其余学生有 $A_8^3$方法，所以共有 3$A_8^3$；③若乙参加而甲不参加同理也有 3$A_8^3$种；④若甲乙都参加，则先安排甲乙，有 7 种方法， 然 后 再 安 排 其 余 8 人 到 另 外 两 个 城 市 有 $A_8^2$种 ， 共 有 7$A_8^2$方 法 . 所 以 共 有 不 同 的 派 遣 方 法 总 数 为 $A_8^4$ + 3$A_8^3$ + 3$A_8^3$ + 7$A_8^2$=4088 种.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-9.多元问题分类法：
-&lt;/div>
-&lt;p>&lt;strong>例 1&lt;/strong> （1）由数字 0，1，2，3，4，5 组成没有重复数字的六位数，其中个位数字小于十位数字的共有（ ）&lt;/p>
-&lt;p>A、210 种 　B、300 种 　C、464 种 　D、600 种&lt;/p>
-&lt;p>（2）从 1，2，3…，100 这 100 个数中，任取两个数，使它们的乘积能被 7 整除，这两个数的取法（不计顺序）共有多少种？&lt;/p>
-&lt;p>（3）从 1，2，3，…，100 这 100 个数中任取两个数，使其和能被 4 整除的取法（不计顺序）有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-24">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）按题意，个位数字只可能是 0，1，2，3，4 共 5 种情况，分别有 $A_5^5$个，$A_4^1$$A_3^1$$A_3^3$ , $A_3^1$$A_3^1$$A_3^3$ , $A_2^1$$A_3^1$$A_3^3$ , $A_3^1$$A_3^3$个，合并总计 300 个,选 B.&lt;/p>
-&lt;p>（2）被取的两个数中至少有一个能被 7 整除时，他们的乘积就能被 7 整除，将这 100 个数组成的集合视为全集I,能被 7 整除的数的集合记做 $\overline{A}$ = { 7，14，21，$\cdots$，98 } 共有 14 个元素,不能被 7 整除的数组成的集合记做 $\overline{A}$ = { 1，2，3，4,$\cdots$，100 } 共有 86 个元素；由此可知，从 A中任取 2 个元素的取法有 $C_{14}^{2}$，从 A中任取一个，又从$\overline{A}$中任取一个共有 $C_{14}^{1}$$C_{86}^{1}$，两种情形共符合要求的取法有 $C_{14}^{2}$ + $C_{14}^{1}$$C_{86}^{1}$=1295 种.&lt;/p>
-&lt;p>（3）将 I = { 1,2,3,$\cdots$，100 } 分成四个不相交的子集，能被 4 整除的数集 A = { 4,8,12,$\cdots$，100 }；能被 4 除余 1 的数集B = { 1,5,9,$\cdots$，97 } ，能被 4 除余 2 的数集 C = { 2,6,$\cdots$，98 } ，能被 4 除余 3 的数集 D = { 3,7,11,$\cdots$，99 } ，易见这四个集合中每一个有 25 个元素；从 A中任取两个数符合要；从B,D 中各取一个数也符合要求；从 C中任取两个数也符合要求；此外其它取法都不符合要求；所以符合要求的取法共有 $C_{25}^{2}$ + $C_{25}^{1}$$C_{25}^{1}$ + $C_{25}^{2}$ 种.&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-10.交 叉 问 题 集 合 法 ：
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 从 6 名运动员中选出 4 人参加 4×100 米接力赛，如果甲不跑第一棒，乙不跑第四棒，共有多少种不同的参赛方案？&lt;/p>
-&lt;details class="spoiler " id="spoiler-26">
-&lt;summary>解析&lt;/summary>
-&lt;p>设全集= {6 人中任取 4 人参赛的排列} ，A={甲跑第一棒的排列} ，B={乙跑第四棒的排列} ，根据求集合元素个数的公式得参赛方法共有：
-n(I)-n(A)-n(B)+n(A $\cap$ B ) = $A_6^4$-$A_5^3$-$A_5^3$+$A_4^2$ = 252&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-11.配对问题：
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 5双相异的鞋共10只,现随机地取出6只,恰好能配成2双鞋的取法是多少?&lt;/p>
-&lt;details class="spoiler " id="spoiler-28">
-&lt;summary>解析&lt;/summary>
-&lt;p>$C_{5}^{2} C_{6}^{1} C_{4}^{1}$=240&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-12.多排问题单排法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 8人排成前后两排，每排4人，其中甲乙在前排，丙在后排，共有多少排法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-30">
-&lt;summary>解析&lt;/summary>
-&lt;p>看成一排，某 2 个元素在前半段四个位置中选排 2 个，有 $A_4^2$种，某 1 个元素排在后半段的四个位置中选一个有 $A_4^1$种，其余 5 个元素任排 5 个位置上有 $A_5^5$种，故共有 $A_4^2$$A_4^1$$A_5^5$=5760 种排法.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-13.“至少”“至多”问题用间接排除法或分类法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 从 4 台甲型和 5 台乙型电视机中任取 3 台，其中至少要甲型和乙 型电视机各一台，则不同的取法共有（ ）&lt;/p>
-&lt;p>A、140 种 　B、80 种 　C、70 种 　D、35 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-32">
-&lt;summary>解析&lt;/summary>
-&lt;p>至少要甲型和乙 型电视机各一台可分两种情况：甲型 1 台乙型 2 台；甲型 2 台乙型 1 台；故不同的取法有 $C_5^2$$C_4^1$ + $C_5^1$$C_4^2$ =70 台,选 C.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-14.部分合条件问题排除法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> （1）以正方体的顶点为顶点的四面体共有（ ）&lt;/p>
-&lt;p>A、70 种 　B、64 种 　C、58 种 　D、52 种&lt;/p>
-&lt;p>（2）四面体的顶点和各棱中点共 10 点，在其中取 4 个不共面的点，不同的取法共有（ ）&lt;/p>
-&lt;p>A、150 种 　B、147 种 　C、144 种 　D、141 种&lt;/p>
-&lt;details class="spoiler " id="spoiler-34">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）正方体 8 个顶点从中每次取四点，理论上可构成 $C_8^4$四面体，但 6 个表面和 6 个对角面的四个顶点共面都不能构成四面体，所以四面体实际共有$C_8^4$-12= 58 个.&lt;/p>
-&lt;p>（2）10 个点中任取 4 个点共有 $C_{10}^{4}$种，其中四点共面的有三种情况：①在四面体的四个面上，每面内四点共面的情况为 $C_6^4$，四个面共有 4$C_6^4$个；②过空间四边形各边中点的平行四边形共 3 个；③过棱上三点与对棱中点的三角形共 6 个.所以四点不共面的情况的种数是 $C_{10}^{4}$ - 4$C_6^4$ -3-6=141 种.&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-15.可重复的排列求幂法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 把 6 名实习生分配到 7 个车间实习共有多少种不同方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-36">
-&lt;summary>解析&lt;/summary>
-&lt;p>完成此事共分 6 步，第一步；将第一名实习生分配到车间有 7 种不同方案，第二步：将第二名实习生分配到车间也有 7 种不同方案，依次类推，由分步计数原理知共有 $A_{7}^{6}$种不同方案.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-16.上楼梯问题:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 10级台阶，某人可一步跨一级，也可跨两级，也可跨三级。
-（1）他6步就可上完台阶的方法数是多少？
-（2）他上完台阶的方法总数是多少？&lt;/p>
-&lt;details class="spoiler " id="spoiler-38">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）按照 3，3，1，1，1，1 的走法有 $C_{6}^{2}$ 种，按照 3，2，2，1，1，1 的走法有 $C_{6}^{1} C_{5}^{2}$ 种，按照 2，2，2，2，1，1 的走法有 $C_{6}^{4}$ 种，所以恰好6步上完台阶的方法种数是 $C_{6}^{2}$+$C_{6}^{1} C_{5}^{2}$+$C_{6}^{4}$=15+60+15=90 .&lt;/p>
-&lt;p>（2）上楼梯问题是典型的斐波那契数列，设爬n级台阶的解法总数为f(n)，因为规定每一步只能跨一级或两级或三级，则f(n)=f(n-1)+f(n-2)+f(n-3)。易知f(1)=1，f(2)=2，f(3)=4,递推可得f(4)=7,f(5)=13,f(6)=24,f(7)=44,f(8)=81,f(9)=149,f10)=274&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-17.元素个数较少的排列组合问题可以考虑枚举法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 设有编号为 1，2，3，4，5 的五个球和编号为 1，2，3，4，5 的盒子现将这 5 个球投入 5 个盒子要求每个盒子放一个球，并且恰好有两个球的号码与盒子号码相同，问有多少种不同的方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-40">
-&lt;summary>解析&lt;/summary>
-&lt;p>从 5 个球中取出 2 个与盒子对号有 $C_5^2$种，还剩下 3 个球与 3 个盒子序号不能对应，利用枚举法分析，如果剩下 3，4，5 号球与 3，4，5 号盒子时，3 号球不能装入 3 号盒子，当 3 号球装入 4 号盒子时，4，5 号球只有1 种装法，3 号球装入 5 号盒子时，4，5 号球也只有 1 种装法，所以剩下三球只有 2 种装法，因此总共装法数为2$C_5^2$= 20 种.&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-28.复杂的排列组合问题也可用分解与合成法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong>（1）30030 能被多少个不同偶数整除？&lt;/p>
-&lt;p>（2）正方体 8 个顶点可连成多少队异面直线？&lt;/p>
-&lt;details class="spoiler " id="spoiler-42">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）先把 30030 分解成质因数的形式：30030=2×3×5×7×11×13；依题意偶因数 2 必取，3，5，7，11，13这 5 个因数中任取若干个组成成积，所有的偶因数为$C_5^0$+$C_5^1$+$C_5^2$+$C_5^3$+$C_5^4$+$C_5^5$= 32 个.&lt;/p>
-&lt;p>（2）因为四面体中仅有 3 对异面直线，可将问题分解成正方体的 8 个顶点可构成多少个不同的四面体，从正方体 8 个顶点中任取四个顶点构成的四面体有$C_8^4$-12= 58 个，所以 8 个顶点可连成的异面直线有 3×58=174 对.&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-19.利用对应思想转化法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> （1）圆周上有 10 点，以这些点为端点的弦相交于圆内的交点有多少个？&lt;/p>
-&lt;p>（2）某城市的街区有 12 个全等的矩形组成，其中实线表示马路，从 A到 B的最短路径有多少种？&lt;/p>
-&lt;p>&lt;img src="https://xiaoxiano.github.io/p/math/1.jpg"
-width="509"
-height="232"
-srcset="https://xiaoxiano.github.io/p/math/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/math/1_hu770fa7d6c7a91e26ed3159d8b3617492_13598_1024x0_resize_q75_box.jpg 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="219"
-data-flex-basis="526px"
->&lt;/p>
-&lt;details class="spoiler " id="spoiler-44">
-&lt;summary>解析&lt;/summary>
-&lt;p>&lt;p>（1）因为圆的一个内接四边形的两条对角线相交于圆内一点，一个圆的内接四边形就对应着两条弦相交于圆内的一个交点，于是问题就转化为圆周上的 10 个点可以确定多少个不同的四边形，显然有 $C_{10}^{4}$个，所以圆周上有10 点，以这些点为端点的弦相交于圆内的交点有 $C_{10}^{4}$个.&lt;/p>
-&lt;p>（2）可将图中矩形的一边叫一小段，从 A到 B最短路线必须走 7 小段，其中：向东 4 段，向北 3 段；而且前一段的尾接后一段的首，所以只要确定向东走过 4 段的走法，便能确定路径，因此不同走法有 $C_{7}^{4}$种.&lt;/p>
-&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-20.全错位排列问题公式法:
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 分别编有 1，2，3，4，5 号码的人与椅，其中i 号人不坐i 号椅（i = 1,2,3,4,5）的不同坐法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-46">
-&lt;summary>解析&lt;/summary>
-&lt;p>全错位排列是组合数学中的经典问题之一，使用公式不容易出错：
-$$
-D(n)=(n-1) \cdot[D(n-1)+D(n-2)] .
-$$
-又易知, $D(1)=0, D(2)=1$. 由递推公式可得: $D(3)=2, D(4)=9，D(5)=44$&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-21.环排问题
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 8 人围桌而坐,共有多少种坐法?&lt;/p>
-&lt;details class="spoiler " id="spoiler-48">
-&lt;summary>解析&lt;/summary>
-&lt;p>$\mathrm{n}$ 个不同元素作圆形排列,共有 $(\mathrm{n}-1)$!种排法.即7!
-如果从 $\mathrm{n}$ 个不同元素中取出 $\mathrm{m}$ 个元素作圆形排列共有 $\frac{1}{n} A_n^m$ 。&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-22.正难则反策略
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 从 0,1,2,3,4,5,6,7,8,9 这十个数字中取出三个数，使其和为不小于 10 的
-偶数,不同的取法有多少种？&lt;/p>
-&lt;details class="spoiler " id="spoiler-50">
-&lt;summary>解析&lt;/summary>
-&lt;p>这问题中如果直接求不小于 10 的偶数很困难, 可用总体淘汰法。这十个数字 中有 5 个偶数 5 个奇数, 所取的三个数含有 3 个偶数的取法有 $C_5^3$, 只含有 1 个偶数 的取法有 $C_5^1 C_5^2$, 和为偶数的取法共有 $C_5^1 C_5^2+C_5^3$ 。再淘汰和小于 10 的偶数共 9 种, 符合条件的取法共有 $C_5^1 C_5^2+C_5^3-9$&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-23.平均分组问题
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 6 本不同的书平均分成 3 堆,每堆 2 本共有多少分法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-52">
-&lt;summary>解析&lt;/summary>
-&lt;p>分三步取书得 $C_6^2 C_4^2 C_2^2$ 种方法, 但这里出现重复计数的现象, 不妨记 6 本书为 $A B C D E F$, 若第一步取 $A B$, 第二步取 $C D$, 第三步取 $E F$ 该分法记为 (AB, $C D, E F)$, 则 $C_6^2 C_4^2 C_2^2$ 中还有 (AB, $\left.\mathrm{EF}, \mathrm{CD}\right)$, (CD, AB, $\mathrm{EF}$ ), (CD, EF, AB) (EF, CD, AB), (EF, AB, CD) 共有 $A_3^3$ 种取法, 而这些分法仅是 ( $\left.\mathrm{AB}, \mathrm{CD}, \mathrm{EF}\right)$ 一种分法, 故共有 $C_6^2 C_4^2 C_2^2 / A_3^3$ 种分法。&lt;/p>
-&lt;/details>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: green">
-24.分类与分步策略
-&lt;/div>
-&lt;p>&lt;strong>例 1.&lt;/strong> 有红、黄、兰色的球各 5 只,分别标有 A、B、C、D、E 五个字母,现从中取
-5 只,要求各字母均有且三色齐备,则共有多少种不同的取法&lt;/p>
-&lt;details class="spoiler " id="spoiler-54">
-&lt;summary>解析&lt;/summary>
-&lt;p>按颜色分有1 1 3和1 2 2 两种，各3种方案。2.分字母，1 1 3对应有$C_5^1$$C_4^1$$C_3^3$共20种，1 2 2对应$C_5^1$$C_4^2$$C_2^2$共30种，3&lt;em>20+3&lt;/em>30=150&lt;/p>
-&lt;/details>
-&lt;p>&lt;strong>例 2.&lt;/strong> 在一次演唱会上共 10 名演员,其中 8 人能能唱歌,5 人会跳舞,现要演出一个
-2 人唱歌 2 人伴舞的节目,有多少选派方法？&lt;/p>
-&lt;details class="spoiler " id="spoiler-55">
-&lt;summary>解析&lt;/summary>
-&lt;p>10 演员中有 5 人只会唱歌, 2 人只会跳舞 3 人为全能演员。选上唱歌人员为 标准进行研究只会唱的 5 人中没有人选上唱歌人员共有 $C_3^2 C_3^2$ 种, 只会唱的 5 人中只 有 1 人选上唱歌人员 $C_5^1 C_3^1 C_4^2$ 种, 只会唱的 5 人中只有 2 人选上唱歌人员有 $C_5^2 C_5^2$ 种, 由分类计数原理共有 $C_3^2 C_3^2+C_5^1 C_3^1 C_4^2+C_5^2 C_5^2$ 种。&lt;/p>
-&lt;/details></description></item><item><title>acme.sh 申请证书</title><link>https://xiaoxiano.github.io/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>acme.sh 申请证书</title><link>https://xiaoxiano.github.io/p/acme/</link><pubDate>Mon, 24 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/acme/</guid><description>&lt;p>Let’s Encrypt 是一个免费的，自动化的，开放的证书颁发机构（CA），为公众的利益而运行。 它是一项由 &lt;a class="link" href="https://www.abetterinternet.org/" target="_blank" rel="noopener"
 >Internet Security Research Group（ISRG）&lt;/a>提供的服务。&lt;/p>
 &lt;p>acme.sh 则是实现了 acme 协议, 可以从 letsencrypt 生成免费的证书。&lt;/p>
 &lt;ul>
@@ -5798,7 +5286,27 @@ data-flex-basis="318px"
 &lt;li>电脑热点&lt;/li>
 &lt;/ol>
 &lt;ul>
-&lt;li>&lt;strong>sstap方法(推荐)&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>TUN模式方法&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>v2rayN的打开TUN模式，这将创建一个名为 singbox-tun 的虚拟网卡。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>控制面板 -&amp;gt; 所有控制面板项 -&amp;gt; 网络和共享中心 -&amp;gt; 更改适配器设置-&amp;gt; 右键 singbox-tun -&amp;gt; 属性 -&amp;gt; 共享&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/quest2/16.png"
+width="3301"
+height="1706"
+srcset="https://xiaoxiano.github.io/p/quest2/16_hu3bf7d4a795b6b4cb9bb5bbd2fa37badc_626608_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/quest2/16_hu3bf7d4a795b6b4cb9bb5bbd2fa37badc_626608_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="193"
+data-flex-basis="464px"
+>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>sstap方法&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>
@@ -5821,7 +5329,7 @@ data-flex-basis="202px"
 >&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享 ，然后就可以连热点了。
+&lt;p>打开热点，并打开 网络和Internet设置 -&amp;gt; 更改适配器选项 -&amp;gt; 右键 SSTAP 1 -&amp;gt; 属性 -&amp;gt; 共享
 &lt;img src="https://xiaoxiano.github.io/p/quest2/2.jpg"
 width="1277"
 height="863"
@@ -5833,12 +5341,7 @@ data-flex-basis="355px"
 >&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;hr>
-&lt;ul>
-&lt;li>&lt;strong>TUN模式方法&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;p>如果你的电脑同时有&lt;strong>网线&lt;/strong>和&lt;strong>无线网卡&lt;/strong>，clash和v2rayN的TUN模式开热点应该也可以。&lt;/p>
-&lt;h1 id="注册接受邀请领取30美金奖励">注册，接受邀请领取30美金奖励&lt;/h1>
+&lt;h1 id="注册接受邀请领取30美金奖励已过期">注册，接受邀请领取30美金奖励（已过期)&lt;/h1>
 &lt;ol start="0">
 &lt;li>
 &lt;p>只玩破解版无需受邀，无需此步骤！&lt;/p>
@@ -6164,7 +5667,22 @@ data-flex-basis="240px"
 >&lt;/p>
 &lt;h1 id="skybox">SKYBOX&lt;/h1>
 &lt;p>《SkyBox VR》是最优秀的vr视频播放器，而且可以使用电脑的本地网络播放电脑上的影片。&lt;/p>
-&lt;p>vr影片体积超过10G的很常见，quest2装不了多少，所以放在pc，局域网共享。&lt;/p>
+&lt;p>vr影片体积超过10G的很常见，quest2装不了多少，有以下两种方法。&lt;/p>
+&lt;ul>
+&lt;li>alist挂载115，安卓版比较方便&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>手机下载&lt;a class="link" href="https://github.com/LeoHaoVIP/AListLiteAndroid?tab=readme-ov-file" target="_blank" rel="noopener"
+>AListLite&lt;/a> ，via浏览器，115生活。&lt;/li>
+&lt;li>挂载网盘：点击AListLite右上角&lt;code>+&lt;/code>号，选择“权限配置”授予全部权限，选择“密码设置”修改密码，点击下方“登录”输入账号admin和密码，点击下方“管理”，打开菜单栏选择“存储”，添加挂载的网盘如115网盘，填写挂载路径&lt;code>/115&lt;/code>，添加“cookie”。&lt;/li>
+&lt;li>复制cookie：via浏览器打开&lt;a class="link" href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener"
+>greasy fork&lt;/a>网站，搜索“115不大助手”并安装脚本，浏览器设置为桌面模式，打开官网115.com，右上角点击“扫码获取cookie”，点击“开始”并使用115生活扫码，然后回到浏览器复制cookie粘贴到AListLite。挂载成功后点击右上角&lt;code>+&lt;/code>号，选择“远程访问”查看服务地址。&lt;/li>
+&lt;li>quest2中打开SKYBOX，在本地网络添加WebDAV，填写地址&lt;code>http://[IP]:5244/dav&lt;/code>，进入“全局设置”，“并发加载”选择off。&lt;/li>
+&lt;li>完成，如果以后cookie失效需要再次获取。&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>放在pc，局域网共享，缺点是太占硬盘&lt;/li>
+&lt;/ul>
 &lt;ol>
 &lt;li>电脑设置开启共享。
 &lt;img src="https://xiaoxiano.github.io/p/quest2/14.jpg"
@@ -10913,10 +10431,11 @@ data-flex-basis="323px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker-compose命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose up --build # （重新）构建，然后启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose up -d # 在后台启动服务
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose pull # 拉取
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 指定docker-compose.yml，后同
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 启动指定docker-compose.yml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 拉取指定docker-compose.yml
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose ps # 查看正在运行中的容器
@@ -10934,7 +10453,7 @@ data-flex-basis="323px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose restart [serviceName] # 重启服务
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose rm # 删除所有（停止状态的）服务容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down # 删除所有容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down --remove-orphans # 删除orphans容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down --remove-orphans # 删除孤立容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
@@ -11947,7 +11466,7 @@ sed
 &lt;ul>
 &lt;li>代理&lt;/li>
 &lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入查到的ip地址&lt;/p>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在各协议http、https、Socks里粘贴查到的ip地址&lt;/p>
 &lt;ul>
 &lt;li>git config
 默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
@@ -11960,7 +11479,25 @@ sed
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x [ip]:[port.socks] %h %p #写自己ip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>docker代理&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建代理配置目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/systemd/system/docker.service.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 创建代理配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch /etc/systemd/system/docker.service.d/http-proxy.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 修改代理配置，改为自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># NO_PROXY：指定不需要通过代理的地址列表，包括本地主机 localhost、127.0.0.0/8 和 IPv6 本地地址 ::1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>终端代理（临时使用）&lt;/p>
@@ -11974,9 +11511,48 @@ sed
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>shell脚本（后续动态ip改变）
+Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu的proxy.sh里粘贴查到的ip地址，并&lt;code>sh proxy.sh&lt;/code>运行脚本&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置你的代理信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;127.0.0.1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1. 将模式设置为手动 (manual)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy mode &amp;#39;manual&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2. 设置各个协议的主机和端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 3. 设置git ssh代理
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /home/[user]/.ssh/config &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Host&lt;/span> &lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">User&lt;/span> &lt;span class="na">git&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ProxyCommand&lt;/span> &lt;span class="na">nc&lt;/span> &lt;span class="na">-v&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">h&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">p&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="na">4&lt;/span>&lt;span class="err">.&lt;/span> &lt;span class="err">设置&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">代理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">tee&lt;/span> &lt;span class="err">/&lt;/span>&lt;span class="na">etc&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">systemd&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">system&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">service&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">d&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">http-proxy&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">conf&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu升级">VM Ubuntu升级&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update

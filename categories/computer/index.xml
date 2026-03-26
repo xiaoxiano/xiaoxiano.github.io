@@ -5312,10 +5312,11 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker-compose命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose up --build # （重新）构建，然后启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose up -d # 在后台启动服务
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose pull # 拉取
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 指定docker-compose.yml
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 指定docker-compose.yml，后同
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml up -d # 启动指定docker-compose.yml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> docker-compose -f docker-compose.yml pull # 拉取指定docker-compose.yml
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose ps # 查看正在运行中的容器
@@ -5333,7 +5334,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose restart [serviceName] # 重启服务
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose rm # 删除所有（停止状态的）服务容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down # 删除所有容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down --remove-orphans # 删除orphans容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose down --remove-orphans # 删除孤立容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker-compose config -q # 验证（docker-compose.yml）文件配置，当配置正确时，不输出任何内容
@@ -6346,7 +6347,7 @@ sed
 &lt;ul>
 &lt;li>代理&lt;/li>
 &lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在&lt;code>Socks Host&lt;/code>里写入查到的ip地址&lt;/p>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在各协议http、https、Socks里粘贴查到的ip地址&lt;/p>
 &lt;ul>
 &lt;li>git config
 默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
@@ -6359,7 +6360,25 @@ sed
 &lt;p>创建~/.ssh/config 文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x ip:port.socks %h %p #写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x [ip]:[port.socks] %h %p #写自己ip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>docker代理&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建代理配置目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/systemd/system/docker.service.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 创建代理配置文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch /etc/systemd/system/docker.service.d/http-proxy.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 修改代理配置，改为自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># NO_PROXY：指定不需要通过代理的地址列表，包括本地主机 localhost、127.0.0.0/8 和 IPv6 本地地址 ::1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>
 &lt;p>终端代理（临时使用）&lt;/p>
@@ -6373,9 +6392,48 @@ sed
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://ip:port.http&amp;#34; #写自己ip
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>shell脚本（后续动态ip改变）
+Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu的proxy.sh里粘贴查到的ip地址，并&lt;code>sh proxy.sh&lt;/code>运行脚本&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置你的代理信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;127.0.0.1&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1. 将模式设置为手动 (manual)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy mode &amp;#39;manual&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2. 设置各个协议的主机和端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 3. 设置git ssh代理
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /home/[user]/.ssh/config &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Host&lt;/span> &lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">User&lt;/span> &lt;span class="na">git&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ProxyCommand&lt;/span> &lt;span class="na">nc&lt;/span> &lt;span class="na">-v&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">h&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">p&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="na">4&lt;/span>&lt;span class="err">.&lt;/span> &lt;span class="err">设置&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">代理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">tee&lt;/span> &lt;span class="err">/&lt;/span>&lt;span class="na">etc&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">systemd&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">system&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">service&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">d&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">http-proxy&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">conf&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu升级">VM Ubuntu升级&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
