@@ -5067,15 +5067,21 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
-&lt;p>以下简介节选自&lt;a class="link" href="https://docs.docker.com/get-started/" target="_blank" rel="noopener"
->docker文档&lt;/a>：&lt;/p>
 &lt;ol>
-&lt;li>**卷（volumes）**存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。卷完全由 Docker 管理，非 Docker 进程不应修改文件系统的这一部分。卷是在 Docker 中持久化数据的最佳方式。&lt;/li>
+&lt;li>卷（volumes）：卷是由 Docker 管理的持久化数据（独立于容器的数据）。存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 将当前目录的相对路径挂载到/app目录中
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ./:/app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="docker-compose">docker compose&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>
+&lt;p>镜像 (Image) ：一个只读的模板（静态模板），包含了运行应用程序所需的所有代码、库、环境变量和配置文件。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>容器 (Container)：镜像的运行实例（运行环境）。基于镜像，在顶部增加了一个读写层。&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 单独下载和安装 Compose（不装Docker CLI）
@@ -5270,7 +5276,7 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run [可选参数] imagename #新建并启动容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run [参数] imagename # 新建并启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　--name = &amp;#34;name&amp;#34; 容器取名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-it 交互模式进入容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
@@ -5278,43 +5284,44 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-v或--volume /卷名称的路径:/容器中的挂载路径
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search xxx #搜索dockerhub-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker images [-a][-q] #列出本地主机的-镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search [xxx] # 搜索dockerhub的镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker images -a/-q # 列出本地主机的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -a 显示所有信息
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -q 显示所有id
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker ps [-a][-q] #显示当前正在运行的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker ps -a/-q # 显示当前正在运行的容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-a 显示当前运行的容器，并显示历史运行过的容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-q 只显示运行容器的编号
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker logs 容器id #日志
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker top 容器id #查看容器中进程信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect 容器id #查看容器的详细信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker logs [容器id] # 日志
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker top [容器id] # 查看容器中进程信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect [容器id] # 查看容器的详细信息
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">操作：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t tag . #构建标签为tag的镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull 镜像：版本号 #拉取-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker start 容器id #启动容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker restart 容器id #重启容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop 容器id #停止容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker kill 容器id #强制停止容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm 容器id #删除停止状态的容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm -f 容器id #强制删除容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f xxx #删除单个-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f $(docker images -aq) #删除所有-镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop $(docker ps -a -q) #停止所有容器运行
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm $(docker ps -a -q) #删除所有容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker network rm $(docker network ls -q) #删除所有network
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker system prune --all --force --volumes #删除一切
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t [tag] . # 构建标签为tag的镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull [镜像：版本号] # 拉取镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker start [容器id] # 启动容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker restart [容器id] # 重启容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop [容器id] # 停止容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker kill [容器id] # 强制停止容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm [容器id] # 删除停止状态的容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm -f [容器id] # 强制删除容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f [xxx] # 删除单个镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f $(docker images -aq) # 删除所有镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker volume rm [volume] # 删除卷（持久化数据）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop $(docker ps -a -q) # 停止所有容器运行
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm $(docker ps -a -q) # 删除所有容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker network rm $(docker network ls -q) # 删除所有network
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker system prune --all --force --volumes # 删除一切（容器、卷）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">exit 容器停止并退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ctrl+p+q 容器不停止退出
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash #进入正在执行的mysql容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 /bin/sh #进入容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34;apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y vim&amp;#34; #进入容器安装vim编辑器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34; apk add --update vim&amp;#34; #进入alpine容器安装vim编辑器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; [container_name_or_id] #查看容器ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash # 进入正在执行的mysql容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 /bin/sh # 进入容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34;apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y vim&amp;#34; # 进入容器安装vim编辑器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34; apk add --update vim&amp;#34; # 进入alpine容器安装vim编辑器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; [container_name_or_id] # 查看容器ip
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">从容器拷贝内容到主机：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp 容器id: 路径 主机目的路径 #此处不必进入容器，容器可以是关闭的。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp [容器id: 路径] [主机目的路径] # 此处不必进入容器（容器关闭状态）
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker compose命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker compose up --build # （重新）构建，然后启动容器
