@@ -5283,35 +5283,32 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-p ip:主机端口:容器端口 #指定端口映射
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-v或--volume /卷名称的路径:/容器中的挂载路径
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">查看：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search [xxx] # 搜索dockerhub的镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">镜像：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search [image] # 搜索dockerhub的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker images -a/-q # 列出本地主机的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -a 显示所有信息
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -q 显示所有id
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t [tag] . # 构建标签为tag的镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull [镜像：版本号] # 拉取镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f [image] # 删除单个镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f $(docker images -aq) # 删除所有镜像
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">容器：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker ps -a/-q # 显示当前正在运行的容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-a 显示当前运行的容器，并显示历史运行过的容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-q 只显示运行容器的编号
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker logs [容器id] # 日志
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker top [容器id] # 查看容器中进程信息
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect [容器id] # 查看容器的详细信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">操作：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker build -t [tag] . # 构建标签为tag的镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker pull [镜像：版本号] # 拉取镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker start [容器id] # 启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker restart [容器id] # 重启容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop [容器id] # 停止容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker kill [容器id] # 强制停止容器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop $(docker ps -a -q) # 停止所有容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm [容器id] # 删除停止状态的容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm -f [容器id] # 强制删除容器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f [xxx] # 删除单个镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rmi -f $(docker images -aq) # 删除所有镜像
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker volume rm [volume] # 删除卷（持久化数据）
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker stop $(docker ps -a -q) # 停止所有容器运行
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker rm $(docker ps -a -q) # 删除所有容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker network rm $(docker network ls -q) # 删除所有network
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker system prune --all --force --volumes # 删除一切（容器、卷）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">exit 容器停止并退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">ctrl+p+q 容器不停止退出
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it mysql /bin/bash # 进入正在执行的mysql容器
@@ -5319,9 +5316,12 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34;apt-get update &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> apt-get install -y vim&amp;#34; # 进入容器安装vim编辑器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker exec -it 容器名 -c &amp;#34; apk add --update vim&amp;#34; # 进入alpine容器安装vim编辑器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker inspect -f &amp;#39;{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}&amp;#39; [container_name_or_id] # 查看容器ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp [容器id: 路径] [主机目的路径] # 从容器拷贝内容到主机（容器关闭状态，不必进入容器）
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">从容器拷贝内容到主机：
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker cp [容器id: 路径] [主机目的路径] # 此处不必进入容器（容器关闭状态）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">卷：
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker volume ls # 列出所有卷
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker volume rm [volume] # 删除卷（持久化数据）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker system prune --all --force --volumes # 删除一切（容器、卷）
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker compose命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker compose up --build # （重新）构建，然后启动容器
