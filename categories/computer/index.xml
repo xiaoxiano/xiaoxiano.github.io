@@ -582,11 +582,50 @@ BandwagonHost（搬瓦工）：日本软银$169/年（高配）。香港 CN2 GIA
 &lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/dnsapi" target="_blank" rel="noopener"
 >使用 DNS API&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://github.com/acmesh-official/acme.sh/wiki/Options-and-Params" target="_blank" rel="noopener"
->选项和参数&lt;/a>&lt;/p></description></item><item><title>云服务</title><link>https://xiaoxiano.github.io/p/cloud-service/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/cloud-service/</guid><description>&lt;h1 id="前言">前言&lt;/h1>
-&lt;p>云是我们常用的服务，aws是头部厂商，但我们还有更多选择，以降低价格。即使aws有高昂且复杂的定价，仍有很多人使用，所以本文也将介绍。&lt;/p>
-&lt;p>目前我在使用的云存储是Backblaze B2（兼容S3 API），价格仅为 Amazon S3、Microsoft Azure 和 Google Cloud 的1/4。&lt;/p>
-&lt;p>我们同样需要一个CDN缓存加速（cloudflare 与传统 CDN 不同，CloudFlare 处理对网站的所有请求，能够阻止针对网站的攻击，可以再加到传统CDN前作为防护），CDN在用户第一次请求后，会在接近用户的区域缓存源服务器的静态资源（没人请求不缓存，不主动和服务器保持同步），后续访问就更加快速，并降低服务器压力，可以使用cloudfront免费套餐，如果每月传出超过 1T 数据，可以考虑使用 bunny CDN。&lt;/p>
-&lt;h1 id="s3">S3&lt;/h1>
+>选项和参数&lt;/a>&lt;/p></description></item><item><title>云服务</title><link>https://xiaoxiano.github.io/p/cloud-service/</link><pubDate>Fri, 07 Oct 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/cloud-service/</guid><description>&lt;h1 id="简介">简介&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>平台&lt;/th>
+&lt;th>产品&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>aws&lt;/td>
+&lt;td>云服务器（EC2）&lt;/td>
+&lt;td>一站式云服务，但定价高昂且复杂&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>云存储（S3）&lt;/td>
+&lt;td>按需计费，无限容量（单文件限5T），极高安全性，S3已成为行业标准&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>CDN缓存（cloudfront）&lt;/td>
+&lt;td>CDN在用户第一次请求后，会在接近用户的区域缓存源服务器的静态资源（没人请求不缓存，不主动和服务器保持同步），后续访问就更加快速，并降低服务器压力，可以使用cloudfront免费套餐&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Backblaze&lt;/td>
+&lt;td>云存储（B2）&lt;/td>
+&lt;td>Backblaze B2（兼容S3 API），价格仅为 Amazon S3、Microsoft Azure 和 Google Cloud 的1/4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>bunny&lt;/td>
+&lt;td>CDN缓存&lt;/td>
+&lt;td>如果每月传出超过 1T 数据，可以考虑使用bunny降低成本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>cloudflare&lt;/td>
+&lt;td>CDN防护&lt;/td>
+&lt;td>cloudflare 与传统 CDN 不同，CloudFlare 处理对网站的所有请求，能够阻止针对网站的攻击，可以再加到传统CDN前作为防护&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="aws">AWS&lt;/h1>
+&lt;h2 id="s3">S3&lt;/h2>
 &lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
 Bucket桶
@@ -597,57 +636,69 @@ Bucket桶
 Events事件
 &lt;/div>
 &lt;p>在S3中，可以定义很多事件及其处理函数。比如当文件被创建，修改，删除，复制时，触发Lambda。这样就可以构建Event Driven Architecture，比如：新文件到S3 -&amp;gt; 触发Lambda处理函数 -&amp;gt; 处理结束后通知AppSync/GraphQL API -&amp;gt; 通知用户文件已经处理完毕。&lt;/p>
-&lt;h2 id="s3费用决定因素">S3费用决定因素&lt;/h2>
+&lt;h3 id="s3费用决定因素">S3费用决定因素&lt;/h3>
 &lt;p>官方：存储和管理数据时需要考虑六大 Amazon S3 成本组成：存储定价、请求和数据检索定价、数据传输和传输加速定价、数据管理和分析定价、复制定价以及使用 S3 Object Lambda 处理数据的价格。&lt;/p>
 &lt;p>通常我们关注&lt;a class="link" href="https://aws.amazon.com/cn/s3/storage-classes/?nc1=h_ls" target="_blank" rel="noopener"
 >存储类型&lt;/a>、&lt;a class="link" href="https://aws.amazon.com/s3/pricing/?nc1=h_ls" target="_blank" rel="noopener"
 >储存数据量、请求量、数据传输&lt;/a>的费用。&lt;/p>
-&lt;h2 id="存储类型">存储类型&lt;/h2>
-&lt;h3 id="s3-标准">S3 标准&lt;/h3>
+&lt;h3 id="存储类型">存储类型&lt;/h3>
+&lt;h4 id="s3-标准">S3 标准&lt;/h4>
 &lt;p>S3 标准是一种通用对象存储平台，提供较低的延迟和较高的吞吐量，因此非常适合各种使用案例，包括云应用程序、动态网站、内容分发、移动和游戏应用程序以及大数据分析。&lt;/p>
-&lt;h3 id="s3-智能分层-通用选它">S3 智能分层 ——通用选它&lt;/h3>
+&lt;h4 id="s3-智能分层-通用选它">S3 智能分层 ——通用选它&lt;/h4>
 &lt;p>S3 智能分层可自动识别并将不常访问的数据（30天内未访问的数据）移动到成本较低的基础架构中。当访问不频繁层中的对象时，它会自动移回更高性能层，并且30天时钟重新启动。在访问模式发生变化时，在两个访问层（频繁访问层和不频繁访问层）之间移动数据来实现自动节省成本，非常适用于访问模式未知或不断变化的数据。&lt;/p>
-&lt;h3 id="s3标准-ia不频繁访问备份选它">S3标准-IA（不频繁访问）——备份选它&lt;/h3>
+&lt;h4 id="s3标准-ia不频繁访问备份选它">S3标准-IA（不频繁访问）——备份选它&lt;/h4>
 &lt;p>S3 Standard-IA 适用于不常访问（超过30天访问一次）、但在需要时要求快速访问的数据。提供与“S3 标准”相同的高持久性、高吞吐量和低延迟，成本较低且性能出色使得“S3标准–IA”很适合长期存储和备份，以及用作灾难恢复文件的数据存储。&lt;/p>
-&lt;h3 id="s3-单区域---ia不频繁访问">S3 单区域 - IA（不频繁访问）&lt;/h3>
+&lt;h4 id="s3-单区域---ia不频繁访问">S3 单区域 - IA（不频繁访问）&lt;/h4>
 &lt;p>S3标准-IA 的单区域存储，此类别不会自动在至少三个AZ上存储数据。&lt;/p>
-&lt;h3 id="s3-glacier-即时检索">S3 Glacier 即时检索&lt;/h3>
+&lt;h4 id="s3-glacier-即时检索">S3 Glacier 即时检索&lt;/h4>
 &lt;p>Amazon S3 Glacier Instant Retrieval 是一种归档存储类，可以为很少访问（超过90天访问一次）且需要毫秒级检索速度的长期数据提供最低成本的存储。&lt;/p>
-&lt;h3 id="s3-glacier-灵活检索前称为-s3-glacier">S3 Glacier 灵活检索（前称为 S3 Glacier）&lt;/h3>
+&lt;h4 id="s3-glacier-灵活检索前称为-s3-glacier">S3 Glacier 灵活检索（前称为 S3 Glacier）&lt;/h4>
 &lt;p>S3 Glacier Flexible Retrieval 为每年访问 1—2 次且异步检索的归档数据提供低成本存储，数据检索时间可配置，从数分钟到数小时不等。&lt;/p>
-&lt;h3 id="amazon-s3-glacier-深度档案">Amazon S3 Glacier 深度档案&lt;/h3>
+&lt;h4 id="amazon-s3-glacier-深度档案">Amazon S3 Glacier 深度档案&lt;/h4>
 &lt;p>支持长期保留和数字化保存一年可能访问一到两次的数据，数据检索时间为 12 小时以内。&lt;/p>
-&lt;h1 id="cloudfront">cloudfront&lt;/h1>
-&lt;p>
-&lt;link href="https://fonts.googleapis.com/css?family=default" rel="stylesheet" type="text/css">
-&lt;div style="font-family:'default'; font-size:20px; font-style:normal; font-weight:bold; color: blue">
-Origin domain
-&lt;/div>
-：源域，选S3 存储桶需配置Alternate Domain Names作为加速站点，写自己解析过的域名即为加速的站点&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;strong>Amazon S3 存储桶&lt;/strong>– &lt;code>DOC-EXAMPLE-BUCKET.s3.us-west-2.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>配置为网站的 Amazon S3 存储桶&lt;/strong>– &lt;code>https://DOC-EXAMPLE-BUCKET.s3-website.us-west-2.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>MediaStore 容器&lt;/strong>– &lt;code>examplemediastore.data.mediastore.us-west-1.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>MediaPackage 端点&lt;/strong>– &lt;code>examplemediapackage.mediapackage.us-west-1.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>亚马逊 EC2 实例&lt;/strong>– &lt;code>ec2-203-0-113-25.compute-1.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Elastic Load Balancing 负载均衡器&lt;/strong>– &lt;code>example-load-balancer-1234567890.us-west-2.elb.amazonaws.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>您自己的网络服务器&lt;/strong>– &lt;code>https://www.example.com&lt;/code>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="自选ip失败经历">自选ip失败经历&lt;/h2>
+&lt;h2 id="cloudfront">cloudfront&lt;/h2>
+&lt;h3 id="源域设置">源域设置&lt;/h3>
+&lt;p>&lt;strong>Origin domain&lt;/strong>：源站域名，CloudFront将从源域中获取资源，&lt;a class="link" href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/DownloadDistValuesOrigin.html" target="_blank" rel="noopener"
+>参考文档&lt;/a>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>源域可以是S3 存储桶或 HTTP 服务器&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Amazon S3 存储桶&lt;/td>
+&lt;td>&lt;code>amzn-s3-demo-bucket&lt;/code>.s3.&lt;code>us-west-2&lt;/code>.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Amazon S3 存储桶（已经配置为网站）&lt;/td>
+&lt;td>&lt;code>amzn-s3-demo-bucket&lt;/code>.s3-website.&lt;code>us-west-2&lt;/code>.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MediaStore 容器&lt;/td>
+&lt;td>&lt;code>examplemediastore&lt;/code>.data.mediastore.&lt;code>us-west-1&lt;/code>.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>MediaPackage 端点&lt;/td>
+&lt;td>&lt;code>examplemediapackage&lt;/code>.mediapackage.&lt;code>us-west-1&lt;/code>.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>亚马逊 EC2 实例&lt;/td>
+&lt;td>&lt;code>ec2-203-0-113-25&lt;/code>.compute-1.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Elastic Load Balancing 负载均衡器&lt;/td>
+&lt;td>&lt;code>example-load-balancer-1234567890&lt;/code>.&lt;code>us-west-2&lt;/code>.elb.amazonaws.com&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>您自己的网络服务器&lt;/td>
+&lt;td>&lt;code>www.example.com&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="自选ip">自选ip&lt;/h3>
 &lt;ol>
 &lt;li>查看&lt;a class="link" href="https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips" target="_blank" rel="noopener"
 >官方公布的ip段&lt;/a>（我们只需要边缘节点ip-&amp;ldquo;CLOUDFRONT_REGIONAL_EDGE_IP_LIST&amp;rdquo;，因为GLOBAL站点会自动判断离边缘节点最近的区域和进行健康检查，再连到边缘节点）&lt;/li>
@@ -666,7 +717,7 @@ data-flex-basis="458px"
 &lt;p>由于给的ip是CIDR格式，我们需要转换。先&lt;a class="link" href="https://uutool.cn/json2list/" target="_blank" rel="noopener"
 >JSON转列表&lt;/a>。然后&lt;a class="link" href="https://github.com/codeexpress/cidr2ip" target="_blank" rel="noopener"
 >CIDR转ip&lt;/a>（因为在线转不支持批量转换，所以建议下载这个工具），重命名为cidr2ip.exe，新建cidrs.txt，把列表复制进去，cmd执行&lt;code>cidr2ip -f cidrs.txt&lt;/code>可得很大一列ip。最后&lt;a class="link" href="https://reallyfreegeoip.org/bulk" target="_blank" rel="noopener"
->ip批量查询&lt;/a>，下载后可以看到ip地区，复制你所需地区的ip（查询速度会很慢，我的vps是日本的，排在最前面，运气很好没有查询很久）。&lt;/p>
+>ip批量查询&lt;/a>，下载后可以看到ip地区，复制你所需地区的ip（查询速度会很慢，测试vps是日本的，排在最前面，运气很好没有查询很久）。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>创建Cloud front测速链接&lt;/p>
@@ -727,11 +778,11 @@ data-flex-basis="1539px"
 >&lt;/p>
 &lt;p>打开显示为测速地址即可（需要等到部署完成）&lt;/p>
 &lt;ol start="4">
-&lt;li>使用CloudflareSpeedTest](&lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest" target="_blank" rel="noopener"
->https://github.com/XIU2/CloudflareSpeedTest&lt;/a>)优选ip，
-cmd输入&lt;code>CloudflareST.exe -url xxxxxxxxxxx.cloudfront.net/100mb.test&lt;/code>发现ip全部不能用。&lt;/li>
+&lt;li>使用&lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest" target="_blank" rel="noopener"
+>CloudflareSpeedTest&lt;/a>优选ip，
+cmd输入&lt;code>CloudflareST.exe -url xxxxxxxxxxx.cloudfront.net/100mb.test&lt;/code>。&lt;/li>
 &lt;/ol>
-&lt;h1 id="aws查看vcpu">aws查看vcpu&lt;/h1>
+&lt;h2 id="aws查看vcpu">aws查看vcpu&lt;/h2>
 &lt;p>&lt;img src="https://xiaoxiano.github.io/p/cloud-service/1.jpg"
 width="471"
 height="591"
@@ -758,7 +809,432 @@ loading="lazy"
 class="gallery-image"
 data-flex-grow="393"
 data-flex-basis="944px"
->&lt;/p></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://postman.xiniushu.com/" target="_blank" rel="noopener"
+>&lt;/p>
+&lt;h1 id="短信接码平台">短信接码平台&lt;/h1>
+&lt;p>&lt;a class="link" href="topstip.com/nice-patchwork-platform/" >参考&lt;/a>&lt;/p>
+&lt;h2 id="免费">免费&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>国内平台&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>服务内容&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持国家&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点/注意事项&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.clearcode.cn/" target="_blank" rel="noopener"
+>接码导航站&lt;/a>&lt;/td>
+&lt;td>提供大量免费的中国号段和国外临时号码，可用于在线接收短信验证码。&lt;/td>
+&lt;td>本平台提供中国、美国、加拿大、香港、东南亚国家: 越南、柬埔，欧洲国家：法国、英国、等 128 个国家的号码&lt;/td>
+&lt;td>1. 延迟时间约为 30 秒，如果长时间没有收到短信验证码，建议尝试另一组号码。 2. 云际云短信也是全球唯一一家接入了所有美国电信服务商的平台，所以它提供的美国号段也是相当丰富&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.sms-receive-online.com/" target="_blank" rel="noopener"
+>SMS-Receive-Online.COM&lt;/a>&lt;/td>
+&lt;td>老牌短信接码平台，提供在线接收短信服务&lt;/td>
+&lt;td>平台支持接收来自多个国家的短信，包括美国、英国、加拿大、澳大利亚、法国、德国等&lt;/td>
+&lt;td>完全免费、无需注册。除了社媒外，还支持接收来自PayPal、AliPay 等支付平台的验证短信&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.supercloudsms.com/" target="_blank" rel="noopener"
+>超级云短信&lt;/a>&lt;/td>
+&lt;td>提供多个国家的号码，接收速度非常快，一般几秒钟就可以接收到短信验证码。&lt;/td>
+&lt;td>包括中国、美国、英国等多个国家&lt;/td>
+&lt;td>完全免费、号码更新频繁、适合临时使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://smsjisu.com/" target="_blank" rel="noopener"
+>极速接码平台&lt;/a>&lt;/td>
+&lt;td>提供大量免费的中国号段和美国号段临时号码，可用于在线接收短信验证码&lt;/td>
+&lt;td>主要是中国和美国&lt;/td>
+&lt;td>本站提供的号码仅用于注册一些不重要的网站账号或者 APP 账号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.zusms.com/phone/china" target="_blank" rel="noopener"
+>来信短信云&lt;/a>&lt;/td>
+&lt;td>提供大量国内临时号码和香港临时号码，此外还有一些美国和加拿大的号码。&lt;/td>
+&lt;td>中国、香港、美国、加拿大等&lt;/td>
+&lt;td>无需注册，适用于接收来自 Facebook、Telegram、WeChat 社媒平台的短信验证码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.xnsms.com/" target="_blank" rel="noopener"
+>小鸟接码&lt;/a>&lt;/td>
+&lt;td>提供在线免费接码服务、接收短信验证码服务、免费的临时邮件等。&lt;/td>
+&lt;td>主要是中国&lt;/td>
+&lt;td>完全免费，可用于注册一些网站和 APP。网站提供的国内临时号码虽然不多，但相对比较稳定。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://xinghai.party/" target="_blank" rel="noopener"
+>萤火虫&lt;/a>&lt;/td>
+&lt;td>提供中国、美国、英国等多国高达 100 多个临时电话号码&lt;/td>
+&lt;td>中国、美国等多个国家&lt;/td>
+&lt;td>平台上大多数都是国内号码，非常适合用于注册国内的豆瓣、百度、华为、小米等网站账号时使用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.yunjiema.top/" target="_blank" rel="noopener"
+>云接码&lt;/a>&lt;/td>
+&lt;td>提供多个国家和地区的临时&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码，方便快捷接收网站和 APP 注册短信验证码。&lt;/td>
+&lt;td>包括中国、美国、加拿大、香港、英国等。&lt;/td>
+&lt;td>无需注册，全球通用，完全免费，平台会不定期更新新号码&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.yunduanxin.xyz/" target="_blank" rel="noopener"
+>云短信&lt;/a>&lt;/td>
+&lt;td>在线接收中国、香港、美国、日本、澳大利亚、加拿大等 128 个国家短信验证码。&lt;/td>
+&lt;td>中国、美国、香港、日本等国家&lt;/td>
+&lt;td>提供的号码仅用于注册一些不重要的网站账号或者 APP 账号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://pingme.tel/receive-sms-online-cn/" target="_blank" rel="noopener"
+>PingMe &lt;/a>&lt;/td>
+&lt;td>PingMe 是一个免费的接码平台，提供即时在线接收验证码、短信和 SMS 的服务。&lt;/td>
+&lt;td>支持从 20 多个国家/地区购买专用电话号码&lt;/td>
+&lt;td>支持抖音、小红书、TikTok、Tinder、WhatsApp、Twitter、微信、Facebook、Telegram、PayPal等多个平台的验证码接收，如果需要购买私人临时号码，费用为每月 $0.5。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.freereceivesms.com/" target="_blank" rel="noopener"
+>免费在线短信接收&lt;/a>&lt;/td>
+&lt;td>短信接收是一种免费服务，用于在线接收手机短信验证码的接码平台。可以使用它来接收来自FACEBOOK、TELEGRAM、WECHAT、PAYPAL 等发来的手机短信验证码。&lt;/td>
+&lt;td>提供澳大利亚、中国台湾、中国大陆、中国香港、中国澳门、马来西亚、日本、韩国、印尼、印度、美国、英国、加拿大、土耳其等国家的手机号码。点击这里&lt;a class="link" href="https://www.freereceivesms.com/countrys/" target="_blank" rel="noopener"
+>查看所有国家列表&lt;/a>。&lt;/td>
+&lt;td>免费使用。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.spoofbox.com/zh/tool/trash-mobile" target="_blank" rel="noopener"
+>Spoof Box&lt;/a>&lt;/td>
+&lt;td>Spoofbox.com 是一个提供虚拟号码和各种恶搞工具的平台，主要用于保护用户隐私或进行娱乐性恶作剧。&lt;/td>
+&lt;td>提供澳洲、中国香港、美国、英国、加拿大、南非、葡萄牙、德国的虚拟手机号码。&lt;/td>
+&lt;td>免费使用，也可以选择付费获得隐私号码。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://cn.mytempsms.com/" target="_blank" rel="noopener"
+>MyTempSMS&lt;/a>&lt;/td>
+&lt;td>MyTempSMS 提供全球多个国家 200+ 个临时手机电话号码的短信验证码代收服务，在线提供给大家用于注册各种不重要的网站。&lt;/td>
+&lt;td>提供澳大利亚、美国、法国、英国等地的虚拟手机号码。&lt;/td>
+&lt;td>免费使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://jiemahao.com/hongkong-phone-number/" target="_blank" rel="noopener"
+>接码号&lt;/a>&lt;/td>
+&lt;td>接码号提供大量的虚拟手机号码，用户可以利用它们获得短信验证码。&lt;/td>
+&lt;td>提供中国香港、美国、加拿大、英国、印度尼西亚、菲律宾、马来西亚、泰国等地的虚拟&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码。&lt;/td>
+&lt;td>免费使用。但网页上有大量的广告，大家在使用的时候不感兴趣的，注意一下，可以避免误触。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://7sim.pro/" target="_blank" rel="noopener"
+>7SIM.ORG&lt;/a>&lt;/td>
+&lt;td>7SIM.ORG 是一个提供免费一次性电话号码的网站，您可以通过该网站免费接收短信来验证或激活您的帐户，而无需随时注册&lt;/td>
+&lt;td>提供 23 个中国香港的虚拟手机号码，此外还提供美国、中国大陆、英国、菲律宾、印度、泰国、毛里求斯、欧洲等国家的虚拟手机号码。&lt;/td>
+&lt;td>免注册、免费使用&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>国外平台&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>服务内容&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持国家&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点/注意事项&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://ch.freephonenum.com/" target="_blank" rel="noopener"
+>Free Phone Num.&lt;/a>&lt;/td>
+&lt;td>Free &lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> Phone&lt;/a> Num 提供免费的临时电话号码，用户无需支付费用即可使用这些号码接收短信验证码&lt;/td>
+&lt;td>该平台提供来自多个国家的电话号码，包括美国、加拿大、英国、澳大利亚等&lt;/td>
+&lt;td>由于这些临时电话号码是公开的，任何人都可以查看接收到的短信内容，因此不适合接收敏感信息。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://sms24.me/en/countries/au" target="_blank" rel="noopener"
+>SMS24.me&lt;/a>&lt;/td>
+&lt;td>用户可以使用 SMS24 中列出的号码在线接收短信，来注册或验证任何服务，例如 Telegram、Facebook、Google、Gmail、WhatsApp、Viber、Line、微信、KakaoTalk 等。&lt;/td>
+&lt;td>提供澳大利亚、中国香港、中国大陆、中国澳门、泰国、越南、美国、加拿大、印度、英国、欧洲国家等地的虚拟&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码。点击这里&lt;a class="link" href="https://sms24.me/en/countries" target="_blank" rel="noopener"
+>查看所有国家列表&lt;/a>。&lt;/td>
+&lt;td>免费使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://receive-sms-online.info/" target="_blank" rel="noopener"
+>Receive SMS Online for Free&lt;/a>&lt;/td>
+&lt;td>在线接收 SMS 消息的免费服务，基于 REAL SIM，并向您显示带有动态发件人 ID 的调制解调器收到的确切信息。在此网站上，您可以检查您是否通过不同的路线接收短信，或者是否使用动态发件人 ID 功能接收短信&lt;/td>
+&lt;td>目前支持少数国家号码，例如：美国、西班牙、罗马尼亚、英国、德国、法国、俄罗斯&lt;/td>
+&lt;td>完全免费，但也可能会因为移动运营商施加的限制收不到短信&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="http://receivefreesms.com/" target="_blank" rel="noopener"
+>Receive FREE SMS online&lt;/a>&lt;/td>
+&lt;td>使用临时电话号码接收免费的国际短信验证，无限制且免费。&lt;/td>
+&lt;td>接收短信在线服务，覆盖全球。&lt;/td>
+&lt;td>该平台适用于需要临时接收短信验证的场景，如注册网站、验证账户等&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.freeonlinephone.org/" target="_blank" rel="noopener"
+>Free Online Phone&lt;/a>&lt;/td>
+&lt;td>接码平台“Free Online Phone”是一种在线服务，允许用户使用临时电话号码接收短信验证码&lt;/td>
+&lt;td>加拿大、英国、美国为主&lt;/td>
+&lt;td>所有接收到的短信内容都是公开的，任何人都可以查看，因此不适合接收敏感信息。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://temporary-phone-number.com/" target="_blank" rel="noopener"
+>Receive SMS online for free&lt;/a>&lt;/td>
+&lt;td>免费在线接收来自世界各地的短信，无附加条件、无需注册。&lt;/td>
+&lt;td>提供中国、美国、香港、印度、俄罗斯等世界各国的临时电话号码&lt;/td>
+&lt;td>免费、快速、匿名、全球覆盖&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.receivesms.co/" target="_blank" rel="noopener"
+>ReceiveSMS.co&lt;/a>&lt;/td>
+&lt;td>ReceiveSMS.co 提供多个国家的虚拟电话号码，用户可以使用这些号码在线接收短信，而无需注册&lt;/td>
+&lt;td>美国、澳大利亚、斯里兰卡等&lt;/td>
+&lt;td>某个地区有可用的接码号码会显示在网页上，方便查询。使用完全免费&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://receivefreesms.net/" target="_blank" rel="noopener"
+>Receive Free SMS&lt;/a>&lt;/td>
+&lt;td>免费在线接收来自世界各地的短信，无附加条件、无需注册。&lt;/td>
+&lt;td>美国、加拿大为主&lt;/td>
+&lt;td>所有接收到的短信内容都是公开的，任何人都可以查看，因此不适合接收敏感信息。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://sms-receive.net/" target="_blank" rel="noopener"
+>SMS-Receive.net&lt;/a>&lt;/td>
+&lt;td>在线接码平台，支持购买还可以购买私有电话号码&lt;/td>
+&lt;td>主要包括芬兰、新西兰、英国、德国、美国和法国&lt;/td>
+&lt;td>每个人都可以看到在此网站上收到的所有消息，并且无法删除。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.receivesms.net/" target="_blank" rel="noopener"
+>ReceiveSMS&lt;/a>&lt;/td>
+&lt;td>提供在线接收短信服务，用户可以通过虚拟电话号码接收短信验证码&lt;/td>
+&lt;td>美国、英国为主&lt;/td>
+&lt;td>支持短信服务的国家比较少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://receiveasms.com/inbox" target="_blank" rel="noopener"
+>ReceiveaSMS.com&lt;/a>&lt;/td>
+&lt;td>提供免费和付费服务。你可以购买号码，并将你的收件箱消息转发到你的电子邮件地址。&lt;/td>
+&lt;td>ReceiveaSMS.com 提供澳大利亚、美国、巴西、加拿大、英国地区的&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码。&lt;/td>
+&lt;td>请注意，这些是虚拟号码，可能受到某些服务的限制。最好先使用主页号码仔细检查。有任何问题，可以发送邮件至admin@receive-a-sms.com。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="http://receivefreesms.com/" target="_blank" rel="noopener"
+>Receive FREE SMS&lt;/a>&lt;/td>
+&lt;td>使用 Receive FREE SMS 提供的免费号码可验证您的服务和应用程序。&lt;/td>
+&lt;td>提供澳大利亚、美国、英国、德国、法国、瑞士、加拿大、印尼、西班牙等地的电话号码。&lt;/td>
+&lt;td>完全免费&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://smscodeonline.com/virtual-phone/au" target="_blank" rel="noopener"
+>SMSCodeOnline.com&lt;/a>&lt;/td>
+&lt;td>SMSCodeOnline.com 是一项免费在线接收临时短信和语音邮件的服务。&lt;/td>
+&lt;td>提供澳大利亚、中国大陆、中国香港、中国澳门、马来西亚、韩国、泰国、越南、印尼、印度、美国、加拿大、英国、德国、墨西哥等地的虚拟手机号码。&lt;/td>
+&lt;td>完全免费&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://cloakmobile.com/" target="_blank" rel="noopener"
+>Cloakmobile&lt;/a>&lt;/td>
+&lt;td>Cloakmobile 的免费临时电话号码可让您接收各个网站的短信&lt;/td>
+&lt;td>提供中国香港、马来西亚、越南、泰国、印尼、美国、英国、菲律宾等地的手机号码。&lt;/td>
+&lt;td>一次性、免费使用。所有消息都会在 24 小时后被丢弃，提供的临时电话号码每月都会更新为新号码。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://jm00.top/?cps=AIMWTfbx" target="_blank" rel="noopener"
+>YM全球接码平台&lt;/a>&lt;/td>
+&lt;td>国内收费接码平台，通过购买用于接收短信和激活任何网站或应用程序的号码来保护您的个人资料。&lt;/td>
+&lt;td>接码使用积分，1积分=1U，10U起充（只支持USDT-TRC20充值），有中国号码也有国外号码&lt;/td>
+&lt;td>telegram客服：&lt;a class="link" href="https://t.me/ymUSDT" target="_blank" rel="noopener"
+>t.me/ymUSDT&lt;/a> telegram群：&lt;a class="link" href="https://t.me/YM516688" target="_blank" rel="noopener"
+>t.me/YM516688&lt;/a> telegram频道：&lt;a class="link" href="https://t.me/YMma5188" target="_blank" rel="noopener"
+>t.me/YMma5188&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="付费">付费&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>国内平台&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>服务内容&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持国家&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点/注意事项&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://topstip.com/go/sms-activate/" target="_blank" rel="noopener"
+>SMS-Activate&lt;/a>&lt;/td>
+&lt;td>这是一个非常受欢迎的接码平台，适用于注册各种服务。该平台不仅适合个人用户，也适合需要大量号码的批发商和企业用户。&lt;/td>
+&lt;td>支持全球 358 个国家和地区的电话号码&lt;/td>
+&lt;td>可以租用号码，租用期从 4 小时到 4 周不等，期间可以无限接收短信。 平台提供多种支付方式，包括支付宝、虚拟货币和信用卡支付&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://smsbower.net/cn/?utm_source=w3h5" target="_blank" rel="noopener"
+>SMSBower&lt;/a>&lt;/td>
+&lt;td>SMSBower 是一个功能强大且灵活的虚拟电话号码服务平台，适用于需要保护隐私和管理多个在线账户的用户&lt;/td>
+&lt;td>全球号码覆盖，包括中国、美国、印度、俄罗斯、英国、德国、乌克兰等多个国家&lt;/td>
+&lt;td>1. 用户可以按收到的验证码数量进行收费，通常每条验证码的费用在 0.1 元左右 2. 部分服务起充金额为 1 美元，未收到验证短信将自动退款。 3. 支持微信、支付宝、银联银行卡等多种支付方式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://grizzlysms.com/cn" target="_blank" rel="noopener"
+>GrizzlySMS&lt;/a>&lt;/td>
+&lt;td>提供虚拟&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码的平台，用户可以通过该平台购买临时号码用于接收短信验证码，以注册各种在线服务。&lt;/td>
+&lt;td>包括中国大陆、中国台湾、中国香港和中国澳门、美国、俄罗斯、意大利等全球多个国家&lt;/td>
+&lt;td>GrizzlySMS 支持 API 接码，短信接码的收费标准取决于所选择的国家和需要注册的平台，大多数临时号码的费用仅需几美分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="http://h5.do668.com:81/" target="_blank" rel="noopener"
+>德芙云接码&lt;/a>&lt;/td>
+&lt;td>德芙云是一款专业的短信验证码管理和接收平台，广泛应用于需要大量接收验证码的项目中&lt;/td>
+&lt;td>中国、美国、俄罗斯、德国、欧洲等多个国家&lt;/td>
+&lt;td>使用需要先注册，根据需要充值账户余额，最低充值金额为5元。平台的接码服务价格非常实惠，通常每条验证码的费用为 0.1 元左右。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.tqsms.xyz/" target="_blank" rel="noopener"
+>天启接码&lt;/a>&lt;/td>
+&lt;td>天启接码是一个提供虚拟手机号接收短信验证码服务的平台，主要用于在各种网站和应用程序上进行注册和验证&lt;/td>
+&lt;td>中国、美国、俄罗斯、加拿大等多个国家&lt;/td>
+&lt;td>支持 API，方便批量和多线程接码，适合开发者和企业使用。 一般情况下，接收一条短信验证码的费用大约在 0.1 元左右&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://5sim.net/" target="_blank" rel="noopener"
+>5sim（有用户反映不可用了 可以先试试）&lt;/a>&lt;/td>
+&lt;td>5SIM 是一个全球接码平台，提供虚拟电话号码以接收短信验证码，不支持微信、支付宝充值。&lt;/td>
+&lt;td>5SIM 覆盖全球 180 个国家，提供超过 50 万个在线虚拟电话号码&lt;/td>
+&lt;td>1. 5SIM 的收费标准根据所选国家和服务的不同而有所变化。一般来说，价格从 0.005 美元起。 2. 用户可以选择购买或租用虚拟号码，租用时间通常为3到20分钟。 3. 支付方式包括VISA、支付宝、Coinbase、QIWI、PAYEER等&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://pingme.tel/receive-sms-online-cn/" target="_blank" rel="noopener"
+> PingMe&lt;/a>&lt;/td>
+&lt;td>PingMe 提供大量的付费手机号码，用户可以利用提供的手机号码接收验证码。你可以用来注册微信、微博、抖音、京东、探探、陌陌、小红书等。&lt;/td>
+&lt;td>提供多个国家/地区的手机号码，包含澳大利亚、美国、加拿大、英国、欧洲等地。&lt;/td>
+&lt;td>付费使用。一个月时常，可续订：新号码每条短信$0.68，后续$0.1/条。月租$0.5/月，首月免月租。有任何问题，可以发送邮件至support@pingme.tel咨询。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://sms-man.com/cn" target="_blank" rel="noopener"
+>SMS-man&lt;/a>&lt;/td>
+&lt;td>“SMS-man”让你有机会在网上以最优惠的价格购买一个虚拟号码用于注册流行服务。&lt;/td>
+&lt;td>长期稳定超过 200 多个国家/地区的&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码，包含澳大利亚、中国台湾、中国大陆、中国香港、中国澳门、马来西亚、新加坡、日本、韩国、越南、泰国、印尼、印度、美国、加拿大、英国、墨西哥等地。&lt;/td>
+&lt;td>付费使用。在网页左边选择国家，右边会出现需要注册的平台，注册的平台不同，收费也就不同。 &lt;strong>TG：&lt;/strong>&lt;a class="link" href="https://tx.me/smsmancn" target="_blank" rel="noopener"
+>tx.me/smsmancn&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://secure.skype.com/zh-Hans/skype-number/" target="_blank" rel="noopener"
+>Skype 号码&lt;/a>&lt;/td>
+&lt;td>Skype 号码是附加到你的 Skype 帐户的第二个电话号码，你可用它在 Skype 应用中随处应答来电。人们可通过其手机或座机给你打电话，然后你在 Skype 中接听。&lt;/td>
+&lt;td>Skype 号码可在 25 个国家/地区使用 更多国家/地区代码。如果在一个位置需要更多号码，您的帐户最多可容纳 10 个 Skype 号码。&lt;/td>
+&lt;td>付费使用，不同国家价格不同。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://richpva.com/" target="_blank" rel="noopener"
+>木瓜接码平台&lt;/a>&lt;/td>
+&lt;td>木瓜接码平台为用户提供安全、高效的在线短信验证码服务。&lt;/td>
+&lt;td>提供中国台湾、中国香港、中国澳门、中国大陆、马来西亚、新加坡、泰国、越南、印尼、印度、美国、加拿大、英国墨西哥等 170 多个地方的手机号码。&lt;/td>
+&lt;td>付费平台，需要注册使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.xgsend.com/home/login" target="_blank" rel="noopener"
+>信鸽短信接码平台&lt;/a>&lt;/td>
+&lt;td>信鸽短信接码平台是一个提供虚拟手机号码以接收短信验证码的服务平台，适用于需要临时注册账号或保护个人隐私的用户&lt;/td>
+&lt;td>信鸽短信接码平台支持多种主流应用和网站的短信验证码接收服务，包括但不限于：OpenAI、Google、YouTube Gmail、Instagram 等&lt;/td>
+&lt;td>&lt;strong>国内号码&lt;/strong>：通常每次接码费用在0.1元到1元之间。 &lt;strong>国外号码&lt;/strong>：费用可能稍高，具体视国家和应用而定。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>YM全球接码平台&lt;/td>
+&lt;td>国内收费接码平台，通过购买用于接收短信和激活任何网站或应用程序的号码来保护您的个人资料。&lt;/td>
+&lt;td>接码使用积分，1积分=1U，10U起充（只支持USDT-TRC20充值），有中国号码也有国外号码&lt;/td>
+&lt;td>telegram客服：&lt;a class="link" href="https://t.me/ymUSDT" target="_blank" rel="noopener"
+>t.me/ymUSDT&lt;/a> telegram群：&lt;a class="link" href="https://t.me/YM516688" target="_blank" rel="noopener"
+>t.me/YM516688&lt;/a> telegram频道：&lt;a class="link" href="https://t.me/YMma5188" target="_blank" rel="noopener"
+>t.me/YMma5188&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="http://h5.yezi66.net:81/invite/hejiwang#/login" target="_blank" rel="noopener"
+>椰子(原德芙)&lt;/a>&lt;/td>
+&lt;td>接码平台德芙（原椰子）是一个稳定且广受欢迎的接收验证码的平台，提供虚拟卡和实体卡两种选择&lt;/td>
+&lt;td>美国、英国、中国、德国等多个国家&lt;/td>
+&lt;td>土豆客服：yezi55 土豆群：&lt;a class="link" href="https://pzcp.org/yeziyun666" target="_blank" rel="noopener"
+>pzcp.org/yeziyun666&lt;/a> telegram群：&lt;a class="link" href="https://t.me/yeziyun22" target="_blank" rel="noopener"
+>t.me/yeziyun22&lt;/a> 客户端：&lt;a class="link" href="https://yezi55.lanzouw.com/s/yezi55" target="_blank" rel="noopener"
+>yezi55.lanzouw.com/s/yezi55&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://richpva.com/" target="_blank" rel="noopener"
+>木瓜语音接码平台(原蓝鲸)&lt;/a>&lt;/td>
+&lt;td>大型接码平台，优质足量实卡，价格低至1卢布起。 支持180多个国家，700多个项目。&lt;/td>
+&lt;td>美国、中国、英国、加拿大、澳大利亚、德国等多个国家&lt;/td>
+&lt;td>5元起充，支持支付宝、USDT-TRC20充值。可接语音验证码备用地址1：&lt;a class="link" href="http://huoxingyzm.com/index.html?yqm=hejiwang01" target="_blank" rel="noopener"
+>http://huoxingyzm.com/&lt;/a> 备用地址2：&lt;a class="link" href="http://154.92.19.233/index.html?yqm=hejiwang01" target="_blank" rel="noopener"
+>http://154.92.19.233/&lt;/a> 客服土豆：plus888 &lt;a class="link" href="https://ptcc.in/joinchat/mSs3KsiNeEmUeJxkjiCHig" target="_blank" rel="noopener"
+>土豆交流群&lt;/a>｜ &lt;a class="link" href="https://richpva.com/wx.html" target="_blank" rel="noopener"
+>取码教程&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;strong>国外平台&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>服务内容&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>支持国家&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>特点/注意事项&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://grizzlysms.com/cn" target="_blank" rel="noopener"
+>GrizzlySMS&lt;/a>&lt;/td>
+&lt;td>GrizzlySMS 是一个来自俄罗斯的临时手机号码接码服务平台，提供短期号码用于接收短信验证码。&lt;/td>
+&lt;td>190 多个国家/地区的手机号码，包含澳大利亚、中国台湾、中国大陆、中国香港、中国澳门、马来西亚、新加坡、日本、韩国、越南、泰国、印尼、印度、美国、加拿大、英国、墨西哥等地。&lt;/td>
+&lt;td>虚拟手机号适合注册几乎任何服务网站：PayPal，OpenAI、ChatGPT 等，付费使用。充值后，先选择需要注册的服务，然后选择国家，会出现对应的价格。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://receive-sms.com/" target="_blank" rel="noopener"
+>Receive SMS Online&lt;/a>&lt;/td>
+&lt;td>用户可以使用平台提供的电话号码在线接收短信，平台支持将接收到的短信转发到指定的电子邮件地址或 URL，方便用户进行进一步处理&lt;/td>
+&lt;td>中国、美国、英国、加拿大、德国、法国、印度、俄罗斯&lt;/td>
+&lt;td>具体的收费方式和价格信息通常会根据不同国家和号码类型有所不同。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.virtnumber.com/receivesmsonline.php" target="_blank" rel="noopener"
+>Virtnumber&lt;/a>&lt;/td>
+&lt;td>Virtnumber 平台提供可以接收短信的虚拟电话号码，使您能够区分个人和业务通信、管理多个帐户并保护您的个人号码的私密性。&lt;/td>
+&lt;td>提供澳大利亚，中国大陆，中国香港，美国，印度，墨西哥，巴西，英国，以及其他 26 个地区的&lt;a class="link" href="https://topstip.com/nice-patchwork-platform/#" target="_blank" rel="noopener"
+> 手机&lt;/a>号码。&lt;/td>
+&lt;td>付费使用，例如澳大利亚号码需要付费29.00 欧元，中国香港号码需要付费 49.00 欧元。 提供语音及短信服务。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://sms-activation-service.pro/en" target="_blank" rel="noopener"
+>SMS SERVICE&lt;/a>&lt;/td>
+&lt;td>SMS SERVICE 提供超过 180 个国家的号码，接收短信激活。&lt;/td>
+&lt;td>你可以用来接收在线注册短信到俄罗斯、美国、哈萨克斯坦、德国、中国、乌克兰和其他国家的号码。&lt;/td>
+&lt;td>付费使用，详细价格可查看官网。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://promo.hushed.com/lp/lifetime-3" target="_blank" rel="noopener"
+>Hushed&lt;/a>&lt;/td>
+&lt;td>Hushed 是用于拨打电话和发短信的第二电话号码的领先应用程序，其无与伦比的一次性费用、全面的功能和强大的隐私保护使其成为任何需要可靠且安全的第二个电话号码的人的终极选择。目前提供 iOS 、安卓的下载方式。&lt;/td>
+&lt;td>轻松获得美国、加拿大、英国等国家的电话号码&lt;/td>
+&lt;td>1. 可以长期使用，发送和接收与你的真实电话号码完全分开的私人短信。 2. 每个 Hushed 虚拟号码都包含高级电话功能，例如免费语音邮件、免费呼叫转移、免费呼叫路由和免费自动回复短信。 3. 你的 Hushed 电话号码安全地存储在应用程序中，因此你无需更换 SIM 卡或更换新 SIM 卡。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a class="link" href="https://www.sms-999.com/login" target="_blank" rel="noopener"
+>999SMS&lt;/a>&lt;/td>
+&lt;td>999SMS 是一家提供短信发送以及 APP 接码服务的平台。该平台的国际短信覆盖全球 200 多个国家，在线接码可以接收全球主流 APP 的短信验证码&lt;/td>
+&lt;td>支持全球 200 多个国家的短信发送服务。&lt;/td>
+&lt;td>&lt;strong>1-999 条短信&lt;/strong>：每条短信 $0.17 美元。 &lt;strong>1000-4999 条短信&lt;/strong>：每条短&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>测试接口</title><link>https://xiaoxiano.github.io/p/test/</link><pubDate>Thu, 04 Aug 2022 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/test/</guid><description>&lt;p>&lt;a class="link" href="https://postman.xiniushu.com/" target="_blank" rel="noopener"
 >postman中文文档&lt;/a>&lt;/p>
 &lt;h1 id="api">API&lt;/h1>
 &lt;p>API的英文即 &lt;code>A&lt;/code>pplication &lt;code>P&lt;/code>rogramming &lt;code>I&lt;/code>nterface 首字母的缩写，直译过来的意思就是：程序之间的接口。我更倾向于把API理解为，程序之间的合约。有关 API 是什么及它的意义这里就不展开讲了。&lt;/p>
@@ -5068,19 +5544,41 @@ data-flex-basis="236px"
 &lt;/details>
 &lt;h2 id="基础知识参考">基础知识参考&lt;/h2>
 &lt;ol>
-&lt;li>卷（volumes）：卷是由 Docker 管理的持久化数据（独立于容器的数据）。存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。&lt;/li>
+&lt;li>概念&lt;/li>
 &lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 将当前目录的相对路径挂载到/app目录中
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ./:/app
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;ul>
 &lt;li>
 &lt;p>镜像 (Image) ：一个只读的模板（静态模板），包含了运行应用程序所需的所有代码、库、环境变量和配置文件。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>容器 (Container)：镜像的运行实例（运行环境）。基于镜像，在顶部增加了一个读写层。&lt;/p>
 &lt;/li>
+&lt;li>
+&lt;p>卷（volumes）：卷是由 Docker 管理的持久化数据（独立于容器的数据）。存储在由 Docker管理的主机文件系统（在 Linux 上的/var/lib/docker/volumes/ ）。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 将当前目录的相对路径挂载到/app目录中
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> volumes:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - ./:/app
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>速率限制（非生产可忽略）
+&lt;code>docker pull&lt;/code>拉取&lt;a class="link" href="https://docs.docker.com/docker-hub/usage/pulls/" target="_blank" rel="noopener"
+>速率限制&lt;/a>按 6 小时计算。查看速率限制命令如下&lt;/li>
 &lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 匿名获取令牌
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">TOKEN=$(curl &amp;#34;https://auth.docker.io/token?service=registry.docker.io&lt;span class="err">&amp;amp;&lt;/span>scope=repository:ratelimitpreview/test:pull&amp;#34; | jq -r .token)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 获取限制信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl --head -H &amp;#34;Authorization: Bearer $TOKEN&amp;#34; https://registry-1.docker.io/v2/ratelimitpreview/test/manifests/latest
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>提高速率的方法&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>身份验证
+&lt;code>docker login&lt;/code>命令对镜像仓库进行身份验证，Docker 会在登录后将凭据存储在 &lt;code>~/.docker/config.json&lt;/code> 中 。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用镜像仓库&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h1 id="docker-compose">docker compose&lt;/h1>
 &lt;p>&lt;a class="link" href="https://docs.docker.com/compose/install/compose-plugin/#install-the-plugin-manually" target="_blank" rel="noopener"
 >安装docker compose&lt;/a>：&lt;/p>
@@ -5262,13 +5760,8 @@ data-flex-basis="236px"
 &lt;p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。&lt;/p>
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
-&lt;p>注意：文档中示例写法过时，会&lt;a class="link" href="https://github.com/docker/compose-cli/issues/1856" target="_blank" rel="noopener"
->报错&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">networks:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>应写为:&lt;/p>
+&lt;p>注意：如果文档中示例写法过时导致&lt;a class="link" href="https://github.com/docker/compose-cli/issues/1856" target="_blank" rel="noopener"
+>报错&lt;/a>，正确写法为:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">networks:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
@@ -5276,14 +5769,13 @@ data-flex-basis="236px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">镜像：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker run [参数] imagename # 新建并启动容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　--name = &amp;#34;name&amp;#34; 容器取名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-it 交互模式进入容器
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-d 后台启动容器 注意：一般后台启动要有前台的应用，否则很可能被守护程序杀掉
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-p ip:主机端口:容器端口 #指定端口映射
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">　　-v或--volume /卷名称的路径:/容器中的挂载路径
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">镜像：
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker search [image] # 搜索dockerhub的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">docker images -a/-q # 列出本地主机的镜像
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> -a 显示所有信息
@@ -6334,36 +6826,56 @@ sed
 &lt;p>&lt;strong>架构&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>
-&lt;p>windows-386 ：这些是针对 32 位 Windows 系统编译的&lt;/p>
+&lt;p>windows-386 ：32 位 Windows 系统&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;strong>windows-amd64&lt;/strong> ：这些是针对具有 AMD 或 Intel x86-64 架构的 64 位 Windows 系统编译的&lt;/p>
+&lt;p>&lt;strong>windows-amd64&lt;/strong> ：64 位 Windows 系统 - AMD 或 Intel x86-64 架构&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>windows-arm64 ：这些是针对具有 ARM 架构的 64 位 Windows 系统编译的&lt;/p>
+&lt;p>windows-arm64 ：64 位 Windows 系统 - ARM 架构&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="win10-config">win10 config&lt;/h2>
 &lt;ul>
-&lt;li>git&lt;/li>
+&lt;li>git 代理&lt;/li>
 &lt;/ul>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global http.proxy http://127.0.0.1:[port.http]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global https.proxy https://127.0.0.1:[port.http]
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>文件路径：&lt;code>C:\Users\[Username]\.gitconfig&lt;/code>&lt;/p>
 &lt;ul>
-&lt;li>Terminal（临时使用）&lt;/li>
+&lt;li>CMD 代理&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set http_proxy=http://127.0.0.1:[port.http] #临时命令行代理
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:[port.http] #临时命令行代理
+&lt;ol>
+&lt;li>新建&lt;code>cmdrc.cmd&lt;/code>粘贴以下配置，复制路径&lt;code>C:\Users\&amp;lt;UserName&amp;gt;\cmdrc.cmd&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">set http_proxy=http://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">set https_proxy=http://127.0.0.1:10808
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>按下 &lt;code>Win + R&lt;/code>，输入 &lt;strong>&lt;code>regedit&lt;/code>&lt;/strong> 打开注册表，在&lt;code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\&lt;/code>下新建名为&lt;code>AutoRun&lt;/code>的字符串值, 数值数据粘贴cmdrc.cmd的路径。此脚本会在每次打开cmd时被预加载。&lt;/li>
+&lt;/ol>
+&lt;p>验证：&lt;code>curl -vv http://google.com&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>powershell 代理&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>powershell运行以下命令创建并打开profile文件&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">notepad $PROFILE
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
+&lt;li>在文件&lt;code>C:\Users\{USER_NAME}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1&lt;/code>中粘贴以下配置&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">$Env:http_proxy=&amp;#34;http://127.0.0.1:10808&amp;#34;;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$Env:https_proxy=&amp;#34;http://127.0.0.1:10808&amp;#34;;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
 &lt;ul>
 &lt;li>代理&lt;/li>
 &lt;/ul>
 &lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在各协议http、https、Socks里粘贴查到的ip地址&lt;/p>
 &lt;ul>
-&lt;li>git config
-默认保存在用户的主目录下的 .gitconfig 文件内&lt;/li>
+&lt;li>git config&lt;/li>
 &lt;/ul>
+&lt;p>默认保存在用户的主目录下的 .gitconfig 文件内&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -6408,14 +6920,14 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>shell脚本（后续动态ip改变）
-Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu的proxy.sh里粘贴查到的ip地址，并&lt;code>sh proxy.sh&lt;/code>运行脚本&lt;/li>
+&lt;li>shell脚本&lt;/li>
 &lt;/ul>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu创建proxy.sh粘贴以下代码和查到的ip地址，并&lt;code>sh proxy.sh&lt;/code>运行脚本&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置你的代理信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;127.0.0.1&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=7890
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;ip&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=10808
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1. 将模式设置为手动 (manual)
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy mode &amp;#39;manual&amp;#39;
