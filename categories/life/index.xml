@@ -166,8 +166,7 @@ data-flex-basis="360px"
 &lt;li>刹车
 &lt;ul>
 &lt;li>首选油压碟刹&lt;/li>
-&lt;li>次选机械碟刹&lt;/li>
-&lt;li>不选V刹&lt;/li>
+&lt;li>次选机械碟刹，不选V刹&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>前叉避震
