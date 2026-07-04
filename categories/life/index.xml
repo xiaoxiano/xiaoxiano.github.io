@@ -926,12 +926,11 @@ data-flex-basis="355px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h1 id="激活">激活&lt;/h1>
-&lt;p>下载Oculus App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
+&lt;p>下载 Meta Horizon App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
 &lt;h1 id="安装第三方应用">安装第三方应用&lt;/h1>
 &lt;h2 id="便携方式">便携方式&lt;/h2>
 &lt;p>87vr助手安装热门游戏和应用，安卓apk可以通过QQ发送直接安装。
-更多破解应用可以看看&lt;a class="link" href="https://gizvr.cn/" target="_blank" rel="noopener"
->极客VR&lt;/a>（1元注册）、&lt;a class="link" href="https://www.vrmoo.cn/" target="_blank" rel="noopener"
+更多破解应用可以看看&lt;a class="link" href="https://www.vrmoo.cn/" target="_blank" rel="noopener"
 >VR魔趣网&lt;/a>。&lt;/p>
 &lt;h2 id="常规方式">常规方式&lt;/h2>
 &lt;ol>
@@ -1077,7 +1076,7 @@ data-flex-basis="855px"
 &lt;li>共享存放影片的文件夹&lt;/li>
 &lt;/ol>
 &lt;p>右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 选择用户或新建用户&lt;code>everyone&lt;/code>&lt;/p>
-&lt;p>删除共享：右键文件夹 -&amp;gt; 授予访问权限 -&amp;gt; 删除访问&lt;/p>
+&lt;p>删除共享：右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 高级共享 -&amp;gt; 共享此文件夹（取消勾选）&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>

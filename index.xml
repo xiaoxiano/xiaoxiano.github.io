@@ -7665,12 +7665,11 @@ data-flex-basis="355px"
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;h1 id="激活">激活&lt;/h1>
-&lt;p>下载Oculus App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
+&lt;p>下载 Meta Horizon App，quest2联网后配对，配对成功就说明Quest2激活成功了。&lt;/p>
 &lt;h1 id="安装第三方应用">安装第三方应用&lt;/h1>
 &lt;h2 id="便携方式">便携方式&lt;/h2>
 &lt;p>87vr助手安装热门游戏和应用，安卓apk可以通过QQ发送直接安装。
-更多破解应用可以看看&lt;a class="link" href="https://gizvr.cn/" target="_blank" rel="noopener"
->极客VR&lt;/a>（1元注册）、&lt;a class="link" href="https://www.vrmoo.cn/" target="_blank" rel="noopener"
+更多破解应用可以看看&lt;a class="link" href="https://www.vrmoo.cn/" target="_blank" rel="noopener"
 >VR魔趣网&lt;/a>。&lt;/p>
 &lt;h2 id="常规方式">常规方式&lt;/h2>
 &lt;ol>
@@ -7816,7 +7815,7 @@ data-flex-basis="855px"
 &lt;li>共享存放影片的文件夹&lt;/li>
 &lt;/ol>
 &lt;p>右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 选择用户或新建用户&lt;code>everyone&lt;/code>&lt;/p>
-&lt;p>删除共享：右键文件夹 -&amp;gt; 授予访问权限 -&amp;gt; 删除访问&lt;/p>
+&lt;p>删除共享：右键文件夹 -&amp;gt; 属性 -&amp;gt; 共享 -&amp;gt; 高级共享 -&amp;gt; 共享此文件夹（取消勾选）&lt;/p>
 &lt;ol start="3">
 &lt;li>去quest2 SKYBOX 本地网络查看。&lt;/li>
 &lt;/ol>
@@ -13819,6 +13818,152 @@ data-flex-basis="205px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
 &lt;h1 id="win11-系统问题">win11 系统问题&lt;/h1>
+&lt;h2 id="制作pe">制作PE&lt;/h2>
+&lt;ol>
+&lt;li>搜索&lt;code>微PE工具箱&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-32-51.png"
+width="2440"
+height="1122"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-32-51_hu70c17e1f4ff6cbea3918718c3119699f_347315_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-32-51_hu70c17e1f4ff6cbea3918718c3119699f_347315_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-32-51"
+class="gallery-image"
+data-flex-grow="217"
+data-flex-basis="521px"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-22.png"
+width="1270"
+height="1045"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-22_huae6f25c76f87d6f88a49112d878b45ab_351533_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-22_huae6f25c76f87d6f88a49112d878b45ab_351533_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-33-22"
+class="gallery-image"
+data-flex-grow="121"
+data-flex-basis="291px"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-50.png"
+width="2408"
+height="1152"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-50_hub2ddbb95fe70eef69b155caf30717e71_448359_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-33-50_hub2ddbb95fe70eef69b155caf30717e71_448359_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-33-50"
+class="gallery-image"
+data-flex-grow="209"
+data-flex-basis="501px"
+>&lt;/p>
+&lt;ol start="2">
+&lt;li>安装到U盘&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-40-45.png"
+width="1148"
+height="728"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-40-45_hu2872517cd1846d17686febc496464876_58968_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-40-45_hu2872517cd1846d17686febc496464876_58968_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-40-45"
+class="gallery-image"
+data-flex-grow="157"
+data-flex-basis="378px"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-42-58.png"
+width="1148"
+height="728"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-42-58_huca01c3239efdad70b542bcea2ecf0932_69589_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-42-58_huca01c3239efdad70b542bcea2ecf0932_69589_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-42-58"
+class="gallery-image"
+data-flex-grow="157"
+data-flex-basis="378px"
+>&lt;/p>
+&lt;ol start="3">
+&lt;li>下载Windows系统&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-46-59.png"
+width="2402"
+height="1709"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-46-59_hu776b6526aa1bbe4e614053e09a098766_373489_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-46-59_hu776b6526aa1bbe4e614053e09a098766_373489_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-46-59"
+class="gallery-image"
+data-flex-grow="140"
+data-flex-basis="337px"
+>&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-49-10.png"
+width="1304"
+height="1144"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-49-10_hu366c47321dd0e11c9573f572ad4ea80d_114008_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_22-49-10_hu366c47321dd0e11c9573f572ad4ea80d_114008_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-49-10"
+class="gallery-image"
+data-flex-grow="113"
+data-flex-basis="273px"
+>&lt;/p>
+&lt;ol start="4">
+&lt;li>进入pe系统&lt;/li>
+&lt;/ol>
+&lt;p>插入U盘，开机按键盘（华硕F8、技嘉F12、微星F11）进入pe&lt;/p>
+&lt;ol start="5">
+&lt;li>分区&lt;/li>
+&lt;/ol>
+&lt;p>打开DiskGenius&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2026-07-04_19-21-14.png"
+width="2121"
+height="1298"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2026-07-04_19-21-14_hua7ae725d0464d02d15d8f0b52ccbac2a_381044_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2026-07-04_19-21-14_hua7ae725d0464d02d15d8f0b52ccbac2a_381044_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_22-59-22"
+class="gallery-image"
+data-flex-grow="163"
+data-flex-basis="392px"
+>&lt;/p>
+&lt;p>​ 分区后格式化C盘&lt;/p>
+&lt;ol start="6">
+&lt;li>恢复/安装系统&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>恢复Windows&lt;/p>
+&lt;p>打开傲梅分区助手（无损），恢复备份到c盘&lt;/p>
+&lt;p>修复引导&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/1085769-20230805135151774-1855377916.jpg"
+width="431"
+height="550"
+srcset="https://xiaoxiano.github.io/p/config/1085769-20230805135151774-1855377916_hud16b72c7a38be7b46b8e844846dc408e_25616_480x0_resize_q75_box.jpg 480w, https://xiaoxiano.github.io/p/config/1085769-20230805135151774-1855377916_hud16b72c7a38be7b46b8e844846dc408e_25616_1024x0_resize_q75_box.jpg 1024w"
+loading="lazy"
+alt="1085769-20230805135151774-1855377916"
+class="gallery-image"
+data-flex-grow="78"
+data-flex-basis="188px"
+>&lt;/p>
+&lt;p>挂载到ESP分区&lt;/p>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-17-53.png"
+width="1415"
+height="812"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-17-53_hucf5e7a37a45e0d44e95f0c0a2dc36479_1185253_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-17-53_hucf5e7a37a45e0d44e95f0c0a2dc36479_1185253_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_23-17-53"
+class="gallery-image"
+data-flex-grow="174"
+data-flex-basis="418px"
+>&lt;/p>
+&lt;p>开机后可能遇到“恢复-你的电脑/设备需要修复”&lt;/p>
+&lt;p>&lt;a class="link" href="https://learn.microsoft.com/zh-cn/answers/questions/3833889/win-10" target="_blank" rel="noopener"
+>官方解答&lt;/a>：按着电源按钮（约 5 秒），电脑会自动关闭。（重复动作多过 2 次，直到您看到 “Preparing Automatic Repair” 字目）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>安装新Windows&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-03-47.png"
+width="2320"
+height="1438"
+srcset="https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-03-47_hucfc9cc4786b9043911cff1b360cc9ed0_2329029_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/PixPin_2025-09-05_23-03-47_hucfc9cc4786b9043911cff1b360cc9ed0_2329029_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+alt="PixPin_2025-09-05_23-03-47"
+class="gallery-image"
+data-flex-grow="161"
+data-flex-basis="387px"
+>&lt;/p>
 &lt;h2 id="睡眠唤醒">睡眠唤醒&lt;/h2>
 &lt;p>目标：电脑睡眠后按键盘唤醒，并避免触碰鼠标时误唤醒&lt;/p>
 &lt;ol>
