@@ -50,7 +50,7 @@
 &lt;h1 id="bitcoin">Bitcoin&lt;/h1>
 &lt;h2 id="原理">原理&lt;/h2>
 &lt;ul>
-&lt;li>B-money 的问题&lt;/li>
+&lt;li>B-money 存在的问题&lt;/li>
 &lt;/ul>
 &lt;ol>
 &lt;li>
@@ -402,8 +402,82 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;td>-&lt;/td>
 &lt;td>-&lt;/td>
 &lt;/tr>
+&lt;tr>
+&lt;td>总结&lt;/td>
+&lt;td>实际体验中，Ethereum的生态、速度、 费用综合最优， Solana有强劲趋势，但其经济模型入不敷出，可持续性存疑&lt;/td>
+&lt;td>-&lt;/td>
+&lt;td>-&lt;/td>
+&lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>传输协议</title><link>https://xiaoxiano.github.io/p/protocol/</link><pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/protocol/</guid><description>&lt;h1 id="应用层">应用层&lt;/h1>
+&lt;/table>
+&lt;h1 id="入门使用">入门使用&lt;/h1>
+&lt;h2 id="功能欧易">功能（欧易）&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>账户类型&lt;/th>
+&lt;th>功能&lt;/th>
+&lt;th>交易费&lt;/th>
+&lt;th>控制&lt;/th>
+&lt;th>隐私&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Web3 钱包 (去中心化钱包)&lt;/td>
+&lt;td>链上资产存储、发送和接收、兑换、跨链桥&lt;/td>
+&lt;td>每笔交易都记录在链上，需要支付Gas费&lt;/td>
+&lt;td>用户完全掌控 (掌握私钥/助记词)&lt;/td>
+&lt;td>无需实名认证（KYC）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>资金账户（交易所）&lt;/td>
+&lt;td>C2C交易、充币/提币&lt;/td>
+&lt;td>站内划转免费，提现需支付Gas费&lt;/td>
+&lt;td>交易所控制 (用户拥有债权)&lt;/td>
+&lt;td>需要实名认证（KYC）以符合反洗钱法规&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>交易账户（交易所）&lt;/td>
+&lt;td>现货交易、杠杆交易、合约&lt;/td>
+&lt;td>交易所手续费/资金费率&lt;/td>
+&lt;td>交易所控制 (用户拥有债权)&lt;/td>
+&lt;td>需要实名认证（KYC）以符合反洗钱法规&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;ul>
+&lt;li>
+&lt;p>Web3 钱包&lt;/p>
+&lt;ul>
+&lt;li>链上资产存储：提币时先在交易所闪兑，并注意选择网络，否则链上兑换有Gas费&lt;/li>
+&lt;li>发送和接收：匿名C2C发送和接收加密货币，需同时存有目标币和当前网络币&lt;/li>
+&lt;li>兑换（币币交易-同链）：需要支付当前链Gas费&lt;/li>
+&lt;li>跨链桥（币币交易-跨链）：需要支付当前链Gas费和目标链Gas费&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>资金账户&lt;/p>
+&lt;ul>
+&lt;li>C2C交易（法币出入金）：点击C2C 买币 -&amp;gt; 选择币种/金额/支付方式-&amp;gt; 选择商家 -&amp;gt; 下单 -&amp;gt; 核对账号和金额后付款 -&amp;gt;付款后点击我已支付 -&amp;gt; 上传付款凭证&lt;/li>
+&lt;li>充币/提币：充币/提币到Web3 钱包&lt;/li>
+&lt;li>划转：资金账户和交易账户转币&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>交易账户&lt;/p>
+&lt;ul>
+&lt;li>闪兑：采用实时报价，无交易手续费&lt;/li>
+&lt;li>现货交易（币币交易）&lt;/li>
+&lt;li>杠杆交易&lt;/li>
+&lt;li>合约&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>传输协议</title><link>https://xiaoxiano.github.io/p/protocol/</link><pubDate>Sat, 20 Jun 2026 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/protocol/</guid><description>&lt;h1 id="应用层">应用层&lt;/h1>
 &lt;p>&lt;a class="link" href="https://javaguide.cn/cs-basics/network/application-layer-protocol.html" target="_blank" rel="noopener"
 >参考&lt;/a>&lt;/p>
 &lt;p>应用层（Application Layer）提供客户端功能，通信时，应用层再把数据传给传输层。&lt;/p>
@@ -1827,6 +1901,11 @@ data-flex-basis="140px"
 &lt;td>CDN在用户第一次请求后，会在接近用户的区域缓存源服务器的静态资源（没人请求不缓存，不主动和服务器保持同步），后续访问就更加快速，并降低服务器压力，可以使用cloudfront免费套餐&lt;/td>
 &lt;/tr>
 &lt;tr>
+&lt;td>阿里云&lt;/td>
+&lt;td>云服务器（ ECS）&lt;/td>
+&lt;td>生态更强（域名），腾讯云、京东云等可能价格更低&lt;/td>
+&lt;/tr>
+&lt;tr>
 &lt;td>Backblaze&lt;/td>
 &lt;td>云存储（B2）&lt;/td>
 &lt;td>Backblaze B2（兼容S3 API），价格仅为 Amazon S3、Microsoft Azure 和 Google Cloud 的1/4&lt;/td>
@@ -2029,6 +2108,148 @@ class="gallery-image"
 data-flex-grow="393"
 data-flex-basis="944px"
 >&lt;/p>
+&lt;h1 id="阿里云">阿里云&lt;/h1>
+&lt;h2 id="云服务器-ecs">云服务器（ ECS）&lt;/h2>
+&lt;h3 id="规格分类">规格分类&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>&lt;a class="link" href="https://help.aliyun.com/zh/ecs/user-guide/instance-specification-naming-and-classification" target="_blank" rel="noopener"
+>规格族群&lt;/a>&lt;/th>
+&lt;th>规格&lt;/th>
+&lt;th>处理器/内存&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>计算型服务器&lt;/td>
+&lt;td>计算型（c）&lt;/td>
+&lt;td>1:2&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>通用型（g）&lt;/td>
+&lt;td>1:4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>通用算力型（u）&lt;/td>
+&lt;td>1:1-1:8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>内存型（r）&lt;/td>
+&lt;td>1:8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>内存增强型（re)&lt;/td>
+&lt;td>＞1:8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>高主频型（hf）&lt;/td>
+&lt;td>1:1-1:8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>本地SSD型（i）&lt;/td>
+&lt;td>1:4、1:8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>大数据型（d）&lt;/td>
+&lt;td>1:4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>共享型（s）&lt;/td>
+&lt;td>&lt;a class="link" href="https://help.aliyun.com/zh/ecs/user-guide/burst-performance-instance-overview" target="_blank" rel="noopener"
+>突发型（t）&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>经济型（e）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>弹性裸金属服务器&lt;/td>
+&lt;td>弹性裸金属服务器（ebm）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>高性能计算服务器&lt;/td>
+&lt;td>高性能计算型实例（hpc）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>超级计算集群服务器&lt;/td>
+&lt;td>超级计算集群（scc）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>异构计算型服务器（GPU、视频、视觉）&lt;/td>
+&lt;td>NVIDIA GPU计算型实例（gn）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>NVIDIA GRID vGPU加速的独享型实例（vgn）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>NVIDIA GRID vGPU加速的共享型实例（sgn）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>Intel GPU计算型实例（gi）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>FPGA计算型实例（f）&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="选型指导">选型指导&lt;/h3>
+&lt;p>&lt;a class="link" href="https://help.aliyun.com/zh/ecs/user-guide/best-practices-for-instance-type-selection" target="_blank" rel="noopener"
+>查看选型指导&lt;/a>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>分类&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>型号&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>入门级实例&lt;/td>
+&lt;td>资源性能共享，无法保证稳定，但是成本更低&lt;/td>
+&lt;td>e、t6、t5、s6、n4、mn4、xn4、e4&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>企业级实例&lt;/td>
+&lt;td>高性能、独享且稳定&lt;/td>
+&lt;td>其它都属于企业级实例&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;img src="https://xiaoxiano.github.io/p/cloud-service/C_20230830144006.372.svg"
+loading="lazy"
+>&lt;/p>
+&lt;h3 id="更多详情">更多详情&lt;/h3>
+&lt;p>&lt;a class="link" href="https://ecs-buy.aliyun.com/instanceTypes/?spm=a2c4g.11186623.0.0.102f46dcRYPZH1#/instanceTypeByRegion" target="_blank" rel="noopener"
+>可购买地域&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://help.aliyun.com/zh/ecs/user-guide/overview-of-instance-families#concept-sx4-lxv-tdb" target="_blank" rel="noopener"
+>在售实例&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.aliyun.com/price/product?spm=a2c4g.11186623.0.0.102f46dcRYPZH1#/commodity/vm" target="_blank" rel="noopener"
+>ECS价格计算器&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://help.aliyun.com/zh/govcloud/getting-started/select-storage-services" target="_blank" rel="noopener"
+>如何选购存储&lt;/a>&lt;/p>
 &lt;h1 id="短信接码平台">短信接码平台&lt;/h1>
 &lt;p>&lt;a class="link" href="topstip.com/nice-patchwork-platform/" >参考&lt;/a>&lt;/p>
 &lt;h2 id="免费">免费&lt;/h2>
@@ -7464,12 +7685,25 @@ data-flex-basis="236px"
 &lt;p>Compose默认为您的应用程序设置单个网络。服务中的每个容器都加入默认网络。例如，假设您的应用程序是在一个名为myapp的目录，运行docker-compose up时会创建一个名为myapp_default的网络，服务中使用web和db的配置创建的容器会以web和db的名字加入myapp_default。&lt;/p>
 &lt;p>但是，当你使用&lt;a class="link" href="https://docs.docker.com/compose/compose-file/compose-file-v3/#external-1" target="_blank" rel="noopener"
 >external&lt;/a>（外部网络，例如你有2个或多个docker-compose.yml）时，Compose不会创建默认网络，你必须使用&lt;code>docker network create Your_Nerwork&lt;/code>预先创建网络。&lt;/p>
-&lt;p>注意：如果文档中示例写法过时导致&lt;a class="link" href="https://github.com/docker/compose-cli/issues/1856" target="_blank" rel="noopener"
->报错&lt;/a>，正确写法为:&lt;/p>
+&lt;p>文档中示例&lt;a class="link" href="https://github.com/docker/compose-cli/issues/1856" target="_blank" rel="noopener"
+>过时&lt;/a>，正确写法为:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">networks:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> proxy:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> name: nginx-proxy
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> external: true
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>设置容器的网络代理：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># YAML environment锚点
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">x-proxy-env: &lt;span class="err">&amp;amp;&lt;/span>proxy-env
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HTTP_PROXY: http://[ip]:[port]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> HTTPS_PROXY: http://[ip]:[port]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> http_proxy: http://[ip]:[port]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> https_proxy: http://[ip]:[port]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> NO_PROXY: localhost,127.0.0.1,db,redis
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> no_proxy: localhost,127.0.0.1,db,redis
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> # 在需要的服务下添加环境变量，例如migrations、backend、celery_worker、celery_beat
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> environment:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">:&lt;/span> &lt;span class="err">*&lt;/span>&lt;span class="na">proxy-env&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="常用命令">常用命令&lt;/h1>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Docker命令
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
@@ -8535,7 +8769,7 @@ sed
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">19. 提取网页颜色代码:^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">20. 文件扩展名效验:^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?”&lt;span class="err">&amp;lt;&lt;/span>&amp;gt;|]+\\.txt(l)?$
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">21. 判断IE版本：^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>环境配置和软件</title><link>https://xiaoxiano.github.io/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/config/</guid><description>&lt;h1 id="部分电脑配置记录">部分电脑配置记录&lt;/h1>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>环境配置和软件</title><link>https://xiaoxiano.github.io/p/config/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://xiaoxiano.github.io/p/config/</guid><description>&lt;h1 id="win11">Win11&lt;/h1>
 &lt;p>&lt;strong>架构&lt;/strong>&lt;/p>
 &lt;ul>
 &lt;li>
@@ -8566,7 +8800,7 @@ sed
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>按下 &lt;code>Win + R&lt;/code>，输入 &lt;strong>&lt;code>regedit&lt;/code>&lt;/strong> 打开注册表，在&lt;code>HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\&lt;/code>下新建名为&lt;code>AutoRun&lt;/code>的字符串值, 数值数据粘贴cmdrc.cmd的路径。此脚本会在每次打开cmd时被预加载。&lt;/li>
 &lt;/ol>
-&lt;p>验证：&lt;code>curl -vv http://google.com&lt;/code>&lt;/p>
+&lt;p>验证：&lt;code>curl -vv http://google.com&lt;/code> 含有 HTTP/1.1 301&lt;/p>
 &lt;ul>
 &lt;li>powershell 代理&lt;/li>
 &lt;/ul>
@@ -8580,216 +8814,7 @@ sed
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">$Env:http_proxy=&amp;#34;http://127.0.0.1:10808&amp;#34;;
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">$Env:https_proxy=&amp;#34;http://127.0.0.1:10808&amp;#34;;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
-&lt;ul>
-&lt;li>代理&lt;/li>
-&lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在各协议http、https、Socks里粘贴查到的ip地址&lt;/p>
-&lt;ul>
-&lt;li>git config&lt;/li>
-&lt;/ul>
-&lt;p>默认保存在用户的主目录下的 .gitconfig 文件内&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>git ssh 代理&lt;/li>
-&lt;/ul>
-&lt;p>创建~/.ssh/config 文件：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x [ip]:[port.socks] %h %p #写自己ip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>docker代理&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建代理配置目录
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/systemd/system/docker.service.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 创建代理配置文件
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch /etc/systemd/system/docker.service.d/http-proxy.conf
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 修改代理配置，改为自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># NO_PROXY：指定不需要通过代理的地址列表，包括本地主机 localhost、127.0.0.0/8 和 IPv6 本地地址 ::1
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/systemd/system/docker.service.d/http-proxy.conf &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span> &lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://[ip]:[port]/&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>终端代理（临时使用）&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>方法一：直接在命令前加proxychains&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>方法二：在.bashrc最后加入：&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://[ip]:[port.http]&amp;#34; #写自己ip
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source ~/.bashrc #使配置生效
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>shell脚本&lt;/li>
-&lt;/ul>
-&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu创建proxy.sh粘贴以下代码和查到的ip地址，并&lt;code>sh proxy.sh&lt;/code>运行脚本&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置你的代理信息
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;ip&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=10808
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1. 将模式设置为手动 (manual)
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy mode &amp;#39;manual&amp;#39;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2. 设置各个协议的主机和端口
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http host &amp;#34;$PROXY_HOST&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http port $PROXY_PORT
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https host &amp;#34;$PROXY_HOST&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https port $PROXY_PORT
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks host &amp;#34;$PROXY_HOST&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks port $PROXY_PORT
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 3. 设置git ssh代理
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /home/[user]/.ssh/config &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Host&lt;/span> &lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">User&lt;/span> &lt;span class="na">git&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ProxyCommand&lt;/span> &lt;span class="na">nc&lt;/span> &lt;span class="na">-v&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">h&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">p&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="na">4&lt;/span>&lt;span class="err">.&lt;/span> &lt;span class="err">设置&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">代理&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">tee&lt;/span> &lt;span class="err">/&lt;/span>&lt;span class="na">etc&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">systemd&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">system&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">service&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">d&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">http-proxy&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">conf&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="na">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">[&lt;/span>&lt;span class="na">Service&lt;/span>&lt;span class="err">]&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTP_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;HTTPS_PROXY=http://$PROXY_HOST:$PROXY_PORT/&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Environment&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;NO_PROXY=localhost,127.0.0.0/8,::1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu升级">VM Ubuntu升级&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt upgrade
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo reboot
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 启动 GUI 更新向导
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo update-manager -c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>update错误 N: 无法安全地用该源进行更新，所以默认禁用该源&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cd /etc/apt/sources.list.d
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm -f * # 删除全部软件源
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>W: Failed to fetch &lt;a class="link" href="http://archive.ubuntu.com/" target="_blank" rel="noopener"
->http://archive.ubuntu.com/&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;ol>
-&lt;li>
-&lt;p>备份您的来源列表 &lt;code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup&lt;/code>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>修改apt源：打开&lt;code>/etc/apt/sources.list&lt;/code>粘贴&lt;a class="link" href="https://launchpad.net/ubuntu/&amp;#43;archivemirrors" target="_blank" rel="noopener"
->这里&lt;/a>对应地区和版本的sources.list条目，例如
-&lt;img src="https://xiaoxiano.github.io/p/config/2.png"
-width="1314"
-height="272"
-srcset="https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="483"
-data-flex-basis="1159px"
->&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># DNS 设置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo vim /etc/resolv.conf
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使用Google DNS作为首选 DNS 服务器
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.8.8
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.4.4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu共享文件夹">VM Ubuntu共享文件夹&lt;/h2>
-&lt;ol>
-&lt;li>
-&lt;p>设置
-&lt;img src="https://xiaoxiano.github.io/p/config/3.png"
-width="859"
-height="1002"
-srcset="https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_1024x0_resize_box_3.png 1024w"
-loading="lazy"
-class="gallery-image"
-data-flex-grow="85"
-data-flex-basis="205px"
->&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>每次启动自动挂载，在/etc/fstab文件添加&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>已挂在到/mnt/hgfs目录&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ls -l /mnt/hgfs
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu克隆">VM Ubuntu克隆&lt;/h2>
-&lt;p>&lt;strong>1. 概念&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>虚拟机克隆
-&lt;ul>
-&lt;li>完整克隆
-是和原始虚拟机完全独立的一个备份，可以脱离原始虚拟机独立使用&lt;/li>
-&lt;li>链接克隆
-需要和原始虚拟机共享同一虚拟磁盘文件，不能脱离原始虚拟机独立运行&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>虚拟机模板克隆
-克隆虚拟机固然是快速部署虚拟机的利器，但是所有的虚拟机都可以克隆，被克隆的虚拟机也可以再次被克隆，长此以往系统就会崩毁，从而给管理员带来诸多的麻烦。模板就是解决此问题的最好的方法，即将一台经常发起克隆的虚拟机做成虚拟机模板，每次需要克隆类似的虚拟机时都通过模板发起&lt;/li>
-&lt;li>虚拟快照
-快照是针对虚拟机的VMDK文件在某一时间点的&amp;quot;备份&amp;quot;，快照任务启动时，将冻结虚拟机源VMDK文件处于只读状态，同时创建出1个快照文件，今后所有修改的数据都会写入这个快照文件。一旦触发快照恢复操作。系统将放弃文件的内容，回滚到源VMDK文件的状态，实现快照恢复&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>2. 模板克隆过程&lt;/strong>&lt;/p>
-&lt;p>关机 -&amp;gt; 创建快照 -&amp;gt; 虚拟机、设置、高级、启用模板模式 -&amp;gt; 右键虚拟机克隆 -&amp;gt; 从快照克隆 -&amp;gt; 完整克隆&lt;/p>
-&lt;p>&lt;strong>3. 解决IP相同问题&lt;/strong>&lt;/p>
-&lt;p>在虚拟机的网络设置 -&amp;gt; 高级 -&amp;gt; 点击生成新的mac地址&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cd /etc/netplan
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo gedit 01-network-manager-all.yaml
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 添加内容
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">network:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ethernets:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ens33:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dhcp4: true # 动态ip开启
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dhcp-identifier: mac # 将DHCP获取IP地址的标识改为mac
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> version: 2
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 更新配置
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo netplan apply
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu安装go">Ubuntu安装go&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap install go --classic #安装go
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo vim /etc/profile #编辑profile
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GOROOT=/snap/go #在最后一行添加
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export PATH=$PATH:$GOROOT/bin
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source /etc/profile #保存
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">go version #验证
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GO111MODULE=on
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="idea">IDEA&lt;/h1>
-&lt;h2 id="使用">使用&lt;/h2>
-&lt;p>&lt;a class="link" href="https://www.exception.site/essay/idea-reset-eval" target="_blank" rel="noopener"
->教程1&lt;/a>&lt;/p>
-&lt;p>&lt;a class="link" href="https://blog.lupf.cn/articles/2023/12/01/1701405135406.html#toc_h2_6" target="_blank" rel="noopener"
->教程2&lt;/a>&lt;/p>
-&lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
-&lt;p>在idea.sh注释之后的首行添加&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
-&lt;h1 id="win11-系统问题">win11 系统问题&lt;/h1>
-&lt;h2 id="windows重装">windows重装&lt;/h2>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="windows重装">windows重装&lt;/h2>
 &lt;p>###制作PE&lt;/p>
 &lt;ol>
 &lt;li>搜索&lt;code>微PE工具箱&lt;/code>&lt;/li>
@@ -9026,9 +9051,280 @@ data-flex-basis="436px"
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting\LocalDumps\explorer.exe]
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;DumpFolder&amp;#34;=hex(2):43,00,3a,00,5c,00,43,00,72,00,61,00,73,00,68,00,44,00,75,\
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">00,6d,00,70,00,73,00,00,00
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>重命名为1.reg，运行后会在C盘建立CrashDumps文件夹（路径C:\CrashDumps），当系统闪屏后里面有后缀.dmp文件，把这个文件拖到Visual Studio里打开，可以排查相关的第三方软件的路径，挨个卸载。我放在vs里显示我IDM下载程序缺少二进制文件，卸载后完美进入系统。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>重命名为1.reg，运行后会在C盘建立CrashDumps文件夹（路径C:\CrashDumps），当系统闪屏后里面有后缀.dmp文件，把这个文件拖到Visual Studio里打开，可以排查相关的第三方软件的路径，挨个卸载。我放在vs里显示我IDM下载程序缺少二进制文件，卸载后即可进入系统。&lt;/p>
 &lt;/li>
 &lt;/ol>
+&lt;h1 id="vm-ubuntu">VM Ubuntu&lt;/h1>
+&lt;h2 id="vm-ubuntu-config">VM Ubuntu config&lt;/h2>
+&lt;ul>
+&lt;li>代理&lt;/li>
+&lt;/ul>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu中进入“设置”-“网络”-“proxy”，在各协议http、https、Socks里粘贴查到的ip地址&lt;/p>
+&lt;ul>
+&lt;li>git config&lt;/li>
+&lt;/ul>
+&lt;p>默认保存在用户的主目录下的 .gitconfig 文件内&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">git config --global user.name &amp;#34;John Doe&amp;#34; #配置github账号用户名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email johndoe@example.com #配置邮箱
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>git ssh 代理&lt;/li>
+&lt;/ul>
+&lt;p>创建~/.ssh/config 文件：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">Host github.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> User git
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ProxyCommand nc -v -x [ip]:[port.socks] %h %p #写自己ip
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>docker代理&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 创建目录
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo mkdir -p /etc/docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 创建文件
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">touch /etc/docker/daemon.json
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 修改代理配置，改为自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># NO_PROXY：指定不需要通过代理的地址列表，包括本地主机 localhost、127.0.0.0/8 和 IPv6 本地地址 ::1
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /etc/docker/daemon.json &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">proxies&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http:&lt;/span>&lt;span class="err">//[&lt;/span>&lt;span class="na">ip&lt;/span>&lt;span class="err">]&lt;/span>&lt;span class="na">:&lt;/span>&lt;span class="err">[&lt;/span>&lt;span class="na">port&lt;/span>&lt;span class="err">]&amp;#34;,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">https-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http:&lt;/span>&lt;span class="err">//[&lt;/span>&lt;span class="na">ip&lt;/span>&lt;span class="err">]&lt;/span>&lt;span class="na">:&lt;/span>&lt;span class="err">[&lt;/span>&lt;span class="na">port&lt;/span>&lt;span class="err">]&amp;#34;,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">no-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">localhost&lt;/span>&lt;span class="err">,&lt;/span>&lt;span class="na">127&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">8&lt;/span>&lt;span class="err">,&lt;/span>&lt;span class="na">::1&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>终端代理&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>直接在命令前加proxychains（临时）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>在&lt;code>~/.bashrc&lt;/code>最后加入（持久）&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 设置终端代理，写自己ip
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &amp;gt;&amp;gt; ~/.bashrc &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">export&lt;/span> &lt;span class="na">http_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://$PROXY_HOST:$PROXY_PORT&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">export&lt;/span> &lt;span class="na">https_proxy&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;http://$PROXY_HOST:$PROXY_PORT&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">使配置生效&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">source&lt;/span> &lt;span class="err">~/.&lt;/span>&lt;span class="na">bashrc&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>shell脚本集合&lt;/li>
+&lt;/ul>
+&lt;p>Windows中使用&lt;code>ipconfig&lt;/code>查看&lt;code>WLAN 2/8&lt;/code>的ip地址，ubuntu创建proxy.sh粘贴以下代码和查到的ip地址，并&lt;code>bash proxy.sh&lt;/code>运行脚本&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置你的代理信息
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_HOST=&amp;#34;ip&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">PROXY_PORT=10808
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 1. 将模式设置为手动 (manual)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy mode &amp;#39;manual&amp;#39;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 2. 设置各个协议的主机和端口
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.http port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.https port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks host &amp;#34;$PROXY_HOST&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">gsettings set org.gnome.system.proxy.socks port $PROXY_PORT
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 3. 设置git ssh代理
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo tee /home/[user]/.ssh/config &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">Host&lt;/span> &lt;span class="na">github&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">com&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">User&lt;/span> &lt;span class="na">git&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">ProxyCommand&lt;/span> &lt;span class="na">nc&lt;/span> &lt;span class="na">-v&lt;/span> &lt;span class="na">-x&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">h&lt;/span> &lt;span class="err">%&lt;/span>&lt;span class="na">p&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="na">4&lt;/span>&lt;span class="err">.&lt;/span> &lt;span class="err">设置&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">代理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">tee&lt;/span> &lt;span class="err">/&lt;/span>&lt;span class="na">etc&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">docker&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">daemon&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">json&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">proxies&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http:&lt;/span>&lt;span class="err">//$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span>&lt;span class="err">&amp;#34;,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">https-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">http:&lt;/span>&lt;span class="err">//$&lt;/span>&lt;span class="na">PROXY_HOST:&lt;/span>&lt;span class="err">$&lt;/span>&lt;span class="na">PROXY_PORT&lt;/span>&lt;span class="err">&amp;#34;,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">no-proxy&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">:&lt;/span> &lt;span class="err">&amp;#34;&lt;/span>&lt;span class="na">localhost&lt;/span>&lt;span class="err">,&lt;/span>&lt;span class="na">127&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">.&lt;/span>&lt;span class="na">0&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">8&lt;/span>&lt;span class="err">,&lt;/span>&lt;span class="na">::1&lt;/span>&lt;span class="err">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">刷新配置并重启&lt;/span> &lt;span class="na">Docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">daemon-reload&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sudo&lt;/span> &lt;span class="na">systemctl&lt;/span> &lt;span class="na">restart&lt;/span> &lt;span class="na">docker&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">设置终端代理&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">sed&lt;/span> &lt;span class="na">-i&lt;/span> &lt;span class="err">&amp;#39;/#&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>&amp;gt;&amp;gt; proxy config &amp;gt;&amp;gt;&amp;gt;/,/# &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">proxy&lt;/span> &lt;span class="na">config&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&amp;lt;/&lt;/span>&lt;span class="na">d&lt;/span>&lt;span class="err">&amp;#39;&lt;/span> &lt;span class="err">~/.&lt;/span>&lt;span class="na">bashrc&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">cat&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>&amp;gt; ~/.bashrc &lt;span class="err">&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>&amp;gt;&amp;gt; proxy config &amp;gt;&amp;gt;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export http_proxy=&amp;#34;http://$PROXY_HOST:$PROXY_PORT&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export https_proxy=&amp;#34;http://$PROXY_HOST:$PROXY_PORT&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># &lt;span class="err">&amp;lt;&amp;lt;&lt;/span>&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">proxy&lt;/span> &lt;span class="na">config&lt;/span> &lt;span class="err">&amp;lt;&amp;lt;&amp;lt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">EOF&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">#&lt;/span> &lt;span class="err">使配置生效&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="na">source&lt;/span> &lt;span class="err">~/.&lt;/span>&lt;span class="na">bashrc&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu升级">VM Ubuntu升级&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo reboot
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 启动 GUI 更新向导
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo update-manager -c
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>update错误 N: 无法安全地用该源进行更新，所以默认禁用该源&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cd /etc/apt/sources.list.d
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo rm -f * # 删除全部软件源
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>W: Failed to fetch &lt;a class="link" href="http://archive.ubuntu.com/" target="_blank" rel="noopener"
+>http://archive.ubuntu.com/&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>
+&lt;p>备份您的来源列表 &lt;code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup&lt;/code>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>修改apt源：打开&lt;code>/etc/apt/sources.list&lt;/code>粘贴&lt;a class="link" href="https://launchpad.net/ubuntu/&amp;#43;archivemirrors" target="_blank" rel="noopener"
+>这里&lt;/a>对应地区和版本的sources.list条目，例如
+&lt;img src="https://xiaoxiano.github.io/p/config/2.png"
+width="1314"
+height="272"
+srcset="https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/2_hua92575e9d4c874ecb1581ed86f46c331_74185_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="483"
+data-flex-basis="1159px"
+>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># DNS 设置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo vim /etc/resolv.conf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使用Google DNS作为首选 DNS 服务器
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.8.8
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">nameserver 8.8.4.4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu共享文件夹">VM Ubuntu共享文件夹&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>设置
+&lt;img src="https://xiaoxiano.github.io/p/config/3.png"
+width="859"
+height="1002"
+srcset="https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_480x0_resize_box_3.png 480w, https://xiaoxiano.github.io/p/config/3_huf87210c2cadc93f9424d611d6a26ea01_89108_1024x0_resize_box_3.png 1024w"
+loading="lazy"
+class="gallery-image"
+data-flex-grow="85"
+data-flex-basis="205px"
+>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>每次启动自动挂载，在/etc/fstab文件添加&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">.host:/ /mnt/hgfs fuse.vmhgfs-fuse allow_other,defaults 0 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>已挂在到/mnt/hgfs目录&lt;/li>
+&lt;/ol>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">ls -l /mnt/hgfs
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu克隆">VM Ubuntu克隆&lt;/h2>
+&lt;p>&lt;strong>1. 概念&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>虚拟机克隆
+&lt;ul>
+&lt;li>完整克隆
+是和原始虚拟机完全独立的一个备份，可以脱离原始虚拟机独立使用&lt;/li>
+&lt;li>链接克隆
+需要和原始虚拟机共享同一虚拟磁盘文件，不能脱离原始虚拟机独立运行&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>虚拟机模板克隆
+克隆虚拟机固然是快速部署虚拟机的利器，但是所有的虚拟机都可以克隆，被克隆的虚拟机也可以再次被克隆，长此以往系统就会崩毁，从而给管理员带来诸多的麻烦。模板就是解决此问题的最好的方法，即将一台经常发起克隆的虚拟机做成虚拟机模板，每次需要克隆类似的虚拟机时都通过模板发起&lt;/li>
+&lt;li>虚拟快照
+快照是针对虚拟机的VMDK文件在某一时间点的&amp;quot;备份&amp;quot;，快照任务启动时，将冻结虚拟机源VMDK文件处于只读状态，同时创建出1个快照文件，今后所有修改的数据都会写入这个快照文件。一旦触发快照恢复操作。系统将放弃文件的内容，回滚到源VMDK文件的状态，实现快照恢复&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>2. 模板克隆过程&lt;/strong>&lt;/p>
+&lt;p>关机 -&amp;gt; 创建快照 -&amp;gt; 虚拟机、设置、高级、启用模板模式 -&amp;gt; 右键虚拟机克隆 -&amp;gt; 从快照克隆 -&amp;gt; 完整克隆&lt;/p>
+&lt;p>&lt;strong>3. 解决IP相同问题&lt;/strong>&lt;/p>
+&lt;p>在虚拟机的网络设置 -&amp;gt; 高级 -&amp;gt; 点击生成新的mac地址&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">cd /etc/netplan
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo gedit 01-network-manager-all.yaml
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 添加内容
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">network:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ethernets:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ens33:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dhcp4: true # 动态ip开启
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> dhcp-identifier: mac # 将DHCP获取IP地址的标识改为mac
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> version: 2
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 更新配置
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo netplan apply
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="vm-ubuntu安装python">VM Ubuntu安装python&lt;/h2>
+&lt;p>不建议更改Ubuntu默认的Python版本，本文使用 &lt;a class="link" href="https://github.com/pyenv/pyenv" target="_blank" rel="noopener"
+>pyenv&lt;/a>管理版本&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl"># 更新
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt-get update &amp;amp;&amp;amp; sudo apt-get upgrade
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 安装Pyenv依赖，详见Pyenv wiki页面
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt update; sudo apt install make build-essential libssl-dev zlib1g-dev \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">libbz2-dev libreadline-dev libsqlite3-dev curl git \
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libzstd-dev
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 安装Pyenv
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">curl https://pyenv.run | bash
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 配置环境变量
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">cat &amp;lt;&amp;lt;&amp;#39;EOF&amp;#39; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export PATH=&amp;#34;$HOME/.pyenv/bin:$PATH&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">eval &amp;#34;$(pyenv init --path)&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">eval &amp;#34;$(pyenv init -)&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">eval &amp;#34;$(pyenv virtualenv-init -)&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">EOF
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 使配置生效
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">source ~/.bashrc
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 安装所需版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pyenv install 3.12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 设置全局 Python 版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pyenv global 3.12
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># 常用命令
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pyenv install --list # 查看支持安装的版本列表
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pyenv versions # 查看已安装版本
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">pyenv version # 查看当前版本
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="ubuntu安装go过时待更">Ubuntu安装go（过时待更）&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo apt install snap #安装snap，使用snap更易安装、更新
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo snap install go --classic #安装go
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">sudo vim /etc/profile #编辑profile
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GOROOT=/snap/go #在最后一行添加
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export PATH=$PATH:$GOROOT/bin
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">source /etc/profile #保存
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">go version #验证
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export GO111MODULE=on
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GOPROXY=https://goproxy.cn #设置 go get 为国内源（无代理）
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="idea">IDEA&lt;/h1>
+&lt;h2 id="使用">使用&lt;/h2>
+&lt;p>&lt;a class="link" href="https://www.exception.site/essay/idea-reset-eval" target="_blank" rel="noopener"
+>教程1&lt;/a>&lt;/p>
+&lt;p>&lt;a class="link" href="https://blog.lupf.cn/articles/2023/12/01/1701405135406.html#toc_h2_6" target="_blank" rel="noopener"
+>教程2&lt;/a>&lt;/p>
+&lt;h2 id="不能输入中文ubuntu">不能输入中文（Ubuntu）&lt;/h2>
+&lt;p>在idea.sh注释之后的首行添加&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">export XMODIFIERS=&amp;#34;@im=ibus&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export GTK_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">export QT_IM_MODULE=&amp;#34;ibus&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>goland.vmoptions添加&lt;code>-Drecreate.x11.input.method=true&lt;/code>&lt;/p>
 &lt;h1 id="自用软件">自用软件&lt;/h1>
 &lt;h2 id="win11优雅必备">win11优雅必备&lt;/h2>
 &lt;ul>
