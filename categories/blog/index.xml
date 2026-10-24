@@ -305,6 +305,10 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;ul>
 &lt;li>
 &lt;p>直接使用 HTML&lt;/p>
+&lt;ul>
+&lt;li>隐藏文本
+&lt;span title="这是隐藏的长文本或解释">把鼠标放这里试试&lt;/span>&lt;/li>
+&lt;/ul>
 &lt;/li>
 &lt;li>
 &lt;p>使用 shortcodes&lt;/p>
@@ -319,32 +323,25 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 code&lt;br>
 ```&lt;br>
 {{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">\{\{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">spoiler&lt;/span> &lt;span class="na">text&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">\&amp;#34;点击展开和折叠代码\&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>\}\}\
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">`` ```html\
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">code\
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">``` ``
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">\{\{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">spoiler&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>\}\}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;details class="spoiler " id="spoiler-1">
+&lt;details class="spoiler " id="spoiler-1">
 &lt;summary>点击展开和折叠代码&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">code
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
 &lt;/details>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;span title="这是鼠标放上去后显示的长文本或解释">把鼠标放这里试试&lt;/span>&lt;/p>
-&lt;/li>
-&lt;li>
+&lt;li>自定义字体&lt;/li>
+&lt;/ul>
+&lt;p># font　　　Google 字体&lt;br>
+# size　　　大小&lt;br>
+# style　　　normal正常， italic 斜体&lt;br>
+# weight　　bold 加粗 ， lighter 更细&lt;/p>
 &lt;p>{{&amp;lt; typography font=default size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
 &lt;link href="https://fonts.googleapis.com/css?family=font-family" rel="stylesheet" type="text/css">
 &lt;div style="font-family:'font-family'; font-size:30px; font-style:normal; font-weight:bold; color: blue">
 自定义字体
 &lt;/div>
-{{&amp;lt; /typography &amp;gt;}}&lt;br>
-# font　　　Google 字体&lt;br>
-# size　　　大小&lt;br>
-# style　　　normal正常， italic 斜体&lt;br>
-# weight　　bold 加粗 ， lighter 更细&lt;/p>
-&lt;/li>
+{{&amp;lt; /typography &amp;gt;}}&lt;/p>
+&lt;ul>
 &lt;li>
 &lt;p>{{&amp;lt; box info &amp;gt;}}
 Hello there, and have a nice day
