@@ -300,19 +300,20 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| -------- | -------- | ------ |
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| *italics* | **bold** | `code` |
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
-&lt;li>自定义&lt;/li>
+&lt;li>自定义样式&lt;/li>
 &lt;/ol>
 &lt;ul>
 &lt;li>
 &lt;p>直接使用 HTML&lt;/p>
 &lt;ul>
-&lt;li>隐藏文本
-&lt;span title="这是隐藏的长文本或解释">把鼠标放这里试试&lt;/span>&lt;/li>
+&lt;li>隐藏文本&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>
-&lt;p>使用 shortcodes&lt;/p>
-&lt;/li>
+&lt;/ul>
+&lt;p>&amp;lt;span title=&amp;quot;这是隐藏的长文本或解释&amp;quot;&amp;gt;把鼠标放这里试试&amp;amp;#9432;&lt;/span>&lt;/p>
+&lt;p>&lt;span title="这是隐藏的长文本或解释">把鼠标放这里试试ⓘ&lt;/span>&lt;/p>
+&lt;ul>
+&lt;li>使用 shortcodes&lt;/li>
 &lt;/ul>
 &lt;p>如果经常需要插入复杂的 HTML，可把 HTML封装成一个简短的标签。搜索所需的shortcodes（例如 &lt;code>spoiler.html&lt;/code>），把 HTML文件存放在 &lt;code>./myblog/layouts/shortcodes&lt;/code>&lt;/p>
 &lt;ul>
