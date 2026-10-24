@@ -135,7 +135,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>创建 username.github.io.source 仓库存放源码可设为私人仓库，创建 username.github.io 仓库作为公开仓库&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl"># 连接远程仓库。注意使用ssh连接，如果使用https连接每次都要输账号密码。
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:******.github.io.source.git
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Tokens (classic) -&amp;gt; Generate new token（classic） -&amp;gt; Note（随便写-blog）-&amp;gt; Select scopes（全选）-&amp;gt; 复制token&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>点击github右上角头像-&amp;gt; Settings -&amp;gt; Developer Settings-&amp;gt; Personal access tokens -&amp;gt; Tokens (classic) -&amp;gt; Generate new token（classic） -&amp;gt; Note（随便写-如blog）-&amp;gt; Select scopes（全选）-&amp;gt; 复制token&lt;/p>
 &lt;p>找到源码仓库Settings-&amp;gt; Secrets and variables -&amp;gt; Actions -&amp;gt; New repository secret -&amp;gt; Name（写PERSONAL_TOKEN）-&amp;gt; Value（粘贴token）&lt;/p>
 &lt;p>2.创建github actions的workflows自动部署文件：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">mkdir -p .github/workflows &lt;span class="err">&amp;amp;&amp;amp;&lt;/span> touch ~/myblog/.github/workflows/main.yml
@@ -149,7 +149,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">jobs:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> deploy:
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest #可 使用指定版本，例：runs-on: ubuntu-18.04
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> runs-on: ubuntu-latest # 可使用指定版本，例：runs-on: ubuntu-18.04
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> steps:
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - uses: actions/checkout@v2
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> with:
@@ -176,7 +176,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> #cname: www.example.com # 使用自定义域名
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>只需更改external_repository: username/username.github.io 为你的github账户名，&lt;a class="link" href="https://github.com/marketplace/actions/github-pages-action" target="_blank" rel="noopener"
 >脚本详情&lt;/a>&lt;/p>
-&lt;p>3.在myblog文件夹下创建push.sh&lt;/p>
+&lt;p>3.在myblog文件夹下创建push.sh，用于每次修改博客后使用git提交到仓库&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">touch push.sh
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>粘贴脚本：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">#!/bin/bash
@@ -196,7 +196,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"># Push source and build repos.
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin master
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 sh push.sh命令。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在myblog下运行 &lt;code>bash push.sh&lt;/code>命令。&lt;/p>
 &lt;p>到此已完成部署，之后任何更新如上运行push脚本即可&lt;/p>
 &lt;h1 id="修改主题">修改主题&lt;/h1>
 &lt;p>此处仅列举常见需修改内容，更多内容请看&lt;a class="link" href="https://docs.stack.jimmycai.com/v/zh-cn/configuration" target="_blank" rel="noopener"
@@ -243,17 +243,19 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>写文章：&lt;/p>
 &lt;p>1.front matter:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">---
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">title: hugo使用stack主题搭建博客及部署 #标题
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">description: #副标题，此样式不可用
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">date: 2021-07-04 #日期
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lastUpdated: 2021-07-27 #上次修改内容的日期
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">slug: hugo-blog #URL的尾部，用于文章地址
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">categories: #文章分类
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">title: hugo使用stack主题搭建博客及部署 # 标题
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">description: # 副标题，此主题不可用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">date: 2021-07-04 # 日期
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">lastUpdated: 2021-07-27 # 上次修改内容的日期
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">slug: hugo-blog # URL的尾部，用于文章地址
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">categories: # 文章分类
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - blog
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>front matter仅列举本文使用，&lt;a class="link" href="https://gohugo.io/content-management/front-matter#readout" target="_blank" rel="noopener"
 >hugo front matter官方文档&lt;/a>&lt;/p>
-&lt;p>2.常见文章markdown语法：&lt;/p>
+&lt;ol start="2">
+&lt;li>常见文章markdown语法：&lt;/li>
+&lt;/ol>
 &lt;ul>
 &lt;li>
 &lt;p>&lt;code># 一级标题&lt;/code>&lt;br>
@@ -276,7 +278,7 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;p>&lt;code>[链接](https://)&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;code>\&lt;/code> 写在特殊符号前为转义；写在行尾为换行\&lt;/p>
+&lt;p>&lt;code>\&lt;/code> 写在特殊符号前为转义；写在行尾为换行&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>*斜体*&lt;/code>&lt;br>
@@ -284,8 +286,8 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;code>~~删除线~~&lt;/code>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>&lt;code>* 无序列表&lt;/code>&lt;br>
-&lt;code>双空格* 子无序列表&lt;/code>&lt;/p>
+&lt;p>&lt;code>*&lt;/code> 无序列表&lt;br>
+&lt;code>双空格*&lt;/code> 子无序列表&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;code>![图片描述](本地图片.jpg)&lt;/code>&lt;/p>
@@ -297,16 +299,33 @@ d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 24
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">| Italics | Bold | Code |
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| -------- | -------- | ------ |
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">| *italics* | **bold** | `code` |
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>
-&lt;p>shortcodes &lt;code>./myblog/layouts/shortcodes&lt;/code>&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
+&lt;li>自定义&lt;/li>
+&lt;/ol>
 &lt;ul>
 &lt;li>
-&lt;p>{{&amp;lt; spoiler text=&amp;quot;点击展开和折叠代码&amp;quot; &amp;gt;}}&lt;br>
-```html&lt;br>
-code&lt;br>
-```&lt;br>
-{{&amp;lt; /spoiler &amp;gt;}}&lt;/p>
+&lt;p>直接使用 HTML&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用 shortcodes&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>如果经常需要插入复杂的 HTML，可把 HTML封装成一个简短的标签。搜索所需的shortcodes（例如 &lt;code>spoiler.html&lt;/code>），把 HTML文件存放在 &lt;code>./myblog/layouts/shortcodes&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;details class="spoiler " id="spoiler-1">
+&lt;summary>点击展开和折叠代码&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">code
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>点击展开和折叠代码&lt;/summary>
+&lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">code
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/p>
+&lt;/details>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;span title="这是鼠标放上去后显示的长文本或解释">把鼠标放这里试试&lt;/span>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>{{&amp;lt; typography font=default size=&amp;quot;30px&amp;quot; style=&amp;quot;normal&amp;quot; weight=&amp;quot;bold&amp;quot; color=&amp;quot;blue&amp;quot;&amp;gt;}}
@@ -369,18 +388,16 @@ Hello there, and have a nice day
 &lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;/ul>
 &lt;h2 id="评论系统">评论系统&lt;/h2>
 &lt;p>&lt;a class="link" href="https://waline.js.org/en/guide/get-started.html#leancloud-settings-database" target="_blank" rel="noopener"
 >waline官方文档&lt;/a>写得非常清楚，您只需 LeanCloud设置 和 部署到Vercel ，拿到URL&lt;/p>
 &lt;p>然后修改~/myblog/config.yaml&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">52 provider: waline #评论系统，本文示例使用waline
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">73 serverURL: https:// #评论系统URL用你自己的
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行sh push.sh即可&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行&lt;code>bash push.sh&lt;/code>即可&lt;/p>
 &lt;h2 id="自定义域名">自定义域名&lt;/h2>
 &lt;p>在~/myblog/config.yaml修改baseurl: &lt;code>https://username.github.io&lt;/code>&lt;/p>
 &lt;p>在~/myblog/.github/workflows/main.yml最后一行取消注释并修改&lt;code>cname: https://example.com&lt;/code>&lt;/p>
-&lt;p>执行sh push.sh即可&lt;/p>
+&lt;p>执行&lt;code>bash push.sh&lt;/code>即可&lt;/p>
 &lt;p>启用https：&lt;a class="link" href="https://last2win.com/2020/02/21/github-pages-https/" target="_blank" rel="noopener"
 >参考链接&lt;/a>&lt;/p></description></item></channel></rss>

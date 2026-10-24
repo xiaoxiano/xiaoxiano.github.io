@@ -708,28 +708,8 @@ data-flex-basis="355px"
 &lt;p>以下方式成本过高，仅作为&lt;strong>邀请别人&lt;/strong>的参考！&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type为hosting），会被识别屏蔽。所以要用住宅代理（type为isp），由于成本高，服务器厂商几乎不用，只有代理厂商的住宅代理和部分静态住宅代理才可以接受邀请。我搜索了多家代理厂商，价格便宜的只有 911s5 和 iproyal&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>代理厂商&lt;/th>
-&lt;th>特点&lt;/th>
-&lt;th>价格&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>911s5&lt;/td>
-&lt;td>自有软件，pc端指定软件代理，使用简单，ip质量差，部分可以邀请使用&lt;/td>
-&lt;td>最低28美元/150ip，每ip可用24小时&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>iproyal&lt;/td>
-&lt;td>直接给地址端口和用户，所以在国内必须自己搭建国外节点并且&lt;strong>中转&lt;/strong>才能使用，但是ip质量较好、使用舒适。必须实名，不实名很多网站不能访问（包括facebook），而且实名较为耗时&lt;/td>
-&lt;td>3美元/GB ，paypal入金最低20美元&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
+&lt;p>我试了多地vps，原生ip也全都出现Ineligible Country​，原因是服务器厂商用的数据中心ip（type为hosting），会被识别屏蔽。所以要用住宅代理（type为isp），由于成本高，服务器厂商几乎不用，只有代理厂商的静态住宅代理才可以接受邀请，具体商家参考另一篇&lt;a class="link" href="https://xiaoxiano.github.io/p/vps/#%e5%95%86%e5%ae%b6" target="_blank" rel="noopener"
+>文章&lt;/a>。&lt;/p>
 &lt;details class="spoiler " id="spoiler-0">
 &lt;summary>“以xui为例的中转配置文件”&lt;/summary>
 &lt;p>&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">// 直接修改&amp;#34;servers&amp;#34;即可使用
